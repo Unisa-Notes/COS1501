@@ -1,0 +1,32 @@
+\documentclass[11pt, a4paper]{book}
+
+\usepackage[margin=2cm, vmargin=3cm]{geometry}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage[bookmarksnumbered]{hyperref}
+\usepackage[T1]{fontenc}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\nouppercase{\rightmark}}
+\fancyhead[LO,RE]{\leftmark}
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}
+% \setlength{\parindent}{0pt}
+
+\usepackage{subfiles}
+
+\renewcommand{\chaptername}{Unit}
+
+\title{COS1501 Notes}
+\author{ }
+
+\begin{document}
+	
+	\begin{titlepage}
+		\maketitle
+	\end{titlepage}
+	\clearpage\begingroup\pagestyle{empty}\cleardoublepage\endgroup
+	\subfileinclude{units/unit1.tex}
+\end{document}
