@@ -1,10 +1,17 @@
 \documentclass[11pt, a4paper]{book}
 
 \usepackage[margin=2cm, vmargin=3cm]{geometry}
+\usepackage{amssymb}
 \usepackage{amsmath}
+\usepackage{amsthm}
 \usepackage{enumitem}
 \usepackage[bookmarksnumbered]{hyperref}
 \usepackage[T1]{fontenc}
+
+\usepackage{mathtools}
+
+\let\oldtextbf\textbf
+\renewcommand{\textbf}[1]{\oldtextbf{\boldmath #1}}
 
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -29,4 +36,5 @@
 	\end{titlepage}
 	\clearpage\begingroup\pagestyle{empty}\cleardoublepage\endgroup
 	\subfileinclude{units/unit1.tex}
+	\subfileinclude{units/unit2.tex}
 \end{document}
