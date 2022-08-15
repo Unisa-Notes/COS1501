@@ -1,0 +1,172 @@
+\documentclass[../notes.tex]{subfiles}
+
+\begin{document}
+  \chapter{Sets}
+    \section{Subset}
+      If $A$ and $B$ are sets from a universal set $U$, then $A$ is a \textbf{subset} of $B$ if and only if every element of $A$ is also an element of $B$.\\
+      Can be abbreviated $A \subseteq B$
+      \subsection{Proper Subset}
+        If $C$ and $D$ are sets from a universal set $U$, and every element of $C$ is an element of $D$, but $D$ has some elements that are not in $C$, then $C$ is a \textbf{proper subset} of $D$.\\
+        Can be abbreviated $C \subset D$.
+        \begin{notebox}{Confusion Between Element and Subset}
+          Note that $\in$ and $\subset$ are not the same. This becomes significant when dealing with power sets.
+        \end{notebox}
+    \section{Creating Sets From Other Sets}
+      For examples, the following sets will be used:
+      \begin{alignat*}{4}
+        U &= \{1, 2, 3, 4, 5\}\qquad & A &= \{1, 2, 3\} \qquad & B &= \{2, 3, 4\} \qquad & C &= \{4, 5\}
+      \end{alignat*}
+
+      \subsection{Set Union (OR)}
+        The \textbf{union} of sets $A$ and $B$ is written $A \cup B$, and is the set of all elements that belong to $A$ or $B$ (or both).
+        \begin{align*}
+          A \cup B = \biggl\{x | x \in A \text{ or } x \in B\biggr\}
+        \end{align*}
+        \begin{center}
+          \begin{tikzpicture}[background rectangle/.style={draw=black}, show background rectangle]
+            \draw[filled] \firstcircle node {$A$}
+                          \secondcircle node {$B$};
+          \end{tikzpicture}
+        \end{center}
+        \begin{examplebox}
+          \begin{align*}
+            A \cup B &= \{1, 2, 3\} \cup \{2, 3, 4\}\\
+            &= \{1, 2, 3, 4\}
+          \end{align*}
+        \end{examplebox}
+
+      \subsection{Set Intersection (AND)}
+        The \textbf{intersection} of sets $A$ and $B$ is written $A \cap  B$, and is the set of all elements that belong to $A$ and $B$ at the same time.
+        \begin{align*}
+          A \cap B = \biggl\{x | x \in A \text{ and } x \in B\biggr\}
+        \end{align*}
+        \begin{center}
+          \begin{tikzpicture}[background rectangle/.style={draw=black}, show background rectangle]
+            \begin{scope}
+              \clip \firstcircle;
+              \fill[filled] \secondcircle;
+            \end{scope}
+            \draw[outline] \firstcircle node {$A$};
+            \draw[outline] \secondcircle node {$B$};
+          \end{tikzpicture}
+        \end{center}
+        \begin{examplebox}
+          \begin{align*}
+            A \cap B &= \{1, 2, 3\} \cap \{2, 3, 4\}\\
+            &= \{2, 3\}
+          \end{align*}
+        \end{examplebox}
+
+      \subsection{Set Difference (MINUS)}
+        The \textbf{difference} between sets $A$ and $B$, also called the \textbf{complement of $B$ relative to $A$}, is written $A - B$, and is the set of elements that are in $A$ that are not in $B$.
+        \begin{align*}
+          A - B = \biggl\{x | x \in A \text{ and } x \notin B\biggr\}
+        \end{align*}
+        \begin{center}
+          \begin{tikzpicture}[background rectangle/.style={draw=black}, show background rectangle]
+            \draw[filled] \firstcircle node {$A$};
+            \draw[circle, fill=white, outline=circle edge] \secondcircle node {$B$};
+            \draw[outline] \firstcircle node {};
+          \end{tikzpicture}
+        \end{center}
+        \begin{examplebox}
+          \begin{align*}
+            A - B &= \{1, 2, 3\} - \{2, 3, 4\}\\
+            &= \{1\}
+          \end{align*}
+        \end{examplebox}
+
+      \subsection{Set Complement (NOT)}
+        Let $A$ be a subset of a universal set $U$. Then the \textbf{complement} of $A$, written $A'$ is the set of all elements that belong to $U$ but do not belong to $A$.
+        \begin{align*}
+          A' & = \biggl\{x | x \in U \text{ and } x \notin A\biggr\}\\
+          & = \biggl\{x | x \notin A\biggr\} 
+        \end{align*}
+        \begin{center}
+          \begin{tikzpicture}[background rectangle/.style={fill=circle area, draw=black}, show background rectangle]
+            \draw[filled] \secondcircle node {$B$};
+            \draw[circle, fill=white, outline=circle edge] \firstcircle node {$A$};
+            \draw[outline] \secondcircle node {};
+          \end{tikzpicture}
+        \end{center}
+        \begin{examplebox}
+          \begin{align*}
+            A' &= U - A\\
+            &= \{1, 2, 3, 4, 5\} - \{1, 2, 3\}\\
+            &= \{4, 5\}
+          \end{align*}
+        \end{examplebox}
+
+      \subsection{Symmetric Set Difference (XOR)}
+        The \textbf{symmetric difference} between two sets $A$ and $B$, written $A + B$, is the set of elements that belong to $A$ or to $B$, but not to both.
+        \begin{align*}
+          A + B = \biggl\{x | x \in A \text{ or } x \in B\text{, but not both}\biggr\}
+        \end{align*}
+        \begin{center}
+          \begin{tikzpicture}[background rectangle/.style={draw=black}, show background rectangle]
+            \draw[filled] \firstcircle node {$A$};
+            \draw[filled] \secondcircle node {$B$};
+            \begin{scope}
+              \clip \firstcircle;
+              \draw[fill=white, outline=circle edge] \secondcircle;
+            \end{scope}
+            \begin{scope}
+              \clip \secondcircle;
+              \draw[fill=white, outline=circle edge] \firstcircle;
+            \end{scope}
+          \end{tikzpicture}
+        \end{center}
+        \begin{examplebox}
+          \begin{align*}
+            A + B &= \{1, 2, 3\} + \{2, 3, 4\}\\
+            &= \{1, 4\}
+          \end{align*}
+        \end{examplebox}
+
+    \section{Other Terms Significant For Sets}
+      \subsection{The Empty Set}
+        The set that contains no elements is called the \textbf{empty set}, and is written $\emptyset$.
+      \subsection{Set Disjointness}
+        Two sets $A$ and $B$ are called \textbf{disjoint} if they have no elements in common. In other words,
+        \begin{align*}
+          A \cap B = \emptyset
+        \end{align*}
+        \begin{examplebox}
+          \begin{align*}
+            A \cap C &= \{1, 2, 3\} \cap \{4, 5\}\\
+            &= \emptyset
+          \end{align*}
+        \end{examplebox}
+
+      \subsection{Set Cardinality}
+        Let $A$ be a set with $k$ distinct elements that can be counted. The \textit{number of elements} $k$ in $A$ is called the \textbf{cardinality} of the set. It can be written as $n(A)$ or $\left\lvert A\right\rvert$.
+        \begin{examplebox}
+          \begin{align*}
+            \left\lvert A\right\rvert &= \left\lvert \{1, 2, 3\}\right\rvert\\
+            &= 3
+          \end{align*}
+        \end{examplebox}
+
+      \subsection{Power Sets}
+        Given a set $A$ with $n$ distinct elements, the \textbf{power set} of $A$, written $\mathcal{P}(A)$, is the set that has as its members \textit{all} subsets of $A$.
+
+        \begin{notebox}{Every Element of a Power Set is a Set}
+          It is important to note that every element of a power set is a \textit{set}!\\ That means if $B$ is a subset of $A$, then $B$ is an element of $\mathcal{P}(A)$, i.e. $B \in \mathcal{P}(A)$.\\
+          However $B$ is \textbf{not} a subset of $\mathcal{P}(A)$, i.e. $B \nsubseteq \mathcal{P}(A)$! A set containing $B$, i.e. $\{B\}$ would be a subset of $\mathcal{P}(A)$.
+        \end{notebox}
+      \begin{examplebox}
+        \begin{align*}
+          \mathcal{P}(C) &= \mathcal{P}\Bigl(\{4, 5\}\Bigr)\\
+          &= \Bigl\{\emptyset, \{4\}, \{5\}, \{4, 5\}\Bigr\}
+        \end{align*}
+      \end{examplebox}
+      The cardinality of a power set $\mathcal{P}(A)$ is $2^{n}$ where $n$ is the number of elements in the set $A$.
+      \begin{examplebox}
+        \begin{align*}
+          \left\lvert \mathcal{P}(A)\right\rvert &= \Biggl|\mathcal{P}\Bigl(\{1, 2, 3\}\Bigr)\Biggr|\\
+          &= 2^{3}\\
+          &= 8
+        \end{align*}
+      \end{examplebox}
+
+\end{document}
