@@ -7,11 +7,27 @@
 \usepackage{enumitem}
 \usepackage[bookmarksnumbered]{hyperref}
 \usepackage[T1]{fontenc}
+\usepackage{tikz}
+\usetikzlibrary{fit, backgrounds}
+\colorlet{circle edge}{black!50}
+% \colorlet{circle area}{gray!20}
+\colorlet{circle area}{blue!15!white}
+\colorlet{example color}{blue!15!white}
+\colorlet{example title}{black}
+\colorlet{note color}{red!15!white}
+\colorlet{note border}{red!75!black}
+\def\firstcircle{(0,0) circle (1.5cm)}
+\def\secondcircle{(0:2cm) circle (1.5cm)}
+\tikzset{filled/.style={fill=circle area, draw=circle edge, thick},
+        outline/.style={draw=circle edge, thick}}
 
 \usepackage{mathtools}
-
 \let\oldtextbf\textbf
 \renewcommand{\textbf}[1]{\oldtextbf{\boldmath #1}}
+
+\usepackage{tcolorbox}
+\tcbuselibrary{breakable}
+\usepackage{adjustbox}
 
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -20,7 +36,10 @@
 \fancyhead[LO,RE]{\leftmark}
 \fancyfoot[C]{\thepage}
 \setlength{\headheight}{14pt}
-% \setlength{\parindent}{0pt}
+
+% Colorboxes for different elements
+\newtcolorbox{notebox}[1]{breakable, colback=note color, colframe=note border, fonttitle=\bfseries, title={#1}}
+\newtcolorbox{examplebox}{coltitle=example title, colback=example color, breakable, detach title, before upper={\tcbtitle\quad}, title=\textbf{Example}}
 
 \usepackage{subfiles}
 
@@ -36,4 +55,5 @@
 	\clearpage\begingroup\pagestyle{empty}\cleardoublepage\endgroup
 	\subfileinclude{units/unit1.tex}
 	\subfileinclude{units/unit2.tex}
+	\subfileinclude{units/unit3.tex}
 \end{document}
