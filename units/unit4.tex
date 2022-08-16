@@ -1,0 +1,315 @@
+\documentclass[../notes.tex]{subfiles}
+
+\begin{document}
+	\chapter{Proofs Involving Sets}
+		\section{Venn Diagrams}
+			\subsection{Set Equality}
+				For any sets $A$ and $B$, if $A \subseteq B$ and $B \subseteq A$, then every element of $A$ is also an element of $B$, and every element of $B$ is also an element of $A$, so $A = B$.
+			\subsection{Drawing Complex Venn Diagrams}
+			Draw the diagram in stages, including $U$, $A$, $B$ and $C$ in each diagram.
+			\begin{examplebox}
+				Let $A$, $B$, $C \subseteq U$. Draw the Venn diagram for $\Bigl[(A \cup B) - (A \cap B)\Bigr] \cup C$
+				\begin{enumerate}
+					\item $A \cup B$
+						\begin{center}
+							\begin{venndiagram3sets}[shade=circle area, tikzoptions={myvennoutline}, showframe=false]
+								\fillA
+								\fillB
+							\end{venndiagram3sets}
+						\end{center}
+						\pagebreak
+					\item $A \cap B$
+						\begin{center}
+							\begin{venndiagram3sets}[shade=circle area, tikzoptions={myvennoutline}, showframe=false]
+								\fillACapB
+							\end{venndiagram3sets}
+						\end{center}
+					\item $(A \cup B) - (A \cap B)$
+						\begin{center}
+							\begin{venndiagram3sets}[shade=circle area, tikzoptions={myvennoutline}, showframe=false]
+								\fillANotB
+								\fillBNotA
+							\end{venndiagram3sets}
+						\end{center}
+					\item $C$
+						\begin{center}
+							\begin{venndiagram3sets}[shade=circle area, tikzoptions={myvennoutline}, showframe=false]
+								\fillC
+							\end{venndiagram3sets}
+						\end{center}
+						\pagebreak
+					\item $\Bigl[(A \cup B) - (A \cap B)\Bigr] \cup C$
+						\begin{center}
+							\begin{venndiagram3sets}[shade=circle area, tikzoptions={myvennoutline}, showframe=false]
+								\fillANotB
+								\fillBNotA
+								\fillC
+							\end{venndiagram3sets}
+						\end{center}
+				\end{enumerate}
+			\end{examplebox}
+			\subsection{Self-Assessment Exercises (Activity 4-4)}
+				\begin{enumerate}
+					\item
+						\begin{enumerate}
+							\item $(X \cup Y)'$
+								\begin{center}
+									$X \cup Y$\\
+									\begin{venndiagram2sets}[shade=circle area, labelA=$X$, labelB=$Y$]
+										\fillA
+										\fillB
+									\end{venndiagram2sets}\\
+									$(X \cup Y)'$\\
+									\begin{venndiagram2sets}[shade=circle area, labelA=$X$, labelB=$Y$]
+										\fillNotAorB
+									\end{venndiagram2sets}
+								\end{center}
+							\pagebreak
+							\item $X' \cap Y'$
+								\begin{center}
+									$X'$\\
+									\begin{venndiagram2sets}[shade=circle area, labelA=$X$, labelB=$Y$]
+										\fillNotA
+									\end{venndiagram2sets}\\
+									$Y'$\\
+									\begin{venndiagram2sets}[shade=circle area, labelA=$X$, labelB=$Y$]
+										\fillNotB
+									\end{venndiagram2sets}\\
+									$X' \cap Y'$\\
+									\begin{venndiagram2sets}[shade=circle area, labelA=$X$, labelB=$Y$]
+										\fillNotAorB
+									\end{venndiagram2sets}
+								\end{center}
+							\item $(X \cap Y)'$
+								\begin{center}
+									$X \cap Y$\\
+									\begin{venndiagram2sets}[shade=circle area, labelA=$X$, labelB=$Y$]
+										\fillACapB
+									\end{venndiagram2sets}\\
+									$(X \cap Y)'$\\
+									\begin{venndiagram2sets}[shade=circle area, labelA=$X$, labelB=$Y$]
+										\fillNotAorNotB
+									\end{venndiagram2sets}
+								\end{center}
+							\pagebreak
+							\item $X' \cap Y'$
+								\begin{center}
+									$X'$\\
+									\begin{venndiagram2sets}[shade=circle area, labelA=$X$, labelB=$Y$]
+										\fillNotA
+									\end{venndiagram2sets}\\
+									$Y'$\\
+									\begin{venndiagram2sets}[shade=circle area, labelA=$X$, labelB=$Y$]
+										\fillNotB
+									\end{venndiagram2sets}\\
+									$X' \cup Y'$\\
+									\begin{venndiagram2sets}[shade=circle area, labelA=$X$, labelB=$Y$]
+										\fillNotA
+										\fillNotB
+									\end{venndiagram2sets}
+								\end{center}
+						\end{enumerate}
+					\pagebreak
+					\item
+						\begin{enumerate}
+							\item $X - (Y \cup Z)$
+								\begin{center}
+									$X$\\
+									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$]
+										\fillA
+									\end{venndiagram3sets}\\
+									$Y \cup Z$\\
+									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$]
+										\fillB
+										\fillC
+									\end{venndiagram3sets}\\
+									$X - (Y \cup Z)$\\
+									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$]
+										\fillOnlyA
+									\end{venndiagram3sets}\\
+								\end{center}
+							\pagebreak
+							\item $(X - Y) \cup (X - Z)$
+								\begin{center}
+									$(X - Y)$\\
+									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$]
+										\fillANotB
+									\end{venndiagram3sets}\\
+									$(X - Z)$\\
+									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$]
+										\fillANotC
+									\end{venndiagram3sets}\\
+									$(X - Y) \cup (X - Z)$\\
+									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$]
+										\fillANotB
+										\fillANotC
+									\end{venndiagram3sets}\\
+								\end{center}
+							\pagebreak
+							\item $X \cap (Y - Z)$
+								\begin{center}
+									$X$\\
+									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$]
+										\fillA
+									\end{venndiagram3sets}\\
+									$Y - Z$\\
+									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$]
+										\fillBNotC
+									\end{venndiagram3sets}\\
+									$X \cap (Y - Z)$\\
+									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$]
+										\fillACapBNotC
+									\end{venndiagram3sets}\\
+								\end{center}
+							\pagebreak
+							\item $(X \cap Y) - (X \cap Z)$
+								\begin{center}
+									$X \cap Y$\\
+									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$]
+										\fillACapB
+									\end{venndiagram3sets}\\
+									$X \cap Z$\\
+									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$]
+										\fillACapC
+									\end{venndiagram3sets}\\
+									$(X \cap Y) - (X \cap Z)$\\
+									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$]
+										\fillACapBNotC
+									\end{venndiagram3sets}\\
+								\end{center}
+							\pagebreak
+							\item $X \cap (Y + Z)$
+								\begin{center}
+									$X$\\
+									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$]
+										\fillA
+									\end{venndiagram3sets}\\
+									$Y + Z$\\
+									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$]
+										\fillBNotC
+										\fillCNotB
+									\end{venndiagram3sets}\\
+									$X \cap (Y + Z)$\\
+									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$]
+										\fillACapBNotC
+										\fillACapCNotB
+									\end{venndiagram3sets}\\
+								\end{center}
+							\pagebreak
+							\item $(X \cap Y) + (X \cap Z)$
+								\begin{center}
+									$X \cap Y$\\
+									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$]
+										\fillACapB
+									\end{venndiagram3sets}\\
+									$X \cap Z$\\
+									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$]
+										\fillACapC
+									\end{venndiagram3sets}\\
+									$(X \cap Y) + (X \cap Z)$\\
+									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$]
+										\fillACapBNotC
+										\fillACapCNotB
+									\end{venndiagram3sets}\\
+								\end{center}
+						\end{enumerate}
+				\end{enumerate}
+		\pagebreak
+		\section{Proofs}
+			For proofs with sets, one needs to prove that the sets have exactly the same elements. For this, one needs to show that each half of the equation is equal to the other half: one needs to show both forwards and backwards. However, this can be abbreviated using iff.
+			\begin{examplebox}
+				(Long Way:) Prove that for all subsets $A$ and $B$ of $U$, $A \cup B = B \cup A$
+				\begin{proof}
+					Show $(A \cup B) \subseteq (B \cup A)$
+					\begin{tabbing}
+						Let $\qquad$ \=$x \in (A \cup B)$\\
+						If \>$x \in (A \cup B)$\\
+						then \> $x \in A$ or $x \in B$\\
+						i.e. \> $x \in B$ or $x \in A$\\
+						i.e. \> $x \in (B \cup A)$
+					\end{tabbing}
+					$\therefore$ if $x \in (A \cup B)$, then $x \in (B \cup A)$,\\
+					$\therefore (A \cup B) \subseteq (B \cup A)$.
+
+					\vspace{7mm}
+					Show $(B \cup A) \subseteq (A \cup B)$
+					\begin{tabbing}
+						Let $\qquad$ \=$x \in (B \cup A)$\\
+						If \>$x \in (B \cup A)$\\
+						then \> $x \in B$ or $x \in A$\\
+						i.e. \> $x \in A$ or $x \in B$\\
+						i.e. \> $x \in (A \cup B)$
+					\end{tabbing}
+					$\therefore$ if $x \in (B \cup A)$, then $x \in (A \cup B)$,\\
+					$\therefore (B \cup A) \subseteq (A \cup B)$.
+					
+					\vspace{5mm}
+					$\therefore A \cup B = B \cup A$
+				\end{proof}
+			\end{examplebox}
+			Using iff can shorten this, but be careful!
+			\begin{examplebox}
+				\begin{tabbing}
+					$\quad$ \=$x \in (X \cup Y)'$\\
+					iff \>$x \notin (X \cup Y)$\\
+					iff \>$x \notin X$ and $x \notin Y$\\
+					iff \>$x \in X'$ and $x \in Y'$\\
+					iff \>$x \in X' \cap Y'$
+				\end{tabbing}
+				\begin{tabbing}
+					$\quad$ \=$x \in (X \cap Y)'$\\
+					iff \> $x \notin (X \cap Y)$\\
+					iff \> $x \notin X$ or $x \notin Y$\\
+					iff \> $x \in X'$ or $x \in Y'$\\
+					iff \> $x \in X' \cup Y'$
+				\end{tabbing}
+			\end{examplebox}
+			\pagebreak
+			\subsection{Self-Assessment Exercises (4-6)}
+				\begin{enumerate}[label=(\alph*)]
+					\item $(X')' = X$\\
+						Let $x \in (X')'$.
+						\begin{tabbing}
+							$\quad$ \= $x \in (X')'$\\
+							iff \> $x \notin X'$\\
+							iff \> $x \in X$\\
+							$\therefore$ \> $(X')' = X$
+						\end{tabbing}
+					\item $X - (Y \cap W) = (X - Y) \cup (X - W)$\\
+						Let $x \in X - (Y \cap W)$.
+						\begin{tabbing}
+							$\quad$ \= $x \in X - (Y \cap W)$\\
+							iff \> $x \in X$ and $x \notin (Y \cap W)$\\
+							iff \> $x \in X$ and $x \in Y'$ or $x \in W'$\\
+							iff \> $\Bigl(x \in X$ and $x \in Y'\Bigr)$ or $\Bigl(x \in X$ and $x \in W'\Bigr)$\\
+							iff \> $\Bigl(x \in (X - Y)\Bigr)$ or $\Bigl(x \in (X - W)\Bigr)$\\
+							iff \> $x \in (X - Y) \cup (X - W)$\\
+							$\therefore$ \> $X - (Y \cap W) = (X - Y) \cup (X - W)$
+						\end{tabbing}
+					\item $X \cap (Y \cap W) = (X \cap Y) \cap W$\\
+						Let $x \in X \cap (Y \cap W)$.
+						\begin{tabbing}
+							$\quad$ \= $x \in X \cap (Y \cap W)$\\
+							iff \> $x \in X$ and $x \in (Y \cap W)$\\
+							iff \> $x \in X$ and $x \in Y$ and $x \in W$\\
+							iff \> $(x \in X$ and $x \in Y)$ and $x \in W$\\
+							iff \> $x \in (X \cap Y)$ and $x \in W$\\
+							iff \> $x \in (X \cap Y) \cap W$\\
+							$\therefore$ \> $X \cap (Y \cap W) = (X \cap Y) \cap W$
+						\end{tabbing}
+					\item $X \cap (Y \cup W) = (X \cap Y) \cup (X \cap W)$\\
+						Let $x \in X \cap (Y \cup W)$
+						\begin{tabbing}
+							$\quad$ \= $x \in X \cap (Y \cup W)$\\
+							iff \> $x \in X$ and $x \in (Y \cup W)$\\
+							iff \> $x \in X$ and ($x \in Y$ or $x \in W$)\\
+							iff \> ($x \in X$ and $x \in Y$) or ($x \in X$ and $x \in W$)\\
+							iff \> ($x \in (X \cap Y)$) or ($x \in (X \cap W)$)\\
+							iff \> $x \in (X \cap Y) \cup (X \cap W)$\\
+							$\therefore$ \> $X \cap (Y \cup W) = (X \cap Y) \cup (X \cap W)$
+						\end{tabbing}
+				\end{enumerate}
+			\pagebreak
+			\subsection{Proofs Continued}
+			In order to prove that two sets are not equal, one needs to just provide a \textbf{counterexample} - an element that is in one set that is not in the other.
+	\end{document}

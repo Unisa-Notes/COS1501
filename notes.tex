@@ -9,17 +9,15 @@
 \usepackage[T1]{fontenc}
 \usepackage{tikz}
 \usetikzlibrary{fit, backgrounds}
-\colorlet{circle edge}{black!50}
-% \colorlet{circle area}{gray!20}
-\colorlet{circle area}{blue!15!white}
+\colorlet{circle area}{green!25!white}
 \colorlet{example color}{blue!15!white}
 \colorlet{example title}{black}
 \colorlet{note color}{red!15!white}
 \colorlet{note border}{red!75!black}
-\def\firstcircle{(0,0) circle (1.5cm)}
-\def\secondcircle{(0:2cm) circle (1.5cm)}
-\tikzset{filled/.style={fill=circle area, draw=circle edge, thick},
-        outline/.style={draw=circle edge, thick}}
+\tikzset{myvennoutline/.style={background rectangle/.style={draw=black, fill=white}, show background rectangle}}
+\raggedbottom
+
+\usepackage{venndiagram}
 
 \usepackage{mathtools}
 \let\oldtextbf\textbf
@@ -56,4 +54,6 @@
 	\subfileinclude{units/unit1.tex}
 	\subfileinclude{units/unit2.tex}
 	\subfileinclude{units/unit3.tex}
+	\clearpage\begingroup\pagestyle{empty}\cleardoublepage\endgroup
+	\subfileinclude{units/unit4.tex}
 \end{document}
