@@ -14,7 +14,8 @@
 \colorlet{example title}{black}
 \colorlet{note color}{red!15!white}
 \colorlet{note border}{red!75!black}
-\tikzset{myvennoutline/.style={background rectangle/.style={draw=black, fill=white}, show background rectangle}}
+\colorlet{exercise color}{orange!25!white}
+\colorlet{exercise border}{orange!75!black}
 \raggedbottom
 
 \usepackage{venndiagram}
@@ -37,6 +38,7 @@
 
 % Colorboxes for different elements
 \newtcolorbox{notebox}[1]{breakable, colback=note color, colframe=note border, fonttitle=\bfseries, title={#1}, center title}
+\newtcolorbox{exercisebox}[1]{breakable, colback=exercise color, colframe=exercise border, fonttitle=\bfseries, title={#1}, center title}
 \newtcolorbox{examplebox}{coltitle=example title, colback=example color, breakable, detach title, before upper={\tcbtitle\quad}, title=\textbf{Example}}
 
 \usepackage{subfiles}

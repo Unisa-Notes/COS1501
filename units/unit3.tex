@@ -149,174 +149,180 @@
           &= 8
         \end{align*}
       \end{examplebox}
-    \section{Self Assessment Exercises}
-      \begin{enumerate}
+      \pagebreak
+      \begin{exercisebox}{Self Assessment Exercise \thechapter.6}
+        \begin{enumerate}
+          \item 
         \item 
-          \begin{alignat*}{3}
-            U &= \{1, 2, 3, 4, 5\} \qquad & A &= \{1, 2, 3\} \qquad & B &= \{3, 4, 5\}
-          \end{alignat*}
-          \begin{enumerate}[label=(\alph*)]
+          \item 
+            \begin{alignat*}{3}
+              U &= \{1, 2, 3, 4, 5\} \qquad & A &= \{1, 2, 3\} \qquad & B &= \{3, 4, 5\}
+            \end{alignat*}
+            \begin{enumerate}[label=(\alph*)]
+              \item 
             \item 
-              \begin{align*}
-                A \cup B &= \{1, 2, 3\} \cup \{3, 4, 5\}\\
-                &= \{1, 2, 3, 4, 5\}\\
-                B \cup A &= \{3, 4, 5\} \cup \{1, 2, 3\}\\
-                &= \{1, 2, 3, 4, 5\}
-              \end{align*}
-            \item
-              \begin{align*}
-                A \cap B &= \{1, 2, 3\} \cap \{3, 4, 5\}\\
-                &= \{3\}\\
-                B \cap A &= \{3, 4, 5\} \cap \{1, 2, 3\}\\
-                &= \{3\}
-              \end{align*}
-            \item
-              \begin{align*}
-                A - B &= \{1, 2, 3\} - \{3, 4, 5\}\\
-                &= \{1, 2\}\\
-                B - A &= \{3, 4, 5\} - \{1, 2, 3\}\\
-                &= \{4, 5\}
-              \end{align*}
-            \item
-              \begin{align*}
-                A + B &= \{1, 2, 3\} + \{3, 4, 5\}\\
-                &= \{1, 2, 4 , 5\}\\
-                B + A &= \{3, 4, 5\} + \{1, 2, 3\}\\
-                &= \{1, 2, 4, 5\}
-              \end{align*}
-          \end{enumerate}
-        \item
-          \begin{alignat*}{3}
-            U &= \{a, e, i, o, u\} \qquad & A &= \{i, o, u\} \qquad & B &= \{a, e, o, u\}
-          \end{alignat*}
-          \begin{enumerate}[label=(\alph*)]
-            \item
-              \begin{align*}
-                A' &= \{i, o, u\}'\\
-                &= \{a, e, i, o, u\} - \{i, o, u\}\\
-                &= \{a, e\}\\
-                \left(A'\right)' &= \{a, e, i, o, u\} - \{a, e\}\\
-                &= \{i, o, u\}\\
-                &= A
-              \end{align*}
-            \item
-              \begin{align*}
-                B' &= \{a, e, o, u\}'\\
-                &= \{a, e, i, o, u\} - \{a, e, o, u\}\\
-                &= \{i\}\\
-                \left(B'\right)' &= \{a, e, i, o, u\} - \{i\}\\
-                &= \{a, e, o, u\}\\
-                &= B
-              \end{align*}
-            \item
-              \begin{align*}
-                A \cup B &= \{i, o, u\} \cup \{a, e, o, u\}\\
-                &= \{a, e, i, o, u\}\\
-                (A \cup B)' &= \{a, e, i, o, u\} - \{a, e, i, o, u\}\\
-                &= \emptyset
-              \end{align*}
-            \item
-              \begin{align*}
-                A' \cap B' &= \{a, e\} \cap \{i\}\\
-                &= \emptyset
-              \end{align*}
-            \item
-              \begin{align*}
-                A \cap B &= \{i, o, u\} \cap \{a, e, o, u\}\\
-                &= \{o, u\}\\
-                (A \cap B)' &= \{a, e, i, o, u\} - \{o, u\}\\
-                &= \{a, e, i\}
-              \end{align*}
-            \item
-              \begin{align*}
-                A' \cup B' &= \{a, e\} \cup \{i\}\\
-                &= \{a, e, i\}
-              \end{align*}
-            \item
-              \begin{align*}
-                A - B &= \{i, o, u\} - \{a, e, o, u\}\\
-                &= \{i\}\\
-                B - A &= \{a, e, o, u\} - \{i, o, u\}\\
-                &= \{a,e\}
-              \end{align*}
-            \item
-              \begin{align*}
-                A \cap B' &= \{i, o, u\} \cap \{i\}\\
-                &= \{i\}\\
-                B \cap A' &= \{a, e, o, u\} \cap \{a, e\}\\
-                &= \{a, e\}
-              \end{align*}
-            \item
-              \begin{align*}
-                A + B &= \{i, o, u\} + \{a, e, o, u\}\\
-                &= \{a, e, i\}\\
-                B + A &= \{a, e, o, u\} + \{i, o, u\}\\
-                &= \{a, e, i\}
-              \end{align*}
-          \end{enumerate}
-        \item
-          \begin{alignat*}{3}
-            U &= \{1, 2, 3, 4, 5\} \qquad & A &= \{3\} \qquad & B &= \Bigl\{\{3\}, 4, 5\Bigr\}
-          \end{alignat*}
-          \begin{align*}
-            \mathcal{P}(A) &= \mathcal{P}\Bigl(\{3\}\Bigr)\\
-            &= \Bigl\{\emptyset, \{3\}\Bigr\}\\
-            \mathcal{P}(B) &= \mathcal{P}\biggl(\Bigl\{\{3\}, 4, 5\Bigr\}\biggr)\\
-            &= \biggl\{\emptyset, \Bigl\{\{3\}\Bigr\}, \Bigl\{4\Bigr\}, \Bigl\{5\Bigr\}, \Bigl\{\{3\}, 4\Bigr\}, \Bigl\{\{3\}, 5\Bigr\}, \Bigl\{4, 5\Bigr\}, \Bigl\{\{3\}, 4, 5\Bigr\}\biggr\}
-          \end{align*}
-          \pagebreak
+              \item 
+                \begin{align*}
+                  A \cup B &= \{1, 2, 3\} \cup \{3, 4, 5\}\\
+                  &= \{1, 2, 3, 4, 5\}\\
+                  B \cup A &= \{3, 4, 5\} \cup \{1, 2, 3\}\\
+                  &= \{1, 2, 3, 4, 5\}
+                \end{align*}
+              \item
+                \begin{align*}
+                  A \cap B &= \{1, 2, 3\} \cap \{3, 4, 5\}\\
+                  &= \{3\}\\
+                  B \cap A &= \{3, 4, 5\} \cap \{1, 2, 3\}\\
+                  &= \{3\}
+                \end{align*}
+              \item
+                \begin{align*}
+                  A - B &= \{1, 2, 3\} - \{3, 4, 5\}\\
+                  &= \{1, 2\}\\
+                  B - A &= \{3, 4, 5\} - \{1, 2, 3\}\\
+                  &= \{4, 5\}
+                \end{align*}
+              \item
+                \begin{align*}
+                  A + B &= \{1, 2, 3\} + \{3, 4, 5\}\\
+                  &= \{1, 2, 4 , 5\}\\
+                  B + A &= \{3, 4, 5\} + \{1, 2, 3\}\\
+                  &= \{1, 2, 4, 5\}
+                \end{align*}
+            \end{enumerate}
+          \item
+            \begin{alignat*}{3}
+              U &= \{a, e, i, o, u\} \qquad & A &= \{i, o, u\} \qquad & B &= \{a, e, o, u\}
+            \end{alignat*}
+            \begin{enumerate}[label=(\alph*)]
+              \item
+                \begin{align*}
+                  A' &= \{i, o, u\}'\\
+                  &= \{a, e, i, o, u\} - \{i, o, u\}\\
+                  &= \{a, e\}\\
+                  \left(A'\right)' &= \{a, e, i, o, u\} - \{a, e\}\\
+                  &= \{i, o, u\}\\
+                  &= A
+                \end{align*}
+              \item
+                \begin{align*}
+                  B' &= \{a, e, o, u\}'\\
+                  &= \{a, e, i, o, u\} - \{a, e, o, u\}\\
+                  &= \{i\}\\
+                  \left(B'\right)' &= \{a, e, i, o, u\} - \{i\}\\
+                  &= \{a, e, o, u\}\\
+                  &= B
+                \end{align*}
+              \item
+                \begin{align*}
+                  A \cup B &= \{i, o, u\} \cup \{a, e, o, u\}\\
+                  &= \{a, e, i, o, u\}\\
+                  (A \cup B)' &= \{a, e, i, o, u\} - \{a, e, i, o, u\}\\
+                  &= \emptyset
+                \end{align*}
+              \item
+                \begin{align*}
+                  A' \cap B' &= \{a, e\} \cap \{i\}\\
+                  &= \emptyset
+                \end{align*}
+              \item
+                \begin{align*}
+                  A \cap B &= \{i, o, u\} \cap \{a, e, o, u\}\\
+                  &= \{o, u\}\\
+                  (A \cap B)' &= \{a, e, i, o, u\} - \{o, u\}\\
+                  &= \{a, e, i\}
+                \end{align*}
+              \item
+                \begin{align*}
+                  A' \cup B' &= \{a, e\} \cup \{i\}\\
+                  &= \{a, e, i\}
+                \end{align*}
+              \item
+                \begin{align*}
+                  A - B &= \{i, o, u\} - \{a, e, o, u\}\\
+                  &= \{i\}\\
+                  B - A &= \{a, e, o, u\} - \{i, o, u\}\\
+                  &= \{a,e\}
+                \end{align*}
+              \item
+                \begin{align*}
+                  A \cap B' &= \{i, o, u\} \cap \{i\}\\
+                  &= \{i\}\\
+                  B \cap A' &= \{a, e, o, u\} \cap \{a, e\}\\
+                  &= \{a, e\}
+                \end{align*}
+              \item
+                \begin{align*}
+                  A + B &= \{i, o, u\} + \{a, e, o, u\}\\
+                  &= \{a, e, i\}\\
+                  B + A &= \{a, e, o, u\} + \{i, o, u\}\\
+                  &= \{a, e, i\}
+                \end{align*}
+            \end{enumerate}
+          \item
+            \begin{alignat*}{3}
+              U &= \{1, 2, 3, 4, 5\} \qquad & A &= \{3\} \qquad & B &= \Bigl\{\{3\}, 4, 5\Bigr\}
+            \end{alignat*}
+            \begin{align*}
+              \mathcal{P}(A) &= \mathcal{P}\Bigl(\{3\}\Bigr)\\
+              &= \Bigl\{\emptyset, \{3\}\Bigr\}\\
+              \mathcal{P}(B) &= \mathcal{P}\biggl(\Bigl\{\{3\}, 4, 5\Bigr\}\biggr)\\
+              &= \biggl\{\emptyset, \Bigl\{\{3\}\Bigr\}, \Bigl\{4\Bigr\}, \Bigl\{5\Bigr\}, \Bigl\{\{3\}, 4\Bigr\}, \Bigl\{\{3\}, 5\Bigr\}, \Bigl\{4, 5\Bigr\}, \Bigl\{\{3\}, 4, 5\Bigr\}\biggr\}
+            \end{align*}
+          \item 
         \item 
-          \begin{alignat*}{3}
-            U &= \{a, e, i, o, u\} \qquad & A &= \{i, o, u\} \qquad & B &= \{a, e, o, u\}
-          \end{alignat*}
-          \begin{enumerate}[label=(\alph*)]
-            \item
-              \begin{align*}
-                \mathcal{P}(A) &= \Bigl\{\emptyset, \{i\}, \{o\}, \{u\}, \{i, o\}, \{i, u\}, \{o, u\}, \{i, o, u\}\Bigr\}\\
-                \mathcal{P}(B) &= \Bigl\{\emptyset, \{a\}, \{e\}, \{o\}, \{u\}, \{a, e\}, \{a, o\}, \{a, u\}, \{e, o\}, \{e, u\}, \{o, u\}, \{a, e, o\},\\
-                & \qquad \{a, e, u\}, \{a, o, u\}, \{e, o, u\}, \{a, e, o, u\}\Bigr\}
-              \end{align*}
-            \item
-              \begin{align*}
-                \mathcal{P}(A \cap B) &= \mathcal{P}\bigl(\{o, u\}\bigr)\\
-                &= \Bigl\{\emptyset, \{o\}, \{u\}, \{o, u\}\Bigr\}\\
-                \mathcal{P}(A) \cap \mathcal{P}(B) &= \Bigl\{\emptyset, \{o\}, \{u\}, \{o, u\}\Bigr\}
-              \end{align*}
-            \item
-              \begin{align*}
-                \mathcal{P}\left(A'\right) &= \mathcal{P}\bigl(\{a, e\}\bigr)\\
-                &= \Bigl\{\emptyset, \{a\}, \{e\}, \{a, e\}\Bigr\}
-              \end{align*}
-              \begin{align*}
-                \mathcal{P}(U) &= \Bigl\{\emptyset, \{a\}, \{e\}, \{i\}, \{o\}, \{u\}, \{a, e\}, \{a, i\}, \{a, o\}, \{a, u\},\\
-                & \qquad \{e, i\}, \{e, o\}, \{e, u\}, \{i, o\}, \{i, u\}, \{o, u\},\\
-                & \qquad \{a, e, i\}, \{a, e, o\}, \{a, e, u\}, \{a, i, o\}, \{a, i, u\}, \{a, o, u\},\\
-                & \qquad \{e, i, o\}, \{e, i, u\} \{e, o, u\}, \{i, o, u\},\\
-                & \qquad \{a, e, i, o\}, \{a, e, i, u\}, \{a, e, o, u\} \{a, i, o, u\}, \{e, i, o, u\}, \{a, e, i, o, u\}\Bigr\}
-              \end{align*}
-              \begin{align*}
-                \Bigl(\mathcal{P}(A)\Bigr)' &= \Bigl\{\{a\}, \{e\}, \{a, e\}, \{a, i\}, \{a, o\}, \{a, u\}, \{e, i\}, \{e, o\}, \{e, u\},\\
-                & \qquad \{a, e, i\}, \{a, e, o\}, \{a, e, u\}, \{a, i, o\}, \{a, i, u\}, \{a, o, u\}, \\
-                & \qquad \{e, i, o\}, \{e, i, u\},  \{e, o, u\}, \\
-                & \qquad \{a, e, i, o\}, \{a, e, i, u\}, \{a, e, o, u\} \{a, i, o, u\}, \{e, i, o, u\}, \{a, e, i, o, u\}\Bigr\}
-              \end{align*}
-            \item
-              \begin{align*}
-                \mathcal{P}(A) \cup \mathcal{P}(B) &= \Bigl\{\emptyset, \{a\}, \{e\}, \{i\}, \{o\}, \{u\},\\
-                & \qquad \{a, e\}, \{a, o\}, \{a, u\}, \{e, o\}, \{e, u\}, \{i, o\}, \{i, u\}, \{o, u\}, \\
-                & \qquad \{a, e, o\}, \{a, e, u\}, \{a, o, u\}, \{e, o, u\}, \{i, o, u\}, \{a, e, o, u\}\Bigr\}
-              \end{align*}
-              \begin{align*}
-                \mathcal{P}(A \cup B) &= \mathcal{P}\Bigl(\{a, e, i, o, u\}\Bigr)\\
-                &= \mathcal{P}(U)\\
-                &= \Bigl\{\emptyset, \{a\}, \{e\}, \{i\}, \{o\}, \{u\}, \{a, e\}, \{a, i\}, \{a, o\}, \{a, u\},\\
-                & \qquad \{e, i\}, \{e, o\}, \{e, u\}, \{i, o\}, \{i, u\}, \{o, u\},\\
-                & \qquad \{a, e, i\}, \{a, e, o\}, \{a, e, u\}, \{a, i, o\}, \{a, i, u\}, \{a, o, u\},\\
-                & \qquad \{e, i, o\}, \{e, i, u\} \{e, o, u\}, \{i, o, u\},\\
-                & \qquad \{a, e, i, o\}, \{a, e, i, u\}, \{a, e, o, u\} \{a, i, o, u\}, \{e, i, o, u\}, \{a, e, i, o, u\}\Bigr\}
-              \end{align*}
-          \end{enumerate}
-      \end{enumerate}
-      \noindent\rule{\textwidth}{0.4pt}
+          \item 
+            \begin{alignat*}{3}
+              U &= \{a, e, i, o, u\} \qquad & A &= \{i, o, u\} \qquad & B &= \{a, e, o, u\}
+            \end{alignat*}
+            \begin{enumerate}[label=(\alph*)]
+              \item
+                \begin{align*}
+                  \mathcal{P}(A) &= \Bigl\{\emptyset, \{i\}, \{o\}, \{u\}, \{i, o\}, \{i, u\}, \{o, u\}, \{i, o, u\}\Bigr\}\\
+                  \mathcal{P}(B) &= \Bigl\{\emptyset, \{a\}, \{e\}, \{o\}, \{u\}, \{a, e\}, \{a, o\}, \{a, u\}, \{e, o\}, \{e, u\}, \{o, u\}, \{a, e, o\},\\
+                  & \qquad \{a, e, u\}, \{a, o, u\}, \{e, o, u\}, \{a, e, o, u\}\Bigr\}
+                \end{align*}
+              \item
+                \begin{align*}
+                  \mathcal{P}(A \cap B) &= \mathcal{P}\bigl(\{o, u\}\bigr)\\
+                  &= \Bigl\{\emptyset, \{o\}, \{u\}, \{o, u\}\Bigr\}\\
+                  \mathcal{P}(A) \cap \mathcal{P}(B) &= \Bigl\{\emptyset, \{o\}, \{u\}, \{o, u\}\Bigr\}
+                \end{align*}
+              \item
+                \begin{align*}
+                  \mathcal{P}\left(A'\right) &= \mathcal{P}\bigl(\{a, e\}\bigr)\\
+                  &= \Bigl\{\emptyset, \{a\}, \{e\}, \{a, e\}\Bigr\}
+                \end{align*}
+                \begin{align*}
+                  \mathcal{P}(U) &= \Bigl\{\emptyset, \{a\}, \{e\}, \{i\}, \{o\}, \{u\}, \{a, e\}, \{a, i\}, \{a, o\}, \{a, u\},\\
+                  & \qquad \{e, i\}, \{e, o\}, \{e, u\}, \{i, o\}, \{i, u\}, \{o, u\},\\
+                  & \qquad \{a, e, i\}, \{a, e, o\}, \{a, e, u\}, \{a, i, o\}, \{a, i, u\}, \{a, o, u\},\\
+                  & \qquad \{e, i, o\}, \{e, i, u\} \{e, o, u\}, \{i, o, u\},\\
+                  & \qquad \{a, e, i, o\}, \{a, e, i, u\}, \{a, e, o, u\} \{a, i, o, u\}, \{e, i, o, u\}, \{a, e, i, o, u\}\Bigr\}
+                \end{align*}
+                \begin{align*}
+                  \Bigl(\mathcal{P}(A)\Bigr)' &= \Bigl\{\{a\}, \{e\}, \{a, e\}, \{a, i\}, \{a, o\}, \{a, u\}, \{e, i\}, \{e, o\}, \{e, u\},\\
+                  & \qquad \{a, e, i\}, \{a, e, o\}, \{a, e, u\}, \{a, i, o\}, \{a, i, u\}, \{a, o, u\}, \\
+                  & \qquad \{e, i, o\}, \{e, i, u\},  \{e, o, u\}, \\
+                  & \qquad \{a, e, i, o\}, \{a, e, i, u\}, \{a, e, o, u\} \{a, i, o, u\}, \{e, i, o, u\}, \{a, e, i, o, u\}\Bigr\}
+                \end{align*}
+              \item
+                \begin{align*}
+                  \mathcal{P}(A) \cup \mathcal{P}(B) &= \Bigl\{\emptyset, \{a\}, \{e\}, \{i\}, \{o\}, \{u\},\\
+                  & \qquad \{a, e\}, \{a, o\}, \{a, u\}, \{e, o\}, \{e, u\}, \{i, o\}, \{i, u\}, \{o, u\}, \\
+                  & \qquad \{a, e, o\}, \{a, e, u\}, \{a, o, u\}, \{e, o, u\}, \{i, o, u\}, \{a, e, o, u\}\Bigr\}
+                \end{align*}
+                \begin{align*}
+                  \mathcal{P}(A \cup B) &= \mathcal{P}\Bigl(\{a, e, i, o, u\}\Bigr)\\
+                  &= \mathcal{P}(U)\\
+                  &= \Bigl\{\emptyset, \{a\}, \{e\}, \{i\}, \{o\}, \{u\}, \{a, e\}, \{a, i\}, \{a, o\}, \{a, u\},\\
+                  & \qquad \{e, i\}, \{e, o\}, \{e, u\}, \{i, o\}, \{i, u\}, \{o, u\},\\
+                  & \qquad \{a, e, i\}, \{a, e, o\}, \{a, e, u\}, \{a, i, o\}, \{a, i, u\}, \{a, o, u\},\\
+                  & \qquad \{e, i, o\}, \{e, i, u\} \{e, o, u\}, \{i, o, u\},\\
+                  & \qquad \{a, e, i, o\}, \{a, e, i, u\}, \{a, e, o, u\} \{a, i, o, u\}, \{e, i, o, u\}, \{a, e, i, o, u\}\Bigr\}
+                \end{align*}
+            \end{enumerate}
+        \end{enumerate}
+      \end{exercisebox}
 
 \end{document}
