@@ -381,7 +381,7 @@
 				\end{tabbing}
 			\end{examplebox}
 			\pagebreak
-			\subsection{Self-Assessment Exercises (4-6)}
+			\begin{exercisebox}{Self-Assessment Exercise \thechapter.6}
 				\begin{enumerate}[label=(\alph*)]
 					\item $(X')' = X$\\
 						Let $x \in (X')'$.
@@ -425,7 +425,47 @@
 							$\therefore$ \> $X \cap (Y \cup W) = (X \cap Y) \cup (X \cap W)$
 						\end{tabbing}
 				\end{enumerate}
-			\pagebreak
-			\subsection{Proofs Continued}
+			\end{exercisebox}
 			In order to prove that two sets are not equal, one needs to just provide a \textbf{counterexample} - an element that is in one set that is not in the other.
+		\section{The Inclusion Exclusion Principle}
+			For all finite sets $X$ and $Y$, $\left\lvert X \cup Y\right\rvert = \left\lvert X\right\rvert + \left\lvert Y \right\rvert - \left\lvert X \cap Y\right\rvert $
+			\begin{examplebox}
+				Let $X = \{a, b, c, 1\}$ and $Y = \{1, 2, 3\}$. Then $X \cap Y = \{1\}$ and $\left\lvert X \cap Y\right\rvert = 1$.\\
+				$\left\lvert X\right\rvert = 4$, $\left\lvert Y\right\rvert = 3$, so $\left\lvert X \cup Y\right\rvert = \left\lvert X\right\rvert + \left\lvert Y\right\rvert - \left\lvert X \cap Y\right\rvert = 4 + 3 - 1 = 6$
+			\end{examplebox}
+			\subsection{Sum Rule}
+				If $X$ and $Y$ are disjoint sets ($X \cap Y = \emptyset$), and $\left\lvert X\right\rvert = m$ and $\left\lvert Y\right\rvert = n $, then $\left\lvert X \cup Y\right\rvert = m + n $
+			\subsection{Applying the principle to Venn Diagrams}
+				\begin{examplebox}
+					In a group of 50 learners, 25 play mastermind, 30 play basketball, and 10 play both.
+					\begin{enumerate}[label=(\alph*)]
+						\item How many learners play Mastermind or basketball, (or both)?
+						\item How many students do not play either Mastermind or basketball?
+					\end{enumerate}
+					$U$ is all the learners, $M$ is those who play Mastermind, and $B$ is those who play basketball.
+					\begin{alignat*}{4}
+						\left\lvert U\right\rvert &= 50 \qquad & \left\lvert M\right\rvert &= 25 \qquad & \left\lvert B\right\rvert &= 30 \qquad & \left\lvert M \cap B \right\rvert = 10
+					\end{alignat*}
+					\begin{center}
+						\begin{venndiagram2sets}[shade=circle area, showframe=true, radius=2.4cm, overlap=1.2cm, vgap=1cm, labelA={$M$}, labelAB={$10$}, labelOnlyA={$25 - 10 = 15$}, labelOnlyB={$30 - 10 = 20$}]
+							\fillAll[fill=white]
+							\setpostvennhook
+							{
+								\node[above] at (current bounding box.south) {$50 - 15 - 20 - 10 = 5$};
+							}
+						\end{venndiagram2sets}
+					\end{center}
+					\pagebreak
+					\begin{enumerate}
+						\item $\left\lvert M \cup B\right\rvert = 15 + 10 + 20 = 45$.\\
+							Also by Inclusion Exclusion,
+							\begin{align*}
+								\left\lvert M \cup B\right\rvert &= \left\lvert M\right\rvert + \left\lvert B\right\rvert - \left\lvert M \cap B\right\rvert\\
+								&= 25 + 30 - 10\\
+								&= 45
+							\end{align*}
+						\item $\left\lvert (M \cup B)'\right\rvert = 50 - 45 = 5$
+					\end{enumerate}
+				\end{examplebox}
+				COME BACK TO - NOTES ARE NOT DONE
 	\end{document}
