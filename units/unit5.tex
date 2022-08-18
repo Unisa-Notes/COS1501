@@ -1,0 +1,172 @@
+\documentclass[../notes.tex]{subfiles}
+
+\begin{document}
+	\chapter{Relations}
+		\section{Cartesian Product}
+			For any sets $A$ and $B$, the \textbf{Cartesian product} of $A$ and $B$ is written $A \times B$, and is equal to the set
+			\begin{align*}
+				\Bigl\{(x, y) \mid x \in A \text{ and } y \in B\Bigr\}
+			\end{align*}
+			In other words, the Cartesian product $A \times B$ denotes a set of ordered pairs such that all the first coordinates of the pairs are elements of set $A$, and all the second coordinates of the pairs are elements of set $B$.
+			\begin{examplebox}
+				$A = \{2, 3, 4\}, B = \{5, 6\}$
+				\begin{align*}
+					A \times B &= \Bigl\{(2, 5), (2, 6), (3, 5), (3, 6), (4, 5), (4, 6)\Bigr\}\\
+					B \times A &= \Bigl\{(5, 2), (5, 3), (5, 4), (6, 2), (6, 3), (6, 4)\Bigr\}\\
+					B \times B &= \Bigl\{(5, 5), (5, 6), (6, 5), (6, 6)\Bigr\}\\
+					A \times A &= \Bigl\{(2, 2), (2, 3), (2, 4), (3, 2), (3, 3), (3, 4), (4, 2), (4, 3), (4, 4)\Bigr\}
+				\end{align*}
+			\end{examplebox}
+		\section{Relation}
+			A subset of a Cartesian product from $C$ to $D$ is called a \textbf{relation} from $C$ to $D$.
+			\begin{examplebox}
+				$A = \{2, 3, 4\}, B = \{6, 7\}$. The following are some relations from $A$ to $B$
+				\begin{align*}
+					\emptyset \tag*{(This is a subset, even though it has no elements)}\\
+					\Bigl\{(3, 7)\Bigr\}\\
+					\Bigl\{(2, 6), (2, 7)\Bigr\}\\
+					\Bigl\{(2, 6), (3, 6), (4, 6)\Bigr\}\\
+					A \times B
+				\end{align*}
+			\end{examplebox}
+				\begin{exercisebox}{Self-Assessment Exercise \thechapter.4}
+					\begin{alignat*}{3}
+						A &= \{1, 2, 3, 4\} \qquad & B &= \{2, 5\} \qquad & C &= \{3, 4, 7\}
+					\end{alignat*}
+					\textbf{List the folliwing Cartesian products in list notation:}
+					\begin{enumerate}[label=(\alph*)]
+						\item $A \times B = \Bigl\{(1, 2), (1, 5), (2, 2), (2, 5), (3, 2), (3, 5), (4, 2), (4, 5)\Bigr\}$
+						\item $B \times A = \Bigl\{(2, 1), (2, 2), (2, 3), (2, 4), (5, 1), (5, 2), (5, 3), {5, 4}\Bigr\}$
+						\item $(A \cup B) \times C$
+							\begin{align*}
+								A \cup B &= \{1, 2, 3, 4, 5\}\\
+								(A \cup B) \times C &= \Bigl\{(1, 3), (1, 4), (1, 7), (2, 3), (2, 4), (2, 7), (3, 3), (3, 4), (3, 7),\\
+								& \qquad (4, 3), (4, 4), (4, 7), (5, 3), (5, 4), (5, 7)\Bigr\}
+							\end{align*}
+						\item $(A + B) \times B$
+							\begin{align*}
+								A + B &= \{1, 3, 4, 5\}\\
+								(A + B) \times B &= \Bigl\{(1, 2), (1, 5), (3, 2), (3, 5), (4, 2), (4, 5), (5, 2), (5, 5)\Bigr\}
+							\end{align*}
+					\end{enumerate}
+				\end{exercisebox}
+				\pagebreak
+			\subsection{Domain, Range and Codomain}
+				Suppose $T$ is a relation from $X$ to $Y$.\\
+				Then $Y$ is the \textbf{codomain} of $T$.\\
+				\vspace{2mm}\\
+				The \textbf{domain} of $T$, written $\mathrm{dom}(T)$ is:
+					\begin{align*}
+						\mathrm{dom}(T) = \{x \mid \text{ for some } y \in Y, (x, y) \in T\}
+					\end{align*}
+				That is, all the elements that actually appear as first elements in the relation $T$.\\
+				\vspace{2mm}\\
+				The \textbf{range} of $T$, written $\mathrm{ran}(T)$ is:
+				\begin{align*}
+					\mathrm{ran}(T) = \{y \mid \text{ for some } x \in X, (x, y) \in T\}
+				\end{align*}
+			That is, all the elements that actually appear as second elements in the relation $T$.
+			\begin{notebox}{Domain and Range are not equal to $X$ and $Y$}
+				$\mathrm{dom}(T) \subseteq X$. The domain of the relation is a \textit{subset} of $X$, but not necessarily equal to $X$.\\
+				$\mathrm{ran}(T) \subseteq Y$. The range of the relation is a \textit{subset} of $Y$, but not necessarily equal to $Y$.
+			\end{notebox}
+			\begin{examplebox}
+				Let $S = \Bigl\{(a, 1), (b, 1), (a, 2)\Bigr\}$ be a relation from $\{a, b, c\}$ to $\{1, 2, 3\}$.\\
+				Then $\mathrm{dom}(S) = \{a, b\} \subseteq \{a, b, c\}$.\\
+				And $\mathrm{ran}(S) = \{1, 2\} \subseteq \{1, 2, 3\}$.\\
+				The codomain of $S$ is the set $\{1, 2, 3\}$. 
+			\end{examplebox}
+			\subsection{Binary Relation}
+				If $R$ is any subset of a Cartesian product $X \times Y$, then $R$ is called a \textbf{binary relation} from $X$ to $Y$, or between $X$ and $Y$.\\
+				A subset $R$ of $X \times Y$ is called the \textbf{rule} for the relation.\\
+				If $R \subseteq X \times X$, $R$ is a binary relation on $X$.
+			\pagebreak
+		\section{Properties of Relations}
+			\subsection{Reflexivity}
+				A relation $R$ on $A$ ($R \subseteq A \times A$) is called \textbf{reflexive} on $A$ iff for every $x \in A$, we have $(x, x) \in R$.\\
+				In other words, every element needs to be related to itself (although it can also be related to other elements).
+				\begin{examplebox}
+					Let $A = \{2, 3, 5\}$. For a relation $S$ to be reflexive on $A$, $\bigl\{(2, 2), (3, 3), (5, 5)\bigr\}$ needs to be a subset of $S$.
+						\begin{align*}
+							\bigl\{(2, 2), (3, 3), (5, 5)\bigr\} \subseteq S.
+						\end{align*}
+					Therefore, the relation $\bigl\{(2, 2), (3, 3), (5, 5) (2, 3)\bigr\}$ would be a reflexive relation on $A$.
+				\end{examplebox}
+			\subsection{Irreflexitivity}
+				A relation $R$ on $A$ ($R \subseteq A \times A$) is called \textbf{irreflexive} iff there is \textit{no} $x$ such that $(x, x) \in R$. In other words, for any $x \in A, (x, x) \notin R$
+				\begin{examplebox}
+					Let $A = \{2, 3, 5\}$.\\
+					\vspace{2mm}\\
+					$R = \bigl\{(3, 2), (2, 5), (3, 5)\bigr\}$. $R$ is \textbf{irreflexive}, as there is no element that relates to itself. i.e. None of the elements of $\bigl\{(2, 2), (3, 3), (5, 5)\bigr\}$ are elements of $R$.\\
+					\vspace{2mm}\\
+					$S = \bigl\{(2, 2), (2, 5), (3, 5)\bigr\}$. $S$ is not reflexive, as the elements $\bigl\{(3, 3), (5, 5)\bigr\}$ are not present. $S$ is also not irreflexive, as the element $(2, 2)$ is an element of $S$.
+				\end{examplebox}
+			\subsection{Symmetry}
+				A relation $R$ on $A$ ($R \subseteq A \times A$) is called \textbf{symmetric} iff $R$ has the property that, for all $x, y \in R$, if $(x, y) \in R$, then $(y, x) \in R$.
+				\begin{examplebox}
+					Let $B = \{1, 2, 3\}$\\
+					$R_{1} = \bigl\{(1, 2), (2, 1), (1, 3), (3, 1)\bigr\}$ is symmetric and irreflexive.\\
+					$R_{2} = \bigl\{(1, 1), (2, 2), (3, 3), (2, 3)\bigr\}$ is reflexive, but not symmetric.\\
+					$R_{3} = \bigl\{(1, 1), (2, 2), (3, 3), (1, 2), (2, 1)\bigr\}$ is symmetric and reflexive.\\
+					$R_{4} = \bigl\{(1, 1), (2, 3)\bigr\}$ is not reflexive, irreflexive or symmetric.
+				\end{examplebox}
+				\pagebreak
+			\subsection{Antisymmetry}
+				A relation $R$ on $A$ ($R \subseteq A \times A$) is called \textbf{antisymmetric} iff $R$ has the property that, for all $x, y \in R$, if $x \neq y$ and $(x, y) \in R$, then $(y, x) \notin R$.\\
+				\textbf{Another definition:} A relation $R$ on $A$ ($R \subseteq A \times A$) is called \textbf{antisymmetric} iff $R$ has the property that, for all $x, y \in R$, if $(x, y) \in R$, then $x = y$.
+				\begin{examplebox}
+					Let $A = \{a, b, c\}$\\
+					$P = \bigl\{(a, b), (b, b), (b, c)\bigr\}$ on $A$.\\
+					$a \neq b, (a, b) \in P$, but $(b, a) \notin P$.\\
+					$b \neq c, (b, c) \in P$, but $(c, b) \notin P$.\\
+					$\therefore P$ is antisymmetric on $A$.
+				\end{examplebox}
+				\begin{notebox}{Antisymmetric and Not Symmetric Are Not The Same}
+					A relation can be both not antisymmetric and symmetric at the same time. Consider the relation:\\
+					$R = \{(1, 2), (2, 1), (2, 3)\}$ on $A = \{1, 2, 3\}$.\\
+					This relation is not symmetric, as $(2, 3) \in R$, but $(3, 2) \notin R$.\\
+					This relation is also not antisymmetric, since $(1, 2)$ and $(2, 1)$ are elements of $R$, but $1 \neq 2$.
+				\end{notebox}
+			\subsection{Transitivity}
+				A relation $R$ on $A$ ($R \subseteq A \times A$) is called \textbf{transitive} iff $R$ has the property that, for all $x, y, z \in R$, whenever $(x, y) \in R$ and $(y, z) \in R$, then $(x, z) \in R$.
+				\begin{examplebox}
+					If $(1, 2) \in R$ and $(2, 3) \in R$, then $(1, 3)$ must be in $R$.
+				\end{examplebox}
+				\begin{examplebox}
+					Let $R = \bigl\{(1, 1), (2, 2), (1, 2), (2, 1)\bigr\}$ be a relation on $A = \{1, 2, 3\}$. This relation is transitive:\\
+					$(2, 1)$ and $(1, 2)$ mean $(2, 2)$ should be present.\\
+					Can be done with all possible combinations.
+				\end{examplebox}
+			\subsection{Trichotomy}
+				A relation $R$ on $A$ satisfies \textbf{trichotomy} iff, for every $x$ and $y$ chosen from $A$ such that $x \neq y$, $x$ and $y$ are comparable.\\
+				In other words, for every $x \neq y$, every element is related to every other element. So $x R y$ or $y R x$.
+				\begin{examplebox}
+					Let $S = \bigl\{(3, 2), (2, 1), (3, 1)\bigr\}$ be a relation on $A = \{1, 2, 3\}$.\\
+					$S$ satisfies the requirements for trichotomy, since:\\
+					\-\hspace{1cm} $1$ is related to $2$ in $(2, 1)$ and related to $3$ in $(3, 1)$.\\
+					\-\hspace{1cm} $2$ is related to $1$ in $(2, 1)$ and related to $3$ in $(3, 2)$.\\
+					\-\hspace{1cm} $3$ is related to $1$ in $(3, 1)$ and related to $2$ in $(3, 2)$.
+				\end{examplebox}
+			\subsection{Inverse Relation}
+				Given a relation $R$ with domain $A$ and range $B$, the relation $R^{-1}$ with domain $B$ and range $A$ is called the \textbf{inverse of $R$}, and is defined such that:
+				\begin{align*}
+					(x, y) \in R \text{ iff } (y, x) \in R^{-1}
+				\end{align*}
+				\begin{examplebox}
+					Let $X = {a, b, c}$ and $R = \bigl\{(a, b), (b, c), (a, c)\bigr\}$\\
+					Then $R^{-1} = \bigl\{(b, a), (c, b), (c, a)\bigr\}$
+				\end{examplebox}
+			\subsection{Relation Composition}
+				Given relations $R$ from $A$ to $B$ and $S$ from $B$ to $C$, the composition of $R$ followed by $S$, written $S \circ R$ or $R;S$ is the relation from $A$ to $C$ defined by:\\
+				$S \circ R = R;S = \bigl\{(a, c) \mid$ there is some $b \in B$ such that $(a, b) \in R$ and $(b, c) \in S\bigr\}$
+				\begin{examplebox}
+					Let $R = \bigl\{(1, a), (2, b)\bigr\}$ be a relation from $\{1, 2\}$ to $\{a, b\}$\\
+					Let $S = \bigl\{(a, s), (b, s), (b, t)\bigr\}$ be a relation from $\{a, b\}$ to $\{s, t\}$.
+					Then $S \circ R = R;S$.
+					\-\hspace{1cm} $(1, a) \rightarrow (a, s) \rightarrow (1, s)$\\
+					\-\hspace{1cm} $(2, b) \rightarrow (b, s) \rightarrow (2, s)$\\
+					\-\hspace{1cm} $(2, b) \rightarrow (b, t) \rightarrow (2, t)$\\
+					$S \circ R = R;S = \bigl\{(1, s), (2, s), (2, t)\bigr\}$
+				\end{examplebox}
+				DO EXERCISES
+\end{document}
