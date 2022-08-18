@@ -5,11 +5,12 @@
 \usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{enumitem}
+\usepackage[dvipsnames]{xcolor}
 \usepackage[bookmarksnumbered]{hyperref}
 \usepackage[T1]{fontenc}
 \usepackage{tikz}
 \usetikzlibrary{fit, backgrounds}
-\colorlet{circle area}{green!25!white}
+\colorlet{circle area}{Lavender}
 \colorlet{example color}{blue!15!white}
 \colorlet{example title}{black}
 \colorlet{note color}{red!15!white}
@@ -19,6 +20,22 @@
 \raggedbottom
 
 \usepackage{venndiagram}
+\usepackage{etoolbox}
+\makeatletter
+\def\patchvenncmds#1{%
+  \pgfutil@for\@cmd:={#1}\do{%
+    \expandafter\ifpatchable\expandafter{\csname\@cmd\endcsname}{]}{%
+    \expandafter\patchcmd\expandafter%
+      {\csname\@cmd\endcsname}{]}{,.. this/.try]}{}{}%
+    \pgfutil@namelet{\@cmd @orig}{\@cmd}%
+    \expandafter\patchvenncmd\expandafter{\@cmd}}{}}}
+\def\patchvenncmd#1{%
+		\expandafter\renewcommand\csname#1\endcsname[1][]{%
+			\tikzset{.. this/.style={fill=none,##1}}\csname#1@orig\endcsname}}
+\makeatother
+\preto\tikzpicture{\patchvenncmds{%
+fillAll}}{}{}
+\makeatother
 
 \usepackage{mathtools}
 \let\oldtextbf\textbf

@@ -24,7 +24,8 @@
           A \cup B = \biggl\{x | x \in A \text{ or } x \in B\biggr\}
         \end{align*}
         \begin{center}
-          \begin{venndiagram2sets}[shade=circle area, tikzoptions={myvennoutline}, showframe=false]
+          \begin{venndiagram2sets}[shade=circle area]
+            \fillAll[fill=white]
             \fillA
             \fillB
           \end{venndiagram2sets}
@@ -42,7 +43,8 @@
           A \cap B = \biggl\{x | x \in A \text{ and } x \in B\biggr\}
         \end{align*}
         \begin{center}
-          \begin{venndiagram2sets}[shade=circle area, tikzoptions={myvennoutline}, showframe=false]
+          \begin{venndiagram2sets}[shade=circle area]
+            \fillAll[fill=white]
             \fillACapB
           \end{venndiagram2sets}
         \end{center}
@@ -59,7 +61,8 @@
           A - B = \biggl\{x | x \in A \text{ and } x \notin B\biggr\}
         \end{align*}
         \begin{center}
-          \begin{venndiagram2sets}[shade=circle area, tikzoptions={myvennoutline}, showframe=false]
+          \begin{venndiagram2sets}[shade=circle area]
+            \fillAll[fill=white]
             \fillOnlyA
           \end{venndiagram2sets}
         \end{center}
@@ -78,6 +81,7 @@
         \end{align*}
         \begin{center}
           \begin{venndiagram2sets}[shade=circle area]
+            \fillAll[fill=white]
             \fillNotA
           \end{venndiagram2sets}
         \end{center}
@@ -95,7 +99,8 @@
           A + B = \biggl\{x | x \in A \text{ or } x \in B\text{, but not both}\biggr\}
         \end{align*}
         \begin{center}
-          \begin{venndiagram2sets}[shade=circle area, tikzoptions={myvennoutline}, showframe=false]
+          \begin{venndiagram2sets}[shade=circle area]
+            \fillAll[fill=white]
             \fillOnlyA
             \fillOnlyB
           \end{venndiagram2sets}
@@ -153,14 +158,10 @@
       \begin{exercisebox}{Self Assessment Exercise \thechapter.6}
         \begin{enumerate}
           \item 
-        \item 
-          \item 
             \begin{alignat*}{3}
               U &= \{1, 2, 3, 4, 5\} \qquad & A &= \{1, 2, 3\} \qquad & B &= \{3, 4, 5\}
             \end{alignat*}
             \begin{enumerate}[label=(\alph*)]
-              \item 
-            \item 
               \item 
                 \begin{align*}
                   A \cup B &= \{1, 2, 3\} \cup \{3, 4, 5\}\\
@@ -269,8 +270,6 @@
               \mathcal{P}(B) &= \mathcal{P}\biggl(\Bigl\{\{3\}, 4, 5\Bigr\}\biggr)\\
               &= \biggl\{\emptyset, \Bigl\{\{3\}\Bigr\}, \Bigl\{4\Bigr\}, \Bigl\{5\Bigr\}, \Bigl\{\{3\}, 4\Bigr\}, \Bigl\{\{3\}, 5\Bigr\}, \Bigl\{4, 5\Bigr\}, \Bigl\{\{3\}, 4, 5\Bigr\}\biggr\}
             \end{align*}
-          \item 
-        \item 
           \item 
             \begin{alignat*}{3}
               U &= \{a, e, i, o, u\} \qquad & A &= \{i, o, u\} \qquad & B &= \{a, e, o, u\}

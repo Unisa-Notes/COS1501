@@ -9,211 +9,327 @@
 			Draw the diagram in stages, including $U$, $A$, $B$ and $C$ in each diagram.
 			\begin{examplebox}
 				Let $A$, $B$, $C \subseteq U$. Draw the Venn diagram for $\Bigl[(A \cup B) - (A \cap B)\Bigr] \cup C$
-				\begin{enumerate}
-					\item $A \cup B$
-						\begin{center}
-							\begin{venndiagram3sets}[shade=circle area, tikzoptions={myvennoutline}, showframe=false]
-								\fillA
-								\fillB
-							\end{venndiagram3sets}
-						\end{center}
-						\pagebreak
-					\item $A \cap B$
-						\begin{center}
-							\begin{venndiagram3sets}[shade=circle area, tikzoptions={myvennoutline}, showframe=false]
-								\fillACapB
-							\end{venndiagram3sets}
-						\end{center}
-					\item $(A \cup B) - (A \cap B)$
-						\begin{center}
-							\begin{venndiagram3sets}[shade=circle area, tikzoptions={myvennoutline}, showframe=false]
-								\fillANotB
-								\fillBNotA
-							\end{venndiagram3sets}
-						\end{center}
-					\item $C$
-						\begin{center}
-							\begin{venndiagram3sets}[shade=circle area, tikzoptions={myvennoutline}, showframe=false]
-								\fillC
-							\end{venndiagram3sets}
-						\end{center}
-						\pagebreak
-					\item $\Bigl[(A \cup B) - (A \cap B)\Bigr] \cup C$
-						\begin{center}
-							\begin{venndiagram3sets}[shade=circle area, tikzoptions={myvennoutline}, showframe=false]
-								\fillANotB
-								\fillBNotA
-								\fillC
-							\end{venndiagram3sets}
-						\end{center}
-				\end{enumerate}
+				\begin{center}
+					\begin{venndiagram3sets}[shade=circle area]
+						\setpostvennhook
+						{
+							\node[above] at (current bounding box.north) {$A \cup B$};
+						}
+						\fillAll[fill=white]
+						\fillA
+						\fillB
+					\end{venndiagram3sets}
+					\begin{venndiagram3sets}[shade=circle area]
+						\setpostvennhook
+						{
+							\node[above] at (current bounding box.north) {$A \cap B$};
+						}
+						\fillAll[fill=white]
+						\fillACapB
+					\end{venndiagram3sets}
+					\pagebreak
+					\begin{venndiagram3sets}[shade=circle area]
+						\setpostvennhook
+						{
+							\node[above] at (current bounding box.north) {$(A \cup B) - (A \cap B)$};
+						}
+						\fillAll[fill=white]
+						\fillANotB
+						\fillBNotA
+					\end{venndiagram3sets}
+					\begin{venndiagram3sets}[shade=circle area]
+						\setpostvennhook
+						{
+							\node[above] at (current bounding box.north) {$C$};
+						}
+						\fillAll[fill=white]
+						\fillC
+					\end{venndiagram3sets}
+					\begin{venndiagram3sets}[shade=circle area]
+						\setpostvennhook
+						{
+							\node[above] at (current bounding box.north) {$\Bigl[(A \cup B) - (A \cap B)\Bigr] \cup C$};
+						}
+						\fillAll[fill=white]
+						\fillANotB
+						\fillBNotA
+						\fillC
+					\end{venndiagram3sets}
+				\end{center}
 			\end{examplebox}
-			\subsection{Self-Assessment Exercises (Activity 4-4)}
+			\begin{exercisebox}{Self-Assessment Exercise \thechapter.4}
 				\begin{enumerate}
 					\item
 						\begin{enumerate}
 							\item $(X \cup Y)'$
 								\begin{center}
-									$X \cup Y$\\
-									\begin{venndiagram2sets}[shade=circle area, labelA=$X$, labelB=$Y$]
+									\begin{venndiagram2sets}[shade=circle area, labelA=$X$, labelB=$Y$, tikzoptions={scale=0.8}]
+										\setpostvennhook
+										{
+											\node[above] at (current bounding box.north) {$X \cup Y$};
+										}
+										\fillAll[fill=white]
 										\fillA
 										\fillB
-									\end{venndiagram2sets}\\
-									$(X \cup Y)'$\\
-									\begin{venndiagram2sets}[shade=circle area, labelA=$X$, labelB=$Y$]
+									\end{venndiagram2sets}
+									\begin{venndiagram2sets}[shade=circle area, labelA=$X$, labelB=$Y$, tikzoptions={scale=0.8}]
+										\setpostvennhook
+										{
+											\node[above] at (current bounding box.north) {$(X \cup Y)'$};
+										}
+										\fillAll[fill=white]
 										\fillNotAorB
 									\end{venndiagram2sets}
 								\end{center}
-							\pagebreak
 							\item $X' \cap Y'$
 								\begin{center}
-									$X'$\\
-									\begin{venndiagram2sets}[shade=circle area, labelA=$X$, labelB=$Y$]
+									\begin{venndiagram2sets}[shade=circle area, labelA=$X$, labelB=$Y$, tikzoptions={scale=0.8}]
+										\setpostvennhook
+										{
+											\node[above] at (current bounding box.north) {$X'$};
+										}
+										\fillAll[fill=white]
 										\fillNotA
-									\end{venndiagram2sets}\\
-									$Y'$\\
-									\begin{venndiagram2sets}[shade=circle area, labelA=$X$, labelB=$Y$]
+									\end{venndiagram2sets}
+									\begin{venndiagram2sets}[shade=circle area, labelA=$X$, labelB=$Y$, tikzoptions={scale=0.8}]
+										\setpostvennhook
+										{
+											\node[above] at (current bounding box.north) {$Y'$};
+										}
+										\fillAll[fill=white]
 										\fillNotB
-									\end{venndiagram2sets}\\
-									$X' \cap Y'$\\
-									\begin{venndiagram2sets}[shade=circle area, labelA=$X$, labelB=$Y$]
+									\end{venndiagram2sets}
+									\begin{venndiagram2sets}[shade=circle area, labelA=$X$, labelB=$Y$, tikzoptions={scale=0.8}]
+										\setpostvennhook
+										{
+											\node[above] at (current bounding box.north) {$X' \cap Y'$};
+										}
+										\fillAll[fill=white]
 										\fillNotAorB
 									\end{venndiagram2sets}
 								\end{center}
 							\item $(X \cap Y)'$
 								\begin{center}
-									$X \cap Y$\\
-									\begin{venndiagram2sets}[shade=circle area, labelA=$X$, labelB=$Y$]
+									\begin{venndiagram2sets}[shade=circle area, labelA=$X$, labelB=$Y$, tikzoptions={scale=0.8}]
+										\setpostvennhook
+										{
+											\node[above] at (current bounding box.north) {$X \cap Y$};
+										}
+										\fillAll[fill=white]
 										\fillACapB
-									\end{venndiagram2sets}\\
-									$(X \cap Y)'$\\
-									\begin{venndiagram2sets}[shade=circle area, labelA=$X$, labelB=$Y$]
+									\end{venndiagram2sets}
+									\begin{venndiagram2sets}[shade=circle area, labelA=$X$, labelB=$Y$, tikzoptions={scale=0.8}]
+										\setpostvennhook
+										{
+											\node[above] at (current bounding box.north) {$(X \cap Y)'$};
+										}
+										\fillAll[fill=white]
 										\fillNotAorNotB
 									\end{venndiagram2sets}
 								\end{center}
 							\pagebreak
 							\item $X' \cap Y'$
 								\begin{center}
-									$X'$\\
-									\begin{venndiagram2sets}[shade=circle area, labelA=$X$, labelB=$Y$]
+									\begin{venndiagram2sets}[shade=circle area, labelA=$X$, labelB=$Y$, tikzoptions={scale=0.8}]
+										\setpostvennhook
+										{
+											\node[above] at (current bounding box.north) {$X'$};
+										}
+										\fillAll[fill=white]
 										\fillNotA
-									\end{venndiagram2sets}\\
-									$Y'$\\
-									\begin{venndiagram2sets}[shade=circle area, labelA=$X$, labelB=$Y$]
+									\end{venndiagram2sets}
+									\begin{venndiagram2sets}[shade=circle area, labelA=$X$, labelB=$Y$, tikzoptions={scale=0.8}]
+										\setpostvennhook
+										{
+											\node[above] at (current bounding box.north) {$Y'$};
+										}
+										\fillAll[fill=white]
 										\fillNotB
-									\end{venndiagram2sets}\\
-									$X' \cup Y'$\\
-									\begin{venndiagram2sets}[shade=circle area, labelA=$X$, labelB=$Y$]
+									\end{venndiagram2sets}
+									\begin{venndiagram2sets}[shade=circle area, labelA=$X$, labelB=$Y$, tikzoptions={scale=0.8}]
+										\setpostvennhook
+										{
+											\node[above] at (current bounding box.north) {$X' \cup Y'$};
+										}
+										\fillAll[fill=white]
 										\fillNotA
 										\fillNotB
 									\end{venndiagram2sets}
 								\end{center}
 						\end{enumerate}
-					\pagebreak
 					\item
 						\begin{enumerate}
 							\item $X - (Y \cup Z)$
 								\begin{center}
-									$X$\\
-									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$]
+									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
+										\setpostvennhook
+										{
+											\node[above] at (current bounding box.north) {$X$};
+										}
+										\fillAll[fill=white]
 										\fillA
-									\end{venndiagram3sets}\\
-									$Y \cup Z$\\
-									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$]
+									\end{venndiagram3sets}
+									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
+										\setpostvennhook
+										{
+											\node[above] at (current bounding box.north) {$Y \cup Z$};
+										}
+										\fillAll[fill=white]
 										\fillB
 										\fillC
-									\end{venndiagram3sets}\\
-									$X - (Y \cup Z)$\\
-									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$]
+									\end{venndiagram3sets}
+									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
+										\setpostvennhook
+										{
+											\node[above] at (current bounding box.north) {$X - (Y \cup Z)$};
+										}
+										\fillAll[fill=white]
 										\fillOnlyA
-									\end{venndiagram3sets}\\
+									\end{venndiagram3sets}
 								\end{center}
-							\pagebreak
 							\item $(X - Y) \cup (X - Z)$
 								\begin{center}
-									$(X - Y)$\\
-									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$]
+									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
+										\setpostvennhook
+										{
+											\node[above] at (current bounding box.north) {$X - Y$};
+										}
+										\fillAll[fill=white]
 										\fillANotB
-									\end{venndiagram3sets}\\
-									$(X - Z)$\\
-									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$]
+									\end{venndiagram3sets}
+									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
+										\setpostvennhook
+										{
+											\node[above] at (current bounding box.north) {$X - Z$};
+										}
+										\fillAll[fill=white]
 										\fillANotC
-									\end{venndiagram3sets}\\
-									$(X - Y) \cup (X - Z)$\\
-									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$]
+									\end{venndiagram3sets}
+									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
+										\setpostvennhook
+										{
+											\node[above] at (current bounding box.north) {$(X - Y) \cup (X - Z)$};
+										}
+										\fillAll[fill=white]
 										\fillANotB
 										\fillANotC
-									\end{venndiagram3sets}\\
+									\end{venndiagram3sets}
 								\end{center}
-							\pagebreak
 							\item $X \cap (Y - Z)$
 								\begin{center}
-									$X$\\
-									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$]
+									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
+										\setpostvennhook
+										{
+											\node[above] at (current bounding box.north) {$X$};
+										}
+										\fillAll[fill=white]
 										\fillA
-									\end{venndiagram3sets}\\
-									$Y - Z$\\
-									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$]
+									\end{venndiagram3sets}
+									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
+										\setpostvennhook
+										{
+											\node[above] at (current bounding box.north) {$Y - Z$};
+										}
+										\fillAll[fill=white]
 										\fillBNotC
-									\end{venndiagram3sets}\\
-									$X \cap (Y - Z)$\\
-									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$]
+									\end{venndiagram3sets}
+									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
+										\setpostvennhook
+										{
+											\node[above] at (current bounding box.north) {$X \cap (Y - Z)$};
+										}
+										\fillAll[fill=white]
 										\fillACapBNotC
-									\end{venndiagram3sets}\\
+									\end{venndiagram3sets}
 								\end{center}
 							\pagebreak
 							\item $(X \cap Y) - (X \cap Z)$
 								\begin{center}
-									$X \cap Y$\\
-									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$]
+									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
+										\setpostvennhook
+										{
+											\node[above] at (current bounding box.north) {$X \cap Y$};
+										}
+										\fillAll[fill=white]
 										\fillACapB
-									\end{venndiagram3sets}\\
-									$X \cap Z$\\
-									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$]
+									\end{venndiagram3sets}
+									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
+										\setpostvennhook
+										{
+											\node[above] at (current bounding box.north) {$X \cap Z$};
+										}
+										\fillAll[fill=white]
 										\fillACapC
-									\end{venndiagram3sets}\\
-									$(X \cap Y) - (X \cap Z)$\\
-									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$]
+									\end{venndiagram3sets}
+									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
+										\setpostvennhook
+										{
+											\node[above] at (current bounding box.north) {$(X \cap Y) - (X \cap Z)$};
+										}
+										\fillAll[fill=white]
 										\fillACapBNotC
-									\end{venndiagram3sets}\\
+									\end{venndiagram3sets}
 								\end{center}
-							\pagebreak
 							\item $X \cap (Y + Z)$
 								\begin{center}
-									$X$\\
-									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$]
+									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
+										\setpostvennhook
+										{
+											\node[above] at (current bounding box.north) {$X$};
+										}
+										\fillAll[fill=white]
 										\fillA
-									\end{venndiagram3sets}\\
-									$Y + Z$\\
-									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$]
+									\end{venndiagram3sets}
+									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
+										\setpostvennhook
+										{
+											\node[above] at (current bounding box.north) {$Y + Z$};
+										}
+										\fillAll[fill=white]
 										\fillBNotC
 										\fillCNotB
-									\end{venndiagram3sets}\\
-									$X \cap (Y + Z)$\\
-									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$]
+									\end{venndiagram3sets}
+									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
+										\setpostvennhook
+										{
+											\node[above] at (current bounding box.north) {$X \cap (Y + Z)$};
+										}
+										\fillAll[fill=white]
 										\fillACapBNotC
 										\fillACapCNotB
-									\end{venndiagram3sets}\\
+									\end{venndiagram3sets}
 								\end{center}
-							\pagebreak
 							\item $(X \cap Y) + (X \cap Z)$
 								\begin{center}
-									$X \cap Y$\\
-									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$]
+									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
+										\setpostvennhook
+										{
+											\node[above] at (current bounding box.north) {$X \cap Y$};
+										}
+										\fillAll[fill=white]
 										\fillACapB
-									\end{venndiagram3sets}\\
-									$X \cap Z$\\
-									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$]
+									\end{venndiagram3sets}
+									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
+										\setpostvennhook
+										{
+											\node[above] at (current bounding box.north) {$X \cap Z$};
+										}
+										\fillAll[fill=white]
 										\fillACapC
-									\end{venndiagram3sets}\\
-									$(X \cap Y) + (X \cap Z)$\\
-									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$]
+									\end{venndiagram3sets}
+									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
+										\setpostvennhook
+										{
+											\node[above] at (current bounding box.north) {$(X \cap Y) + (X \cap Z)$};
+										}
+										\fillAll[fill=white]
 										\fillACapBNotC
 										\fillACapCNotB
-									\end{venndiagram3sets}\\
+									\end{venndiagram3sets}
 								\end{center}
 						\end{enumerate}
 				\end{enumerate}
+			\end{exercisebox}
 		\pagebreak
 		\section{Proofs}
 			For proofs with sets, one needs to prove that the sets have exactly the same elements. For this, one needs to show that each half of the equation is equal to the other half: one needs to show both forwards and backwards. However, this can be abbreviated using iff.
