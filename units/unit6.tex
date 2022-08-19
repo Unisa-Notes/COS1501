@@ -1,0 +1,172 @@
+\documentclass[../notes.tex]{subfiles}
+
+\begin{document}
+	\chapter{Special Kinds of Relation}
+		\section{Order Relations}
+			\subsection{Weak Partial Order}
+				A relation $R$ on a set $A$ is called a \textbf{weak partial order} iff $R$ is
+				\begin{itemize}
+					\item reflexive on $A$
+					\item antisymmetric, and
+					\item transitive
+				\end{itemize}
+				\begin{examplebox}
+					Let $A = \bigl\{\{a\}, \{a, b\}\bigr\}$. A relation $S$ on $A$ is defined by $(B, C) \in S \text{ iff } B \subseteq C$. (Each first coordinate is a subset of the second coordinate.)
+					\begin{align*}
+						S = \Bigl\{\bigl(\{a\}, \{a\}\bigr), \bigl(\{a\}, \{a, b\}\bigr), \bigl(\{a, b\}, \{a, b\}\bigr)\Bigr\}
+					\end{align*}
+					To prove this is a weak partial order, prove reflexivity, antisymmetry and transitivity.
+					\begin{description}
+						\item[Reflexivity] Is it true that $(B, B) \in S$ for all $B \in A$? Yes.
+							\begin{alignat*}{2}
+								\bigl(\{a, a\}\bigr) &\in S \qquad & \bigl(\{a, b\}, \{a, b\}\bigr) &\in S
+							\end{alignat*}
+						\item[Antisymmetry] Is it true that for all $(B, C) \in A$, if $B \neq C$, and $(B, C) \in S$, then $(C, B) \notin S$? Yes.\\
+							The elements where $B \neq C$ are $\{a\}$ and $\{a, b\}$.\\
+							$\bigl(\{a\}, \{a, b\}\bigr) \in S$, and $\bigl(\{a, b\}, \{a\}\bigr) \notin S$
+						\item[Transitivity] Is it true that for all $B, C, D \in A$, if $(B, C) \in S$, and $(C, D) \in S$, then $(B, D) \in S$? Yes.
+							\begin{alignat*}{3}
+								\bigl(\{a\}, \{a\}\bigr) &\in S \qquad &\rightarrow \bigl(\{a\}, \{a\}\bigr) &\in S \qquad &\rightarrow \bigl(\{a\}, \{a\}\bigr) &\in S\\
+								\bigl(\{a\}, \{a\}\bigr) &\in S \qquad &\rightarrow \bigl(\{a,\}, \{a, b\}\bigr) &\in S \qquad &\rightarrow \bigl(\{a\}, \{a, b\}\bigr) &\in S
+							\end{alignat*}
+							The above can be done for all elements.
+						\item[Weak Partial Order] As $S$ is reflexive, antisymmetric, and transitive, $S$ is a weak partial order.
+					\end{description}
+				\end{examplebox}
+				\begin{exercisebox}{Activity \thechapter.4}
+					Determine whether the following relations are weak partial orders.
+					\begin{enumerate}[label=(\alph*)]
+						\item Let $A = \bigl\{a, b, \{a, b\}\bigr\}$. $S$ is the relation on $A$ defined by $(c, B) \in S$ iff $c \in B$.
+							\begin{align*}
+								S = \bigl\{(a, \{a, b\}), (b, \{a, b\})\bigr\}
+							\end{align*}
+							\begin{description}
+								\item[Reflexivity] Is it true that $(x, x) \in S$ for all $x \in A$?\\
+									No. Using a counterexample: $(a, a) \notin S$.\\
+									Can stop here and conclude that $S$ is not a weak partial order, but for completeness, checking the other two conditions as well.
+								\item[Antisymmetry] Is it true for all $(x, y) \in A$, if $x \neq y$, and $(x, y) \in S$, then $(y, x) \notin S$?\\
+									Yes. If $(x, y) \in S$, then $x \in y$. If $x \in y$, then $y$ cannot be an element of $x$, so $(y, x) \notin S$.
+								\item[Transitivity] Is it true for all $x, y, z \in A$, if $(x, y) \in S$, and $(y, z) \in SS$, then $(x, z) \in S$?\\
+									Yes. Vacuously true, as there is no element that has the same first coordinate as another element's second doordinate.
+								\item[Weak Partial Order] As $S$ is not reflexive, $S$ is \textit{not} a weak partial order.
+							\end{description}
+						\item $R \subseteq \mathbb{Z} \times \mathbb{Z}$ such that $x R y$ iff $x + y$ is even.\\
+							If $x + y$ is even, then $x + y = 2k$ for some integer $k$.
+							\begin{description}
+								\item[Reflexivity] Is it true that $(x, x) \in R$ for all $x \in \mathbb{Z}$?\\
+									Yes. $x + x = 2x$, which would be part of $R$ if $k = x$. As $2x$ is always even, $(x, x) \in R$.
+								\item[Antisymmetry] Is it true that for all $(x, y) \in R$, if $x \neq y$ and $(x, y) \in R$, then $(y, x) \notin R$?\\
+									No. Let $(x, y) \in R$. Then $x + y = 2k$. But $(y + x)$ also equals $2k$. So $(y, x) \in R$.\\
+									Can stop here and conclude that $R$ is not a weak partial order. For completeness, checking transitivity as well.
+								\item[Transitivity] Is it true that for all $x, y, z \in \mathbb{Z}$, if $(x, y) \in R$ and $(y, z) \in R$, then $(x, z) \in R$?\\
+									Yes. Let $(x, y) \in R$, and $(y, z) \in R$. Then $x + y = 2k$, and $y + z = 2m$, where $k$ and $m$ are integers.
+									\begin{align*}
+										x + y &= 2k\\
+										x &= 2k - y\\
+										y + z &= 2m\\
+										z &= 2m - y\\
+										x + z &= (2k - y) + (2m - y)\\
+										&= 2k + 2m - 2y\\
+										&= 2(k + m - y)
+									\end{align*}
+									From the above, if $x + y$ is even, and $y + z$ is even, then $x + z$ is also even.
+								\item[Weak Partial Order] As $R$ is not antisymmetric, $R$ is \textit{not} a weak partial order.
+							\end{description}
+							\pagebreak
+						\item $R$ on $\mathbb{Z} \times \mathbb{Z}$ by $(a, b) R (c, d)$ if either $a < c$ or $(a = c$ and $b \leq d)$.
+							\begin{description}
+								\item[Reflexivity] Is it true that for all $(a, b) \in \mathbb{Z} \times \mathbb{Z}$, $(a, b) R (a, b)$?\\
+									Yes. It is never the case that $a < a$, but $a = a$ and $b \leq b$ is true.
+								\item[Antisymmetry] Is it true that for all $(a, b)$ and $(c, d) \in \mathbb{Z} \times \mathbb{Z}$, if $(a, b) \neq (c,d)$ and $\bigl\{(a, b), (c, d)\bigr\} \in R$, then $\bigl\{(c, d), (a, b)\bigr\} \notin R$?\\
+									Yes. If $(a, b) R (c, d)$, then $a < c$ or $(a = c$ and $b \leq d)$.
+									If the first case is matched, then $a < c$, which means that $c > a$. Which means that $c \neq a$, so the second condition is not met.\\
+									If the second case is matched, then $a = c$ and $b \leq d$. If $a = c$, then $c = a$, and if $b \leq d$, then $d \geq b$. However, if $b = d$, then $(a, b) = (c, d)$, which would mean it would be excluded. Therefore $d < b$, which means that $\bigl\{(c, d), (a, b)\bigr\} \notin R$.
+								\item[Transitivity] If $\bigl\{(a, b), (c, d)\bigr\} \in R$ and $\bigl\{(c, d), (e, f)\bigr\} \in R$, is $\bigl\{(a, b), (e, f)\bigr\} \in R$?\\
+									Yes. If $\bigl\{(a, b), (c, d)\bigr\} \in R$, then either $a < c$ or $(a = c$ and $b \leq d)$.\\
+									\-\hspace{1cm} If $\bigl\{(c, d), (e, f)\bigr\} \in R$, then either $c < e$ or $(c = e$ and $d \leq f)$.\\
+									\-\hspace{1cm} If $a < c$ and $c < e$, then $a < e$, which means $\bigl\{(a, b), (e, f)\bigr\} \in R$.\\
+									\-\hspace{1cm} If $a < c$ and $c = e$ and $d \leq f$, then $a < e$, which means $\bigl\{(a, b), (e, f)\bigr\} \in R$.\\
+									\-\hspace{1cm} If $a = c$ and $b \leq d$ and $c < e$, then $a < e$, which means $\bigl\{(a, b), (e, f)\bigr\} \in R$.\\
+									\-\hspace{1cm} If $a = c$ and $b \leq d$ and $c = e$ and $d \leq f$, then $c = e$, and $b \leq f$, which means $\bigl\{(a, b), (e, f)\bigr\} \in R$.
+									\item[Weak Partial Order] As $R$ is reflexive, antisymmetric and transitive, $R$ \textit{is} a weak partial order.
+							\end{description}
+					\end{enumerate}
+				\end{exercisebox}
+			\subsection{Strict Partial Order}
+				A relation $R$ on a set $A$ is called a \textbf{strict partial order} iff $R$ is
+				\begin{itemize}
+					\item irreflexive on $A$
+					\item antisymmetric, and
+					\item transitive
+				\end{itemize}
+				\begin{examplebox}
+					Let $A = \{1, 2, 3\}$ and let $S$ on $A$ be the relation $S = \bigl\{(1, 2), (1, 3), (2, 3)\bigr\}$. (Every first coordinate is less than the second coordinate.)\\
+					To prove this is a strict partial order, prove irreflexivity, antisymmetry and transitivity.
+					\begin{description}
+						\item[Irreflexivity] Is it true that $(x, x) \notin S$ for any $x \in A$?\\
+							Yes, no element is related to itself, i.e. the pairs $(1, 1)$, $(2, 2)$ and $(3, 3)$ are not elements of $S$.
+						\item[Antisymmetry] Is it true that for all $x, y \in A$, if $(x, y) \in S$, then $(y, x) \notin S$?\\
+							Yes. $1 \neq 2$ and $(1, 2) \in S$ and $(2, 1) \notin S$.\\
+							$1 \neq 3$ and $(1, 3) \in S$ and $(3, 1) \notin S$.\\
+							$2 \neq 3$ and $(2, 3) \in S$ and $(3, 2) \notin S$.
+						\item[Transitivity] Is it true that for all $x, y, z \in A$, if $(x, y) \in S$ and $(y, z) \in S$, then $(x, z) \in S$?\\
+							Yes. $(1, 2) \in S$ and $(2, 3) \in S$ and $(1, 3) in S$.
+						\item[Strict Partial Order] As $S$ is irreflexive, antisymmetric, and transitive, $S$ is a strict partial order.
+					\end{description}
+				\end{examplebox}
+				\begin{exercisebox}{Activity \thechapter.5}
+					Determine whether the following relations are strict partial orders.
+					\begin{enumerate}[label=(\alph*)]
+						\item $A = \bigl\{a, \{a\}, \{b\}\bigr\}$ and the relation $S$ on $A$ is $S = \Bigl\{\bigl(a, \{a\}\bigr), \bigl(a, \{b\}\bigr)\Bigr\}$
+							\begin{description}
+								\item[Irreflexivity] Is it true that $(x, x) \notin S$ for any $x \in A$?\\
+									Yes, no element is related to itself, i.e. the pairs $\bigl(a, a\bigr)$, $\bigl(\{a\}, \{a\}\bigr)$ and $\bigl(\{b\}, \{b\}\bigr)$ are not elements of $S$.
+								\item[Antisymmetry] Is it true that for all $x, y \in A$ and $x \neq y $, if $(x, y) \in S$, then $(y, x) \notin S$?\\
+									Yes. $a \neq \{a\}$. $\bigl(a, \{a\}\bigr) \in S$, and $\bigl(\{a\}, a\bigr) \notin S$.\\   
+									$a \neq \{b\}$. $\bigl(a, \{b\}\bigr) \in S$, and $\bigl(\{b\}, a\bigr) \notin S$.
+								\item[Transitivity] Is it true that for all $x, y, z \in A$, if $(x, y) \in S$ and $(y, z) \in S$, then $(x, z) \in S$?\\
+									Yes. There are no ordered pairs such that $(x, y) \in R$ and $(y, z) \in R$, so $R$ is \textit{vacuously} transitive.
+								\item[Strict Partial Order] As $R$ is irreflexive, antisymmetric, and transitive, $R$ \textit{is} a strict partial order.
+							\end{description}
+						\item $R \subseteq (\mathbb{Z} \times \mathbb{Z}) \times (\mathbb{Z} \times \mathbb{Z})$ such that $(a, b) R (c, d)$ iff $a < c$.
+							\begin{description}
+								\item[Irreflexivity] Is it true that $\bigl((a, b), (a, b)\bigr)\notin R$ for any $(a, b) \in \mathbb{Z} \times \mathbb{Z}$?\\
+									Yes. For $\bigl((a, b), (a, b)\bigr) \in R$, it would need to satisfy the requirement $a < a$, which is never true.
+								\item[Antisymmetry] Is it true that for all $(a, b), (c, d) \in \mathbb{Z} \times \mathbb{Z}$, where $(a, b) \neq (c, d)$, if $\left((a, b), (c, d)\right) \in R$, then $\left((c, d), (a, b)\right) \notin R$.\\
+									Yes. If $\left((a, b), (c, d)\right) \in R$, then $a < c$. As $a < c$, $\left((c, d), (a, b)\right) \notin R$.
+								\item[Transitivity] Is it true for all $(a, b), (c, d), (e, f) \in \mathbb{Z} \times \mathbb{Z}$, if $\left((a, b), (c, d)\right) \in R$ and $\left((c, d), (e, f)\right) \in R$, then $\left((a, b), (e, f)\right) \in R$?\\
+									Yes. If $\left((a, b), (c, d)\right) \in R$, then $a < c$. If $\left((c, d), (e, f)\right) \in R$, then $c < e$. Therefore $a < e$, so $\left((a, b), (e, f)\right) \in R$.
+								\item[Strict Partial Order] As $R$ is irreflexive, antisymmetric, and transitive, $R$ \textit{is} a strict partial order.
+							\end{description}
+					\end{enumerate}
+				\end{exercisebox}
+			\pagebreak
+			\subsection{A Total (or Linear) Order Relation}
+				A relation $R$ on a set $A$ is called a \textbf{total} or \textbf{linear order} if $R$ is a partial order on $A$ that also satisfies \textit{trichotomy}.
+				\begin{examplebox}
+					The example for Strict Partial Orders:
+					\begin{adjustwidth}{1cm}{}
+						Let $A = \{1, 2, 3\}$ and let $S$ on $A$ be the relation $S = \bigl\{(1, 2), (1, 3), (2, 3)\bigr\}$. (Every first coordinate is less than the second coordinate.)
+					\end{adjustwidth}
+					also satisfies trichotomy.
+					\begin{description}
+						\item[Trichotomy] Is every element of $A$ related to every other element in the relation $S$?\\
+							Yes. $1$ is related to $2$ in $(1, 2)$, and related to $3$ in $(1, 3)$.\\
+							$2$ is related to $1$ in $(1, 2)$, and related to $3$ in $(2, 3)$.\\
+							$3$ is related to $1$ in $(1, 3)$, and related to $2$ in $(2, 3)$.
+						\item[Total Order Relation] As this relation is a partial order relation that satisfies trichotomy, it is a \textbf{total order relation}. As the relation is a \textit{strict} partial order, this is a \textbf{strict total order relation}.
+					\end{description}
+				\end{examplebox}
+				\begin{notebox}{Proof Strategies}
+					You cannot use examples to prove a general statement, i.e, something of the from:
+						\begin{adjustwidth}{1cm}{}
+							For all $x$, or\\
+							For all pairs $(x, y)$
+						\end{adjustwidth}
+					Instead, \textit{abstract reasoning} needs to be used to produce a \textit{general proof}.\\
+					However, an example can be used to show that a statement is false, which is known as a \textbf{counterexample}.
+				\end{notebox}
+				\begin{exercisebox}{Self Assesmment \thechapter.7}
+					COME BACK TO
+				\end{exercisebox}
+\end{document}
