@@ -9,6 +9,7 @@
 \usepackage[bookmarksnumbered]{hyperref}
 \usepackage[english]{babel}
 \setlocalecaption{english}{chapter}{Unit}
+\newtheorem*{theorem}{Theorem}
 \usepackage[T1]{fontenc}
 \usepackage{charter}
 \usepackage[varqu,varl]{inconsolata}
@@ -24,6 +25,8 @@
 \colorlet{note border}{red!75!black}
 \colorlet{exercise color}{orange!25!white}
 \colorlet{exercise border}{orange!75!black}
+\colorlet{theorem color}{Aquamarine!30!white}
+\colorlet{theorem border}{Aquamarine!75!black}
 \raggedbottom
 
 \usepackage{venndiagram}
@@ -67,6 +70,7 @@ fillAll}}{}{}
 \newtcolorbox{notebox}[1]{breakable, colback=note color, colframe=note border, fonttitle=\bfseries, title={#1}, center title}
 \newtcolorbox{exercisebox}[1]{breakable, colback=exercise color, colframe=exercise border, fonttitle=\bfseries, title={#1}, center title}
 \newtcolorbox{examplebox}{coltitle=example title, colback=example color, breakable, detach title, before upper={\tcbtitle\quad}, title=\textbf{Example}}
+\newtcolorbox{theorembox}[1]{breakable, colback=theorem color, colframe=theorem border, fonttitle=\bfseries, title={#1}, center title}
 
 \usepackage{subfiles}
 
