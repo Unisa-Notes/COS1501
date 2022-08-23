@@ -5,7 +5,7 @@
 \usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{enumitem}
-\usepackage[dvipsnames]{xcolor}
+\usepackage[dvipsnames,table]{xcolor}
 \usepackage[bookmarksnumbered]{hyperref}
 \usepackage[english]{babel}
 \setlocalecaption{english}{chapter}{Unit}
@@ -17,7 +17,8 @@
 \usepackage[xcharter]{newtxmath}
 \usepackage{bm}
 \usepackage{tikz}
-\usetikzlibrary{fit, backgrounds}
+\usetikzlibrary{fit, backgrounds, topaths}
+\tikzstyle{every picture}+=[remember picture]
 \colorlet{circle area}{Lavender}
 \colorlet{example color}{blue!15!white}
 \colorlet{example title}{black}
@@ -93,4 +94,6 @@ fillAll}}{}{}
 	\subfileinclude{units/unit6.tex}
 	\clearpage\begingroup\pagestyle{empty}\cleardoublepage\endgroup
 	\subfileinclude{units/unit7.tex}
+	\clearpage\begingroup\pagestyle{empty}\cleardoublepage\endgroup
+	\subfileinclude{units/unit8.tex}
 \end{document}
