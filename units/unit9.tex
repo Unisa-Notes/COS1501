@@ -1,0 +1,292 @@
+\documentclass[../notes.tex]{subfiles}
+
+\begin{document}
+	\chapter{Logic: Truth Tables}
+		\section{Declarative Statements}
+			A declarative statement is a statement that conveys information.
+			\begin{description}
+				\item[Declarative Statements] Some examples are:
+					\begin{itemize}
+						\item The capital of France is Paris
+						\item 3 is an even integer
+						\item This sentence is false
+					\end{itemize}
+				\item[Non-Declarative Statements] Some examples are:
+					\begin{itemize}
+						\item Is 3 an even integer? (\textit{Question}: acquire information, not convey information)
+						\item Add 3 to 5! (\textit{Command}: induce behaviour, not convey information)
+					\end{itemize}
+			\end{description}
+			\begin{notebox}{Not all declarative statements are usable}
+				A declarative statement is not necessarily true or false, as there can be a contradiction in the statement.\\
+				However, when dealing with proofs, declarative statements are restricted to those that can be either \textit{true} or \textit{false}.
+			\end{notebox}
+			A declarative statement can either be
+			\begin{itemize}
+				\item \textbf{atomic}, (or simple) meaning they convey a single fact.
+				\item \textbf{compound}, meaning they combine multiple atomic statements.
+			\end{itemize}
+		\section{Combining Statements}
+			Statements can be combined together using different \textbf{logical connectives}. Below is a list of the possible connectives.
+			\begin{center}
+				\begin{tabular}{l c l}
+					and & $\land$ & conjunction\\
+					or & $\lor$ & disjunction\\
+					if \ldots, then \ldots & $\rightarrow$ & conditional/implication\\
+					if and only if & $\leftrightarrow$ & biconditional\\
+					not & $\lnot $ & negation
+				\end{tabular}
+			\end{center}
+			\subsection{Conjunction (AND)}
+				If $p$ and $q$ represent declarative statements, then $p \land q$ represents the statement ``$p$ and $q$'', and is called the \textbf{conjunction} of $p$ and $q$.
+				\begin{center}
+					\begin{tabular}{|c c | c|}
+						\hline
+						$\mathbf{p}$ & $\mathbf{q}$ & $\mathbf{p \land q}$\\
+						\hline
+						T & T & T\\
+						T & F & F\\
+						F & T & F\\
+						F & F & F\\
+						\hline
+					\end{tabular}	
+				\end{center}
+			\subsection{Disjunction (OR)}
+				If $p$ and $q$ represent declarative statements, then $p \lor q$ represents the statement ``$p$ or $q$'', and is called the \textbf{disjunction} of $p$ and $q$.
+				\begin{center}
+					\begin{tabular}{|c c | c|}
+						\hline
+						$\mathbf{p}$ & $\mathbf{q}$ & $\mathbf{p \lor q}$\\
+						\hline
+						T & T & T\\
+						T & F & T\\
+						F & T & T\\
+						F & F & F\\
+						\hline
+					\end{tabular}	
+				\end{center}
+			\subsection{Conditional/Implication}
+				If $p$ and $q$ represent declarative statements, then $p \rightarrow q$ represents the statement ``If $p$, then $q$'', and is called a \textbf{conditional statement} or \textbf{implication}. $p$ is called the \textbf{hypothesis} or the \textbf{antecedent} and $q$ is called the \textbf{conclusion} or \textbf{consequent}.
+				\begin{center}
+					\begin{tabular}{|c c | c|}
+						\hline
+						$\mathbf{p}$ & $\mathbf{q}$ & $\mathbf{p \rightarrow q}$\\
+						\hline
+						T & T & T\\
+						T & F & F\\
+						F & T & T\\
+						F & F & T\\
+						\hline
+					\end{tabular}	
+				\end{center}
+				\begin{notebox}{If the hypothesis is false, then the statement is true}
+					This can be quite confusing. The idea is that if the original statement is false, we can't say that the next statement is not true.
+					\begin{examplebox}
+						Consider a statement ``If you read books, you are smart''.
+						\begin{adjustwidth}{1cm}{}
+							If someone reads books and is smart, this is true.\\
+							If someone reads books and is not smart, this is false.\\
+							If someone does not read books, we cannot say the statement is false, but we also cannot say it is true. So the statement would be vacuously true.
+						\end{adjustwidth}
+					\end{examplebox} 
+				\end{notebox}
+			\pagebreak
+			\subsection{Biconditional}
+				If $p$ and $q$ represent declarative statements, then $p \leftrightarrow q$ represents the statement $p$ if and only if $q$, which can also be written $p$ iff $q$. This is called the \textbf{biconditional}.
+				\begin{center}
+					\begin{tabular}{|c c | c|}
+						\hline
+						$\mathbf{p}$ & $\mathbf{q}$ & $\mathbf{p \leftrightarrow q}$\\
+						\hline
+						T & T & T\\
+						T & F & F\\
+						F & T & F\\
+						F & F & T\\
+						\hline
+					\end{tabular}	
+				\end{center}
+			\subsection{Negation}
+				If $p$ is some declarative statement, then $\lnot p$ represents the statement ``not $p$''. This is called the \textbf{negation} of a given statement.
+				\begin{center}
+					\begin{tabular}{| c | c |}
+						\hline
+						$\mathbf{p}$ & $\mathbf{\lnot p}$\\
+						\hline
+						T & F\\
+						F & T\\
+						\hline
+					\end{tabular}
+				\end{center}
+		\section{Constructing truth tables}
+			\begin{enumerate}
+				\item List the statements at the top.
+				\item For the first column, fill half of the rows with T and half with F.
+				\item For the second column, for the rows that have T, write T for the upper half, and F for the lower half. Do the same for F.
+				\item Continue doing that until the base statements are filled.
+				\item Then apply the rules to the columns left to right.
+			\end{enumerate}
+			\begin{examplebox}
+				Construct a truth table for $p \land (\lnot q)$.
+					\begin{center}
+						\begin{tabular}{| c c |}
+							\hline
+							$\mathbf{p}$ & $\mathbf{q}$\\
+							\hline
+							T & T\\
+							T & F\\
+							F & T\\
+							F & F\\
+							\hline
+						\end{tabular} \hspace{0.25cm}
+						\begin{tabular}{| c c | c|}
+							\hline
+							$\mathbf{p}$ & $\mathbf{q}$ & $\mathbf{\lnot q}$\\
+							\hline
+							T & T & F\\
+							T & F & T\\
+							F & T & F\\
+							F & F & T\\
+							\hline
+						\end{tabular} \hspace{0.25cm}
+						\begin{tabular}{| c c | c | c|}
+							\hline
+							$\mathbf{p}$ & $\mathbf{q}$ & $\mathbf{\lnot q}$ & $\mathbf{p \land (\lnot q)}$\\
+							\hline
+							T & T & F & F\\
+							T & F & T & T\\
+							F & T & F & F\\
+							F & F & T & F\\
+							\hline
+						\end{tabular}
+					\end{center}
+			\end{examplebox}
+			\pagebreak
+		\section{Relationships between statements}
+			\subsection{Tautology}
+				A compound statement that is always true is called a \textbf{tautology}.
+				\begin{examplebox}
+					The statement $p \lor \lnot p$ is always true.
+					\begin{center}
+						\begin{tabular}{| c c | c |}
+							\hline
+							$\mathbf{p}$ & $\mathbf{\lnot p}$ & $\mathbf{p \lor \lnot p}$\\
+							\hline
+							T & F & T\\
+							F & T & T\\
+							\hline
+						\end{tabular}
+					\end{center}
+				\end{examplebox}
+			\subsection{Contradiction}
+				A compound statement that is always false is called a \textbf{contradiction}.
+				\begin{examplebox}
+					The statement $p \land \lnot p$ is always false.
+					\begin{center}
+						\begin{tabular}{| c c | c |}
+							\hline
+							$\mathbf{p}$ & $\mathbf{\lnot p}$ & $\mathbf{p \land \lnot p}$\\
+							\hline
+							T & F & F\\
+							F & T & F\\
+							\hline
+						\end{tabular}
+					\end{center}
+				\end{examplebox}
+			\subsection{Logical Equivalence}
+				Two declarative statements $a$ and $b$ are \textbf{logically equivalent}, written $a \equiv b$, if and only if the statement $a \rightarrow b$ is a tautology.
+				\begin{examplebox}
+					Take the declarative statement $(p \lor q) \leftrightarrow (q \lor p)$.
+					\begin{center}
+						\begin{tabular}{| c c | c | c | c |}
+							\hline
+							$\mathbf{p}$ & $\mathbf{q}$ & $\mathbf{p \lor q}$ & $\mathbf{q \lor p}$ & $\mathbf{(p \lor q) \leftrightarrow (q \lor p)}$\\
+							\hline
+							T & T & T & T & T \\
+							T & F & T & T & T \\
+							F & T & T & T & T \\
+							F & F & F & F & T \\
+							\hline
+						\end{tabular}
+					\end{center}
+					As $(p \lor q) \leftrightarrow (q \lor p)$ is a tautology, the statements are logically equivalent. That is:
+						\begin{align*}
+							p \lor q \equiv q \lor p
+						\end{align*}
+				\end{examplebox}
+			\pagebreak
+			\begin{notebox}{Important Logical Equivalences (Identities)}
+				Let $T_{0}$ be a tautology, and $F_{0}$ be a contradiction.
+				\begin{enumerate}[label=(\alph*), labelsep=2.5em, leftmargin=*]
+					\item \rule{0pt}{10pt} \vspace*{-25pt}
+						\begin{flalign*}
+							p \lor q &\equiv q \lor p&\\
+							p \land q &\equiv q \land p &\tag*{(commutative laws)}
+						\end{flalign*}
+					\item \rule{0pt}{10pt} \vspace*{-25pt}
+						\begin{flalign*}
+							p \lor (q \lor r) &\equiv (p \lor q) \lor r&\\
+							p \land (q \land r) &\equiv (p \land q) \land r &\tag*{(associative laws)}
+						\end{flalign*}
+					\item \rule{0pt}{10pt} \vspace*{-25pt}
+						\begin{flalign*}
+							p \land (q \lor r) &\equiv (p \land q) \lor (p \land r)&\\
+							p \lor (q \land r) &\equiv (p \lor q) \land (p \lor r) &\tag*{(distributive laws)}
+						\end{flalign*}
+					\item \rule{0pt}{10pt} \vspace*{-25pt}
+						\begin{flalign*}
+							p \lor p &\equiv p&\\
+							p \land p &\equiv p&\tag*{(idempotent laws)}
+						\end{flalign*}
+					\item \rule{0pt}{10pt} \vspace*{-25pt}
+						\begin{flalign*}
+							\lnot (\lnot p) &\equiv p &\tag*{(double negation laws)}
+						\end{flalign*}
+					\item \rule{0pt}{10pt} \vspace*{-25pt}
+						\begin{flalign*}
+							\lnot (p \lor q) &\equiv \lnot p \land \lnot q&\\
+							\lnot (p \land q) &\equiv \lnot p \lor \lnot q&\tag*{(De Morgan's laws)}
+						\end{flalign*}
+					\item \rule{0pt}{10pt} \vspace*{-25pt}
+						\begin{flalign*}
+							p \lor \lnot p &\equiv T_{0} &\\
+							p \land \lnot p &\equiv F_{0} &\tag*{(inverse laws)}
+						\end{flalign*}
+					\item \rule{0pt}{10pt} \vspace*{-25pt}
+						\begin{flalign*}
+							\lnot F_{0} &\equiv T_{0} &\\
+							\lnot T_{0} &\equiv F_{0} &\tag*{(negation laws)}
+						\end{flalign*}
+					\item \rule{0pt}{10pt} \vspace*{-25pt}
+						\begin{flalign*}
+							p \lor F_{0} &\equiv p &\\
+							p \land T_{0} &\equiv p &\tag*{(identity laws)}
+						\end{flalign*}
+					\item \rule{0pt}{10pt} \vspace*{-25pt}
+						\begin{flalign*}
+							p \lor T_{0} &\equiv T_{0} &\\
+							p \land F_{0} &\equiv F_{0} &\tag*{(domination laws/universal bound)}
+						\end{flalign*}
+				\end{enumerate}
+			\end{notebox}
+			\begin{notebox}{Other Useful Logical Eqiuivalences}
+				\begin{enumerate}[label=(\alph*), labelsep=2.5em, leftmargin=*]
+					\item \rule{0pt}{10pt} \vspace*{-25pt}
+						\begin{flalign*}
+							(p \rightarrow q) &\equiv (\lnot q \rightarrow \lnot p) &\tag*{(contrapositive equivalence)}
+						\end{flalign*}
+					\item \rule{0pt}{10pt} \vspace*{-25pt}
+						\begin{flalign*}
+							p \rightarrow q &\equiv \lnot p \lor q &\tag*{(implication equivalence)}
+						\end{flalign*}
+					\item \rule{0pt}{10pt} \vspace*{-25pt}
+						\begin{flalign*}
+							p \leftrightarrow q &\equiv (p \rightarrow q) \land (q \rightarrow p) &\tag*{(biconditional equivalence)}
+						\end{flalign*}
+					\item \rule{0pt}{10pt} \vspace*{-25pt}
+						\begin{flalign*}
+							\lnot (p \rightarrow q) &\equiv p \land \lnot q &\tag*{(negation of implication)}
+						\end{flalign*}
+				\end{enumerate}
+			\end{notebox}
+	\noindent\rule{\textwidth}{0.4pt}
+\end{document}
