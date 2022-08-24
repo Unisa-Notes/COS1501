@@ -50,7 +50,7 @@
 									Yes. Vacuously true, as there is no element that has the same first coordinate as another element's second doordinate.
 								\item[Weak Partial Order] As $S$ is not reflexive, $S$ is \textit{not} a weak partial order.
 							\end{description}
-						\item $R \subseteq \mathbb{Z} \times \mathbb{Z}$ such that $x R y$ iff $x + y$ is even.\\
+						\item $R \subseteq \mathbb{Z} \times \mathbb{Z}$ such that $x \, R \, y$ iff $x + y$ is even.\\
 							If $x + y$ is even, then $x + y = 2k$ for some integer $k$.
 							\begin{description}
 								\item[Reflexivity] Is it true that $(x, x) \in R$ for all $x \in \mathbb{Z}$?\\
@@ -73,9 +73,9 @@
 								\item[Weak Partial Order] As $R$ is not antisymmetric, $R$ is \textit{not} a weak partial order.
 							\end{description}
 							\pagebreak
-						\item $R$ on $\mathbb{Z} \times \mathbb{Z}$ by $(a, b) R (c, d)$ if either $a < c$ or $(a = c$ and $b \leq d)$.
+						\item $R$ on $\mathbb{Z} \times \mathbb{Z}$ by $(a, b) \,R \, (c, d)$ if either $a < c$ or $(a = c$ and $b \leq d)$.
 							\begin{description}
-								\item[Reflexivity] Is it true that for all $(a, b) \in \mathbb{Z} \times \mathbb{Z}$, $(a, b) R (a, b)$?\\
+								\item[Reflexivity] Is it true that for all $(a, b) \in \mathbb{Z} \times \mathbb{Z}$, $(a, b) \, R \, (a, b)$?\\
 									Yes. It is never the case that $a < a$, but $a = a$ and $b \leq b$ is true.
 								\item[Antisymmetry] Is it true that for all $(a, b)$ and $(c, d) \in \mathbb{Z} \times \mathbb{Z}$, if $(a, b) \neq (c,d)$ and $\bigl\{(a, b), (c, d)\bigr\} \in R$, then $\bigl\{(c, d), (a, b)\bigr\} \notin R$?\\
 									Yes. If $(a, b) R (c, d)$, then $a < c$ or $(a = c$ and $b \leq d)$.
@@ -128,7 +128,7 @@
 									Yes. There are no ordered pairs such that $(x, y) \in R$ and $(y, z) \in R$, so $R$ is \textit{vacuously} transitive.
 								\item[Strict Partial Order] As $R$ is irreflexive, antisymmetric, and transitive, $R$ \textit{is} a strict partial order.
 							\end{description}
-						\item $R \subseteq (\mathbb{Z} \times \mathbb{Z}) \times (\mathbb{Z} \times \mathbb{Z})$ such that $(a, b) R (c, d)$ iff $a < c$.
+						\item $R \subseteq (\mathbb{Z} \times \mathbb{Z}) \times (\mathbb{Z} \times \mathbb{Z})$ such that $(a, b) \, R \, (c, d)$ iff $a < c$.
 							\begin{description}
 								\item[Irreflexivity] Is it true that $\bigl((a, b), (a, b)\bigr)\notin R$ for any $(a, b) \in \mathbb{Z} \times \mathbb{Z}$?\\
 									Yes. For $\bigl((a, b), (a, b)\bigr) \in R$, it would need to satisfy the requirement $a < a$, which is never true.
@@ -196,7 +196,7 @@
 			\subsection{Equivalence Class}
 				For each $x \in A$, the equivalence class $[x] = \{y \mid y \in A$ and $ x R y\}$
 				\begin{examplebox}
-					Let $R$ be the relation on $\mathbb{Z}$ defined by $(x, y) \in R$ iff $y - x$ is even.
+					Let $R$ be the relation on $\mathbb{Z}$ defined by $(x, y) \in R$ iff $y - x$ is even.\\
 					That is, $R = \{y \mid y - x = 2k\}$ for some $k \in \mathbb{Z}$.
 					So,
 					\begin{align*}
@@ -217,7 +217,7 @@
 				\end{examplebox}
 				\begin{exercisebox}{Self-Assessment Exercise \thechapter.10}
 					\begin{enumerate}
-						\item \textbf{Let $X = \{a, b, c\}$. Write down all equicalence relations on $X$}.\\
+						\item \textbf{Let $X = \{a, b, c\}$. Write down all equivalence relations on $X$}.\\
 							For an equivalence relation, the relation needs to be \textit{reflexive}, \textit{symmetric} and \textit{transitive}.
 							\begin{description}
 								\item[Reflexivity] For reflexivity, \{(a, a), (b, b), (c, c)\} need to be part of the relation.
@@ -263,7 +263,7 @@
 						\item If $R$ is an equivalence relation to $A$, then $x \in [x]$ for each $x \in A$.\\
 							In other words, every member of $A$ belongs to an equivalence class with respect to $R$.
 						\item If $x R y$, then $[x] = [y]$. In other words, if two elements are equivalent with respect to $R$, they belong to the same equivalence class.
-						\item If $[x] = [y]$, then $x R y$.
+						\item If $[x] = [y]$, then $x \, R \, y$.
 						\item Either $[x] = [y]$ or $[x] \cap [y] = \emptyset$
 					\end{enumerate}
 				\end{theorembox}
@@ -298,7 +298,7 @@
 			\subsection{Functional Relation}
 				If $R$ is a relation from $X$ to $Y$, then $R$ is \textbf{functional} iff any element $x$ in $X$ only appears once as a first coordinate in an ordered pair of $R$.
 				\begin{examplebox}
-					If $S$ is a relation from $\{1, 2, 3\}$ to $\{a, b, c\}$, where $S = \bigl\{(1, a), (2, c)\bigr\}$. $S$ is a functional relation as $1$ and $2$ only appear as first coordinates in distinct pairs.
+					Let $S$ be a relation from $\{1, 2, 3\}$ to $\{a, b, c\}$, where $S = \bigl\{(1, a), (2, c)\bigr\}$. $S$ is a functional relation as $1$ and $2$ only appear as first coordinates in distinct pairs.
 				\end{examplebox}
 			\subsection{Function}
 				Suppose $R \subseteq A \times B$ is a binary relation from a set $A$ to a set $B$. $R$ is a \textbf{function} from $A$ to $B$ if $R$ is functional, and the domain of $R$ is exactly the set $A$, i.e. $\mathrm{dom}(R) = A$.\\

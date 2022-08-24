@@ -8,7 +8,7 @@
 			\subsection{Drawing Complex Venn Diagrams}
 			Draw the diagram in stages, including $U$, $A$, $B$ and $C$ in each diagram.
 			\begin{examplebox}
-				Let $A$, $B$, $C \subseteq U$. Draw the Venn diagram for $\Bigl[(A \cup B) - (A \cap B)\Bigr] \cup C$
+				Let $A$, $B$, $C \subseteq U$. Draw the Venn diagram for $\bigl[(A \cup B) - (A \cap B)\bigr] \cup C$
 				\begin{center}
 					\begin{venndiagram3sets}[shade=circle area]
 						\setpostvennhook
@@ -48,7 +48,7 @@
 					\begin{venndiagram3sets}[shade=circle area]
 						\setpostvennhook
 						{
-							\node[above] at (current bounding box.north) {$\Bigl[(A \cup B) - (A \cap B)\Bigr] \cup C$};
+							\node[above] at (current bounding box.north) {$\bigl[(A \cup B) - (A \cap B)\bigr] \cup C$};
 						}
 						\fillAll[fill=white]
 						\fillANotB
@@ -358,7 +358,7 @@
 					\end{tabbing}
 					$\therefore$ if $x \in (B \cup A)$, then $x \in (A \cup B)$,\\
 					$\therefore (B \cup A) \subseteq (A \cup B)$.
-					
+
 					\vspace{5mm}
 					$\therefore A \cup B = B \cup A$
 				\end{proof}
@@ -397,8 +397,8 @@
 							$\quad$ \= $x \in X - (Y \cap W)$\\
 							iff \> $x \in X$ and $x \notin (Y \cap W)$\\
 							iff \> $x \in X$ and $x \in Y'$ or $x \in W'$\\
-							iff \> $\Bigl(x \in X$ and $x \in Y'\Bigr)$ or $\Bigl(x \in X$ and $x \in W'\Bigr)$\\
-							iff \> $\Bigl(x \in (X - Y)\Bigr)$ or $\Bigl(x \in (X - W)\Bigr)$\\
+							iff \> $\bigl(x \in X$ and $x \in Y'\bigr)$ or $\bigl(x \in X$ and $x \in W'\bigr)$\\
+							iff \> $\bigl(x \in (X - Y)\bigr)$ or $\bigl(x \in (X - W)\bigr)$\\
 							iff \> $x \in (X - Y) \cup (X - W)$\\
 							$\therefore$ \> $X - (Y \cap W) = (X - Y) \cup (X - W)$
 						\end{tabbing}

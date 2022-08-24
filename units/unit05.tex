@@ -5,29 +5,30 @@
 		\section{Cartesian Product}
 			For any sets $A$ and $B$, the \textbf{Cartesian product} of $A$ and $B$ is written $A \times B$, and is equal to the set
 			\begin{align*}
-				\Bigl\{(x, y) \mid x \in A \text{ and } y \in B\Bigr\}
+				\bigl\{(x, y) \mid x \in A \text{ and } y \in B\bigr\}
 			\end{align*}
 			In other words, the Cartesian product $A \times B$ denotes a set of ordered pairs such that all the first coordinates of the pairs are elements of set $A$, and all the second coordinates of the pairs are elements of set $B$.
 			\begin{examplebox}
 				$A = \{2, 3, 4\}, B = \{5, 6\}$
 				\begin{align*}
-					A \times B &= \Bigl\{(2, 5), (2, 6), (3, 5), (3, 6), (4, 5), (4, 6)\Bigr\}\\
-					B \times A &= \Bigl\{(5, 2), (5, 3), (5, 4), (6, 2), (6, 3), (6, 4)\Bigr\}\\
-					B \times B &= \Bigl\{(5, 5), (5, 6), (6, 5), (6, 6)\Bigr\}\\
-					A \times A &= \Bigl\{(2, 2), (2, 3), (2, 4), (3, 2), (3, 3), (3, 4), (4, 2), (4, 3), (4, 4)\Bigr\}
+					A \times B &= \bigl\{(2, 5), (2, 6), (3, 5), (3, 6), (4, 5), (4, 6)\bigr\}\\
+					B \times A &= \bigl\{(5, 2), (5, 3), (5, 4), (6, 2), (6, 3), (6, 4)\bigr\}\\
+					B \times B &= \bigl\{(5, 5), (5, 6), (6, 5), (6, 6)\bigr\}\\
+					A \times A &= \bigl\{(2, 2), (2, 3), (2, 4), (3, 2), (3, 3), (3, 4), (4, 2), (4, 3), (4, 4)\bigr\}
 				\end{align*}
 			\end{examplebox}
 		\section{Relation}
 			A subset of a Cartesian product from $C$ to $D$ is called a \textbf{relation} from $C$ to $D$.
 			\begin{examplebox}
-				$A = \{2, 3, 4\}, B = \{6, 7\}$. The following are some relations from $A$ to $B$
+				$A = \{2, 3, 4\}$ and  $B = \{6, 7\}$. The following are some relations from $A$ to $B$
 				\begin{align*}
 					\emptyset \tag*{(This is a subset, even though it has no elements)}\\
-					\Bigl\{(3, 7)\Bigr\}\\
-					\Bigl\{(2, 6), (2, 7)\Bigr\}\\
-					\Bigl\{(2, 6), (3, 6), (4, 6)\Bigr\}\\
+					\bigl\{(3, 7)\bigr\}\\
+					\bigl\{(2, 6), (2, 7)\bigr\}\\
+					\bigl\{(2, 6), (3, 6), (4, 6)\bigr\}\\
 					A \times B
 				\end{align*}
+				\pagebreak
 			\end{examplebox}
 				\begin{exercisebox}{Self-Assessment Exercise \thechapter.4}
 					\begin{alignat*}{3}
@@ -35,18 +36,18 @@
 					\end{alignat*}
 					\textbf{List the folliwing Cartesian products in list notation:}
 					\begin{enumerate}[label=(\alph*)]
-						\item $A \times B = \Bigl\{(1, 2), (1, 5), (2, 2), (2, 5), (3, 2), (3, 5), (4, 2), (4, 5)\Bigr\}$
-						\item $B \times A = \Bigl\{(2, 1), (2, 2), (2, 3), (2, 4), (5, 1), (5, 2), (5, 3), {5, 4}\Bigr\}$
+						\item $A \times B = \bigl\{(1, 2), (1, 5), (2, 2), (2, 5), (3, 2), (3, 5), (4, 2), (4, 5)\bigr\}$
+						\item $B \times A = \bigl\{(2, 1), (2, 2), (2, 3), (2, 4), (5, 1), (5, 2), (5, 3), (5, 4)\bigr\}$
 						\item $(A \cup B) \times C$
 							\begin{align*}
 								A \cup B &= \{1, 2, 3, 4, 5\}\\
-								(A \cup B) \times C &= \Bigl\{(1, 3), (1, 4), (1, 7), (2, 3), (2, 4), (2, 7), (3, 3), (3, 4), (3, 7),\\
-								& \qquad (4, 3), (4, 4), (4, 7), (5, 3), (5, 4), (5, 7)\Bigr\}
+								(A \cup B) \times C &= \bigl\{(1, 3), (1, 4), (1, 7), (2, 3), (2, 4), (2, 7), (3, 3), (3, 4), (3, 7),\\
+								& \qquad (4, 3), (4, 4), (4, 7), (5, 3), (5, 4), (5, 7)\bigr\}
 							\end{align*}
 						\item $(A + B) \times B$
 							\begin{align*}
 								A + B &= \{1, 3, 4, 5\}\\
-								(A + B) \times B &= \Bigl\{(1, 2), (1, 5), (3, 2), (3, 5), (4, 2), (4, 5), (5, 2), (5, 5)\Bigr\}
+								(A + B) \times B &= \bigl\{(1, 2), (1, 5), (3, 2), (3, 5), (4, 2), (4, 5), (5, 2), (5, 5)\bigr\}
 							\end{align*}
 					\end{enumerate}
 				\end{exercisebox}
@@ -57,13 +58,13 @@
 				\vspace{2mm}\\
 				The \textbf{domain} of $T$, written $\mathrm{dom}(T)$ is:
 					\begin{align*}
-						\mathrm{dom}(T) = \{x \mid \text{ for some } y \in Y, (x, y) \in T\}
+						\mathrm{dom}(T) = \{x \mid \text{for some } y \in Y, (x, y) \in T\}
 					\end{align*}
 				That is, all the elements that actually appear as first elements in the relation $T$.\\
 				\vspace{2mm}\\
 				The \textbf{range} of $T$, written $\mathrm{ran}(T)$ is:
 				\begin{align*}
-					\mathrm{ran}(T) = \{y \mid \text{ for some } x \in X, (x, y) \in T\}
+					\mathrm{ran}(T) = \{y \mid \text{for some } x \in X, (x, y) \in T\}
 				\end{align*}
 			That is, all the elements that actually appear as second elements in the relation $T$.
 			\begin{notebox}{Domain and Range are not equal to $X$ and $Y$}
@@ -71,7 +72,7 @@
 				$\mathrm{ran}(T) \subseteq Y$. The range of the relation is a \textit{subset} of $Y$, but not necessarily equal to $Y$.
 			\end{notebox}
 			\begin{examplebox}
-				Let $S = \Bigl\{(a, 1), (b, 1), (a, 2)\Bigr\}$ be a relation from $\{a, b, c\}$ to $\{1, 2, 3\}$.\\
+				Let $S = \bigl\{(a, 1), (b, 1), (a, 2)\bigr\}$ be a relation from $\{a, b, c\}$ to $\{1, 2, 3\}$.\\
 				Then $\mathrm{dom}(S) = \{a, b\} \subseteq \{a, b, c\}$.\\
 				And $\mathrm{ran}(S) = \{1, 2\} \subseteq \{1, 2, 3\}$.\\
 				The codomain of $S$ is the set $\{1, 2, 3\}$. 
@@ -161,8 +162,8 @@
 				$S \circ R = R;S = \bigl\{(a, c) \mid$ there is some $b \in B$ such that $(a, b) \in R$ and $(b, c) \in S\bigr\}$
 				\begin{examplebox}
 					Let $R = \bigl\{(1, a), (2, b)\bigr\}$ be a relation from $\{1, 2\}$ to $\{a, b\}$\\
-					Let $S = \bigl\{(a, s), (b, s), (b, t)\bigr\}$ be a relation from $\{a, b\}$ to $\{s, t\}$.
-					Then $S \circ R = R;S$.
+					Let $S = \bigl\{(a, s), (b, s), (b, t)\bigr\}$ be a relation from $\{a, b\}$ to $\{s, t\}$.\\
+					Then $S \circ R = R;S$.\\
 					\-\hspace{1cm} $(1, a) \rightarrow (a, s) \rightarrow (1, s)$\\
 					\-\hspace{1cm} $(2, b) \rightarrow (b, s) \rightarrow (2, s)$\\
 					\-\hspace{1cm} $(2, b) \rightarrow (b, t) \rightarrow (2, t)$\\
