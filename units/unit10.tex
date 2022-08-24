@@ -1,0 +1,239 @@
+\documentclass[../notes.tex]{subfiles}
+
+\begin{document}
+	\chapter[Logic: Predicates and Proof strategies]{Logic: Quantifiers, predicates and proof strategies}
+		\section{Quantifiers and Predicates}
+			\subsection[Universal Quantifier]{Universal Quantifier (FOR ALL)}
+				A \textbf{universal quantifier} is written with the symbol $\forall$, meaning ``for all''.
+				\begin{examplebox}
+					Examples would be:
+					\begin{adjustwidth}{1cm}{}
+						``For all $x \in \mathbb{R}$ \ldots'' (written $\forall \: x \in \mathbb{R}$)\\
+						``For every $x \in \mathbb{Z}$ \ldots'' (written $\forall \: x \in \mathbb{Z}$)\\
+						``For each $x \in \{1, 2, 3\}$ \ldots'' (written $\forall \: x \in \{1, 2, 3\}$)
+					\end{adjustwidth}
+					The variable $x$ above is called a \textbf{quantified variable}.
+				\end{examplebox}
+				This can be considered a \textit{generalisation of conjunction (AND)}.
+				\begin{examplebox}
+					Let $A$ = \{1, 2, 3\}.\\
+					A declarative statement can then be made for the set:
+					\begin{align*}
+						\forall \: x \in A, x > 0
+					\end{align*}
+					This means the same thing as 
+					\begin{align*}
+						(1 > 0) \land (2 > 0) \land (3 > 0)
+					\end{align*}
+					This statement is true.
+				\end{examplebox}
+				\pagebreak
+			\subsection[Existential Quantifier]{Existential Quantifier (THERE EXISTS)}
+				An \textbf{existential quantifier} is written with the symbol $\exists $, meaning ``there exists''.
+				\begin{examplebox}
+					Examples would be:
+					\begin{adjustwidth}{1cm}{}
+						``There exists an $x \in \mathbb{R}$ such that\ldots'' (written $\exists \: x \in \mathbb{R}$)\\
+						``For some $x \in \mathbb{Z}$ \ldots'' (written $\exists \: x \in \mathbb{Z}$)\\
+						``We can find an $x \in \{1, 2, 3\}$ such that \ldots'' (written $\exists \: x \in \{1, 2, 3\}$)
+					\end{adjustwidth}
+				\end{examplebox}
+				\begin{notebox}{A quantified variable is a dummy variable}
+					Any quantified variable can be replaced (everywhere it occurs) with another variable without changing the meaning.
+					\begin{examplebox}
+						$\forall \: x \in \mathbb{Z}^{+}, (x > 0) \equiv \forall \: y \in \mathbb{Z}^{+}, (y > 0)$
+					\end{examplebox}
+				\end{notebox}
+				This can be considered a \textit{generalisation of disjunction (OR)}.
+				\begin{examplebox}
+					Let $A$ = \{1, 2, 3\}.\\
+					A declarative statement can then be made for the set:
+					\begin{align*}
+						\exists \: x \in A, x > 4
+					\end{align*}
+					This means the same thing as 
+					\begin{align*}
+						(1 > 4) \lor (2 > 4) \lor (3 > 4)
+					\end{align*}
+					This statement is false.
+				\end{examplebox}
+			\subsection{Predicate}
+				A statement $P(x)$ is called a \textbf{predicate} if it expresses some property of a variable $x \in A$, and returns either true or false depending on the value of $x$. $P(x)$ is true for any variable $x \in A$ that has the property, and $P(x)$ is false if $x$ does not have that property.
+				\begin{notebox}{A predicate is a boolean function}
+					A predicate takes in a value, and either returns true or false.
+				\end{notebox}
+			\subsection{Negation of Quantified Statements}
+				If $P(x)$ is a predicate containing some variable $x$, then:
+				\begin{enumerate}
+					\item $\lnot \bigl(\forall \: x \in A, P(x)\bigr) \equiv \exists \: x \in A, \lnot P(x)$
+					\item $\lnot \bigl(\exists \: x \in A, P(x)\bigr) \equiv \forall \: x \in A, \lnot P(x)$
+				\end{enumerate}
+				\pagebreak
+		\section{Proof Strategies}
+				Given some statement ``if $p$, then $q$'', there are different ways to prove it.
+			\subsection{Direct Proof}
+				Assume that $p$ is true, and then reason step-by-step to show that $q$ is true.
+				\begin{examplebox}
+					Prove that the following statement is true for all $x \in \mathbb{R}$:
+					\begin{align*}
+						\text{If } x^{2} - 4x + 3 < 0 \text{, then } x > 0
+					\end{align*}
+					Start by assuming that $x^{2} - 4x + 3 < 0$ is true.
+					\begin{proof}
+						Assume $x^{2} - 4x + 3 < 0$. That is:
+						\begin{align*}
+							x^{2} - 4x + 3 &< 0\\
+							(x - 3)(x - 1) &< 0 \tag*{(by factorisation)}
+						\end{align*}
+						That means either 
+							\begin{enumerate}[label=(\roman*)]
+								\item $(x - 3) > 0$ and $(x - 1) < 0$ (plus times minus gives minus), or
+								\item $(x - 3) < 0$ and $(x - 1) > 0$ (minus times plus gives minus)
+							\end{enumerate}
+						For (i):
+						\begin{adjustwidth}{1cm}{}
+							\begin{alignat*}{3}
+								& & (x - 3) &> 0 \quad \text{ and }\quad  (x - 1) \: &< 0\\
+								& \Rightarrow \quad & x &> 3 \quad \text{ and } \quad x &< 1
+							\end{alignat*}
+							There is no $x$ that this can be true for.
+						\end{adjustwidth}
+						For (ii):
+						\begin{adjustwidth}{1cm}{}
+							\begin{alignat*}{3}
+								& & (x - 3) &< 0 \quad \text{ and }\quad  (x - 1) \: &> 0\\
+								& \Rightarrow \quad & x &< 3 \quad \text{ and } \quad x &> 1
+							\end{alignat*}
+							This shows $1 < x < 3$, or $x \in (1, 3)$.\\
+							Therefore $x < 0$ \qedhere
+						\end{adjustwidth}
+					\end{proof}
+				\end{examplebox}
+			\pagebreak
+			\subsection[Proof by contradiction]{Proof by contradiction (\textit{Reductio ad absurdum})}
+				Assume that $p$ is true. Then assume that $q$ is false, and use step-by-step reasoning until there is a contradiction. If there is a contradiction, that means that $q$ must be true.
+				\begin{examplebox}
+					Prove that the following statement is true for all $x \in \mathbb{R}$:
+					\begin{align*}
+						\text{If } x^{2} - 4x + 3 < 0 \text{, then } x > 0
+					\end{align*}
+					Start by assuming that $x^{2} - 4x + 3 < 0$ is true.
+					\begin{proof}
+						Assume $x^{2} - 4x + 3 < 0$.\\
+						If the antecedent is true, then either the consequent is true or the consequent is false.\\
+						Assume that the consequent is false, i.e. assume that $x \not > 0$, that is $x \leq 0$.
+						\begin{tabbing}
+							If $\qquad$ \=$x \leq 0$,\\
+							Then \>$-4x \geq 0$ (minus times minus gives plus)\\
+							And \>$x^{2} + 3 > 0$\\
+							So \>$x^{2} - 4x + 3 > 0$
+						\end{tabbing}
+						However, this contradicts the original assumption. Therefore $x \leq 0$ cannot be true.\\
+						Therefore $x > 0$.
+					\end{proof}
+				\end{examplebox}
+			\subsection{Proof by contrapositive}
+				\subsubsection{Contrapositive}
+					The \textbf{contrapositive} of $p \rightarrow q$ is $\lnot q \rightarrow \lnot p$. These two statements are logically equivalent to each other. Therefore, proving the contrapositive also proves the original statement.
+				\begin{examplebox}
+					Prove that the following statement is true for all $x \in \mathbb{R}$:
+					\begin{align*}
+						\text{If } x^{2} - 4x + 3 < 0 \text{, then } x > 0
+					\end{align*}
+					To use the contrapositive, swap the two statements around, and negate them:
+					\begin{proof}
+						To use the contrapositive, prove:
+						\begin{align*}
+							\text{If } \lnot(x > 0) \text{, then } \lnot(x^{2} - 4x + 3 < 0).
+						\end{align*}
+						Assume $\lnot (x > 0)$ is true, i.e. $x \leq 0$.\\
+						Factorise the consequent:
+						\begin{align*}
+							x^{2} - 4x + 3 = (x - 3)(x - 1)
+						\end{align*}
+						As $x \leq 0$, $(x - 3) \leq 0$ and $(x - 1) \leq 0$.
+						\begin{tabbing}
+							If $\qquad$ \= $(x - 3) \leq 0$ and $(x - 1) \leq 0$,\\
+							Then \> $(x - 3)(x - 1) \geq 0$ (minus times minus gives plus)\\
+							i.e. \> $x^{2} - 4x + 3 \geq 0$\\
+							i.e. \> $\lnot (x^{2} - 4x + 3 < 0)$ \` \qedhere
+						\end{tabbing}
+					\end{proof}
+				\end{examplebox}
+				\begin{notebox}{The contrapositive is not the same as the converse}
+					The \textbf{converse} of a statement just swaps them around. This is not the same as the contrapositive.
+					\begin{examplebox}
+						Given a statement, $p \rightarrow q$.
+						\begin{description}
+							\item[Converse] $q \rightarrow p$
+							\item[Contrapositive] $\lnot q \rightarrow \lnot p$ 
+						\end{description} 
+					\end{examplebox}
+				\end{notebox}
+			\subsection{Proofs involving quantifiers}
+				In order to apply a proof to a quantified statement over an infinite set $A$, for example $\forall \: x \in A, P(x)$, think of the statement as $x \in A \rightarrow P(x)$.
+				\begin{examplebox}
+					Prove the statement
+					\begin{align*}
+						\forall \: x \in \mathbb{R}, x^{2} + 1 > 0.
+					\end{align*}
+					\begin{proof}
+						$ $
+						\begin{tabbing}
+							If $\qquad$ \=$x \in \mathbb{R}$,\\
+							Then \>$x^{2} \geq 0$,\\
+							So \> $x^{2} + 1 \geq 1$\\
+							i.e. \> $x^{2} + 1 > 0$ \` \qedhere
+						\end{tabbing}
+					\end{proof}
+				\end{examplebox}
+				To disprove a statement, prove that its \textit{negation} is true. If this is a statement such as $\forall \: x \in A, P(x)$, the negation is $\exists \: x \in A, \lnot P(x)$. This shows that in order to disprove the statement, one needs to simply find a counterexample.
+				\begin{examplebox}
+					Show using a \textit{counterexample} that this statement is not true:
+					\begin{align*}
+						\forall \: x \in \mathbb{R}, x^{2} - 4x > 0
+					\end{align*}
+					\begin{proof}
+						To disprove $\forall \: x \in \mathbb{R}, x^{2} - 4x > 0$, one needs to prove that:
+						\begin{align*}
+							\exists \: x \in \mathbb{R}, x^{2} - 4x \geq 0
+						\end{align*}
+						One could choose $x = 0$.\\
+						Then \begin{align*}
+							x^{2} - 4x &= (0)^{2} - 4(0)\\
+							&= 0\\
+							& \not > 0 \qedhere
+						\end{align*}
+					\end{proof}
+				\end{examplebox}
+			\pagebreak
+			\subsection{Vacuous Proofs}
+				The truth table for an implication shows that if the antecedent is false, then the statement is always true.\\
+				Using the above, if you can show that the conditional statement is false, then the statement is \textbf{vacuously true}.
+				\begin{examplebox}
+					Prove that:
+					\begin{align*}
+						\emptyset \subseteq X
+					\end{align*}
+					To prove the above statement, we need to show that:
+						\begin{align*}
+							\text{If } x \in \emptyset \text{, then } x \in X
+						\end{align*}
+					\begin{proof}
+						$ $\\
+						$\emptyset$ is an empty set,\\
+						so ``$x \in \emptyset$'' is false,\\
+						therefore ``if $x \in \emptyset$, then $x \in X$'' is \textbf{vacuously true}. \qedhere
+					\end{proof}
+				\end{examplebox}
+				\begin{examplebox}
+					Let $S$ be a relation on $\{a, b, c, d\}$, where $S = \bigl\{(a, b), (a, d)\bigr\}$. Prove that $S$ is transitive.
+					\begin{proof} For a set $S$ to be transitive, whenever $(x, y) \in S$ and $(y, z) \in S$, then $(x, z) \in S$.\\
+						There are no two paits of the form $(x, y)$ and $(y, z)$ in $S$,\\
+						so it is \textbf{vacuously true} that $S$ is transitive.
+					\end{proof}
+				\end{examplebox}
+				\ifSubfilesClassLoaded{%
+					\noindent\rule{\textwidth}{0.4pt}%
+				}{}
+\end{document}
