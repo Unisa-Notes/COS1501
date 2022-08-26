@@ -73,6 +73,15 @@ fillAll}}{}{}
 \newtcolorbox{examplebox}{coltitle=example title, colback=example color, breakable, detach title, before upper={\tcbtitle\quad}, title=\textbf{Example}}
 \newtcolorbox{theorembox}[1]{breakable, colback=theorem color, colframe=theorem border, fonttitle=\bfseries, title={#1}, center title}
 
+\renewcommand{\qedsymbol}{$\blacksquare$}
+
+\newenvironment{subproof}[1][\proofname]{%
+  \renewcommand{\qedsymbol}{$\square$}%
+  \begin{proof}[#1]%
+}{%
+  \end{proof}%
+}
+
 \usepackage{subfiles}
 
 \title{COS1501 Notes}
