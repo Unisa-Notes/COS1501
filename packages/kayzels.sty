@@ -78,3 +78,7 @@
 			{input}{\subfile{#2}}
 	 }[\PackageError{addfile}{Undefined option to addfile: #1}{}]%
 	}
+
+% Horizontal Rules at document ends
+\newcommand{\rulebookend}{\vbox{\hrule width \hsize \kern 1mm \hrule width \hsize height 2pt}}
+\newcommand{\rulechapterend}{\noindent\rule{\textwidth}{0.4pt}}
