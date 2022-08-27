@@ -8,7 +8,7 @@
 				For any sets $A$ and $B$, if $A \subseteq B$ and $B \subseteq A$, then every element of $A$ is also an element of $B$, and every element of $B$ is also an element of $A$, so $A = B$.
 			\subsection{Drawing Complex Venn Diagrams}
 			Draw the diagram in stages, including $U$, $A$, $B$ and $C$ in each diagram.
-			\begin{examplebox}
+			\begin{example}
 				Let $A$, $B$, $C \subseteq U$. Draw the Venn diagram for $\bigl[(A \cup B) - (A \cap B)\bigr] \cup C$
 				\begin{center}
 					\begin{venndiagram3sets}[shade=circle area]
@@ -57,8 +57,8 @@
 						\fillC
 					\end{venndiagram3sets}
 				\end{center}
-			\end{examplebox}
-			\begin{exercisebox}{Self-Assessment Exercise \thechapter.4}
+			\end{example}
+			\begin{exercise}{Self-Assessment Exercise \thechapter.4}
 				\begin{enumerate}
 					\item
 						\begin{enumerate}
@@ -330,11 +330,11 @@
 								\end{center}
 						\end{enumerate}
 				\end{enumerate}
-			\end{exercisebox}
+			\end{exercise}
 		\pagebreak
 		\section{Proofs}
 			For proofs with sets, one needs to prove that the sets have exactly the same elements. For this, one needs to show that each half of the equation is equal to the other half: one needs to show both forwards and backwards. However, this can be abbreviated using iff.
-			\begin{examplebox}
+			\begin{example}
 				(Long Way:) Prove that for all subsets $A$ and $B$ of $U$, $A \cup B = B \cup A$
 				\begin{proof}
 					Show $(A \cup B) \subseteq (B \cup A)$
@@ -363,9 +363,9 @@
 					\vspace{5mm}
 					$\therefore A \cup B = B \cup A$
 				\end{proof}
-			\end{examplebox}
+			\end{example}
 			Using iff can shorten this, but be careful!
-			\begin{examplebox}
+			\begin{example}
 				\begin{tabbing}
 					$\quad$ \=$x \in (X \cup Y)'$\\
 					iff \>$x \notin (X \cup Y)$\\
@@ -380,9 +380,9 @@
 					iff \> $x \in X'$ or $x \in Y'$\\
 					iff \> $x \in X' \cup Y'$
 				\end{tabbing}
-			\end{examplebox}
+			\end{example}
 			\pagebreak
-			\begin{exercisebox}{Self-Assessment Exercise \thechapter.6}
+			\begin{exercise}{Self-Assessment Exercise \thechapter.6}
 				\begin{enumerate}[label=(\alph*)]
 					\item $(X')' = X$\\
 						Let $x \in (X')'$.
@@ -426,12 +426,12 @@
 							$\therefore$ \> $X \cap (Y \cup W) = (X \cap Y) \cup (X \cap W)$
 						\end{tabbing}
 				\end{enumerate}
-			\end{exercisebox}
+			\end{exercise}
 			In order to prove that two sets are not equal, one needs to just provide a \textbf{counterexample} - an element that is in one set that is not in the other.
 		\section{Identity}
 			An equation which is satisfied by every possible value of the unknown(s) is called an \textbf{identity}
 		\pagebreak
-		\begin{exercisebox}{Self Assessment Exercise \thechapter.8}
+		\begin{exercise}{Self Assessment Exercise \thechapter.8}
 			\begin{enumerate}
 				\item \textbf{Is it the case for all $X$, $Y$, $Z \subseteq U$, $X + (Y \cap Z) = (X + Y) \cap (X + Z)$?}
 					\begin{center}
@@ -651,18 +651,18 @@
 						\end{align*} 
 					\end{description}
 			\end{enumerate}
-		\end{exercisebox}
+		\end{exercise}
 		\pagebreak
 		\section{The Inclusion Exclusion Principle}
 			For all finite sets $X$ and $Y$, $\left\lvert X \cup Y\right\rvert = \left\lvert X\right\rvert + \left\lvert Y \right\rvert - \left\lvert X \cap Y\right\rvert $
-			\begin{examplebox}
+			\begin{example}
 				Let $X = \{a, b, c, 1\}$ and $Y = \{1, 2, 3\}$. Then $X \cap Y = \{1\}$ and $\left\lvert X \cap Y\right\rvert = 1$.\\
 				$\left\lvert X\right\rvert = 4$, $\left\lvert Y\right\rvert = 3$, so $\left\lvert X \cup Y\right\rvert = \left\lvert X\right\rvert + \left\lvert Y\right\rvert - \left\lvert X \cap Y\right\rvert = 4 + 3 - 1 = 6$
-			\end{examplebox}
+			\end{example}
 			\subsection{Sum Rule}
 				If $X$ and $Y$ are disjoint sets ($X \cap Y = \emptyset$), and $\left\lvert X\right\rvert = m$ and $\left\lvert Y\right\rvert = n $, then $\left\lvert X \cup Y\right\rvert = m + n $
 			\subsection{Applying the principle to Venn Diagrams}
-				\begin{examplebox}
+				\begin{example}
 					In a group of 50 learners, 25 play mastermind, 30 play basketball, and 10 play both.
 					\begin{enumerate}[label=(\alph*)]
 						\item How many learners play Mastermind or basketball, (or both)?
@@ -692,8 +692,8 @@
 							\end{align*}
 						\item $\left\lvert (M \cup B)'\right\rvert = 50 - 45 = 5$
 					\end{enumerate}
-				\end{examplebox}
-				\begin{examplebox}
+				\end{example}
+				\begin{example}
 					A questionnaire filled in by 100 subscribers to Blue Scalpel Medical Insurance who submitted no claims during 2009 reveals that 45 jog regularly, 30 do aerobics regularly, 20 cycle regularly, 6 jog and do aerobics, 1 jogs and cycles, 5 do aerobics and cycle, and 1 jogs, cycles and does aerobics.
 					\begin{enumerate}[label=(\alph*)]
 						\item How many of these healthy people do not participate regularly in any of the three activities?
@@ -717,9 +717,9 @@
 						\item This would be the value of the people who don't appear in any of the circles, which is $16$.
 						\item This would be the value inside the circle $J$, which is $39$.
 					\end{enumerate}
-				\end{examplebox}
+				\end{example}
 				\pagebreak
-				\begin{exercisebox}{Self Assessment Exercise \thechapter.10}
+				\begin{exercise}{Self Assessment Exercise \thechapter.10}
 					\begin{enumerate}
 						\item \textbf{Of $1000$ first year students, $700$ take Mathematics, $400$ take Computer Science, and $800$ take Mathematics or Computer Science.}\\
 							$U$ is the first year students, $M$ is those who take Mathematics, and $C$ is those who take Computer Science.
@@ -819,13 +819,13 @@
 								\end{align*}
 						\end{enumerate}
 					\end{enumerate}
-				\end{exercisebox}
+				\end{exercise}
 		\section{Proofs on Specific Sets}
 			To prove that two sets are equal, prove that each member of the lef-hand side belongs to the right hand side, and vice versa.
-			\begin{notebox}{Any variable can be used for a set description}
+			\begin{sidenote}{Any variable can be used for a set description}
 				Whether the variable is $x$ or $z$ does not change the members of the set.
-			\end{notebox}
-			\begin{examplebox}
+			\end{sidenote}
+			\begin{example}
 				Prove that
 				\begin{align*}
 					\{w \in \mathbb{R} \mid w^{2} - 3w + 2 < 0\} = \{z \in \mathbb{R} \mid 1 < z < 2\}
@@ -846,12 +846,12 @@
 						iff      \> $x \in \{z \in \mathbb{R} \mid 1 < z < 2\}$ \` \qedhere
 					\end{tabbing}
 				\end{proof}
-			\end{examplebox}
-			\begin{notebox}{Using Or in Proofs}
+			\end{example}
+			\begin{sidenote}{Using Or in Proofs}
 				Note that if there is an ``or'' that is connecting the statements, then the statement is true if \textit{either} of the statements is true.
-			\end{notebox}
+			\end{sidenote}
 			\pagebreak
-			\begin{exercisebox}{Self Assessment Exercise \thechapter.11}
+			\begin{exercise}{Self Assessment Exercise \thechapter.11}
 				\textbf{Prove the following}
 				\begin{enumerate}
 					\item \textbf{$\{y \in \mathbb{Z}^{+} \mid y$ is an even prime number$\} = \{u \in \mathbb{Z}^{+} \mid u^{2} = 4\}$}
@@ -928,9 +928,9 @@
 							\end{tabbing}
 						\end{proof}
 				\end{enumerate}
-			\end{exercisebox}
+			\end{exercise}
 			\pagebreak
-			\begin{exercisebox}{Self Assessment Exercise \thechapter.12}
+			\begin{exercise}{Self Assessment Exercise \thechapter.12}
 				\begin{enumerate}
 					\item \textbf{Determine whether or not for $V$, $W$, $Z \subseteq U$, if $V \subseteq W$, then $V \cup Z \subseteq W \cup Z$ and $V \cap Z \subseteq W \cap Z$. Provide either a proof or a counterexample.}\\
 						Both statements are true.
@@ -1099,6 +1099,6 @@
 								\end{proof}
 						\end{enumerate}
 				\end{enumerate}
-			\end{exercisebox}
+			\end{exercise}
 				\noindent\rule{\textwidth}{0.4pt}
 	\end{document}

@@ -18,10 +18,10 @@
 						\item Add 3 to 5! (\textit{Command}: induce behaviour, not convey information)
 					\end{itemize}
 			\end{description}
-			\begin{notebox}{Not all declarative statements are usable}
+			\begin{sidenote}{Not all declarative statements are usable}
 				A declarative statement is not necessarily true or false, as there can be a contradiction in the statement.\\
 				However, when dealing with proofs, declarative statements are restricted to those that can be either \textit{true} or \textit{false}.
-			\end{notebox}
+			\end{sidenote}
 			A declarative statement can either be
 			\begin{itemize}
 				\item \textbf{atomic}, (or simple) meaning they convey a single fact.
@@ -80,17 +80,17 @@
 						\hline
 					\end{tabular}	
 				\end{center}
-				\begin{notebox}{If the hypothesis is false, then the statement is true}
+				\begin{sidenote}{If the hypothesis is false, then the statement is true}
 					This can be quite confusing. The idea is that if the original statement is false, we can't say that the next statement is not true.
-					\begin{examplebox}
+					\begin{example}
 						Consider a statement ``If you read books, you are smart''.
 						\begin{adjustwidth}{1cm}{}
 							If someone reads books and is smart, this is true.\\
 							If someone reads books and is not smart, this is false.\\
 							If someone does not read books, we cannot say the statement is false, but we also cannot say it is true. So the statement would be vacuously true.
 						\end{adjustwidth}
-					\end{examplebox} 
-				\end{notebox}
+					\end{example} 
+				\end{sidenote}
 			\pagebreak
 			\subsection{Biconditional}
 				If $p$ and $q$ represent declarative statements, then $p \leftrightarrow q$ represents the statement $p$ if and only if $q$, which can also be written $p$ iff $q$. This is called the \textbf{biconditional}.
@@ -126,7 +126,7 @@
 				\item Continue doing that until the base statements are filled.
 				\item Then apply the rules to the columns left to right.
 			\end{enumerate}
-			\begin{examplebox}
+			\begin{example}
 				Construct a truth table for $p \land (\lnot q)$.
 					\begin{center}
 						\begin{tabular}{| c c |}
@@ -160,12 +160,12 @@
 							\hline
 						\end{tabular}
 					\end{center}
-			\end{examplebox}
+			\end{example}
 			\pagebreak
 		\section{Relationships Between Statements}
 			\subsection{Tautology}
 				A compound statement that is always true is called a \textbf{tautology}.
-				\begin{examplebox}
+				\begin{example}
 					The statement $p \lor \lnot p$ is always true.
 					\begin{center}
 						\begin{tabular}{| c c | c |}
@@ -177,10 +177,10 @@
 							\hline
 						\end{tabular}
 					\end{center}
-				\end{examplebox}
+				\end{example}
 			\subsection{Contradiction}
 				A compound statement that is always false is called a \textbf{contradiction}.
-				\begin{examplebox}
+				\begin{example}
 					The statement $p \land \lnot p$ is always false.
 					\begin{center}
 						\begin{tabular}{| c c | c |}
@@ -192,10 +192,10 @@
 							\hline
 						\end{tabular}
 					\end{center}
-				\end{examplebox}
+				\end{example}
 			\subsection{Logical Equivalence}
 				Two declarative statements $a$ and $b$ are \textbf{logically equivalent}, written $a \equiv b$, if and only if the statement $a \rightarrow b$ is a tautology.
-				\begin{examplebox}
+				\begin{example}
 					Take the declarative statement $(p \lor q) \leftrightarrow (q \lor p)$.
 					\begin{center}
 						\begin{tabular}{| c c | c | c | c |}
@@ -213,9 +213,9 @@
 						\begin{align*}
 							p \lor q \equiv q \lor p
 						\end{align*}
-				\end{examplebox}
+				\end{example}
 			\pagebreak
-			\begin{notebox}{Important Logical Equivalences (Identities)}
+			\begin{sidenote}{Important Logical Equivalences (Identities)}
 				Let $T_{0}$ be a tautology, and $F_{0}$ be a contradiction.
 				\begin{enumerate}[label=(\alph*), labelsep=2.5em, leftmargin=*]
 					\item \rule{0pt}{10pt} \vspace*{-25pt}
@@ -268,8 +268,8 @@
 							p \land F_{0} &\equiv F_{0} &\tag*{(domination laws/universal bound)}
 						\end{flalign*}
 				\end{enumerate}
-			\end{notebox}
-			\begin{notebox}{Other Useful Logical Eqiuivalences}
+			\end{sidenote}
+			\begin{sidenote}{Other Useful Logical Eqiuivalences}
 				\begin{enumerate}[label=(\alph*), labelsep=2.5em, leftmargin=*]
 					\item \rule{0pt}{10pt} \vspace*{-25pt}
 						\begin{flalign*}
@@ -288,6 +288,6 @@
 							\lnot (p \rightarrow q) &\equiv p \land \lnot q &\tag*{(negation of implication)}
 						\end{flalign*}
 				\end{enumerate}
-			\end{notebox}
+			\end{sidenote}
 	\noindent\rule{\textwidth}{0.4pt}
 \end{document}

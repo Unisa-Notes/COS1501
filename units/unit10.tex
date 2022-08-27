@@ -6,7 +6,7 @@
 		\section{Quantifiers and Predicates}
 			\subsection[Universal Quantifier]{Universal Quantifier (FOR ALL)}
 				A \textbf{universal quantifier} is written with the symbol $\forall$, meaning ``for all''.
-				\begin{examplebox}
+				\begin{example}
 					Examples would be:
 					\begin{adjustwidth}{1cm}{}
 						``For all $x \in \mathbb{R}$ \ldots'' (written $\forall \: x \in \mathbb{R}$)\\
@@ -14,9 +14,9 @@
 						``For each $x \in \{1, 2, 3\}$ \ldots'' (written $\forall \: x \in \{1, 2, 3\}$)
 					\end{adjustwidth}
 					The variable $x$ above is called a \textbf{quantified variable}.
-				\end{examplebox}
+				\end{example}
 				This can be considered a \textit{generalisation of conjunction (AND)}.
-				\begin{examplebox}
+				\begin{example}
 					Let $A$ = \{1, 2, 3\}.\\
 					A declarative statement can then be made for the set:
 					\begin{align*}
@@ -27,26 +27,26 @@
 						(1 > 0) \land (2 > 0) \land (3 > 0)
 					\end{align*}
 					This statement is true.
-				\end{examplebox}
+				\end{example}
 				\pagebreak
 			\subsection[Existential Quantifier]{Existential Quantifier (THERE EXISTS)}
 				An \textbf{existential quantifier} is written with the symbol $\exists $, meaning ``there exists''.
-				\begin{examplebox}
+				\begin{example}
 					Examples would be:
 					\begin{adjustwidth}{1cm}{}
 						``There exists an $x \in \mathbb{R}$ such that\ldots'' (written $\exists \: x \in \mathbb{R}$)\\
 						``For some $x \in \mathbb{Z}$ \ldots'' (written $\exists \: x \in \mathbb{Z}$)\\
 						``We can find an $x \in \{1, 2, 3\}$ such that \ldots'' (written $\exists \: x \in \{1, 2, 3\}$)
 					\end{adjustwidth}
-				\end{examplebox}
-				\begin{notebox}{A quantified variable is a dummy variable}
+				\end{example}
+				\begin{sidenote}{A quantified variable is a dummy variable}
 					Any quantified variable can be replaced (everywhere it occurs) with another variable without changing the meaning.
-					\begin{examplebox}
+					\begin{example}
 						$\forall \: x \in \mathbb{Z}^{+}, (x > 0) \equiv \forall \: y \in \mathbb{Z}^{+}, (y > 0)$
-					\end{examplebox}
-				\end{notebox}
+					\end{example}
+				\end{sidenote}
 				This can be considered a \textit{generalisation of disjunction (OR)}.
-				\begin{examplebox}
+				\begin{example}
 					Let $A$ = \{1, 2, 3\}.\\
 					A declarative statement can then be made for the set:
 					\begin{align*}
@@ -57,12 +57,12 @@
 						(1 > 4) \lor (2 > 4) \lor (3 > 4)
 					\end{align*}
 					This statement is false.
-				\end{examplebox}
+				\end{example}
 			\subsection{Predicate}
 				A statement $P(x)$ is called a \textbf{predicate} if it expresses some property of a variable $x \in A$, and returns either true or false depending on the value of $x$. $P(x)$ is true for any variable $x \in A$ that has the property, and $P(x)$ is false if $x$ does not have that property.
-				\begin{notebox}{A predicate is a boolean function}
+				\begin{sidenote}{A predicate is a boolean function}
 					A predicate takes in a value, and either returns true or false.
-				\end{notebox}
+				\end{sidenote}
 			\subsection{Negation of Quantified Statements}
 				If $P(x)$ is a predicate containing some variable $x$, then:
 				\begin{enumerate}
@@ -74,7 +74,7 @@
 				Given some statement ``if $p$, then $q$'', there are different ways to prove it.
 			\subsection{Direct Proof}
 				Assume that $p$ is true, and then reason step-by-step to show that $q$ is true.
-				\begin{examplebox}
+				\begin{example}
 					Prove that the following statement is true for all $x \in \mathbb{R}$:
 					\begin{align*}
 						\text{If } x^{2} - 4x + 3 < 0 \text{, then } x > 0
@@ -109,11 +109,11 @@
 							Therefore $x < 0$ \qedhere
 						\end{adjustwidth}
 					\end{proof}
-				\end{examplebox}
+				\end{example}
 			\pagebreak
 			\subsection[Proof By Contradiction]{Proof By Contradiction (\textit{Reductio Ad Absurdum})}
 				Assume that $p$ is true. Then assume that $q$ is false, and use step-by-step reasoning until there is a contradiction. If there is a contradiction, that means that $q$ must be true.
-				\begin{examplebox}
+				\begin{example}
 					Prove that the following statement is true for all $x \in \mathbb{R}$:
 					\begin{align*}
 						\text{If } x^{2} - 4x + 3 < 0 \text{, then } x > 0
@@ -132,11 +132,11 @@
 						However, this contradicts the original assumption. Therefore $x \leq 0$ cannot be true.\\
 						Therefore $x > 0$.
 					\end{proof}
-				\end{examplebox}
+				\end{example}
 			\subsection{Proof By Contrapositive}
 				\subsubsection{Contrapositive}
 					The \textbf{contrapositive} of $p \rightarrow q$ is $\lnot q \rightarrow \lnot p$. These two statements are logically equivalent to each other. Therefore, proving the contrapositive also proves the original statement.
-				\begin{examplebox}
+				\begin{example}
 					Prove that the following statement is true for all $x \in \mathbb{R}$:
 					\begin{align*}
 						\text{If } x^{2} - 4x + 3 < 0 \text{, then } x > 0
@@ -160,20 +160,20 @@
 							i.e. \> $\lnot (x^{2} - 4x + 3 < 0)$ \` \qedhere
 						\end{tabbing}
 					\end{proof}
-				\end{examplebox}
-				\begin{notebox}{The contrapositive is not the same as the converse}
+				\end{example}
+				\begin{sidenote}{The contrapositive is not the same as the converse}
 					The \textbf{converse} of a statement just swaps them around. This is not the same as the contrapositive.
-					\begin{examplebox}
+					\begin{example}
 						Given a statement, $p \rightarrow q$.
 						\begin{description}
 							\item[Converse] $q \rightarrow p$
 							\item[Contrapositive] $\lnot q \rightarrow \lnot p$ 
 						\end{description} 
-					\end{examplebox}
-				\end{notebox}
+					\end{example}
+				\end{sidenote}
 			\subsection{Proofs Involving Quantifiers}
 				In order to apply a proof to a quantified statement over an infinite set $A$, for example $\forall \: x \in A, P(x)$, think of the statement as $x \in A \rightarrow P(x)$.
-				\begin{examplebox}
+				\begin{example}
 					Prove the statement
 					\begin{align*}
 						\forall \: x \in \mathbb{R}, x^{2} + 1 > 0.
@@ -187,9 +187,9 @@
 							i.e. \> $x^{2} + 1 > 0$ \` \qedhere
 						\end{tabbing}
 					\end{proof}
-				\end{examplebox}
+				\end{example}
 				To disprove a statement, prove that its \textit{negation} is true. If this is a statement such as $\forall \: x \in A, P(x)$, the negation is $\exists \: x \in A, \lnot P(x)$. This shows that in order to disprove the statement, one needs to simply find a counterexample.
-				\begin{examplebox}
+				\begin{example}
 					Show using a \textit{counterexample} that this statement is not true:
 					\begin{align*}
 						\forall \: x \in \mathbb{R}, x^{2} - 4x > 0
@@ -206,12 +206,12 @@
 							& \not > 0 \qedhere
 						\end{align*}
 					\end{proof}
-				\end{examplebox}
+				\end{example}
 			\pagebreak
 			\subsection{Vacuous Proofs}
 				The truth table for an implication shows that if the antecedent is false, then the statement is always true.\\
 				Using the above, if you can show that the conditional statement is false, then the statement is \textbf{vacuously true}.
-				\begin{examplebox}
+				\begin{example}
 					Prove that:
 					\begin{align*}
 						\emptyset \subseteq X
@@ -226,14 +226,14 @@
 						so ``$x \in \emptyset$'' is false,\\
 						therefore ``if $x \in \emptyset$, then $x \in X$'' is \textbf{vacuously true}. \qedhere
 					\end{proof}
-				\end{examplebox}
-				\begin{examplebox}
+				\end{example}
+				\begin{example}
 					Let $S$ be a relation on $\{a, b, c, d\}$, where $S = \bigl\{(a, b), (a, d)\bigr\}$. Prove that $S$ is transitive.
 					\begin{proof} For a set $S$ to be transitive, whenever $(x, y) \in S$ and $(y, z) \in S$, then $(x, z) \in S$.\\
 						There are no two paits of the form $(x, y)$ and $(y, z)$ in $S$,\\
 						so it is \textbf{vacuously true} that $S$ is transitive.
 					\end{proof}
-				\end{examplebox}
+				\end{example}
 				\ifSubfilesClassLoaded{%
 					\noindent\rule{\textwidth}{0.4pt}%
 				}{}

@@ -6,28 +6,28 @@
 		\section{Binary Operation}
 			If $f: X \times X \rightarrow X$, then $f$ is called a \textbf{binary operation} on $X$.\\
 			In other words, a binary operation takes in a pair, and returns a single value.
-			\begin{notebox}{Operations Notation}
+			\begin{sidenote}{Operations Notation}
 				An operation is just a function, which means it can be written in normal function \textit{prefix} notation: $f(x, y)$. However, it is more conventional to write it in \textit{infix} notation: $x f y$.
-				\begin{examplebox}
+				\begin{example}
 					Addition of numbers is a binary operation. If $(x, y) = (3, 4)$, then it could be written $+(3, 4)$, but it is more conventional to write $3 + 4$.
-				\end{examplebox}
-			\end{notebox}
+				\end{example}
+			\end{sidenote}
 			By convention, the elements of a binary operation are all the same set.
 			\subsection[Finte and Infinite Sets]{Finite and Infinite Sets (Informal Definition)}
 				\begin{description}
 					\item[Finite set:] A set whose cardinality is a non-negative number. Meaning one can count the number of elements in the set.
-						\begin{examplebox}
+						\begin{example}
 							$A = \{1, 2, 3, 4\}$, where $\left\lvert A\right\rvert = 4$
-						\end{examplebox}
+						\end{example}
 					\item[Infinite set:] A set that is not finite. Meaning one \textit{cannot} count the number of elements in the set.
-						\begin{examplebox}
+						\begin{example}
 							The set of real numbers $\mathbb{R}$ is an infinite set.
-						\end{examplebox}
+						\end{example}
 				\end{description}
 			\pagebreak
 			\subsection{Tables For Binary Operations}
 				A way to describe a binary operation is to use a table, where the rows are based on the \textit{first} element, and the columns on the \textit{second}. The operator (the symbol used to describe the operation) is written in the top left corner.
-				\begin{examplebox}
+				\begin{example}
 					Let $A = \{a, b, c, d\}$.\\
 					A binary operation called $+$ (NB: This is \textit{not} addition) could be written as follows:
 					\begin{center}
@@ -55,14 +55,14 @@
 							\textbf{d} & d & a & b & c \\
 							\hline
 						\end{tabular}
-					\begin{notebox}{Extra Notes for this operation}
+					\begin{sidenote}{Extra Notes for this operation}
 						Applying concepts from later to the operation:
 						\begin{description}
 							\item[Identity] This operation has an identity element, which is a.
 							\item[Commutativity] This operation is commutative.
 							\item[Associativity] This operation is associative.
 						\end{description}
-					\end{notebox}
+					\end{sidenote}
 					\end{center}
 					Another binary operation, called $\bullet$ could be written as follows:
 					\begin{center}
@@ -77,15 +77,15 @@
 							\hline
 						\end{tabular}
 					\end{center}
-					\begin{notebox}{Extra Notes for this operation}
+					\begin{sidenote}{Extra Notes for this operation}
 						Applying concepts from later to the operation:
 						\begin{description}
 							\item[Identity] This operation has an identity element, which is a.
 							\item[Commutativity] This operation is commutative.
 							\item[Associativity] This operation is associative.
 						\end{description}
-					\end{notebox}
-				\end{examplebox}
+					\end{sidenote}
+				\end{example}
 			\pagebreak
 		\section{Properties of Binary Operations}
 			For examples below, the following binary operation has been used:
@@ -109,7 +109,7 @@
 			\subsection{Commutative Binary Operation}
 				A binary operation $\Diamond: X \times X \rightarrow X$ is \textbf{commutative} iff $x \Diamond y = y \Diamond x$ for all $x, y \in X$.\\
 				The easiest way to check this is it will be commutative if it is symmetrical across the diagonal from the top left to the bottom right.
-				\begin{examplebox}
+				\begin{example}
 					Using the above operation:
 					\begin{align*}
 						1 * 1 = 1 * 1 = 1\\
@@ -117,11 +117,11 @@
 						2 * 2 = 2 * 2 = 1
 					\end{align*}
 					Therefore $*$ is commutative.
-				\end{examplebox}
+				\end{example}
 			\subsection{Associative Binary Operation}
 				A binary operation $\Diamond: X \times X \rightarrow X$ is \textbf{associative} iff $(x \Diamond y) \Diamond z = x \Diamond (y \Diamond z)$ for all $x, y, z \in X$.\\
 				Unfortunately, for this one, you have to check each instance.
-				\begin{examplebox}
+				\begin{example}
 					Using the above operation:
 					\begin{align*}
 						(1 * 1) * 1 = 1 * 1 = 1 &\text{ and } 1 * (1 * 1) = 1 * 1 = 1\\
@@ -134,18 +134,18 @@
 						(2 * 2) * 2 = 1 * 2 = 2 &\text{ and } 2 * (2 * 2) = 2 * 1 = 2
 					\end{align*}
 					Therefore $*$ is associative.
-				\end{examplebox}
+				\end{example}
 			\pagebreak
 			\subsection{Identity Element of a Binary Operation}
 				An element $e$ of $X$ is an \textbf{identity element} in respect of the binary operation $\Diamond: X \times X \rightarrow X$ iff $e \Diamond x = x \Diamond e = x$ for all $x \in X$.\\
 				The easiest way to check this is if there is a row and column in the table that is identical to the header. (NB: It needs to be \textit{both} row and column, which contain the same element.)
-				\begin{examplebox}
+				\begin{example}
 					Using the above operation:
 					\begin{align*}
 						\mathbf{1} * 1 = 1 &\text{ and } 1 * \mathbf{1} = 1\\
 						1 * \mathbf{2} = 2 &\text{ and } 2 * \mathbf{1} = 2
 					\end{align*}
-				\end{examplebox}
+				\end{example}
 		\section{Operations on Vectors}
 			\subsection{Vector}
 				In this course, a vector is considered to be an ordered \textit{n-tuple} of numbers.\\
@@ -159,7 +159,7 @@
 					u + v &= (u_{1}, u_{2}, \ldots, u_{n}) + (v_{1}, v_{2}, \ldots, v_{n})\\
 					&= (u_{1} + v_{2}, u_{2} + v_{2}, \ldots, u_{n} + v_{n})
 				\end{align*}
-				\begin{examplebox}
+				\begin{example}
 					Let $u = (1, 2, 3)$ and $v = (4, 5, 6)$.\\
 					Then
 					\begin{align*}
@@ -167,10 +167,10 @@
 						&= (1 + 4, 2 + 5, 3 + 6)\\
 						&= (5, 7, 9)
 					\end{align*}
-				\end{examplebox}
-				\begin{notebox}{Vector addition is not defined for vectors of different sizes}
+				\end{example}
+				\begin{sidenote}{Vector addition is not defined for vectors of different sizes}
 					If two vectors have a different number of coordinates, you cannot add those two vectors together.
-				\end{notebox}
+				\end{sidenote}
 			\pagebreak
 			\subsection{Scalar-Vector Product}
 				If $u$ is a vector and $r$ is some scalar number, then the \textbf{product} of the number $r$ and the vector $u$ is the vector $r \cdot u$ obtained by multiplying each coordinate of $u$ by $r$.
@@ -178,23 +178,23 @@
 					r\cdot u &= r(u_{1}, u_{2}, \ldots, u_{n})\\
 					&= (ru_{1}, ru_{2}, \ldots, ru_{n})
 				\end{align*}
-				\begin{examplebox}
+				\begin{example}
 					Let $u = (7, 8, 9)$ and $r = 2$.\\
 					Then
 					\begin{align*}
 						r \cdot u &= 2(7, 8, 9)\\
 						&= (14, 16, 18)
 					\end{align*}
-				\end{examplebox}
+				\end{example}
 			\subsection{Dot Product}
 				The \textbf{dot product} (also called the \textbf{inner product}) of vectors $u = (u_{1}, u_{2}, \ldots, u_{n})$ and $v = (v_{1}, v_{2}, \ldots, v_{n})$ is written $u \cdot v$ and defined by:
 				\begin{align*}
 					u \cdot v = u_{1}v_{1} + u_{2}v_{2} + \ldots + u_{n}v_{n}
 				\end{align*}
-				\begin{notebox}{The result of the dot product is a number}
+				\begin{sidenote}{The result of the dot product is a number}
 					Unlike the other operations, which result in vectors, the dot product produces a single number.
-				\end{notebox}
-				\begin{examplebox}
+				\end{sidenote}
+				\begin{example}
 					Let $u = (2, 4, 6)$ and $v = (1, 3, 5)$. Then
 					\begin{align*}
 						u \cdot v &= (2, 4, 6)(1, 3, 5)\\
@@ -202,16 +202,16 @@
 						&= 2 + 12 + 30\\
 						&= 44
 					\end{align*}
-				\end{examplebox}
-				\begin{notebox}{The dot product is not defined for vectors of different sizes}
+				\end{example}
+				\begin{sidenote}{The dot product is not defined for vectors of different sizes}
 					As with addition, if two vectors have a different number of coordinates, you cannot calculate the dot product.
-				\end{notebox}
+				\end{sidenote}
 		\pagebreak
 		\section{Operations on Matrices}
 			\subsection{Matrix}
 				A \textbf{matrix} is an array of numbers organised into rows and columns, and encolsed within brackets.\\
 				The number of rows is written with the letter $m$ and the number of columns with the letter $n$. So a matrix is said to have the size $m \times n$.
-				\begin{examplebox}
+				\begin{example}
 					$\begin{bmatrix}
 						3 & 2\\
 						1 & 5
@@ -221,7 +221,7 @@
 						0 & 2 & 0 & 6\\
 						1 & - 1& 0 & 13
 					\end{bmatrix}$ is a $3 \times 4$ matrix.
-				\end{examplebox}
+				\end{example}
 				Matrices (pronounced \textit{may-trisseez}) have the form 
 				\begin{align*}
 					\begin{bmatrix}
@@ -252,10 +252,10 @@
 							a_{m1} + b_{m1} & a_{m2} + b_{m2} & \cdots & a_{mn} + b_{mn}
 						\end{bmatrix}
 					\end{align*}
-					\begin{notebox}{Only matrices of the same size can be added}
+					\begin{sidenote}{Only matrices of the same size can be added}
 						Adding matrices of different sizes is undefined.
-					\end{notebox}
-					\begin{examplebox}
+					\end{sidenote}
+					\begin{example}
 						Let $A = \begin{bmatrix}
 							1 & 2\\
 							3 & 4
@@ -281,7 +281,7 @@
 								10 & 12
 							\end{bmatrix}
 						\end{align*}
-					\end{examplebox}
+					\end{example}
 			\subsection{Scalar-Matrix Multiplication}
 				Let $A$ be a matrix, and $r$ be some scalar number.\\
 				Then the product $rA$ is defined as:
@@ -299,7 +299,7 @@
 						ra_{m1} & ra_{m2} & \cdots & ra_{mn}
 					\end{bmatrix}
 				\end{align*}
-				\begin{examplebox}
+				\begin{example}
 					Let $r = 3$ and $A = \begin{bmatrix}
 						1 & 2\\
 						3 & 4
@@ -314,7 +314,7 @@
 							9 & 12
 						\end{bmatrix}
 					\end{align*}
-				\end{examplebox}
+				\end{example}
 			\subsection{Matrix Multiplication}
 				Let $A$ and $B$ both be matrices.
 				In order for the product $AB$ to be defined, these requirements need to be met:
@@ -330,7 +330,7 @@
 					\draw[<->] (am.south) -- ++(0,-2.5ex) -| (bn.south);
 				\end{tikzpicture}\\
 				When multiplying matrics, it is row of first multiplied by column of second.
-				\begin{examplebox}
+				\begin{example}
 					\begin{align*}
 						\begin{bmatrix}
 							-1 & 3\\
@@ -355,7 +355,7 @@
 							86 & 38
 						\end{bmatrix}
 					\end{align*}
-				\end{examplebox}
+				\end{example}
 			\pagebreak
 			\subsection{Identity Matrix}
 				If $A$ is matrix, then an \textbf{identity matrix} $I$ with respect to $A$ is a matrix such that $IA = AI = A$.\\
@@ -365,7 +365,7 @@
 					\item $I$ must therefore also be a square matrix with the same number of rows and columns as $A$.
 				\end{enumerate}
 				Then the identity matrix would have $1$'s for the main diagonal, and $0$'s elsewhere.
-				\begin{examplebox}
+				\begin{example}
 					For a $2 \times 2$ matrix, the identity matrix would be:
 						\begin{align*}
 							I = \begin{bmatrix}
@@ -373,6 +373,6 @@
 								0 & 1
 							\end{bmatrix}
 						\end{align*}
-				\end{examplebox}
+				\end{example}
 	\noindent\rule{\textwidth}{0.4pt}
 \end{document}

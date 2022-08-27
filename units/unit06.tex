@@ -11,7 +11,7 @@
 					\item antisymmetric, and
 					\item transitive
 				\end{itemize}
-				\begin{examplebox}
+				\begin{example}
 					Let $A = \bigl\{\{a\}, \{a, b\}\bigr\}$. A relation $S$ on $A$ is defined by $(B, C) \in S \text{ iff } B \subseteq C$. (Each first coordinate is a subset of the second coordinate.)
 					\begin{align*}
 						S = \Bigl\{\bigl(\{a\}, \{a\}\bigr), \bigl(\{a\}, \{a, b\}\bigr), \bigl(\{a, b\}, \{a, b\}\bigr)\Bigr\}
@@ -33,8 +33,8 @@
 							The above can be done for all elements.
 						\item[Weak Partial Order] As $S$ is reflexive, antisymmetric, and transitive, $S$ is a weak partial order.
 					\end{description}
-				\end{examplebox}
-				\begin{exercisebox}{Activity \thechapter.4}
+				\end{example}
+				\begin{exercise}{Activity \thechapter.4}
 					Determine whether the following relations are weak partial orders.
 					\begin{enumerate}[label=(\alph*)]
 						\item Let $A = \bigl\{a, b, \{a, b\}\bigr\}$. $S$ is the relation on $A$ defined by $(c, B) \in S$ iff $c \in B$.
@@ -92,7 +92,7 @@
 									\item[Weak Partial Order] As $R$ is reflexive, antisymmetric and transitive, $R$ \textit{is} a weak partial order.
 							\end{description}
 					\end{enumerate}
-				\end{exercisebox}
+				\end{exercise}
 			\subsection{Strict Partial Order}
 				A relation $R$ on a set $A$ is called a \textbf{strict partial order} iff $R$ is
 				\begin{itemize}
@@ -100,7 +100,7 @@
 					\item antisymmetric, and
 					\item transitive
 				\end{itemize}
-				\begin{examplebox}
+				\begin{example}
 					Let $A = \{1, 2, 3\}$ and let $S$ on $A$ be the relation $S = \bigl\{(1, 2), (1, 3), (2, 3)\bigr\}$. (Every first coordinate is less than the second coordinate.)\\
 					To prove this is a strict partial order, prove irreflexivity, antisymmetry and transitivity.
 					\begin{description}
@@ -114,8 +114,8 @@
 							Yes. $(1, 2) \in S$ and $(2, 3) \in S$ and $(1, 3) in S$.
 						\item[Strict Partial Order] As $S$ is irreflexive, antisymmetric, and transitive, $S$ is a strict partial order.
 					\end{description}
-				\end{examplebox}
-				\begin{exercisebox}{Activity \thechapter.5}
+				\end{example}
+				\begin{exercise}{Activity \thechapter.5}
 					Determine whether the following relations are strict partial orders.
 					\begin{enumerate}[label=(\alph*)]
 						\item $A = \bigl\{a, \{a\}, \{b\}\bigr\}$ and the relation $S$ on $A$ is $S = \Bigl\{\bigl(a, \{a\}\bigr), \bigl(a, \{b\}\bigr)\Bigr\}$
@@ -140,11 +140,11 @@
 								\item[Strict Partial Order] As $R$ is irreflexive, antisymmetric, and transitive, $R$ \textit{is} a strict partial order.
 							\end{description}
 					\end{enumerate}
-				\end{exercisebox}
+				\end{exercise}
 			\pagebreak
 			\subsection{A Total (or Linear) Order Relation}
 				A relation $R$ on a set $A$ is called a \textbf{total} or \textbf{linear order} if $R$ is a partial order on $A$ that also satisfies \textit{trichotomy}.
-				\begin{examplebox}
+				\begin{example}
 					The example for Strict Partial Orders:
 					\begin{adjustwidth}{1cm}{}
 						Let $A = \{1, 2, 3\}$ and let $S$ on $A$ be the relation $S = \bigl\{(1, 2), (1, 3), (2, 3)\bigr\}$. (Every first coordinate is less than the second coordinate.)
@@ -157,8 +157,8 @@
 							$3$ is related to $1$ in $(1, 3)$, and related to $2$ in $(2, 3)$.
 						\item[Total Order Relation] As this relation is a partial order relation that satisfies trichotomy, it is a \textbf{total order relation}. As the relation is a \textit{strict} partial order, this is a \textbf{strict total order relation}.
 					\end{description}
-				\end{examplebox}
-				\begin{notebox}{Proof Strategies}
+				\end{example}
+				\begin{sidenote}{Proof Strategies}
 					You cannot use examples to prove a general statement, i.e, something of the from:
 						\begin{adjustwidth}{1cm}{}
 							For all $x$, or\\
@@ -166,10 +166,10 @@
 						\end{adjustwidth}
 					Instead, \textit{abstract reasoning} needs to be used to produce a \textit{general proof}.\\
 					However, an example can be used to show that a statement is false, which is known as a \textbf{counterexample}.
-				\end{notebox}
-				\begin{exercisebox}{Self Assesmment \thechapter.7}
+				\end{sidenote}
+				\begin{exercise}{Self Assesmment \thechapter.7}
 					%TODO: COME BACK TO
-				\end{exercisebox}
+				\end{exercise}
 		\pagebreak
 		\section{Equivalence Relation}
 			A relation $R$ on a set $A$ is called an \textbf{equivalence relation} if $R$ is:
@@ -178,7 +178,7 @@
 				\item symmetric, and
 				\item transitive
 			\end{itemize}
-			\begin{examplebox}
+			\begin{example}
 				Let $A$ be the set of real numbers. A relation $R$ on $A$ is defined as $(x, y) \in R$ iff $x = y$.
 				\begin{description}
 					\item[Reflexivity] Is it true that $(x, x) \in R$ for all $x \in A$?\\
@@ -189,14 +189,14 @@
 						Yes. If $(x, y) \in R$, then $x = y$. And if $(y, z) \in R$, then $y = z$. So $x = y = z$, i.e. $x = z$, i.e. $(x, z) \in R$.
 					\item[Equivalence Relation] As $R$ is reflexive, symmetric and transitive, $R$ is an equivalence relation.
 				\end{description} 
-			\end{examplebox}
+			\end{example}
 			Equivalence relations are used to group related data together based on a specific characteristic.
-			\begin{examplebox}
+			\begin{example}
 				Students get marked for an assignment using grades from A to E. All students who get an A would be in the same equivalence class, even if their individual marks are different.
-			\end{examplebox}
+			\end{example}
 			\subsection{Equivalence Class}
 				For each $x \in A$, the equivalence class $[x] = \{y \mid y \in A$ and $ x R y\}$
-				\begin{examplebox}
+				\begin{example}
 					Let $R$ be the relation on $\mathbb{Z}$ defined by $(x, y) \in R$ iff $y - x$ is even.\\
 					That is, $R = \{y \mid y - x = 2k\}$ for some $k \in \mathbb{Z}$.
 					So,
@@ -215,8 +215,8 @@
 					As $[2]$ would be the same as $[0]$, and $[3]$ would be the same as $[1]$, these are the only two equivalence classes.\\
 					$[0]$ is the set of even integers, and $[1]$ is the set of odd integers.\\
 					These two equivalence classes would be the parts of the \textbf{partition} $S$ of the set $\mathbb{Z}$ on the relation $R$: $S = \bigl\{[0], [1]\bigr\}$
-				\end{examplebox}
-				\begin{exercisebox}{Self-Assessment Exercise \thechapter.10}
+				\end{example}
+				\begin{exercise}{Self-Assessment Exercise \thechapter.10}
 					\begin{enumerate}
 						\item \textbf{Let $X = \{a, b, c\}$. Write down all equivalence relations on $X$}.\\
 							For an equivalence relation, the relation needs to be \textit{reflexive}, \textit{symmetric} and \textit{transitive}.
@@ -257,9 +257,9 @@
 							\end{enumerate}
 					\end{enumerate}
 					% TODO: COME BACK TO
-				\end{exercisebox}
+				\end{exercise}
 				\pagebreak
-				\begin{theorembox}{Theorem \thechapter.1}
+				\begin{theorem}[Theorem \thechapter.1]
 					\begin{enumerate}[label=(\roman*)]
 						\item If $R$ is an equivalence relation to $A$, then $x \in [x]$ for each $x \in A$.\\
 							In other words, every member of $A$ belongs to an equivalence class with respect to $R$.
@@ -267,7 +267,7 @@
 						\item If $[x] = [y]$, then $x \, R \, y$.
 						\item Either $[x] = [y]$ or $[x] \cap [y] = \emptyset$
 					\end{enumerate}
-				\end{theorembox}
+				\end{theorem}
 			\subsection{Partitions}
 				For a nonempty set $A$, a \textbf{partition} of $A$ is a set $S = \{S_{1}, S_{2}, S_{3}\}$. The members of $S$ are subsets of $A$ (called \textit{parts} of $A$) such that:
 				\begin{enumerate}
@@ -275,46 +275,46 @@
 					\item for all $i$ and $j$, if $S_{i} \neq S_{j}$, then $S_{i} \cap S_{j} = \emptyset$. That is, different parts of the partition don't have common elements.
 					\item $S_{1} \cup S_{2} \cup S_{3} \cup \ldots = A$. That is, every element of $A$ appears in one (and only one) part of the partition.
 				\end{enumerate}
-				\begin{examplebox}
+				\begin{example}
 					Let $A$ = \{5, 6, 7\}. Then A can be split into two subsets, $\{5\}$ and $\{6, 7\}$. Then $\bigl\{\{5\}, \{6, 7\}\bigr\}$ is a partition of $A$, as:
 					\begin{enumerate}
 						\item Neither of the subsets is empty.
 						\item There are no common elements between the subsets.
 						\item The union of the subsets results in $A$.
 					\end{enumerate}
-				\end{examplebox}
+				\end{example}
 				\subsubsection{Going Backwards from a partition}
 					If one knows the original set that was partitioned, and the partitions, one can generate the original relation, using \textbf{Theorem \thechapter.1}
-					\begin{examplebox}
+					\begin{example}
 						Given an original set $A = \{a, b, c\}$ and a partition given by $\bigl\{\{a\} \{b, c\}\bigr\}$.
 						\begin{adjustwidth}{1cm}{}
 							The subset $\{a\}$ tells us that $[a] = \{a\}$, i.e. $(a, a) \in R$.\\
 							The subset $\{b, c\}$ tells us that $[b] = \{b, c\} = [c]$, which means that $b$ is related to $b$ and $c$, and $c$ is related to $b$ and $c$, so the pairs $(b, b), (b, c), (c, b)$ and $(c, c)$ are in $R$.
 						\end{adjustwidth}
 						$R = \bigl\{(a, a), (b, b), (b, c), (c, b), (c, c)\bigr\}$
-					\end{examplebox}
+					\end{example}
 					% TODO: DO EXERCISES
 		\pagebreak
 		\section{Functions}
 			\subsection{Functional Relation}
 				If $R$ is a relation from $X$ to $Y$, then $R$ is \textbf{functional} iff any element $x$ in $X$ only appears once as a first coordinate in an ordered pair of $R$.
-				\begin{examplebox}
+				\begin{example}
 					Let $S$ be a relation from $\{1, 2, 3\}$ to $\{a, b, c\}$, where $S = \bigl\{(1, a), (2, c)\bigr\}$. $S$ is a functional relation as $1$ and $2$ only appear as first coordinates in distinct pairs.
-				\end{examplebox}
+				\end{example}
 			\subsection{Function}
 				Suppose $R \subseteq A \times B$ is a binary relation from a set $A$ to a set $B$. $R$ is a \textbf{function} from $A$ to $B$ if $R$ is functional, and the domain of $R$ is exactly the set $A$, i.e. $\mathrm{dom}(R) = A$.\\
 				This is then written $R: A \rightarrow B$.
-				\begin{examplebox}
+				\begin{example}
 					Using the same relation as above:
 						\begin{adjustwidth}{1cm}{}
 							$S$ is a relation from $\{1, 2, 3\}$ to $\{a, b, c\}$, where $S = \bigl\{(1, a), (2, c)\bigr\}$
 						\end{adjustwidth}
 						$S$ is functional, but not a function, as $\mathrm{dom}(S) \neq \{1, 2, 3\}$.
-				\end{examplebox}
-				\begin{notebox}{Not all functional relations are functions!}
+				\end{example}
+				\begin{sidenote}{Not all functional relations are functions!}
 					Every function is a functional relation, but a relation can be functional without being a function. This just means that the domain of the relation is not the same as the original domain.\\
 					An easy way to think about it: can you give the relation anything from the original domain and it gives an output? If so, it's a function. Otherwise it's not.
-				\end{notebox}
+				\end{sidenote}
 				% TODO: ADD MORE EXAMPLES
 				% TODO: DO SELF ASSESSMENT EXERCISES
 	\noindent\rule{\textwidth}{0.4pt}

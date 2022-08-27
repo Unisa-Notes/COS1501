@@ -10,13 +10,13 @@
 			\end{align*} 
 			of $B$, written $\mathrm{ran}(f)$ or $f[A]$.\\
 			In other words, it is a subset of $B$ where and element $b$ of $B$ can be reached by calling the function with a specific element $a$ of $A$.
-			\begin{examplebox}
+			\begin{example}
 				Let $A = \{a, b, c\}$ and $B = \{1, 2, 3\}$. Let a function $f: A \rightarrow B$ be defined as 
 				\begin{alignat*}{3}
 					f(a) &= 1 \qquad & f(b) &= 2 \qquad & f(c) &= 1
 				\end{alignat*}
 				Then $\mathrm{ran}(f) = \{1, 2\}$. 
-			\end{examplebox}
+			\end{example}
 			\subsection{Determining the Range of a Function}
 				In order to find the range, you follow these steps:
 				\begin{enumerate}
@@ -28,7 +28,7 @@
 				\end{enumerate}
 				\pagebreak
 				Easier to show with an example:
-				\begin{examplebox}
+				\begin{example}
 					Let $g: \mathbb{Z} \rightarrow \mathbb{Z}$ be defined by $y = 2x$.
 					\begin{align*}
 						\mathrm{ran}(g) &= \{g(x) \mid x \in \mathbb{Z}\}\tag*{$(1)$}\\
@@ -45,11 +45,11 @@
 						&= \{y \mid \frac{y}{2} \text{ is an integer}\}\tag*{$(5)$}\\
 						&= \{y \mid y \text{ is an even integer}\}
 					\end{align*}
-				\end{examplebox}
+				\end{example}
 		\section[Surjectivity]{Surjectivity (MAPPING)}
 			Given a function $f: A \rightarrow B$, the function $f$ would be \textbf{surjective} iff the \textit{range} of $f$ is equal to the codomain of $f$.\\
 			As $B$ is the codomain of $f$ above, that would mean that $\mathrm{ran}(f)$ (also written $f[A]$) is equal to $B$.
-			\begin{examplebox}
+			\begin{example}
 				Let $A = \{1, 2, 3\}$. Let $B = \{4, 5, 6\}$.
 				\begin{description}
 					\item[Surjective Function] For a surjective function, every element of $A$ needs to be present, and every element of $B$. So an example of a function $h: A \rightarrow B$ would be:
@@ -63,12 +63,12 @@
 						\end{align*}
 						$\mathrm{ran}(h) = \{4, 5\} \neq B$.
 				\end{description}
-			\end{examplebox}
+			\end{example}
 		\section[Injectivity]{Injectivity (ONE TO ONE)}
 			A function $f: A \rightarrow B$ is \textbf{injective} iff $f$ has the property that whenever $f(a_{1}) = f(a_{2})$, then $a_{1} = a_{2}$.\\
 			In other words, every unique first coordinate is related to a unique second coordinate.\\
 			\textbf{Another definition (contrapositive)} A function $f: A \rightarrow B$ is \textbf{injective} iff $f$ has the property that whenever $a_{1} \neq a_{2}$, $f(a_{1}) \neq f(a_{2})$.
-			\begin{examplebox}
+			\begin{example}
 				Let $A = \{1, 2, 3\}$. Let $B = \{4, 5, 6, 7\}$.
 				\begin{description}
 					\item[Injective Function] For a function, every element of $A$ needs to be present. For an injective function, every element of $A$ should be related to a different element of $B$. An example function $g: A \rightarrow B$ would be:
@@ -80,7 +80,7 @@
 							g = \Bigl\{(1, 4), (2, 5), (3, 4)\Bigr\}
 						\end{align*}
 				\end{description}
-			\end{examplebox}
+			\end{example}
 			\subsection{Determining Whether an Abstract Function is Injective}
 				For functions defined on all elements of a set such as $\mathbb{Z}$, it is necessary to prove using logic that it is injective or not. The way to do that is:
 				\begin{enumerate}
@@ -88,7 +88,7 @@
 					\item Apply the function to the values.
 					\item Simplify using algebra.
 				\end{enumerate}
-				\begin{examplebox}
+				\begin{example}
 					\begin{description}
 						\item[Prove Injectivity] Let $f: \mathbb{Z} \rightarrow \mathbb{Z}$ be defined by $y = 4x$.
 							\begin{alignat*}{2}
@@ -105,7 +105,7 @@
 							\end{alignat*}
 							$u$ is not necessarily equal to $v$. $u$ could be $1$, and $v$ could be $-1$, and $f(u)$ would be equal to $f(v) = 1$. Therefore, $f$ is not injective.
 					\end{description}
-				\end{examplebox}
+				\end{example}
 		\section{Composition of Functions}
 			The composition of two functions is also a function.\\
 			Given the functions $f: A \rightarrow B$ and $g: B \rightarrow C$, the composite function $g \circ f: A \rightarrow C$ is defined by
@@ -113,7 +113,7 @@
 				g \circ f: A \rightarrow C &= g \circ f(x)\\
 				&= g\bigl(f(x)\bigr)
 			\end{align*}
-			\begin{examplebox}
+			\begin{example}
 				Let $f: \mathbb{Z} \rightarrow \mathbb{Z}$ be defined by $f(x) = 4x + 2$.\\
 				Let $g: \mathbb{Z} \rightarrow \mathbb{Z}^{+}$ be defined by $f(x) = x^{2} + 1$.\\
 				Then $g \circ f: \mathbb{Z} \rightarrow \mathbb{Z}^{+}$.
@@ -125,7 +125,7 @@
 					&= 16x^{2} + 16x + 5
 				\end{align*}
 				$(g \circ f)(x)$ is called the \textbf{image of $x$ under $g \circ f$}.
-			\end{examplebox}
+			\end{example}
 			The composition of two surjective functions is surjective.\\
 			The composition of two injective functions is injective.
 		\section{Bijective and Invertible Functions}
@@ -133,7 +133,7 @@
 				For any relation $R$, the inverse relation, written $R^{-1}$, is the set $\bigl\{(y, x) \mid (x, y) \in R\bigr\}$.
 			\subsection{Bijective Function}
 				A function $f: A \rightarrow B$ is \textbf{bijective} iff $f$ is both surjective and injective.
-				\begin{examplebox}
+				\begin{example}
 					Let $f: \mathbb{Z} \rightarrow \mathbb{Z}$ be defined by $y = x + 2$.
 					\begin{description}
 						\item[Surjectivity] Determine the range of $f$.
@@ -154,11 +154,11 @@
 							Therefore $f$ is injective.
 						\item[Bijectivity] As $f$ is both surjective and injective, $f$ is bijective.
 					\end{description}
-				\end{examplebox}
+				\end{example}
 			\subsection{Invertible Functions}
 				A function $f: A \rightarrow B$ is \textbf{invertible} iff the inverse relation $f^{-1}$ is a function from $B$ to $A$.\\
 				The function $f$ above is invertible iff $f$ is bijective.
-				\begin{examplebox}
+				\begin{example}
 					Let $f: \mathbb{Z} \rightarrow \mathbb{Z}$ be defined by $y = x + 2$.\\
 					As was shown in the previous example, this function is bijective. As it is bijective, it is invertible. The inverse function of $f$, $f^{-1}$ is a function from $\mathbb{Z}$ to $\mathbb{Z}$.
 					\begin{align*}
@@ -167,14 +167,14 @@
 						& \text{ iff} x = y - 2
 					\end{align*}
 					$f^{-1}: \mathbb{Z} \rightarrow \mathbb{Z}$ is defined by $f^{-1}(y) = y - 2$
-				\end{examplebox}
+				\end{example}
 		\section{Identity Function}
 			For any set $A$, the function $i_{A}: A \rightarrow A$ is the function such that $i_{A}(x) = x$ for all $x \in A$. This function is called the \textbf{identity function}.
-			\begin{examplebox}
+			\begin{example}
 				Let $B = \{2, 4, 6, 8\}$. The identity function $i_{B}: B \rightarrow B$ would be:
 					\begin{align*}
 						i_{B} = \bigl\{(2, 2), (4, 4), (6, 6), (8, 8)\bigr\}
 					\end{align*}
-			\end{examplebox}
+			\end{example}
 	\noindent\rule{\textwidth}{0.4pt}
 \end{document}
