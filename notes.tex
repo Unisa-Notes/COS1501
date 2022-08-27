@@ -1,33 +1,13 @@
 \documentclass[11pt, a4paper]{book}
 
-\usepackage[margin=2cm, vmargin=3cm]{geometry}
 \usepackage{amssymb}
 \usepackage{amsmath}
-\usepackage{amsthm}
 \usepackage{enumitem}
-\usepackage[dvipsnames,table]{xcolor}
+\usepackage{packages/kayzels}
 \usepackage[bookmarksnumbered]{hyperref}
-\usepackage[english]{babel}
-\setlocalecaption{english}{chapter}{Unit}
-\newtheorem*{theorem}{Theorem}
-\usepackage[T1]{fontenc}
-\usepackage{charter}
-\usepackage[varqu,varl]{inconsolata}
-\usepackage[type1]{cabin}
-\usepackage[xcharter]{newtxmath}
-\usepackage{bm}
 \usepackage{tikz}
 \usetikzlibrary{fit, backgrounds, topaths}
 \tikzstyle{every picture}+=[remember picture]
-\colorlet{circle area}{Lavender}
-\colorlet{example color}{blue!15!white}
-\colorlet{example title}{black}
-\colorlet{note color}{red!15!white}
-\colorlet{note border}{red!75!black}
-\colorlet{exercise color}{orange!25!white}
-\colorlet{exercise border}{orange!75!black}
-\colorlet{theorem color}{Aquamarine!30!white}
-\colorlet{theorem border}{Aquamarine!75!black}
 \raggedbottom
 
 \usepackage{venndiagram}
@@ -48,39 +28,17 @@
 fillAll}}{}{}
 \makeatother
 
-\usepackage{mathtools}
-\let\oldtextbf\textbf
-\renewcommand{\textbf}[1]{\oldtextbf{\boldmath #1}}
-
 \usepackage{tcolorbox}
 \tcbuselibrary{breakable}
 \usepackage{adjustbox}
 
 \usepackage{changepage}
 
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\fancyhf{}
-\fancyhead[LE,RO]{\nouppercase{\rightmark}}
-\fancyhead[LO,RE]{\leftmark}
-\fancyfoot[C]{\thepage}
-\setlength{\headheight}{14pt}
-\setlength{\parindent}{0cm}
-
 % Colorboxes for different elements
 \newtcolorbox{notebox}[1]{breakable, colback=note color, colframe=note border, fonttitle=\bfseries, title={#1}, center title}
 \newtcolorbox{exercisebox}[1]{breakable, colback=exercise color, colframe=exercise border, fonttitle=\bfseries, title={#1}, center title}
 \newtcolorbox{examplebox}{coltitle=example title, colback=example color, breakable, detach title, before upper={\tcbtitle\quad}, title=\textbf{Example}}
 \newtcolorbox{theorembox}[1]{breakable, colback=theorem color, colframe=theorem border, fonttitle=\bfseries, title={#1}, center title}
-
-\renewcommand{\qedsymbol}{$\blacksquare$}
-
-\newenvironment{subproof}[1][\proofname]{%
-  \renewcommand{\qedsymbol}{$\square$}%
-  \begin{proof}[#1]%
-}{%
-  \end{proof}%
-}
 
 \usepackage{subfiles}
 

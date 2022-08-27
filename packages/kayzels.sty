@@ -1,0 +1,52 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{packages/kayzels}[2022/08/27 Kayzels Notes Styles]
+
+% Proofs
+\RequirePackage{amsthm}
+\renewcommand{\qedsymbol}{$\blacksquare$}
+
+\newenvironment{subproof}[1][\proofname]{%
+  \renewcommand{\qedsymbol}{$\square$}%
+  \begin{proof}[#1]%
+}{%
+  \end{proof}%
+}
+
+% Language Settings
+\RequirePackage[english]{babel}
+\setlocalecaption{english}{chapter}{Unit}
+
+% Headers, Footers and Margins
+\RequirePackage[margin=2cm, vmargin=3cm]{geometry}
+\RequirePackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\nouppercase{\rightmark}}
+\fancyhead[LO,RE]{\leftmark}
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}
+\setlength{\parindent}{0cm}
+
+% Fonts
+\RequirePackage[T1]{fontenc}
+\RequirePackage{charter}
+\RequirePackage[varqu,varl]{inconsolata}
+\RequirePackage[type1]{cabin}
+\RequirePackage[xcharter]{newtxmath}
+\RequirePackage{bm}
+
+% Colors
+\RequirePackage[dvipsnames,table]{xcolor}
+\colorlet{circle area}{Lavender}
+\colorlet{example color}{blue!15!white}
+\colorlet{example title}{black}
+\colorlet{note color}{red!15!white}
+\colorlet{note border}{red!75!black}
+\colorlet{exercise color}{orange!25!white}
+\colorlet{exercise border}{orange!75!black}
+\colorlet{theorem color}{Aquamarine!30!white}
+\colorlet{theorem border}{Aquamarine!75!black}
+
+% Bold Math
+\let\oldtextbf\textbf
+\renewcommand{\textbf}[1]{\oldtextbf{\boldmath #1}}
