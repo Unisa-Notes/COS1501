@@ -1,0 +1,22 @@
+{
+  "addfile[]{}": {
+    "command": "addfile[input]{<filename>}",
+    "package": "kayzels",
+    "snippet": "addfile[${2:input}]{${1:<filename>}}"
+  },
+  "addfile{}": {
+    "command": "addfile{<filename>}",
+    "package": "kayzels",
+    "snippet": "addfile{${1:<filename>}}"
+  },
+  "rulebookend": {
+    "command": "rulebookend",
+    "package": "kayzels",
+    "snippet": "rulebookend"
+  },
+  "rulechapterend": {
+    "command": "rulechapterend",
+    "package": "kayzels",
+    "snippet": "rulechapterend"
+  }
+}

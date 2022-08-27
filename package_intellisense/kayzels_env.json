@@ -1,0 +1,26 @@
+{
+  "exercise{}": {
+    "name": "exercise",
+    "detail": "exercise{title}",
+    "snippet": "{${1:title}}",
+    "package": "kayzels"
+  },
+  "sidenote{}": {
+    "name": "sidenote",
+    "detail": "sidenote{title}",
+    "snippet": "{${1:title}}",
+    "package": "kayzels"
+  },
+  "subproof": {
+    "name": "subproof",
+    "detail": "subproof",
+    "snippet": "",
+    "package": "kayzels"
+  },
+  "subproof[]": {
+    "name": "subproof",
+    "detail": "subproof[name]",
+    "snippet": "[${1:name}]",
+    "package": "kayzels"
+  }
+}
