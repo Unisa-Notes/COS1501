@@ -30,8 +30,6 @@ fillAll}}{}{}
 
 \usepackage{changepage}
 
-\usepackage{subfiles}
-
 \title{COS1501 Notes}
 \author{ }
 \date{\today}
@@ -40,25 +38,15 @@ fillAll}}{}{}
 	\begin{titlepage}
 		\maketitle
 	\end{titlepage}
-	\clearpage\begingroup\pagestyle{empty}\cleardoublepage\endgroup
-	\subfileinclude{units/unit01.tex}
-	\clearpage\begingroup\pagestyle{empty}\cleardoublepage\endgroup
-	\subfileinclude{units/unit02.tex}
-	\clearpage\begingroup\pagestyle{empty}\cleardoublepage\endgroup
-	\subfileinclude{units/unit03.tex}
-	\clearpage\begingroup\pagestyle{empty}\cleardoublepage\endgroup
-	\subfileinclude{units/unit04.tex}
-	\clearpage\begingroup\pagestyle{empty}\cleardoublepage\endgroup
-	\subfileinclude{units/unit05.tex}
-	\clearpage\begingroup\pagestyle{empty}\cleardoublepage\endgroup
-	\subfileinclude{units/unit06.tex}
-	\clearpage\begingroup\pagestyle{empty}\cleardoublepage\endgroup
-	\subfileinclude{units/unit07.tex}
-	\clearpage\begingroup\pagestyle{empty}\cleardoublepage\endgroup
-	\subfileinclude{units/unit08.tex}
-	\clearpage\begingroup\pagestyle{empty}\cleardoublepage\endgroup
-	\subfileinclude{units/unit09.tex}
-	\clearpage\begingroup\pagestyle{empty}\cleardoublepage\endgroup
-	\subfile{units/unit10.tex}
+	\addfile{units/unit01.tex}
+	\addfile{units/unit02.tex}
+	\addfile{units/unit03.tex}
+	\addfile{units/unit04.tex}
+	\addfile{units/unit05.tex}
+	\addfile{units/unit06.tex}
+	\addfile{units/unit07.tex}
+	\addfile{units/unit08.tex}
+	\addfile{units/unit09.tex}
+	\addfile[input]{units/unit10.tex}
 	\vbox{\hrule width \hsize \kern 1mm \hrule width \hsize height 2pt}
 \end{document}

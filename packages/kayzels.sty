@@ -67,3 +67,14 @@
 \newenvironment{theorem}[1][Theorem]
 	{\begin{tcolorbox}[breakable, colback=theorem color, colframe=theorem border, fonttitle=\bfseries, title={#1}, center title]}
 	{\end{tcolorbox}}
+
+% Include/Input Subfiles
+\RequirePackage{xstring}
+\RequirePackage{subfiles}
+\newcommand{\addfile}[2][include]
+	{\clearpage\begingroup\pagestyle{empty}\cleardoublepage\endgroup%
+	 \IfEqCase{#1}{%
+			{include}{\subfileinclude{#2}}%
+			{input}{\subfile{#2}}
+	 }[\PackageError{addfile}{Undefined option to addfile: #1}{}]%
+	}
