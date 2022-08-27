@@ -83,12 +83,15 @@
 									If the first case is matched, then $a < c$, which means that $c > a$. Which means that $c \neq a$, so the second condition is not met.\\
 									If the second case is matched, then $a = c$ and $b \leq d$. If $a = c$, then $c = a$, and if $b \leq d$, then $d \geq b$. However, if $b = d$, then $(a, b) = (c, d)$, which would mean it would be excluded. Therefore $d < b$, which means that $\bigl\{(c, d), (a, b)\bigr\} \notin R$.
 								\item[Transitivity] If $\bigl\{(a, b), (c, d)\bigr\} \in R$ and $\bigl\{(c, d), (e, f)\bigr\} \in R$, is $\bigl\{(a, b), (e, f)\bigr\} \in R$?\\
-									Yes. If $\bigl\{(a, b), (c, d)\bigr\} \in R$, then either $a < c$ or $(a = c$ and $b \leq d)$.\\
-									\-\hspace{1cm} If $\bigl\{(c, d), (e, f)\bigr\} \in R$, then either $c < e$ or $(c = e$ and $d \leq f)$.\\
-									\-\hspace{1cm} If $a < c$ and $c < e$, then $a < e$, which means $\bigl\{(a, b), (e, f)\bigr\} \in R$.\\
-									\-\hspace{1cm} If $a < c$ and $c = e$ and $d \leq f$, then $a < e$, which means $\bigl\{(a, b), (e, f)\bigr\} \in R$.\\
-									\-\hspace{1cm} If $a = c$ and $b \leq d$ and $c < e$, then $a < e$, which means $\bigl\{(a, b), (e, f)\bigr\} \in R$.\\
-									\-\hspace{1cm} If $a = c$ and $b \leq d$ and $c = e$ and $d \leq f$, then $c = e$, and $b \leq f$, which means $\bigl\{(a, b), (e, f)\bigr\} \in R$.
+									Yes.
+									\begin{indentparagraph}
+										If $\bigl\{(a, b), (c, d)\bigr\} \in R$, then either $a < c$ or $(a = c$ and $b \leq d)$.\\
+										If $\bigl\{(c, d), (e, f)\bigr\} \in R$, then either $c < e$ or $(c = e$ and $d \leq f)$.\\
+										If $a < c$ and $c < e$, then $a < e$, which means $\bigl\{(a, b), (e, f)\bigr\} \in R$.\\
+										If $a < c$ and $c = e$ and $d \leq f$, then $a < e$, which means $\bigl\{(a, b), (e, f)\bigr\} \in R$.\\
+										If $a = c$ and $b \leq d$ and $c < e$, then $a < e$, which means $\bigl\{(a, b), (e, f)\bigr\} \in R$.\\
+										If $a = c$ and $b \leq d$ and $c = e$ and $d \leq f$, then $c = e$, and $b \leq f$, which means $\bigl\{(a, b), (e, f)\bigr\} \in R$.
+									\end{indentparagraph}
 									\item[Weak Partial Order] As $R$ is reflexive, antisymmetric and transitive, $R$ \textit{is} a weak partial order.
 							\end{description}
 					\end{enumerate}
@@ -146,9 +149,9 @@
 				A relation $R$ on a set $A$ is called a \textbf{total} or \textbf{linear order} if $R$ is a partial order on $A$ that also satisfies \textit{trichotomy}.
 				\begin{example}
 					The example for Strict Partial Orders:
-					\begin{adjustwidth}{1cm}{}
+					\begin{indentparagraph}
 						Let $A = \{1, 2, 3\}$ and let $S$ on $A$ be the relation $S = \bigl\{(1, 2), (1, 3), (2, 3)\bigr\}$. (Every first coordinate is less than the second coordinate.)
-					\end{adjustwidth}
+					\end{indentparagraph}
 					also satisfies trichotomy.
 					\begin{description}
 						\item[Trichotomy] Is every element of $A$ related to every other element in the relation $S$?\\
@@ -160,10 +163,10 @@
 				\end{example}
 				\begin{sidenote}{Proof Strategies}
 					You cannot use examples to prove a general statement, i.e, something of the from:
-						\begin{adjustwidth}{1cm}{}
+						\begin{indentparagraph}
 							For all $x$, or\\
 							For all pairs $(x, y)$
-						\end{adjustwidth}
+						\end{indentparagraph}
 					Instead, \textit{abstract reasoning} needs to be used to produce a \textit{general proof}.\\
 					However, an example can be used to show that a statement is false, which is known as a \textbf{counterexample}.
 				\end{sidenote}
@@ -287,10 +290,10 @@
 					If one knows the original set that was partitioned, and the partitions, one can generate the original relation, using \textbf{Theorem \thechapter.1}
 					\begin{example}
 						Given an original set $A = \{a, b, c\}$ and a partition given by $\bigl\{\{a\} \{b, c\}\bigr\}$.
-						\begin{adjustwidth}{1cm}{}
+						\begin{indentparagraph}
 							The subset $\{a\}$ tells us that $[a] = \{a\}$, i.e. $(a, a) \in R$.\\
 							The subset $\{b, c\}$ tells us that $[b] = \{b, c\} = [c]$, which means that $b$ is related to $b$ and $c$, and $c$ is related to $b$ and $c$, so the pairs $(b, b), (b, c), (c, b)$ and $(c, c)$ are in $R$.
-						\end{adjustwidth}
+						\end{indentparagraph}
 						$R = \bigl\{(a, a), (b, b), (b, c), (c, b), (c, c)\bigr\}$
 					\end{example}
 					% TODO: DO EXERCISES
@@ -306,9 +309,9 @@
 				This is then written $R: A \rightarrow B$.
 				\begin{example}
 					Using the same relation as above:
-						\begin{adjustwidth}{1cm}{}
+						\begin{indentparagraph}
 							$S$ is a relation from $\{1, 2, 3\}$ to $\{a, b, c\}$, where $S = \bigl\{(1, a), (2, c)\bigr\}$
-						\end{adjustwidth}
+						\end{indentparagraph}
 						$S$ is functional, but not a function, as $\mathrm{dom}(S) \neq \{1, 2, 3\}$.
 				\end{example}
 				\begin{sidenote}{Not all functional relations are functions!}

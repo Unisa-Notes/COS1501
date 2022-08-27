@@ -4,6 +4,7 @@
 \begin{example}
 \begin{exercise}{title}
 \begin{sidenote}{title}
+\begin{indentparagraph}
 \begin{subproof}
 \begin{subproof}[name]
 \begin{theorem}
@@ -11,6 +12,7 @@
 \end{example}
 \end{exercise}
 \end{sidenote}
+\end{indentparagraph}
 \end{subproof}
 \end{theorem}
 \rulebookend

@@ -150,10 +150,12 @@
 				In other words, for every $x \neq y$, every element is related to every other element. So $x R y$ or $y R x$.
 				\begin{example}
 					Let $S = \bigl\{(3, 2), (2, 1), (3, 1)\bigr\}$ be a relation on $A = \{1, 2, 3\}$.\\
-					$S$ satisfies the requirements for trichotomy, since:\\
-					\-\hspace{1cm} $1$ is related to $2$ in $(2, 1)$ and related to $3$ in $(3, 1)$.\\
-					\-\hspace{1cm} $2$ is related to $1$ in $(2, 1)$ and related to $3$ in $(3, 2)$.\\
-					\-\hspace{1cm} $3$ is related to $1$ in $(3, 1)$ and related to $2$ in $(3, 2)$.
+					$S$ satisfies the requirements for trichotomy, since:
+					\begin{indentparagraph}
+						$1$ is related to $2$ in $(2, 1)$ and related to $3$ in $(3, 1)$.\\
+						$2$ is related to $1$ in $(2, 1)$ and related to $3$ in $(3, 2)$.\\
+						$3$ is related to $1$ in $(3, 1)$ and related to $2$ in $(3, 2)$.
+					\end{indentparagraph}
 				\end{example}
 			\subsection{Inverse Relation}
 				Given a relation $R$ with domain $A$ and range $B$, the relation $R^{-1}$ with domain $B$ and range $A$ is called the \textbf{inverse of $R$}, and is defined such that:
@@ -171,11 +173,11 @@
 					Let $R = \bigl\{(1, a), (2, b)\bigr\}$ be a relation from $\{1, 2\}$ to $\{a, b\}$\\
 					Let $S = \bigl\{(a, s), (b, s), (b, t)\bigr\}$ be a relation from $\{a, b\}$ to $\{s, t\}$.\\
 					Then $S \circ R = R;S$.
-					\begin{adjustwidth}{1cm}{}
+					\begin{indentparagraph}
 						$(1, a) \rightarrow (a, s) \rightarrow (1, s)$\\
 						$(2, b) \rightarrow (b, s) \rightarrow (2, s)$\\
 						$(2, b) \rightarrow (b, t) \rightarrow (2, t)$
-					\end{adjustwidth}
+					\end{indentparagraph}
 					$S \circ R = R;S = \bigl\{(1, s), (2, s), (2, t)\bigr\}$
 				\end{example}
 				\pagebreak
@@ -204,22 +206,22 @@
 									No. There is no pair where $1$ is related to $2$.
 								\item \textbf{Determine the relation $R \circ R$.}\\
 									$R \circ R = R; R$.
-									\begin{adjustwidth}{1cm}{}
+									\begin{indentparagraph}
 										$\bigl(1, \{1\}\bigr) \rightarrow \bigl(\{1\}, 3\bigr) \rightarrow \bigl(1, 3\bigr)$\\
 										$\bigl(1, 3\bigr) \not \rightarrow$\\
 										$\bigl(2, \{1\}\bigr) \rightarrow \bigl(\{1\}, 3\bigr) \rightarrow \bigl(2, 3\bigr)$\\
 										$\bigl(2, \{2\}\bigr) \rightarrow \bigl(\{2\}, \{1\}\bigr) \rightarrow \bigl(2, \{1\}\bigr)$\\
 										$\bigl(\{1\}, 3\bigr) \not \rightarrow$\\
 										$\bigl(\{2\}, \{1\}\bigr) \rightarrow \bigl(\{1\}, 3\bigr) \rightarrow \bigl(\{2\}, 3\bigr)$
-									\end{adjustwidth}
+									\end{indentparagraph}
 									$R \circ R = R; R = \Bigl\{\bigl(1, 3\bigr), \bigl(2, 3\bigr), \bigl(2, \{1\}\bigr), \bigl(\{2\}, 3\bigr)\Bigr\}$
 								\item \textbf{Determine the relation $R \circ P$.}
 									$R \circ P = P;R$.
-									\begin{adjustwidth}{1cm}{}
+									\begin{indentparagraph}
 										$\bigl(1, \{1\}\bigr) \rightarrow \bigl(\{1\}, 3\bigr) \rightarrow \bigl(1, 3\bigr)$\\
 										$\bigl(1, 2\bigr) \rightarrow \bigl(2, \{1\}\bigr) \rightarrow \bigl(1, \{1\}\bigr)$\\
 										$\bigl(1, 2\bigr) \rightarrow \bigl(2, \{2\}\bigr) \rightarrow \bigl(1, \{2\}\bigr)$
-									\end{adjustwidth}
+									\end{indentparagraph}
 									$R \circ P = R;R = \Bigl\{\bigl(1, 3\bigr), \bigl(1, \{1\}\bigr), \bigl(1, \{2\}\bigr)\Bigr\}$
 								\item \textbf{Give the subset $T$ of $R$ where $(a, B) \in T$ iff $a \in B$.}\\
 									$T = \Bigl\{\bigl(1, \{1\}\bigr), \bigl(2, \{2\}\bigr)\Bigr\}$
@@ -243,9 +245,9 @@
 												\bigl(\emptyset, \emptyset\bigr), \bigl(\{a\}, \{a\}\bigr), \bigl(\{b\}, \{b\}\bigr), \bigl(\{a, b\}, \{a, b\}\bigr)
 											\end{align*}
 										\item[Symmetry] Whichever pair is added, the pair that makes it symmetric needs to be added too.
-											\begin{adjustwidth}{1cm}{}
-												If $\bigl(\emptyset, \{a\}\bigr)$ is added, then $\bigl(\{a\}, \emptyset\bigr)$ needs to be added
-											\end{adjustwidth}
+											\begin{indentparagraph}
+												If $\bigl(\emptyset, \{a\}\bigr)$ is added, then $\bigl(\{a\}, \emptyset\bigr)$ needs to be added.
+											\end{indentparagraph}
 										\item[Examples] Two relations that meet these requirements are:
 											\begin{align*}
 												R_{1} &= \Bigl\{\bigl(\emptyset, \emptyset\bigr), \bigl(\{a\}, \{a\}\bigr), \bigl(\{b\}, \{b\}\bigr), \bigl(\{a, b\}, \{a, b\}\bigr)\Bigr\}\\
@@ -259,14 +261,14 @@
 												\bigl(\emptyset, \emptyset\bigr), \bigl(\{a\}, \{a\}\bigr), \bigl(\{b\}, \{b\}\bigr), \bigl(\{a, b\}, \{a, b\}\bigr)
 											\end{align*}
 										\item[Symmetry] Whichever pair is added, the pair that makes it symmetric needs to be added too.
-											\begin{adjustwidth}{1cm}{}
+											\begin{indentparagraph}
 												If $\bigl(\emptyset, \{a\}\bigr)$ is added, then $\bigl(\{a\}, \emptyset\bigr)$ needs to be added
-											\end{adjustwidth}
+											\end{indentparagraph}
 										\item[Transitivity] In order for the relation to not be transitive, two elements need to be added (for symmetry) where the first element is the second element of another pair, and the second element is the first element of a different pair.
-											\begin{adjustwidth}{1cm}{}
+											\begin{indentparagraph}
 												If $\bigl(\{a\}, \{a, b\}\bigr)$ and $\bigl(\{a, b\}, \{a\}\bigr)$ are added.\\
 												$\bigl(\emptyset, \{a\}\bigr) \rightarrow \bigl(\{a\}, \{a, b\}\bigr) \not \rightarrow \bigl(\emptyset, \{a, b\}\bigr)$
-											\end{adjustwidth}
+											\end{indentparagraph}
 										\item[Example]
 											\begin{align*}
 												R_{3} &= \Bigl\{\bigl(\emptyset, \emptyset\bigr), \bigl(\{a\}, \{a\}\bigr), \bigl(\{b\}, \{b\}\bigr), \bigl(\{a, b\}, \{a, b\}\bigr),\\
@@ -281,10 +283,10 @@
 												\bigl(\emptyset, \emptyset\bigr), \bigl(\{a\}, \{a\}\bigr), \bigl(\{b\}, \{b\}\bigr), \bigl(\{a, b\}, \{a, b\}\bigr)
 											\end{align*}
 										\item[Symmetry] For the relation to not be symmetric, at least one pair cannot be flipped.
-											\begin{adjustwidth}{1cm}{}
+											\begin{indentparagraph}
 												If $\bigl(\emptyset, \{a\}\bigr)$ is added, then $\bigl(\{a\}, \emptyset\bigr)$ is not added.\\
 												Adding this single element would still mean $R$ is transitive.
-											\end{adjustwidth}
+											\end{indentparagraph}
 										\item[Antisymmetry] For the relation to not be antisymmetric, at least one pair can be flipped.
 											If $\bigl(\emptyset, \{b\}\bigr)$ is added, then $\bigl(\{b\}, \emptyset\bigr)$ is added.
 										\item[Example]

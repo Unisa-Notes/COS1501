@@ -82,3 +82,7 @@
 % Horizontal Rules at document ends
 \newcommand{\rulebookend}{\vbox{\hrule width \hsize \kern 1mm \hrule width \hsize height 2pt}}
 \newcommand{\rulechapterend}{\noindent\rule{\textwidth}{0.4pt}}
+
+% Indented Paragraphs
+\RequirePackage{changepage}
+\newenvironment{indentparagraph}{\begin{adjustwidth}{2em}{}}{\end{adjustwidth}}

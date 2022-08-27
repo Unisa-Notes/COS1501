@@ -11,6 +11,12 @@
     "snippet": "{${1:title}}",
     "package": "kayzels"
   },
+  "indentparagraph": {
+    "name": "indentparagraph",
+    "detail": "indentparagraph",
+    "snippet": "",
+    "package": "kayzels"
+  },
   "subproof": {
     "name": "subproof",
     "detail": "subproof",
