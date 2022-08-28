@@ -109,3 +109,12 @@
 }
 \makeatother
 \preto\tikzpicture{\addvennback}{}{}
+
+\newenvironment{venntwo}[1][]%
+	{\begin{venndiagram2sets}[shade=circle area,#1]%
+		\fillBack}%
+	{\end{venndiagram2sets}}
+\newenvironment{vennthree}[1][]%
+	{\begin{venndiagram3sets}[shade=circle area,#1]%
+		\fillBack}%
+	{\end{venndiagram3sets}}

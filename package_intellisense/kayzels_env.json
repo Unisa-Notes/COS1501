@@ -28,5 +28,29 @@
     "detail": "subproof[name]",
     "snippet": "[${1:name}]",
     "package": "kayzels"
+  },
+  "venntwo": {
+    "name": "venntwo",
+    "detail": "venntwo",
+    "snippet": "",
+    "package": "kayzels"
+  },
+  "venntwo[]": {
+    "name": "venntwo",
+    "detail": "venntwo[options]",
+    "snippet": "[${1:options}]",
+    "package": "kayzels"
+  },
+  "vennthree": {
+    "name": "vennthree",
+    "detail": "vennthree",
+    "snippet": "",
+    "package": "kayzels"
+  },
+  "vennthree[]": {
+    "name": "vennthree",
+    "detail": "vennthree[options]",
+    "snippet": "[${1:options}]",
+    "package": "kayzels"
   }
 }

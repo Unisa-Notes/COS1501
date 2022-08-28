@@ -11,51 +11,46 @@
 			\begin{example}
 				Let $A$, $B$, $C \subseteq U$. Draw the Venn diagram for $\bigl[(A \cup B) - (A \cap B)\bigr] \cup C$
 				\begin{center}
-					\begin{venndiagram3sets}[shade=circle area]
+					\begin{vennthree}
 						\setpostvennhook
 						{
 							\node[above] at (current bounding box.north) {$A \cup B$};
 						}
-						\fillBack
 						\fillA
 						\fillB
-					\end{venndiagram3sets}
-					\begin{venndiagram3sets}[shade=circle area]
+					\end{vennthree}
+					\begin{vennthree}
 						\setpostvennhook
 						{
 							\node[above] at (current bounding box.north) {$A \cap B$};
 						}
-						\fillBack
 						\fillACapB
-					\end{venndiagram3sets}
+					\end{vennthree}
 					\pagebreak
-					\begin{venndiagram3sets}[shade=circle area]
+					\begin{vennthree}
 						\setpostvennhook
 						{
 							\node[above] at (current bounding box.north) {$(A \cup B) - (A \cap B)$};
 						}
-						\fillBack
 						\fillANotB
 						\fillBNotA
-					\end{venndiagram3sets}
-					\begin{venndiagram3sets}[shade=circle area]
+					\end{vennthree}
+					\begin{vennthree}
 						\setpostvennhook
 						{
 							\node[above] at (current bounding box.north) {$C$};
 						}
-						\fillBack
 						\fillC
-					\end{venndiagram3sets}
-					\begin{venndiagram3sets}[shade=circle area]
+					\end{vennthree}
+					\begin{vennthree}
 						\setpostvennhook
 						{
 							\node[above] at (current bounding box.north) {$\bigl[(A \cup B) - (A \cap B)\bigr] \cup C$};
 						}
-						\fillBack
 						\fillANotB
 						\fillBNotA
 						\fillC
-					\end{venndiagram3sets}
+					\end{vennthree}
 				\end{center}
 			\end{example}
 			\begin{exercise}{Self-Assessment Exercise \thechapter.4}
@@ -64,269 +59,241 @@
 						\begin{enumerate}
 							\item $(X \cup Y)'$
 								\begin{center}
-									\begin{venndiagram2sets}[shade=circle area, labelA=$X$, labelB=$Y$, tikzoptions={scale=0.8}]
+									\begin{venntwo}[labelA=$X$, labelB=$Y$, tikzoptions={scale=0.8}]
 										\setpostvennhook
 										{
 											\node[above] at (current bounding box.north) {$X \cup Y$};
 										}
-										\fillBack
 										\fillA
 										\fillB
-									\end{venndiagram2sets}
-									\begin{venndiagram2sets}[shade=circle area, labelA=$X$, labelB=$Y$, tikzoptions={scale=0.8}]
+									\end{venntwo}
+									\begin{venntwo}[labelA=$X$, labelB=$Y$, tikzoptions={scale=0.8}]
 										\setpostvennhook
 										{
 											\node[above] at (current bounding box.north) {$(X \cup Y)'$};
 										}
-										\fillBack
 										\fillNotAorB
-									\end{venndiagram2sets}
+									\end{venntwo}
 								\end{center}
 							\item $X' \cap Y'$
 								\begin{center}
-									\begin{venndiagram2sets}[shade=circle area, labelA=$X$, labelB=$Y$, tikzoptions={scale=0.8}]
+									\begin{venntwo}[labelA=$X$, labelB=$Y$, tikzoptions={scale=0.8}]
 										\setpostvennhook
 										{
 											\node[above] at (current bounding box.north) {$X'$};
 										}
-										\fillBack
 										\fillNotA
-									\end{venndiagram2sets}
-									\begin{venndiagram2sets}[shade=circle area, labelA=$X$, labelB=$Y$, tikzoptions={scale=0.8}]
+									\end{venntwo}
+									\begin{venntwo}[labelA=$X$, labelB=$Y$, tikzoptions={scale=0.8}]
 										\setpostvennhook
 										{
 											\node[above] at (current bounding box.north) {$Y'$};
 										}
-										\fillBack
 										\fillNotB
-									\end{venndiagram2sets}
-									\begin{venndiagram2sets}[shade=circle area, labelA=$X$, labelB=$Y$, tikzoptions={scale=0.8}]
+									\end{venntwo}
+									\begin{venntwo}[labelA=$X$, labelB=$Y$, tikzoptions={scale=0.8}]
 										\setpostvennhook
 										{
 											\node[above] at (current bounding box.north) {$X' \cap Y'$};
 										}
-										\fillBack
 										\fillNotAorB
-									\end{venndiagram2sets}
+									\end{venntwo}
 								\end{center}
 							\item $(X \cap Y)'$
 								\begin{center}
-									\begin{venndiagram2sets}[shade=circle area, labelA=$X$, labelB=$Y$, tikzoptions={scale=0.8}]
+									\begin{venntwo}[labelA=$X$, labelB=$Y$, tikzoptions={scale=0.8}]
 										\setpostvennhook
 										{
 											\node[above] at (current bounding box.north) {$X \cap Y$};
 										}
-										\fillBack
 										\fillACapB
-									\end{venndiagram2sets}
-									\begin{venndiagram2sets}[shade=circle area, labelA=$X$, labelB=$Y$, tikzoptions={scale=0.8}]
+									\end{venntwo}
+									\begin{venntwo}[labelA=$X$, labelB=$Y$, tikzoptions={scale=0.8}]
 										\setpostvennhook
 										{
 											\node[above] at (current bounding box.north) {$(X \cap Y)'$};
 										}
-										\fillBack
 										\fillNotAorNotB
-									\end{venndiagram2sets}
+									\end{venntwo}
 								\end{center}
 							\pagebreak
 							\item $X' \cap Y'$
 								\begin{center}
-									\begin{venndiagram2sets}[shade=circle area, labelA=$X$, labelB=$Y$, tikzoptions={scale=0.8}]
+									\begin{venntwo}[labelA=$X$, labelB=$Y$, tikzoptions={scale=0.8}]
 										\setpostvennhook
 										{
 											\node[above] at (current bounding box.north) {$X'$};
 										}
-										\fillBack
 										\fillNotA
-									\end{venndiagram2sets}
-									\begin{venndiagram2sets}[shade=circle area, labelA=$X$, labelB=$Y$, tikzoptions={scale=0.8}]
+									\end{venntwo}
+									\begin{venntwo}[labelA=$X$, labelB=$Y$, tikzoptions={scale=0.8}]
 										\setpostvennhook
 										{
 											\node[above] at (current bounding box.north) {$Y'$};
 										}
-										\fillBack
 										\fillNotB
-									\end{venndiagram2sets}
-									\begin{venndiagram2sets}[shade=circle area, labelA=$X$, labelB=$Y$, tikzoptions={scale=0.8}]
+									\end{venntwo}
+									\begin{venntwo}[labelA=$X$, labelB=$Y$, tikzoptions={scale=0.8}]
 										\setpostvennhook
 										{
 											\node[above] at (current bounding box.north) {$X' \cup Y'$};
 										}
-										\fillBack
 										\fillNotA
 										\fillNotB
-									\end{venndiagram2sets}
+									\end{venntwo}
 								\end{center}
 						\end{enumerate}
 					\item
 						\begin{enumerate}
 							\item $X - (Y \cup Z)$
 								\begin{center}
-									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
+									\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
 										\setpostvennhook
 										{
 											\node[above] at (current bounding box.north) {$X$};
 										}
-										\fillBack
 										\fillA
-									\end{venndiagram3sets}
-									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
+									\end{vennthree}
+									\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
 										\setpostvennhook
 										{
 											\node[above] at (current bounding box.north) {$Y \cup Z$};
 										}
-										\fillBack
 										\fillB
 										\fillC
-									\end{venndiagram3sets}
-									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
+									\end{vennthree}
+									\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
 										\setpostvennhook
 										{
 											\node[above] at (current bounding box.north) {$X - (Y \cup Z)$};
 										}
-										\fillBack
 										\fillOnlyA
-									\end{venndiagram3sets}
+									\end{vennthree}
 								\end{center}
 							\item $(X - Y) \cup (X - Z)$
 								\begin{center}
-									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
+									\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
 										\setpostvennhook
 										{
 											\node[above] at (current bounding box.north) {$X - Y$};
 										}
-										\fillBack
 										\fillANotB
-									\end{venndiagram3sets}
-									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
+									\end{vennthree}
+									\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
 										\setpostvennhook
 										{
 											\node[above] at (current bounding box.north) {$X - Z$};
 										}
-										\fillBack
 										\fillANotC
-									\end{venndiagram3sets}
-									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
+									\end{vennthree}
+									\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
 										\setpostvennhook
 										{
 											\node[above] at (current bounding box.north) {$(X - Y) \cup (X - Z)$};
 										}
-										\fillBack
 										\fillANotB
 										\fillANotC
-									\end{venndiagram3sets}
+									\end{vennthree}
 								\end{center}
 							\item $X \cap (Y - Z)$
 								\begin{center}
-									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
+									\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
 										\setpostvennhook
 										{
 											\node[above] at (current bounding box.north) {$X$};
 										}
-										\fillBack
 										\fillA
-									\end{venndiagram3sets}
-									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
+									\end{vennthree}
+									\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
 										\setpostvennhook
 										{
 											\node[above] at (current bounding box.north) {$Y - Z$};
 										}
-										\fillBack
 										\fillBNotC
-									\end{venndiagram3sets}
-									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
+									\end{vennthree}
+									\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
 										\setpostvennhook
 										{
 											\node[above] at (current bounding box.north) {$X \cap (Y - Z)$};
 										}
-										\fillBack
 										\fillACapBNotC
-									\end{venndiagram3sets}
+									\end{vennthree}
 								\end{center}
 							\pagebreak
 							\item $(X \cap Y) - (X \cap Z)$
 								\begin{center}
-									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
+									\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
 										\setpostvennhook
 										{
 											\node[above] at (current bounding box.north) {$X \cap Y$};
 										}
-										\fillBack
 										\fillACapB
-									\end{venndiagram3sets}
-									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
+									\end{vennthree}
+									\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
 										\setpostvennhook
 										{
 											\node[above] at (current bounding box.north) {$X \cap Z$};
 										}
-										\fillBack
 										\fillACapC
-									\end{venndiagram3sets}
-									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
+									\end{vennthree}
+									\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
 										\setpostvennhook
 										{
 											\node[above] at (current bounding box.north) {$(X \cap Y) - (X \cap Z)$};
 										}
-										\fillBack
 										\fillACapBNotC
-									\end{venndiagram3sets}
+									\end{vennthree}
 								\end{center}
 							\item $X \cap (Y + Z)$
 								\begin{center}
-									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
+									\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
 										\setpostvennhook
 										{
 											\node[above] at (current bounding box.north) {$X$};
 										}
-										\fillBack
 										\fillA
-									\end{venndiagram3sets}
-									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
+									\end{vennthree}
+									\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
 										\setpostvennhook
 										{
 											\node[above] at (current bounding box.north) {$Y + Z$};
 										}
-										\fillBack
 										\fillBNotC
 										\fillCNotB
-									\end{venndiagram3sets}
-									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
+									\end{vennthree}
+									\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
 										\setpostvennhook
 										{
 											\node[above] at (current bounding box.north) {$X \cap (Y + Z)$};
 										}
-										\fillBack
 										\fillACapBNotC
 										\fillACapCNotB
-									\end{venndiagram3sets}
+									\end{vennthree}
 								\end{center}
 							\item $(X \cap Y) + (X \cap Z)$
 								\begin{center}
-									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
+									\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
 										\setpostvennhook
 										{
 											\node[above] at (current bounding box.north) {$X \cap Y$};
 										}
-										\fillBack
 										\fillACapB
-									\end{venndiagram3sets}
-									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
+									\end{vennthree}
+									\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
 										\setpostvennhook
 										{
 											\node[above] at (current bounding box.north) {$X \cap Z$};
 										}
-										\fillBack
 										\fillACapC
-									\end{venndiagram3sets}
-									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
+									\end{vennthree}
+									\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
 										\setpostvennhook
 										{
 											\node[above] at (current bounding box.north) {$(X \cap Y) + (X \cap Z)$};
 										}
-										\fillBack
 										\fillACapBNotC
 										\fillACapCNotB
-									\end{venndiagram3sets}
+									\end{vennthree}
 								\end{center}
 						\end{enumerate}
 				\end{enumerate}
@@ -435,60 +402,54 @@
 			\begin{enumerate}
 				\item \textbf{Is it the case for all $X$, $Y$, $Z \subseteq U$, $X + (Y \cap Z) = (X + Y) \cap (X + Z)$?}
 					\begin{center}
-						\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
+						\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
 							\setpostvennhook
 							{
 								\node[above] at (current bounding box.north) {$X$};
 							}
-							\fillBack
 							\fillA
-						\end{venndiagram3sets}
-						\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
+						\end{vennthree}
+						\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
 							\setpostvennhook
 							{
 								\node[above] at (current bounding box.north) {$Y \cap Z$};
 							}
-							\fillBack
 							\fillBCapC
-						\end{venndiagram3sets}
-						\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
+						\end{vennthree}
+						\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
 							\setpostvennhook
 							{
 								\node[above] at (current bounding box.north) {$X + (Y \cap Z)$};
 							}
-							\fillBack
 							\fillOnlyA
 							\fillACapBNotC
 							\fillACapCNotB
 							\fillBCapCNotA
-						\end{venndiagram3sets}
-						\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
+						\end{vennthree}
+						\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
 							\setpostvennhook
 							{
 								\node[above] at (current bounding box.north) {$X + Y$};
 							}
-							\fillBack
 							\fillANotB
 							\fillBNotA
-						\end{venndiagram3sets}
-						\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
+						\end{vennthree}
+						\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
 							\setpostvennhook
 							{
 								\node[above] at (current bounding box.north) {$X + Z$};
 							}
-							\fillBack
 							\fillANotC
 							\fillCNotA
-						\end{venndiagram3sets}
-						\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
+						\end{vennthree}
+						\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
 							\setpostvennhook
 							{
 								\node[above] at (current bounding box.north) {$X + (Y \cap Z)$};
 							}
-							\fillBack
 							\fillOnlyA
 							\fillBCapCNotA
-						\end{venndiagram3sets}
+						\end{vennthree}
 					\end{center}
 					As the venn diagrams are not the same, it is not the case.\\
 					Counterexample: Find an element that is in $X$ and in $Y$, but is not in $Z$.
@@ -520,55 +481,49 @@
 				\item \textbf{Use Venn diagrams to investigate whether or not, for all sets $X, Y, Z \subseteq U$}\\
 				\textbf{$X - (Y - Z) = (X - Y) - Z$. If it is true, provide a proof. Else, provide a counterexample.}
 					\begin{center}
-						\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
+						\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
 							\setpostvennhook
 							{
 								\node[above] at (current bounding box.north) {$X$};
 							}
-							\fillBack
 							\fillA
-						\end{venndiagram3sets}
-						\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
+						\end{vennthree}
+						\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
 							\setpostvennhook
 							{
 								\node[above] at (current bounding box.north) {$Y - Z$};
 							}
-							\fillBack
 							\fillBNotC
-						\end{venndiagram3sets}
-						\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
+						\end{vennthree}
+						\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
 							\setpostvennhook
 							{
 								\node[above] at (current bounding box.north) {$X - (Y - Z)$};
 							}
-							\fillBack
 							\fillOnlyA
 							\fillACapC
-						\end{venndiagram3sets}
-						\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
+						\end{vennthree}
+						\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
 							\setpostvennhook
 							{
 								\node[above] at (current bounding box.north) {$X - Y$};
 							}
-							\fillBack
 							\fillANotB
-						\end{venndiagram3sets}
-						\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
+						\end{vennthree}
+						\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
 							\setpostvennhook
 							{
 								\node[above] at (current bounding box.north) {$Z$};
 							}
-							\fillBack
 							\fillC
-						\end{venndiagram3sets}
-						\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
+						\end{vennthree}
+						\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
 							\setpostvennhook
 							{
 								\node[above] at (current bounding box.north) {$(X - Y) - Z$};
 							}
-							\fillBack
 							\fillOnlyA
-						\end{venndiagram3sets}
+						\end{vennthree}
 					\end{center}
 					\begin{description}
 						\item[Counterexample:] Let $X = \{1, 2\}$, $Y = \{4\}$, $Z = \{1, 3\}$.
@@ -582,64 +537,57 @@
 				\item \textbf{Use Venn diagrams to investigate whether or not, for all sets $A, B, C \subseteq U$}\\
 				\textbf{$(A \cap B) + (C \cap A) = (A \cap B') \cup (B - C)$. If it is true, provide a proof. Else, provide a counterexample.}
 					\begin{center}
-						\begin{venndiagram3sets}[shade=circle area, tikzoptions={scale=0.8}]
+						\begin{vennthree}[tikzoptions={scale=0.8}]
 							\setpostvennhook
 							{
 								\node[above] at (current bounding box.north) {$A \cap B$};
 							}
-							\fillBack
 							\fillACapB
-						\end{venndiagram3sets}
-						\begin{venndiagram3sets}[shade=circle area, tikzoptions={scale=0.8}]
+						\end{vennthree}
+						\begin{vennthree}[tikzoptions={scale=0.8}]
 							\setpostvennhook
 							{
 								\node[above] at (current bounding box.north) {$C \cap A$};
 							}
-							\fillBack
 							\fillACapC
-						\end{venndiagram3sets}
-						\begin{venndiagram3sets}[shade=circle area, tikzoptions={scale=0.8}]
+						\end{vennthree}
+						\begin{vennthree}[tikzoptions={scale=0.8}]
 							\setpostvennhook
 							{
 								\node[above] at (current bounding box.north) {$(A \cap B) + (C \cap A)$};
 							}
-							\fillBack
 							\fillACapBNotC
 							\fillACapCNotB
-						\end{venndiagram3sets}
-						\begin{venndiagram3sets}[shade=circle area, tikzoptions={scale=0.8}]
+						\end{vennthree}
+						\begin{vennthree}[tikzoptions={scale=0.8}]
 							\setpostvennhook
 							{
 								\node[above] at (current bounding box.north) {$B'$};
 							}
-							\fillBack
 							\fillNotB
-						\end{venndiagram3sets}
-						\begin{venndiagram3sets}[shade=circle area, tikzoptions={scale=0.8}]
+						\end{vennthree}
+						\begin{vennthree}[tikzoptions={scale=0.8}]
 							\setpostvennhook
 							{
 								\node[above] at (current bounding box.north) {$A \cap B'$};
 							}
-							\fillBack
 							\fillANotB
-						\end{venndiagram3sets}
-						\begin{venndiagram3sets}[shade=circle area, tikzoptions={scale=0.8}]
+						\end{vennthree}
+						\begin{vennthree}[tikzoptions={scale=0.8}]
 							\setpostvennhook
 							{
 								\node[above] at (current bounding box.north) {$B - C$};
 							}
-							\fillBack
 							\fillBNotC
-						\end{venndiagram3sets}
-						\begin{venndiagram3sets}[shade=circle area, tikzoptions={scale=0.8}]
+						\end{vennthree}
+						\begin{vennthree}[tikzoptions={scale=0.8}]
 							\setpostvennhook
 							{
 								\node[above] at (current bounding box.north) {$(A \cap B') \cup (B - C)$};
 							}
-							\fillBack
 							\fillANotB
 							\fillBNotC
-						\end{venndiagram3sets}
+						\end{vennthree}
 					\end{center}
 					\begin{description}
 						\item[Counterexample:] Let $A = \{1, 2\}$, $B = \{2, 3\}$, $C = \{4\}$
@@ -673,13 +621,12 @@
 						\left\lvert U\right\rvert &= 50 \qquad & \left\lvert M\right\rvert &= 25 \qquad & \left\lvert B\right\rvert &= 30 \qquad & \left\lvert M \cap B \right\rvert = 10
 					\end{alignat*}
 					\begin{center}
-						\begin{venndiagram2sets}[shade=circle area, showframe=true, radius=2.4cm, overlap=1.2cm, vgap=1cm, labelA={$M$}, labelAB={$10$}, labelOnlyA={$25 - 10 = 15$}, labelOnlyB={$30 - 10 = 20$}]
-							\fillBack
+						\begin{venntwo}[showframe=true, radius=2.4cm, overlap=1.2cm, vgap=1cm, labelA={$M$}, labelAB={$10$}, labelOnlyA={$25 - 10 = 15$}, labelOnlyB={$30 - 10 = 20$}]
 							\setpostvennhook
 							{
 								\node[above] at (current bounding box.south) {$50 - 15 - 20 - 10 = 5$};
 							}
-						\end{venndiagram2sets}
+						\end{venntwo}
 					\end{center}
 					\pagebreak
 					\begin{enumerate}
@@ -705,13 +652,12 @@
 						\left\lvert J \cap A\right\rvert &= 6 & \left\lvert J \cap C\right\rvert &= 1 & \left\lvert A \cap C\right\rvert &= 5 & \left\lvert J \cap A \cap C\right\rvert &= 1     
 					\end{alignat*}
 					\begin{center}
-						\begin{venndiagram3sets}[showframe=true, radius=3.5cm, overlap=2.3cm, vgap=1cm, labelA={$J$}, labelB={$A$}, labelABC={$1$}, labelOnlyAC={$1 - 1 = 0$}, labelOnlyBC={$5-1 = 4$}, labelOnlyAB={$6 - 1 = 5$}, labelOnlyA={$45 - 5 - 1 - 0 = 39$}, labelOnlyB={$30 - 5 - 1 - 4 = 20$}, labelOnlyC={$20 - 0 - 1 - 4 = 15$}]
-							\fillBack
+						\begin{vennthree}[showframe=true, radius=3.5cm, overlap=2.3cm, vgap=1cm, labelA={$J$}, labelB={$A$}, labelABC={$1$}, labelOnlyAC={$1 - 1 = 0$}, labelOnlyBC={$5-1 = 4$}, labelOnlyAB={$6 - 1 = 5$}, labelOnlyA={$45 - 5 - 1 - 0 = 39$}, labelOnlyB={$30 - 5 - 1 - 4 = 20$}, labelOnlyC={$20 - 0 - 1 - 4 = 15$}]
 							\setpostvennhook
 							{
 								\node[above] at (current bounding box.south) {$100 - 39 - 20 - 15 - 5 - 0 - 4 - 1 = 16$};
 							}
-						\end{venndiagram3sets}
+						\end{vennthree}
 					\end{center}
 					\begin{enumerate}[label=(\alph*)]
 						\item This would be the value of the people who don't appear in any of the circles, which is $16$.
@@ -727,13 +673,12 @@
 								\left\lvert U\right\rvert &= 1000 \qquad & \left\lvert M\right\rvert &= 700 \qquad & \left\lvert C\right\rvert &= 400 \qquad & \left\lvert M \cup C\right\rvert &= 800 \qquad & \left\lvert M \cap C\right\rvert &= x
 							\end{alignat*}
 							\begin{center}
-								\begin{venndiagram2sets}[shade=circle area, showframe=true, radius=2.4cm, overlap=1.2cm, vgap=1cm, labelA={$M$}, labelB={$C$}, labelAB=$x$, labelOnlyA={$700 - x$}, labelOnlyB={$400 - x$}]
-									\fillBack
+								\begin{venntwo}[showframe=true, radius=2.4cm, overlap=1.2cm, vgap=1cm, labelA={$M$}, labelB={$C$}, labelAB=$x$, labelOnlyA={$700 - x$}, labelOnlyB={$400 - x$}]
 									\setpostvennhook
 									{
 										\node[above] at (current bounding box.south) {$1000 - 800 = 200$};
 									}
-								\end{venndiagram2sets}
+								\end{venntwo}
 							\end{center}
 							\begin{alignat*}{2}
 								&\qquad &800 &= (700 - x) + x + (400 - x)\\
@@ -759,13 +704,12 @@
 								\left\lvert C \cup B \cup D\right\rvert &= 45 & & & & & &
 							\end{alignat*}
 							\begin{center}
-								\begin{venndiagram3sets}[showframe=true, radius=3.5cm, overlap=2.3cm, vgap=0.8cm, labelA={$C$}, labelB={$B$}, labelC={$D$}, labelABC={$1$}, labelOnlyAB={$8 - 1 = 7$}, labelOnlyC={$x - 3 - 1 - 5 = x - 9$}, labelOnlyAC={$4 - 1 = 3$}, labelOnlyBC={$6 - 1 = 5$}, labelOnlyA={$22 - 7 - 1 - 3 = 11$}, labelOnlyB={$26 - 7 - 1 - 5 = 13$}]
-									\fillBack
+								\begin{vennthree}[showframe=true, radius=3.5cm, overlap=2.3cm, vgap=0.8cm, labelA={$C$}, labelB={$B$}, labelC={$D$}, labelABC={$1$}, labelOnlyAB={$8 - 1 = 7$}, labelOnlyC={$x - 3 - 1 - 5 = x - 9$}, labelOnlyAC={$4 - 1 = 3$}, labelOnlyBC={$6 - 1 = 5$}, labelOnlyA={$22 - 7 - 1 - 3 = 11$}, labelOnlyB={$26 - 7 - 1 - 5 = 13$}]
 									\setpostvennhook
 									{
 										\node[above] at (current bounding box.south) {$64 - 45 = 19$};
 									}
-								\end{venndiagram3sets}
+								\end{vennthree}
 							\end{center}
 							\begin{alignat*}{2}
 								& &45 &= 11 + 13 + (x - 9) + 7 + 3 + 5 + 1\\
@@ -781,9 +725,8 @@
 							\left\lvert \mathrm{FM} \cap \mathrm{UML}\right\rvert &= 5 \qquad & \left\lvert \mathrm{FM} \cap \mathrm{ER}\right\rvert &= 4 \qquad & \left\lvert \mathrm{UML} \cap \mathrm{ER}\right\rvert &= 7 \qquad & \left\lvert \mathrm{FM} \cap \mathrm{UML} \cap \mathrm{ER}\right\rvert &= x  
 						\end{alignat*}
 						\begin{center}
-							\begin{venndiagram3sets}[showframe=true, radius=3.5cm, overlap=2.3cm, labelA={FM}, labelB={UML}, labelC={ER}, labelABC={$x$}, labelOnlyAB={$5 - x$}, labelOnlyAC={$4 - x$}, labelOnlyBC={$7 - x$}, labelOnlyA={$x + 8$}, labelOnlyB={$x - 3$}, labelOnlyC={$x - 2$}]
-								\fillBack
-							\end{venndiagram3sets}
+							\begin{vennthree}[showframe=true, radius=3.5cm, overlap=2.3cm, labelA={FM}, labelB={UML}, labelC={ER}, labelABC={$x$}, labelOnlyAB={$5 - x$}, labelOnlyAC={$4 - x$}, labelOnlyBC={$7 - x$}, labelOnlyA={$x + 8$}, labelOnlyB={$x - 3$}, labelOnlyC={$x - 2$}]
+							\end{vennthree}
 						\end{center}
 						\begin{description}
 							\item[For Only FM:] \rule{0pt}{11pt} \vspace*{-23pt}
