@@ -16,7 +16,7 @@
 						{
 							\node[above] at (current bounding box.north) {$A \cup B$};
 						}
-						\fillAll[fill=white]
+						\fillBack
 						\fillA
 						\fillB
 					\end{venndiagram3sets}
@@ -25,7 +25,7 @@
 						{
 							\node[above] at (current bounding box.north) {$A \cap B$};
 						}
-						\fillAll[fill=white]
+						\fillBack
 						\fillACapB
 					\end{venndiagram3sets}
 					\pagebreak
@@ -34,7 +34,7 @@
 						{
 							\node[above] at (current bounding box.north) {$(A \cup B) - (A \cap B)$};
 						}
-						\fillAll[fill=white]
+						\fillBack
 						\fillANotB
 						\fillBNotA
 					\end{venndiagram3sets}
@@ -43,7 +43,7 @@
 						{
 							\node[above] at (current bounding box.north) {$C$};
 						}
-						\fillAll[fill=white]
+						\fillBack
 						\fillC
 					\end{venndiagram3sets}
 					\begin{venndiagram3sets}[shade=circle area]
@@ -51,7 +51,7 @@
 						{
 							\node[above] at (current bounding box.north) {$\bigl[(A \cup B) - (A \cap B)\bigr] \cup C$};
 						}
-						\fillAll[fill=white]
+						\fillBack
 						\fillANotB
 						\fillBNotA
 						\fillC
@@ -69,7 +69,7 @@
 										{
 											\node[above] at (current bounding box.north) {$X \cup Y$};
 										}
-										\fillAll[fill=white]
+										\fillBack
 										\fillA
 										\fillB
 									\end{venndiagram2sets}
@@ -78,7 +78,7 @@
 										{
 											\node[above] at (current bounding box.north) {$(X \cup Y)'$};
 										}
-										\fillAll[fill=white]
+										\fillBack
 										\fillNotAorB
 									\end{venndiagram2sets}
 								\end{center}
@@ -89,7 +89,7 @@
 										{
 											\node[above] at (current bounding box.north) {$X'$};
 										}
-										\fillAll[fill=white]
+										\fillBack
 										\fillNotA
 									\end{venndiagram2sets}
 									\begin{venndiagram2sets}[shade=circle area, labelA=$X$, labelB=$Y$, tikzoptions={scale=0.8}]
@@ -97,7 +97,7 @@
 										{
 											\node[above] at (current bounding box.north) {$Y'$};
 										}
-										\fillAll[fill=white]
+										\fillBack
 										\fillNotB
 									\end{venndiagram2sets}
 									\begin{venndiagram2sets}[shade=circle area, labelA=$X$, labelB=$Y$, tikzoptions={scale=0.8}]
@@ -105,7 +105,7 @@
 										{
 											\node[above] at (current bounding box.north) {$X' \cap Y'$};
 										}
-										\fillAll[fill=white]
+										\fillBack
 										\fillNotAorB
 									\end{venndiagram2sets}
 								\end{center}
@@ -116,7 +116,7 @@
 										{
 											\node[above] at (current bounding box.north) {$X \cap Y$};
 										}
-										\fillAll[fill=white]
+										\fillBack
 										\fillACapB
 									\end{venndiagram2sets}
 									\begin{venndiagram2sets}[shade=circle area, labelA=$X$, labelB=$Y$, tikzoptions={scale=0.8}]
@@ -124,7 +124,7 @@
 										{
 											\node[above] at (current bounding box.north) {$(X \cap Y)'$};
 										}
-										\fillAll[fill=white]
+										\fillBack
 										\fillNotAorNotB
 									\end{venndiagram2sets}
 								\end{center}
@@ -136,7 +136,7 @@
 										{
 											\node[above] at (current bounding box.north) {$X'$};
 										}
-										\fillAll[fill=white]
+										\fillBack
 										\fillNotA
 									\end{venndiagram2sets}
 									\begin{venndiagram2sets}[shade=circle area, labelA=$X$, labelB=$Y$, tikzoptions={scale=0.8}]
@@ -144,7 +144,7 @@
 										{
 											\node[above] at (current bounding box.north) {$Y'$};
 										}
-										\fillAll[fill=white]
+										\fillBack
 										\fillNotB
 									\end{venndiagram2sets}
 									\begin{venndiagram2sets}[shade=circle area, labelA=$X$, labelB=$Y$, tikzoptions={scale=0.8}]
@@ -152,7 +152,7 @@
 										{
 											\node[above] at (current bounding box.north) {$X' \cup Y'$};
 										}
-										\fillAll[fill=white]
+										\fillBack
 										\fillNotA
 										\fillNotB
 									\end{venndiagram2sets}
@@ -167,7 +167,7 @@
 										{
 											\node[above] at (current bounding box.north) {$X$};
 										}
-										\fillAll[fill=white]
+										\fillBack
 										\fillA
 									\end{venndiagram3sets}
 									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
@@ -175,7 +175,7 @@
 										{
 											\node[above] at (current bounding box.north) {$Y \cup Z$};
 										}
-										\fillAll[fill=white]
+										\fillBack
 										\fillB
 										\fillC
 									\end{venndiagram3sets}
@@ -184,7 +184,7 @@
 										{
 											\node[above] at (current bounding box.north) {$X - (Y \cup Z)$};
 										}
-										\fillAll[fill=white]
+										\fillBack
 										\fillOnlyA
 									\end{venndiagram3sets}
 								\end{center}
@@ -195,7 +195,7 @@
 										{
 											\node[above] at (current bounding box.north) {$X - Y$};
 										}
-										\fillAll[fill=white]
+										\fillBack
 										\fillANotB
 									\end{venndiagram3sets}
 									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
@@ -203,7 +203,7 @@
 										{
 											\node[above] at (current bounding box.north) {$X - Z$};
 										}
-										\fillAll[fill=white]
+										\fillBack
 										\fillANotC
 									\end{venndiagram3sets}
 									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
@@ -211,7 +211,7 @@
 										{
 											\node[above] at (current bounding box.north) {$(X - Y) \cup (X - Z)$};
 										}
-										\fillAll[fill=white]
+										\fillBack
 										\fillANotB
 										\fillANotC
 									\end{venndiagram3sets}
@@ -223,7 +223,7 @@
 										{
 											\node[above] at (current bounding box.north) {$X$};
 										}
-										\fillAll[fill=white]
+										\fillBack
 										\fillA
 									\end{venndiagram3sets}
 									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
@@ -231,7 +231,7 @@
 										{
 											\node[above] at (current bounding box.north) {$Y - Z$};
 										}
-										\fillAll[fill=white]
+										\fillBack
 										\fillBNotC
 									\end{venndiagram3sets}
 									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
@@ -239,7 +239,7 @@
 										{
 											\node[above] at (current bounding box.north) {$X \cap (Y - Z)$};
 										}
-										\fillAll[fill=white]
+										\fillBack
 										\fillACapBNotC
 									\end{venndiagram3sets}
 								\end{center}
@@ -251,7 +251,7 @@
 										{
 											\node[above] at (current bounding box.north) {$X \cap Y$};
 										}
-										\fillAll[fill=white]
+										\fillBack
 										\fillACapB
 									\end{venndiagram3sets}
 									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
@@ -259,7 +259,7 @@
 										{
 											\node[above] at (current bounding box.north) {$X \cap Z$};
 										}
-										\fillAll[fill=white]
+										\fillBack
 										\fillACapC
 									\end{venndiagram3sets}
 									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
@@ -267,7 +267,7 @@
 										{
 											\node[above] at (current bounding box.north) {$(X \cap Y) - (X \cap Z)$};
 										}
-										\fillAll[fill=white]
+										\fillBack
 										\fillACapBNotC
 									\end{venndiagram3sets}
 								\end{center}
@@ -278,7 +278,7 @@
 										{
 											\node[above] at (current bounding box.north) {$X$};
 										}
-										\fillAll[fill=white]
+										\fillBack
 										\fillA
 									\end{venndiagram3sets}
 									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
@@ -286,7 +286,7 @@
 										{
 											\node[above] at (current bounding box.north) {$Y + Z$};
 										}
-										\fillAll[fill=white]
+										\fillBack
 										\fillBNotC
 										\fillCNotB
 									\end{venndiagram3sets}
@@ -295,7 +295,7 @@
 										{
 											\node[above] at (current bounding box.north) {$X \cap (Y + Z)$};
 										}
-										\fillAll[fill=white]
+										\fillBack
 										\fillACapBNotC
 										\fillACapCNotB
 									\end{venndiagram3sets}
@@ -307,7 +307,7 @@
 										{
 											\node[above] at (current bounding box.north) {$X \cap Y$};
 										}
-										\fillAll[fill=white]
+										\fillBack
 										\fillACapB
 									\end{venndiagram3sets}
 									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
@@ -315,7 +315,7 @@
 										{
 											\node[above] at (current bounding box.north) {$X \cap Z$};
 										}
-										\fillAll[fill=white]
+										\fillBack
 										\fillACapC
 									\end{venndiagram3sets}
 									\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
@@ -323,7 +323,7 @@
 										{
 											\node[above] at (current bounding box.north) {$(X \cap Y) + (X \cap Z)$};
 										}
-										\fillAll[fill=white]
+										\fillBack
 										\fillACapBNotC
 										\fillACapCNotB
 									\end{venndiagram3sets}
@@ -440,7 +440,7 @@
 							{
 								\node[above] at (current bounding box.north) {$X$};
 							}
-							\fillAll[fill=white]
+							\fillBack
 							\fillA
 						\end{venndiagram3sets}
 						\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
@@ -448,7 +448,7 @@
 							{
 								\node[above] at (current bounding box.north) {$Y \cap Z$};
 							}
-							\fillAll[fill=white]
+							\fillBack
 							\fillBCapC
 						\end{venndiagram3sets}
 						\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
@@ -456,7 +456,7 @@
 							{
 								\node[above] at (current bounding box.north) {$X + (Y \cap Z)$};
 							}
-							\fillAll[fill=white]
+							\fillBack
 							\fillOnlyA
 							\fillACapBNotC
 							\fillACapCNotB
@@ -467,7 +467,7 @@
 							{
 								\node[above] at (current bounding box.north) {$X + Y$};
 							}
-							\fillAll[fill=white]
+							\fillBack
 							\fillANotB
 							\fillBNotA
 						\end{venndiagram3sets}
@@ -476,7 +476,7 @@
 							{
 								\node[above] at (current bounding box.north) {$X + Z$};
 							}
-							\fillAll[fill=white]
+							\fillBack
 							\fillANotC
 							\fillCNotA
 						\end{venndiagram3sets}
@@ -485,7 +485,7 @@
 							{
 								\node[above] at (current bounding box.north) {$X + (Y \cap Z)$};
 							}
-							\fillAll[fill=white]
+							\fillBack
 							\fillOnlyA
 							\fillBCapCNotA
 						\end{venndiagram3sets}
@@ -525,7 +525,7 @@
 							{
 								\node[above] at (current bounding box.north) {$X$};
 							}
-							\fillAll[fill=white]
+							\fillBack
 							\fillA
 						\end{venndiagram3sets}
 						\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
@@ -533,7 +533,7 @@
 							{
 								\node[above] at (current bounding box.north) {$Y - Z$};
 							}
-							\fillAll[fill=white]
+							\fillBack
 							\fillBNotC
 						\end{venndiagram3sets}
 						\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
@@ -541,7 +541,7 @@
 							{
 								\node[above] at (current bounding box.north) {$X - (Y - Z)$};
 							}
-							\fillAll[fill=white]
+							\fillBack
 							\fillOnlyA
 							\fillACapC
 						\end{venndiagram3sets}
@@ -550,7 +550,7 @@
 							{
 								\node[above] at (current bounding box.north) {$X - Y$};
 							}
-							\fillAll[fill=white]
+							\fillBack
 							\fillANotB
 						\end{venndiagram3sets}
 						\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
@@ -558,7 +558,7 @@
 							{
 								\node[above] at (current bounding box.north) {$Z$};
 							}
-							\fillAll[fill=white]
+							\fillBack
 							\fillC
 						\end{venndiagram3sets}
 						\begin{venndiagram3sets}[shade=circle area, labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
@@ -566,7 +566,7 @@
 							{
 								\node[above] at (current bounding box.north) {$(X - Y) - Z$};
 							}
-							\fillAll[fill=white]
+							\fillBack
 							\fillOnlyA
 						\end{venndiagram3sets}
 					\end{center}
@@ -587,7 +587,7 @@
 							{
 								\node[above] at (current bounding box.north) {$A \cap B$};
 							}
-							\fillAll[fill=white]
+							\fillBack
 							\fillACapB
 						\end{venndiagram3sets}
 						\begin{venndiagram3sets}[shade=circle area, tikzoptions={scale=0.8}]
@@ -595,7 +595,7 @@
 							{
 								\node[above] at (current bounding box.north) {$C \cap A$};
 							}
-							\fillAll[fill=white]
+							\fillBack
 							\fillACapC
 						\end{venndiagram3sets}
 						\begin{venndiagram3sets}[shade=circle area, tikzoptions={scale=0.8}]
@@ -603,7 +603,7 @@
 							{
 								\node[above] at (current bounding box.north) {$(A \cap B) + (C \cap A)$};
 							}
-							\fillAll[fill=white]
+							\fillBack
 							\fillACapBNotC
 							\fillACapCNotB
 						\end{venndiagram3sets}
@@ -612,7 +612,7 @@
 							{
 								\node[above] at (current bounding box.north) {$B'$};
 							}
-							\fillAll[fill=white]
+							\fillBack
 							\fillNotB
 						\end{venndiagram3sets}
 						\begin{venndiagram3sets}[shade=circle area, tikzoptions={scale=0.8}]
@@ -620,7 +620,7 @@
 							{
 								\node[above] at (current bounding box.north) {$A \cap B'$};
 							}
-							\fillAll[fill=white]
+							\fillBack
 							\fillANotB
 						\end{venndiagram3sets}
 						\begin{venndiagram3sets}[shade=circle area, tikzoptions={scale=0.8}]
@@ -628,7 +628,7 @@
 							{
 								\node[above] at (current bounding box.north) {$B - C$};
 							}
-							\fillAll[fill=white]
+							\fillBack
 							\fillBNotC
 						\end{venndiagram3sets}
 						\begin{venndiagram3sets}[shade=circle area, tikzoptions={scale=0.8}]
@@ -636,7 +636,7 @@
 							{
 								\node[above] at (current bounding box.north) {$(A \cap B') \cup (B - C)$};
 							}
-							\fillAll[fill=white]
+							\fillBack
 							\fillANotB
 							\fillBNotC
 						\end{venndiagram3sets}
@@ -674,7 +674,7 @@
 					\end{alignat*}
 					\begin{center}
 						\begin{venndiagram2sets}[shade=circle area, showframe=true, radius=2.4cm, overlap=1.2cm, vgap=1cm, labelA={$M$}, labelAB={$10$}, labelOnlyA={$25 - 10 = 15$}, labelOnlyB={$30 - 10 = 20$}]
-							\fillAll[fill=white]
+							\fillBack
 							\setpostvennhook
 							{
 								\node[above] at (current bounding box.south) {$50 - 15 - 20 - 10 = 5$};
@@ -706,7 +706,7 @@
 					\end{alignat*}
 					\begin{center}
 						\begin{venndiagram3sets}[showframe=true, radius=3.5cm, overlap=2.3cm, vgap=1cm, labelA={$J$}, labelB={$A$}, labelABC={$1$}, labelOnlyAC={$1 - 1 = 0$}, labelOnlyBC={$5-1 = 4$}, labelOnlyAB={$6 - 1 = 5$}, labelOnlyA={$45 - 5 - 1 - 0 = 39$}, labelOnlyB={$30 - 5 - 1 - 4 = 20$}, labelOnlyC={$20 - 0 - 1 - 4 = 15$}]
-							\fillAll[fill=white]
+							\fillBack
 							\setpostvennhook
 							{
 								\node[above] at (current bounding box.south) {$100 - 39 - 20 - 15 - 5 - 0 - 4 - 1 = 16$};
@@ -728,7 +728,7 @@
 							\end{alignat*}
 							\begin{center}
 								\begin{venndiagram2sets}[shade=circle area, showframe=true, radius=2.4cm, overlap=1.2cm, vgap=1cm, labelA={$M$}, labelB={$C$}, labelAB=$x$, labelOnlyA={$700 - x$}, labelOnlyB={$400 - x$}]
-									\fillAll[fill=white]
+									\fillBack
 									\setpostvennhook
 									{
 										\node[above] at (current bounding box.south) {$1000 - 800 = 200$};
@@ -760,7 +760,7 @@
 							\end{alignat*}
 							\begin{center}
 								\begin{venndiagram3sets}[showframe=true, radius=3.5cm, overlap=2.3cm, vgap=0.8cm, labelA={$C$}, labelB={$B$}, labelC={$D$}, labelABC={$1$}, labelOnlyAB={$8 - 1 = 7$}, labelOnlyC={$x - 3 - 1 - 5 = x - 9$}, labelOnlyAC={$4 - 1 = 3$}, labelOnlyBC={$6 - 1 = 5$}, labelOnlyA={$22 - 7 - 1 - 3 = 11$}, labelOnlyB={$26 - 7 - 1 - 5 = 13$}]
-									\fillAll[fill=white]
+									\fillBack
 									\setpostvennhook
 									{
 										\node[above] at (current bounding box.south) {$64 - 45 = 19$};
@@ -782,7 +782,7 @@
 						\end{alignat*}
 						\begin{center}
 							\begin{venndiagram3sets}[showframe=true, radius=3.5cm, overlap=2.3cm, labelA={FM}, labelB={UML}, labelC={ER}, labelABC={$x$}, labelOnlyAB={$5 - x$}, labelOnlyAC={$4 - x$}, labelOnlyBC={$7 - x$}, labelOnlyA={$x + 8$}, labelOnlyB={$x - 3$}, labelOnlyC={$x - 2$}]
-								\fillAll[fill=white]
+								\fillBack
 							\end{venndiagram3sets}
 						\end{center}
 						\begin{description}

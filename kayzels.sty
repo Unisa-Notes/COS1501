@@ -86,3 +86,26 @@
 % Indented Paragraphs
 \RequirePackage{changepage}
 \newenvironment{indentparagraph}{\begin{adjustwidth}{2em}{}}{\end{adjustwidth}}
+
+% Images
+\RequirePackage{tikz}
+\usetikzlibrary{fit, backgrounds, topaths}
+\tikzstyle{every picture}+=[remember picture]
+
+% Venn Diagrams
+\RequirePackage{venndiagram}
+\RequirePackage{etoolbox}
+\makeatletter
+\def\addvennback{%
+	\expandafter\ifpatchable{\fillAll}{]}{%
+		\expandafter\patchcmd%
+			{\fillAll}{]}{,.. this/.try]}{}{}%
+		\pgfutil@namelet{fillAll@orig}{fillAll}%
+		\newcommand{\fillBack}{%
+			\tikzset{.. this/.style={fill=white}}%
+			\csname fillAll@orig\endcsname
+		}%
+	}{}%
+}
+\makeatother
+\preto\tikzpicture{\addvennback}{}{}
