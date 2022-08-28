@@ -80,8 +80,11 @@
 	}
 
 % Horizontal Rules at document ends
-\newcommand{\rulebookend}{\vbox{\hrule width \hsize \kern 1mm \hrule width \hsize height 2pt}}
-\newcommand{\rulechapterend}{\noindent\rule{\textwidth}{0.4pt}}
+\newcommand{\rulebookend}{\vbox{\hrule width \hsize \kern 1mm \hrule width \hsize height 2pt}%
+	\cfoot{}}
+\newcommand{\rulechapterend}{\noindent\rule{\textwidth}{0.4pt}%
+	\cfoot{}
+}
 
 % Indented Paragraphs
 \RequirePackage{changepage}
