@@ -45,5 +45,3 @@ TeX packages that have been used are:
 - [changepage](https://ctan.org/pkg/changepage): Allow paragraphs to be indented
 - [fancyhdr](https://ctan.org/pkg/fancyhdr): Improve header and footer display
 - [subfiles](https://ctan.org/pkg/subfiles): Allow `tex` files to be written separately, but built together
-
-
