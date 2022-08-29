@@ -304,94 +304,119 @@
 			\begin{example}
 				(Long Way:) Prove that for all subsets $A$ and $B$ of $U$, $A \cup B = B \cup A$
 				\begin{proof}
-					Show $(A \cup B) \subseteq (B \cup A)$
-					\begin{tabbing}
-						Let $\qquad$ \=$x \in (A \cup B)$\\
-						If \>$x \in (A \cup B)$\\
-						then \> $x \in A$ or $x \in B$\\
-						i.e. \> $x \in B$ or $x \in A$\\
-						i.e. \> $x \in (B \cup A)$
-					\end{tabbing}
-					$\therefore$ if $x \in (A \cup B)$, then $x \in (B \cup A)$,\\
-					$\therefore (A \cup B) \subseteq (B \cup A)$.
-
-					\vspace{7mm}
-					Show $(B \cup A) \subseteq (A \cup B)$
-					\begin{tabbing}
-						Let $\qquad$ \=$x \in (B \cup A)$\\
-						If \>$x \in (B \cup A)$\\
-						then \> $x \in B$ or $x \in A$\\
-						i.e. \> $x \in A$ or $x \in B$\\
-						i.e. \> $x \in (A \cup B)$
-					\end{tabbing}
-					$\therefore$ if $x \in (B \cup A)$, then $x \in (A \cup B)$,\\
-					$\therefore (B \cup A) \subseteq (A \cup B)$.
-
-					\vspace{5mm}
+					Show (i) $(A \cup B) \subseteq (B \cup A)$ and (ii) $(B \cup A) \subseteq (A \cup B)$
+					\begin{enumerate}[label=(\roman*)]
+						\item Show $(A \cup B) \subseteq (B \cup A)$
+							\begin{subproof}[Subproof]
+								\removelastskip $ $
+								\begin{tabbing}
+									Let $\qquad$ \=$x \in (A \cup B)$\\
+									If \>$x \in (A \cup B)$\\
+									then \> $x \in A$ or $x \in B$\\
+									i.e. \> $x \in B$ or $x \in A$\\
+									i.e. \> $x \in (B \cup A)$
+								\end{tabbing}
+								$\therefore$ if $x \in (A \cup B)$, then $x \in (B \cup A)$,\\
+								$\therefore (A \cup B) \subseteq (B \cup A)$.
+							\end{subproof}
+						\item Show $(B \cup A) \subseteq (A \cup B)$
+							\begin{subproof}[Subproof]
+								\removelastskip $ $
+								\begin{tabbing}
+									Let $\qquad$ \=$x \in (B \cup A)$\\
+									If \>$x \in (B \cup A)$\\
+									then \> $x \in B$ or $x \in A$\\
+									i.e. \> $x \in A$ or $x \in B$\\
+									i.e. \> $x \in (A \cup B)$
+								\end{tabbing}
+								$\therefore$ if $x \in (B \cup A)$, then $x \in (A \cup B)$,\\
+								$\therefore (B \cup A) \subseteq (A \cup B)$.
+							\end{subproof}
+					\end{enumerate}
 					$\therefore A \cup B = B \cup A$
 				\end{proof}
 			\end{example}
 			Using iff can shorten this, but be careful!
 			\begin{example}
-				\begin{tabbing}
-					$\quad$ \=$x \in (X \cup Y)'$\\
-					iff \>$x \notin (X \cup Y)$\\
-					iff \>$x \notin X$ and $x \notin Y$\\
-					iff \>$x \in X'$ and $x \in Y'$\\
-					iff \>$x \in X' \cap Y'$
-				\end{tabbing}
-				\begin{tabbing}
-					$\quad$ \=$x \in (X \cap Y)'$\\
-					iff \> $x \notin (X \cap Y)$\\
-					iff \> $x \notin X$ or $x \notin Y$\\
-					iff \> $x \in X'$ or $x \in Y'$\\
-					iff \> $x \in X' \cup Y'$
-				\end{tabbing}
+				$ $\\
+				\begin{minipage}{0.4\textwidth}
+					\begin{proof}
+						$ $
+						\begin{tabbing}
+							$\quad$ \=$x \in (X \cup Y)'$\\
+							iff \>$x \notin (X \cup Y)$\\
+							iff \>$x \notin X$ and $x \notin Y$\\
+							iff \>$x \in X'$ and $x \in Y'$\\
+							iff \>$x \in X' \cap Y'$ \` \qedhere
+						\end{tabbing}
+					\end{proof}
+				\end{minipage}
+				\hfill
+				\begin{minipage}{0.4\textwidth}
+					\begin{proof}
+						$ $ 
+						\begin{tabbing}
+							$\quad$ \=$x \in (X \cap Y)'$\\
+							iff \> $x \notin (X \cap Y)$\\
+							iff \> $x \notin X$ or $x \notin Y$\\
+							iff \> $x \in X'$ or $x \in Y'$\\
+							iff \> $x \in X' \cup Y'$ \` \qedhere
+						\end{tabbing}
+					\end{proof}
+				\end{minipage}
 			\end{example}
 			\pagebreak
 			\begin{exercise}{Self-Assessment Exercise \thechapter.6}
-				\begin{enumerate}[label=(\alph*)]
-					\item $(X')' = X$\\
-						Let $x \in (X')'$.
-						\begin{tabbing}
-							$\quad$ \= $x \in (X')'$\\
-							iff \> $x \notin X'$\\
-							iff \> $x \in X$\\
-							$\therefore$ \> $(X')' = X$
-						\end{tabbing}
-					\item $X - (Y \cap W) = (X - Y) \cup (X - W)$\\
-						Let $x \in X - (Y \cap W)$.
-						\begin{tabbing}
-							$\quad$ \= $x \in X - (Y \cap W)$\\
-							iff \> $x \in X$ and $x \notin (Y \cap W)$\\
-							iff \> $x \in X$ and $x \in Y'$ or $x \in W'$\\
-							iff \> $\bigl(x \in X$ and $x \in Y'\bigr)$ or $\bigl(x \in X$ and $x \in W'\bigr)$\\
-							iff \> $\bigl(x \in (X - Y)\bigr)$ or $\bigl(x \in (X - W)\bigr)$\\
-							iff \> $x \in (X - Y) \cup (X - W)$\\
-							$\therefore$ \> $X - (Y \cap W) = (X - Y) \cup (X - W)$
-						\end{tabbing}
-					\item $X \cap (Y \cap W) = (X \cap Y) \cap W$\\
-						Let $x \in X \cap (Y \cap W)$.
-						\begin{tabbing}
-							$\quad$ \= $x \in X \cap (Y \cap W)$\\
-							iff \> $x \in X$ and $x \in (Y \cap W)$\\
-							iff \> $x \in X$ and $x \in Y$ and $x \in W$\\
-							iff \> $(x \in X$ and $x \in Y)$ and $x \in W$\\
-							iff \> $x \in (X \cap Y)$ and $x \in W$\\
-							iff \> $x \in (X \cap Y) \cap W$\\
-							$\therefore$ \> $X \cap (Y \cap W) = (X \cap Y) \cap W$
-						\end{tabbing}
-					\item $X \cap (Y \cup W) = (X \cap Y) \cup (X \cap W)$\\
-						Let $x \in X \cap (Y \cup W)$
-						\begin{tabbing}
-							$\quad$ \= $x \in X \cap (Y \cup W)$\\
-							iff \> $x \in X$ and $x \in (Y \cup W)$\\
-							iff \> $x \in X$ and ($x \in Y$ or $x \in W$)\\
-							iff \> ($x \in X$ and $x \in Y$) or ($x \in X$ and $x \in W$)\\
-							iff \> ($x \in (X \cap Y)$) or ($x \in (X \cap W)$)\\
-							iff \> $x \in (X \cap Y) \cup (X \cap W)$\\
-							$\therefore$ \> $X \cap (Y \cup W) = (X \cap Y) \cup (X \cap W)$
-						\end{tabbing}
+				\begin{enumerate}[label=(\alph*), itemsep=0.5em]
+					\item $(X')' = X$
+						\begin{proof}
+							Let $x \in (X')'$.
+							\begin{tabbing}
+								$\quad$ \= $x \in (X')'$\\
+								iff \> $x \notin X'$\\
+								iff \> $x \in X$\\
+								$\therefore$ \> $(X')' = X$ \` \qedhere
+							\end{tabbing}
+						\end{proof}
+					\item $X - (Y \cap W) = (X - Y) \cup (X - W)$
+						\begin{proof}
+							Let $x \in X - (Y \cap W)$.
+							\begin{tabbing}
+								$\quad$ \= $x \in X - (Y \cap W)$\\
+								iff \> $x \in X$ and $x \notin (Y \cap W)$\\
+								iff \> $x \in X$ and $x \in Y'$ or $x \in W'$\\
+								iff \> $\bigl(x \in X$ and $x \in Y'\bigr)$ or $\bigl(x \in X$ and $x \in W'\bigr)$\\
+								iff \> $\bigl(x \in (X - Y)\bigr)$ or $\bigl(x \in (X - W)\bigr)$\\
+								iff \> $x \in (X - Y) \cup (X - W)$\\
+								$\therefore$ \> $X - (Y \cap W) = (X - Y) \cup (X - W)$ \` \qedhere
+							\end{tabbing}
+						\end{proof}
+					\item $X \cap (Y \cap W) = (X \cap Y) \cap W$
+						\begin{proof}
+							Let $x \in X \cap (Y \cap W)$.
+							\begin{tabbing}
+								$\quad$ \= $x \in X \cap (Y \cap W)$\\
+								iff \> $x \in X$ and $x \in (Y \cap W)$\\
+								iff \> $x \in X$ and $x \in Y$ and $x \in W$\\
+								iff \> $(x \in X$ and $x \in Y)$ and $x \in W$\\
+								iff \> $x \in (X \cap Y)$ and $x \in W$\\
+								iff \> $x \in (X \cap Y) \cap W$\\
+								$\therefore$ \> $X \cap (Y \cap W) = (X \cap Y) \cap W$ \` \qedhere
+							\end{tabbing}
+						\end{proof}
+					\item $X \cap (Y \cup W) = (X \cap Y) \cup (X \cap W)$
+						\begin{proof}
+							Let $x \in X \cap (Y \cup W)$
+							\begin{tabbing}
+								$\quad$ \= $x \in X \cap (Y \cup W)$\\
+								iff \> $x \in X$ and $x \in (Y \cup W)$\\
+								iff \> $x \in X$ and ($x \in Y$ or $x \in W$)\\
+								iff \> ($x \in X$ and $x \in Y$) or ($x \in X$ and $x \in W$)\\
+								iff \> ($x \in (X \cap Y)$) or ($x \in (X \cap W)$)\\
+								iff \> $x \in (X \cap Y) \cup (X \cap W)$\\
+								$\therefore$ \> $X \cap (Y \cup W) = (X \cap Y) \cup (X \cap W)$ \` \qedhere
+							\end{tabbing}
+						\end{proof}
 				\end{enumerate}
 			\end{exercise}
 			In order to prove that two sets are not equal, one needs to just provide a \textbf{counterexample} - an element that is in one set that is not in the other.
@@ -464,7 +489,7 @@
 						&= \bigl\{\emptyset, \{1\}, \{2\}\bigr\}
 					\end{align*}
 				\item \textbf{Is it the case that, for all $X, Y \subseteq U,\mathcal{P}(X) \cap \mathcal{P}(Y) = \mathcal{P}(X \cap Y)$?}\\
-					Yes. \rule{0pt}{11pt} \vspace*{-15pt}
+					Yes.
 					\begin{proof}
 						Let $S \in P(X) \cap P(Y)$.
 						\begin{tabbing}
@@ -525,15 +550,15 @@
 							\fillOnlyA
 						\end{vennthree}
 					\end{center}
-					\begin{description}
-						\item[Counterexample:] Let $X = \{1, 2\}$, $Y = \{4\}$, $Z = \{1, 3\}$.
+					\begin{proof}[Counterexample]
+						Let $X = \{1, 2\}$, $Y = \{4\}$, $Z = \{1, 3\}$.
 							\begin{align*}
 								X - (Y - Z) &= \{1, 2\}\\
 								(X - Y) - Z &= \{2\}\\
 								\{1, 2\} &\neq \{2\}\\
-								X - (Y - Z) &\neq (X - Y) - Z
+								X - (Y - Z) &\neq (X - Y) - Z \qedhere
 							\end{align*}
-					\end{description}
+					\end{proof}
 				\item \textbf{Use Venn diagrams to investigate whether or not, for all sets $A, B, C \subseteq U$}\\
 				\textbf{$(A \cap B) + (C \cap A) = (A \cap B') \cup (B - C)$. If it is true, provide a proof. Else, provide a counterexample.}
 					\begin{center}
@@ -589,15 +614,15 @@
 							\fillBNotC
 						\end{vennthree}
 					\end{center}
-					\begin{description}
-						\item[Counterexample:] Let $A = \{1, 2\}$, $B = \{2, 3\}$, $C = \{4\}$
+					\begin{proof}[Counterexample]
+						Let $A = \{1, 2\}$, $B = \{2, 3\}$, $C = \{4\}$
 						\begin{align*}
 							(A \cap B) + (C \cap A) &= \{2\}\\
 							(A \cap B') \cup (B - C) &= \{1, 2, 3\}\\
 							\{2\} &\neq \{1, 2, 3\}\\
-							(A \cap B) + (C \cap A) &\neq (A \cap B') \cup (B - C)
+							(A \cap B) + (C \cap A) &\neq (A \cap B') \cup (B - C) \qedhere
 						\end{align*} 
-					\end{description}
+					\end{proof}
 			\end{enumerate}
 		\end{exercise}
 		\pagebreak
@@ -729,17 +754,17 @@
 							\end{vennthree}
 						\end{center}
 						\begin{description}
-							\item[For Only FM:] \rule{0pt}{11pt} \vspace*{-23pt}
+							\item[For Only FM:] \moveup
 								\begin{align*}
 									17 - (5 - x) - x - (4 - x) &= 17 - 5 + x - x - 4 + x\\
 									&= x + 8
 								\end{align*}
-							\item[For Only UML:] \rule{0pt}{11pt} \vspace*{-23pt}
+							\item[For Only UML:] \moveup
 								\begin{align*}
 									9 - (5 - x) - x - (7 - x) &= 9 - 5 + x - x - 7 + x\\
 									&= x - 3
 								\end{align*}
-							\item[For Only ER:] \rule{0pt}{11pt} \vspace*{-23pt}
+							\item[For Only ER:] \moveup
 								\begin{align*}
 									9 - (4 - x) - x - (7 - x) &= 9 - 4 + x - x - 7 + x\\
 									&= x - 2
@@ -796,8 +821,8 @@
 			\pagebreak
 			\begin{exercise}{Self Assessment Exercise \thechapter.11}
 				\textbf{Prove the following}
-				\begin{enumerate}
-					\item \textbf{$\{y \in \mathbb{Z}^{+} \mid y$ is an even prime number$\} = \{u \in \mathbb{Z}^{+} \mid u^{2} = 4\}$}
+				\begin{enumerate}[itemsep=0.5em]
+					\item \textbf{$\{y \in \mathbb{Z}^{+} \mid y$ is an even prime number$\} = \{u \in \mathbb{Z}^{+} \mid u^{2} = 4\}$}\questionspace
 						\begin{proof}
 							Let $x \in \{y \in \mathbb{Z}^{+} \mid y$ is an even prime number$\}$.
 							\begin{tabbing}
@@ -809,7 +834,7 @@
 								iff      \> $x \in \{u \in \mathbb{Z}^{+} \mid u^{2} = 4\}$ \` \qedhere
 							\end{tabbing}
 						\end{proof}
-					\item \textbf{$\mathcal{P}\bigl(\{0, 1\}\bigr) = \{\emptyset\} \cup \bigl\{\{0\}\bigr\} \cup \bigl\{\{1\}\bigr\} \cup \bigl\{\{0, 1\}\bigr\}$}
+					\item \textbf{$\mathcal{P}\bigl(\{0, 1\}\bigr) = \{\emptyset\} \cup \bigl\{\{0\}\bigr\} \cup \bigl\{\{1\}\bigr\} \cup \bigl\{\{0, 1\}\bigr\}$}\questionspace
 						\begin{proof}
 							Let $X \in \mathcal{P}\bigl(\{0, 1\}\bigr)$.
 							\begin{tabbing}
@@ -820,7 +845,7 @@
 								iff \> $X \in \{\emptyset\} \cup \bigl\{\{0\}\bigr\} \cup \bigl\{\{1\}\bigr\} \cup \bigl\{\{0, 1\}\bigr\}$ \` \qedhere
 							\end{tabbing}
 						\end{proof}
-					\item \textbf{$\{x \in \mathbb{R} \mid x^{2} + 6x + 5 < 0\} = \{x \in \mathbb{R} \mid -5 < x < -1\}$}
+					\item \textbf{$\{x \in \mathbb{R} \mid x^{2} + 6x + 5 < 0\} = \{x \in \mathbb{R} \mid -5 < x < -1\}$}\questionspace
 						\begin{proof}
 							Let $y \in \{x \in \mathbb{R} \mid x^{2} + 6x + 5 < 0\}$
 							\begin{tabbing}
@@ -837,7 +862,7 @@
 							\end{tabbing}
 						\end{proof}
 						\pagebreak
-					\item \textbf{$\{x \in \mathbb{Z} \mid x^{2} - 5x + 4 < 0\} = \{x \in \mathbb{Z}^{+} \mid x$ is a prime factor of $6\}$}
+					\item \textbf{$\{x \in \mathbb{Z} \mid x^{2} - 5x + 4 < 0\} = \{x \in \mathbb{Z}^{+} \mid x$ is a prime factor of $6\}$}\questionspace
 						\begin{proof}
 							Let $w \in \{x \in \mathbb{Z} \mid x^{2} - 5x + 4 < 0\}$
 							\begin{tabbing}
@@ -856,7 +881,7 @@
 								iff \> $w \in \{x \in \mathbb{Z}^{+} \mid x$ is a prime factor of $6\}$ \` \qedhere
 							\end{tabbing}
 						\end{proof}
-					\item \textbf{$\{x \in \mathbb{R} \mid x^{2} + x - 2 > 0\} = \{x \in \mathbb{R} \mid x < -2$ or $x > 1\}$}
+					\item \textbf{$\{x \in \mathbb{R} \mid x^{2} + x - 2 > 0\} = \{x \in \mathbb{R} \mid x < -2$ or $x > 1\}$}\questionspace
 						\begin{proof}
 							Let $z \in \{x \in \mathbb{R} \mid x^{2} + x - 2 > 0\}$
 							\begin{tabbing}
@@ -874,8 +899,8 @@
 			\end{exercise}
 			\pagebreak
 			\begin{exercise}{Self Assessment Exercise \thechapter.12}
-				\begin{enumerate}
-					\item \textbf{Determine whether or not for $V$, $W$, $Z \subseteq U$, if $V \subseteq W$, then $V \cup Z \subseteq W \cup Z$ and $V \cap Z \subseteq W \cap Z$. Provide either a proof or a counterexample.}\\
+				\begin{enumerate}[itemsep=0.5em]
+					\item \textbf{Determine whether or not for $V$, $W$, $Z \subseteq U$, if $V \subseteq W$, then $V \cup Z \subseteq W \cup Z$ and $V \cap Z \subseteq W \cap Z$. Provide either a proof or a counterexample.}\questionspace
 						Both statements are true.
 						\begin{proof}
 							Suppose $V \subseteq W$
@@ -889,7 +914,7 @@
 							\end{tabbing}
 						\end{proof}
 						\begin{proof}
-							Suppose $V \subseteq W$
+							Suppose $V \subseteq W$ 
 							\begin{tabbing}
 								Let $\quad$ \= $x \in V \cap Z$\\
 								Then \> $x \in V$ and $x \in Z$\\
@@ -899,7 +924,7 @@
 								$\therefore$ \> $V \cap Z \subseteq W \cap Z$ \`\qedhere
 							\end{tabbing}
 						\end{proof}
-					\item \textbf{Is it the case that, for all subsets $X$, $Y$, $W \subseteq U$, if $X = Y$ and $Y = W$, then $X = W$, and if $X \subset Y$ and $Y \subset W$, then $X \subset W$?}\\
+					\item \textbf{Is it the case that, for all subsets $X$, $Y$, $W \subseteq U$, if $X = Y$ and $Y = W$, then $X = W$, and if $X \subset Y$ and $Y \subset W$, then $X \subset W$?}\questionspace
 						Both statements are true.
 						\begin{proof}
 							Suppose $X = Y$ and $Y = W$.
@@ -925,7 +950,7 @@
 							\end{tabbing}
 						\end{proof}
 					\pagebreak
-					\item \textbf{Is it the case that, for all subsets $X$ of $U$, $X \cup \emptyset = X$? Justify your answer.}\\
+					\item \textbf{Is it the case that, for all subsets $X$ of $U$, $X \cup \emptyset = X$? Justify your answer.}\questionspace
 						Yes.
 						\begin{proof}
 							$ $
@@ -944,7 +969,7 @@
 							\end{tabbing}
 							As $(X \subseteq X \cup \emptyset)$ and $(X \cup \emptyset \subseteq X)$, $X \cup \emptyset = X$
 						\end{proof}
-					\item \textbf{Is it true that for all subsets $V$ and $W$ of $U$, $V \cap W = \emptyset$ iff $V = \emptyset$ or $W = \emptyset$?}\\
+					\item \textbf{Is it true that for all subsets $V$ and $W$ of $U$, $V \cap W = \emptyset$ iff $V = \emptyset$ or $W = \emptyset$?}\questionspace
 						No.
 						\begin{proof}
 							$ $
@@ -980,7 +1005,7 @@
 							As the first claim is false, it is not the case that $V \cap W = \emptyset$ iff $V = \emptyset$ or $W = \emptyset$.
 						\end{proof}
 					\pagebreak
-					\item \textbf{Is it the case that, for every subset $X$ of $U$ there exists a subset $Y$ of $U$ such that $X \cup Y = \emptyset$? Justify your answer.}\\
+					\item \textbf{Is it the case that, for every subset $X$ of $U$ there exists a subset $Y$ of $U$ such that $X \cup Y = \emptyset$? Justify your answer.}\questionspace
 						No.
 						\begin{proof}[Counterexample]
 							Let $X = \{1,\}$ and $U$ = \{1, 2\}.\\
@@ -997,7 +1022,7 @@
 							\end{align*}
 							From the above, there is no set $Y$ such that $X \cup Y = \emptyset$.
 						\end{proof}
-					\item \textbf{Is it the case that, for every subset $X$ of $U$, there is some subset $Y$ such taht $X \cap Y = U$? Justify your answer.}\\
+					\item \textbf{Is it the case that, for every subset $X$ of $U$, there is some subset $Y$ such taht $X \cap Y = U$? Justify your answer.}\questionspace
 						No.
 						\begin{proof}[Counterexample]
 							Let $X = \{1,\}$ and $U$ = \{1, 2\}.\\
@@ -1014,7 +1039,7 @@
 							\end{align*}
 							From the above, there is no set $Y$ such that $X \cap Y = U$.
 						\end{proof}
-					\item \textbf{Using ``if and only if'' statements, prove the following:}
+					\item \textbf{Using ``if and only if'' statements, prove the following:}\questionspace
 						\begin{enumerate}[label=(\alph*)]
 							\item \textbf{$X + Y = Y + X$ for all $X$, $Y \subseteq U$.}
 								\begin{proof}
@@ -1027,6 +1052,7 @@
 										$\therefore$ \> $X + Y = Y + X$ \` \qedhere
 									\end{tabbing}
 								\end{proof}
+							\pagebreak
 							\item \textbf{$X \cap (Y + Z) = (X \cap Y) + (X \cap Z)$ for all $X$, $Y$, $Z \subseteq U$.}
 								\begin{proof}
 									Let $x \in X \cap (Y + Z)$.
