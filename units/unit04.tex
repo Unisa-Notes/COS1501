@@ -425,7 +425,7 @@
 		\pagebreak
 		\begin{exercise}{Self Assessment Exercise \thechapter.8}
 			\begin{enumerate}
-				\item \textbf{Is it the case for all $X$, $Y$, $Z \subseteq U$, $X + (Y \cap Z) = (X + Y) \cap (X + Z)$?}
+				\item \question{Is it the case for all $X$, $Y$, $Z \subseteq U$, $X + (Y \cap Z) = (X + Y) \cap (X + Z)$?}
 					\begin{center}
 						\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
 							\setpostvennhook
@@ -478,7 +478,7 @@
 					\end{center}
 					As the venn diagrams are not the same, it is not the case.\\
 					Counterexample: Find an element that is in $X$ and in $Y$, but is not in $Z$.
-				\item \textbf{Find examples of sets $A$ and $B$ such that $\mathcal{P}(A \cup B)$ is not a subset of $\mathcal{P}(A) \cup \mathcal{P}(B)$}.\\
+				\item \question{Find examples of sets $A$ and $B$ such that $\mathcal{P}(A \cup B)$ is not a subset of $\mathcal{P}(A) \cup \mathcal{P}(B)$}.\\
 					$A$ and $B$ just need to contain different elements. For example, let $A = \{1\}$ and $B = \{2\}$.
 					\begin{align*}
 						\mathcal{P}(A \cup B) &= \mathcal{P}\bigl(\{1\} \cup \{2\}\bigr)\\
@@ -488,7 +488,8 @@
 						&= \bigl\{\emptyset, \{1\}\bigr\} \cup \bigl\{\emptyset, \{2\}\bigr\}\\
 						&= \bigl\{\emptyset, \{1\}, \{2\}\bigr\}
 					\end{align*}
-				\item \textbf{Is it the case that, for all $X, Y \subseteq U,\mathcal{P}(X) \cap \mathcal{P}(Y) = \mathcal{P}(X \cap Y)$?}\\
+				\pagebreak
+				\item \question{Is it the case that, for all $X, Y \subseteq U,\mathcal{P}(X) \cap \mathcal{P}(Y) = \mathcal{P}(X \cap Y)$?}\\
 					Yes.
 					\begin{proof}
 						Let $S \in P(X) \cap P(Y)$.
@@ -502,9 +503,8 @@
 							iff \> $S \in \mathcal{P}(X \cap Y)$ \` \qedhere
 						\end{tabbing}
 					\end{proof}
-				\pagebreak
-				\item \textbf{Use Venn diagrams to investigate whether or not, for all sets $X, Y, Z \subseteq U$}\\
-				\textbf{$X - (Y - Z) = (X - Y) - Z$. If it is true, provide a proof. Else, provide a counterexample.}
+				\item \question{Use Venn diagrams to investigate whether or not, for all sets $X, Y, Z \subseteq U$ \\
+				$X - (Y - Z) = (X - Y) - Z$. If it is true, provide a proof. Else, provide a counterexample.}
 					\begin{center}
 						\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
 							\setpostvennhook
@@ -559,8 +559,9 @@
 								X - (Y - Z) &\neq (X - Y) - Z \qedhere
 							\end{align*}
 					\end{proof}
-				\item \textbf{Use Venn diagrams to investigate whether or not, for all sets $A, B, C \subseteq U$}\\
-				\textbf{$(A \cap B) + (C \cap A) = (A \cap B') \cup (B - C)$. If it is true, provide a proof. Else, provide a counterexample.}
+				\pagebreak
+				\item \question{Use Venn diagrams to investigate whether or not, for all sets $A, B, C \subseteq U$ \\
+				$(A \cap B) + (C \cap A) = (A \cap B') \cup (B - C)$. If it is true, provide a proof. Else, provide a counterexample.}
 					\begin{center}
 						\begin{vennthree}[tikzoptions={scale=0.8}]
 							\setpostvennhook
@@ -692,7 +693,7 @@
 				\pagebreak
 				\begin{exercise}{Self Assessment Exercise \thechapter.10}
 					\begin{enumerate}
-						\item \textbf{Of $1000$ first year students, $700$ take Mathematics, $400$ take Computer Science, and $800$ take Mathematics or Computer Science.}\\
+						\item \question{Of $1000$ first year students, $700$ take Mathematics, $400$ take Computer Science, and $800$ take Mathematics or Computer Science.}\\
 							$U$ is the first year students, $M$ is those who take Mathematics, and $C$ is those who take Computer Science.
 							\begin{alignat*}{5}
 								\left\lvert U\right\rvert &= 1000 \qquad & \left\lvert M\right\rvert &= 700 \qquad & \left\lvert C\right\rvert &= 400 \qquad & \left\lvert M \cup C\right\rvert &= 800 \qquad & \left\lvert M \cap C\right\rvert &= x
@@ -712,16 +713,18 @@
 								& \Rightarrow & x &= 300
 							\end{alignat*}
 							\begin{enumerate}
-								\item \textbf{How many students take Mathematics and Computer Science?} This would be $x$, which is $300$.
-								\item \textbf{How many students take Mathematics, but not Computer Science?}
+								\item \question{How many students take Mathematics and Computer Science?}\\
+								This would be $x$, which is $300$.
+								\item \question{How many students take Mathematics, but not Computer Science?}
 									\begin{align*}
 										400 - x &= 400 - 300\\
 										&= 100
 									\end{align*}
-								\item \textbf{How many students do not take either of the two subjects?} The number occuring outside the circles, so $200$.
+								\item \question{How many students do not take either of the two subjects?}\\
+								The number occuring outside the circles, so $200$.
 							\end{enumerate}
 						\pagebreak
-						\item \textbf{A builder has a team of 64 construction workers. 45 can use at least one of the three equipment types. 22 can operate cranes, 26 can operate backhoes, 4 can operate cranes and bulldozers, 6 can operate backhoes and bulldozers, 8 can operate cranes and backhoes, and 1 can operate all three kinds of machinery. How many can operate bulldozers?}\\
+						\item \question{A builder has a team of 64 construction workers. 45 can use at least one of the three equipment types. 22 can operate cranes, 26 can operate backhoes, 4 can operate cranes and bulldozers, 6 can operate backhoes and bulldozers, 8 can operate cranes and backhoes, and 1 can operate all three kinds of machinery. How many can operate bulldozers?}\\
 							$U$ is the workers, $C$ is the workers who can operate cranes, $B$ is the workers who can operate backhoes, and $D$ is the workers who can operate bulldozers. 
 							\begin{alignat*}{4}
 								\left\lvert U\right\rvert &= 64 \qquad & \left\lvert C\right\rvert &= 22 \qquad & \left\lvert B \right\rvert &= 26 \qquad & \left\lvert D\right\rvert &= x\\
@@ -744,7 +747,7 @@
 							\end{alignat*}
 							The number of people who can only operate bulldozers is $x - 9 = 14 - 9 = 5$.\\
 							The number of people who can operate bulldozers is therefore $5 + 3 + 1 + 5 = 14$.
-						\item \textbf{A software company employs 22 software engineers. All of them can use at least one of the three methods. $17$ of them can use a formal method (FM), $9$ can use Unified Modelling Language (UML), and $9$ can use entity-relationship diagrams (ER). $5$ engineers can use both an FM and UML, $4$ both an FM and ER diagrams, and $7$ both UML and ER diagrams.}
+						\item \question{A software company employs 22 software engineers. All of them can use at least one of the three methods. $17$ of them can use a formal method (FM), $9$ can use Unified Modelling Language (UML), and $9$ can use entity-relationship diagrams (ER). $5$ engineers can use both an FM and UML, $4$ both an FM and ER diagrams, and $7$ both UML and ER diagrams.}
 						\begin{alignat*}{4}
 							\left\lvert U\right\rvert &= 22 \qquad & \left\lvert \mathrm{FM}\right\rvert&= 17 \qquad & \left\lvert \mathrm{UML}\right\rvert &= 9 \qquad & \left\lvert \mathrm{ER}\right\rvert &= 9 \\
 							\left\lvert \mathrm{FM} \cap \mathrm{UML}\right\rvert &= 5 \qquad & \left\lvert \mathrm{FM} \cap \mathrm{ER}\right\rvert &= 4 \qquad & \left\lvert \mathrm{UML} \cap \mathrm{ER}\right\rvert &= 7 \qquad & \left\lvert \mathrm{FM} \cap \mathrm{UML} \cap \mathrm{ER}\right\rvert &= x  
@@ -778,9 +781,9 @@
 							& \Rightarrow \quad & x &= 3
 						\end{alignat*}
 						\begin{enumerate}
-							\item \textbf{How many engineers can use all three diagrams?}\\
+							\item \question{How many engineers can use all three diagrams?}\\
 								As shown above, $3$ engineers.
-							\item \textbf{How many engineers can use UML only?}
+							\item \question{How many engineers can use UML only?}
 								\begin{align*}
 									x - 3 &= 3 - 3\\
 									&= 0
