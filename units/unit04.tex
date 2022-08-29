@@ -905,53 +905,57 @@
 				\begin{enumerate}
 					\item \question{Determine whether or not for $V$, $W$, $Z \subseteq U$, if $V \subseteq W$, then $V \cup Z \subseteq W \cup Z$ and $V \cap Z \subseteq W \cap Z$. Provide either a proof or a counterexample.}\\
 						Both statements are true.
-						\begin{proof}
-							Suppose $V \subseteq W$
-							\begin{tabbing}
-								Let $\quad$ \= $x \in V \cup Z$\\
-								Then \> $x \in V$ or $x \in Z$\\
-								\> $\qquad$ (If $x \in V$, $x \in W$, as $V \subseteq W$)\\
-								i.e. \> $x \in W$ or $x \in Z$\\
-								i.e. \> $x \in W \cup Z$\\
-								$\therefore$ \> $V \cup Z \subseteq W \cup Z$ \`\qedhere
-							\end{tabbing}
-						\end{proof}
-						\begin{proof}
-							Suppose $V \subseteq W$ 
-							\begin{tabbing}
-								Let $\quad$ \= $x \in V \cap Z$\\
-								Then \> $x \in V$ and $x \in Z$\\
-								\> $\qquad$ (If $x \in V$, $x \in W$, as $V \subseteq W$)\\
-								i.e. \> $x \in W$ and $x \in Z$\\
-								i.e. \> $x \in W \cap Z$\\
-								$\therefore$ \> $V \cap Z \subseteq W \cap Z$ \`\qedhere
-							\end{tabbing}
-						\end{proof}
-					\item \textbf{Is it the case that, for all subsets $X$, $Y$, $W \subseteq U$, if $X = Y$ and $Y = W$, then $X = W$, and if $X \subset Y$ and $Y \subset W$, then $X \subset W$?}\questionspace
+						\begin{indentparagraph}
+							\begin{proof}
+								Suppose $V \subseteq W$
+								\begin{tabbing}
+									Let $\quad$ \= $x \in V \cup Z$\\
+									Then \> $x \in V$ or $x \in Z$\\
+									\> $\qquad$ (If $x \in V$, $x \in W$, as $V \subseteq W$)\\
+									i.e. \> $x \in W$ or $x \in Z$\\
+									i.e. \> $x \in W \cup Z$\\
+									$\therefore$ \> $V \cup Z \subseteq W \cup Z$ \`\qedhere
+								\end{tabbing}
+							\end{proof}
+							\begin{proof}
+								Suppose $V \subseteq W$ 
+								\begin{tabbing}
+									Let $\quad$ \= $x \in V \cap Z$\\
+									Then \> $x \in V$ and $x \in Z$\\
+									\> $\qquad$ (If $x \in V$, $x \in W$, as $V \subseteq W$)\\
+									i.e. \> $x \in W$ and $x \in Z$\\
+									i.e. \> $x \in W \cap Z$\\
+									$\therefore$ \> $V \cap Z \subseteq W \cap Z$ \`\qedhere
+								\end{tabbing}
+							\end{proof}
+						\end{indentparagraph}
+					\item \question{Is it the case that, for all subsets $X$, $Y$, $W \subseteq U$, if $X = Y$ and $Y = W$, then $X = W$, and if $X \subset Y$ and $Y \subset W$, then $X \subset W$?}\\
 						Both statements are true.
-						\begin{proof}
-							Suppose $X = Y$ and $Y = W$.
-							\begin{tabbing}
-								Let $\quad$ \= $x \in X$\\
-								Then \> $x \in Y$, as $X = Y$\\
-								Then \> $x \in W$, as $Y = W$\\
-								$\therefore$ \> $X = W$ \` \qedhere
-							\end{tabbing}
-						\end{proof}
-						\begin{proof}
-							Suppose $X \subset Y$ and $Y \subset W$.
-							\begin{tabbing}
-								Let $\quad$ \= $x \in X$\\
-								Then \> $x \in Y$, as $X \subset Y$\\
-								Then \> $x \in W$, as $Y \subset W$\\
-								$\therefore$ \> $X \subseteq W$\\
-								\> $Y$ has at least one element not in $X$, as $X \subset Y$\\
-								\> $W$ has at least one element not in $Y$, as $Y \subset W$\\
-								So \> $W$ has at least two elements not in $X$\\
-								i.e. $X \neq W$\\
-								so $X \subset W$ \` \qedhere
-							\end{tabbing}
-						\end{proof}
+						\begin{indentparagraph}
+							\begin{proof}
+								Suppose $X = Y$ and $Y = W$.
+								\begin{tabbing}
+									Let $\quad$ \= $x \in X$\\
+									Then \> $x \in Y$, as $X = Y$\\
+									Then \> $x \in W$, as $Y = W$\\
+									$\therefore$ \> $X = W$ \` \qedhere
+								\end{tabbing}
+							\end{proof}
+							\begin{proof}
+								Suppose $X \subset Y$ and $Y \subset W$.
+								\begin{tabbing}
+									Let $\quad$ \= $x \in X$\\
+									Then \> $x \in Y$, as $X \subset Y$\\
+									Then \> $x \in W$, as $Y \subset W$\\
+									$\therefore$ \> $X \subseteq W$\\
+									\> $Y$ has at least one element not in $X$, as $X \subset Y$\\
+									\> $W$ has at least one element not in $Y$, as $Y \subset W$\\
+									So \> $W$ has at least two elements not in $X$\\
+									i.e. $X \neq W$\\
+									so $X \subset W$ \` \qedhere
+								\end{tabbing}
+							\end{proof}
+						\end{indentparagraph}
 					\pagebreak
 					\item \question{Is it the case that, for all subsets $X$ of $U$, $X \cup \emptyset = X$? Justify your answer.}\\
 						Yes.
