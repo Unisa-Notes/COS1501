@@ -57,16 +57,16 @@
 \tcbuselibrary{breakable}
 \RequirePackage{adjustbox}
 \newenvironment{sidenote}[1]
-	{\begin{tcolorbox}[breakable, colback=note color, colframe=note border, fonttitle=\bfseries, title={#1}, center title]}
+	{\begin{tcolorbox}[breakable, colback=note color, colframe=note border, fonttitle=\bfseries, title={#1}, center title, parbox=false]}
 	{\end{tcolorbox}}
 \newenvironment{exercise}[1]
-	{\begin{tcolorbox}[breakable, colback=exercise color, colframe=exercise border, fonttitle=\bfseries, title={#1}, center title]}
+	{\begin{tcolorbox}[breakable, colback=exercise color, colframe=exercise border, fonttitle=\bfseries, title={#1}, center title, parbox=false]}
 	{\end{tcolorbox}}
 \newenvironment{example}
 	{\begin{tcolorbox}[coltitle=example title, colback=example color, breakable, detach title, before upper={\tcbtitle\quad}, title=\textbf{Example}, parbox=false]}
 	{\end{tcolorbox}}
 \newenvironment{theorem}[1][Theorem]
-	{\begin{tcolorbox}[breakable, colback=theorem color, colframe=theorem border, fonttitle=\bfseries, title={#1}, center title]}
+	{\begin{tcolorbox}[breakable, colback=theorem color, colframe=theorem border, fonttitle=\bfseries, title={#1}, center title, parbox=false]}
 	{\end{tcolorbox}}
 
 % Include/Input Subfiles

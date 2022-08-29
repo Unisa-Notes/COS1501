@@ -5,6 +5,7 @@
 	\chapter{Relations}
 		\section{Ordered Pairs}
 			In sets the order of the elements is insignificant. If the order of the elements is significant, it is written with an \textbf{ordered pair}, which is written in round brackets ().
+			\nopagebreak
 			\begin{example}
 				An ordered pair is written $(a, b)$ where $a$ and $b$ are elements of the pair. $(a, b) \neq (b, a)$.
 			\end{example}
@@ -14,6 +15,7 @@
 				\bigl\{(x, y) \mid x \in A \text{ and } y \in B\bigr\}
 			\end{align*}
 			In other words, the Cartesian product $A \times B$ denotes a set of ordered pairs such that all the first coordinates of the pairs are elements of set $A$, and all the second coordinates of the pairs are elements of set $B$.
+			\nopagebreak
 			\begin{example}
 				$A = \{2, 3, 4\}, B = \{5, 6\}$
 				\begin{align*}
@@ -35,30 +37,29 @@
 					\bigl\{(2, 6), (3, 6), (4, 6)\bigr\}\\
 					A \times B
 				\end{align*}
-				\pagebreak
 			\end{example}
-				\begin{exercise}{Self-Assessment Exercise \thechapter.4}
-					\begin{alignat*}{3}
-						A &= \{1, 2, 3, 4\} \qquad & B &= \{2, 5\} \qquad & C &= \{3, 4, 7\}
-					\end{alignat*}
+			\begin{exercise}{Self-Assessment Exercise \thechapter.4}
+				\begin{alignat*}{3}
+					A &= \{1, 2, 3, 4\} \qquad & B &= \{2, 5\} \qquad & C &= \{3, 4, 7\}
+				\end{alignat*}
 				\question{List the following Cartesian products in list notation:}
-					\begin{enumerate}[label=(\alph*)]
-						\item $A \times B = \bigl\{(1, 2), (1, 5), (2, 2), (2, 5), (3, 2), (3, 5), (4, 2), (4, 5)\bigr\}$
-						\item $B \times A = \bigl\{(2, 1), (2, 2), (2, 3), (2, 4), (5, 1), (5, 2), (5, 3), (5, 4)\bigr\}$
-						\item $(A \cup B) \times C$
-							\begin{align*}
-								A \cup B &= \{1, 2, 3, 4, 5\}\\
-								(A \cup B) \times C &= \bigl\{(1, 3), (1, 4), (1, 7), (2, 3), (2, 4), (2, 7), (3, 3), (3, 4), (3, 7),\\
-								& \qquad (4, 3), (4, 4), (4, 7), (5, 3), (5, 4), (5, 7)\bigr\}
-							\end{align*}
-						\item $(A + B) \times B$
-							\begin{align*}
-								A + B &= \{1, 3, 4, 5\}\\
-								(A + B) \times B &= \bigl\{(1, 2), (1, 5), (3, 2), (3, 5), (4, 2), (4, 5), (5, 2), (5, 5)\bigr\}
-							\end{align*}
-					\end{enumerate}
-				\end{exercise}
-				\pagebreak
+				\begin{enumerate}[label=(\alph*)]
+					\item $A \times B = \bigl\{(1, 2), (1, 5), (2, 2), (2, 5), (3, 2), (3, 5), (4, 2), (4, 5)\bigr\}$
+					\item $B \times A = \bigl\{(2, 1), (2, 2), (2, 3), (2, 4), (5, 1), (5, 2), (5, 3), (5, 4)\bigr\}$
+					\item $(A \cup B) \times C$
+						\begin{align*}
+							A \cup B &= \{1, 2, 3, 4, 5\}\\
+							(A \cup B) \times C &= \bigl\{(1, 3), (1, 4), (1, 7), (2, 3), (2, 4), (2, 7), (3, 3), (3, 4), (3, 7),\\
+							& \qquad (4, 3), (4, 4), (4, 7), (5, 3), (5, 4), (5, 7)\bigr\}
+						\end{align*}
+					\item $(A + B) \times B$
+						\begin{align*}
+							A + B &= \{1, 3, 4, 5\}\\
+							(A + B) \times B &= \bigl\{(1, 2), (1, 5), (3, 2), (3, 5), (4, 2), (4, 5), (5, 2), (5, 5)\bigr\}
+						\end{align*}
+				\end{enumerate}
+			\end{exercise}
+			\pagebreak
 			\subsection{Domain, Range and Codomain}
 				Suppose $T$ is a relation from $X$ to $Y$.\\
 				Then $Y$ is the \textbf{codomain} of $T$.
