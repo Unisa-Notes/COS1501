@@ -41,7 +41,7 @@
 					\begin{alignat*}{3}
 						A &= \{1, 2, 3, 4\} \qquad & B &= \{2, 5\} \qquad & C &= \{3, 4, 7\}
 					\end{alignat*}
-					\textbf{List the following Cartesian products in list notation:}
+				\question{List the following Cartesian products in list notation:}
 					\begin{enumerate}[label=(\alph*)]
 						\item $A \times B = \bigl\{(1, 2), (1, 5), (2, 2), (2, 5), (3, 2), (3, 5), (4, 2), (4, 5)\bigr\}$
 						\item $B \times A = \bigl\{(2, 1), (2, 2), (2, 3), (2, 4), (5, 1), (5, 2), (5, 3), (5, 4)\bigr\}$
@@ -183,16 +183,16 @@
 				\pagebreak
 				\begin{exercise}{Self Assessment Activity \thechapter.8}
 					\begin{enumerate}
-						\item \textbf{Let $P$ and $R$ be relations on $A = \bigl\{1, 2, 3, \{1\}, \{2\}\bigr\}$, where\\
+						\item \question{Let $P$ and $R$ be relations on $A = \bigl\{1, 2, 3, \{1\}, \{2\}\bigr\}$, where\\
 						$P = \Bigl\{\bigl(1, \{1\}\bigr), \bigl(1, 2\bigr)\Bigr\}$ and $R = \Bigl\{\bigl(1, \{1\}\bigr), \bigl(1, 3\bigr), \bigl(2, \{1\}\bigr), \bigl(2, \{2\}\bigr), \bigl(\{1\}, 3\bigr), \bigl(\{2\}, \{1\}\bigr) \Bigr\}$}
 							\begin{enumerate}[label=(\alph*)]
-								\item \textbf{Is $R$ irreflexive?}\\
+								\item \question{Is $R$ irreflexive?}\\
 									Yes. There are no elements that are related to themselves.
-								\item \textbf{Is $R$ reflexive?}\\
+								\item \question{Is $R$ reflexive?}\\
 									No. There are no elements that are related to themselves.
-								\item \textbf{Is $R$ symmetric?}\\
+								\item \question{Is $R$ symmetric?}\\
 									No. $\bigl(1, \{1\}\bigr) \in R$, but $\bigl(\{1\}, 1\bigr) \notin R$.
-								\item \textbf{Is $R$ antisymmetric?}\\
+								\item \question{Is $R$ antisymmetric?}\\
 									Yes.\\
 									$\bigl(1, \{1\}\bigr) \in R$, and $\bigl(\{1\}, 1\bigr) \notin R$.\\
 									$\bigl(1, 3\bigr) \in R$, and $\bigl(3, 1\bigr) \notin R$.\\
@@ -200,11 +200,11 @@
 									$\bigl(2, \{2\}\bigr) \in R$, and $\bigl(\{2\}, 2\bigr) \notin R$.\\
 									$\bigl(\{1\}, 3\bigr) \in R$, and $\bigl(3, \{1\}\bigr) \notin R$.\\
 									$\bigl(\{2\}, \{1\}\bigr) \in R$, and $\bigl(\{1\}, \{2\}\bigr) \notin R$.
-								\item \textbf{Is $R$ transitive?}\\
+								\item \question{Is $R$ transitive?}\\
 									No. $\bigl(2, \{1\}\bigr) \in R$, and $\bigl(\{1\}, 3\bigr) \in R$, but $\bigl(2, 3\bigr) \notin R$
-								\item \textbf{Does $R$ satisfy the requirement for trichotomy?}\\
+								\item \question{Does $R$ satisfy the requirement for trichotomy?}\\
 									No. There is no pair where $1$ is related to $2$.
-								\item \textbf{Determine the relation $R \circ R$.}\\
+								\item \question{Determine the relation $R \circ R$.}\\
 									$R \circ R = R; R$.
 									\begin{indentparagraph}
 										$\bigl(1, \{1\}\bigr) \rightarrow \bigl(\{1\}, 3\bigr) \rightarrow \bigl(1, 3\bigr)$\\
@@ -215,7 +215,7 @@
 										$\bigl(\{2\}, \{1\}\bigr) \rightarrow \bigl(\{1\}, 3\bigr) \rightarrow \bigl(\{2\}, 3\bigr)$
 									\end{indentparagraph}
 									$R \circ R = R; R = \Bigl\{\bigl(1, 3\bigr), \bigl(2, 3\bigr), \bigl(2, \{1\}\bigr), \bigl(\{2\}, 3\bigr)\Bigr\}$
-								\item \textbf{Determine the relation $R \circ P$.}
+								\item \question{Determine the relation $R \circ P$.}
 									$R \circ P = P;R$.
 									\begin{indentparagraph}
 										$\bigl(1, \{1\}\bigr) \rightarrow \bigl(\{1\}, 3\bigr) \rightarrow \bigl(1, 3\bigr)$\\
@@ -223,11 +223,10 @@
 										$\bigl(1, 2\bigr) \rightarrow \bigl(2, \{2\}\bigr) \rightarrow \bigl(1, \{2\}\bigr)$
 									\end{indentparagraph}
 									$R \circ P = R;R = \Bigl\{\bigl(1, 3\bigr), \bigl(1, \{1\}\bigr), \bigl(1, \{2\}\bigr)\Bigr\}$
-								\item \textbf{Give the subset $T$ of $R$ where $(a, B) \in T$ iff $a \in B$.}\\
+								\item \question{Give the subset $T$ of $R$ where $(a, B) \in T$ iff $a \in B$.}\\
 									$T = \Bigl\{\bigl(1, \{1\}\bigr), \bigl(2, \{2\}\bigr)\Bigr\}$
 							\end{enumerate}
-						\pagebreak
-						\item \textbf{Let $A = \{a, b\}$. For each of the specifications given below, find suitable examples of relations on $\mathcal{P}(A)$}
+						\item \question{Let $A = \{a, b\}$. For each of the specifications given below, find suitable examples of relations on $\mathcal{P}(A)$}
 							\begin{align*}
 								\mathcal{P}(A) &= \bigl\{\emptyset, \{a\}, \{b\}, \{a, b\}\bigr\}\\
 								\mathcal{P}(A) \times \mathcal{P}(A) &= \Bigl\{
@@ -238,7 +237,7 @@
 								\Bigr\}
 							\end{align*}
 							\begin{enumerate}[label=(\alph*)]
-								\item \textbf{$R$ is reflexive, symmetric and transitive on $\mathcal{P}(A)$}
+								\item \question{$R$ is reflexive, symmetric and transitive on $\mathcal{P}(A)$}
 									\begin{description}
 										\item[Reflexivity] To be reflexive, these pairs need to appear:
 											\begin{align*}
@@ -254,7 +253,7 @@
 												R_{2} &= \Bigl\{\bigl(\emptyset, \emptyset\bigr), \bigl(\{a\}, \{a\}\bigr), \bigl(\{b\}, \{b\}\bigr), \bigl(\{a, b\}, \{a, b\}\bigr), \bigl(\emptyset, \{a\}\bigr), \bigl(\{a\}, \emptyset\bigr)\Bigr\}
 											\end{align*}
 									\end{description}
-								\item \textbf{$R$ is reflexive and symmetric, but not transitive on $\mathcal{P}(A)$}
+								\item \question{$R$ is reflexive and symmetric, but not transitive on $\mathcal{P}(A)$}
 									\begin{description}
 										\item[Reflexivity] To be reflexive, these pairs need to appear:
 											\begin{align*}
@@ -276,7 +275,7 @@
 											\end{align*}
 									\end{description}
 								\pagebreak
-								\item \textbf{$R$ is reflexive and transitive, but not symmetric, and not antisymmetric on $\mathcal{P}(A)$}
+								\item \question{$R$ is reflexive and transitive, but not symmetric, and not antisymmetric on $\mathcal{P}(A)$}
 									\begin{description}
 										\item[Reflexivity] To be reflexive, these pairs need to appear:
 											\begin{align*}
@@ -297,7 +296,7 @@
 												\Bigr\}
 											\end{align*}
 									\end{description}
-								\item \textbf{$R$ is simultaneuosly symmetric and antisymmetric on $\mathcal{P}(A)$}
+								\item \question{$R$ is simultaneuosly symmetric and antisymmetric on $\mathcal{P}(A)$}
 									\begin{description}
 										\item[Antisymmetry] If there are no elements that are not equal to each other, then $R$ is vacuously antisymmetric.
 										\item[Symmetry] If every element is equal to each other, then every element is symmetric with itself.
@@ -320,7 +319,7 @@
 											\end{align*}
 									\end{description}
 							\end{enumerate}
-						\item \textbf{Prove that if $R$ is a relation on $X$, then $R$ is transitive iff $R \circ R \subseteq R$}.
+						\item \question{Prove that if $R$ is a relation on $X$, then $R$ is transitive iff $R \circ R \subseteq R$}.
 							\begin{proof}
 								$ $
 								\begin{enumerate}[label=(\roman*)]
