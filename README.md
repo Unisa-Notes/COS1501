@@ -27,30 +27,31 @@ Please fork this repo, make your changes, and then open a pull request.
 
 ## The Code
 ### The Structure
-- The file [notes.tex](notes.tex) contains the general structure and order of the files, including package imports. Building this file should build all the other `.tex` files, and include them in one `.pdf` called `notes.pdf`
+- The file [notes.tex](notes.tex) contains the general structure and order of the files. Building this file should build all the other `.tex` files, and include them in one `.pdf` called `notes.pdf`
 - Each unit has a separate `tex` file where the notes are written. These are contained in the [units](./units) folder.
 - The styles, commands and packages used are in the package file [kayzels.sty](kayzels.sty)
 
 ### Packages Used
 TeX packages that have been used are:
-- [geometry](https://ctan.org/pkg/geometry): Used for document margins
 - [amsmath, amssymb](https://www.ctan.org/pkg/amsmath): Used for mathematical symbols and environments
-- [amsthm](https://ctan.org/pkg/amsthm): Used for the proof and theorem environments
-- [enumitem](https://ctan.org/pkg/enumitem): Used to improve the way lists are displayed
-- [xcolor](https://ctan.org/pkg/xcolor): used to get more colors
-- [hyperref](https://ctan.org/pkg/hyperref): Add PDF bookmarks
+- [amsthm](https://ctan.org/pkg/amsthm): Used for the proof environment\
 - [babel](https://ctan.org/pkg/babel): Use description environment, and chapter renaming
+- [changepage](https://ctan.org/pkg/changepage): Allow paragraphs to be indented
+- [enumitem](https://ctan.org/pkg/enumitem): Used to improve the way lists are displayed
+- [etoolbox](https://ctan.org/pkg/etoolbox): Allow commands to be patched
+- [fancyhdr](https://ctan.org/pkg/fancyhdr): Improve header and footer display
 - [fontenc](https://ctan.org/pkg/fontenc), [charter](https://ctan.org/pkg/charter), [inconsolata](https://ctan.org/pkg/inconsolata), [cabin](https://ctan.org/pkg/cabin), [newtxmath](https://ctan.org/pkg/newtx), [bm](https://ctan.org/pkg/bm): Font display
+- [geometry](https://ctan.org/pkg/geometry): Used for document margins
+- [hyperref](https://ctan.org/pkg/hyperref): Add PDF bookmarks
+- [parskip](https://ctan.org/pkg/parskip): Set proper default values for paragraph separation
+- [subfiles](https://ctan.org/pkg/subfiles): Allow `tex` files to be written separately, but built together
+- [tcolorbox](https://ctan.org/pkg/tcolorbox), [adjustbox](https://ctan.org/pkg/adjustbox): Create colored boxes for different environments
 - [tikz](https://ctan.org/pkg/tikz): Used for images
 - [venndiagram](https://ctan.org/pkg/venndiagram): Easier support for Venn Diagram display than using pure tikz
-- [etoolbox](https://ctan.org/pkg/etoolbox): Allow commands to be patched
-- [tcolorbox](https://ctan.org/pkg/tcolorbox), [adjustbox](https://ctan.org/pkg/adjustbox): Create colored boxes for different environments
-- [changepage](https://ctan.org/pkg/changepage): Allow paragraphs to be indented
-- [fancyhdr](https://ctan.org/pkg/fancyhdr): Improve header and footer display
-- [subfiles](https://ctan.org/pkg/subfiles): Allow `tex` files to be written separately, but built together
-- [parskip](https://ctan.org/pkg/parskip): Set proper default values for paragraph separation
-- [xstring](https://ctan.org/pkg/xstring): Analyze strings given as arguments to an environment
 - [xargs](https://ctan.org/pkg/xargs): Allow commands and environments to have more than one optional argument
+- [xcolor](https://ctan.org/pkg/xcolor): Used to get more colors
+- [xstring](https://ctan.org/pkg/xstring): Analyze strings given as arguments to an environment
+
 
 ### Commands Added
 For intellisense, a list of the commands is added in the [package_intellisense](./package_intellisense/) folder. These have been written in formats that can be understood by different LaTeX tools.
