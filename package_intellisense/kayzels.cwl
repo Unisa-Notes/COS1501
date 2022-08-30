@@ -12,8 +12,10 @@
 \begin{theorem}[title]
 \begin{venntwo}
 \begin{venntwo}[options]
+\begin{venntwo}[options][title]
 \begin{vennthree}
 \begin{vennthree}[options]
+\begin{vennthree}[options][title]
 \concept{text}
 \end{definition}
 \end{example}

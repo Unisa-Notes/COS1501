@@ -13,42 +13,22 @@
 			\begin{example}
 				Let $A$, $B$, $C \subseteq U$. Draw the Venn diagram for $\bigl[(A \cup B) - (A \cap B)\bigr] \cup C$
 				\begin{center}
-					\begin{vennthree}
-						\setpostvennhook
-						{
-							\node[above] at (current bounding box.north) {$A \cup B$};
-						}
+					\begin{vennthree}[][$A \cup B$]
 						\fillA
 						\fillB
 					\end{vennthree}
-					\begin{vennthree}
-						\setpostvennhook
-						{
-							\node[above] at (current bounding box.north) {$A \cap B$};
-						}
+					\begin{vennthree}[][$A \cap B$]
 						\fillACapB
 					\end{vennthree}
 					\pagebreak
-					\begin{vennthree}
-						\setpostvennhook
-						{
-							\node[above] at (current bounding box.north) {$(A \cup B) - (A \cap B)$};
-						}
+					\begin{vennthree}[][$(A \cup B) - (A \cap B)$]
 						\fillANotB
 						\fillBNotA
 					\end{vennthree}
-					\begin{vennthree}
-						\setpostvennhook
-						{
-							\node[above] at (current bounding box.north) {$C$};
-						}
+					\begin{vennthree}[][$C$]
 						\fillC
 					\end{vennthree}
-					\begin{vennthree}
-						\setpostvennhook
-						{
-							\node[above] at (current bounding box.north) {$\bigl[(A \cup B) - (A \cap B)\bigr] \cup C$};
-						}
+					\begin{vennthree}[][$\bigl{[}(A \cup B) - (A \cap B)\bigr{]} \cup C$]
 						\fillANotB
 						\fillBNotA
 						\fillC
@@ -61,85 +41,45 @@
 						\begin{enumerate}
 							\item $(X \cup Y)'$
 								\begin{center}
-									\begin{venntwo}[labelA=$X$, labelB=$Y$, tikzoptions={scale=0.8}]
-										\setpostvennhook
-										{
-											\node[above] at (current bounding box.north) {$X \cup Y$};
-										}
+									\begin{venntwo}[labelA=$X$, labelB=$Y$, tikzoptions={scale=0.8}][$X \cup Y$]
 										\fillA
 										\fillB
 									\end{venntwo}
-									\begin{venntwo}[labelA=$X$, labelB=$Y$, tikzoptions={scale=0.8}]
-										\setpostvennhook
-										{
-											\node[above] at (current bounding box.north) {$(X \cup Y)'$};
-										}
+									\begin{venntwo}[labelA=$X$, labelB=$Y$, tikzoptions={scale=0.8}][$(X \cup Y)'$]
 										\fillNotAorB
 									\end{venntwo}
 								\end{center}
 							\item $X' \cap Y'$
 								\begin{center}
-									\begin{venntwo}[labelA=$X$, labelB=$Y$, tikzoptions={scale=0.8}]
-										\setpostvennhook
-										{
-											\node[above] at (current bounding box.north) {$X'$};
-										}
+									\begin{venntwo}[labelA=$X$, labelB=$Y$, tikzoptions={scale=0.8}][$X'$]
 										\fillNotA
 									\end{venntwo}
-									\begin{venntwo}[labelA=$X$, labelB=$Y$, tikzoptions={scale=0.8}]
-										\setpostvennhook
-										{
-											\node[above] at (current bounding box.north) {$Y'$};
-										}
+									\begin{venntwo}[labelA=$X$, labelB=$Y$, tikzoptions={scale=0.8}][$Y'$]
 										\fillNotB
 									\end{venntwo}
-									\begin{venntwo}[labelA=$X$, labelB=$Y$, tikzoptions={scale=0.8}]
-										\setpostvennhook
-										{
-											\node[above] at (current bounding box.north) {$X' \cap Y'$};
-										}
+									\begin{venntwo}[labelA=$X$, labelB=$Y$, tikzoptions={scale=0.8}][$X' \cap Y'$]
 										\fillNotAorB
 									\end{venntwo}
 								\end{center}
 							\item $(X \cap Y)'$
 								\begin{center}
-									\begin{venntwo}[labelA=$X$, labelB=$Y$, tikzoptions={scale=0.8}]
-										\setpostvennhook
-										{
-											\node[above] at (current bounding box.north) {$X \cap Y$};
-										}
+									\begin{venntwo}[labelA=$X$, labelB=$Y$, tikzoptions={scale=0.8}][$X \cap Y$]
 										\fillACapB
 									\end{venntwo}
-									\begin{venntwo}[labelA=$X$, labelB=$Y$, tikzoptions={scale=0.8}]
-										\setpostvennhook
-										{
-											\node[above] at (current bounding box.north) {$(X \cap Y)'$};
-										}
+									\begin{venntwo}[labelA=$X$, labelB=$Y$, tikzoptions={scale=0.8}][$(X \cap Y)'$]
 										\fillNotAorNotB
 									\end{venntwo}
 								\end{center}
 							\pagebreak
 							\item $X' \cap Y'$
 								\begin{center}
-									\begin{venntwo}[labelA=$X$, labelB=$Y$, tikzoptions={scale=0.8}]
-										\setpostvennhook
-										{
-											\node[above] at (current bounding box.north) {$X'$};
-										}
+									\begin{venntwo}[labelA=$X$, labelB=$Y$, tikzoptions={scale=0.8}][$X'$]
 										\fillNotA
 									\end{venntwo}
-									\begin{venntwo}[labelA=$X$, labelB=$Y$, tikzoptions={scale=0.8}]
-										\setpostvennhook
-										{
-											\node[above] at (current bounding box.north) {$Y'$};
-										}
+									\begin{venntwo}[labelA=$X$, labelB=$Y$, tikzoptions={scale=0.8}][$Y'$]
 										\fillNotB
 									\end{venntwo}
-									\begin{venntwo}[labelA=$X$, labelB=$Y$, tikzoptions={scale=0.8}]
-										\setpostvennhook
-										{
-											\node[above] at (current bounding box.north) {$X' \cup Y'$};
-										}
+									\begin{venntwo}[labelA=$X$, labelB=$Y$, tikzoptions={scale=0.8}][$X' \cup Y'$]
 										\fillNotA
 										\fillNotB
 									\end{venntwo}
@@ -149,150 +89,78 @@
 						\begin{enumerate}
 							\item $X - (Y \cup Z)$
 								\begin{center}
-									\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
-										\setpostvennhook
-										{
-											\node[above] at (current bounding box.north) {$X$};
-										}
+									\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}][$X$]
 										\fillA
 									\end{vennthree}
-									\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
-										\setpostvennhook
-										{
-											\node[above] at (current bounding box.north) {$Y \cup Z$};
-										}
+									\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}][$Y \cup Z$]
 										\fillB
 										\fillC
 									\end{vennthree}
-									\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
-										\setpostvennhook
-										{
-											\node[above] at (current bounding box.north) {$X - (Y \cup Z)$};
-										}
+									\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}][$X - (Y \cup Z)$]
 										\fillOnlyA
 									\end{vennthree}
 								\end{center}
 							\item $(X - Y) \cup (X - Z)$
 								\begin{center}
-									\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
-										\setpostvennhook
-										{
-											\node[above] at (current bounding box.north) {$X - Y$};
-										}
+									\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}][$X - Y$]
 										\fillANotB
 									\end{vennthree}
-									\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
-										\setpostvennhook
-										{
-											\node[above] at (current bounding box.north) {$X - Z$};
-										}
+									\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}][$X - Z$]
 										\fillANotC
 									\end{vennthree}
-									\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
-										\setpostvennhook
-										{
-											\node[above] at (current bounding box.north) {$(X - Y) \cup (X - Z)$};
-										}
+									\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}][$(X - Y) \cup (X - Z)$]
 										\fillANotB
 										\fillANotC
 									\end{vennthree}
 								\end{center}
 							\item $X \cap (Y - Z)$
 								\begin{center}
-									\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
-										\setpostvennhook
-										{
-											\node[above] at (current bounding box.north) {$X$};
-										}
+									\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}][$X$]
 										\fillA
 									\end{vennthree}
-									\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
-										\setpostvennhook
-										{
-											\node[above] at (current bounding box.north) {$Y - Z$};
-										}
+									\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}][$Y - Z$]
 										\fillBNotC
 									\end{vennthree}
-									\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
-										\setpostvennhook
-										{
-											\node[above] at (current bounding box.north) {$X \cap (Y - Z)$};
-										}
+									\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}][$X \cap (Y - Z)$]
 										\fillACapBNotC
 									\end{vennthree}
 								\end{center}
 							\pagebreak
 							\item $(X \cap Y) - (X \cap Z)$
 								\begin{center}
-									\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
-										\setpostvennhook
-										{
-											\node[above] at (current bounding box.north) {$X \cap Y$};
-										}
+									\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}][$X \cap Y$]
 										\fillACapB
 									\end{vennthree}
-									\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
-										\setpostvennhook
-										{
-											\node[above] at (current bounding box.north) {$X \cap Z$};
-										}
+									\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}][$X \cap Z$]
 										\fillACapC
 									\end{vennthree}
-									\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
-										\setpostvennhook
-										{
-											\node[above] at (current bounding box.north) {$(X \cap Y) - (X \cap Z)$};
-										}
+									\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}][$(X \cap Y) - (X \cap Z)$]
 										\fillACapBNotC
 									\end{vennthree}
 								\end{center}
 							\item $X \cap (Y + Z)$
 								\begin{center}
-									\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
-										\setpostvennhook
-										{
-											\node[above] at (current bounding box.north) {$X$};
-										}
+									\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}][$X$]
 										\fillA
 									\end{vennthree}
-									\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
-										\setpostvennhook
-										{
-											\node[above] at (current bounding box.north) {$Y + Z$};
-										}
+									\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}][$Y + Z$]
 										\fillBNotC
 										\fillCNotB
 									\end{vennthree}
-									\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
-										\setpostvennhook
-										{
-											\node[above] at (current bounding box.north) {$X \cap (Y + Z)$};
-										}
+									\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}][$X \cap (Y + Z)$]
 										\fillACapBNotC
 										\fillACapCNotB
 									\end{vennthree}
 								\end{center}
 							\item $(X \cap Y) + (X \cap Z)$
 								\begin{center}
-									\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
-										\setpostvennhook
-										{
-											\node[above] at (current bounding box.north) {$X \cap Y$};
-										}
+									\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}][$X \cap Y$]
 										\fillACapB
 									\end{vennthree}
-									\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
-										\setpostvennhook
-										{
-											\node[above] at (current bounding box.north) {$X \cap Z$};
-										}
+									\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}][$X \cap Z$]
 										\fillACapC
 									\end{vennthree}
-									\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
-										\setpostvennhook
-										{
-											\node[above] at (current bounding box.north) {$(X \cap Y) + (X \cap Z)$};
-										}
+									\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}][$(X \cap Y) + (X \cap Z)$]
 										\fillACapBNotC
 										\fillACapCNotB
 									\end{vennthree}
@@ -430,51 +298,27 @@
 			\begin{enumerate}
 				\item \question{Is it the case for all $X$, $Y$, $Z \subseteq U$, $X + (Y \cap Z) = (X + Y) \cap (X + Z)$?}
 					\begin{center}
-						\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
-							\setpostvennhook
-							{
-								\node[above] at (current bounding box.north) {$X$};
-							}
+						\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}][$X$]
 							\fillA
 						\end{vennthree}
-						\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
-							\setpostvennhook
-							{
-								\node[above] at (current bounding box.north) {$Y \cap Z$};
-							}
+						\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}][$Y \cap Z$]
 							\fillBCapC
 						\end{vennthree}
-						\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
-							\setpostvennhook
-							{
-								\node[above] at (current bounding box.north) {$X + (Y \cap Z)$};
-							}
+						\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}][$X + (Y \cap Z)$]
 							\fillOnlyA
 							\fillACapBNotC
 							\fillACapCNotB
 							\fillBCapCNotA
 						\end{vennthree}
-						\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
-							\setpostvennhook
-							{
-								\node[above] at (current bounding box.north) {$X + Y$};
-							}
+						\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}][$X + Y$]
 							\fillANotB
 							\fillBNotA
 						\end{vennthree}
-						\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
-							\setpostvennhook
-							{
-								\node[above] at (current bounding box.north) {$X + Z$};
-							}
+						\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}][$X + Z$]
 							\fillANotC
 							\fillCNotA
 						\end{vennthree}
-						\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
-							\setpostvennhook
-							{
-								\node[above] at (current bounding box.north) {$X + (Y \cap Z)$};
-							}
+						\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}][$X + (Y \cap Z)$]
 							\fillOnlyA
 							\fillBCapCNotA
 						\end{vennthree}
@@ -509,47 +353,23 @@
 				\item \question{Use Venn diagrams to investigate whether or not, for all sets $X, Y, Z \subseteq U$ \\
 				$X - (Y - Z) = (X - Y) - Z$. If it is true, provide a proof. Else, provide a counterexample.}
 					\begin{center}
-						\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
-							\setpostvennhook
-							{
-								\node[above] at (current bounding box.north) {$X$};
-							}
+						\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}][$X$]
 							\fillA
 						\end{vennthree}
-						\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
-							\setpostvennhook
-							{
-								\node[above] at (current bounding box.north) {$Y - Z$};
-							}
+						\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}][$Y - Z$]
 							\fillBNotC
 						\end{vennthree}
-						\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
-							\setpostvennhook
-							{
-								\node[above] at (current bounding box.north) {$X - (Y - Z)$};
-							}
+						\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}][$X - (Y - Z)$]
 							\fillOnlyA
 							\fillACapC
 						\end{vennthree}
-						\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
-							\setpostvennhook
-							{
-								\node[above] at (current bounding box.north) {$X - Y$};
-							}
+						\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}][$X - Y$]
 							\fillANotB
 						\end{vennthree}
-						\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
-							\setpostvennhook
-							{
-								\node[above] at (current bounding box.north) {$Z$};
-							}
+						\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}][$Z$]
 							\fillC
 						\end{vennthree}
-						\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}]
-							\setpostvennhook
-							{
-								\node[above] at (current bounding box.north) {$(X - Y) - Z$};
-							}
+						\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}][$(X - Y) - Z$]
 							\fillOnlyA
 						\end{vennthree}
 					\end{center}
@@ -566,54 +386,26 @@
 				\item \question{Use Venn diagrams to investigate whether or not, for all sets $A, B, C \subseteq U$ \\
 				$(A \cap B) + (C \cap A) = (A \cap B') \cup (B - C)$. If it is true, provide a proof. Else, provide a counterexample.}
 					\begin{center}
-						\begin{vennthree}[tikzoptions={scale=0.8}]
-							\setpostvennhook
-							{
-								\node[above] at (current bounding box.north) {$A \cap B$};
-							}
+						\begin{vennthree}[tikzoptions={scale=0.8}][$A \cap B$]
 							\fillACapB
 						\end{vennthree}
-						\begin{vennthree}[tikzoptions={scale=0.8}]
-							\setpostvennhook
-							{
-								\node[above] at (current bounding box.north) {$C \cap A$};
-							}
+						\begin{vennthree}[tikzoptions={scale=0.8}][$C \cap A$]
 							\fillACapC
 						\end{vennthree}
-						\begin{vennthree}[tikzoptions={scale=0.8}]
-							\setpostvennhook
-							{
-								\node[above] at (current bounding box.north) {$(A \cap B) + (C \cap A)$};
-							}
+						\begin{vennthree}[tikzoptions={scale=0.8}][$(A \cap B) + (C \cap A)$]
 							\fillACapBNotC
 							\fillACapCNotB
 						\end{vennthree}
-						\begin{vennthree}[tikzoptions={scale=0.8}]
-							\setpostvennhook
-							{
-								\node[above] at (current bounding box.north) {$B'$};
-							}
+						\begin{vennthree}[tikzoptions={scale=0.8}][$B'$]
 							\fillNotB
 						\end{vennthree}
-						\begin{vennthree}[tikzoptions={scale=0.8}]
-							\setpostvennhook
-							{
-								\node[above] at (current bounding box.north) {$A \cap B'$};
-							}
+						\begin{vennthree}[tikzoptions={scale=0.8}][$A \cap B'$]
 							\fillANotB
 						\end{vennthree}
-						\begin{vennthree}[tikzoptions={scale=0.8}]
-							\setpostvennhook
-							{
-								\node[above] at (current bounding box.north) {$B - C$};
-							}
+						\begin{vennthree}[tikzoptions={scale=0.8}][$B - C$]
 							\fillBNotC
 						\end{vennthree}
-						\begin{vennthree}[tikzoptions={scale=0.8}]
-							\setpostvennhook
-							{
-								\node[above] at (current bounding box.north) {$(A \cap B') \cup (B - C)$};
-							}
+						\begin{vennthree}[tikzoptions={scale=0.8}][$(A \cap B') \cup (B - C)$]
 							\fillANotB
 							\fillBNotC
 						\end{vennthree}

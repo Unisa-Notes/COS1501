@@ -104,6 +104,7 @@
 % Venn Diagrams
 \RequirePackage{venndiagram}
 \RequirePackage{etoolbox}
+\RequirePackage{xargs}
 \makeatletter
 \def\addvennback{%
 	\expandafter\ifpatchable{\fillAll}{]}{%
@@ -118,13 +119,25 @@
 }
 \makeatother
 \preto\tikzpicture{\addvennback}{}{}
-\newenvironment{venntwo}[1][]%
-	{\begin{venndiagram2sets}[shade=circle area,#1]%
-		\fillBack}%
+\newenvironmentx{venntwo}[2][1,2]
+	{
+		\begin{venndiagram2sets}[shade=circle area,#1]%
+		\fillBack%
+		\ifstrempty{#2}{}{\setpostvennhook
+		{
+			\node[above] at (current bounding box.north) {#2};
+		}}
+		}%
 	{\end{venndiagram2sets}}
-\newenvironment{vennthree}[1][]%
-	{\begin{venndiagram3sets}[shade=circle area,#1]%
-		\fillBack}%
+\newenvironmentx{vennthree}[2][1,2]
+	{
+		\begin{venndiagram3sets}[shade=circle area,#1]%
+		\fillBack%
+		\ifstrempty{#2}{}{\setpostvennhook
+		{
+			\node[above] at (current bounding box.north) {#2};
+		}}
+		}%
 	{\end{venndiagram3sets}}
 
 % Environment Spacing and Placement

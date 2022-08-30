@@ -41,6 +41,12 @@
     "snippet": "[${1:options}]",
     "package": "kayzels"
   },
+  "venntwo[][]": {
+    "name": "venntwo",
+    "detail": "venntwo[options][title]",
+    "snippet": "[${1:options}][${2:title}]",
+    "package": "kayzels"
+  },
   "vennthree": {
     "name": "vennthree",
     "detail": "vennthree",
@@ -51,6 +57,12 @@
     "name": "vennthree",
     "detail": "vennthree[options]",
     "snippet": "[${1:options}]",
+    "package": "kayzels"
+  },
+  "vennthree[][]": {
+    "name": "vennthree",
+    "detail": "vennthree[options][title]",
+    "snippet": "[${1:options}][${2:title}]",
     "package": "kayzels"
   }
 }
