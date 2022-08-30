@@ -1,6 +1,7 @@
 # kayzels
 \addfile[input]{<filename>}
 \addfile{<filename>}
+\begin{definition}
 \begin{example}
 \begin{exercise}{title}
 \begin{sidenote}{title}
@@ -13,6 +14,8 @@
 \begin{venntwo}[options]
 \begin{vennthree}
 \begin{vennthree}[options]
+\concept{text}
+\end{definition}
 \end{example}
 \end{exercise}
 \end{sidenote}
@@ -23,5 +26,8 @@
 \end{venntwo}[options]
 \end{vennthree}
 \end{vennthree}[options]
+\moveup
+\question{text}
 \rulebookend
 \rulechapterend
+\tablehead

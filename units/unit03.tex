@@ -1,342 +1,363 @@
 \documentclass[../notes.tex]{subfiles}
 
 \begin{document}
-  \ifSubfilesClassLoaded{\setcounter{chapter}{2}}{}
-  \chapter{Sets}
-    \section{Subset}
-      If $A$ and $B$ are sets from a universal set $U$, then $A$ is a \textbf{subset} of $B$ if and only if every element of $A$ is also an element of $B$.\\
-      Can be abbreviated $A \subseteq B$
-      \subsection{Proper Subset}
-        If $C$ and $D$ are sets from a universal set $U$, and every element of $C$ is an element of $D$, but $D$ has some elements that are not in $C$, then $C$ is a \textbf{proper subset} of $D$.\\
-        Can be abbreviated $C \subset D$.
-        \begin{sidenote}{Confusion Between Element and Subset}
-          Note that $\in$ and $\subset$ are not the same. This becomes significant when dealing with power sets.
-        \end{sidenote}
-    \pagebreak
-    \section{Creating Sets From Other Sets}
-      For examples, the following sets will be used:
-      \begin{alignat*}{4}
-        U &= \{1, 2, 3, 4, 5\}\qquad & A &= \{1, 2, 3\} \qquad & B &= \{2, 3, 4\} \qquad & C &= \{4, 5\}
-      \end{alignat*}
+	\ifSubfilesClassLoaded{\setcounter{chapter}{2}}{}
+	\chapter{Sets}
+		\section{Subset}
+			\begin{definition}{Subset}
+				If $A$ and $B$ are sets from a universal set $U$, then $A$ is a \concept{subset} of $B$ if and only if every element of $A$ is also an element of $B$.\\
+				Can be abbreviated $A \subseteq B$
+			\end{definition}
+			\subsection{Proper Subset}
+				\begin{definition}{Proper Subset}
+					If $C$ and $D$ are sets from a universal set $U$, and every element of $C$ is an element of $D$, but $D$ has some elements that are not in $C$, then $C$ is a \concept{proper subset} of $D$.\\
+					Can be abbreviated $C \subset D$.
+				\end{definition}
+				\begin{sidenote}{Confusion Between Element and Subset}
+					Note that $\in$ and $\subset$ are not the same. This becomes significant when dealing with power sets.
+				\end{sidenote}
+		\pagebreak
+		\section{Creating Sets From Other Sets}
+			For examples, the following sets will be used:
+			\begin{alignat*}{4}
+				U &= \{1, 2, 3, 4, 5\}\qquad & A &= \{1, 2, 3\} \qquad & B &= \{2, 3, 4\} \qquad & C &= \{4, 5\}
+			\end{alignat*}
 
-      \subsection[Set Union]{Set Union (OR)}
-        The \textbf{union} of sets $A$ and $B$ is written $A \cup B$, and is the set of all elements that belong to $A$ or $B$ (or both).
-        \nopagebreak
-        \begin{align*}
-          A \cup B = \bigl\{x \mid x \in A \text{ or } x \in B\bigr\}
-        \end{align*}
-        \nopagebreak
-        \begin{center}
-          \begin{venntwo}
-            \fillA
-            \fillB
-          \end{venntwo}
-        \end{center}
-        \nopagebreak
-        \begin{example} \moveup
-          \begin{align*}
-            A \cup B &= \{1, 2, 3\} \cup \{2, 3, 4\}\\
-            &= \{1, 2, 3, 4\}
-          \end{align*}
-        \end{example}
+			\subsection[Set Union]{Set Union (OR)}
+				\begin{definition}{Set Union}
+					The \concept{union} of sets $A$ and $B$ is written $A \cup B$, and is the set of all elements that belong to $A$ or $B$ (or both).
+				\end{definition}
+				\nopagebreak
+				\begin{center}
+					\begin{venntwo}
+						\setpostvennhook
+						{
+							\node[above] at (current bounding box.north) {$A \cup B = \bigl\{x \mid x \in A$ or $x \in B\bigr\}$};
+						}
+						\fillA
+						\fillB
+					\end{venntwo}
+				\end{center}
+				\nopagebreak
+				\begin{example} \moveup
+					\begin{align*}
+						A \cup B &= \{1, 2, 3\} \cup \{2, 3, 4\}\\
+						&= \{1, 2, 3, 4\}
+					\end{align*}
+				\end{example}
 
-      \subsection[Set Intersection]{Set Intersection (AND)}
-        The \textbf{intersection} of sets $A$ and $B$ is written $A \cap  B$, and is the set of all elements that belong to $A$ and $B$ at the same time.
-        \nopagebreak
-        \begin{align*}
-          A \cap B = \bigl\{x \mid x \in A \text{ and } x \in B\bigr\}
-        \end{align*}
-        \nopagebreak
-        \begin{center}
-          \begin{venntwo}
-            \fillACapB
-          \end{venntwo}
-        \end{center}
-        \nopagebreak
-        \begin{example} \moveup
-          \begin{align*}
-            A \cap B &= \{1, 2, 3\} \cap \{2, 3, 4\}\\
-            &= \{2, 3\}
-          \end{align*}
-        \end{example}
+			\subsection[Set Intersection]{Set Intersection (AND)}
+				\begin{definition}{Set Intersection}
+					The \concept{intersection} of sets $A$ and $B$ is written $A \cap  B$, and is the set of all elements that belong to $A$ and $B$ at the same time.
+				\end{definition}
+				\nopagebreak
+				\begin{center}
+					\begin{venntwo}
+						\setpostvennhook
+						{
+							\node[above] at (current bounding box.north) {$A \cap B = \bigl\{x \mid x \in A$ and $x \in B\bigr\}$};
+						}
+						\fillACapB
+					\end{venntwo}
+				\end{center}
+				\nopagebreak
+				\begin{example} \moveup
+					\begin{align*}
+						A \cap B &= \{1, 2, 3\} \cap \{2, 3, 4\}\\
+						&= \{2, 3\}
+					\end{align*}
+				\end{example}
 
-      \subsection[Set Difference]{Set Difference (MINUS)}
-        The \textbf{difference} between sets $A$ and $B$, also called the \textbf{complement of $B$ relative to $A$}, is written $A - B$, and is the set of elements that are in $A$ that are not in $B$.
-        \nopagebreak
-        \begin{align*}
-          A - B = \bigl\{x \mid x \in A \text{ and } x \notin B\bigr\}
-        \end{align*}
-        \nopagebreak
-        \begin{center}
-          \begin{venntwo}
-            \fillOnlyA
-          \end{venntwo}
-        \end{center}
-        \nopagebreak
-        \begin{example} \moveup
-          \begin{align*}
-            A - B &= \{1, 2, 3\} - \{2, 3, 4\}\\
-            &= \{1\}
-          \end{align*}
-        \end{example}
+			\subsection[Set Difference]{Set Difference (MINUS)}
+				\begin{definition}{Set Difference}
+					The \concept{difference} between sets $A$ and $B$, also called the \concept{complement of $B$ relative to $A$}, is written $A - B$, and is the set of elements that are in $A$ that are not in $B$.
+				\end{definition}
+				\nopagebreak
+				\begin{center}
+					\begin{venntwo}
+						\setpostvennhook
+						{
+							\node[above] at (current bounding box.north) {$A - B = \bigl\{x \mid x \in A$ and $x \notin B\bigr\}$};
+						}
+						\fillOnlyA
+					\end{venntwo}
+				\end{center}
+				\nopagebreak
+				\begin{example} \moveup
+					\begin{align*}
+						A - B &= \{1, 2, 3\} - \{2, 3, 4\}\\
+						&= \{1\}
+					\end{align*}
+				\end{example}
 
-      \subsection[Set Complement]{Set Complement (NOT)}
-        Let $A$ be a subset of a universal set $U$. Then the \textbf{complement} of $A$, written $A'$ is the set of all elements that belong to $U$ but do not belong to $A$.
-        \nopagebreak
-        \begin{align*}
-          A' & = \bigl\{x \mid x \in U \text{ and } x \notin A\bigr\}\\
-          & = \bigl\{x \mid x \notin A\bigr\} 
-        \end{align*}
-        \nopagebreak
-        \begin{center}
-          \begin{venntwo}
-            \fillNotA
-          \end{venntwo}
-        \end{center}
-        \nopagebreak
-        \begin{example} \moveup
-          \begin{align*}
-            A' &= U - A\\
-            &= \{1, 2, 3, 4, 5\} - \{1, 2, 3\}\\
-            &= \{4, 5\}
-          \end{align*}
-        \end{example}
+			\subsection[Set Complement]{Set Complement (NOT)}
+				\begin{definition}{Set Complement}
+					Let $A$ be a subset of a universal set $U$. Then the \concept{complement} of $A$, written $A'$ is the set of all elements that belong to $U$ but do not belong to $A$.
+				\end{definition}
+				\nopagebreak
+				\begin{center}
+					\begin{venntwo}
+						\setpostvennhook
+						{
+							\node[above] at (current bounding box.north) {$A' = \bigl\{x \mid x \notin A\bigr\}$};
+						}
+						\fillNotA
+					\end{venntwo}
+				\end{center}
+				\nopagebreak
+				\begin{example} \moveup
+					\begin{align*}
+						A' &= U - A\\
+						&= \{1, 2, 3, 4, 5\} - \{1, 2, 3\}\\
+						&= \{4, 5\}
+					\end{align*}
+				\end{example}
 
-      \pagebreak
-      \subsection[Symmetric Set Difference]{Symmetric Set Difference (XOR)}
-        The \textbf{symmetric difference} between two sets $A$ and $B$, written $A + B$, is the set of elements that belong to $A$ or to $B$, but not to both.
-        \nopagebreak
-        \begin{align*}
-          A + B = \bigl\{x \mid x \in A \text{ or } x \in B\text{, but not both}\bigr\}
-        \end{align*}
-        \nopagebreak
-        \begin{center}
-          \begin{venntwo}
-            \fillOnlyA
-            \fillOnlyB
-          \end{venntwo}
-        \end{center}
-        \nopagebreak
-        \begin{example} \moveup
-          \begin{align*}
-            A + B &= \{1, 2, 3\} + \{2, 3, 4\}\\
-            &= \{1, 4\}
-          \end{align*}
-        \end{example}
-    \section{Other Terms Significant For Sets}
-      \subsection{The Empty Set}
-        The set that contains no elements is called the \textbf{empty set}, and is written $\emptyset$.
-      \subsection{Set Disjointness}
-        Two sets $A$ and $B$ are called \textbf{disjoint} if they have no elements in common. In other words,
-        \begin{align*}
-          A \cap B = \emptyset
-        \end{align*}
-        \begin{example} \moveup
-          \begin{align*}
-            A \cap C &= \{1, 2, 3\} \cap \{4, 5\}\\
-            &= \emptyset
-          \end{align*}
-        \end{example}
-      \subsection{Set Cardinality}
-        Let $A$ be a set with $k$ distinct elements that can be counted. The \textit{number of elements} $k$ in $A$ is called the \textbf{cardinality} of the set. It can be written as $n(A)$ or $\left\lvert A\right\rvert$.
-        \nopagebreak
-        \begin{example} \moveup
-          \begin{align*}
-            \left\lvert A\right\rvert &= \bigl\lvert \{1, 2, 3\}\bigr\rvert\\
-            &= 3
-          \end{align*}
-        \end{example}
-      \pagebreak
-      \subsection{Power Sets}
-        Given a set $A$ with $n$ distinct elements, the \textbf{power set} of $A$, written $\mathcal{P}(A)$, is the set that has as its members \textit{all} subsets of $A$.
-
-        \begin{sidenote}{Every Element of a Power Set is a Set}
-          It is important to note that every element of a power set is a \textit{set}!\\ That means if $B$ is a subset of $A$, then $B$ is an element of $\mathcal{P}(A)$, i.e. $B \in \mathcal{P}(A)$.\\
-          However $B$ is \textbf{not} a subset of $\mathcal{P}(A)$, i.e. $B \nsubseteq \mathcal{P}(A)$! A set containing $B$, i.e. $\{B\}$ would be a subset of $\mathcal{P}(A)$.
-        \end{sidenote}
-      \begin{example} \moveup
-        \begin{align*}
-          \mathcal{P}(C) &= \mathcal{P}\bigl(\{4, 5\}\bigr)\\
-          &= \bigl\{\emptyset, \{4\}, \{5\}, \{4, 5\}\bigr\}
-        \end{align*}
-      \end{example}
-      The cardinality of a power set $\mathcal{P}(A)$ is $2^{n}$ where $n$ is the number of elements in the set $A$.
-      \begin{example} \moveup
-        \begin{align*}
-          \bigl\lvert \mathcal{P}(A)\bigr\rvert &= \Bigl\lvert\mathcal{P}\bigl(\{1, 2, 3\}\bigr)\Bigr\rvert\\
-          &= 2^{3}\\
-          &= 8
-        \end{align*}
-      \end{example}
-      \pagebreak
-      \begin{exercise}{Self Assessment Exercise \thechapter.6}
-        \begin{enumerate}
-          \item \moveup
-            \begin{alignat*}{3}
-              U &= \{1, 2, 3, 4, 5\} \qquad & A &= \{1, 2, 3\} \qquad & B &= \{3, 4, 5\}
-            \end{alignat*}
-            \begin{enumerate}[label=(\alph*)]
-              \item \moveup
-                \begin{align*}
-                  A \cup B &= \{1, 2, 3\} \cup \{3, 4, 5\}\\
-                  &= \{1, 2, 3, 4, 5\}\\
-                  B \cup A &= \{3, 4, 5\} \cup \{1, 2, 3\}\\
-                  &= \{1, 2, 3, 4, 5\}
-                \end{align*}
-              \item \moveup
-                \begin{align*}
-                  A \cap B &= \{1, 2, 3\} \cap \{3, 4, 5\}\\
-                  &= \{3\}\\
-                  B \cap A &= \{3, 4, 5\} \cap \{1, 2, 3\}\\
-                  &= \{3\}
-                \end{align*}
-              \item \moveup
-                \begin{align*}
-                  A - B &= \{1, 2, 3\} - \{3, 4, 5\}\\
-                  &= \{1, 2\}\\
-                  B - A &= \{3, 4, 5\} - \{1, 2, 3\}\\
-                  &= \{4, 5\}
-                \end{align*}
-              \item \moveup
-                \begin{align*}
-                  A + B &= \{1, 2, 3\} + \{3, 4, 5\}\\
-                  &= \{1, 2, 4 , 5\}\\
-                  B + A &= \{3, 4, 5\} + \{1, 2, 3\}\\
-                  &= \{1, 2, 4, 5\}
-                \end{align*}
-            \end{enumerate}
-          \item \moveup
-            \begin{alignat*}{3}
-              U &= \{a, e, i, o, u\} \qquad & A &= \{i, o, u\} \qquad & B &= \{a, e, o, u\}
-            \end{alignat*}
-            \begin{enumerate}[label=(\alph*)]
-              \item \moveup
-                \begin{align*}
-                  A' &= \{i, o, u\}'\\
-                  &= \{a, e, i, o, u\} - \{i, o, u\}\\
-                  &= \{a, e\}\\
-                  \left(A'\right)' &= \{a, e, i, o, u\} - \{a, e\}\\
-                  &= \{i, o, u\}\\
-                  &= A
-                \end{align*}
-              \item \moveup
-                \begin{align*}
-                  B' &= \{a, e, o, u\}'\\
-                  &= \{a, e, i, o, u\} - \{a, e, o, u\}\\
-                  &= \{i\}\\
-                  \left(B'\right)' &= \{a, e, i, o, u\} - \{i\}\\
-                  &= \{a, e, o, u\}\\
-                  &= B
-                \end{align*}
-              \item \moveup
-                \begin{align*}
-                  A \cup B &= \{i, o, u\} \cup \{a, e, o, u\}\\
-                  &= \{a, e, i, o, u\}\\
-                  (A \cup B)' &= \{a, e, i, o, u\} - \{a, e, i, o, u\}\\
-                  &= \emptyset
-                \end{align*}
-              \item \moveup
-                \begin{align*}
-                  A' \cap B' &= \{a, e\} \cap \{i\}\\
-                  &= \emptyset
-                \end{align*}
-              \item \moveup
-                \begin{align*}
-                  A \cap B &= \{i, o, u\} \cap \{a, e, o, u\}\\
-                  &= \{o, u\}\\
-                  (A \cap B)' &= \{a, e, i, o, u\} - \{o, u\}\\
-                  &= \{a, e, i\}
-                \end{align*}
-              \item \moveup
-                \begin{align*}
-                  A' \cup B' &= \{a, e\} \cup \{i\}\\
-                  &= \{a, e, i\}
-                \end{align*}
-              \item \moveup
-                \begin{align*}
-                  A - B &= \{i, o, u\} - \{a, e, o, u\}\\
-                  &= \{i\}\\
-                  B - A &= \{a, e, o, u\} - \{i, o, u\}\\
-                  &= \{a,e\}
-                \end{align*}
-              \item \moveup
-                \begin{align*}
-                  A \cap B' &= \{i, o, u\} \cap \{i\}\\
-                  &= \{i\}\\
-                  B \cap A' &= \{a, e, o, u\} \cap \{a, e\}\\
-                  &= \{a, e\}
-                \end{align*}
-              \item \moveup
-                \begin{align*}
-                  A + B &= \{i, o, u\} + \{a, e, o, u\}\\
-                  &= \{a, e, i\}\\
-                  B + A &= \{a, e, o, u\} + \{i, o, u\}\\
-                  &= \{a, e, i\}
-                \end{align*}
-            \end{enumerate}
-          \item \moveup
-            \begin{alignat*}{3}
-              U &= \{1, 2, 3, 4, 5\} \qquad & A &= \{3\} \qquad & B &= \bigl\{\{3\}, 4, 5\bigr\}
-            \end{alignat*}
-            \begin{align*}
-              \mathcal{P}(A) &= \mathcal{P}\bigl(\{3\}\bigr)\\
-              &= \bigl\{\emptyset, \{3\}\bigr\}\\
-              \mathcal{P}(B) &= \mathcal{P}\Bigl(\bigl\{\{3\}, 4, 5\bigr\}\Bigr)\\
-              &= \Bigl\{\emptyset, \bigl\{\{3\}\bigr\}, \bigl\{4\bigr\}, \bigl\{5\bigr\}, \bigl\{\{3\}, 4\bigr\}, \bigl\{\{3\}, 5\bigr\}, \bigl\{4, 5\bigr\}, \bigl\{\{3\}, 4, 5\bigr\}\Bigr\}
-            \end{align*}
-          \pagebreak
-          \item \moveup
-            \begin{alignat*}{3}
-              U &= \{a, e, i, o, u\} \qquad & A &= \{i, o, u\} \qquad & B &= \{a, e, o, u\}
-            \end{alignat*}
-            \begin{enumerate}[label=(\alph*)]
-              \item \moveup
-                \begin{align*}
-                  \mathcal{P}(A) &= \bigl\{\emptyset, \{i\}, \{o\}, \{u\}, \{i, o\}, \{i, u\}, \{o, u\}, \{i, o, u\}\bigr\}\\
-                  \mathcal{P}(B) &= \bigl\{\emptyset, \{a\}, \{e\}, \{o\}, \{u\}, \{a, e\}, \{a, o\}, \{a, u\}, \{e, o\}, \{e, u\}, \{o, u\}, \{a, e, o\},\\
-                  & \qquad \{a, e, u\}, \{a, o, u\}, \{e, o, u\}, \{a, e, o, u\}\bigr\}
-                \end{align*}
-              \item \moveup
-                \begin{align*}
-                  \mathcal{P}(A \cap B) &= \mathcal{P}\bigl(\{o, u\}\bigr)\\
-                  &= \bigl\{\emptyset, \{o\}, \{u\}, \{o, u\}\bigr\}\\
-                  \mathcal{P}(A) \cap \mathcal{P}(B) &= \bigl\{\emptyset, \{o\}, \{u\}, \{o, u\}\bigr\}
-                \end{align*}
-              \item \moveup
-                \begin{align*}
-                  \mathcal{P}\left(A'\right) &= \mathcal{P}\bigl(\{a, e\}\bigr)\\
-                  &= \bigl\{\emptyset, \{a\}, \{e\}, \{a, e\}\bigr\}
-                \end{align*}
-                \begin{align*}
-                  \mathcal{P}(U) &= \bigl\{\emptyset, \{a\}, \{e\}, \{i\}, \{o\}, \{u\}, \{a, e\}, \{a, i\}, \{a, o\}, \{a, u\},\\
-                  & \qquad \{e, i\}, \{e, o\}, \{e, u\}, \{i, o\}, \{i, u\}, \{o, u\},\\
-                  & \qquad \{a, e, i\}, \{a, e, o\}, \{a, e, u\}, \{a, i, o\}, \{a, i, u\}, \{a, o, u\},\\
-                  & \qquad \{e, i, o\}, \{e, i, u\} \{e, o, u\}, \{i, o, u\},\\
-                  & \qquad \{a, e, i, o\}, \{a, e, i, u\}, \{a, e, o, u\} \{a, i, o, u\}, \{e, i, o, u\}, \{a, e, i, o, u\}\bigr\}
-                \end{align*}
-                \begin{align*}
-                  \bigl(\mathcal{P}(A)\bigr)' &= \bigl\{\{a\}, \{e\}, \{a, e\}, \{a, i\}, \{a, o\}, \{a, u\}, \{e, i\}, \{e, o\}, \{e, u\},\\
-                  & \qquad \{a, e, i\}, \{a, e, o\}, \{a, e, u\}, \{a, i, o\}, \{a, i, u\}, \{a, o, u\}, \\
-                  & \qquad \{e, i, o\}, \{e, i, u\},  \{e, o, u\}, \\
-                  & \qquad \{a, e, i, o\}, \{a, e, i, u\}, \{a, e, o, u\} \{a, i, o, u\}, \{e, i, o, u\}, \{a, e, i, o, u\}\bigr\}
-                \end{align*}
-              \item \moveup
-                \begin{align*}
-                  \mathcal{P}(A) \cup \mathcal{P}(B) &= \bigl\{\emptyset, \{a\}, \{e\}, \{i\}, \{o\}, \{u\},\\
-                  & \qquad \{a, e\}, \{a, o\}, \{a, u\}, \{e, o\}, \{e, u\}, \{i, o\}, \{i, u\}, \{o, u\}, \\
-                  & \qquad \{a, e, o\}, \{a, e, u\}, \{a, o, u\}, \{e, o, u\}, \{i, o, u\}, \{a, e, o, u\}\bigr\}
-                \end{align*}
-                \begin{align*}
-                  \mathcal{P}(A \cup B) &= \mathcal{P}\bigl(\{a, e, i, o, u\}\bigr)\\
-                  &= \mathcal{P}(U)\\
-                  &= \bigl\{\emptyset, \{a\}, \{e\}, \{i\}, \{o\}, \{u\}, \{a, e\}, \{a, i\}, \{a, o\}, \{a, u\},\\
-                  & \qquad \{e, i\}, \{e, o\}, \{e, u\}, \{i, o\}, \{i, u\}, \{o, u\},\\
-                  & \qquad \{a, e, i\}, \{a, e, o\}, \{a, e, u\}, \{a, i, o\}, \{a, i, u\}, \{a, o, u\},\\
-                  & \qquad \{e, i, o\}, \{e, i, u\} \{e, o, u\}, \{i, o, u\},\\
-                  & \qquad \{a, e, i, o\}, \{a, e, i, u\}, \{a, e, o, u\} \{a, i, o, u\}, \{e, i, o, u\}, \{a, e, i, o, u\}\bigr\}
-                \end{align*}
-            \end{enumerate}
-        \end{enumerate}
-      \end{exercise}
-  \rulechapterend
+			\pagebreak
+			\subsection[Symmetric Set Difference]{Symmetric Set Difference (XOR)}
+				\begin{definition}{Symmetric Set Difference}
+					The \concept{symmetric difference} between two sets $A$ and $B$, written $A + B$, is the set of elements that belong to $A$ or to $B$, but not to both.
+				\end{definition}
+				\nopagebreak
+				\begin{center}
+					\begin{venntwo}
+						\setpostvennhook
+						{
+							\node[above] at (current bounding box.north) {$A + B = \bigl\{x \mid x \in A$ or $x \in B$, but not both$\bigr\}$};
+						}
+						\fillOnlyA
+						\fillOnlyB
+					\end{venntwo}
+				\end{center}
+				\nopagebreak
+				\begin{example} \moveup
+					\begin{align*}
+						A + B &= \{1, 2, 3\} + \{2, 3, 4\}\\
+						&= \{1, 4\}
+					\end{align*}
+				\end{example}
+		\section{Other Terms Significant For Sets}
+			\subsection{The Empty Set}
+				\begin{definition}{Empty Set}
+					The set that contains no elements is called the \concept{empty set}, and is written $\emptyset$.
+				\end{definition}
+			\subsection{Set Disjointness}
+				\begin{definition}{Disjointness}
+					Two sets $A$ and $B$ are called \concept{disjoint} if they have no elements in common. In other words,
+					\begin{align*}
+						A \cap B = \emptyset
+					\end{align*}
+				\end{definition}
+				\begin{example} \moveup
+					\begin{align*}
+						A \cap C &= \{1, 2, 3\} \cap \{4, 5\}\\
+						&= \emptyset
+					\end{align*}
+				\end{example}
+			\subsection{Set Cardinality}
+				\begin{definition}{Cardinality}
+					Let $A$ be a set with $k$ distinct elements that can be counted. The \emph{number of elements} $k$ in $A$ is called the \concept{cardinality} of the set. It can be written as $n(A)$ or $\left\lvert A\right\rvert$.
+				\end{definition}
+				\nopagebreak
+				\begin{example} \moveup
+					\begin{align*}
+						\left\lvert A\right\rvert &= \bigl\lvert \{1, 2, 3\}\bigr\rvert\\
+						&= 3
+					\end{align*}
+				\end{example}
+			\subsection{Power Sets}
+				\begin{definition}{Power Set}
+					Given a set $A$ with $n$ distinct elements, the \concept{power set} of $A$, written $\mathcal{P}(A)$, is the set that has as its members \emph{all} subsets of $A$.
+				\end{definition}
+				\nopagebreak
+				\begin{sidenote}{Every Element of a Power Set is a Set}
+					It is important to note that every element of a power set is a \emph{set}!\\ That means if $B$ is a subset of $A$, then $B$ is an element of $\mathcal{P}(A)$, i.e. $B \in \mathcal{P}(A)$.\\
+					However $B$ is \emph{not} a subset of $\mathcal{P}(A)$, i.e. $B \nsubseteq \mathcal{P}(A)$! A set containing $B$, i.e. $\{B\}$ would be a subset of $\mathcal{P}(A)$.
+				\end{sidenote}
+				\nopagebreak
+				\begin{example} \moveup
+					\begin{align*}
+						\mathcal{P}(C) &= \mathcal{P}\bigl(\{4, 5\}\bigr)\\
+						&= \bigl\{\emptyset, \{4\}, \{5\}, \{4, 5\}\bigr\}
+					\end{align*}
+				\end{example}
+				The cardinality of a power set $\mathcal{P}(A)$ is $2^{n}$ where $n$ is the number of elements in the set $A$.
+				\begin{example} \moveup
+					\begin{align*}
+						\bigl\lvert \mathcal{P}(A)\bigr\rvert &= \Bigl\lvert\mathcal{P}\bigl(\{1, 2, 3\}\bigr)\Bigr\rvert\\
+						&= 2^{3}\\
+						&= 8
+					\end{align*}
+				\end{example}
+			\pagebreak
+			\begin{exercise}{Self Assessment Exercise \thechapter.6}
+				\begin{enumerate}
+					\item \moveup
+						\begin{alignat*}{3}
+							U &= \{1, 2, 3, 4, 5\} \qquad & A &= \{1, 2, 3\} \qquad & B &= \{3, 4, 5\}
+						\end{alignat*}
+						\begin{enumerate}[label=(\alph*)]
+							\item \moveup
+								\begin{align*}
+									A \cup B &= \{1, 2, 3\} \cup \{3, 4, 5\}\\
+									&= \{1, 2, 3, 4, 5\}\\
+									B \cup A &= \{3, 4, 5\} \cup \{1, 2, 3\}\\
+									&= \{1, 2, 3, 4, 5\}
+								\end{align*}
+							\item \moveup
+								\begin{align*}
+									A \cap B &= \{1, 2, 3\} \cap \{3, 4, 5\}\\
+									&= \{3\}\\
+									B \cap A &= \{3, 4, 5\} \cap \{1, 2, 3\}\\
+									&= \{3\}
+								\end{align*}
+							\item \moveup
+								\begin{align*}
+									A - B &= \{1, 2, 3\} - \{3, 4, 5\}\\
+									&= \{1, 2\}\\
+									B - A &= \{3, 4, 5\} - \{1, 2, 3\}\\
+									&= \{4, 5\}
+								\end{align*}
+							\item \moveup
+								\begin{align*}
+									A + B &= \{1, 2, 3\} + \{3, 4, 5\}\\
+									&= \{1, 2, 4 , 5\}\\
+									B + A &= \{3, 4, 5\} + \{1, 2, 3\}\\
+									&= \{1, 2, 4, 5\}
+								\end{align*}
+						\end{enumerate}
+					\item \moveup
+						\begin{alignat*}{3}
+							U &= \{a, e, i, o, u\} \qquad & A &= \{i, o, u\} \qquad & B &= \{a, e, o, u\}
+						\end{alignat*}
+						\begin{enumerate}[label=(\alph*)]
+							\item \moveup
+								\begin{align*}
+									A' &= \{i, o, u\}'\\
+									&= \{a, e, i, o, u\} - \{i, o, u\}\\
+									&= \{a, e\}\\
+									\left(A'\right)' &= \{a, e, i, o, u\} - \{a, e\}\\
+									&= \{i, o, u\}\\
+									&= A
+								\end{align*}
+							\item \moveup
+								\begin{align*}
+									B' &= \{a, e, o, u\}'\\
+									&= \{a, e, i, o, u\} - \{a, e, o, u\}\\
+									&= \{i\}\\
+									\left(B'\right)' &= \{a, e, i, o, u\} - \{i\}\\
+									&= \{a, e, o, u\}\\
+									&= B
+								\end{align*}
+							\item \moveup
+								\begin{align*}
+									A \cup B &= \{i, o, u\} \cup \{a, e, o, u\}\\
+									&= \{a, e, i, o, u\}\\
+									(A \cup B)' &= \{a, e, i, o, u\} - \{a, e, i, o, u\}\\
+									&= \emptyset
+								\end{align*}
+							\item \moveup
+								\begin{align*}
+									A' \cap B' &= \{a, e\} \cap \{i\}\\
+									&= \emptyset
+								\end{align*}
+							\item \moveup
+								\begin{align*}
+									A \cap B &= \{i, o, u\} \cap \{a, e, o, u\}\\
+									&= \{o, u\}\\
+									(A \cap B)' &= \{a, e, i, o, u\} - \{o, u\}\\
+									&= \{a, e, i\}
+								\end{align*}
+							\item \moveup
+								\begin{align*}
+									A' \cup B' &= \{a, e\} \cup \{i\}\\
+									&= \{a, e, i\}
+								\end{align*}
+							\item \moveup
+								\begin{align*}
+									A - B &= \{i, o, u\} - \{a, e, o, u\}\\
+									&= \{i\}\\
+									B - A &= \{a, e, o, u\} - \{i, o, u\}\\
+									&= \{a,e\}
+								\end{align*}
+							\item \moveup
+								\begin{align*}
+									A \cap B' &= \{i, o, u\} \cap \{i\}\\
+									&= \{i\}\\
+									B \cap A' &= \{a, e, o, u\} \cap \{a, e\}\\
+									&= \{a, e\}
+								\end{align*}
+							\item \moveup
+								\begin{align*}
+									A + B &= \{i, o, u\} + \{a, e, o, u\}\\
+									&= \{a, e, i\}\\
+									B + A &= \{a, e, o, u\} + \{i, o, u\}\\
+									&= \{a, e, i\}
+								\end{align*}
+						\end{enumerate}
+					\item \moveup
+						\begin{alignat*}{3}
+							U &= \{1, 2, 3, 4, 5\} \qquad & A &= \{3\} \qquad & B &= \bigl\{\{3\}, 4, 5\bigr\}
+						\end{alignat*}
+						\begin{align*}
+							\mathcal{P}(A) &= \mathcal{P}\bigl(\{3\}\bigr)\\
+							&= \bigl\{\emptyset, \{3\}\bigr\}\\
+							\mathcal{P}(B) &= \mathcal{P}\Bigl(\bigl\{\{3\}, 4, 5\bigr\}\Bigr)\\
+							&= \Bigl\{\emptyset, \bigl\{\{3\}\bigr\}, \bigl\{4\bigr\}, \bigl\{5\bigr\}, \bigl\{\{3\}, 4\bigr\}, \bigl\{\{3\}, 5\bigr\}, \bigl\{4, 5\bigr\}, \bigl\{\{3\}, 4, 5\bigr\}\Bigr\}
+						\end{align*}
+					\pagebreak
+					\item \moveup
+						\begin{alignat*}{3}
+							U &= \{a, e, i, o, u\} \qquad & A &= \{i, o, u\} \qquad & B &= \{a, e, o, u\}
+						\end{alignat*}
+						\begin{enumerate}[label=(\alph*)]
+							\item \moveup
+								\begin{align*}
+									\mathcal{P}(A) &= \bigl\{\emptyset, \{i\}, \{o\}, \{u\}, \{i, o\}, \{i, u\}, \{o, u\}, \{i, o, u\}\bigr\}\\
+									\mathcal{P}(B) &= \bigl\{\emptyset, \{a\}, \{e\}, \{o\}, \{u\}, \{a, e\}, \{a, o\}, \{a, u\}, \{e, o\}, \{e, u\}, \{o, u\}, \{a, e, o\},\\
+									& \qquad \{a, e, u\}, \{a, o, u\}, \{e, o, u\}, \{a, e, o, u\}\bigr\}
+								\end{align*}
+							\item \moveup
+								\begin{align*}
+									\mathcal{P}(A \cap B) &= \mathcal{P}\bigl(\{o, u\}\bigr)\\
+									&= \bigl\{\emptyset, \{o\}, \{u\}, \{o, u\}\bigr\}\\
+									\mathcal{P}(A) \cap \mathcal{P}(B) &= \bigl\{\emptyset, \{o\}, \{u\}, \{o, u\}\bigr\}
+								\end{align*}
+							\item \moveup
+								\begin{align*}
+									\mathcal{P}\left(A'\right) &= \mathcal{P}\bigl(\{a, e\}\bigr)\\
+									&= \bigl\{\emptyset, \{a\}, \{e\}, \{a, e\}\bigr\}
+								\end{align*}
+								\begin{align*}
+									\mathcal{P}(U) &= \bigl\{\emptyset, \{a\}, \{e\}, \{i\}, \{o\}, \{u\}, \{a, e\}, \{a, i\}, \{a, o\}, \{a, u\},\\
+									& \qquad \{e, i\}, \{e, o\}, \{e, u\}, \{i, o\}, \{i, u\}, \{o, u\},\\
+									& \qquad \{a, e, i\}, \{a, e, o\}, \{a, e, u\}, \{a, i, o\}, \{a, i, u\}, \{a, o, u\},\\
+									& \qquad \{e, i, o\}, \{e, i, u\} \{e, o, u\}, \{i, o, u\},\\
+									& \qquad \{a, e, i, o\}, \{a, e, i, u\}, \{a, e, o, u\} \{a, i, o, u\}, \{e, i, o, u\}, \{a, e, i, o, u\}\bigr\}
+								\end{align*}
+								\begin{align*}
+									\bigl(\mathcal{P}(A)\bigr)' &= \bigl\{\{a\}, \{e\}, \{a, e\}, \{a, i\}, \{a, o\}, \{a, u\}, \{e, i\}, \{e, o\}, \{e, u\},\\
+									& \qquad \{a, e, i\}, \{a, e, o\}, \{a, e, u\}, \{a, i, o\}, \{a, i, u\}, \{a, o, u\}, \\
+									& \qquad \{e, i, o\}, \{e, i, u\},  \{e, o, u\}, \\
+									& \qquad \{a, e, i, o\}, \{a, e, i, u\}, \{a, e, o, u\} \{a, i, o, u\}, \{e, i, o, u\}, \{a, e, i, o, u\}\bigr\}
+								\end{align*}
+							\item \moveup
+								\begin{align*}
+									\mathcal{P}(A) \cup \mathcal{P}(B) &= \bigl\{\emptyset, \{a\}, \{e\}, \{i\}, \{o\}, \{u\},\\
+									& \qquad \{a, e\}, \{a, o\}, \{a, u\}, \{e, o\}, \{e, u\}, \{i, o\}, \{i, u\}, \{o, u\}, \\
+									& \qquad \{a, e, o\}, \{a, e, u\}, \{a, o, u\}, \{e, o, u\}, \{i, o, u\}, \{a, e, o, u\}\bigr\}
+								\end{align*}
+								\begin{align*}
+									\mathcal{P}(A \cup B) &= \mathcal{P}\bigl(\{a, e, i, o, u\}\bigr)\\
+									&= \mathcal{P}(U)\\
+									&= \bigl\{\emptyset, \{a\}, \{e\}, \{i\}, \{o\}, \{u\}, \{a, e\}, \{a, i\}, \{a, o\}, \{a, u\},\\
+									& \qquad \{e, i\}, \{e, o\}, \{e, u\}, \{i, o\}, \{i, u\}, \{o, u\},\\
+									& \qquad \{a, e, i\}, \{a, e, o\}, \{a, e, u\}, \{a, i, o\}, \{a, i, u\}, \{a, o, u\},\\
+									& \qquad \{e, i, o\}, \{e, i, u\} \{e, o, u\}, \{i, o, u\},\\
+									& \qquad \{a, e, i, o\}, \{a, e, i, u\}, \{a, e, o, u\} \{a, i, o, u\}, \{e, i, o, u\}, \{a, e, i, o, u\}\bigr\}
+								\end{align*}
+						\end{enumerate}
+				\end{enumerate}
+			\end{exercise}
+	\rulechapterend
 \end{document}

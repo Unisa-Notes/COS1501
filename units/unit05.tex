@@ -4,17 +4,21 @@
 	\ifSubfilesClassLoaded{\setcounter{chapter}{4}}{}
 	\chapter{Relations}
 		\section{Ordered Pairs}
-			In sets the order of the elements is insignificant. If the order of the elements is significant, it is written with an \textbf{ordered pair}, which is written in round brackets ().
+			\begin{definition}{Ordered Pair}
+				In sets the order of the elements is insignificant. If the order of the elements is significant, it is written with an \concept{ordered pair}, which is written in round brackets ().
+			\end{definition}
 			\nopagebreak
 			\begin{example}
 				An ordered pair is written $(a, b)$ where $a$ and $b$ are elements of the pair. $(a, b) \neq (b, a)$.
 			\end{example}
 		\section{Cartesian Product}
-			For any sets $A$ and $B$, the \textbf{Cartesian product} of $A$ and $B$ is written $A \times B$, and is equal to the set
-			\begin{align*}
-				\bigl\{(x, y) \mid x \in A \text{ and } y \in B\bigr\}
-			\end{align*}
-			In other words, the Cartesian product $A \times B$ denotes a set of ordered pairs such that all the first coordinates of the pairs are elements of set $A$, and all the second coordinates of the pairs are elements of set $B$.
+			\begin{definition}{Cartesian Product}
+				For any sets $A$ and $B$, the \concept{Cartesian product} of $A$ and $B$ is written $A \times B$, and is equal to the set
+				\begin{align*}
+					\bigl\{(x, y) \mid x \in A \text{ and } y \in B\bigr\}
+				\end{align*}
+				In other words, the Cartesian product $A \times B$ denotes a set of ordered pairs such that all the first coordinates of the pairs are elements of set $A$, and all the second coordinates of the pairs are elements of set $B$.
+			\end{definition}
 			\nopagebreak
 			\begin{example}
 				$A = \{2, 3, 4\}, B = \{5, 6\}$
@@ -27,7 +31,9 @@
 			\end{example}
 		\pagebreak
 		\section{Relation}
-			A subset of a Cartesian product from $C$ to $D$ is called a \textbf{relation} from $C$ to $D$.
+			\begin{definition}{Relation}
+				A subset of a Cartesian product from $C$ to $D$ is called a \concept{relation} from $C$ to $D$.
+			\end{definition}
 			\begin{example}
 				$A = \{2, 3, 4\}$ and  $B = \{6, 7\}$. The following are some relations from $A$ to $B$
 				\begin{align*}
@@ -61,23 +67,30 @@
 			\end{exercise}
 			\pagebreak
 			\subsection{Domain, Range and Codomain}
+			\begin{definition}{Codomain}
 				Suppose $T$ is a relation from $X$ to $Y$.\\
-				Then $Y$ is the \textbf{codomain} of $T$.
-
-				The \textbf{domain} of $T$, written $\mathrm{dom}(T)$ is:
+				The \concept{codomain} of $T$ is $Y$.\\
+				That is, all the possible elements that could appear as second coordinates.
+			\end{definition}
+			\begin{definition}{Domain}
+				Suppose $T$ is a relation from $X$ to $Y$.\\
+				The \concept{domain} of $T$, written $\mathrm{dom}(T)$ is:
 					\begin{align*}
 						\mathrm{dom}(T) = \{x \mid \text{for some } y \in Y, (x, y) \in T\}
 					\end{align*}
 				That is, all the elements that actually appear as first elements in the relation $T$.
-
-				The \textbf{range} of $T$, written $\mathrm{ran}(T)$ is:
-				\begin{align*}
-					\mathrm{ran}(T) = \{y \mid \text{for some } x \in X, (x, y) \in T\}
-				\end{align*}
-			That is, all the elements that actually appear as second elements in the relation $T$.
+			\end{definition}
+			\begin{definition}{Range}
+				Suppose $T$ is a relation from $X$ to $Y$.\\
+				The \concept{range} of $T$, written $\mathrm{ran}(T)$ is:
+					\begin{align*}
+						\mathrm{ran}(T) = \{y \mid \text{for some } x \in X, (x, y) \in T\}
+					\end{align*}
+				That is, all the elements that actually appear as second elements in the relation $T$.
+			\end{definition}
 			\begin{sidenote}{Domain and Range are not equal to $X$ and $Y$}
-				$\mathrm{dom}(T) \subseteq X$. The domain of the relation is a \textit{subset} of $X$, but not necessarily equal to $X$.\\
-				$\mathrm{ran}(T) \subseteq Y$. The range of the relation is a \textit{subset} of $Y$, but not necessarily equal to $Y$.
+				$\mathrm{dom}(T) \subseteq X$. The domain of the relation is a \emph{subset} of $X$, but not necessarily equal to $X$.\\
+				$\mathrm{ran}(T) \subseteq Y$. The range of the relation is a \emph{subset} of $Y$, but not necessarily equal to $Y$.
 			\end{sidenote}
 			\begin{example}
 				Let $S = \bigl\{(a, 1), (b, 1), (a, 2)\bigr\}$ be a relation from $\{a, b, c\}$ to $\{1, 2, 3\}$.\\
@@ -86,14 +99,18 @@
 				The codomain of $S$ is the set $\{1, 2, 3\}$. 
 			\end{example}
 			\subsection{Binary Relation}
-				If $R$ is any subset of a Cartesian product $X \times Y$, then $R$ is called a \textbf{binary relation} from $X$ to $Y$, or between $X$ and $Y$.\\
-				A subset $R$ of $X \times Y$ is called the \textbf{rule} for the relation.\\
-				If $R \subseteq X \times X$, $R$ is a binary relation on $X$.
+				\begin{definition}{Binary Relation}
+					If $R$ is any subset of a Cartesian product $X \times Y$, then $R$ is called a \concept{binary relation} from $X$ to $Y$, or between $X$ and $Y$.\\
+					A subset $R$ of $X \times Y$ is called the \concept{rule} for the relation.\\
+					If $R \subseteq X \times X$, $R$ is a binary relation on $X$.
+				\end{definition}
 			\pagebreak
 		\section{Properties of Relations}
 			\subsection{Reflexivity}
-				A relation $R$ on $A$ ($R \subseteq A \times A$) is called \textbf{reflexive} on $A$ iff for every $x \in A$, we have $(x, x) \in R$.\\
+			\begin{definition}{Reflexivity}
+				A relation $R$ on $A$ ($R \subseteq A \times A$) is called \concept{reflexive} on $A$ iff for every $x \in A$, we have $(x, x) \in R$.\\
 				In other words, every element needs to be related to itself (although it can also be related to other elements).
+			\end{definition}
 				\begin{example}
 					Let $A = \{2, 3, 5\}$. For a relation $S$ to be reflexive on $A$, $\bigl\{(2, 2), (3, 3), (5, 5)\bigr\}$ needs to be a subset of $S$.
 						\begin{align*}
@@ -101,17 +118,23 @@
 						\end{align*}
 					Therefore, the relation $\bigl\{(2, 2), (3, 3), (5, 5) (2, 3)\bigr\}$ would be a reflexive relation on $A$.
 				\end{example}
-			\subsection{Irreflexitivity}
-				A relation $R$ on $A$ ($R \subseteq A \times A$) is called \textbf{irreflexive} iff there is \textit{no} $x$ such that $(x, x) \in R$. In other words, for any $x \in A, (x, x) \notin R$
+			\subsection{Irreflexivity}
+				\begin{definition}{Irreflexivity}
+					A relation $R$ on $A$ ($R \subseteq A \times A$) is called \concept{irreflexive} iff there is \emph{no} $x$ such that $(x, x) \in R$. In other words, for any $x \in A, (x, x) \notin R$
+				\end{definition}
 				\begin{example}
-					Let $A = \{2, 3, 5\}$.\par
+					Let $A = \{2, 3, 5\}$.
+
 					$R = \bigl\{(3, 2), (2, 5), (3, 5)\bigr\}$.\\
-					$R$ is \textbf{irreflexive}, as there is no element that relates to itself. i.e. None of the elements of $\bigl\{(2, 2), (3, 3), (5, 5)\bigr\}$ are elements of $R$.\par
+					$R$ is \emph{irreflexive}, as there is no element that relates to itself. i.e. None of the elements of $\bigl\{(2, 2), (3, 3), (5, 5)\bigr\}$ are elements of $R$.
+
 					$S = \bigl\{(2, 2), (2, 5), (3, 5)\bigr\}$.\\
-					$S$ is not reflexive, as the elements $\bigl\{(3, 3), (5, 5)\bigr\}$ are not present. $S$ is also not irreflexive, as the element $(2, 2)$ is an element of $S$.
+					$S$ is \emph{not reflexive}, as the elements $\bigl\{(3, 3), (5, 5)\bigr\}$ are not present. $S$ is also \emph{not irreflexive}, as the element $(2, 2)$ is an element of $S$.
 				\end{example}
 			\subsection{Symmetry}
-				A relation $R$ on $A$ ($R \subseteq A \times A$) is called \textbf{symmetric} iff $R$ has the property that, for all $x, y \in R$, if $(x, y) \in R$, then $(y, x) \in R$.
+				\begin{definition}{Symmetry}
+					A relation $R$ on $A$ ($R \subseteq A \times A$) is called \concept{symmetric} iff $R$ has the property that, for all $x, y \in R$, if $(x, y) \in R$, then $(y, x) \in R$.
+				\end{definition}
 				\begin{example}
 					Let $B = \{1, 2, 3\}$\\
 					$R_{1} = \bigl\{(1, 2), (2, 1), (1, 3), (3, 1)\bigr\}$ is symmetric and irreflexive.\\
@@ -121,8 +144,13 @@
 				\end{example}
 				\pagebreak
 			\subsection{Antisymmetry}
-				A relation $R$ on $A$ ($R \subseteq A \times A$) is called \textbf{antisymmetric} iff $R$ has the property that, for all $x, y \in R$, if $x \neq y$ and $(x, y) \in R$, then $(y, x) \notin R$.\\
-				\textbf{Another definition:} A relation $R$ on $A$ ($R \subseteq A \times A$) is called \textbf{antisymmetric} iff $R$ has the property that, for all $x, y \in R$, if $(x, y) \in R$ and $(y, x) \in R$, then $x = y$.
+				\begin{definition}{Antisymmetry}
+					A relation $R$ on $A$ ($R \subseteq A \times A$) is called \concept{antisymmetric} iff $R$ has the property that, for all $x, y \in R$, if $x \neq y$ and $(x, y) \in R$, then $(y, x) \notin R$.\\
+					\emph{Another definition:}
+						\begin{indentparagraph}
+							A relation $R$ on $A$ ($R \subseteq A \times A$) is called \concept{antisymmetric} iff $R$ has the property that, for all $x, y \in R$, if $(x, y) \in R$ and $(y, x) \in R$, then $x = y$.
+						\end{indentparagraph}
+				\end{definition}
 				\begin{example}
 					Let $A = \{a, b, c\}$\\
 					$P = \bigl\{(a, b), (b, b), (b, c)\bigr\}$ on $A$.\\
@@ -137,7 +165,9 @@
 					This relation is also not antisymmetric, since $(1, 2)$ and $(2, 1)$ are elements of $R$, but $1 \neq 2$.
 				\end{sidenote}
 			\subsection{Transitivity}
-				A relation $R$ on $A$ ($R \subseteq A \times A$) is called \textbf{transitive} iff $R$ has the property that, for all $x, y, z \in R$, whenever $(x, y) \in R$ and $(y, z) \in R$, then $(x, z) \in R$.
+				\begin{definition}{Transitivity}
+					A relation $R$ on $A$ ($R \subseteq A \times A$) is called \concept{transitive} iff $R$ has the property that, for all $x, y, z \in R$, whenever $(x, y) \in R$ and $(y, z) \in R$, then $(x, z) \in R$.
+				\end{definition}
 				\begin{example}
 					If $(1, 2) \in R$ and $(2, 3) \in R$, then $(1, 3)$ must be in $R$.
 				\end{example}
@@ -146,9 +176,12 @@
 					$(2, 1)$ and $(1, 2)$ mean $(2, 2)$ should be present.\\
 					Can be done with all possible combinations.
 				\end{example}
+			\pagebreak
 			\subsection{Trichotomy}
-				A relation $R$ on $A$ satisfies \textbf{trichotomy} iff, for every $x$ and $y$ chosen from $A$ such that $x \neq y$, $x$ and $y$ are comparable.\\
-				In other words, for every $x \neq y$, every element is related to every other element. So $x R y$ or $y R x$.
+				\begin{definition}{Trichotomy}
+					A relation $R$ on $A$ satisfies \concept{trichotomy} iff, for every $x$ and $y$ chosen from $A$ such that $x \neq y$, $x$ and $y$ are comparable.\\
+					In other words, for every $x \neq y$, every element is related to every other element. So $x R y$ or $y R x$.
+				\end{definition}
 				\begin{example}
 					Let $S = \bigl\{(3, 2), (2, 1), (3, 1)\bigr\}$ be a relation on $A = \{1, 2, 3\}$.\\
 					$S$ satisfies the requirements for trichotomy, since:
@@ -159,17 +192,21 @@
 					\end{indentparagraph}
 				\end{example}
 			\subsection{Inverse Relation}
-				Given a relation $R$ with domain $A$ and range $B$, the relation $R^{-1}$ with domain $B$ and range $A$ is called the \textbf{inverse of $R$}, and is defined such that:
-				\begin{align*}
-					(x, y) \in R \text{ iff } (y, x) \in R^{-1}
-				\end{align*}
+				\begin{definition}{Inverse Relation}
+					Given a relation $R$ with domain $A$ and range $B$, the relation $R^{-1}$ with domain $B$ and range $A$ is called the \concept{inverse of $R$}, and is defined such that:
+					\begin{align*}
+						(x, y) \in R \text{ iff } (y, x) \in R^{-1}
+					\end{align*}
+				\end{definition}
 				\begin{example}
 					Let $X = {a, b, c}$ and $R = \bigl\{(a, b), (b, c), (a, c)\bigr\}$\\
 					Then $R^{-1} = \bigl\{(b, a), (c, b), (c, a)\bigr\}$
 				\end{example}
 			\subsection{Relation Composition}
-				Given relations $R$ from $A$ to $B$ and $S$ from $B$ to $C$, the composition of $R$ followed by $S$, written $S \circ R$ or $R;S$ is the relation from $A$ to $C$ defined by:\\
-				$S \circ R = R;S = \bigl\{(a, c) \mid$ there is some $b \in B$ such that $(a, b) \in R$ and $(b, c) \in S\bigr\}$
+				\begin{definition}{Relation Composition}
+					Given relations $R$ from $A$ to $B$ and $S$ from $B$ to $C$, the \concept{composition} of $R$ followed by $S$, written $S \circ R$ or $R;S$ is the relation from $A$ to $C$ defined by:\\
+					$S \circ R = R;S = \bigl\{(a, c) \mid$ there is some $b \in B$ such that $(a, b) \in R$ and $(b, c) \in S\bigr\}$
+				\end{definition}
 				\begin{example}
 					Let $R = \bigl\{(1, a), (2, b)\bigr\}$ be a relation from $\{1, 2\}$ to $\{a, b\}$\\
 					Let $S = \bigl\{(a, s), (b, s), (b, t)\bigr\}$ be a relation from $\{a, b\}$ to $\{s, t\}$.\\
@@ -324,7 +361,7 @@
 							\begin{proof}
 								$ $
 								\begin{enumerate}[label=(\roman*)]
-									\item \textbf{If $R$ is transitive, then $R \circ R \subseteq R$}
+									\item \question{If $R$ is transitive, then $R \circ R \subseteq R$}
 										\begin{subproof}[Subproof]
 											$ $
 											\begin{tabbing}
@@ -338,7 +375,7 @@
 											\end{tabbing}
 										\end{subproof}
 									\pagebreak
-									\item \textbf{If $R \circ R \subseteq R$, then $R$ is transitive}
+									\item \question{If $R \circ R \subseteq R$, then $R$ is transitive}
 										\begin{subproof}[Subproof]
 											$ $
 											\begin{tabbing}

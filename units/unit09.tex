@@ -14,32 +14,35 @@
 					\end{itemize}
 				\item[Non-Declarative Statements] Some examples are:
 					\begin{itemize}[nosep]
-						\item Is 3 an even integer? (\textit{Question}: acquire information, not convey information)
-						\item Add 3 to 5! (\textit{Command}: induce behaviour, not convey information)
+						\item Is 3 an even integer? (\emph{Question}: acquire information, not convey information)
+						\item Add 3 to 5! (\emph{Command}: induce behaviour, not convey information)
 					\end{itemize}
 			\end{description}
 			\begin{sidenote}{Not all declarative statements are usable}
 				A declarative statement is not necessarily true or false, as there can be a contradiction in the statement.\\
-				However, when dealing with proofs, declarative statements are restricted to those that can be either \textit{true} or \textit{false}.
+				However, when dealing with proofs, declarative statements are restricted to those that can be either \emph{true} or \emph{false}.
 			\end{sidenote}
 			A declarative statement can either be
 			\begin{itemize}[nosep]
-				\item \textbf{atomic}, (or simple) meaning they convey a single fact.
-				\item \textbf{compound}, meaning they combine multiple atomic statements.
+				\item \concept{atomic}, (or simple) meaning they convey a single fact.
+				\item \concept{compound}, meaning they combine multiple atomic statements.
 			\end{itemize}
 		\section{Combining Statements}
-			Statements can be combined together using different \textbf{logical connectives}. Below is a list of the possible connectives.
+			Statements can be combined together using different \concept{logical connectives}. Below is a list of the possible connectives.
 			\begin{center}
 				\begin{tabular}{l c l}
 					and & $\land$ & conjunction\\
 					or & $\lor$ & disjunction\\
-					if \ldots, then \ldots & $\rightarrow$ & conditional/implication\\
+					not & $\lnot $ & negation\\
 					if and only if & $\leftrightarrow$ & biconditional\\
-					not & $\lnot $ & negation
+					if \ldots, then \ldots & $\rightarrow$ & conditional/implication
 				\end{tabular}
 			\end{center}
 			\subsection[Conjunction]{Conjunction (AND)}
-				If $p$ and $q$ represent declarative statements, then $p \land q$ represents the statement ``$p$ and $q$'', and is called the \textbf{conjunction} of $p$ and $q$.
+				\begin{definition}{Conjunction}
+					If $p$ and $q$ represent declarative statements, then $p \land q$ represents the statement ``$p$ and $q$'', and is called the \concept{conjunction} of $p$ and $q$.
+				\end{definition}
+				\nopagebreak
 				\begin{center}
 					\begin{tabular}{|c c | c|}
 						\hline
@@ -53,7 +56,10 @@
 					\end{tabular}	
 				\end{center}
 			\subsection[Disjunction]{Disjunction (OR)}
-				If $p$ and $q$ represent declarative statements, then $p \lor q$ represents the statement ``$p$ or $q$'', and is called the \textbf{disjunction} of $p$ and $q$.
+				\begin{definition}{Disjunction}
+					If $p$ and $q$ represent declarative statements, then $p \lor q$ represents the statement ``$p$ or $q$'', and is called the \concept{disjunction} of $p$ and $q$.
+				\end{definition}
+				\nopagebreak
 				\begin{center}
 					\begin{tabular}{|c c | c|}
 						\hline
@@ -66,34 +72,26 @@
 						\hline
 					\end{tabular}	
 				\end{center}
-			\subsection[Conditional]{Conditional/Implication}
-				If $p$ and $q$ represent declarative statements, then $p \rightarrow q$ represents the statement ``If $p$, then $q$'', and is called a \textbf{conditional statement} or \textbf{implication}. $p$ is called the \textbf{hypothesis} or the \textbf{antecedent} and $q$ is called the \textbf{conclusion} or \textbf{consequent}.
+			\subsection{Negation}
+				\begin{definition}{Negation}
+					If $p$ is some declarative statement, then $\lnot p$ represents the statement ``not $p$''. This is called the \concept{negation} of a given statement.
+				\end{definition}
+				\nopagebreak
 				\begin{center}
-					\begin{tabular}{|c c | c|}
+					\begin{tabular}{| c | c |}
 						\hline
-						$\mathbf{p}$ & $\mathbf{q}$ & $\mathbf{p \rightarrow q}$\\
+						$\mathbf{p}$ & $\mathbf{\lnot p}$\\
 						\hline
-						T & T & T\\
-						T & F & F\\
-						F & T & T\\
-						F & F & T\\
+						T & F\\
+						F & T\\
 						\hline
-					\end{tabular}	
+					\end{tabular}
 				\end{center}
-				\begin{sidenote}{If the hypothesis is false, then the statement is true}
-					This can be quite confusing. The idea is that if the original statement is false, we can't say that the next statement is not true.
-					\begin{example}
-						Consider a statement ``If you read books, you are smart''.
-						\begin{indentparagraph}
-							If someone reads books and is smart, this is true.\\
-							If someone reads books and is not smart, this is false.\\
-							If someone does not read books, we cannot say the statement is false, but we also cannot say it is true. So the statement would be vacuously true.
-						\end{indentparagraph}
-					\end{example} 
-				\end{sidenote}
-			\pagebreak
 			\subsection{Biconditional}
-				If $p$ and $q$ represent declarative statements, then $p \leftrightarrow q$ represents the statement $p$ if and only if $q$, which can also be written $p$ iff $q$. This is called the \textbf{biconditional}.
+				\begin{definition}{Biconditional}
+					If $p$ and $q$ represent declarative statements, then $p \leftrightarrow q$ represents the statement $p$ if and only if $q$, which can also be written $p$ iff $q$. This is called the \concept{biconditional}.
+				\end{definition}
+				\nopagebreak
 				\begin{center}
 					\begin{tabular}{|c c | c|}
 						\hline
@@ -106,18 +104,35 @@
 						\hline
 					\end{tabular}	
 				\end{center}
-			\subsection{Negation}
-				If $p$ is some declarative statement, then $\lnot p$ represents the statement ``not $p$''. This is called the \textbf{negation} of a given statement.
+			\subsection[Conditional]{Conditional/Implication}
+				\begin{definition}{Implication}
+					If $p$ and $q$ represent declarative statements, then $p \rightarrow q$ represents the statement ``If $p$, then $q$'', and is called a \concept{conditional statement} or \concept{implication}. $p$ is called the \concept{hypothesis} or the \concept{antecedent} and $q$ is called the \concept{conclusion} or \concept{consequent}.
+				\end{definition}
+				\nopagebreak
 				\begin{center}
-					\begin{tabular}{| c | c |}
+					\begin{tabular}{|c c | c|}
 						\hline
-						$\mathbf{p}$ & $\mathbf{\lnot p}$\\
+						$\mathbf{p}$ & $\mathbf{q}$ & $\mathbf{p \rightarrow q}$\\
 						\hline
-						T & F\\
-						F & T\\
+						T & T & T\\
+						T & F & F\\
+						F & T & T\\
+						F & F & T\\
 						\hline
-					\end{tabular}
+					\end{tabular}	
 				\end{center}
+				\nopagebreak
+				\begin{sidenote}{If the hypothesis is false, then the statement is true}
+					This can be quite confusing. The idea is that if the original statement is false, we can't say that the next statement is not true.
+					\begin{example}
+						Consider a statement ``If you read books, you are smart''.
+						\begin{indentparagraph}
+							If someone reads books and is smart, this is true.\\
+							If someone reads books and is not smart, this is false.\\
+							If someone does not read books, we cannot say the statement is false, but we also cannot say it is true. So the statement would be vacuously true.
+						\end{indentparagraph}
+					\end{example} 
+				\end{sidenote}
 		\section{Constructing Truth Tables}
 			\begin{enumerate}
 				\item List the statements at the top.
@@ -164,7 +179,9 @@
 			\pagebreak
 		\section{Relationships Between Statements}
 			\subsection{Tautology}
-				A compound statement that is always true is called a \textbf{tautology}.
+				\begin{definition}{Tautology}
+					A compound statement that is always true is called a \concept{tautology}.
+				\end{definition}
 				\begin{example}
 					The statement $p \lor \lnot p$ is always true.
 					\begin{center}
@@ -179,7 +196,9 @@
 					\end{center}
 				\end{example}
 			\subsection{Contradiction}
-				A compound statement that is always false is called a \textbf{contradiction}.
+				\begin{definition}{Contradiction}
+					A compound statement that is always false is called a \concept{contradiction}.
+				\end{definition}
 				\begin{example}
 					The statement $p \land \lnot p$ is always false.
 					\begin{center}
@@ -194,7 +213,9 @@
 					\end{center}
 				\end{example}
 			\subsection{Logical Equivalence}
-				Two declarative statements $a$ and $b$ are \textbf{logically equivalent}, written $a \equiv b$, if and only if the statement $a \rightarrow b$ is a tautology.
+				\begin{definition}{Logical Equivalence}
+					Two declarative statements $a$ and $b$ are \concept{logically equivalent}, written $a \equiv b$, if and only if the statement $a \rightarrow b$ is a tautology.
+				\end{definition}
 				\begin{example}
 					Take the declarative statement $(p \lor q) \leftrightarrow (q \lor p)$.
 					\begin{center}

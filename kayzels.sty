@@ -44,8 +44,10 @@
 \colorlet{note border}{red!75!black}
 \colorlet{exercise color}{orange!25!white}
 \colorlet{exercise border}{orange!75!black}
-\colorlet{theorem color}{Aquamarine!30!white}
-\colorlet{theorem border}{Aquamarine!75!black}
+\colorlet{theorem color}{MidnightBlue!20!white}
+\colorlet{theorem border}{MidnightBlue!75!black}
+\colorlet{definition color}{Aquamarine!30!white}
+\colorlet{definition border}{Aquamarine!75!black}
 
 % Bold Math
 \let\oldtextbf\textbf
@@ -67,6 +69,9 @@
 	{\end{tcolorbox}}
 \newenvironment{theorem}[1][Theorem]
 	{\begin{tcolorbox}[breakable, colback=theorem color, colframe=theorem border, fonttitle=\bfseries, title={#1}, center title, parbox=false]}
+	{\end{tcolorbox}}
+\newenvironment{definition}[1]
+	{\begin{tcolorbox}[breakable, colback=definition color, colframe=definition border, fonttitle=\bfseries, title={#1}, center title, parbox=false]}
 	{\end{tcolorbox}}
 
 % Include/Input Subfiles
@@ -126,5 +131,7 @@
 \newcommand{\moveup}{\rule{0pt}{\baselineskip} \vspace*{-2.2\abovedisplayskip}}
 \newcommand{\questionspace}{\vspace*{0.4em}}
 
-% Questions Styling
+% Questions, Concepts and Emphasis Styling
 \newcommand{\question}[1]{\textbf{#1}\questionspace}
+\newcommand{\concept}[1]{\textbf{#1}}
+\newcommand{\tablehead}[1]{\textbf{#1}}

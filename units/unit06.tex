@@ -5,12 +5,14 @@
 	\chapter{Special Kinds of Relation}
 		\section{Order Relations}
 			\subsection{Weak Partial Order}
-				A relation $R$ on a set $A$ is called a \textbf{weak partial order} iff $R$ is
-				\begin{itemize}[nosep]
-					\item reflexive on $A$
-					\item antisymmetric, and
-					\item transitive
-				\end{itemize}
+				\begin{definition}
+					A relation $R$ on a set $A$ is called a \concept{weak partial order} iff $R$ is
+					\begin{itemize}[nosep]
+						\item reflexive on $A$
+						\item antisymmetric, and
+						\item transitive
+					\end{itemize}
+				\end{definition}
 				\begin{example}
 					Let $A = \bigl\{\{a\}, \{a, b\}\bigr\}$. A relation $S$ on $A$ is defined by $(B, C) \in S \text{ iff } B \subseteq C$. (Each first coordinate is a subset of the second coordinate.)
 					\begin{align*}
@@ -49,7 +51,7 @@
 									Yes. If $(x, y) \in S$, then $x \in y$. If $x \in y$, then $y$ cannot be an element of $x$, so $(y, x) \notin S$.
 								\item[Transitivity] Is it true for all $x, y, z \in A$, if $(x, y) \in S$, and $(y, z) \in SS$, then $(x, z) \in S$?\\
 									Yes. Vacuously true, as there is no element that has the same first coordinate as another element's second doordinate.
-								\item[Weak Partial Order] As $S$ is not reflexive, $S$ is \textit{not} a weak partial order.
+								\item[Weak Partial Order] As $S$ is not reflexive, $S$ is \emph{not} a weak partial order.
 							\end{description}
 						\item \question{$R \subseteq \mathbb{Z} \times \mathbb{Z}$ such that $x \, R \, y$ iff $x + y$ is even.}\\
 							If $x + y$ is even, then $x + y = 2k$ for some integer $k$.
@@ -71,7 +73,7 @@
 										&= 2(k + m - y)
 									\end{align*}
 									From the above, if $x + y$ is even, and $y + z$ is even, then $x + z$ is also even.
-								\item[Weak Partial Order] As $R$ is not antisymmetric, $R$ is \textit{not} a weak partial order.
+								\item[Weak Partial Order] As $R$ is not antisymmetric, $R$ is \emph{not} a weak partial order.
 							\end{description}
 							\pagebreak
 						\item \question{$R$ on $\mathbb{Z} \times \mathbb{Z}$ by $(a, b) \,R \, (c, d)$ if either $a < c$ or $(a = c$ and $b \leq d)$.}
@@ -92,18 +94,20 @@
 										If $a = c$ and $b \leq d$ and $c < e$, then $a < e$, which means $\bigl\{(a, b), (e, f)\bigr\} \in R$.\\
 										If $a = c$ and $b \leq d$ and $c = e$ and $d \leq f$, then $c = e$, and $b \leq f$, which means $\bigl\{(a, b), (e, f)\bigr\} \in R$.
 									\end{indentparagraph}
-									\item[Weak Partial Order] As $R$ is reflexive, antisymmetric and transitive, $R$ \textit{is} a weak partial order.
+									\item[Weak Partial Order] As $R$ is reflexive, antisymmetric and transitive, $R$ \emph{is} a weak partial order.
 							\end{description}
 					\end{enumerate}
 				\end{exercise}
 			\pagebreak
 			\subsection{Strict Partial Order}
-				A relation $R$ on a set $A$ is called a \textbf{strict partial order} iff $R$ is
-				\begin{itemize}[nosep]
-					\item irreflexive on $A$
-					\item antisymmetric, and
-					\item transitive
-				\end{itemize}
+				\begin{definition}{Strict Partial Order}
+					A relation $R$ on a set $A$ is called a \concept{strict partial order} iff $R$ is
+					\begin{itemize}[nosep]
+						\item irreflexive on $A$
+						\item antisymmetric, and
+						\item transitive
+					\end{itemize}
+				\end{definition}
 				\begin{example}
 					Let $A = \{1, 2, 3\}$ and let $S$ on $A$ be the relation $S = \bigl\{(1, 2), (1, 3), (2, 3)\bigr\}$. (Every first coordinate is less than the second coordinate.)\\
 					To prove this is a strict partial order, prove irreflexivity, antisymmetry and transitivity.
@@ -130,8 +134,8 @@
 									Yes. $a \neq \{a\}$. $\bigl(a, \{a\}\bigr) \in S$, and $\bigl(\{a\}, a\bigr) \notin S$.\\   
 									$a \neq \{b\}$. $\bigl(a, \{b\}\bigr) \in S$, and $\bigl(\{b\}, a\bigr) \notin S$.
 								\item[Transitivity] Is it true that for all $x, y, z \in A$, if $(x, y) \in S$ and $(y, z) \in S$, then $(x, z) \in S$?\\
-									Yes. There are no ordered pairs such that $(x, y) \in R$ and $(y, z) \in R$, so $R$ is \textit{vacuously} transitive.
-								\item[Strict Partial Order] As $R$ is irreflexive, antisymmetric, and transitive, $R$ \textit{is} a strict partial order.
+									Yes. There are no ordered pairs such that $(x, y) \in R$ and $(y, z) \in R$, so $R$ is \emph{vacuously} transitive.
+								\item[Strict Partial Order] As $R$ is irreflexive, antisymmetric, and transitive, $R$ \emph{is} a strict partial order.
 							\end{description}
 						\pagebreak
 						\item \question{$R \subseteq (\mathbb{Z} \times \mathbb{Z}) \times (\mathbb{Z} \times \mathbb{Z})$ such that $(a, b) \, R \, (c, d)$ iff $a < c$.}
@@ -142,13 +146,15 @@
 									Yes. If $\left((a, b), (c, d)\right) \in R$, then $a < c$. As $a < c$, $\left((c, d), (a, b)\right) \notin R$.
 								\item[Transitivity] Is it true for all $(a, b), (c, d), (e, f) \in \mathbb{Z} \times \mathbb{Z}$, \\ if $\left((a, b), (c, d)\right) \in R$ and $\left((c, d), (e, f)\right) \in R$, then $\left((a, b), (e, f)\right) \in R$?\\
 									Yes. If $\left((a, b), (c, d)\right) \in R$, then $a < c$. If $\left((c, d), (e, f)\right) \in R$, then $c < e$. Therefore $a < e$, so $\left((a, b), (e, f)\right) \in R$.
-								\item[Strict Partial Order] As $R$ is irreflexive, antisymmetric, and transitive, $R$ \textit{is} a strict partial order.
+								\item[Strict Partial Order] As $R$ is irreflexive, antisymmetric, and transitive, $R$ \emph{is} a strict partial order.
 							\end{description}
 					\end{enumerate}
 				\end{exercise}
 			\pagebreak
 			\subsection{A Total (or Linear) Order Relation}
-				A relation $R$ on a set $A$ is called a \textbf{total} or \textbf{linear order} if $R$ is a partial order on $A$ that also satisfies \textit{trichotomy}.
+				\begin{definition}{Total Order Relation}
+					A relation $R$ on a set $A$ is called a \concept{total} or \concept{linear order} if $R$ is a partial order on $A$ that also satisfies \emph{trichotomy}.
+				\end{definition}
 				\begin{example}
 					The example for Strict Partial Orders:
 					\begin{indentparagraph}
@@ -160,7 +166,7 @@
 							Yes. $1$ is related to $2$ in $(1, 2)$, and related to $3$ in $(1, 3)$.\\
 							$2$ is related to $1$ in $(1, 2)$, and related to $3$ in $(2, 3)$.\\
 							$3$ is related to $1$ in $(1, 3)$, and related to $2$ in $(2, 3)$.
-						\item[Total Order Relation] As this relation is a partial order relation that satisfies trichotomy, it is a \textbf{total order relation}. As the relation is a \textit{strict} partial order, this is a \textbf{strict total order relation}.
+						\item[Total Order Relation] As this relation is a partial order relation that satisfies trichotomy, it is a \concept{total order relation}. As the relation is a \emph{strict} partial order, this is a \concept{strict total order relation}.
 					\end{description}
 				\end{example}
 				\begin{sidenote}{Proof Strategies}
@@ -169,20 +175,22 @@
 							For all $x$, or\\
 							For all pairs $(x, y)$
 						\end{indentparagraph}
-					Instead, \textit{abstract reasoning} needs to be used to produce a \textit{general proof}.\\
-					However, an example can be used to show that a statement is false, which is known as a \textbf{counterexample}.
+					Instead, \emph{abstract reasoning} needs to be used to produce a \emph{general proof}.\\
+					However, an example can be used to show that a statement is false, which is known as a \concept{counterexample}.
 				\end{sidenote}
 				\begin{exercise}{Self Assesmment \thechapter.7}
 					%TODO: COME BACK TO
 				\end{exercise}
 		\pagebreak
 		\section{Equivalence Relation}
-			A relation $R$ on a set $A$ is called an \textbf{equivalence relation} if $R$ is:
-			\begin{itemize}[nosep]
-				\item reflexive on $A$
-				\item symmetric, and
-				\item transitive
-			\end{itemize}
+			\begin{definition}{Equivalence Relation}
+				A relation $R$ on a set $A$ is called an \concept{equivalence relation} if $R$ is:
+				\begin{itemize}[nosep]
+					\item reflexive on $A$
+					\item symmetric, and
+					\item transitive
+				\end{itemize}
+			\end{definition}
 			\begin{example}
 				Let $A$ be the set of real numbers. A relation $R$ on $A$ is defined as $(x, y) \in R$ iff $x = y$.
 				\begin{description}
@@ -200,31 +208,31 @@
 				Students get marked for an assignment using grades from A to E. All students who get an A would be in the same equivalence class, even if their individual marks are different.
 			\end{example}
 			\subsection{Equivalence Class}
-				For each $x \in A$, the equivalence class $[x] = \{y \mid y \in A$ and $ x \, R \, y\}$
+				\begin{definition}{Equivalence Class}
+					For each $x \in A$, the \concept{equivalence class} $[x] = \{y \mid y \in A$ and $ x \, R \, y\}$
+				\end{definition}
+				\nopagebreak
 				\begin{example}
 					Let $R$ be the relation on $\mathbb{Z}$ defined by $(x, y) \in R$ iff $y - x$ is even.\\
-					That is, $R = \{y \mid y - x = 2k\}$ for some $k \in \mathbb{Z}$.
-					So,
+					That is, $R = \{y \mid y - x = 2k\}$ for some $k \in \mathbb{Z}$. So,
 					\begin{align*}
 						[x] &= \{y \mid y - x = 2k\}\\
 						&= \{y \mid y = 2k + x\}
 					\end{align*}
-					Then you substitute elements of $x$ until there are no more equivalence classes.\\
-					The number you substitute for $x$ is written in $[]$, i.e. $[x]$.
+					Then substitute elements of $x$ until there are no more equivalence classes.
 					\begin{align*}
 						[0] &= \{y = 2k\}\\
-						&= \{\ldots, -6, -4, -2, 0, 2, 4, 6, \ldots\}\\
+						&= \{\ldots, -6, -4, -2, 0, 2, 4, 6, \ldots\} = [2] = [4] \ldots\\
 						[1] &= \{y = 2k + 1\}\\
-						&= \{\ldots, -5, -3, -1, 1, 3, 5, 7, \ldots\}
+						&= \{\ldots, -5, -3, -1, 1, 3, 5, 7, \ldots\} = [3] = [5] \ldots
 					\end{align*}
-					As $[2]$ would be the same as $[0]$, and $[3]$ would be the same as $[1]$, these are the only two equivalence classes.\\
 					$[0]$ is the set of even integers, and $[1]$ is the set of odd integers.\\
-					These two equivalence classes would be the parts of the \textbf{partition} $S$ of the set $\mathbb{Z}$ on the relation $R$: $S = \bigl\{[0], [1]\bigr\}$
+					These two equivalence classes would be the parts of the \concept{partition} $S$ of the set $\mathbb{Z}$ on the relation $R$: $S = \bigl\{[0], [1]\bigr\}$
 				\end{example}
 				\begin{exercise}{Self-Assessment Exercise \thechapter.10}
 					\begin{enumerate}
 						\item \question{Let $X = \{a, b, c\}$. Write down all equivalence relations on $X$}.\\
-							For an equivalence relation, the relation needs to be \textit{reflexive}, \textit{symmetric} and \textit{transitive}.
+							For an equivalence relation, the relation needs to be \emph{reflexive}, \emph{symmetric} and \emph{transitive}.
 							\begin{description}
 								\item[Reflexivity] For reflexivity, \{(a, a), (b, b), (c, c)\} need to be part of the relation.
 								\item[Symmetry] If $(a, b)$ is added, then $(b, a)$ must be added. This still satisfies transitivity.\\
@@ -274,12 +282,14 @@
 					\end{enumerate}
 				\end{theorem}
 			\subsection{Partitions}
-				For a nonempty set $A$, a \textbf{partition} of $A$ is a set $S = \{S_{1}, S_{2}, S_{3}\}$. The members of $S$ are subsets of $A$ (called \textit{parts} of $A$) such that:
-				\begin{enumerate}
-					\item for all $i$, $S_{i} \neq \emptyset$. That is, every part of the partition is not empty.
-					\item for all $i$ and $j$, if $S_{i} \neq S_{j}$, then $S_{i} \cap S_{j} = \emptyset$. That is, different parts of the partition don't have common elements.
-					\item $S_{1} \cup S_{2} \cup S_{3} \cup \ldots = A$. That is, every element of $A$ appears in one (and only one) part of the partition.
-				\end{enumerate}
+				\begin{definition}{Partition}
+					For a nonempty set $A$, a \concept{partition} of $A$ is a set $S = \{S_{1}, S_{2}, S_{3}\}$. The members of $S$ are subsets of $A$ (called \emph{parts} of $A$) such that:
+					\begin{enumerate}
+						\item for all $i$, $S_{i} \neq \emptyset$. That is, every part of the partition is not empty.
+						\item for all $i$ and $j$, if $S_{i} \neq S_{j}$, then $S_{i} \cap S_{j} = \emptyset$. That is, different parts of the partition don't have common elements.
+						\item $S_{1} \cup S_{2} \cup S_{3} \cup \ldots = A$. That is, every element of $A$ appears in one (and only one) part of the partition.
+					\end{enumerate}
+				\end{definition}
 				\begin{example}
 					Let $A$ = \{5, 6, 7\}. Then A can be split into two subsets, $\{5\}$ and $\{6, 7\}$. Then $\bigl\{\{5\}, \{6, 7\}\bigr\}$ is a partition of $A$, as:
 					\begin{enumerate}
@@ -289,7 +299,7 @@
 					\end{enumerate}
 				\end{example}
 				\subsubsection{Going Backwards from a partition}
-					If one knows the original set that was partitioned, and the partitions, one can generate the original relation, using \textbf{Theorem \thechapter.1}
+					If one knows the original set that was partitioned, and the partitions, one can generate the original relation, using \concept{Theorem \thechapter.1}
 					\begin{example}
 						Given an original set $A = \{a, b, c\}$ and a partition given by $\bigl\{\{a\} \{b, c\}\bigr\}$.
 						\begin{indentparagraph}
@@ -302,13 +312,17 @@
 		\pagebreak
 		\section{Functions}
 			\subsection{Functional Relation}
-				If $R$ is a relation from $X$ to $Y$, then $R$ is \textbf{functional} iff any element $x$ in $X$ only appears once as a first coordinate in an ordered pair of $R$.
+				\begin{definition}{Functional Relation}
+					If $R$ is a relation from $X$ to $Y$, then $R$ is \concept{functional} iff any element $x$ in $X$ only appears once as a first coordinate in an ordered pair of $R$.
+				\end{definition}
 				\begin{example}
 					Let $S$ be a relation from $\{1, 2, 3\}$ to $\{a, b, c\}$, where $S = \bigl\{(1, a), (2, c)\bigr\}$. $S$ is a functional relation as $1$ and $2$ only appear as first coordinates in distinct pairs.
 				\end{example}
 			\subsection{Function}
-				Suppose $R \subseteq A \times B$ is a binary relation from a set $A$ to a set $B$. $R$ is a \textbf{function} from $A$ to $B$ if $R$ is functional, and the domain of $R$ is exactly the set $A$, i.e. $\mathrm{dom}(R) = A$.\\
-				This is then written $R: A \rightarrow B$.
+				\begin{definition}{Function}
+					Suppose $R \subseteq A \times B$ is a binary relation from a set $A$ to a set $B$. $R$ is a \concept{function} from $A$ to $B$ if $R$ is functional, and the domain of $R$ is exactly the set $A$, i.e. $\mathrm{dom}(R) = A$.\\
+					This is then written $R: A \rightarrow B$.
+				\end{definition}
 				\begin{example}
 					Using the same relation as above:
 						\begin{indentparagraph}

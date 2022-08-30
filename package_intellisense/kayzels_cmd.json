@@ -9,6 +9,21 @@
     "package": "kayzels",
     "snippet": "addfile{${1:<filename>}}"
   },
+  "concept{}": {
+    "command": "concept{text}",
+    "package": "kayzels",
+    "snippet": "concept{${1:text}}"
+  },
+  "moveup": {
+    "command": "moveup",
+    "package": "kayzels",
+    "snippet": "moveup"
+  },
+  "question{}": {
+    "command": "question{text}",
+    "package": "kayzels",
+    "snippet": "question{${1:text}}"
+  },
   "rulebookend": {
     "command": "rulebookend",
     "package": "kayzels",
@@ -18,5 +33,10 @@
     "command": "rulechapterend",
     "package": "kayzels",
     "snippet": "rulechapterend"
+  },
+  "tablehead": {
+    "command": "tablehead",
+    "package": "kayzels",
+    "snippet": "tablehead"
   }
 }

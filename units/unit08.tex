@@ -4,41 +4,45 @@
 	\ifSubfilesClassLoaded{\setcounter{chapter}{7}}{}
 	\chapter{Operations}
 		\section{Binary Operation}
-			If $f: X \times X \rightarrow X$, then $f$ is called a \textbf{binary operation} on $X$.\\
-			In other words, a binary operation takes in a pair, and returns a single value.
+			\begin{definition}{Binary Operation}
+				If $f: X \times X \rightarrow X$, then $f$ is called a \concept{binary operation} on $X$.\\
+				In other words, a binary operation takes in a pair, and returns a single value.
+			\end{definition}
 			\begin{sidenote}{Operations Notation}
-				An operation is just a function, which means it can be written in normal function \textit{prefix} notation: $f(x, y)$. However, it is more conventional to write it in \textit{infix} notation: $x f y$.
+				An operation is just a function, which means it can be written in normal function \emph{prefix} notation: $f(x, y)$. However, it is more conventional to write it in \emph{infix} notation: $x f y$.
 				\begin{example}
 					Addition of numbers is a binary operation. If $(x, y) = (3, 4)$, then it could be written $+(3, 4)$, but it is more conventional to write $3 + 4$.
 				\end{example}
 			\end{sidenote}
 			By convention, the elements of a binary operation are all the same set.
-			\subsection[Finte and Infinite Sets]{Finite and Infinite Sets (Informal Definition)}
-				\begin{description}
-					\item[Finite set:] A set whose cardinality is a non-negative number. Meaning one can count the number of elements in the set.
-						\begin{example}
-							$A = \{1, 2, 3, 4\}$, where $\left\lvert A\right\rvert = 4$
-						\end{example}
-					\item[Infinite set:] A set that is not finite. Meaning one \textit{cannot} count the number of elements in the set.
-						\begin{example}
-							The set of real numbers $\mathbb{R}$ is an infinite set.
-						\end{example}
-				\end{description}
+			\subsection[Finite and Infinite Sets]{Finite and Infinite Sets (Informal Definition)}
+				\begin{definition}{Finite Set}
+					A set whose cardinality is a non-negative number. Meaning one can count the number of elements in the set.\par
+					\begin{example}
+						$A = \{1, 2, 3, 4\}$, where $\left\lvert A\right\rvert = 4$
+					\end{example}
+				\end{definition}
+				\begin{definition}{Infinite Set}
+					A set that is not finite. Meaning one \emph{cannot} count the number of elements in the set.\par
+					\begin{example}
+						The set of real numbers $\mathbb{R}$ is an infinite set.
+					\end{example}
+				\end{definition}
 			\pagebreak
 			\subsection{Tables For Binary Operations}
-				A way to describe a binary operation is to use a table, where the rows are based on the \textit{first} element, and the columns on the \textit{second}. The operator (the symbol used to describe the operation) is written in the top left corner.
+				A way to describe a binary operation is to use a table, where the rows are based on the \emph{first} element, and the columns on the \emph{second}. The operator (the symbol used to describe the operation) is written in the top left corner.
 				\begin{example}
 					Let $A = \{a, b, c, d\}$.\\
-					A binary operation called $+$ (NB: This is \textit{not} addition) could be written as follows:
+					A binary operation called $+$ (NB: This is \emph{not} addition) could be written as follows:
 					\begin{center}
 						\begin{tabular}{|c|c c c c|}
 							\hline
-							\textbf{$+$} & \textbf{a} & \textbf{b} & \textbf{c} & \textbf{d}\\
+							\tablehead{$+$} & \tablehead{a} & \tablehead{b} & \tablehead{c} & \tablehead{d}\\
 							\hline
-							\textbf{a} & a & b & c & d \\
-							\textbf{b} & b & c & d & a \\
-							\textbf{c} & c & d & a & b \\
-							\textbf{d} & d & a & b & c \\
+							\tablehead{a} & a & b & c & d \\
+							\tablehead{b} & b & c & d & a \\
+							\tablehead{c} & c & d & a & b \\
+							\tablehead{d} & d & a & b & c \\
 							\hline
 						\end{tabular}
 					\end{center}
@@ -46,13 +50,13 @@
 					\begin{center}
 						\begin{tabular}{|c|c c c >{\columncolor{Lavender}}c|}
 							\hline
-							\textbf{$+$} & \textbf{a} & \textbf{b} & \textbf{c} & \textbf{d}\\
+							\tablehead{$+$} & \tablehead{a} & \tablehead{b} & \tablehead{c} & \tablehead{d}\\
 							\hline
-							\textbf{a} & a & b & c & d \\
+							\tablehead{a} & a & b & c & d \\
 							\rowcolor{Lavender}
-							\textbf{b} & b & c & d & \cellcolor{Orchid}a \\
-							\textbf{c} & c & d & a & b \\
-							\textbf{d} & d & a & b & c \\
+							\tablehead{b} & b & c & d & \cellcolor{Orchid}a \\
+							\tablehead{c} & c & d & a & b \\
+							\tablehead{d} & d & a & b & c \\
 							\hline
 						\end{tabular}
 					\end{center}
@@ -68,12 +72,12 @@
 					\begin{center}
 						\begin{tabular}{|c|c c c c|}
 							\hline
-							\textbf{$\bullet$} & \textbf{a} & \textbf{b} & \textbf{c} & \textbf{d}\\
+							\tablehead{$\bullet$} & \tablehead{a} & \tablehead{b} & \tablehead{c} & \tablehead{d}\\
 							\hline
-							\textbf{a} & a & b & c & d \\
-							\textbf{b} & b & a & d & c \\
-							\textbf{c} & c & d & a & b \\
-							\textbf{d} & d & c & b & a \\
+							\tablehead{a} & a & b & c & d \\
+							\tablehead{b} & b & a & d & c \\
+							\tablehead{c} & c & d & a & b \\
+							\tablehead{d} & d & c & b & a \\
 							\hline
 						\end{tabular}
 					\end{center}
@@ -98,19 +102,20 @@
 				\begin{center}
 					\begin{tabular}{|c|c c|}
 						\hline
-						\textbf{$*$} & \textbf{$1$} & \textbf{$2$}\\
+						\tablehead{$*$} & \tablehead{$1$} & \tablehead{$2$}\\
 						\hline
-						\textbf{$1$} & 1 & 2 \\
-						\textbf{$2$} & 2 & 1 \\
+						\tablehead{$1$} & 1 & 2 \\
+						\tablehead{$2$} & 2 & 1 \\
 						\hline
 					\end{tabular}
 				\end{center}
 			\end{indentparagraph}
 			\subsection{Commutative Binary Operation}
-				A binary operation $\Diamond: X \times X \rightarrow X$ is \textbf{commutative} iff $x \Diamond y = y \Diamond x$ for all $x, y \in X$.\\
+				\begin{definition}{Commutativity}
+					A binary operation $\Diamond: X \times X \rightarrow X$ is \concept{commutative} iff $x \Diamond y = y \Diamond x$ for all $x, y \in X$.
+				\end{definition}
 				The easiest way to check this is it will be commutative if it is symmetrical across the diagonal from the top left to the bottom right.
-				\begin{example}
-					Using the above operation:
+				\begin{example} \moveup
 					\begin{align*}
 						1 * 1 = 1 * 1 = 1\\
 						1 * 2 = 2 * 1 = 2\\
@@ -119,10 +124,11 @@
 					Therefore $*$ is commutative.
 				\end{example}
 			\subsection{Associative Binary Operation}
-				A binary operation $\Diamond: X \times X \rightarrow X$ is \textbf{associative} iff $(x \Diamond y) \Diamond z = x \Diamond (y \Diamond z)$ for all $x, y, z \in X$.\\
+				\begin{definition}{Associativity}
+					A binary operation $\Diamond: X \times X \rightarrow X$ is \concept{associative} iff $(x \Diamond y) \Diamond z = x \Diamond (y \Diamond z)$ for all $x, y, z \in X$.
+				\end{definition}
 				Unfortunately, for this one, you have to check each instance.
-				\begin{example}
-					Using the above operation:
+				\begin{example} \moveup
 					\begin{align*}
 						(1 * 1) * 1 = 1 * 1 = 1 &\text{ and } 1 * (1 * 1) = 1 * 1 = 1\\
 						(1 * 1) * 2 = 1 * 2 = 2 &\text{ and } 1 * (1 * 2) = 1 * 2 = 2\\
@@ -137,10 +143,11 @@
 				\end{example}
 			\pagebreak
 			\subsection{Identity Element of a Binary Operation}
-				An element $e$ of $X$ is an \textbf{identity element} in respect of the binary operation $\Diamond: X \times X \rightarrow X$ iff $e \Diamond x = x \Diamond e = x$ for all $x \in X$.\\
-				The easiest way to check this is if there is a row and column in the table that is identical to the header. (NB: It needs to be \textit{both} row and column, which contain the same element.)
-				\begin{example}
-					Using the above operation:
+				\begin{definition}{Identity Element}
+					An element $e$ of $X$ is an \concept{identity element} in respect of the binary operation $\Diamond: X \times X \rightarrow X$ iff $e \Diamond x = x \Diamond e = x$ for all $x \in X$.
+				\end{definition}
+				The easiest way to check this is if there is a row and column in the table that is identical to the header. (NB: It needs to be \emph{both} row and column, which contain the same element.)
+				\begin{example} \moveup
 					\begin{align*}
 						\mathbf{1} * 1 = 1 &\text{ and } 1 * \mathbf{1} = 1\\
 						1 * \mathbf{2} = 2 &\text{ and } 2 * \mathbf{1} = 2
@@ -148,17 +155,21 @@
 				\end{example}
 		\section{Operations on Vectors}
 			\subsection{Vector}
-				In this course, a vector is considered to be an ordered \textit{n-tuple} of numbers.\\
-				A \textbf{vector} is represented by an n-tuple $u$ in the following way:
-				\begin{align*}
-					u = (u_{1}, u_{2}, u_{3}, \ldots, u_{n}) \text{ for some } n \geq 2
-				\end{align*}
+				\begin{definition}{Vector}
+					In this course, a \concept{vector} is considered to be an ordered \emph{n-tuple} of numbers.\\
+					A \concept{vector} is represented by an n-tuple $u$ in the following way:
+					\begin{align*}
+						u = (u_{1}, u_{2}, u_{3}, \ldots, u_{n}) \text{ for some } n \geq 2
+					\end{align*}
+				\end{definition}
 			\subsection{Vector Sum}
-				If $u$ and $v$ are vectors with the \textit{same number of coordinates}, then their \textbf{sum}, written $u + v$ is the vector obtained by adding the corresponding coordinates of $u$ and $v$.
-				\begin{align*}
-					u + v &= (u_{1}, u_{2}, \ldots, u_{n}) + (v_{1}, v_{2}, \ldots, v_{n})\\
-					&= (u_{1} + v_{2}, u_{2} + v_{2}, \ldots, u_{n} + v_{n})
-				\end{align*}
+				\begin{definition}{Vector Sum}
+					If $u$ and $v$ are vectors with the \emph{same number of coordinates}, then their \concept{sum}, written $u + v$ is the vector obtained by adding the corresponding coordinates of $u$ and $v$.
+					\begin{align*}
+						u + v &= (u_{1}, u_{2}, \ldots, u_{n}) + (v_{1}, v_{2}, \ldots, v_{n})\\
+						&= (u_{1} + v_{2}, u_{2} + v_{2}, \ldots, u_{n} + v_{n})
+					\end{align*}
+				\end{definition}
 				\begin{example}
 					Let $u = (1, 2, 3)$ and $v = (4, 5, 6)$.\\
 					Then
@@ -173,11 +184,13 @@
 				\end{sidenote}
 			\pagebreak
 			\subsection{Scalar-Vector Product}
-				If $u$ is a vector and $r$ is some scalar number, then the \textbf{product} of the number $r$ and the vector $u$ is the vector $r \cdot u$ obtained by multiplying each coordinate of $u$ by $r$.
-				\begin{align*}
-					r\cdot u &= r(u_{1}, u_{2}, \ldots, u_{n})\\
-					&= (ru_{1}, ru_{2}, \ldots, ru_{n})
-				\end{align*}
+				\begin{definition}{Scalar-Vector Product}
+					If $u$ is a vector and $r$ is some scalar number, then the \concept{product} of the number $r$ and the vector $u$ is the vector $r \cdot u$ obtained by multiplying each coordinate of $u$ by $r$.
+					\begin{align*}
+						r\cdot u &= r(u_{1}, u_{2}, \ldots, u_{n})\\
+						&= (ru_{1}, ru_{2}, \ldots, ru_{n})
+					\end{align*}
+				\end{definition}
 				\begin{example}
 					Let $u = (7, 8, 9)$ and $r = 2$.\\
 					Then
@@ -187,10 +200,12 @@
 					\end{align*}
 				\end{example}
 			\subsection{Dot Product}
-				The \textbf{dot product} (also called the \textbf{inner product}) of vectors $u = (u_{1}, u_{2}, \ldots, u_{n})$ and $v = (v_{1}, v_{2}, \ldots, v_{n})$ is written $u \cdot v$ and defined by:
-				\begin{align*}
-					u \cdot v = u_{1}v_{1} + u_{2}v_{2} + \ldots + u_{n}v_{n}
-				\end{align*}
+				\begin{definition}{Dot Product}
+					The \concept{dot product} (also called the \concept{inner product}) of vectors $u = (u_{1}, u_{2}, \ldots, u_{n})$ and \\$v = (v_{1}, v_{2}, \ldots, v_{n})$ is written $u \cdot v$ and defined by:
+					\begin{align*}
+						u \cdot v = u_{1}v_{1} + u_{2}v_{2} + \ldots + u_{n}v_{n}
+					\end{align*}
+				\end{definition}
 				\begin{sidenote}{The result of the dot product is a number}
 					Unlike the other operations, which result in vectors, the dot product produces a single number.
 				\end{sidenote}
@@ -209,8 +224,10 @@
 		\pagebreak
 		\section{Operations on Matrices}
 			\subsection{Matrix}
-				A \textbf{matrix} is an array of numbers organised into rows and columns, and encolsed within brackets.\\
-				The number of rows is written with the letter $m$ and the number of columns with the letter $n$. So a matrix is said to have the size $m \times n$.
+				\begin{definition}{Matrix}
+					A \concept{matrix} is an array of numbers organised into rows and columns, and encolsed within brackets.\\
+					The number of rows is written with the letter $m$ and the number of columns with the letter $n$. So a matrix is said to have the size $m \times n$.
+				\end{definition}
 				\begin{example}
 					$\begin{bmatrix}
 						3 & 2\\
@@ -222,7 +239,7 @@
 						1 & - 1& 0 & 13
 					\end{bmatrix}$ is a $3 \times 4$ matrix.
 				\end{example}
-				Matrices (pronounced \textit{may-trisseez}) have the form 
+				Matrices (pronounced \emph{may-trisseez}) have the form 
 				\begin{align*}
 					\begin{bmatrix}
 						a_{11} & a_{12} & \cdots & a_{1n}\\
@@ -232,7 +249,8 @@
 					\end{bmatrix}
 				\end{align*}
 			\subsection{Matrix Addition}
-				Let $A$ and $B$ be two matrices. Then the matrix $A + B$ is:
+				\begin{definition}{Matrix Addition}
+					Let $A$ and $B$ be two matrices of the same size. Then the matrix \concept{$A + B$} is:
 					\begin{align*}
 						A + B &= \begin{bmatrix}
 							a_{11} & a_{12} & \cdots & a_{1n}\\
@@ -252,53 +270,53 @@
 							a_{m1} + b_{m1} & a_{m2} + b_{m2} & \cdots & a_{mn} + b_{mn}
 						\end{bmatrix}
 					\end{align*}
-					\begin{sidenote}{Only matrices of the same size can be added}
-						Adding matrices of different sizes is undefined.
-					\end{sidenote}
-					\begin{example}
-						Let $A = \begin{bmatrix}
+				\end{definition}
+				\begin{example}
+					Let $A = \begin{bmatrix}
+						1 & 2\\
+						3 & 4
+					\end{bmatrix}$ and 
+					$B = \begin{bmatrix}
+						5 & 6\\
+						7 & 8
+					\end{bmatrix}$
+					\begin{align*}
+						A + B &= \begin{bmatrix}
 							1 & 2\\
 							3 & 4
-						\end{bmatrix}$ and 
-						$B = \begin{bmatrix}
+						\end{bmatrix} + \begin{bmatrix}
 							5 & 6\\
 							7 & 8
-						\end{bmatrix}$
-						\begin{align*}
-							A + B &= \begin{bmatrix}
-								1 & 2\\
-								3 & 4
-							\end{bmatrix} + \begin{bmatrix}
-								5 & 6\\
-								7 & 8
-							\end{bmatrix}\\
-							&= \begin{bmatrix}
-								1 + 5 & 2 + 6\\
-								3 + 7 & 4 + 8
-							\end{bmatrix}\\
-							&= \begin{bmatrix}
-								6 & 8\\
-								10 & 12
-							\end{bmatrix}
-						\end{align*}
-					\end{example}
+						\end{bmatrix}\\
+						&= \begin{bmatrix}
+							1 + 5 & 2 + 6\\
+							3 + 7 & 4 + 8
+						\end{bmatrix}\\
+						&= \begin{bmatrix}
+							6 & 8\\
+							10 & 12
+						\end{bmatrix}
+					\end{align*}
+				\end{example}
 			\subsection{Scalar-Matrix Multiplication}
-				Let $A$ be a matrix, and $r$ be some scalar number.\\
-				Then the product $rA$ is defined as:
-				\begin{align*}
-					rA = r \begin{bmatrix}
-						a_{11} & a_{12} & \cdots & a_{1n}\\
-						a_{21} & a_{22} & \cdots & a_{2n}\\
-						\vdots & \vdots & & \vdots\\
-						a_{m1} & a_{m2} & \cdots & a_{mn}
-					\end{bmatrix}
-					= \begin{bmatrix}
-						ra_{11} & ra_{12} & \cdots & ra_{1n}\\
-						ra_{21} & ra_{22} & \cdots & ra_{2n}\\
-						\vdots & \vdots & & \vdots\\
-						ra_{m1} & ra_{m2} & \cdots & ra_{mn}
-					\end{bmatrix}
-				\end{align*}
+				\begin{definition}{Scalar-Matrix Multiplication}
+					Let $A$ be a matrix, and $r$ be some scalar number.\\
+					Then the product \concept{$rA$} is defined as:
+					\begin{align*}
+						rA = r \begin{bmatrix}
+							a_{11} & a_{12} & \cdots & a_{1n}\\
+							a_{21} & a_{22} & \cdots & a_{2n}\\
+							\vdots & \vdots & & \vdots\\
+							a_{m1} & a_{m2} & \cdots & a_{mn}
+						\end{bmatrix}
+						= \begin{bmatrix}
+							ra_{11} & ra_{12} & \cdots & ra_{1n}\\
+							ra_{21} & ra_{22} & \cdots & ra_{2n}\\
+							\vdots & \vdots & & \vdots\\
+							ra_{m1} & ra_{m2} & \cdots & ra_{mn}
+						\end{bmatrix}
+					\end{align*}
+				\end{definition}
 				\begin{example}
 					Let $r = 3$ and $A = \begin{bmatrix}
 						1 & 2\\
@@ -316,20 +334,22 @@
 					\end{align*}
 				\end{example}
 			\subsection{Matrix Multiplication}
-				Let $A$ and $B$ both be matrices.
-				In order for the product $AB$ to be defined, these requirements need to be met:
-				\begin{enumerate}
-					\item The number of columns of $A$ needs to be equal to the number of rows of $B$, i.e. $A_{n} = B_{m}$.
-				\end{enumerate}
-				If the product is defined, then it will result in a matrix that is the size $A_{m} \times B_{n}$.
-				\begin{center}
-					\tikz[baseline=(am.base)]\node[inner xsep=0pt] (am) {$A_{m}$}; $\times$ \tikz[baseline=(an.base)]\node[inner xsep=0pt] (an) {$A_{n}$}; $\quad \cdot \quad$ \tikz[baseline=(bm.base)]\node[inner xsep=0pt] (bm) {$B_{m}$}; $\times$ \tikz[baseline=(bn.base)]\node[inner xsep=0pt] (bn) {$B_{n}$}; $= A_{m} \times B_{n}$
-				\end{center}
-				\begin{tikzpicture}[overlay]
-					\draw[<->] (an.south) -- ++(0,-1.5ex) -| (bm.south);
-					\draw[<->] (am.south) -- ++(0,-2.5ex) -| (bn.south);
-				\end{tikzpicture}\\
-				When multiplying matrics, it is row of first multiplied by column of second.
+				\begin{definition}{Matrix Multiplication}
+					Let $A$ and $B$ both be matrices.
+					In order for the product \concept{$AB$} to be defined,
+					\begin{itemize}
+						\item The number of columns of $A$ needs to be equal to the number of rows of $B$, i.e. $A_{n} = B_{m}$.
+					\end{itemize}
+					If the product is defined, then it will result in a matrix that is the size $A_{m} \times B_{n}$.
+					\begin{center}
+						\tikz[baseline=(am.base)]\node[inner xsep=0pt] (am) {$A_{m}$}; $\times$ \tikz[baseline=(an.base)]\node[inner xsep=0pt] (an) {$A_{n}$}; $\quad \cdot \quad$ \tikz[baseline=(bm.base)]\node[inner xsep=0pt] (bm) {$B_{m}$}; $\times$ \tikz[baseline=(bn.base)]\node[inner xsep=0pt] (bn) {$B_{n}$}; $= A_{m} \times B_{n}$
+					\end{center}
+					\begin{tikzpicture}[overlay]
+						\draw[<->] (an.south) -- ++(0,-1.5ex) -| (bm.south);
+						\draw[<->] (am.south) -- ++(0,-2.5ex) -| (bn.south);
+					\end{tikzpicture}\\
+					When multiplying matrics, it is row of first multiplied by column of second.
+				\end{definition}
 				\begin{example} \moveup
 					\begin{align*}
 						\begin{bmatrix}
@@ -358,13 +378,15 @@
 				\end{example}
 			\pagebreak
 			\subsection{Identity Matrix}
-				If $A$ is matrix, then an \textbf{identity matrix} $I$ with respect to $A$ is a matrix such that $IA = AI = A$.\\
-				For the identity matrix to be defined, these requirements must be met:
-				\begin{enumerate}
-					\item $A$ must be a square matrix, because matrix multiplication is \textit{not} commutative.
+				\begin{definition}{Identity Matrix}
+					If $A$ is matrix, then an \concept{identity matrix} $I$ with respect to $A$ is a matrix such that $IA = AI = A$.\\
+				For the identity matrix to be defined,
+				\begin{itemize}
+					\item $A$ must be a square matrix, because matrix multiplication is \emph{not} commutative.
 					\item $I$ must therefore also be a square matrix with the same number of rows and columns as $A$.
-				\end{enumerate}
+				\end{itemize}
 				Then the identity matrix would have $1$'s for the main diagonal, and $0$'s elsewhere.
+				\end{definition}
 				\begin{example}
 					For a $2 \times 2$ matrix, the identity matrix would be:
 						\begin{align*}

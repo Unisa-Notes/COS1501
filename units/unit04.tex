@@ -5,7 +5,9 @@
 	\chapter{Proofs Involving Sets}
 		\section{Venn Diagrams}
 			\subsection{Set Equality}
-				For any sets $A$ and $B$, if $A \subseteq B$ and $B \subseteq A$, then every element of $A$ is also an element of $B$, and every element of $B$ is also an element of $A$, so $A = B$.
+				\begin{definition}{Set Equality}
+					For any sets $A$ and $B$, if $A \subseteq B$ and $B \subseteq A$, then every element of $A$ is also an element of $B$, and every element of $B$ is also an element of $A$, so $A = B$.
+				\end{definition}
 			\subsection{Drawing Complex Venn Diagrams}
 			Draw the diagram in stages, including $U$, $A$, $B$ and $C$ in each diagram.
 			\begin{example}
@@ -419,9 +421,10 @@
 						\end{proof}
 				\end{enumerate}
 			\end{exercise}
-			In order to prove that two sets are not equal, one needs to just provide a \textbf{counterexample} - an element that is in one set that is not in the other.
-		\section{Identity}
-			An equation which is satisfied by every possible value of the unknown(s) is called an \textbf{identity}
+			In order to prove that two sets are not equal, one needs to just provide a \concept{counterexample} - an element that is in one set that is not in the other.
+			\begin{definition}{Identity}
+				An equation which is satisfied by every possible value of the unknown(s) is called an \concept{identity}
+			\end{definition}
 		\pagebreak
 		\begin{exercise}{Self Assessment Exercise \thechapter.8}
 			\begin{enumerate}
@@ -628,13 +631,16 @@
 		\end{exercise}
 		\pagebreak
 		\section{The Inclusion Exclusion Principle}
-			For all finite sets $X$ and $Y$, $\left\lvert X \cup Y\right\rvert = \left\lvert X\right\rvert + \left\lvert Y \right\rvert - \left\lvert X \cap Y\right\rvert $
+			\begin{theorem}[Inclusion Exclusion Principle]
+				For all finite sets $X$ and $Y$, $\left\lvert X \cup Y\right\rvert = \left\lvert X\right\rvert + \left\lvert Y \right\rvert - \left\lvert X \cap Y\right\rvert $
+			\end{theorem}
 			\begin{example}
 				Let $X = \{a, b, c, 1\}$ and $Y = \{1, 2, 3\}$. Then $X \cap Y = \{1\}$ and $\left\lvert X \cap Y\right\rvert = 1$.\\
 				$\left\lvert X\right\rvert = 4$, $\left\lvert Y\right\rvert = 3$, so $\left\lvert X \cup Y\right\rvert = \left\lvert X\right\rvert + \left\lvert Y\right\rvert - \left\lvert X \cap Y\right\rvert = 4 + 3 - 1 = 6$
 			\end{example}
-			\subsection{Sum Rule}
+			\begin{theorem}[Sum Rule]
 				If $X$ and $Y$ are disjoint sets ($X \cap Y = \emptyset$), and $\left\lvert X\right\rvert = m$ and $\left\lvert Y\right\rvert = n $, then $\left\lvert X \cup Y\right\rvert = m + n $
+			\end{theorem}
 			\subsection{Applying the principle to Venn Diagrams}
 				\begin{example}
 					In a group of 50 learners, 25 play mastermind, 30 play basketball, and 10 play both.
@@ -819,7 +825,7 @@
 				\end{proof}
 			\end{example}
 			\begin{sidenote}{Using Or in Proofs}
-				Note that if there is an ``or'' that is connecting the statements, then the statement is true if \textit{either} of the statements is true.
+				Note that if there is an ``or'' that is connecting the statements, then the statement is true if \emph{either} of the statements is true.
 			\end{sidenote}
 			\pagebreak
 			\begin{exercise}{Self Assessment Exercise \thechapter.11}
@@ -981,7 +987,7 @@
 						\begin{proof}
 							$ $
 							\begin{enumerate}[label=(\roman*)]
-								\item \textbf{If $V \cap W = \emptyset$ then $V = \emptyset$ or $W = \emptyset$}\\
+								\item \question{If $V \cap W = \emptyset$ then $V = \emptyset$ or $W = \emptyset$}\\
 									This claim is false.
 									\begin{subproof}[Counterexample]
 										Let $V = \{3, 4\}$ and $W = \{5, 6\}$.
@@ -991,7 +997,7 @@
 										\end{align*}
 										$V \cap W = \emptyset$ but $V \neq \emptyset$ and $W \neq \emptyset$.
 									\end{subproof}
-								\item \textbf{If $V = \emptyset$ or $W = \emptyset$, then $V \cap W = \emptyset$}\\
+								\item \question{If $V = \emptyset$ or $W = \emptyset$, then $V \cap W = \emptyset$}\\
 									This claim is true.
 									\begin{subproof}[Subproof]
 										Let $V = \emptyset$ and $W$ be some non-empty set.

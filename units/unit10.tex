@@ -5,20 +5,20 @@
 	\chapter[Logic: Predicates and Proof Strategies]{Logic: Quantifiers, predicates and proof strategies}
 		\section{Quantifiers and Predicates}
 			\subsection[Universal Quantifier]{Universal Quantifier (FOR ALL)}
-				A \textbf{universal quantifier} is written with the symbol $\forall$, meaning ``for all''.
+				\begin{definition}{Universal Quantifier}
+					A \concept{universal quantifier} is written with the symbol $\forall$, meaning ``for all''.
+				\end{definition}
 				\begin{example}
 					Examples would be:
 					\begin{indentparagraph}
 						``For all $x \in \mathbb{R}$ \ldots'' (written $\forall \: x \in \mathbb{R}$)\\
-						``For every $x \in \mathbb{Z}$ \ldots'' (written $\forall \: x \in \mathbb{Z}$)\\
-						``For each $x \in \{1, 2, 3\}$ \ldots'' (written $\forall \: x \in \{1, 2, 3\}$)
+						``For every $x \in \mathbb{Z}$ \ldots'' (written $\forall \: x \in \mathbb{Z}$)
 					\end{indentparagraph}
-					The variable $x$ above is called a \textbf{quantified variable}.
+					The variable $x$ above is called a \concept{quantified variable}.
 				\end{example}
-				This can be considered a \textit{generalisation of conjunction (AND)}.
+				This can be considered a \emph{generalisation of conjunction (AND)}.
 				\begin{example}
-					Let $A$ = \{1, 2, 3\}.\\
-					A declarative statement can then be made for the set:
+					Let $A$ = \{1, 2, 3\}. A declarative statement can then be made for the set:
 					\begin{align*}
 						\forall \: x \in A, x > 0
 					\end{align*}
@@ -30,13 +30,14 @@
 				\end{example}
 				\pagebreak
 			\subsection[Existential Quantifier]{Existential Quantifier (THERE EXISTS)}
-				An \textbf{existential quantifier} is written with the symbol $\exists $, meaning ``there exists''.
+				\begin{definition}{Existential Quantifier}
+					An \concept{existential quantifier} is written with the symbol $\exists $, meaning ``there exists''.
+				\end{definition}
 				\begin{example}
 					Examples would be:
 					\begin{indentparagraph}
 						``There exists an $x \in \mathbb{R}$ such that\ldots'' (written $\exists \: x \in \mathbb{R}$)\\
-						``For some $x \in \mathbb{Z}$ \ldots'' (written $\exists \: x \in \mathbb{Z}$)\\
-						``We can find an $x \in \{1, 2, 3\}$ such that \ldots'' (written $\exists \: x \in \{1, 2, 3\}$)
+						``For some $x \in \mathbb{Z}$ \ldots'' (written $\exists \: x \in \mathbb{Z}$)
 					\end{indentparagraph}
 				\end{example}
 				\begin{sidenote}{A quantified variable is a dummy variable}
@@ -45,10 +46,9 @@
 						$\forall \: x \in \mathbb{Z}^{+}, (x > 0) \equiv \forall \: y \in \mathbb{Z}^{+}, (y > 0)$
 					\end{example}
 				\end{sidenote}
-				This can be considered a \textit{generalisation of disjunction (OR)}.
+				This can be considered a \emph{generalisation of disjunction (OR)}.
 				\begin{example}
-					Let $A$ = \{1, 2, 3\}.\\
-					A declarative statement can then be made for the set:
+					Let $A$ = \{1, 2, 3\}. A declarative statement can then be made for the set:
 					\begin{align*}
 						\exists \: x \in A, x > 4
 					\end{align*}
@@ -59,7 +59,9 @@
 					This statement is false.
 				\end{example}
 			\subsection{Predicate}
-				A statement $P(x)$ is called a \textbf{predicate} if it expresses some property of a variable $x \in A$, and returns either true or false depending on the value of $x$. $P(x)$ is true for any variable $x \in A$ that has the property, and $P(x)$ is false if $x$ does not have that property.
+				\begin{definition}{Predicate}
+					A statement $P(x)$ is called a \concept{predicate} if it expresses some property of a variable $x \in A$, and returns either true or false depending on the value of $x$. $P(x)$ is true for any variable $x \in A$ that has the property, and $P(x)$ is false if $x$ does not have that property.
+				\end{definition}
 				\begin{sidenote}{A predicate is a boolean function}
 					A predicate takes in a value, and either returns true or false.
 				\end{sidenote}
@@ -111,7 +113,7 @@
 					\end{proof}
 				\end{example}
 			\pagebreak
-			\subsection[Proof By Contradiction]{Proof By Contradiction (\textit{Reductio Ad Absurdum})}
+			\subsection[Proof By Contradiction]{Proof By Contradiction (\emph{Reductio Ad Absurdum})}
 				Assume that $p$ is true. Then assume that $q$ is false, and use step-by-step reasoning until there is a contradiction. If there is a contradiction, that means that $q$ must be true.
 				\begin{example}
 					Prove that the following statement is true for all $x \in \mathbb{R}$:
@@ -134,8 +136,9 @@
 					\end{proof}
 				\end{example}
 			\subsection{Proof By Contrapositive}
-				\subsubsection{Contrapositive}
-					The \textbf{contrapositive} of $p \rightarrow q$ is $\lnot q \rightarrow \lnot p$. These two statements are logically equivalent to each other. Therefore, proving the contrapositive also proves the original statement.
+				\begin{definition}{Contrapositive}
+					The \concept{contrapositive} of $p \rightarrow q$ is $\lnot q \rightarrow \lnot p$. These two statements are logically equivalent to each other.
+				\end{definition}
 				\begin{example}
 					Prove that the following statement is true for all $x \in \mathbb{R}$:
 					\begin{align*}
@@ -162,7 +165,7 @@
 					\end{proof}
 				\end{example}
 				\begin{sidenote}{The contrapositive is not the same as the converse}
-					The \textbf{converse} of a statement just swaps them around. This is not the same as the contrapositive.
+					The \concept{converse} of a statement just swaps them around. This is not the same as the contrapositive.
 					\begin{example}
 						Given a statement, $p \rightarrow q$.
 						\begin{description}
@@ -188,9 +191,9 @@
 						\end{tabbing}
 					\end{proof}
 				\end{example}
-				To disprove a statement, prove that its \textit{negation} is true. If this is a statement such as $\forall \: x \in A, P(x)$, the negation is $\exists \: x \in A, \lnot P(x)$. This shows that in order to disprove the statement, one needs to simply find a counterexample.
+				To disprove a statement, prove that its \emph{negation} is true. If this is a statement such as $\forall \: x \in A, P(x)$, the negation is $\exists \: x \in A, \lnot P(x)$. This shows that in order to disprove the statement, one needs to simply find a counterexample.
 				\begin{example}
-					Show using a \textit{counterexample} that this statement is not true:
+					Show using a \emph{counterexample} that this statement is not true:
 					\begin{align*}
 						\forall \: x \in \mathbb{R}, x^{2} - 4x > 0
 					\end{align*}
@@ -210,7 +213,7 @@
 			\pagebreak
 			\subsection{Vacuous Proofs}
 				The truth table for an implication shows that if the antecedent is false, then the statement is always true.\\
-				Using the above, if you can show that the conditional statement is false, then the statement is \textbf{vacuously true}.
+				Using the above, if you can show that the conditional statement is false, then the statement is \concept{vacuously true}.
 				\begin{example}
 					Prove that:
 					\begin{align*}
@@ -224,14 +227,14 @@
 						$ $\\
 						$\emptyset$ is an empty set,\\
 						so ``$x \in \emptyset$'' is false,\\
-						therefore ``if $x \in \emptyset$, then $x \in X$'' is \textbf{vacuously true}. \qedhere
+						therefore ``if $x \in \emptyset$, then $x \in X$'' is \concept{vacuously true}. \qedhere
 					\end{proof}
 				\end{example}
 				\begin{example}
 					Let $S$ be a relation on $\{a, b, c, d\}$, where $S = \bigl\{(a, b), (a, d)\bigr\}$. Prove that $S$ is transitive.
 					\begin{proof} For a set $S$ to be transitive, whenever $(x, y) \in S$ and $(y, z) \in S$, then $(x, z) \in S$.\\
 						There are no two paits of the form $(x, y)$ and $(y, z)$ in $S$,\\
-						so it is \textbf{vacuously true} that $S$ is transitive.
+						so it is \concept{vacuously true} that $S$ is transitive.
 					\end{proof}
 				\end{example}
 				\vspace*{\parskip}
