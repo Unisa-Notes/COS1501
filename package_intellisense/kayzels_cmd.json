@@ -34,9 +34,9 @@
     "package": "kayzels",
     "snippet": "rulechapterend"
   },
-  "tablehead": {
-    "command": "tablehead",
+  "tablehead{}": {
+    "command": "tablehead{text}",
     "package": "kayzels",
-    "snippet": "tablehead"
+    "snippet": "tablehead{${1:text}}"
   }
 }

@@ -5,16 +5,16 @@
     "snippet": "{${1:title}}",
     "package": "kayzels"
   },
-  "sidenote{}": {
-    "name": "sidenote",
-    "detail": "sidenote{title}",
-    "snippet": "{${1:title}}",
-    "package": "kayzels"
-  },
   "indentparagraph": {
     "name": "indentparagraph",
     "detail": "indentparagraph",
     "snippet": "",
+    "package": "kayzels"
+  },
+  "sidenote{}": {
+    "name": "sidenote",
+    "detail": "sidenote{title}",
+    "snippet": "{${1:title}}",
     "package": "kayzels"
   },
   "subproof": {
@@ -27,24 +27,6 @@
     "name": "subproof",
     "detail": "subproof[name]",
     "snippet": "[${1:name}]",
-    "package": "kayzels"
-  },
-  "venntwo": {
-    "name": "venntwo",
-    "detail": "venntwo",
-    "snippet": "",
-    "package": "kayzels"
-  },
-  "venntwo[]": {
-    "name": "venntwo",
-    "detail": "venntwo[options]",
-    "snippet": "[${1:options}]",
-    "package": "kayzels"
-  },
-  "venntwo[][]": {
-    "name": "venntwo",
-    "detail": "venntwo[options][title]",
-    "snippet": "[${1:options}][${2:title}]",
     "package": "kayzels"
   },
   "vennthree": {
@@ -62,6 +44,24 @@
   "vennthree[][]": {
     "name": "vennthree",
     "detail": "vennthree[options][title]",
+    "snippet": "[${1:options}][${2:title}]",
+    "package": "kayzels"
+  },
+  "venntwo": {
+    "name": "venntwo",
+    "detail": "venntwo",
+    "snippet": "",
+    "package": "kayzels"
+  },
+  "venntwo[]": {
+    "name": "venntwo",
+    "detail": "venntwo[options]",
+    "snippet": "[${1:options}]",
+    "package": "kayzels"
+  },
+  "venntwo[][]": {
+    "name": "venntwo",
+    "detail": "venntwo[options][title]",
     "snippet": "[${1:options}][${2:title}]",
     "package": "kayzels"
   }
