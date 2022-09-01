@@ -179,7 +179,193 @@
 					However, an example can be used to show that a statement is false, which is known as a \concept{counterexample}.
 				\end{sidenote}
 				\begin{exercise}{Self Assesmment \thechapter.7}
-					%TODO: COME BACK TO
+					\begin{enumerate}
+						\item \question{Let $X = \{a, b, c\}$. Write down all strict partial orders on $X$. Which of them are linear?}
+							Strict partial orders are irreflexive, antisymmetric and transitive.
+							\begin{description}
+								\item[One element] There are $6$ relations on $X$ that are strict partial orders that contain only one element:
+									\begin{center}
+										$ \bigl\{(a, b)\bigr\}$, $\bigl\{(a, c)\bigr\}$, $\bigl\{(b, a)\bigr\}$, $\bigl\{(b, c)\bigr\}$, $\bigl\{(c, a)\bigr\}$, $\bigl\{(c, b)\bigr\}$
+									\end{center}
+								\item[Two elements] There are $6$ relations on $X$ that are strict partial orders that contain two elements:
+									\begin{center}
+										$ \bigl\{(a, b), (a, c)\bigr\}$, $ \bigl\{(a, b), (c, b)\bigr\}$, $ \bigl\{(a, c), (b, c)\bigr\}$, $ \bigl\{(b, a), (b, c)\bigr\}$, $ \bigl\{(b, a), (c, a)\bigr\}$, $\bigl\{(c, a), (c, b)\bigr\}$
+									\end{center}
+								\tcbbreak
+								\item[Three elements] There are $6$ relations on $X$ that are strict partial orders that contain three elements:
+									\begin{center}
+										$\bigl\{(a, b), (b, c), (a, c)\bigr\}$, $\bigl\{(b, a), (a, c), (b, c)\bigr\}$, $\bigl\{(c, b), (b, a), (c, a)\bigr\}$, $\bigl\{(a, c), (c, b), (a, b)\bigr\}$, $\bigl\{(c, a), (a, b), (c, b)\bigr\}$, $\bigl\{(b, c), (c, a), (b, a)\bigr\}$
+									\end{center}
+								\item[More than three elements] There are no relations on $X$ that are strict partial orders And contain more than three elements.
+								\item[Linear] For a relation to be linear, it needs to satisfy \emph{trichotomy}. As there are three elements in $X$ the relation should contain three or more elements.\\
+									All of the strict partial relations with three elements satisfy trichotomy, and so are linear. 
+							\end{description}
+						\item \question{In each of the following cases, determine whether or not $R$ is some sort of order relation on the given set $X$. Justify your answer.}
+							\begin{enumerate}[label=(\alph*)]
+								\item \question{$X = \bigl\{\emptyset, \{0\}, \{2\}\bigr\}$ and $R = \Bigl\{\bigl(\emptyset, \{0\}\bigr), \bigl(\emptyset, \{2\}\bigr)\Bigr\}$}\\
+									$R$ is a \emph{strict partial order}.	
+									\begin{proof}
+										$ $
+										\begin{description}
+											\item[Reflexivity] $R$ is not reflexive.
+												\begin{subproof}[Counterexample]
+													$(\emptyset, \emptyset) \notin R$
+												\end{subproof}
+											\item[Irreflexivity] $R$ is irreflexive.
+												\begin{subproof}
+													For all $x \in X$, $(x, x) \notin R$.
+												\end{subproof}
+											\item[Antisymmetry] $R$ is antisymmetric.
+												\begin{subproof}
+													$\bigl(\emptyset, \{0\}\bigr) \in R$ and $\bigl(\{0\}, \emptyset\bigr) \notin R$\\
+													$\bigl(\emptyset, \{2\}\bigr) \in R$ and $\bigl(\{2\}, \emptyset\bigr) \notin R$\\
+													For all elments $(x, y) \in R$, $(y, x) \notin R$.
+												\end{subproof}
+											\item[Transitivity] $R$ is transitive.
+												\begin{subproof}
+													There are no elements such that the second coordinate of a pair is the first coordinate of another pair.
+												\end{subproof}
+											\item[Trichotomy] $R$ does not satisfy trichotomy.
+												\begin{subproof}[Counterexample]
+													There are no pairs in the relation where $\{0\}$ and $\{2\}$ are related to each other.
+												\end{subproof}
+										\end{description}
+										As $R$ is irreflexive, antisymmetric and transitive, but does not satisfy trichotomy, $R$ is a strict partial order.
+									\end{proof}
+								\tcbbreak
+								\item \question{$X = \Bigl\{\emptyset, \{\emptyset\}, \bigl\{\{\emptyset\}\bigr\}\Bigr\}$ and $R = \subseteq$. (That is, each first coordinate is a subset of the second coordinate)}\\
+									$R = \biggl\{(\emptyset, \emptyset), \bigl(\{\emptyset\}, \{\emptyset\}\bigr), \Bigl(\bigl\{\{\emptyset \}\bigr\}, \bigl\{\{\emptyset\}\bigr\}\Bigr), \bigl(\emptyset, \{\emptyset\}\bigr), \Bigl(\emptyset, \bigl\{\{\emptyset\}\bigr\}\Bigr)\biggr\}$\\
+									$R$ is a \emph{weak partial order}.
+									\begin{proof}
+										$ $
+										\begin{description}
+											\item[Reflexivity] $R$ is reflexive.
+												\begin{subproof}
+													For all $x$ in $X$, $(x, x) \in R$.
+												\end{subproof}
+											\item[Irreflexivity] $R$ is not irreflexive.
+												\begin{subproof}[Counterexample]
+													$(\emptyset, \emptyset) \in R$.
+												\end{subproof}
+											\item[Antisymmetry] $R$ is antisymmetric.
+												\begin{subproof}
+													For all elments $(x, y) \in R$, $(y, x) \notin R$.
+												\end{subproof}
+											\item[Transitivity] $R$ is transitive.
+												\begin{subproof}
+													Whenever $(x, y) \in R$ and $(y, z) \in R$, $(x, z) \in R$.
+												\end{subproof}
+											\item[Trichotomy] $R$ does not satisfy trichotomy.
+												\begin{subproof}[Counterexample]
+													There are no pairs in $R$ where $\{\emptyset\}$ is related to $\bigl\{\{\emptyset\}\bigr\}$.
+												\end{subproof}
+										\end{description}
+										As $R$ is reflexive, antisymmetric and transitive, but does not satisfy trichotomy, $R$ is a weak partial order.
+									\end{proof}
+							\end{enumerate}
+						\item \question{$X = \mathbb{Z}$ and $R = \leq$}\\
+							$R$ is a \emph{weak total order}.
+							\begin{proof}
+								$ $
+								\begin{description}
+									\item[Reflexivity] $R$ is reflexive.
+										\begin{subproof}
+											For all $x \in \mathbb{Z}$, $x = x$, so $x \leq x$, so $(x, x) \in R$.
+										\end{subproof}
+									\item[Irreflexivity] $R$ is not irreflexive.
+										\begin{subproof}[Counterexample]
+											$(1, 1) \in R$
+										\end{subproof}
+									\item[Antisymmetry] $R$ is antisymmetric.
+										\begin{subproof}
+											If $(x, y) \in R$ and $x \neq y$, then $x < y$.\\
+											Therefore $y \not < x$, so $(y, x) \notin R$.
+										\end{subproof}
+									\item[Transitivity] $R$ is transitive.
+										\begin{subproof}
+											If $(x, y) \in R$, then $x \leq y$, and
+											if $(y, z) \in R$, then $y \leq z$.\\
+											If $x < y$ and $y < z$, then $x < z$, so $(x, z) \in R$.\\
+											If $x < y$ and $y = z$, then $x < z$, so $(x, z) \in R$.\\
+											If $x = y$ and $y < z$, then $x < z$, so $(x, z) \in R$.\\
+											If $x = y$ and $y = z$, then $x = z$, so $(x, z) \in R$.\\
+											Therefore, if $(x, y) \in R$ and $(y, z) \in R$, then $(x, z) \in R$. 
+										\end{subproof}
+									\item[Trichotomy] $R$ satisfies trichotomy.
+										\begin{subproof}
+											For all $x, y \in \mathbb{Z}$, either $x = y$, or $x > y$ or $x < y$. If $x > y$, then $y < x$. So $x$ and $y$ are always related to each other in $R$.
+										\end{subproof}
+								\end{description}
+								As $R$ is reflexive, antisymmetric and transitive, and satisfies trichotomy, $R$ is a weak total order.
+							\end{proof}
+						\item \question{$X = \mathbb{Z}$ and $R = >$}\\
+							$R$ is a \emph{strict total order}.
+							\begin{proof}
+								$ $
+								\begin{description}
+									\item[Reflexivity] $R$ is not reflexive.
+										\begin{subproof}[Counterexample]
+											$(1, 1) \notin R$.
+										\end{subproof}
+									\item[Irreflexivity] $R$ is irreflexive.
+										\begin{subproof}
+											For all $x \in \mathbb{Z}$, $(x, x) \notin R$. That is, $x \not > x$.
+										\end{subproof}
+									\item[Antisymmetry] $R$ is antisymmetric.
+										\begin{subproof}
+											If $(x, y) \in R$, then $x > y$, so $y \not > x$, so $(y, x) \notin R$.
+										\end{subproof}
+									\item[Transitivity] $R$ is transitive.
+										\begin{subproof}
+											If $(x, y) \in R$, then $x > y$. If $(y, z) \in R$, then $y > z$.\\
+											Therefore $x > y > z$, i.e. $x > z$, so $(x, z) \in R$.
+										\end{subproof}
+									\item[Trichotomy] $R$ satisfies trichotomy.
+										\begin{subproof}
+											For all elements $x, y \in \mathbb{Z}$, if $x \neq y$, then $x > y$ or $y > x$, so either $(x, y) \in R$, or $(y, x) \in R$
+										\end{subproof}
+								\end{description}
+								As $R$ is irreflexive, antisymmetric and transitive, and satisfies trichotomy, $R$ is a strict total order.
+							\end{proof}
+						\pagebreak
+						\item \question{$X \in \mathbb{Z}^{+}$ and $x \, R \, y$ iff $x$ divides into $y$ with zero remainder. $y = kx$ for some $k \in \mathbb{Z}^{+}$. $x$ is a \emph{factor} of $y$ and $y$ is a \emph{muliple} of $x$.}\\
+							Some example elements of $R$ are $(2, 8)$, $(7, 21)$, $(6, 36)$, $(1, 1)$.\\
+							$R$ is a \emph{weak partial order}.
+							\begin{proof}
+								$ $
+								\begin{description}
+									\item[Reflexivity] $R$ is reflexive.
+										\begin{subproof}
+											For all $x \in \mathbb{Z}^{+}$, $(x, x) \in R$, as
+											\begin{align*}
+												y &= kx \tag*{$(k \in \mathbb{Z}^{+})$}\\
+												&= (1)x\\
+												&= x \qedhere
+											\end{align*}
+										\end{subproof}
+									\item[Irreflexivity] $R$ is not irreflexive.
+										\begin{subproof}[Counterexample]
+											$(1, 1) \in R$
+										\end{subproof}
+									\item[Antisymmetry] $R$ is antisymmetric.
+										\begin{subproof}
+											For all $x, y \in \mathbb{Z}^{+}$, where $x \neq y$, let $y = kx$.\\
+											Let $x = my$. Then $y = k(my) = (km)y$. So $km = 1$. That means $x = y$, but that was assumed to be false.\\
+											So, if $(x, y) \in R$, then $(y, x) \notin R$.
+										\end{subproof}
+									\item[Transitive] $R$ is transitive.
+										\begin{subproof}
+											Let $(x, y) \in R$ and $(y, z) \in R$. That means that $y = kx$, where $k \in \mathbb{Z}^{+}$, and $z = my$, where $m \in \mathbb{Z}^{+}$.\\
+											As $z = my$, that means $z = m(kx)$, i.e. $z = (km)x$. $km$ is also an element of $\mathbb{Z}^{+}$, so $(x, z) \in R$.
+										\end{subproof}
+									\item[Trichotomy] $R$ does not satisfy trichotomy.
+										\begin{subproof}[Counterexample]
+											There are no elements of $R$ where $2$ is related to $3$.
+										\end{subproof}
+								\end{description}
+								As $R$ is reflexive, antisymmetric and transitive, and does not satisfy trichotomy, $R$ is a weak partial order.
+							\end{proof}
+					\end{enumerate}
 				\end{exercise}
 		\pagebreak
 		\section{Equivalence Relation}
@@ -250,13 +436,13 @@
 							\end{description}
 						\item \question{Determine whether the following relations $R$ on $X$ are equivalence relations. If they are, describe the equivalence classes of $R$}.
 							\begin{enumerate}[label=(\alph*)]
-								\item $X = \{a, b, b\}$ and $R = \bigl\{(c, c), (b, b), (a, a)\bigr\}$
+								\item \question{$X = \{a, b, c\}$ and $R = \bigl\{(c, c), (b, b), (a, a)\bigr\}$}
 									\begin{description}
-										\item[Reflexivity] For all $x$ in $X$, $(x, x) \in R$.
-										\item[Symmetry] Each element is symmetric with itself.
-										\item[Transitivity] Vacuously transitive.
+										\item[Reflexivity] Yes. For all $x$ in $X$, $(x, x) \in R$.
+										\item[Symmetry] Yes. Each element is symmetric with itself.
+										\item[Transitivity] Yes. Vacuously transitive.
 										\item[Equivalence relation] $R$ is an equivalence relation.
-										\item[Equivalence classes]
+										\item[Equivalence classes] \moveup
 											\begin{align*}
 												[x] &= \{y \mid (x, y) \in R\}\\
 												[c] &= \{y \mid (c, y) \in R\}\\
@@ -267,9 +453,217 @@
 												&= \{a\}
 											\end{align*}    
 									\end{description}
+								\pagebreak
+								\item \question{$ X = \{a, b, c\}$ and $R = X \times X$}
+									\begin{align*}
+										R &= \bigl\{(a, a), (a, b), (a, c), (b, a), (b, b), (b, c), (c, a), (c, b), (c, c)\bigr\}
+									\end{align*}
+									\begin{description}
+										\item[Reflexivity] Yes. $(a, a)$, $(b, b)$ and $(c, c)$ are all in $R$.
+										\item[Symmetry] Yes. Every element in $R$ has its mirror image.
+										\item[Transitivity] Yes.
+										\item[Equivalence relation] $R$ is an equivalence relation.
+										\item[Equivalence classes] \moveup
+											\begin{align*}
+												[x] &= \{y \mid (x, y) \in R\}\\
+												[a] &= \{a \mid (a, y) \in R\}\\
+												&= \{a, b, c\}\\
+												&= [b]\\
+												&= [c]
+											\end{align*}   
+									\end{description}
+								\item \question{$X = \mathcal{P}(Y)$ where $Y = \{1, 2, 3\}$ and $R$ consists of all pairs $(C, D)$ such that $C \cap \{2\} = D \cap \{2\}$} \moveup
+									\begin{align*}
+										X &= \mathcal{P}(Y)\\
+										&= \bigl\{\emptyset, \{1\}, \{2\}, \{3\}, \{1, 2\}, \{1, 3\}, \{2, 3\}, \{1, 2, 3\}\bigr\}
+									\end{align*}
+									\begin{center}
+										$S \cap \{2\} = \emptyset$ if $2 \notin S$. \qquad $S \cap \{2\} = \{2\}$ if $2 \in S$.
+									\end{center}
+									\begin{description}
+										\item[Sets without 2:] $\emptyset$, $\{1\}$, $\{3\}$, $\{1, 3\}$
+											\begin{align*}
+												R_{1} &= \Bigl\{(\emptyset, \emptyset), \bigl(\emptyset, \{1\}\bigr), \bigl(\emptyset, \{3\}\bigr), \bigl(\emptyset, \{1, 3\}\bigr), \\
+												& \quad \bigl(\{1\}, \emptyset\bigr), \bigl(\{1\}, \{1\}\bigr), \bigl(\{1\}, \{3\}\bigr), \bigl(\{1\}, \{1, 3\}\bigr),\\
+												& \quad \bigl(\{3\}, \emptyset\bigr), \bigl(\{3\}, \{1\}\bigr), \bigl(\{3\}, \{3\}\bigr), \bigl(\{3\}, \{1, 3\}\bigr)\\
+												& \quad \bigl(\{1, 3\}, \emptyset\bigr), \bigl(\{1, 3\}, \{1\}\bigr), \bigl(\{1, 3\}, \{3\}\bigr), \bigl(\{1, 3\}, \{1, 3\}\bigr)\Bigr\}
+											\end{align*}
+										\item[Sets with 2:] $\{2\}$, $\{1, 2\}$, $\{2, 3\}$, $\{1, 2, 3\}$
+											\begin{align*}
+												R_{2} &= \Bigl\{\bigl(\{2\}, \{2\}\bigr), \bigl(\{2\}, \{1, 2\}\bigr), \bigl(\{2\}, \{2, 3\}\bigr), \bigl(\{2\}, \{1, 2, 3\}\bigr)\\
+												& \quad \bigl(\{1, 2\}, \{2\}\bigr), \bigl(\{1, 2\}, \{1, 2\}\bigr), \bigl(\{1, 2\}, \{2, 3\}\bigr), \bigl(\{1, 2\}, \{1, 2, 3\}\bigr)\\
+												& \quad \bigl(\{2, 3\}, \{2\}\bigr), \bigl(\{2, 3\}, \{1, 2\}\bigr), \bigl(\{2, 3\}, \{2, 3\}\bigr), \bigl(\{2, 3\}, \{1, 2, 3\}\bigr)\\
+												& \quad \bigl(\{1, 2, 3\}, \{2\}\bigr), \bigl(\{1, 2, 3\}, \{1, 2\}\bigr), \bigl(\{1, 2, 3\}, \{2, 3\}\bigr), \bigl(\{1, 2, 3\}, \{1, 2, 3\}\bigr)\Bigr\}
+											\end{align*}
+									\end{description}
+									\begin{description}
+										\item[Reflexivity] Yes. All elements are related to themselves.
+										\item[Symmetry] Yes. All elements have their mirror image.
+										\item[Transitivity] Yes.
+										\item[Equivalence relation] $R$ is an equivalence relation.
+										\item[Equivalence classes] \moveup
+											\begin{align*}
+												[X] &= \{Y \mid (X, Y) \in R\}\\
+												[\emptyset] &= \bigl\{\emptyset, \{1\}, \{3\}, \{1, 3\}\bigr\}\\
+												\bigl[\{2\}\bigr] &= \bigl\{\{2\}, \{1, 2\}, \{2, 3\}, \{1, 2, 3\}\bigr\}
+											\end{align*}    
+									\end{description}
 							\end{enumerate}
+						\item \question{Let $R$ be the relation on $\mathbb{Z}$ such that $(x, y) \in R$ iff $x - y$ is a multiple of $4$.}\\
+							$R = (x, y) \in \mathbb{Z}$ such that $ x - y = 4k$, where $k \in \mathbb{Z}$.
+							\begin{enumerate}[label=(\alph*)]
+								\item \question{Do tests on $R$ for all of the following properties: reflexivity, irreflexivity, symmetry, antisymmetry, transitivity, and trichotomy.}
+									\begin{description}
+										\item[Reflexivity] For every $x \in \mathbb{Z}$, is $(x, x) \in R$? Yes.
+											\begin{proof}
+												For all $x$, you would have $x - x = 4k$, that is $0 = 4k$, so $k = 0$. $(x, x) \in R$.
+											\end{proof}
+										\item[Irreflexivity] For every $x \in \mathbb{Z}$, is $(x, x) \notin R$? No.
+											\begin{proof}[Counterexample]
+												$(1, 1) \in R$.
+											\end{proof}
+										\item[Symmetry] For $x, y \in \mathbb{Z}$, if $(x, y) \in R$, is $(y, x) \in R$? Yes.
+											\begin{proof}
+												Suppose $(x, y) \in R$. Then $x - y = 4k$, where $k \in \mathbb{Z}$. But $y - x = -4k$. That is, $y - x = 4(-k)$. But $k$ can be any integer. Therefore $(y, x) \in R$.
+											\end{proof}
+										\item[Antisymmetry] For $x, y \in \mathbb{Z}$, if $x \neq y$ and $(x, y) \in R$, is $(y, x) \notin R$? No.
+											\begin{proof}[Counterexample]
+												$(8, 4) \in R$ and $(4, 8) \in R$
+											\end{proof}
+										\item[Transitivity] For $x, y, z \in \mathbb{Z}$, if $(x, y) \in R$ and $(y, z) \in R$, is $(x, z) \in R$? Yes.
+											\begin{proof}
+												Suppose $(x, y) \in R$ and $(y, z) \in R$. Then $x - y = 4k$ for some $k \in \mathbb{Z}$, and $y - z = 4m$ for some $m \in \mathbb{Z}$.
+												\begin{alignat*}{2}
+													&\qquad & y - z &= 4m\\
+													& \Rightarrow \quad&y &= 4m + z\\
+													& \quad &x - y &= 4k\\
+													& \Rightarrow \quad &x - (4m + z) &= 4k\\
+													& \Rightarrow \quad &x - 4m - z &= 4k\\
+													& \Rightarrow \quad &x - z &= 4k + 4m\\
+													& \Rightarrow \quad &x - z &= 4(k + m)
+												\end{alignat*}
+												$\therefore (x, z) \in R$ 
+											\end{proof}
+										\item[Trichotomy] Is every element in $\mathbb{Z}$ related to every other element in $\mathbb{Z}$? No.
+											\begin{proof}[Counterexample]
+												There is no element of $R$ where $1$ is related to $2$. $(1, 2) \notin R$ and $(2, 1) \notin R$.
+											\end{proof}
+									\end{description}
+								\item \question{What kind of relation is $R$?}\\
+								$R$ is an equivalence relation.
+								\pagebreak
+								\item \question{If $R$ is an equivalence relation, give the equivalence classes of $R$ and show some members of each class.}
+									\begin{align*}
+										[x] &= \{y \mid (x, y) \in R\}\\
+										&= \{y \mid x - y = 4k\}\\
+										&= \{y \mid y = x - 4k\}\\
+										[0] &= \{y = - 4k\}\\
+										&= \{\ldots, 8, 4, 0, -4, -8, \ldots\}\\
+										&= \{\ldots, -8, -4, 0, 4, 8, \ldots\}\\
+										[1] &= \{1 - 4k\}\\
+										&= \{\ldots, 9, 5, 1, -3, -7, \ldots\}\\
+										&= \{\ldots, -7, -3, 1, 5, 9, \ldots\}\\
+										[2] &= \{2 - 4k\}\\
+										&= \{\ldots, 10, 6, 2, -2, -6, \ldots\}\\
+										&= \{\ldots, -6, -2, 2, 6, 10, \ldots\}\\
+										[3] &= \{3 - 4k\}\\
+										&= \{\ldots, 11, 7, 3, -1, -5, \ldots\}\\
+										&= \{\ldots, -5, -1, 3, 7, 11, \ldots\}
+									\end{align*}
+									The equivalence classes for $[4]$ and up have already been covered.
+							\end{enumerate}
+						\item \question{Suppose $\mathbb{Q}^{+}$ is the set of all positive quotients $\frac{m}{n}$, where $m, n \in \mathbb{Z}^{+}$. That is, $\mathbb{Q}^{+}$ is the set of positive rational numbers. Let $R$ be the relation on $\mathbb{Q}^{+}$ defined by the rule $(x, y) \in R$ iff $y = \frac{a}{b}\bigl(x\bigr)$ for some $a, b \in \mathbb{Z}^{+}$. Prove that $R$ is an equivalence relation, and show the equivalence classes of $R$.}\\
+							Some examples of elements of $R$: $\left(\dfrac{1}{2}, \dfrac{3}{5}\right)$, $\left(\dfrac{3}{4}, \dfrac{5}{6}\right)$
+								\begin{align*}
+									\frac{3}{5} &= \frac{a}{b}\left(\frac{1}{2}\right) = \left(\frac{6}{5}\right)\left(\frac{1}{2}\right) = \frac{6}{10}\tag*{$a = 6$ and $b = 5$}\\
+									\frac{5}{6} &= \frac{a}{b}\left(\frac{3}{4}\right) = \left(\frac{10}{9}\right)\left(\frac{3}{4}\right) = \frac{30}{36}\tag*{$a = 10$ and $b = 9$}
+								\end{align*}
+							\begin{proof}
+								$ $
+								\begin{description}
+									\item[Reflexivity] For every $x \in \mathbb{Q}^{+}$, is $(x, x) \in R$? Yes.
+										\begin{subproof}[Subproof]
+											For $(x, x)$ to be in $R$, it needs to satisfy: 
+												\begin{align*}
+													x &= \frac{a}{b}\bigl(x\bigr) \text{ for some } a, b \in \mathbb{Z}^{+}\\
+													&= \frac{1}{1}\bigl(x\bigr) \tag*{$a = 1$ and $b = 1$}\\
+													&= x
+												\end{align*}
+											$\therefore (x, x) \in R$, so $R$ is reflexive.
+										\end{subproof}
+									\pagebreak
+									\item[Symmetry] For every $x, y \in \mathbb{Q}^{+}$, if $(x, y) \in R$, is $(y, x) \in R$? Yes.
+										\begin{subproof}[Subproof]
+											Suppose $(x, y) \in R$. Then $y = \dfrac{a}{b}\bigl(x\bigr)$.
+											\begin{alignat*}{2}
+												& &y &= \frac{a}{b}\bigl(x\bigr)\\
+												& \Rightarrow \quad & by &= ax\\
+												& \Rightarrow \quad & \frac{b}{a}\bigl(y\bigr) &= a\\
+												& \Rightarrow \quad & x &= \frac{b}{a}\bigl(y\bigr)
+											\end{alignat*}
+											$\therefore (y, x) \in R$, so $R$ is symmetric.
+										\end{subproof}
+									\item[Transitivity] For every $x, y, z \in \mathbb{Q}^{+}$, if $(x, y) \in R$, and $(y, z) \in R$, is $(x, z) \in R$? Yes.
+										\begin{subproof}[Subproof]
+											Suppose $(x, y) \in R$ and $(y, z) \in R$.\\
+											Then $y = \frac{a}{b}\bigl(x\bigr)$ and $z = \frac{c}{d}\bigl(y\bigr)$, where $a, b, c, d \in \mathbb{Z}^{+}$.
+											\begin{align*}
+												z &= \frac{c}{d}\bigl(y\bigr)\\
+												&= \frac{c}{d}\bigl(\frac{a}{b}\bigr)\bigl(x\bigr)\\
+												&= \frac{ab}{cd}\bigl(x\bigr)
+											\end{align*}
+											$\therefore (x, z) \in R$, so $R$ is transitive.
+										\end{subproof}
+								\end{description}
+								$\therefore R$ is an equivalence relation.
+							\end{proof}
+							\begin{description}
+								\item[Equivalence classes] \moveup
+								\begin{align*}
+									[x] &= \{y \mid (x, y) \in R\} \text{ for all $x \in \mathbb{Q}^{+}$}\\
+									[x] &= \Bigl\{y \mid y = \frac{a}{b}\bigl(x\bigr)\Bigr\}\\
+									[1] &= \Bigl\{y \mid y = \frac{a}{b}\bigl(1\bigr)\Bigr\}\\
+									&= \Bigl\{y \mid y = \frac{a}{b}\Bigr\}
+								\end{align*}
+								This is the only equivalence class, as every equivalence class is equal to every other equivalence class.
+							\end{description}
+						\pagebreak
+						\item \question{Prove that if $R$ is a relation on $\mathbb{Z}^{+}$, then $R$ is symmetric iff $R = R^{-1}$.}
+							\begin{proof}
+								$ $
+								\begin{enumerate}[label=(\roman*)]
+									\item \question{If $R$ is symmetric, then $R = R^{-1}$.}
+										\begin{subproof}
+											Assume $R$ is symmetric on $\mathbb{Z}^{+}$.
+											\begin{tabbing}
+												Suppose \quad \= $(x, y) \in R$.\\
+												Then \> $(y, x) \in R$ \quad \=because $R$ is symmetric.\\
+												Then \> $(x, y) \in R^{-1}$ \>by the definition of an inverse relation.\\
+												So \>$R \subseteq R^{-1}$.
+											\end{tabbing}
+											\begin{tabbing}
+												Suppose \quad \= $(x, y) \in R^{-1}$.\\
+												Then \> $(y, x) \in R$ \quad \=by the definition of an inverse relation.\\
+												Then \> $(x, y) \in R$ \>because $R$ is symmetric.\\
+												So \>$R^{-1} \subseteq R$.
+											\end{tabbing}
+											As $R \subseteq R^{-1}$ and $R^{-1} \subseteq R$, $R = R^{-1}$
+										\end{subproof}
+									\item \question{If $R = R^{-1}$, then $R$ is symmetric.}
+										\begin{subproof}
+											Assume $R = R^{-1}$.
+											\begin{tabbing}
+												Suppose \quad \= $(x, y) \in R$.\\
+												Then \>$(y, x) \in R^{-1}$ \quad \= by the definition of an inverse relation.\\
+												So \>$(y, x) \in R$ \> because $R = R^{-1}$\\
+												So \> $R$ is symmetric. \` \qedhere
+											\end{tabbing}
+										\end{subproof}
+								\end{enumerate}
+								If $R$ is symmetric, then $R = R^{-1}$, and if $R = R^{-1}$, then $R$ is symmetric.\\
+								$\therefore R$ is symmetric iff $R = R^{-1}$.
+							\end{proof}
 					\end{enumerate}
-					% TODO: COME BACK TO
 				\end{exercise}
 				\pagebreak
 				\begin{theorem}[Theorem \thechapter.1]
@@ -298,7 +692,7 @@
 						\item The union of the subsets results in $A$.
 					\end{enumerate}
 				\end{example}
-				\subsubsection{Going Backwards from a partition}
+				\subsubsection{Going Backwards From a Partition}
 					If one knows the original set that was partitioned, and the partitions, one can generate the original relation, using \concept{Theorem \thechapter.1}
 					\begin{example}
 						Given an original set $A = \{a, b, c\}$ and a partition given by $\bigl\{\{a\} \{b, c\}\bigr\}$.
@@ -308,7 +702,35 @@
 						\end{indentparagraph}
 						$R = \bigl\{(a, a), (b, b), (b, c), (c, b), (c, c)\bigr\}$
 					\end{example}
-					% TODO: DO EXERCISES
+					\pagebreak
+					\begin{exercise}{Self Assessment Exercise \thechapter.12}
+						\question{Determine whether $P$ is a partition of $X$ in each of the following cases. If it is, describe the corresponding equivalence relation.}
+						\begin{enumerate}[label=(\alph*)]
+							\item \question{$X = \{1, 2, 3\}$ and $P = \bigl\{\emptyset, \{1\}, \{2, 3\}\bigr\}$.}\\
+								$P$ is \emph{not} a partition of $X$, as $\emptyset$ is one of the elements of the set.
+							\item \question{$X = \{1, 2, 3\}$ and $P = \bigl\{\{1\}, \{2\}, \{1, 3\}\bigr\}$.}\\
+								$P$ is \emph{not} a partition of $X$, as $1$ appears in two different elements.
+							\item \question{$X = \{1, 2, 3\}$ and $P = \bigl\{\{1, 3\}, \{2\}\bigr\}$.}\\
+								$P$ \emph{is} a partition of $X$.\\
+								The part $\{2\}$ means that $(2, 2) \in R$.\\
+								The part $\{1, 3\}$ means that $(1, 1)$, $(3, 3)$, $(1, 3)$ and $(3, 3)$ are elements of $R$.\\
+								$R = \bigl\{(1, 1), (1, 3), (2, 2), (3, 1), (3, 3)\bigr\}$
+							\item \question{$X = \{1, 2, 3\}$ and $P = \bigl\{\{1\}, \{2\}\bigr\}$}\\
+								$P$ is \emph{not} a partition of $X$, as not all the members of $X$ are included.
+							\item \question{$X = \mathbb{Z}$ and $P = \bigl\{\{0\}, \mathbb{Z}^{+}, \mathrm{Neg}\bigr\}$ where $\mathrm{Neg} = \{x \mid x \in \mathbb{Z}$ and $ x < 0\}$.}\\
+								$P$ \emph{is} a partition of $X$.\\
+								The equivalence relation is:
+								\begin{align*}
+									R = \bigl\{(x, y) \mid (x = 0 \text{ and } y = 0) \text{ or } (x \in \mathbb{Z}^{+} \text{ and } y \in \mathbb{Z}^{+}) \text{ or } (x \in \mathrm{Neg} \text{ and } y \in \mathrm{Neg})\bigr\}
+								\end{align*}
+							\item \question{$X = \mathbb{Z}$ and $P = \bigl\{[0], [1], [2], [3], [4]\bigr\}$, where $[n] = \{x \mid x - n$ is divisible by $5$ with zero remainder$\}$ and $n \in \{0, 1, 2, 3, 4\}$.}\\
+								$P$ \emph{is} a partition of $X$.\\
+								The equivalence relation is:
+								\begin{align*}
+									R = \bigl\{(x, y) \mid x - y = 5k \text{ for some } k \in \mathbb{Z}\bigr\}
+								\end{align*}
+						\end{enumerate}
+					\end{exercise}
 		\pagebreak
 		\section{Functions}
 			\subsection{Functional Relation}
@@ -330,11 +752,336 @@
 						\end{indentparagraph}
 						$S$ is functional, but not a function, as $\mathrm{dom}(S) \neq \{1, 2, 3\}$.
 				\end{example}
+				\begin{example}
+					Prove that $f$ defined by $(x, y) \in f$ iff $y = 5x^{2} + 3$ is a function on $\mathbb{R}$.\\
+					To prove this, determine whether $f$ is functional, and whether $\mathrm{dom}(f) = \mathbb{R}$.
+					\begin{proof}
+						$ $
+						\begin{enumerate}[label=(\roman*)]
+							\item $f$ is functional.
+								\begin{subproof}
+									Suppose $(x, y) \in f$ and $(x, z) \in f$. Is it the case that $y = z$?\\
+									As $(x, y) \in f$, $y = 5x^{2} + 3$. As $(x, z) \in f$, $z = 5x^{2} + 3$.\\
+									Therefore $y = 5x^{2} + 3 = z$.\\
+									So $f$ is functional. 
+								\end{subproof}
+							\item $\mathrm{dom}(f) = \mathbb{R}$
+								\begin{subproof} \moveup
+									\begin{align*}
+										\mathrm{dom}(f) &= \{x \mid \text{ for some } y \in \mathbb{R}, (x, y) \in f\}\\
+										&= \{x \mid \text{ for some} y \in \mathbb{R}, y = 5x^{2} + 3\}\\
+										&= \{x \mid 5x^{2} + 3 \text{ is a real number}\}\\
+										&= \mathbb{R} \qedhere
+									\end{align*}
+								\end{subproof}
+						\end{enumerate}
+						As $f$ is functional, and the domain of $f$ is the same as the input set, $f$ is a function.
+					\end{proof}
+				\end{example}
 				\begin{sidenote}{Not all functional relations are functions!}
-					Every function is a functional relation, but a relation can be functional without being a function. This just means that the domain of the relation is not the same as the original domain.\\
-					An easy way to think about it: can you give the relation anything from the original domain and it gives an output? If so, it's a function. Otherwise it's not.
+					Every function is a functional relation, but a relation can be functional without being a function. This just means that the domain of the relation is not the same as the input set.\\
+					If anything from the original set can be given to the relation to produce an output, it is a function.
 				\end{sidenote}
-				% TODO: ADD MORE EXAMPLES
-				% TODO: DO SELF ASSESSMENT EXERCISES
+				\begin{exercise}{Self Assessment Exercise \thechapter.14}
+					\begin{enumerate}
+						\item \question{Give $5$ functions from $A = \{1, 2, 3, 4\}$ to $B = \{a, b, c\}$.}
+							\begin{align*}
+								f_{1} &= \bigl\{(1, a), (2, a), (3, a), (4, a)\bigr\}\\
+								f_{2} &= \bigl\{(1, b), (2, b), (3, b), (4, b)\bigr\}\\
+								f_{3} &= \bigl\{(1, c), (2, c), (3, c), (4, c)\bigr\}\\
+								f_{4} &= \bigl\{(1, a), (2, b), (3, c), (4, b)\bigr\}\\
+								f_{5} &= \bigl\{(1, b), (2, a), (3, b), (4, a)\bigr\}
+							\end{align*}
+						\item \question{Give all the functions from $A = \{a, b\}$ to $B = \{5, 6, 7\}$.}
+							\begin{alignat*}{3}
+								f_{1} &= \bigl\{(a, 5), (b, 5)\bigr\} \qquad & f_{4} &= \bigl\{(a, 6), (b, 5)\bigr\} \qquad & f_{7} &= \bigl\{(a, 7), (b, 5)\bigr\}\\
+								f_{2} &= \bigl\{(a, 5), (b, 6)\bigr\} \qquad & f_{5} &= \bigl\{(a, 6), (b, 6)\bigr\} \qquad & f_{8} &= \bigl\{(a, 7), (b, 6)\bigr\}\\
+								f_{3} &= \bigl\{(a, 5), (b, 7)\bigr\} \qquad & f_{6} &= \bigl\{(a, 6), (b, 7)\bigr\} \qquad & f_{9} &= \bigl\{(a, 7), (b, 7)\bigr\}
+							\end{alignat*}
+						\item \question{Give $3$ functions from $A \times A$ to $B$ if $A = \{a, b\}$ and $B = \{5, 6, 7\}$.}
+							\begin{align*}
+								A \times A &= \bigl\{(a, a), (a, b), (b, a), (b, b)\bigr\}\\
+								f_{1} &= \Bigl\{\bigl((a, a), 5\bigr), \bigl((a, b), 5\bigr), \bigl((b, a), 5\bigr), \bigl((b, b), 5\bigr)\Bigr\}\\
+								f_{2} &= \Bigl\{\bigl((a, a), 6\bigr), \bigl((a, b), 6\bigr), \bigl((b, a), 6\bigr), \bigl((b, b), 6\bigr)\Bigr\}\\
+								f_{3} &= \Bigl\{\bigl((a, a), 5\bigr), \bigl((a, b), 6\bigr), \bigl((b, a), 7\bigr), \bigl((b, b), 6\bigr)\Bigr\}
+							\end{align*}
+						\item \question{Let $R$ be a relation on $A = \bigl\{1, 2, 3, \{1\}, \{2\}\bigr\}$ defined by \\$R = \Bigl\{\bigl(1, \{1\}\bigr), \bigl(1, 3\bigr), \bigl(2, \{1\}\bigr), \bigl(2, \{2\}\bigr), \bigl(\{1\}, 3\bigr), \bigl(\{2\}, \{1\}\bigr)\Bigr\}$.}
+							\begin{enumerate}[label=(\alph*)]
+								\item \question{Is $R$ a function from $A$ to $A$?}\\
+									No. There are two elements with the same first coordinate: $\bigl(1, \{1\}\bigr)$ and $(1, 3)$, so $R$ is not a functional relation, so $R$ is not a function.
+								\item \question{Is $\mathrm{ran}(R)$ equal to the codomain of $R$?}\\
+									No. $1 \in$ codomain, but $1 \notin \mathrm{ran}(R)$.
+							\end{enumerate}
+						\pagebreak
+						\item \question{Consider the set $\mathcal{P}(A) = \bigl\{\emptyset, \{a\}, \{b\}, \{c\}, \{a, b\}, \{a, c\}, \{b, c\}, \{a, b, c\}\bigr\}$. Show that the relations $f$, $g$ and $h$ described below are functional and have as domains $\mathcal{P}(A)$, $\mathcal{P}(A) \times \mathcal{P}(A)$, and $\mathcal{P}(A) \times \mathcal{P}(A)$ respectively.}
+							\begin{enumerate}[label=(\alph*)]
+								\item \question{Let $f = \bigl\{(x, y) \mid x, y \in \mathcal{P}(A)$ and $y = x' \bigr\}$}.
+									\begin{description}
+										\item[Functional] $f$ is functional.
+											\begin{proof}
+												Suppose $(x, y) \in f$ and $(x, z) \in f$. ($f$ is functional iff $y = z$.)\\
+												Then $y = x'$ and $z = x'$.\\
+												So $y = x' = z$.\\
+												So $f$ is functional.
+											\end{proof}
+										\item[Domain] The domain of $f$ is equal to the input set $\mathcal{P}(A)$.
+											\begin{proof} \moveup
+												\begin{align*}
+													\mathrm{dom}(f) &= \{x \mid \text{for some } y \in \mathcal{P}(A), (x, y) \in f\}\\
+													&= \{x \mid \text{for some } y \in \mathcal{P}(A), y = x'\}\\
+													&= \{x \mid x' \in \mathcal{P}(A)\}\\
+													&= \mathcal{P}(A) \qedhere
+												\end{align*}
+											\end{proof}
+									\end{description}
+								\item \question{Let $g = \Bigl\{\bigl((u, v), y\bigr) \mid (u, v) \in \mathcal{P}(A) \times \mathcal{P}(A)$ and $y = u \cup v\Bigr\}$}.
+									\begin{description}
+										\item[Functional] $g$ is functional.
+											\begin{proof}
+												Suppose $\bigl((u, v), y\bigr) \in g$ and $\bigl((u, v), z\bigr) \in g$. ($g$ is functional iff $y = z$.)\\
+												Then $y = u \cup v$ and $z = u \cup v$.\\
+												So $y = u \cup v = z$.\\
+												So $g$ is functional.
+											\end{proof}
+										\item[Domain] The domain of $g$ is equal to the input set $\mathcal{P}(A) \times \mathcal{P}(A)$.
+											\begin{proof} \moveup
+												\begin{align*}
+													\mathrm{dom}(g) &= \Bigl\{(u, v) \mid \text{for some } y \in \mathcal{P}(A), \bigl((u, v), y\bigr) \in g\Bigr\}\\
+													&= \Bigl\{(u, v) \mid \text{for some } y \in \mathcal{P}(A), y = u \cup v \in g\Bigr\}\\
+													&= \Bigl\{(u, v) \mid u \cup v \in \mathcal{P}(A)\Bigr\}\\
+													&= \Bigl\{u \in \mathcal{P}(A) \text{ and } v \in \mathcal{P}(A)\Bigr\}\\
+													&= \mathcal{P}(A) \times \mathcal{P}(A) \qedhere
+												\end{align*}
+											\end{proof}
+									\end{description}
+								\pagebreak
+								\item \question{Let $h = \Bigl\{\bigl((u, v), y\bigr) \mid (u, v) \in \mathcal{P}(A) \times \mathcal{P}(A)$ and $y = u \cap v\Bigr\}$}.
+									\begin{description}
+										\item[Functional] $h$ is functional.
+											\begin{proof}
+												Suppose $\bigl((u, v), y\bigr) \in h$ and $\bigl((u, v), z\bigr) \in h$. ($h$ is functional iff $y = z$.)\\
+												Then $y = u \cap v$ and $z = u \cap v$.\\
+												So $y = u \cap v = z$.\\
+												So $h$ is functional.
+											\end{proof}
+										\item[Domain] The domain of $g$ is equal to the input set $\mathcal{P}(A) \times \mathcal{P}(A)$.
+											\begin{proof} \moveup
+												\begin{align*}
+													\mathrm{dom}(h) &= \Bigl\{(u, v) \mid \text{for some } y \in \mathcal{P}(A), \bigl((u, v), y\bigr) \in h\Bigr\}\\
+													&= \Bigl\{(u, v) \mid \text{for some } y \in \mathcal{P}(A), y = u \cap v \in h\Bigr\}\\
+													&= \Bigl\{(u, v) \mid u \cap v \in \mathcal{P}(A)\Bigr\}\\
+													&= \Bigl\{u \in \mathcal{P}(A) \text{ and } v \in \mathcal{P}(A)\Bigr\}\\
+													&= \mathcal{P}(A) \times \mathcal{P}(A) \qedhere
+												\end{align*}
+											\end{proof}
+									\end{description}
+							\end{enumerate}
+						\item \question{For each of the following relations from $X$ to $Y$, determine whether or not the relation may be regarded as a function from $X$ to $Y$.}
+							\begin{enumerate}[label=(\alph*)]
+								\item \question{$X = Y = \mathbb{Z}$ and $R = \bigl\{(x, y) \mid y = x\bigr\}$.}\\
+									$R$ is a function.
+									\begin{proof}
+										$ $
+										\begin{description}
+											\item[Functional] $R$ is functional.
+												\begin{subproof}[Subproof]
+													Suppose $(x, y) \in R$ and $(x, z) \in R$.\\
+													Then $y = x$ and $z = x$.\\
+													So $y = x = z$.\\
+													So $y = z$.\\
+													$\therefore R$ is functional.
+												\end{subproof}
+											\item[Domain] The domain of $R$ is equal to the input set: $\mathbb{Z}$.
+												\begin{subproof}[Subproof] \moveup
+													\begin{align*}
+														\mathrm{dom}(R) &= \bigl\{x \mid \text{for some } y \in \mathbb{Z}, (x, y) \in R\bigr\}\\
+														&= \{x \mid \text{for some } y \in \mathbb{Z}, y = x\}\\
+														&= \{x \mid x \in \mathbb{Z}\}\\
+														&= \mathbb{Z} \qedhere
+													\end{align*}
+												\end{subproof}
+										\end{description}
+										As $R$ is functional, and the domain of $R$ is equal to the input set, $R$ is a function.
+									\end{proof}
+								\pagebreak
+								\item \question{$X = Y = \mathbb{Z}$ and $R = \bigl\{(x, y) \mid y = x + 1\bigr\}$.}\\
+									$R$ is a function.
+									\begin{proof}
+										$ $
+										\begin{description}
+											\item[Functional] $R$ is functional.
+												\begin{subproof}[Subproof]
+													Suppose $(x, y) \in R$ and $(x, z) \in R$.\\
+													Then $y = x + 1$ and $z = x + 1$.\\
+													So $y = x + 1 = z$.\\
+													So $y = z$.\\
+													$\therefore R$ is functional.
+												\end{subproof}
+											\item[Domain] The domain of $R$ is equal to the input set: $\mathbb{Z}$.
+												\begin{subproof}[Subproof] \moveup
+													\begin{align*}
+														\mathrm{dom}(R) &= \bigl\{x \mid \text{for some } y \in \mathbb{Z}, (x, y) \in R\bigr\}\\
+														&= \{x \mid \text{for some } y \in \mathbb{Z}, y = x + 1\}\\
+														&= \{x \mid x + 1 \in \mathbb{Z}\}\\
+														&= \mathbb{Z} \qedhere
+													\end{align*}
+												\end{subproof}
+										\end{description}
+										As $R$ is functional, and the domain of $R$ is equal to the input set, $R$ is a function.
+									\end{proof}
+								\item \question{$X = Y = \mathbb{Z}$ and $R = \bigl\{(x, y) \mid y = 3 - x\bigr\}$.}\\
+									$R$ is a function.
+									\begin{proof}
+										$ $
+										\begin{description}
+											\item[Functional] $R$ is functional.
+												\begin{subproof}[Subproof]
+													Suppose $(x, y) \in R$ and $(x, z) \in R$.\\
+													Then $y = 3 - x$ and $z = 3 - x$.\\
+													So $y = 3 - x = z$.\\
+													So $y = z$.\\
+													$\therefore R$ is functional.
+												\end{subproof}
+											\item[Domain] The domain of $R$ is equal to the input set: $\mathbb{Z}$.
+												\begin{subproof}[Subproof] \moveup
+													\begin{align*}
+														\mathrm{dom}(R) &= \bigl\{x \mid \text{for some } y \in \mathbb{Z}, (x, y) \in R\bigr\}\\
+														&= \{x \mid \text{for some } y \in \mathbb{Z}, y = 3 - x\}\\
+														&= \{x \mid 3 - x \in \mathbb{Z}\}\\
+														&= \mathbb{Z} \qedhere
+													\end{align*}
+												\end{subproof}
+										\end{description}
+										As $R$ is functional, and the domain of $R$ is equal to the input set, $R$ is a function.
+									\end{proof}
+								\pagebreak
+								\item \question{$X = Y = \mathbb{Z}$ and $R = \bigl\{(x, y) \mid y = \sqrt{x}\bigr\}$. (That is, the positive square root of $x$.)}\\
+									$R$ is \emph{not} a function.
+									\begin{proof}
+										$ $
+										\begin{description}
+											\item[Functional] $R$ is functional.
+												\begin{subproof}[Subproof]
+													Suppose $(x, y) \in R$ and $(x, z) \in R$.\\
+													Then $y = \sqrt{x}$ and $z = \sqrt{x}$.\\
+													So $y = \sqrt{x} = z$\\
+													So $y = z$.\\
+													So $R$ is functional.
+												\end{subproof}
+											\item[Domain] The domain of $R$ is \emph{not} equal to the input set.
+												\begin{subproof}[Counterexample]
+													$2 \in X$, but there is no integer $y$ (i.e. no $y \in Y$) where $y = \sqrt{2}$, because $\sqrt{2}$ is irrational.\\
+													$-1 \in X$, but there is no integer $y$ where $y = \sqrt{-1}$.\\
+													$\therefore \mathrm{dom}(R) \neq X$ 
+												\end{subproof}
+										\end{description}
+										As the domain of $R$ is not equal to the input set, $R$ is not a function.
+									\end{proof}
+								\item \question{$X = Y = \mathbb{Z}$ and $R = \bigl\{(x, y) \mid y^{2} = x\bigr\}$.}\\
+									$R$ is not a function.
+									\begin{proof}
+										$ $
+										\begin{description}
+											\item[Functional] $R$ is \emph{not} functional.
+												\begin{subproof}[Subproof]
+													Suppose $(x, y) \in R$ and $(x, z) \in R$.\\
+													Then $y^{2} = x$ and $z^{2} = x$.\\
+													So $y = \pm \sqrt{x}$ and $z = \pm \sqrt{x}$.\\
+													As $y$ can equal $\sqrt{x}$ and $z$ can equal $- \sqrt{x}$, $y \neq z$\\
+													So $R$ is not functional.
+												\end{subproof}
+											\item[Domain] The domain of $R$ is \emph{not} equal to the input set.
+												\begin{subproof}[Counterexample]
+													$2 \in X$, but there is no integer $y$ (i.e. no $y$ in $Y$) where $y^{2} = 2$, because $\sqrt{2}$ is irrational.\\
+													$-1 \in X$, but there is no ineger $y$ where $y^{2} = -1$.\\
+													$\therefore \mathrm{dom}(R) \neq X$ 
+												\end{subproof}
+										\end{description}
+										As $R$ is not functional, and the domain of $R$ is not equal to the input set, $R$ is not a function.
+									\end{proof}
+								\pagebreak
+								\item \question{$X = Y = \mathbb{R}$ and $S = \bigl\{(x, y) \mid x^{2} + y^{2} = 1\bigr\}$.}
+									$R$ is not a function.
+									\begin{proof}
+										$ $
+										\begin{description}
+											\item[Functional] $R$ is \emph{not} functional.
+												\begin{subproof}[Subproof]
+													Suppose $(x, y) \in S$ and $(x, z) \in S$.\\
+													Then $x^{2} + y^{2} = 1$ and $x^{2} + z^{2} = 1$.\\
+													So $y^{2} = 1 - x^{2}$ and $z^{2} = 1 - x^{2}$.\\
+													So $y = \pm \sqrt{1 - x^{2}}$ and $z = \pm \sqrt{1 - x^{2}}$.\\
+													As $y$ can be $\sqrt{1 - x^{2}}$ and $z$ can be $- \sqrt{1 - x^{2}}$, $y \neq z$.\\
+													So $R$ is not functional.
+												\end{subproof}
+											\item[Domain] The domain of $S$ is \emph{not} equal to the input set.
+												\begin{subproof}[Counterexample]
+													$2 \in \mathbb{R}$, but there is no real number $y$ where $2^{2} + y^{2} = 1$.\\
+													$\therefore \mathrm{dom}(R) \neq X$
+												\end{subproof}
+										\end{description}
+										As $R$ is not functional, and the domain of $R$ is not equal to the input set, $R$ is not a function.
+									\end{proof}
+							\end{enumerate}
+						\item \question{Is the relation $R$ on $\mathbb{Z}^{+}$, which consists of all pairs $(x, y)$ such that $y = x - 1$, a function from $\mathbb{Z}^{+}$ to $\mathbb{Z}^{+}$?}\\
+							No.
+							\begin{proof}
+								$ $
+								\begin{description}
+									\item[Functional] $R$ is functional.
+										\begin{subproof}[Subproof]
+											Suppose $(x, y) \in R$ and $(x, z) \in R$.\\
+											Then $y = x - 1$ and $z = x - 1$.\\
+											So $y = x - 1 = z$.\\
+											So $y = z$.\\
+											So $R$ is functional.
+										\end{subproof}
+									\item[Domain] The domain of $R$ is \emph{not} equal to the input set.
+										\begin{subproof}[Subproof] \moveup
+											\begin{align*}
+												\mathrm{dom}(R) &= \bigl\{x \mid \text{for some } y \in \mathbb{Z}^{+}, (x, y) \in R\bigr\}\\
+												&= \bigl\{x \mid \text{for some } y \in \mathbb{Z}^{+}, y = x - 1\bigr\}\\
+												&= \bigl\{x \mid x - 1 \in \mathbb{Z}^{+}\bigr\}\\
+												&= \bigl\{x > 1 \mid x \in \mathbb{Z}^{+}\bigr\}\\
+												& \neq \mathbb{Z}^{+} \qedhere
+											\end{align*}
+											For example, $y = 1 - 1 = 0$ cannot be an element of $R$ if the domain is $\mathbb{Z}^{+}$
+										\end{subproof}
+								\end{description}
+								As the domain of $R$ is not equal to the input set, $R$ is not a function.
+							\end{proof}
+						\pagebreak
+						\item \question{Let $A = \{a, b, c\}$. Consider all the equivalence relations on $A$. How many relations are also functions from $A$ to $A$?}
+							\begin{description}
+								\item[Equivalence Relations]
+									\begin{align*}
+										R_{1} &= \bigl\{(a, a), (b, b), (c, c)\bigr\}\\
+										R_{2} &= \bigl\{(a, a), (b, b), (c, c), (a, b), (b, a)\bigr\}\\
+										R_{3} &= \bigl\{(a, a), (b, b), (c, c), (a, c), (c, a)\bigr\}\\
+										R_{4} &= \bigl\{(a, a), (b, b), (c, c), (b, c), (c, b)\bigr\}\\
+										R_{5} &= \bigl\{(a, a), (b, b), (c, c), (a, b), (b, a), (a, c), (c, a), (b, c), (c, b)\bigr\}
+									\end{align*}
+								\item[Functions] Only $R_{1}$ is a function.
+								\item[Abstract Reasoning] If $R$ is an equivalence relation, then $R$ is reflexive. So $\mathrm{dom}(R) = A$.\\
+									But if $R$ is an equivalence relation where a first coordinate appears more than once, $R$ is not a function.\\
+									So the first coordinates need to only appear once.\\
+									In an equivalence relation, that means that the only function is the identity relation.\\
+									So the only function is $\bigl\{(a, a), (b, b), (c, c)\bigr\}$
+							\end{description}
+						\item \question{Let $A = \{a, b, c\}$.}
+							\begin{enumerate}[label=(\alph*)]
+								\item \question{How many weak partial orders on $A$ are also functions from $A$ to $A$?}\\
+									If $S$ is a weak partial order on $A$, then $S$ is reflexive. So $\mathrm{dom}(S) = A$.\\
+									That means that every element of $A$ appears as the first coordinate in at least one pair.\\
+									For $S$ to be functional, each element of $A$ must only appear as the first coordinate in one pair.\\
+									The only case for this is the identity relation.\\
+									So the only weak partial order on $A$ that is a function is $\bigl\{(a, a), (b, b), (c, c)\bigr\}$.
+								\item \question{How many strict partial orders on $A$ are also functions from $A$ to $A$?}\\
+									For a strict partial order $T$ to be a function on $A$, the domain of $T$ needs to be $A$, and $T$ needs to be functional.\\
+									Each element of $A$ should appear as the first coordinate in exactly one pair. For the relation to be a strict partial order, it needs to be antisymmetric, irreflexive and transitive.\\
+									There is no combination of pairs that satisfies all three requirements for a strict partial order that is also a function.
+							\end{enumerate}
+					\end{enumerate}
+				\end{exercise}
 	\rulechapterend
 \end{document}
