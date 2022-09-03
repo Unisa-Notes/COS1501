@@ -12,7 +12,7 @@
 				of $B$, written $\mathrm{ran}(f)$ or $f[A]$.\\
 				In other words, it is a subset of $B$ where and element $b$ of $B$ can be reached by calling the function with a specific element $a$ of $A$.
 			\end{definition}
-			\begin{example}
+			\begin{example}[width=0.9\textwidth]
 				Let $A = \{a, b, c\}$ and $B = \{1, 2, 3\}$. Let a function $f: A \rightarrow B$ be defined as 
 				\begin{alignat*}{3}
 					f(a) &= 1 \qquad & f(b) &= 2 \qquad & f(c) &= 1
@@ -30,7 +30,7 @@
 				\end{enumerate}
 				\pagebreak
 				Easier to show with an example:
-				\begin{example}
+				\begin{example}[width=0.8\textwidth]
 					Let $g: \mathbb{Z} \rightarrow \mathbb{Z}$ be defined by $y = 2x$.
 					\begin{align*}
 						\mathrm{ran}(g) &= \{g(x) \mid x \in \mathbb{Z}\}\tag*{$(1)$}\\
@@ -189,20 +189,20 @@
 							\end{enumerate}
 						\item \question{Consider $h: \mathbb{Z} \rightarrow \mathbb{Z}$ defined by $h(x) = 2x - 5$. Determine whether or not $h$ is injective.}\\
 							$h$ is injective.
-							\begin{proof} \moveup
-								\begin{alignat*}{2}
+							\begin{proof} $
+								\begin{alignedat}[t]{2}
 									& \text{Assume } \quad &h(u) &= h(v)\\
 									& \text{Then } &2u - 5 &= 2v - 5\\
 									& & 2u &= 2v\\
 									& & u &= v
-								\end{alignat*}
+								\end{alignedat} $\\
 								$\therefore h$ is injective, because when $h(u) = h(v)$, $u = v$.
 							\end{proof}
 					\end{enumerate}
 				\end{exercise}
 			\pagebreak
 		\section{Composition of Functions}
-				\begin{theorem}[The composition of two functions is also a function]
+				\begin{theorem}{The composition of two functions is also a function}
 					For any two functions $f: A \rightarrow B$ and $g: B \rightarrow C$, the composition of the two functions\\
 						$g \circ f: A \rightarrow C$ is also a function.
 						\begin{proof}
@@ -219,7 +219,7 @@
 						&= g\bigl(f(x)\bigr)
 					\end{aligned} $}
 				\end{definition}
-			\begin{example}
+			\begin{example}[width=0.6\textwidth]
 				Let $f: \mathbb{Z} \rightarrow \mathbb{Z}$ be defined by $f(x) = 4x + 2$.\\
 				Let $g: \mathbb{Z} \rightarrow \mathbb{Z}^{+}$ be defined by $f(x) = x^{2} + 1$.\\
 				Then $g \circ f: \mathbb{Z} \rightarrow \mathbb{Z}^{+}$.
@@ -232,7 +232,7 @@
 				\end{align*}
 				$(g \circ f)(x)$ is called the \concept{image of $x$ under $g \circ f$}.
 			\end{example}
-			\begin{theorem}[The composition of two surjective functions is surjective]
+			\begin{theorem}{The composition of two surjective functions is surjective}
 				For any two surjective functions $f: A \rightarrow B$ and $g: B \rightarrow C$, the composition of the two functions\\
 					$g \circ f: A \rightarrow C$ is also a surjective function.
 					\begin{proof}
@@ -246,7 +246,7 @@
 						So the composite function is surjective.
 					\end{proof}
 			\end{theorem}
-			\begin{theorem}[The composition of two injective functions is injective]
+			\begin{theorem}{The composition of two injective functions is injective}
 				For any two injective functions $f: A \rightarrow B$ and $g: B \rightarrow C$, the composition of the two functions\\
 					$g \circ f: A \rightarrow C$ is also a injective function.
 					\begin{proof}
@@ -312,7 +312,7 @@
 				\begin{definition}{Bijective Function}
 					A function $f: A \rightarrow B$ is \concept{bijective} iff $f$ is both surjective and injective.
 				\end{definition}
-				\begin{example}
+				\begin{example}[width=0.8\textwidth]
 					Let $f: \mathbb{Z} \rightarrow \mathbb{Z}$ be defined by $y = x + 2$.
 					\begin{description}
 						\item[Surjectivity] Determine the range of $f$.
@@ -340,7 +340,7 @@
 					A function $f: A \rightarrow B$ is \concept{invertible} iff the inverse relation $f^{-1}$ is a function from $B$ to $A$.\\
 					This occurs iff the function $f$ is bijective.
 				\end{definition}
-				\begin{theorem}[A function $f$ is invertible iff $f$ is bijective]
+				\begin{theorem}{A function $f$ is invertible iff $f$ is bijective}
 					\begin{proof}
 						$ $
 						\begin{indentparagraph}
@@ -389,7 +389,7 @@
 			\begin{definition}{Identity Function}
 				For any set $A$, the function $i_{A}: A \rightarrow A$ is the function such that $i_{A}(x) = x$ for all $x \in A$. This function is called the \concept{identity function}.
 			\end{definition}
-			\begin{example}
+			\begin{example}[width=0.8\textwidth]
 				Let $B = \{2, 4, 6, 8\}$. The identity function $i_{B}: B \rightarrow B$ would be:
 					\begin{align*}
 						i_{B} = \bigl\{(2, 2), (4, 4), (6, 6), (8, 8)\bigr\}
@@ -415,30 +415,30 @@
 								\begin{description}
 									\item[Injectivity] This function is injective.
 										\begin{proof}
-											\hfill $ 
+											$ 
 											\begin{alignedat}[t]{2}
 												& \text{Assume} \quad &f(u) &= f(v)\\
 												& \text{Then} & u + 1 &= v + 1\\
 												& \text{i.e.} & u &= v
 											\end{alignedat}
-											$ \hfill \phantom{Proof}\\
+											$\\
 											Therefore $f$ is injective.
 										\end{proof}
 									\pagebreak
 									\item[Surjectivity] This function is surjective.
 										\begin{proof}
-											\hfill $
+											$
 											\begin{aligned}[t]
 												f[\mathbb{Z}] &= \{f(x) \mid x \in \mathbb{Z}\}\\
 												&= \{x + 1 \mid x \in \mathbb{Z}\}\\
 												&= \{y \mid y - 1 \in \mathbb{Z}\}\\
 												&= \{y \mid y \in \mathbb{Z}\}\\
 												&= \mathbb{Z}
-											\end{aligned} $ \hfill \phantom{Proof}\\
+											\end{aligned} $\\
 											Therefore $f$ is surjective.
 										\end{proof}
 									\item[Bijectivity] As $f$ is injective and surjective, $f$ is bijective.
-									\item[Inverse Function] \hfill $
+									\item[Inverse Function] $
 											\begin{aligned}[t]
 												(y, x) \in f^{-1} &\text{ iff } (x, y) \in f\\
 												&\text{ iff } y = x + 1\\
@@ -446,32 +446,32 @@
 												&\text{ iff } x - 1 = y\\
 												&\text{ iff } y = x - 1\\
 												(y, x) \in f^{-1} &\text{ iff } x = y - 1
-											\end{aligned} $ \hfill \phantom{\textbf{Inverse Function}}\\
+											\end{aligned} $\\
 										$f^{-1}(y) = y - 1$
 								\end{description}
 							\item \question{$f: \mathbb{Z} \rightarrow \mathbb{Z}$ is defined by $f(x) = x^{2}$.}
 								\begin{description}
 									\item[Injectivity] This function is \emph{not} injective.
 										\begin{proof}
-											\hfill $ 
+											$ 
 												\begin{aligned}[t]
 													& \text{Assume} \quad &f(u) &= f(v)\\
 													& \text{Then} & u^{2} &= v^{2}\\
 													& \text{i.e.} & \pm u &= \pm v
 												\end{aligned}
-											$ \hfill \phantom{Proof}\\
+											$\\
 											Therefore $f$ is not injective.
 										\end{proof}
 									\item[Surjectivity] This function is \emph{not} surjective.
 										\begin{proof}
-											\hfill $ 
+											$ 
 												\begin{aligned}[t]
 													f[\mathbb{Z}] &= \{f(x) \mid x \in \mathbb{Z}\}\\
 													&= \{x^{2} \mid x \in \mathbb{Z}\}\\
 													&= \{y \mid \pm \sqrt{y} \in \mathbb{Z}\}\\
 													& \neq \mathbb{Z}
 												\end{aligned}
-											$ \hfill \phantom{Proof}
+											$
 											\begin{subproof}[Counterexample]
 												Suppose $y = -1$, as $-1 \in \mathbb{Z}$. There is no $x \in \mathbb{Z}$ such that $x^{2} = -1$, so the range of $f$ is not equal to the codomain.
 											\end{subproof}
@@ -485,29 +485,29 @@
 								\begin{description}
 									\item[Injectivity] This function is injective.
 										\begin{proof}
-											\hfill $ 
+											$ 
 												\begin{aligned}[t]
 													& \text{Assume} \quad &f(u) &= f(v)\\
 													& \text{Then} &3 - u &= 3 - v\\
 													& \text{i.e.} & u &= v
 												\end{aligned}
-											$ \hfill \phantom{Proof}\\
+											$ \\
 											Therefore $f$ is injective.
 										\end{proof}
 									\item[Surjectivity] This function is surjective.
 										\begin{proof}
-											\hfill $ 
+											$ 
 												\begin{aligned}[t]
 													f[\mathbb{Z}] &= \{f(x) \mid x \in \mathbb{Z}\}\\
 													&= \{3 - x \mid x \in \mathbb{Z}\}\\
 													&= \{y \mid 3 - y \in \mathbb{Z}\}\\
 													&= \mathbb{Z}
 												\end{aligned}
-											$ \hfill \phantom{Proof}\\
+											$ \\
 											Therefore $f$ is surjective.
 										\end{proof}
 									\item[Bijectivity] As this function is injective and surjective, this function is bijective.
-									\item[Inverse Function] \hfill $ 
+									\item[Inverse Function] $ 
 										\begin{aligned}[t]
 											(y, x) \in f^{-1} &\text{ iff } (x, y) \in f\\
 											& \text{ iff } y = 3 - x\\
@@ -516,33 +516,33 @@
 											& \text{ iff } y = 3 - x\\
 											(y, x) \in f^{-1} & \text{ iff } x = 3 - y
 										\end{aligned}
-									$ \hfill \phantom{Inverse Function}\\
+									$ \\
 									$f^{-1}(y) = 3 - y$
 								\end{description}
 							\item \question{$f: \mathbb{Z} \rightarrow \mathbb{Z}$ is defined by $f(x) = 4x + 5$.}
 								\begin{description}
 									\item[Injectivity] This function is injective.
 										\begin{proof}
-											\hfill $ 
+											$ 
 												\begin{aligned}[t]
 													& \text{Assume} \quad &f(u) &= f(v)\\
 													& \text{Then} &4u + 5 &= 4v + 5\\
 													& & 4u &= 4v\\
 													& \text{i.e.} & u &= v
 												\end{aligned}
-											$ \hfill \phantom{Proof}\\
+											$ \\
 											Therefore $f$ is injective.
 										\end{proof}
 									\item[Surjectivity] This function is \emph{not} surjective.
 										\begin{proof}
-											\hfill $ 
+											$ 
 												\begin{aligned}[t]
 													f[\mathbb{Z}] &= \{f(x) \mid x \in \mathbb{Z}\}\\
 													&= \{4x + 5 \mid x \in \mathbb{Z}\}\\
 													&= \{y \mid \frac{y - 5}{4} \in \mathbb{Z}\}\\
 													& \neq \mathbb{Z}
 												\end{aligned}
-											$ \hfill \phantom{Proof}\\
+											$ \\
 											Therefore $f$ is not surjective.
 										\end{proof}
 									\item[Bijectivity] As $f$ is not surjective, $f$ is not bijective.
@@ -556,22 +556,22 @@
 								\begin{proof}
 									$ $
 									\begin{subproof}[Injectivity]
-										\hfill $ 
+										$ 
 											\begin{aligned}[t]
 												& \text{Assume} \quad &i_{C}(u) &= i_{C}(v)\\
 												& \text{Then} & u &= v
 											\end{aligned}
-										$ \hfill \phantom{Injectivity}\\
+										$ \\
 										Therefore $i_{C}$ is injective.
 									\end{subproof}
 									\begin{subproof}[Surjectivity]
-										\hfill $ 
+										$ 
 											\begin{aligned}[t]
 												i_{C}[C] &= \{i_{c} \mid c \in C\}\\
 												&= \{c \mid c \in C\}\\
 												&= C
 											\end{aligned}
-										$ \hfill \phantom{Surjectivity}\\
+										$ \\
 										Therefore $i_{C}$ is surjective.
 									\end{subproof}
 									As $i_{C}$ is both injective and surjective, $i_{C}$ is bijective.

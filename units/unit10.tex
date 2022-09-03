@@ -5,10 +5,10 @@
 	\chapter[Logic: Predicates and Proof Strategies]{Logic: Quantifiers, predicates and proof strategies}
 		\section{Quantifiers and Predicates}
 			\subsection[Universal Quantifier]{Universal Quantifier (FOR ALL)}
-				\begin{definition}{Universal Quantifier}
+				\begin{definition}[width=0.8\textwidth]{Universal Quantifier}
 					A \concept{universal quantifier} is written with the symbol $\forall$, meaning ``for all''.
 				\end{definition}
-				\begin{example}
+				\begin{example}[width=0.6\textwidth]
 					Examples would be:
 					\begin{indentparagraph}
 						``For all $x \in \mathbb{R}$ \ldots'' (written $\forall \: x \in \mathbb{R}$)\\
@@ -17,7 +17,7 @@
 					The variable $x$ above is called a \concept{quantified variable}.
 				\end{example}
 				This can be considered a \emph{generalisation of conjunction (AND)}.
-				\begin{example}
+				\begin{example}[width=0.9\textwidth]
 					Let $A$ = \{1, 2, 3\}. A declarative statement can then be made for the set:
 					\begin{align*}
 						\forall \: x \in A, x > 0
@@ -30,10 +30,10 @@
 				\end{example}
 				\pagebreak
 			\subsection[Existential Quantifier]{Existential Quantifier (THERE EXISTS)}
-				\begin{definition}{Existential Quantifier}
+				\begin{definition}[width=0.85\textwidth]{Existential Quantifier}
 					An \concept{existential quantifier} is written with the symbol $\exists $, meaning ``there exists''.
 				\end{definition}
-				\begin{example}
+				\begin{example}[width=0.65\textwidth]
 					Examples would be:
 					\begin{indentparagraph}
 						``There exists an $x \in \mathbb{R}$ such that\ldots'' (written $\exists \: x \in \mathbb{R}$)\\
@@ -42,12 +42,12 @@
 				\end{example}
 				\begin{sidenote}{A quantified variable is a dummy variable}
 					Any quantified variable can be replaced (everywhere it occurs) with another variable without changing the meaning.
-					\begin{example}
+					\begin{example}[hbox]
 						$\forall \: x \in \mathbb{Z}^{+}, (x > 0) \equiv \forall \: y \in \mathbb{Z}^{+}, (y > 0)$
 					\end{example}
 				\end{sidenote}
 				This can be considered a \emph{generalisation of disjunction (OR)}.
-				\begin{example}
+				\begin{example}[width=0.9\textwidth]
 					Let $A$ = \{1, 2, 3\}. A declarative statement can then be made for the set:
 					\begin{align*}
 						\exists \: x \in A, x > 4
@@ -62,7 +62,7 @@
 				\begin{definition}{Predicate}
 					A statement $P(x)$ is called a \concept{predicate} if it expresses some property of a variable $x \in A$, and returns either true or false depending on the value of $x$. $P(x)$ is true for any variable $x \in A$ that has the property, and $P(x)$ is false if $x$ does not have that property.
 				\end{definition}
-				\begin{sidenote}{A predicate is a boolean function}
+				\begin{sidenote}[width=0.65\textwidth]{A predicate is a boolean function}
 					A predicate takes in a value, and either returns true or false.
 				\end{sidenote}
 			\subsection{Negation of Quantified Statements}
@@ -164,9 +164,9 @@
 						\end{tabbing}
 					\end{proof}
 				\end{example}
-				\begin{sidenote}{The contrapositive is not the same as the converse}
+				\begin{sidenote}[width=0.8\textwidth]{The contrapositive is not the same as the converse}
 					The \concept{converse} of a statement just swaps them around. This is not the same as the contrapositive.
-					\begin{example}
+					\begin{example}[width=0.6\textwidth]
 						Given a statement, $p \rightarrow q$.
 						\begin{description}
 							\item[Converse] $q \rightarrow p$

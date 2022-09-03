@@ -4,7 +4,7 @@
 	\ifSubfilesClassLoaded{\setcounter{chapter}{7}}{}
 	\chapter{Operations}
 		\section{Binary Operation}
-			\begin{definition}{Binary Operation}
+			\begin{definition}[width=0.9\textwidth]{Binary Operation}
 				If $f: X \times X \rightarrow X$, then $f$ is called a \concept{binary operation} on $X$.\\
 				In other words, a binary operation takes in a pair, and returns a single value.
 			\end{definition}
@@ -16,15 +16,15 @@
 			\end{sidenote}
 			By convention, the elements of a binary operation are all the same set.
 			\subsection[Finite and Infinite Sets]{Finite and Infinite Sets (Informal Definition)}
-				\begin{definition}{Finite Set}
+				\begin{definition}[width=0.8\textwidth]{Finite Set}
 					A set whose cardinality is a non-negative number. Meaning one can count the number of elements in the set.\par
-					\begin{example}
+					\begin{example}[hbox]
 						$A = \{1, 2, 3, 4\}$, where $\left\lvert A\right\rvert = 4$
 					\end{example}
 				\end{definition}
-				\begin{definition}{Infinite Set}
+				\begin{definition}[width=0.8\textwidth]{Infinite Set}
 					A set that is not finite. Meaning one \emph{cannot} count the number of elements in the set.\par
-					\begin{example}
+					\begin{example}[hbox]
 						The set of real numbers $\mathbb{R}$ is an infinite set.
 					\end{example}
 				\end{definition}
@@ -115,12 +115,12 @@
 					A binary operation $\Diamond: X \times X \rightarrow X$ is \concept{commutative} iff $x \Diamond y = y \Diamond x$ for all $x, y \in X$.
 				\end{definition}
 				The easiest way to check this is it will be commutative if it is symmetrical across the diagonal from the top left to the bottom right.
-				\begin{example} \moveup
-					\begin{align*}
+				\begin{example}[width=0.35\textwidth] $
+					\begin{aligned}[t]
 						1 * 1 = 1 * 1 = 1\\
 						1 * 2 = 2 * 1 = 2\\
 						2 * 2 = 2 * 2 = 1
-					\end{align*}
+					\end{aligned} $\\
 					Therefore $*$ is commutative.
 				\end{example}
 			\subsection{Associative Binary Operation}
@@ -128,8 +128,8 @@
 					A binary operation $\Diamond: X \times X \rightarrow X$ is \concept{associative} iff $(x \Diamond y) \Diamond z = x \Diamond (y \Diamond z)$ for all $x, y, z \in X$.
 				\end{definition}
 				Unfortunately, for this one, you have to check each instance.
-				\begin{example} \moveup
-					\begin{align*}
+				\begin{example}[width=0.65\textwidth] $
+					\begin{aligned}[t]
 						(1 * 1) * 1 = 1 * 1 = 1 &\text{ and } 1 * (1 * 1) = 1 * 1 = 1\\
 						(1 * 1) * 2 = 1 * 2 = 2 &\text{ and } 1 * (1 * 2) = 1 * 2 = 2\\
 						(1 * 2) * 1 = 2 * 1 = 2 &\text{ and } 1 * (2 * 1) = 2 * 1 = 2\\
@@ -138,7 +138,7 @@
 						(2 * 1) * 2 = 2 * 2 = 1 &\text{ and } 2 * (1 * 2) = 2 * 2 = 1\\
 						(2 * 2) * 1 = 1 * 1 = 1 &\text{ and } 2 * (2 * 1) = 2 * 2 = 1\\
 						(2 * 2) * 2 = 1 * 2 = 2 &\text{ and } 2 * (2 * 2) = 2 * 1 = 2
-					\end{align*}
+					\end{aligned} $\\
 					Therefore $*$ is associative.
 				\end{example}
 			\pagebreak
@@ -147,11 +147,11 @@
 					An element $e$ of $X$ is an \concept{identity element} in respect of the binary operation $\Diamond: X \times X \rightarrow X$ iff $e \Diamond x = x \Diamond e = x$ for all $x \in X$.
 				\end{definition}
 				The easiest way to check this is if there is a row and column in the table that is identical to the header. (NB: It needs to be \emph{both} row and column, which contain the same element.)
-				\begin{example} \moveup
-					\begin{align*}
+				\begin{example}[hbox] $
+					\begin{aligned}[t]
 						\mathbf{1} * 1 = 1 &\text{ and } 1 * \mathbf{1} = 1\\
 						1 * \mathbf{2} = 2 &\text{ and } 2 * \mathbf{1} = 2
-					\end{align*}
+					\end{aligned} $
 				\end{example}
 		\section{Operations on Vectors}
 			\subsection{Vector}
@@ -170,14 +170,14 @@
 						&= (u_{1} + v_{2}, u_{2} + v_{2}, \ldots, u_{n} + v_{n})
 					\end{align*}
 				\end{definition}
-				\begin{example}
+				\begin{example}[width=0.5\textwidth]
 					Let $u = (1, 2, 3)$ and $v = (4, 5, 6)$.\\
-					Then
+					Then 
 					\begin{align*}
 						u + v &= (1, 2, 3) + (4, 5, 6)\\
 						&= (1 + 4, 2 + 5, 3 + 6)\\
 						&= (5, 7, 9)
-					\end{align*}
+					\end{align*} 
 				\end{example}
 				\begin{sidenote}{Vector addition is not defined for vectors of different sizes}
 					If two vectors have a different number of coordinates, you cannot add those two vectors together.
@@ -191,7 +191,7 @@
 						&= (ru_{1}, ru_{2}, \ldots, ru_{n})
 					\end{align*}
 				\end{definition}
-				\begin{example}
+				\begin{example}[width=0.5\textwidth]
 					Let $u = (7, 8, 9)$ and $r = 2$.\\
 					Then
 					\begin{align*}
@@ -200,7 +200,7 @@
 					\end{align*}
 				\end{example}
 			\subsection{Dot Product}
-				\begin{definition}{Dot Product}
+				\begin{definition}[width=0.87\textwidth]{Dot Product}
 					The \concept{dot product} (also called the \concept{inner product}) of vectors $u = (u_{1}, u_{2}, \ldots, u_{n})$ and \\$v = (v_{1}, v_{2}, \ldots, v_{n})$ is written $u \cdot v$ and defined by:
 					\begin{align*}
 						u \cdot v = u_{1}v_{1} + u_{2}v_{2} + \ldots + u_{n}v_{n}
@@ -209,7 +209,7 @@
 				\begin{sidenote}{The result of the dot product is a number}
 					Unlike the other operations, which result in vectors, the dot product produces a single number.
 				\end{sidenote}
-				\begin{example}
+				\begin{example}[width=0.6\textwidth]
 					Let $u = (2, 4, 6)$ and $v = (1, 3, 5)$. Then
 					\begin{align*}
 						u \cdot v &= (2, 4, 6)(1, 3, 5)\\
@@ -228,7 +228,7 @@
 					A \concept{matrix} is an array of numbers organised into rows and columns, and encolsed within brackets.\\
 					The number of rows is written with the letter $m$ and the number of columns with the letter $n$. So a matrix is said to have the size $m \times n$.
 				\end{definition}
-				\begin{example}
+				\begin{example}[hbox]
 					$\begin{bmatrix}
 						3 & 2\\
 						1 & 5
@@ -271,7 +271,7 @@
 						\end{bmatrix}
 					\end{align*}
 				\end{definition}
-				\begin{example}
+				\begin{example}[width=0.5\textwidth]
 					Let $A = \begin{bmatrix}
 						1 & 2\\
 						3 & 4
@@ -299,7 +299,7 @@
 					\end{align*}
 				\end{example}
 			\subsection{Scalar-Matrix Multiplication}
-				\begin{definition}{Scalar-Matrix Multiplication}
+				\begin{definition}[width=0.7\textwidth]{Scalar-Matrix Multiplication}
 					Let $A$ be a matrix, and $r$ be some scalar number.\\
 					Then the product \concept{$rA$} is defined as:
 					\begin{align*}
@@ -317,7 +317,7 @@
 						\end{bmatrix}
 					\end{align*}
 				\end{definition}
-				\begin{example}
+				\begin{example}[width=0.42\textwidth]
 					Let $r = 3$ and $A = \begin{bmatrix}
 						1 & 2\\
 						3 & 4
@@ -350,8 +350,8 @@
 					\end{tikzpicture}\\
 					When multiplying matrics, it is row of first multiplied by column of second.
 				\end{definition}
-				\begin{example} \moveup
-					\begin{align*}
+				\begin{example}[width=0.76\textwidth] $
+					\begin{aligned}[t]
 						\begin{bmatrix}
 							-1 & 3\\
 							4 & 2\\
@@ -374,7 +374,7 @@
 							8 & 38\\
 							86 & 38
 						\end{bmatrix}
-					\end{align*}
+					\end{aligned} $
 				\end{example}
 			\pagebreak
 			\subsection{Identity Matrix}
@@ -387,7 +387,7 @@
 				\end{itemize}
 				Then the identity matrix would have $1$'s for the main diagonal, and $0$'s elsewhere.
 				\end{definition}
-				\begin{example}
+				\begin{example}[width=0.7\textwidth]
 					For a $2 \times 2$ matrix, the identity matrix would be:
 						\begin{align*}
 							I = \begin{bmatrix}

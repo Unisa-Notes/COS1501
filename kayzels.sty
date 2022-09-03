@@ -33,6 +33,7 @@
 \fancyfoot[C]{\thepage}
 \setlength{\headheight}{14pt}
 \setlength{\parindent}{0cm}
+\RequirePackage{multicol}
 
 % Bookmarks
 \usepackage[bookmarksnumbered]{hyperref}
@@ -63,26 +64,30 @@
 \let\oldtextbf\textbf
 \renewcommand{\textbf}[1]{\oldtextbf{\boldmath #1}}
 
+% LaTex Tooling
+\RequirePackage{etoolbox}
+\RequirePackage{xargs}
+
 % Color Boxes
 \RequirePackage{parskip}
 \RequirePackage{tcolorbox}
 \tcbuselibrary{breakable}
 \RequirePackage{adjustbox}
-\newenvironment{sidenote}[1]
-	{\begin{tcolorbox}[breakable, colback=note color, colframe=note border, fonttitle=\bfseries, title={#1}, center title, parbox=false]}
-	{\end{tcolorbox}}
-\newenvironment{exercise}[1]
-	{\begin{tcolorbox}[breakable, colback=exercise color, colframe=exercise border, fonttitle=\bfseries, title={#1}, center title, parbox=false]}
-	{\end{tcolorbox}}
-\newenvironment{example}
-	{\begin{tcolorbox}[coltitle=example title, colback=example color, breakable, detach title, before upper={\tcbtitle\quad}, title=\textbf{Example}, parbox=false]}
-	{\end{tcolorbox}}
-\newenvironment{theorem}[1][Theorem]
-	{\begin{tcolorbox}[breakable, colback=theorem color, colframe=theorem border, fonttitle=\bfseries, title={#1}, center title, parbox=false]}
-	{\end{tcolorbox}}
-\newenvironment{definition}[1]
-	{\begin{tcolorbox}[breakable, colback=definition color, colframe=definition border, fonttitle=\bfseries, title={#1}, center title, parbox=false]}
-	{\end{tcolorbox}}
+\newenvironment{sidenote}[2][]
+	{\tcolorbox[breakable, colback=note color, colframe=note border, fonttitle=\bfseries, title={#2}, center title, parbox=false, center, #1]}
+	{\endtcolorbox}
+\newenvironment{exercise}[2][]
+	{\tcolorbox[breakable, colback=exercise color, colframe=exercise border, fonttitle=\bfseries, title={#2}, center title, parbox=false, center, #1]}
+	{\endtcolorbox}
+\newenvironment{example}[1][]
+	{\tcolorbox[coltitle=example title, colback=example color, breakable, detach title, before upper={\tcbtitle\quad}, title=\textbf{Example}, parbox=false, center, #1]}
+	{\endtcolorbox}
+\newenvironment{theorem}[2][]
+	{\tcolorbox[breakable, colback=theorem color, colframe=theorem border, fonttitle=\bfseries, title={#2}, center title, parbox=false, center #1]}
+	{\endtcolorbox}
+\newenvironment{definition}[2][]
+	{\tcolorbox[breakable, colback=definition color, colframe=definition border, fonttitle=\bfseries, title={#2}, center title, parbox=false, center, #1]}
+	{\endtcolorbox}
 
 % Include/Input Subfiles
 \RequirePackage{xstring}
@@ -113,8 +118,6 @@
 
 % Venn Diagrams
 \RequirePackage{venndiagram}
-\RequirePackage{etoolbox}
-\RequirePackage{xargs}
 \makeatletter
 \def\addvennback{%
 	\expandafter\ifpatchable{\fillAll}{]}{%

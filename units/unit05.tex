@@ -20,15 +20,17 @@
 				In other words, the Cartesian product $A \times B$ denotes a set of ordered pairs such that all the first coordinates of the pairs are elements of set $A$, and all the second coordinates of the pairs are elements of set $B$.
 			\end{definition}
 			\nopagebreak
-			\begin{example}
-				$A = \{2, 3, 4\}, B = \{5, 6\}$
-				\begin{align*}
-					A \times B &= \bigl\{(2, 5), (2, 6), (3, 5), (3, 6), (4, 5), (4, 6)\bigr\}\\
-					B \times A &= \bigl\{(5, 2), (5, 3), (5, 4), (6, 2), (6, 3), (6, 4)\bigr\}\\
-					B \times B &= \bigl\{(5, 5), (5, 6), (6, 5), (6, 6)\bigr\}\\
-					A \times A &= \bigl\{(2, 2), (2, 3), (2, 4), (3, 2), (3, 3), (3, 4), (4, 2), (4, 3), (4, 4)\bigr\}
-				\end{align*}
-			\end{example}
+				\begin{example}[width=0.75\textwidth]
+					\begin{alignat*}{2}
+						A &= \{2, 3, 4\} \qquad & B &= \{5, 6\}
+					\end{alignat*}
+					\begin{align*}
+						A \times B &= \bigl\{(2, 5), (2, 6), (3, 5), (3, 6), (4, 5), (4, 6)\bigr\}\\
+						B \times A &= \bigl\{(5, 2), (5, 3), (5, 4), (6, 2), (6, 3), (6, 4)\bigr\}\\
+						B \times B &= \bigl\{(5, 5), (5, 6), (6, 5), (6, 6)\bigr\}\\
+						A \times A &= \bigl\{(2, 2), (2, 3), (2, 4), (3, 2), (3, 3), (3, 4), (4, 2), (4, 3), (4, 4)\bigr\}
+					\end{align*} 
+				\end{example}
 		\pagebreak
 		\section{Relation}
 			\begin{definition}{Relation}
@@ -92,7 +94,7 @@
 				$\mathrm{dom}(T) \subseteq X$. The domain of the relation is a \emph{subset} of $X$, but not necessarily equal to $X$.\\
 				$\mathrm{ran}(T) \subseteq Y$. The range of the relation is a \emph{subset} of $Y$, but not necessarily equal to $Y$.
 			\end{sidenote}
-			\begin{example}
+			\begin{example}[width=0.83\textwidth]
 				Let $S = \bigl\{(a, 1), (b, 1), (a, 2)\bigr\}$ be a relation from $\{a, b, c\}$ to $\{1, 2, 3\}$.\\
 				Then $\mathrm{dom}(S) = \{a, b\} \subseteq \{a, b, c\}$.\\
 				And $\mathrm{ran}(S) = \{1, 2\} \subseteq \{1, 2, 3\}$.\\
@@ -135,7 +137,7 @@
 				\begin{definition}{Symmetry}
 					A relation $R$ on $A$ ($R \subseteq A \times A$) is called \concept{symmetric} iff $R$ has the property that, for all $x, y \in R$, if $(x, y) \in R$, then $(y, x) \in R$.
 				\end{definition}
-				\begin{example}
+				\begin{example}[width=0.75\textwidth]
 					Let $B = \{1, 2, 3\}$\\
 					$R_{1} = \bigl\{(1, 2), (2, 1), (1, 3), (3, 1)\bigr\}$ is symmetric and irreflexive.\\
 					$R_{2} = \bigl\{(1, 1), (2, 2), (3, 3), (2, 3)\bigr\}$ is reflexive, but not symmetric.\\
@@ -151,7 +153,7 @@
 							A relation $R$ on $A$ ($R \subseteq A \times A$) is called \concept{antisymmetric} iff $R$ has the property that, for all $x, y \in R$, if $(x, y) \in R$ and $(y, x) \in R$, then $x = y$.
 						\end{indentparagraph}
 				\end{definition}
-				\begin{example}
+				\begin{example}[width=0.36\textwidth]
 					Let $A = \{a, b, c\}$\\
 					$P = \bigl\{(a, b), (b, b), (b, c)\bigr\}$ on $A$.\\
 					$a \neq b, (a, b) \in P$, but $(b, a) \notin P$.\\
@@ -168,7 +170,7 @@
 				\begin{definition}{Transitivity}
 					A relation $R$ on $A$ ($R \subseteq A \times A$) is called \concept{transitive} iff $R$ has the property that, for all $x, y, z \in R$, whenever $(x, y) \in R$ and $(y, z) \in R$, then $(x, z) \in R$.
 				\end{definition}
-				\begin{example}
+				\begin{example}[hbox]
 					If $(1, 2) \in R$ and $(2, 3) \in R$, then $(1, 3)$ must be in $R$.
 				\end{example}
 				\begin{example}
@@ -182,7 +184,7 @@
 					A relation $R$ on $A$ satisfies \concept{trichotomy} iff, for every $x$ and $y$ chosen from $A$ such that $x \neq y$, $x$ and $y$ are comparable.\\
 					In other words, for every $x \neq y$, every element is related to every other element. So $x R y$ or $y R x$.
 				\end{definition}
-				\begin{example}
+				\begin{example}[width=0.75\textwidth]
 					Let $S = \bigl\{(3, 2), (2, 1), (3, 1)\bigr\}$ be a relation on $A = \{1, 2, 3\}$.\\
 					$S$ satisfies the requirements for trichotomy, since:
 					\begin{indentparagraph}
@@ -198,7 +200,7 @@
 						(x, y) \in R \text{ iff } (y, x) \in R^{-1}
 					\end{align*}
 				\end{definition}
-				\begin{example}
+				\begin{example}[width=0.6\textwidth]
 					Let $X = {a, b, c}$ and $R = \bigl\{(a, b), (b, c), (a, c)\bigr\}$\\
 					Then $R^{-1} = \bigl\{(b, a), (c, b), (c, a)\bigr\}$
 				\end{example}
@@ -207,7 +209,7 @@
 					Given relations $R$ from $A$ to $B$ and $S$ from $B$ to $C$, the \concept{composition} of $R$ followed by $S$, written $S \circ R$ or $R;S$ is the relation from $A$ to $C$ defined by:\\
 					$S \circ R = R;S = \bigl\{(a, c) \mid$ there is some $b \in B$ such that $(a, b) \in R$ and $(b, c) \in S\bigr\}$
 				\end{definition}
-				\begin{example}
+				\begin{example}[width=0.72\textwidth]
 					Let $R = \bigl\{(1, a), (2, b)\bigr\}$ be a relation from $\{1, 2\}$ to $\{a, b\}$\\
 					Let $S = \bigl\{(a, s), (b, s), (b, t)\bigr\}$ be a relation from $\{a, b\}$ to $\{s, t\}$.\\
 					Then $S \circ R = R;S$.
@@ -306,11 +308,11 @@
 												If $\bigl(\{a\}, \{a, b\}\bigr)$ and $\bigl(\{a, b\}, \{a\}\bigr)$ are added.\\
 												$\bigl(\emptyset, \{a\}\bigr) \rightarrow \bigl(\{a\}, \{a, b\}\bigr) \not \rightarrow \bigl(\emptyset, \{a, b\}\bigr)$
 											\end{indentparagraph}
-										\item[Example] \moveup
-											\begin{align*}
+										\item[Example] $
+											\begin{aligned}[t]
 												R_{3} &= \Bigl\{\bigl(\emptyset, \emptyset\bigr), \bigl(\{a\}, \{a\}\bigr), \bigl(\{b\}, \{b\}\bigr), \bigl(\{a, b\}, \{a, b\}\bigr),\\
 												& \qquad \bigl(\emptyset, \{a\}\bigr), \bigl(\{a\}, \emptyset\bigr), \bigl(\{a\}, \{a, b\}\bigr), \bigl(\{a, b\}, \{a\}\bigr)\Bigr\}
-											\end{align*}
+											\end{aligned} $
 									\end{description}
 								\pagebreak
 								\item \question{$R$ is reflexive and transitive, but not symmetric, and not antisymmetric on $\mathcal{P}(A)$}
@@ -326,22 +328,22 @@
 											\end{indentparagraph}
 										\item[Antisymmetry] For the relation to not be antisymmetric, at least one pair can be flipped.
 											If $\bigl(\emptyset, \{b\}\bigr)$ is added, then $\bigl(\{b\}, \emptyset\bigr)$ is added.
-										\item[Example] \moveup
-											\begin{align*}
+										\item[Example] $
+											\begin{aligned}[t]
 												R_{4} &= \Bigl\{
 													\bigl(\emptyset, \emptyset\bigr), \bigl(\{a\}, \{a\}\bigr), \bigl(\{b\}, \{b\}\bigr), \bigl(\{a, b\}, \{a, b\}\bigr),\\
 													& \qquad \bigl(\emptyset, \{a\}\bigr), \bigl(\emptyset, \{b\}\bigr), \bigl(\{b\}, \emptyset\bigr)
 												\Bigr\}
-											\end{align*}
+											\end{aligned} $
 									\end{description}
 								\item \question{$R$ is simultaneuosly symmetric and antisymmetric on $\mathcal{P}(A)$}
 									\begin{description}
 										\item[Antisymmetry] If there are no elements that are not equal to each other, then $R$ is vacuously antisymmetric.
 										\item[Symmetry] If every element is equal to each other, then every element is symmetric with itself.
-										\item[Example] \moveup
-											\begin{align*}
+										\item[Example] $
+											\begin{aligned}[t]
 												R_{5} &= \Bigl\{\bigl(\emptyset, \emptyset\bigr), \bigl(\{a\}, \{a\}\bigr), \bigl(\{b\}, \{b\}\bigr), \bigl(\{a, b\}, \{a, b\}\bigr)\Bigr\}
-											\end{align*} 
+											\end{aligned}  $
 									\end{description}
 								\item \question{$R$ is irreflexive, antisymmetric and transitive on $\mathcal{P}(A)$}
 									\begin{description}
@@ -351,10 +353,10 @@
 											\end{align*}
 										\item[Antisymmetry] No pairs $(x, y)$ and $(y, x)$ appear in $R$.
 										\item[Transitivity] Can go from one pair to the next.
-										\item[Example] \moveup
-											\begin{align*}
+										\item[Example] $
+											\begin{aligned}[t]
 												R_{6} &= \Bigl\{\bigl(\emptyset, \{a\}\bigr), \bigl(\{a\}, \{a, b\}\bigr), \bigl(\emptyset, \{a, b\}\bigr)\Bigr\}
-											\end{align*}
+											\end{aligned} $
 									\end{description}
 							\end{enumerate}
 						\item \question{Prove that if $R$ is a relation on $X$, then $R$ is transitive iff $R \circ R \subseteq R$}.

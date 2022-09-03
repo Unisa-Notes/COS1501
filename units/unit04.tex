@@ -423,14 +423,14 @@
 		\end{exercise}
 		\pagebreak
 		\section{The Inclusion Exclusion Principle}
-			\begin{theorem}[Inclusion Exclusion Principle]
+			\begin{theorem}{Inclusion Exclusion Principle}
 				For all finite sets $X$ and $Y$, $\left\lvert X \cup Y\right\rvert = \left\lvert X\right\rvert + \left\lvert Y \right\rvert - \left\lvert X \cap Y\right\rvert $
 			\end{theorem}
 			\begin{example}
 				Let $X = \{a, b, c, 1\}$ and $Y = \{1, 2, 3\}$. Then $X \cap Y = \{1\}$ and $\left\lvert X \cap Y\right\rvert = 1$.\\
 				$\left\lvert X\right\rvert = 4$, $\left\lvert Y\right\rvert = 3$, so $\left\lvert X \cup Y\right\rvert = \left\lvert X\right\rvert + \left\lvert Y\right\rvert - \left\lvert X \cap Y\right\rvert = 4 + 3 - 1 = 6$
 			\end{example}
-			\begin{theorem}[Sum Rule]
+			\begin{theorem}{Sum Rule}
 				If $X$ and $Y$ are disjoint sets ($X \cap Y = \emptyset$), and $\left\lvert X\right\rvert = m$ and $\left\lvert Y\right\rvert = n $, then $\left\lvert X \cup Y\right\rvert = m + n $
 			\end{theorem}
 			\subsection{Applying the principle to Venn Diagrams}
@@ -555,21 +555,21 @@
 							\end{vennthree}
 						\end{center}
 						\begin{description}
-							\item[For Only FM:] \moveup
-								\begin{align*}
+							\item[For Only FM:] $
+								\begin{aligned}[t]
 									17 - (5 - x) - x - (4 - x) &= 17 - 5 + x - x - 4 + x\\
 									&= x + 8
-								\end{align*}
-							\item[For Only UML:] \moveup
-								\begin{align*}
+								\end{aligned} $
+							\item[For Only UML:] $
+								\begin{aligned}[t]
 									9 - (5 - x) - x - (7 - x) &= 9 - 5 + x - x - 7 + x\\
 									&= x - 3
-								\end{align*}
-							\item[For Only ER:] \moveup
-								\begin{align*}
+								\end{aligned} $
+							\item[For Only ER:] $
+								\begin{aligned}[t]
 									9 - (4 - x) - x - (7 - x) &= 9 - 4 + x - x - 7 + x\\
 									&= x - 2
-								\end{align*}
+								\end{aligned} $
 						\end{description}
 						\begin{alignat*}{2}
 							& & 22 &= (x + 8) + (x - 3) + (x - 2) + (5 - x) + (4 - x) + (7 - x) + x\\

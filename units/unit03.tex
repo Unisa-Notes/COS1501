@@ -34,14 +34,12 @@
 						\fillB
 					\end{venntwo}
 				\end{center}
-				\nopagebreak
-				\begin{example} \moveup
-					\begin{align*}
+				\begin{example}[hbox] $
+					\begin{aligned}[t]
 						A \cup B &= \{1, 2, 3\} \cup \{2, 3, 4\}\\
 						&= \{1, 2, 3, 4\}
-					\end{align*}
+					\end{aligned} $
 				\end{example}
-
 			\subsection[Set Intersection]{Set Intersection (AND)}
 				\begin{definition}{Set Intersection}
 					The \concept{intersection} of sets $A$ and $B$ is written $A \cap  B$, and is the set of all elements that belong to $A$ and $B$ at the same time.
@@ -52,12 +50,11 @@
 						\fillACapB
 					\end{venntwo}
 				\end{center}
-				\nopagebreak
-				\begin{example} \moveup
-					\begin{align*}
+				\begin{example}[hbox] $
+					\begin{aligned}[t]
 						A \cap B &= \{1, 2, 3\} \cap \{2, 3, 4\}\\
 						&= \{2, 3\}
-					\end{align*}
+					\end{aligned} $
 				\end{example}
 
 			\subsection[Set Difference]{Set Difference (MINUS)}
@@ -70,12 +67,11 @@
 						\fillOnlyA
 					\end{venntwo}
 				\end{center}
-				\nopagebreak
-				\begin{example} \moveup
-					\begin{align*}
+				\begin{example}[hbox] $
+					\begin{aligned}[t]
 						A - B &= \{1, 2, 3\} - \{2, 3, 4\}\\
 						&= \{1\}
-					\end{align*}
+					\end{aligned} $
 				\end{example}
 
 			\subsection[Set Complement]{Set Complement (NOT)}
@@ -88,13 +84,12 @@
 						\fillNotA
 					\end{venntwo}
 				\end{center}
-				\nopagebreak
-				\begin{example} \moveup
-					\begin{align*}
+				\begin{example}[hbox] $
+					\begin{aligned}[t]
 						A' &= U - A\\
 						&= \{1, 2, 3, 4, 5\} - \{1, 2, 3\}\\
 						&= \{4, 5\}
-					\end{align*}
+					\end{aligned} $
 				\end{example}
 
 			\pagebreak
@@ -109,12 +104,12 @@
 						\fillOnlyB
 					\end{venntwo}
 				\end{center}
-				\nopagebreak
-				\begin{example} \moveup
-					\begin{align*}
+				
+				\begin{example}[hbox] $
+					\begin{aligned}[t]
 						A + B &= \{1, 2, 3\} + \{2, 3, 4\}\\
 						&= \{1, 4\}
-					\end{align*}
+					\end{aligned} $
 				\end{example}
 		\section{Other Terms Significant For Sets}
 			\subsection{The Empty Set}
@@ -128,22 +123,22 @@
 						A \cap B = \emptyset
 					\end{align*}
 				\end{definition}
-				\begin{example} \moveup
-					\begin{align*}
+				\begin{example}[hbox] $
+					\begin{aligned}[t]
 						A \cap C &= \{1, 2, 3\} \cap \{4, 5\}\\
 						&= \emptyset
-					\end{align*}
+					\end{aligned} $
 				\end{example}
+			\pagebreak
 			\subsection{Set Cardinality}
 				\begin{definition}{Cardinality}
 					Let $A$ be a set with $k$ distinct elements that can be counted. The \emph{number of elements} $k$ in $A$ is called the \concept{cardinality} of the set. It can be written as $n(A)$ or $\left\lvert A\right\rvert$.
 				\end{definition}
-				\nopagebreak
-				\begin{example} \moveup
-					\begin{align*}
+				\begin{example}[hbox] $
+					\begin{aligned}[t]
 						\left\lvert A\right\rvert &= \bigl\lvert \{1, 2, 3\}\bigr\rvert\\
 						&= 3
-					\end{align*}
+					\end{aligned} $
 				\end{example}
 			\subsection{Power Sets}
 				\begin{definition}{Power Set}
@@ -155,130 +150,134 @@
 					However $B$ is \emph{not} a subset of $\mathcal{P}(A)$, i.e. $B \nsubseteq \mathcal{P}(A)$! A set containing $B$, i.e. $\{B\}$ would be a subset of $\mathcal{P}(A)$.
 				\end{sidenote}
 				\nopagebreak
-				\begin{example} \moveup
-					\begin{align*}
+				\begin{example}[hbox] $
+					\begin{aligned}[t]
 						\mathcal{P}(C) &= \mathcal{P}\bigl(\{4, 5\}\bigr)\\
 						&= \bigl\{\emptyset, \{4\}, \{5\}, \{4, 5\}\bigr\}
-					\end{align*}
+					\end{aligned} $
 				\end{example}
 				The cardinality of a power set $\mathcal{P}(A)$ is $2^{n}$ where $n$ is the number of elements in the set $A$.
-				\begin{example} \moveup
-					\begin{align*}
+				\begin{example}[hbox] $
+					\begin{aligned}[t]
 						\bigl\lvert \mathcal{P}(A)\bigr\rvert &= \Bigl\lvert\mathcal{P}\bigl(\{1, 2, 3\}\bigr)\Bigr\rvert\\
 						&= 2^{3}\\
 						&= 8
-					\end{align*}
+					\end{aligned} $
 				\end{example}
 			\pagebreak
 			\begin{exercise}{Self Assessment Exercise \thechapter.6}
 				\begin{enumerate}
-					\item \moveup
-						\begin{alignat*}{3}
+					\item \hfill $
+						\begin{alignedat}[t]{3}
 							U &= \{1, 2, 3, 4, 5\} \qquad & A &= \{1, 2, 3\} \qquad & B &= \{3, 4, 5\}
-						\end{alignat*}
-						\begin{enumerate}[label=(\alph*)]
-							\item \moveup
-								\begin{align*}
-									A \cup B &= \{1, 2, 3\} \cup \{3, 4, 5\}\\
-									&= \{1, 2, 3, 4, 5\}\\
-									B \cup A &= \{3, 4, 5\} \cup \{1, 2, 3\}\\
-									&= \{1, 2, 3, 4, 5\}
-								\end{align*}
-							\item \moveup
-								\begin{align*}
-									A \cap B &= \{1, 2, 3\} \cap \{3, 4, 5\}\\
-									&= \{3\}\\
-									B \cap A &= \{3, 4, 5\} \cap \{1, 2, 3\}\\
-									&= \{3\}
-								\end{align*}
-							\item \moveup
-								\begin{align*}
-									A - B &= \{1, 2, 3\} - \{3, 4, 5\}\\
-									&= \{1, 2\}\\
-									B - A &= \{3, 4, 5\} - \{1, 2, 3\}\\
-									&= \{4, 5\}
-								\end{align*}
-							\item \moveup
-								\begin{align*}
-									A + B &= \{1, 2, 3\} + \{3, 4, 5\}\\
-									&= \{1, 2, 4 , 5\}\\
-									B + A &= \{3, 4, 5\} + \{1, 2, 3\}\\
-									&= \{1, 2, 4, 5\}
-								\end{align*}
-						\end{enumerate}
-					\item \moveup
-						\begin{alignat*}{3}
+						\end{alignedat} $ \hfill \phantom{1 \quad}
+						\begin{multicols}{2}
+							\begin{enumerate}[label=(\alph*), labelsep=1em]
+								\item $
+									\begin{aligned}[t]
+										A \cup B &= \{1, 2, 3\} \cup \{3, 4, 5\}\\
+										&= \{1, 2, 3, 4, 5\}\\
+										B \cup A &= \{3, 4, 5\} \cup \{1, 2, 3\}\\
+										&= \{1, 2, 3, 4, 5\}
+									\end{aligned} $
+								\item $
+									\begin{aligned}[t]
+										A \cap B &= \{1, 2, 3\} \cap \{3, 4, 5\}\\
+										&= \{3\}\\
+										B \cap A &= \{3, 4, 5\} \cap \{1, 2, 3\}\\
+										&= \{3\}
+									\end{aligned} $
+								\item $
+									\begin{aligned}[t]
+										A - B &= \{1, 2, 3\} - \{3, 4, 5\}\\
+										&= \{1, 2\}\\
+										B - A &= \{3, 4, 5\} - \{1, 2, 3\}\\
+										&= \{4, 5\}
+									\end{aligned} $
+								\item $
+									\begin{aligned}[t]
+										A + B &= \{1, 2, 3\} + \{3, 4, 5\}\\
+										&= \{1, 2, 4 , 5\}\\
+										B + A &= \{3, 4, 5\} + \{1, 2, 3\}\\
+										&= \{1, 2, 4, 5\}
+									\end{aligned} $
+							\end{enumerate}
+						\end{multicols}
+					\item \hfill $
+						\begin{alignedat}[t]{3}
 							U &= \{a, e, i, o, u\} \qquad & A &= \{i, o, u\} \qquad & B &= \{a, e, o, u\}
-						\end{alignat*}
-						\begin{enumerate}[label=(\alph*)]
-							\item \moveup
-								\begin{align*}
-									A' &= \{i, o, u\}'\\
-									&= \{a, e, i, o, u\} - \{i, o, u\}\\
-									&= \{a, e\}\\
-									\left(A'\right)' &= \{a, e, i, o, u\} - \{a, e\}\\
-									&= \{i, o, u\}\\
-									&= A
-								\end{align*}
-							\item \moveup
-								\begin{align*}
-									B' &= \{a, e, o, u\}'\\
-									&= \{a, e, i, o, u\} - \{a, e, o, u\}\\
-									&= \{i\}\\
-									\left(B'\right)' &= \{a, e, i, o, u\} - \{i\}\\
-									&= \{a, e, o, u\}\\
-									&= B
-								\end{align*}
-							\item \moveup
-								\begin{align*}
-									A \cup B &= \{i, o, u\} \cup \{a, e, o, u\}\\
-									&= \{a, e, i, o, u\}\\
-									(A \cup B)' &= \{a, e, i, o, u\} - \{a, e, i, o, u\}\\
-									&= \emptyset
-								\end{align*}
-							\item \moveup
-								\begin{align*}
-									A' \cap B' &= \{a, e\} \cap \{i\}\\
-									&= \emptyset
-								\end{align*}
-							\item \moveup
-								\begin{align*}
-									A \cap B &= \{i, o, u\} \cap \{a, e, o, u\}\\
-									&= \{o, u\}\\
-									(A \cap B)' &= \{a, e, i, o, u\} - \{o, u\}\\
-									&= \{a, e, i\}
-								\end{align*}
-							\item \moveup
-								\begin{align*}
-									A' \cup B' &= \{a, e\} \cup \{i\}\\
-									&= \{a, e, i\}
-								\end{align*}
-							\item \moveup
-								\begin{align*}
-									A - B &= \{i, o, u\} - \{a, e, o, u\}\\
-									&= \{i\}\\
-									B - A &= \{a, e, o, u\} - \{i, o, u\}\\
-									&= \{a,e\}
-								\end{align*}
-							\item \moveup
-								\begin{align*}
-									A \cap B' &= \{i, o, u\} \cap \{i\}\\
-									&= \{i\}\\
-									B \cap A' &= \{a, e, o, u\} \cap \{a, e\}\\
-									&= \{a, e\}
-								\end{align*}
-							\item \moveup
-								\begin{align*}
-									A + B &= \{i, o, u\} + \{a, e, o, u\}\\
-									&= \{a, e, i\}\\
-									B + A &= \{a, e, o, u\} + \{i, o, u\}\\
-									&= \{a, e, i\}
-								\end{align*}
-						\end{enumerate}
-					\item \moveup
-						\begin{alignat*}{3}
+						\end{alignedat} $ \hfill \phantom{2 \quad}
+						\begin{multicols}{2}
+							\begin{enumerate}[label=(\alph*), labelsep=1em]
+								\item $
+									\begin{aligned}[t]
+										A' &= \{i, o, u\}'\\
+										&= \{a, e, i, o, u\} - \{i, o, u\}\\
+										&= \{a, e\}\\
+										\left(A'\right)' &= \{a, e, i, o, u\} - \{a, e\}\\
+										&= \{i, o, u\}\\
+										&= A
+									\end{aligned} $
+								\item $
+									\begin{aligned}[t]
+										B' &= \{a, e, o, u\}'\\
+										&= \{a, e, i, o, u\} - \{a, e, o, u\}\\
+										&= \{i\}\\
+										\left(B'\right)' &= \{a, e, i, o, u\} - \{i\}\\
+										&= \{a, e, o, u\}\\
+										&= B
+									\end{aligned} $
+								\item $
+									\begin{aligned}[t]
+										A \cup B &= \{i, o, u\} \cup \{a, e, o, u\}\\
+										&= \{a, e, i, o, u\}\\
+										(A \cup B)' &= \{a, e, i, o, u\} - \{a, e, i, o, u\}\\
+										&= \emptyset
+									\end{aligned} $
+								\item $
+									\begin{aligned}[t]
+										A' \cap B' &= \{a, e\} \cap \{i\}\\
+										&= \emptyset
+									\end{aligned} $
+								\item $
+									\begin{aligned}[t]
+										A \cap B &= \{i, o, u\} \cap \{a, e, o, u\}\\
+										&= \{o, u\}\\
+										(A \cap B)' &= \{a, e, i, o, u\} - \{o, u\}\\
+										&= \{a, e, i\}
+									\end{aligned} $
+								\item $
+									\begin{aligned}[t]
+										A' \cup B' &= \{a, e\} \cup \{i\}\\
+										&= \{a, e, i\}
+									\end{aligned} $
+								\item $
+									\begin{aligned}[t]
+										A - B &= \{i, o, u\} - \{a, e, o, u\}\\
+										&= \{i\}\\
+										B - A &= \{a, e, o, u\} - \{i, o, u\}\\
+										&= \{a,e\}
+									\end{aligned} $
+								\item $
+									\begin{aligned}[t]
+										A \cap B' &= \{i, o, u\} \cap \{i\}\\
+										&= \{i\}\\
+										B \cap A' &= \{a, e, o, u\} \cap \{a, e\}\\
+										&= \{a, e\}
+									\end{aligned} $
+								\item $
+									\begin{aligned}[t]
+										A + B &= \{i, o, u\} + \{a, e, o, u\}\\
+										&= \{a, e, i\}\\
+										B + A &= \{a, e, o, u\} + \{i, o, u\}\\
+										&= \{a, e, i\}
+									\end{aligned} $
+							\end{enumerate}
+						\end{multicols}
+					\item \hfill $
+						\begin{alignedat}[t]{3}
 							U &= \{1, 2, 3, 4, 5\} \qquad & A &= \{3\} \qquad & B &= \bigl\{\{3\}, 4, 5\bigr\}
-						\end{alignat*}
+						\end{alignedat} $ \hfill \phantom{3 \quad}
 						\begin{align*}
 							\mathcal{P}(A) &= \mathcal{P}\bigl(\{3\}\bigr)\\
 							&= \bigl\{\emptyset, \{3\}\bigr\}\\
@@ -286,48 +285,51 @@
 							&= \Bigl\{\emptyset, \bigl\{\{3\}\bigr\}, \bigl\{4\bigr\}, \bigl\{5\bigr\}, \bigl\{\{3\}, 4\bigr\}, \bigl\{\{3\}, 5\bigr\}, \bigl\{4, 5\bigr\}, \bigl\{\{3\}, 4, 5\bigr\}\Bigr\}
 						\end{align*}
 					\pagebreak
-					\item \moveup
-						\begin{alignat*}{3}
+					\item \hfill $
+						\begin{alignedat}[t]{3}
 							U &= \{a, e, i, o, u\} \qquad & A &= \{i, o, u\} \qquad & B &= \{a, e, o, u\}
-						\end{alignat*}
-						\begin{enumerate}[label=(\alph*)]
-							\item \moveup
-								\begin{align*}
+						\end{alignedat} $ \hfill \phantom{4 \quad}
+						\begin{enumerate}[label=(\alph*), labelsep=1em]
+							\item $
+								\begin{aligned}[t]
 									\mathcal{P}(A) &= \bigl\{\emptyset, \{i\}, \{o\}, \{u\}, \{i, o\}, \{i, u\}, \{o, u\}, \{i, o, u\}\bigr\}\\
 									\mathcal{P}(B) &= \bigl\{\emptyset, \{a\}, \{e\}, \{o\}, \{u\}, \{a, e\}, \{a, o\}, \{a, u\}, \{e, o\}, \{e, u\}, \{o, u\}, \{a, e, o\},\\
 									& \qquad \{a, e, u\}, \{a, o, u\}, \{e, o, u\}, \{a, e, o, u\}\bigr\}
-								\end{align*}
-							\item \moveup
-								\begin{align*}
+								\end{aligned} $
+							\item $
+								\begin{aligned}[t]
 									\mathcal{P}(A \cap B) &= \mathcal{P}\bigl(\{o, u\}\bigr)\\
 									&= \bigl\{\emptyset, \{o\}, \{u\}, \{o, u\}\bigr\}\\
 									\mathcal{P}(A) \cap \mathcal{P}(B) &= \bigl\{\emptyset, \{o\}, \{u\}, \{o, u\}\bigr\}
-								\end{align*}
-							\item \moveup
-								\begin{align*}
+								\end{aligned} $
+							\item $
+								\begin{aligned}[t]
 									\mathcal{P}\left(A'\right) &= \mathcal{P}\bigl(\{a, e\}\bigr)\\
 									&= \bigl\{\emptyset, \{a\}, \{e\}, \{a, e\}\bigr\}
-								\end{align*}
-								\begin{align*}
+								\end{aligned}$
+
+								$\begin{aligned}[t]
 									\mathcal{P}(U) &= \bigl\{\emptyset, \{a\}, \{e\}, \{i\}, \{o\}, \{u\}, \{a, e\}, \{a, i\}, \{a, o\}, \{a, u\},\\
 									& \qquad \{e, i\}, \{e, o\}, \{e, u\}, \{i, o\}, \{i, u\}, \{o, u\},\\
 									& \qquad \{a, e, i\}, \{a, e, o\}, \{a, e, u\}, \{a, i, o\}, \{a, i, u\}, \{a, o, u\},\\
 									& \qquad \{e, i, o\}, \{e, i, u\} \{e, o, u\}, \{i, o, u\},\\
 									& \qquad \{a, e, i, o\}, \{a, e, i, u\}, \{a, e, o, u\} \{a, i, o, u\}, \{e, i, o, u\}, \{a, e, i, o, u\}\bigr\}
-								\end{align*}
-								\begin{align*}
+								\end{aligned} $
+
+								$\begin{aligned}[t]
 									\bigl(\mathcal{P}(A)\bigr)' &= \bigl\{\{a\}, \{e\}, \{a, e\}, \{a, i\}, \{a, o\}, \{a, u\}, \{e, i\}, \{e, o\}, \{e, u\},\\
 									& \qquad \{a, e, i\}, \{a, e, o\}, \{a, e, u\}, \{a, i, o\}, \{a, i, u\}, \{a, o, u\}, \\
 									& \qquad \{e, i, o\}, \{e, i, u\},  \{e, o, u\}, \\
 									& \qquad \{a, e, i, o\}, \{a, e, i, u\}, \{a, e, o, u\} \{a, i, o, u\}, \{e, i, o, u\}, \{a, e, i, o, u\}\bigr\}
-								\end{align*}
-							\item \moveup
-								\begin{align*}
+								\end{aligned} $
+							\item $
+								\begin{aligned}[t]
 									\mathcal{P}(A) \cup \mathcal{P}(B) &= \bigl\{\emptyset, \{a\}, \{e\}, \{i\}, \{o\}, \{u\},\\
 									& \qquad \{a, e\}, \{a, o\}, \{a, u\}, \{e, o\}, \{e, u\}, \{i, o\}, \{i, u\}, \{o, u\}, \\
 									& \qquad \{a, e, o\}, \{a, e, u\}, \{a, o, u\}, \{e, o, u\}, \{i, o, u\}, \{a, e, o, u\}\bigr\}
-								\end{align*}
-								\begin{align*}
+								\end{aligned}$
+
+								$\begin{aligned}[t]
 									\mathcal{P}(A \cup B) &= \mathcal{P}\bigl(\{a, e, i, o, u\}\bigr)\\
 									&= \mathcal{P}(U)\\
 									&= \bigl\{\emptyset, \{a\}, \{e\}, \{i\}, \{o\}, \{u\}, \{a, e\}, \{a, i\}, \{a, o\}, \{a, u\},\\
@@ -335,7 +337,7 @@
 									& \qquad \{a, e, i\}, \{a, e, o\}, \{a, e, u\}, \{a, i, o\}, \{a, i, u\}, \{a, o, u\},\\
 									& \qquad \{e, i, o\}, \{e, i, u\} \{e, o, u\}, \{i, o, u\},\\
 									& \qquad \{a, e, i, o\}, \{a, e, i, u\}, \{a, e, o, u\} \{a, i, o, u\}, \{e, i, o, u\}, \{a, e, i, o, u\}\bigr\}
-								\end{align*}
+								\end{aligned} $
 						\end{enumerate}
 				\end{enumerate}
 			\end{exercise}

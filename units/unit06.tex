@@ -5,7 +5,7 @@
 	\chapter{Special Kinds of Relation}
 		\section{Order Relations}
 			\subsection{Weak Partial Order}
-				\begin{definition}
+				\begin{definition}[width=0.68\textwidth]{Weak Partial Order}
 					A relation $R$ on a set $A$ is called a \concept{weak partial order} iff $R$ is
 					\begin{itemize}[nosep]
 						\item reflexive on $A$
@@ -100,7 +100,7 @@
 				\end{exercise}
 			\pagebreak
 			\subsection{Strict Partial Order}
-				\begin{definition}{Strict Partial Order}
+				\begin{definition}[width=0.68\textwidth]{Strict Partial Order}
 					A relation $R$ on a set $A$ is called a \concept{strict partial order} iff $R$ is
 					\begin{itemize}[nosep]
 						\item irreflexive on $A$
@@ -369,7 +369,7 @@
 				\end{exercise}
 		\pagebreak
 		\section{Equivalence Relation}
-			\begin{definition}{Equivalence Relation}
+			\begin{definition}[width=0.7\textwidth]{Equivalence Relation}
 				A relation $R$ on a set $A$ is called an \concept{equivalence relation} if $R$ is:
 				\begin{itemize}[nosep]
 					\item reflexive on $A$
@@ -394,7 +394,7 @@
 				Students get marked for an assignment using grades from A to E. All students who get an A would be in the same equivalence class, even if their individual marks are different.
 			\end{example}
 			\subsection{Equivalence Class}
-				\begin{definition}{Equivalence Class}
+				\begin{definition}[width=0.7\textwidth]{Equivalence Class}
 					For each $x \in A$, the \concept{equivalence class} $[x] = \{y \mid y \in A$ and $ x \, R \, y\}$
 				\end{definition}
 				\nopagebreak
@@ -442,8 +442,8 @@
 										\item[Symmetry] Yes. Each element is symmetric with itself.
 										\item[Transitivity] Yes. Vacuously transitive.
 										\item[Equivalence relation] $R$ is an equivalence relation.
-										\item[Equivalence classes] \moveup
-											\begin{align*}
+										\item[Equivalence classes] $
+											\begin{aligned}[t]
 												[x] &= \{y \mid (x, y) \in R\}\\
 												[c] &= \{y \mid (c, y) \in R\}\\
 												&= \{c\}\\
@@ -451,7 +451,7 @@
 												&= \{b\}\\
 												[a] &= \{y \mid (a, y) \in R\}\\
 												&= \{a\}
-											\end{align*}    
+											\end{aligned} $ 
 									\end{description}
 								\pagebreak
 								\item \question{$ X = \{a, b, c\}$ and $R = X \times X$}
@@ -463,20 +463,20 @@
 										\item[Symmetry] Yes. Every element in $R$ has its mirror image.
 										\item[Transitivity] Yes.
 										\item[Equivalence relation] $R$ is an equivalence relation.
-										\item[Equivalence classes] \moveup
-											\begin{align*}
+										\item[Equivalence classes] $
+											\begin{aligned}[t]
 												[x] &= \{y \mid (x, y) \in R\}\\
 												[a] &= \{a \mid (a, y) \in R\}\\
 												&= \{a, b, c\}\\
 												&= [b]\\
 												&= [c]
-											\end{align*}   
+											\end{aligned} $  
 									\end{description}
-								\item \question{$X = \mathcal{P}(Y)$ where $Y = \{1, 2, 3\}$ and $R$ consists of all pairs $(C, D)$ such that $C \cap \{2\} = D \cap \{2\}$} \moveup
-									\begin{align*}
+								\item \question{$X = \mathcal{P}(Y)$ where $Y = \{1, 2, 3\}$ and $R$ consists of all pairs $(C, D)$ such that $C \cap \{2\} = D \cap \{2\}$} $
+									\begin{aligned}[t]
 										X &= \mathcal{P}(Y)\\
 										&= \bigl\{\emptyset, \{1\}, \{2\}, \{3\}, \{1, 2\}, \{1, 3\}, \{2, 3\}, \{1, 2, 3\}\bigr\}
-									\end{align*}
+									\end{aligned} $
 									\begin{center}
 										$S \cap \{2\} = \emptyset$ if $2 \notin S$. \qquad $S \cap \{2\} = \{2\}$ if $2 \in S$.
 									\end{center}
@@ -501,12 +501,12 @@
 										\item[Symmetry] Yes. All elements have their mirror image.
 										\item[Transitivity] Yes.
 										\item[Equivalence relation] $R$ is an equivalence relation.
-										\item[Equivalence classes] \moveup
-											\begin{align*}
+										\item[Equivalence classes] $
+											\begin{aligned}[t]
 												[X] &= \{Y \mid (X, Y) \in R\}\\
 												[\emptyset] &= \bigl\{\emptyset, \{1\}, \{3\}, \{1, 3\}\bigr\}\\
 												\bigl[\{2\}\bigr] &= \bigl\{\{2\}, \{1, 2\}, \{2, 3\}, \{1, 2, 3\}\bigr\}
-											\end{align*}    
+											\end{aligned} $   
 									\end{description}
 							\end{enumerate}
 						\item \question{Let $R$ be the relation on $\mathbb{Z}$ such that $(x, y) \in R$ iff $x - y$ is a multiple of $4$.}\\
@@ -618,13 +618,13 @@
 								$\therefore R$ is an equivalence relation.
 							\end{proof}
 							\begin{description}
-								\item[Equivalence classes] \moveup
-								\begin{align*}
+								\item[Equivalence classes] $
+								\begin{aligned}[t]
 									[x] &= \{y \mid (x, y) \in R\} \text{ for all $x \in \mathbb{Q}^{+}$}\\
 									[x] &= \Bigl\{y \mid y = \frac{a}{b}\bigl(x\bigr)\Bigr\}\\
 									[1] &= \Bigl\{y \mid y = \frac{a}{b}\bigl(1\bigr)\Bigr\}\\
 									&= \Bigl\{y \mid y = \frac{a}{b}\Bigr\}
-								\end{align*}
+								\end{aligned} $\\
 								This is the only equivalence class, as every equivalence class is equal to every other equivalence class.
 							\end{description}
 						\pagebreak
@@ -666,7 +666,7 @@
 					\end{enumerate}
 				\end{exercise}
 				\pagebreak
-				\begin{theorem}[Theorem \thechapter.1]
+				\begin{theorem}{Theorem \thechapter.1}
 					\begin{enumerate}[label=(\roman*)]
 						\item If $R$ is an equivalence relation to $A$, then $x \in [x]$ for each $x \in A$.\\
 							In other words, every member of $A$ belongs to an equivalence class with respect to $R$.
