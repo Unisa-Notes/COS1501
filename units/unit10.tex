@@ -108,7 +108,7 @@
 								& \Rightarrow \quad & x &< 3 \quad \text{ and } \quad x &> 1
 							\end{alignat*}
 							This shows $1 < x < 3$, or $x \in (1, 3)$.\\
-							Therefore $x < 0$ \qedhere
+							Therefore $x < 0$
 						\end{indentparagraph}
 					\end{proof}
 				\end{example}
@@ -160,7 +160,7 @@
 							If $\qquad$ \= $(x - 3) \leq 0$ and $(x - 1) \leq 0$,\\
 							Then \> $(x - 3)(x - 1) \geq 0$ (minus times minus gives plus)\\
 							i.e. \> $x^{2} - 4x + 3 \geq 0$\\
-							i.e. \> $\lnot (x^{2} - 4x + 3 < 0)$ \` \qedhere
+							i.e. \> $\lnot (x^{2} - 4x + 3 < 0)$
 						\end{tabbing}
 					\end{proof}
 				\end{example}
@@ -176,7 +176,7 @@
 				\end{sidenote}
 			\subsection{Proofs Involving Quantifiers}
 				In order to apply a proof to a quantified statement over an infinite set $A$, for example $\forall \: x \in A, P(x)$, think of the statement as $x \in A \rightarrow P(x)$.
-				\begin{example}
+				\begin{example}[width=0.38\textwidth]
 					Prove the statement
 					\begin{align*}
 						\forall \: x \in \mathbb{R}, x^{2} + 1 > 0.
@@ -187,12 +187,12 @@
 							If $\qquad$ \=$x \in \mathbb{R}$,\\
 							Then \>$x^{2} \geq 0$,\\
 							So \> $x^{2} + 1 \geq 1$\\
-							i.e. \> $x^{2} + 1 > 0$ \` \qedhere
+							i.e. \> $x^{2} + 1 > 0$
 						\end{tabbing}
 					\end{proof}
 				\end{example}
 				To disprove a statement, prove that its \emph{negation} is true. If this is a statement such as $\forall \: x \in A, P(x)$, the negation is $\exists \: x \in A, \lnot P(x)$. This shows that in order to disprove the statement, one needs to simply find a counterexample.
-				\begin{example}
+				\begin{example}[width=0.8\textwidth]
 					Show using a \emph{counterexample} that this statement is not true:
 					\begin{align*}
 						\forall \: x \in \mathbb{R}, x^{2} - 4x > 0
@@ -206,7 +206,7 @@
 						Then \begin{align*}
 							x^{2} - 4x &= (0)^{2} - 4(0)\\
 							&= 0\\
-							& \not > 0 \qedhere
+							& \not > 0
 						\end{align*}
 					\end{proof}
 				\end{example}
@@ -214,7 +214,7 @@
 			\subsection{Vacuous Proofs}
 				The truth table for an implication shows that if the antecedent is false, then the statement is always true.\\
 				Using the above, if you can show that the conditional statement is false, then the statement is \concept{vacuously true}.
-				\begin{example}
+				\begin{example}[width=0.7\textwidth]
 					Prove that:
 					\begin{align*}
 						\emptyset \subseteq X
@@ -227,7 +227,7 @@
 						$ $\\
 						$\emptyset$ is an empty set,\\
 						so ``$x \in \emptyset$'' is false,\\
-						therefore ``if $x \in \emptyset$, then $x \in X$'' is \concept{vacuously true}. \qedhere
+						therefore ``if $x \in \emptyset$, then $x \in X$'' is \concept{vacuously true}.
 					\end{proof}
 				\end{example}
 				\begin{example}

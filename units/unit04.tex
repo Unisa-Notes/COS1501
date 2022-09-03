@@ -217,7 +217,7 @@
 							iff \>$x \notin (X \cup Y)$\\
 							iff \>$x \notin X$ and $x \notin Y$\\
 							iff \>$x \in X'$ and $x \in Y'$\\
-							iff \>$x \in X' \cap Y'$ \` \qedhere
+							iff \>$x \in X' \cap Y'$
 						\end{tabbing}
 					\end{proof}
 				\end{minipage}
@@ -230,64 +230,67 @@
 							iff \> $x \notin (X \cap Y)$\\
 							iff \> $x \notin X$ or $x \notin Y$\\
 							iff \> $x \in X'$ or $x \in Y'$\\
-							iff \> $x \in X' \cup Y'$ \` \qedhere
+							iff \> $x \in X' \cup Y'$
 						\end{tabbing}
 					\end{proof}
 				\end{minipage}
 			\end{example}
 			\pagebreak
 			\begin{exercise}{Self-Assessment Exercise \thechapter.6}
-				\begin{enumerate}[label=(\alph*), itemsep=0.5em]
-					\item $(X')' = X$
-						\begin{proof}
-							Let $x \in (X')'$.
-							\begin{tabbing}
-								$\quad$ \= $x \in (X')'$\\
-								iff \> $x \notin X'$\\
-								iff \> $x \in X$\\
-								$\therefore$ \> $(X')' = X$ \` \qedhere
-							\end{tabbing}
-						\end{proof}
-					\item $X - (Y \cap W) = (X - Y) \cup (X - W)$
-						\begin{proof}
-							Let $x \in X - (Y \cap W)$.
-							\begin{tabbing}
-								$\quad$ \= $x \in X - (Y \cap W)$\\
-								iff \> $x \in X$ and $x \notin (Y \cap W)$\\
-								iff \> $x \in X$ and $x \in Y'$ or $x \in W'$\\
-								iff \> $\bigl(x \in X$ and $x \in Y'\bigr)$ or $\bigl(x \in X$ and $x \in W'\bigr)$\\
-								iff \> $\bigl(x \in (X - Y)\bigr)$ or $\bigl(x \in (X - W)\bigr)$\\
-								iff \> $x \in (X - Y) \cup (X - W)$\\
-								$\therefore$ \> $X - (Y \cap W) = (X - Y) \cup (X - W)$ \` \qedhere
-							\end{tabbing}
-						\end{proof}
-					\item $X \cap (Y \cap W) = (X \cap Y) \cap W$
-						\begin{proof}
-							Let $x \in X \cap (Y \cap W)$.
-							\begin{tabbing}
-								$\quad$ \= $x \in X \cap (Y \cap W)$\\
-								iff \> $x \in X$ and $x \in (Y \cap W)$\\
-								iff \> $x \in X$ and $x \in Y$ and $x \in W$\\
-								iff \> $(x \in X$ and $x \in Y)$ and $x \in W$\\
-								iff \> $x \in (X \cap Y)$ and $x \in W$\\
-								iff \> $x \in (X \cap Y) \cap W$\\
-								$\therefore$ \> $X \cap (Y \cap W) = (X \cap Y) \cap W$ \` \qedhere
-							\end{tabbing}
-						\end{proof}
-					\item $X \cap (Y \cup W) = (X \cap Y) \cup (X \cap W)$
-						\begin{proof}
-							Let $x \in X \cap (Y \cup W)$
-							\begin{tabbing}
-								$\quad$ \= $x \in X \cap (Y \cup W)$\\
-								iff \> $x \in X$ and $x \in (Y \cup W)$\\
-								iff \> $x \in X$ and ($x \in Y$ or $x \in W$)\\
-								iff \> ($x \in X$ and $x \in Y$) or ($x \in X$ and $x \in W$)\\
-								iff \> ($x \in (X \cap Y)$) or ($x \in (X \cap W)$)\\
-								iff \> $x \in (X \cap Y) \cup (X \cap W)$\\
-								$\therefore$ \> $X \cap (Y \cup W) = (X \cap Y) \cup (X \cap W)$ \` \qedhere
-							\end{tabbing}
-						\end{proof}
-				\end{enumerate}
+				\begin{multicols}{2}
+					\begin{enumerate}[label=(\alph*), itemsep=0.5em]
+						\item $(X')' = X$
+							\begin{proof}
+								Let $x \in (X')'$.
+								\begin{tabbing}
+									$\quad$ \= $x \in (X')'$\\
+									iff \> $x \notin X'$\\
+									iff \> $x \in X$\\
+									$\therefore$ \> $(X')' = X$
+								\end{tabbing}
+							\end{proof}
+						\item $X - (Y \cap W) = (X - Y) \cup (X - W)$
+							\begin{proof}
+								Let $x \in X - (Y \cap W)$.
+								\begin{tabbing}
+									$\quad$ \= $x \in X - (Y \cap W)$\\
+									iff \> $x \in X$ and $x \notin (Y \cap W)$\\
+									iff \> $x \in X$ and $x \in Y'$ or $x \in W'$\\
+									iff \> $\bigl(x \in X$ and $x \in Y'\bigr)$ or $\bigl(x \in X$ and $x \in W'\bigr)$\\
+									iff \> $\bigl(x \in (X - Y)\bigr)$ or $\bigl(x \in (X - W)\bigr)$\\
+									iff \> $x \in (X - Y) \cup (X - W)$\\
+									$\therefore$ \> $X - (Y \cap W) = (X - Y) \cup (X - W)$
+								\end{tabbing}
+							\end{proof}
+						\columnbreak
+						\item $X \cap (Y \cap W) = (X \cap Y) \cap W$
+							\begin{proof}
+								Let $x \in X \cap (Y \cap W)$.
+								\begin{tabbing}
+									$\quad$ \= $x \in X \cap (Y \cap W)$\\
+									iff \> $x \in X$ and $x \in (Y \cap W)$\\
+									iff \> $x \in X$ and $x \in Y$ and $x \in W$\\
+									iff \> $(x \in X$ and $x \in Y)$ and $x \in W$\\
+									iff \> $x \in (X \cap Y)$ and $x \in W$\\
+									iff \> $x \in (X \cap Y) \cap W$\\
+									$\therefore$ \> $X \cap (Y \cap W) = (X \cap Y) \cap W$
+								\end{tabbing}
+							\end{proof}
+						\item $X \cap (Y \cup W) = (X \cap Y) \cup (X \cap W)$
+							\begin{proof}
+								Let $x \in X \cap (Y \cup W)$
+								\begin{tabbing}
+									$\quad$ \= $x \in X \cap (Y \cup W)$\\
+									iff \> $x \in X$ and $x \in (Y \cup W)$\\
+									iff \> $x \in X$ and ($x \in Y$ or $x \in W$)\\
+									iff \> ($x \in X$ and $x \in Y$) or ($x \in X$ and $x \in W$)\\
+									iff \> ($x \in (X \cap Y)$) or ($x \in (X \cap W)$)\\
+									iff \> $x \in (X \cap Y) \cup (X \cap W)$\\
+									$\therefore$ \> $X \cap (Y \cup W) = (X \cap Y) \cup (X \cap W)$
+								\end{tabbing}
+							\end{proof}
+					\end{enumerate}
+				\end{multicols}
 			\end{exercise}
 			In order to prove that two sets are not equal, one needs to just provide a \concept{counterexample} - an element that is in one set that is not in the other.
 			\begin{definition}{Identity}
@@ -347,7 +350,7 @@
 							iff \> (The elements of $S$ are all in $X$) and (The elements of $S$ are all in $Y$)\\
 							iff \> The elements of $S$ are all in $X \cap Y$\\
 							iff \> $S \subseteq X \cap Y$\\
-							iff \> $S \in \mathcal{P}(X \cap Y)$ \` \qedhere
+							iff \> $S \in \mathcal{P}(X \cap Y)$
 						\end{tabbing}
 					\end{proof}
 				\item \question{Use Venn diagrams to investigate whether or not, for all sets $X, Y, Z \subseteq U$ \\
@@ -379,7 +382,7 @@
 								X - (Y - Z) &= \{1, 2\}\\
 								(X - Y) - Z &= \{2\}\\
 								\{1, 2\} &\neq \{2\}\\
-								X - (Y - Z) &\neq (X - Y) - Z \qedhere
+								X - (Y - Z) &\neq (X - Y) - Z
 							\end{align*}
 					\end{proof}
 				\pagebreak
@@ -416,7 +419,7 @@
 							(A \cap B) + (C \cap A) &= \{2\}\\
 							(A \cap B') \cup (B - C) &= \{1, 2, 3\}\\
 							\{2\} &\neq \{1, 2, 3\}\\
-							(A \cap B) + (C \cap A) &\neq (A \cap B') \cup (B - C) \qedhere
+							(A \cap B) + (C \cap A) &\neq (A \cap B') \cup (B - C)
 						\end{align*} 
 					\end{proof}
 			\end{enumerate}
@@ -595,10 +598,7 @@
 				Whether the variable is $x$ or $z$ does not change the members of the set.
 			\end{sidenote}
 			\begin{example}
-				Prove that
-				\begin{align*}
-					\{w \in \mathbb{R} \mid w^{2} - 3w + 2 < 0\} = \{z \in \mathbb{R} \mid 1 < z < 2\}
-				\end{align*}
+				Prove that $\{w \in \mathbb{R} \mid w^{2} - 3w + 2 < 0\} = \{z \in \mathbb{R} \mid 1 < z < 2\}$
 				\begin{proof}
 					Let $x \in \{w \in \mathbb{R} \mid w^{2} - 3w + 2 < 0\}$
 					\begin{tabbing}
@@ -612,7 +612,7 @@
 						iff      \> $x \in \mathbb{R}$ and $(x < 2$ and $x > 1)$\\
 						iff      \> $x \in \mathbb{R}$ and $1 < x < 2$\\
 						iff      \> $x \in \{x \in \mathbb{R} \mid 1 < x < 2\}$\\
-						iff      \> $x \in \{z \in \mathbb{R} \mid 1 < z < 2\}$ \` \qedhere
+						iff      \> $x \in \{z \in \mathbb{R} \mid 1 < z < 2\}$
 					\end{tabbing}
 				\end{proof}
 			\end{example}
@@ -632,7 +632,7 @@
 								iff      \> $x \in \mathbb{Z}^{+}$ and $x = 2$\\
 								iff      \> $x \in \mathbb{Z}^{+}$ and $x^{2} = 4$\\
 								iff      \> $x \in \{x \in \mathbb{Z}^{+} \mid x^{2} = 4\}$\\
-								iff      \> $x \in \{u \in \mathbb{Z}^{+} \mid u^{2} = 4\}$ \` \qedhere
+								iff      \> $x \in \{u \in \mathbb{Z}^{+} \mid u^{2} = 4\}$
 							\end{tabbing}
 						\end{proof}
 					\item \question{$\mathcal{P}\bigl(\{0, 1\}\bigr) = \{\emptyset\} \cup \bigl\{\{0\}\bigr\} \cup \bigl\{\{1\}\bigr\} \cup \bigl\{\{0, 1\}\bigr\}$}
@@ -643,7 +643,7 @@
 								iff \> $X \in \bigl\{\emptyset, \{0\}, \{1\}, \{0, 1\}\bigr\}$\\
 								iff \> $X = \emptyset$ or $X = \{0\}$ or $x = \{1\}$ or $X = \{0, 1\}$\\
 								iff \> $X \in \{\emptyset\}$ or $X \in \bigl\{\{0\}\bigr\}$ or $X \in \bigl\{\{1\}\bigr\}$ or $X \in \bigl\{\{0, 1\}\bigr\}$\\
-								iff \> $X \in \{\emptyset\} \cup \bigl\{\{0\}\bigr\} \cup \bigl\{\{1\}\bigr\} \cup \bigl\{\{0, 1\}\bigr\}$ \` \qedhere
+								iff \> $X \in \{\emptyset\} \cup \bigl\{\{0\}\bigr\} \cup \bigl\{\{1\}\bigr\} \cup \bigl\{\{0, 1\}\bigr\}$
 							\end{tabbing}
 						\end{proof}
 					\item \question{$\{x \in \mathbb{R} \mid x^{2} + 6x + 5 < 0\} = \{x \in \mathbb{R} \mid -5 < x < -1\}$}
@@ -659,7 +659,7 @@
 								\> \> (no real numbers meet the first statement)\\
 								iff \> $y \in \mathbb{R}$ and $(y > -5$ and $y < -1)$\\
 								iff \> $y \in \mathbb{R}$ and $-5 < y < -1$\\
-								iff \> $y \in \{x \in \mathbb{R} \mid -5 < x < -1\}$ \` \qedhere
+								iff \> $y \in \{x \in \mathbb{R} \mid -5 < x < -1\}$
 							\end{tabbing}
 						\end{proof}
 						\pagebreak
@@ -679,7 +679,7 @@
 								\> \> ($\mathbb{Z}^{+}$ as all the numbers are positive)\\
 								iff \> $w \in \mathbb{Z}^{+}$ and $w \in \{2, 3\}$\\
 								iff \> $w \in \{x \in \mathbb{Z}^{+} \mid x \in \{2, 3\}\}$\\
-								iff \> $w \in \{x \in \mathbb{Z}^{+} \mid x$ is a prime factor of $6\}$ \` \qedhere
+								iff \> $w \in \{x \in \mathbb{Z}^{+} \mid x$ is a prime factor of $6\}$
 							\end{tabbing}
 						\end{proof}
 					\item \question{$\{x \in \mathbb{R} \mid x^{2} + x - 2 > 0\} = \{x \in \mathbb{R} \mid x < -2$ or $x > 1\}$}
@@ -693,7 +693,7 @@
 								\> \> $(z + 2)> 0$ and $(z - 1) > 0$ (plus times a plus is a plus)\\
 								iff \> $z \in \mathbb{R}$ and either $(z < -2$ and $z < 1)$ or $(z > -2$ and $z > 1)$\\
 								iff \> $z \in \mathbb{R}$ and either $(z < -2)$ or $(z > 1)$\\
-								iff \> $z \in \{x \in \mathbb{R} \mid x < -2$ or $x > 1\}$ \` \qedhere
+								iff \> $z \in \{x \in \mathbb{R} \mid x < -2$ or $x > 1\}$
 							\end{tabbing}
 						\end{proof}
 				\end{enumerate}
@@ -712,7 +712,7 @@
 									\> $\qquad$ (If $x \in V$, $x \in W$, as $V \subseteq W$)\\
 									i.e. \> $x \in W$ or $x \in Z$\\
 									i.e. \> $x \in W \cup Z$\\
-									$\therefore$ \> $V \cup Z \subseteq W \cup Z$ \`\qedhere
+									$\therefore$ \> $V \cup Z \subseteq W \cup Z$
 								\end{tabbing}
 							\end{proof}
 							\begin{proof}
@@ -723,7 +723,7 @@
 									\> $\qquad$ (If $x \in V$, $x \in W$, as $V \subseteq W$)\\
 									i.e. \> $x \in W$ and $x \in Z$\\
 									i.e. \> $x \in W \cap Z$\\
-									$\therefore$ \> $V \cap Z \subseteq W \cap Z$ \`\qedhere
+									$\therefore$ \> $V \cap Z \subseteq W \cap Z$
 								\end{tabbing}
 							\end{proof}
 						\end{indentparagraph}
@@ -736,7 +736,7 @@
 									Let $\quad$ \= $x \in X$\\
 									Then \> $x \in Y$, as $X = Y$\\
 									Then \> $x \in W$, as $Y = W$\\
-									$\therefore$ \> $X = W$ \` \qedhere
+									$\therefore$ \> $X = W$
 								\end{tabbing}
 							\end{proof}
 							\begin{proof}
@@ -750,7 +750,7 @@
 									\> $W$ has at least one element not in $Y$, as $Y \subset W$\\
 									So \> $W$ has at least two elements not in $X$\\
 									i.e. $X \neq W$\\
-									so $X \subset W$ \` \qedhere
+									so $X \subset W$
 								\end{tabbing}
 							\end{proof}
 						\end{indentparagraph}
@@ -854,7 +854,7 @@
 										iff \> ($x \in X$ or $x \in Y$) and $x \notin X \cap Y$\\
 										iff \> ($x \in Y$ or $x \in X$) and $x \notin X \cap Y$\\
 										iff \> $x \in Y + X$\\
-										$\therefore$ \> $X + Y = Y + X$ \` \qedhere
+										$\therefore$ \> $X + Y = Y + X$
 									\end{tabbing}
 								\end{proof}
 							\pagebreak
@@ -868,7 +868,7 @@
 										iff \> $(x \in X$ and $x \in Y$) or $(x \in X$ and $x \in Z)$ and $x \notin (Y \cap Z)$\\
 										iff \> $x \in (X \cap Y)$ or $x \in (X \cap Z)$ and $x \notin (Y \cap Z)$\\
 										iff \> $x \in (X \cap Y) + (Y \cap Z)$\\
-										$\therefore$ \> $X \cap (Y + Z) = (X \cap Y) + (Y \cap Z)$ \` \qedhere
+										$\therefore$ \> $X \cap (Y + Z) = (X \cap Y) + (Y \cap Z)$
 									\end{tabbing}
 								\end{proof}
 						\end{enumerate}

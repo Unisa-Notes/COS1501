@@ -281,6 +281,7 @@
 											If $(x, y) \in R$ and $x \neq y$, then $x < y$.\\
 											Therefore $y \not < x$, so $(y, x) \notin R$.
 										\end{subproof}
+									\pagebreak
 									\item[Transitivity] $R$ is transitive.
 										\begin{subproof}
 											If $(x, y) \in R$, then $x \leq y$, and
@@ -340,7 +341,7 @@
 											\begin{align*}
 												y &= kx \tag*{$(k \in \mathbb{Z}^{+})$}\\
 												&= (1)x\\
-												&= x \qedhere
+												&= x
 											\end{align*}
 										\end{subproof}
 									\item[Irreflexivity] $R$ is not irreflexive.
@@ -656,7 +657,7 @@
 												Suppose \quad \= $(x, y) \in R$.\\
 												Then \>$(y, x) \in R^{-1}$ \quad \= by the definition of an inverse relation.\\
 												So \>$(y, x) \in R$ \> because $R = R^{-1}$\\
-												So \> $R$ is symmetric. \` \qedhere
+												So \> $R$ is symmetric.
 											\end{tabbing}
 										\end{subproof}
 								\end{enumerate}
@@ -766,13 +767,14 @@
 									So $f$ is functional. 
 								\end{subproof}
 							\item $\mathrm{dom}(f) = \mathbb{R}$
-								\begin{subproof} \moveup
-									\begin{align*}
+								\begin{subproof} $
+									\begin{aligned}[t]
 										\mathrm{dom}(f) &= \{x \mid \text{ for some } y \in \mathbb{R}, (x, y) \in f\}\\
 										&= \{x \mid \text{ for some} y \in \mathbb{R}, y = 5x^{2} + 3\}\\
 										&= \{x \mid 5x^{2} + 3 \text{ is a real number}\}\\
-										&= \mathbb{R} \qedhere
-									\end{align*}
+										&= \mathbb{R}
+									\end{aligned} $\\
+									Therefore the domain is equal to the input set.
 								\end{subproof}
 						\end{enumerate}
 						As $f$ is functional, and the domain of $f$ is the same as the input set, $f$ is a function.
@@ -825,13 +827,14 @@
 												So $f$ is functional.
 											\end{proof}
 										\item[Domain] The domain of $f$ is equal to the input set $\mathcal{P}(A)$.
-											\begin{proof} \moveup
-												\begin{align*}
+											\begin{proof} $
+												\begin{aligned}[t]
 													\mathrm{dom}(f) &= \{x \mid \text{for some } y \in \mathcal{P}(A), (x, y) \in f\}\\
 													&= \{x \mid \text{for some } y \in \mathcal{P}(A), y = x'\}\\
 													&= \{x \mid x' \in \mathcal{P}(A)\}\\
-													&= \mathcal{P}(A) \qedhere
-												\end{align*}
+													&= \mathcal{P}(A)
+												\end{aligned} $\\
+												Therefore $\mathrm{dom}(f)$ is equal to the input set.
 											\end{proof}
 									\end{description}
 								\item \question{Let $g = \Bigl\{\bigl((u, v), y\bigr) \mid (u, v) \in \mathcal{P}(A) \times \mathcal{P}(A)$ and $y = u \cup v\Bigr\}$}.
@@ -844,14 +847,15 @@
 												So $g$ is functional.
 											\end{proof}
 										\item[Domain] The domain of $g$ is equal to the input set $\mathcal{P}(A) \times \mathcal{P}(A)$.
-											\begin{proof} \moveup
-												\begin{align*}
+											\begin{proof} $
+												\begin{aligned}[t]
 													\mathrm{dom}(g) &= \Bigl\{(u, v) \mid \text{for some } y \in \mathcal{P}(A), \bigl((u, v), y\bigr) \in g\Bigr\}\\
 													&= \Bigl\{(u, v) \mid \text{for some } y \in \mathcal{P}(A), y = u \cup v \in g\Bigr\}\\
 													&= \Bigl\{(u, v) \mid u \cup v \in \mathcal{P}(A)\Bigr\}\\
 													&= \Bigl\{u \in \mathcal{P}(A) \text{ and } v \in \mathcal{P}(A)\Bigr\}\\
-													&= \mathcal{P}(A) \times \mathcal{P}(A) \qedhere
-												\end{align*}
+													&= \mathcal{P}(A) \times \mathcal{P}(A)
+												\end{aligned} $\\
+												Therefore $\mathrm{dom}(g)$ is equal to the input set.
 											\end{proof}
 									\end{description}
 								\pagebreak
@@ -864,15 +868,16 @@
 												So $y = u \cap v = z$.\\
 												So $h$ is functional.
 											\end{proof}
-										\item[Domain] The domain of $g$ is equal to the input set $\mathcal{P}(A) \times \mathcal{P}(A)$.
-											\begin{proof} \moveup
-												\begin{align*}
+										\item[Domain] The domain of $h$ is equal to the input set $\mathcal{P}(A) \times \mathcal{P}(A)$.
+											\begin{proof} $
+												\begin{aligned}[t]
 													\mathrm{dom}(h) &= \Bigl\{(u, v) \mid \text{for some } y \in \mathcal{P}(A), \bigl((u, v), y\bigr) \in h\Bigr\}\\
 													&= \Bigl\{(u, v) \mid \text{for some } y \in \mathcal{P}(A), y = u \cap v \in h\Bigr\}\\
 													&= \Bigl\{(u, v) \mid u \cap v \in \mathcal{P}(A)\Bigr\}\\
 													&= \Bigl\{u \in \mathcal{P}(A) \text{ and } v \in \mathcal{P}(A)\Bigr\}\\
-													&= \mathcal{P}(A) \times \mathcal{P}(A) \qedhere
-												\end{align*}
+													&= \mathcal{P}(A) \times \mathcal{P}(A)
+												\end{aligned} $\\
+												Therefore $\mathrm{dom}(h)$ is equal to the input set.
 											\end{proof}
 									\end{description}
 							\end{enumerate}
@@ -892,13 +897,14 @@
 													$\therefore R$ is functional.
 												\end{subproof}
 											\item[Domain] The domain of $R$ is equal to the input set: $\mathbb{Z}$.
-												\begin{subproof}[Subproof] \moveup
-													\begin{align*}
+												\begin{subproof}[Subproof] $
+													\begin{aligned}[t]
 														\mathrm{dom}(R) &= \bigl\{x \mid \text{for some } y \in \mathbb{Z}, (x, y) \in R\bigr\}\\
 														&= \{x \mid \text{for some } y \in \mathbb{Z}, y = x\}\\
 														&= \{x \mid x \in \mathbb{Z}\}\\
-														&= \mathbb{Z} \qedhere
-													\end{align*}
+														&= \mathbb{Z}
+													\end{aligned}$\\
+													Therefore $\mathrm{dom}(R)$ is equal to the input set.
 												\end{subproof}
 										\end{description}
 										As $R$ is functional, and the domain of $R$ is equal to the input set, $R$ is a function.
@@ -918,13 +924,14 @@
 													$\therefore R$ is functional.
 												\end{subproof}
 											\item[Domain] The domain of $R$ is equal to the input set: $\mathbb{Z}$.
-												\begin{subproof}[Subproof] \moveup
-													\begin{align*}
+												\begin{subproof}[Subproof] $
+													\begin{aligned}[t]
 														\mathrm{dom}(R) &= \bigl\{x \mid \text{for some } y \in \mathbb{Z}, (x, y) \in R\bigr\}\\
 														&= \{x \mid \text{for some } y \in \mathbb{Z}, y = x + 1\}\\
 														&= \{x \mid x + 1 \in \mathbb{Z}\}\\
-														&= \mathbb{Z} \qedhere
-													\end{align*}
+														&= \mathbb{Z}
+													\end{aligned} $\\
+													Therefore $\mathrm{dom}(R)$ is equal to the input set.
 												\end{subproof}
 										\end{description}
 										As $R$ is functional, and the domain of $R$ is equal to the input set, $R$ is a function.
@@ -943,13 +950,14 @@
 													$\therefore R$ is functional.
 												\end{subproof}
 											\item[Domain] The domain of $R$ is equal to the input set: $\mathbb{Z}$.
-												\begin{subproof}[Subproof] \moveup
-													\begin{align*}
+												\begin{subproof}[Subproof] $
+													\begin{aligned}[t]
 														\mathrm{dom}(R) &= \bigl\{x \mid \text{for some } y \in \mathbb{Z}, (x, y) \in R\bigr\}\\
 														&= \{x \mid \text{for some } y \in \mathbb{Z}, y = 3 - x\}\\
 														&= \{x \mid 3 - x \in \mathbb{Z}\}\\
-														&= \mathbb{Z} \qedhere
-													\end{align*}
+														&= \mathbb{Z}
+													\end{aligned} $\\
+													Therefore $\mathrm{dom}(R)$ is equal to the input set.
 												\end{subproof}
 										\end{description}
 										As $R$ is functional, and the domain of $R$ is equal to the input set, $R$ is a function.
@@ -1037,14 +1045,14 @@
 											So $R$ is functional.
 										\end{subproof}
 									\item[Domain] The domain of $R$ is \emph{not} equal to the input set.
-										\begin{subproof}[Subproof] \moveup
-											\begin{align*}
+										\begin{subproof}[Subproof] $
+											\begin{aligned}[t]
 												\mathrm{dom}(R) &= \bigl\{x \mid \text{for some } y \in \mathbb{Z}^{+}, (x, y) \in R\bigr\}\\
 												&= \bigl\{x \mid \text{for some } y \in \mathbb{Z}^{+}, y = x - 1\bigr\}\\
 												&= \bigl\{x \mid x - 1 \in \mathbb{Z}^{+}\bigr\}\\
 												&= \bigl\{x > 1 \mid x \in \mathbb{Z}^{+}\bigr\}\\
-												& \neq \mathbb{Z}^{+} \qedhere
-											\end{align*}
+												& \neq \mathbb{Z}^{+}
+											\end{aligned} $\\
 											For example, $y = 1 - 1 = 0$ cannot be an element of $R$ if the domain is $\mathbb{Z}^{+}$
 										\end{subproof}
 								\end{description}

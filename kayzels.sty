@@ -8,20 +8,23 @@
 % Lists
 \usepackage{enumitem}
 
+% Language Settings
+\RequirePackage[english]{babel}
+\setlocalecaption{english}{chapter}{Unit}
+
+% Bookmarks
+\usepackage[bookmarksnumbered]{hyperref}
+
 % Proofs
-\RequirePackage{amsthm}
-\renewcommand{\qedsymbol}{$\blacksquare$}
+\RequirePackage[amsmath,amsthm,thmmarks,hyperref]{ntheorem}
+\renewcommand\proofSymbol{\ensuremath{\blacksquare}}
 
 \newenvironment{subproof}[1][\proofname]{%
-  \renewcommand{\qedsymbol}{$\square$}%
+	\renewcommand\proofSymbol{\ensuremath{\square}}
   \begin{proof}[#1]%
 }{%
   \end{proof}%
 }
-
-% Language Settings
-\RequirePackage[english]{babel}
-\setlocalecaption{english}{chapter}{Unit}
 
 % Headers, Footers and Margins
 \RequirePackage[margin=2cm, vmargin=3cm]{geometry}
@@ -34,9 +37,6 @@
 \setlength{\headheight}{14pt}
 \setlength{\parindent}{0cm}
 \RequirePackage{multicol}
-
-% Bookmarks
-\usepackage[bookmarksnumbered]{hyperref}
 
 % Fonts
 \RequirePackage[T1]{fontenc}
