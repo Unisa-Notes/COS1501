@@ -8,3 +8,4 @@
 *.synctex(busy)
 /.vscode/
 *.thm
+*.toc
