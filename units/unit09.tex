@@ -177,6 +177,146 @@
 					\end{center}
 			\end{example}
 			\pagebreak
+			\begin{exercise}{Activity \thechapter.4}
+				\question{Construct a truth table for $\bigl[\lnot p \rightarrow (q \land r)\bigr] \lor r$}
+				\begin{center}
+					\begin{tabular}{| c c c | c | c | c | c |}
+						\hline
+						\tablehead{$p$} & \tablehead{$q$} & \tablehead{$r$} & \tablehead{$\lnot p$} & \tablehead{$q \land r$} & \tablehead{$\lnot p \rightarrow (q \land r)$} & \tablehead{$[\lnot p \rightarrow (q \land r)] \lor r$}\\
+						\hline
+						T & T & T & F & T & T & T\\
+						T & T & F & F & F & T & T\\
+						T & F & T & F & F & T & T\\
+						T & F & F & F & F & T & T\\
+						F & T & T & T & T & T & T\\
+						F & T & F & T & F & F & F\\
+						F & F & T & T & F & F & T\\
+						F & F & F & T & F & F & F\\
+						\hline
+					\end{tabular}
+				\end{center}
+			\end{exercise}
+			\begin{exercise}{Self Assessment Exercise \thechapter.5}
+				\begin{enumerate}
+					\item \question{Suppose that $p$ represents the statement ``It is sunny'', and $q$ represents the statement ``It is humid''. Write each of the following in abbreviated form.}
+						\begin{enumerate}[label=(\alph*)]
+							\item \question{It is sunny and it is not humid} $p \land \lnot q$
+							\item \question{It is humid or it is sunny} $p \lor q$
+							\item \question{It is false that it is humid} $\lnot q$
+							\item \question{It is false that it is sunny and humid} $\lnot (p \land q)$
+							\item \question{It is neither sunny nor humid} $\lnot p \land \lnot q$
+							\item \question{It is not the case that if it is sunny then it is humid} $\lnot (p \rightarrow q)$
+							\item \question{It is humid if it is sunny} $p \rightarrow q$
+							\item \question{It is humid only if it is sunny} $q \rightarrow p$
+							\item \question{It is sunny if and only if it is humid} $p \leftrightarrow q$
+							\item \question{If it is false that it is either sunny or humid (but not both), then it is not sunny} $\lnot \bigl[(p \lor q) \land \lnot (p \land q)\bigr]\rightarrow \lnot p$
+						\end{enumerate}
+					\pagebreak
+					\item \question{Construct truth tables for the following compound statements:}
+						\begin{enumerate}
+							\item \question{$[(\lnot q) \rightarrow (\lnot p)] \rightarrow (p \rightarrow q)$}
+								\begin{center}
+									\begin{tabular}{| c c | c c | c | c | c |}
+										\hline
+										\tablehead{$p$} & \tablehead{$q$} & \tablehead{$\lnot p$} & \tablehead{$\lnot q$} & \tablehead{$(\lnot q) \rightarrow (\lnot p)$} & \tablehead{$p \rightarrow q$} & \tablehead{$\bigl[(\lnot q) \rightarrow (\lnot p)\bigr] \rightarrow (p \rightarrow q)$}\\
+										\hline
+										T & T & F & F & T & T & T\\
+										T & F & F & T & F & F & T\\
+										F & T & T & F & T & T & T\\
+										F & F & T & T & T & T & T\\
+										\hline
+									\end{tabular}
+								\end{center}
+							\item \question{$\Bigl[\lnot p \rightarrow \bigl(q \land (\lnot q)\bigr)\Bigr] \rightarrow p$}
+								\begin{center}
+									\begin{tabular}{|c c | c  c | c | c | c |}
+										\hline
+										\tablehead{$p$} & \tablehead{$q$} & \tablehead{$\lnot p$} & \tablehead{$\lnot q$} & \tablehead{$q \land \lnot q$} & \tablehead{$ \lnot p \rightarrow (q \land \lnot q)$} & \tablehead{$[\lnot p \rightarrow (q \land \lnot q)] \rightarrow p$}\\
+										\hline
+										T & T & F & F & F & T & T\\
+										T & F & F & T & F & T & T\\
+										F & T & T & F & F & F & T\\
+										F & F & T & T & F & F & T\\
+										\hline
+									\end{tabular}
+								\end{center}
+							\item \question{$p \lor (\lnot p)$}
+								\begin{center}
+									\begin{tabular}{| c | c | c |}
+										\hline
+										\tablehead{$p$} & \tablehead{$\lnot p$} & \tablehead{$p \lor \lnot p$}\\
+										\hline
+										T & F & T\\
+										F & T & T\\
+										\hline
+									\end{tabular}
+								\end{center}
+							\item \question{$\bigl[p \land (p \rightarrow q)\bigr] \rightarrow q$}
+								\begin{center}
+									\begin{tabular}{| c c | c | c | c |}
+										\hline
+										\tablehead{$p$} & \tablehead{$q$} & \tablehead{$p \rightarrow q$} & \tablehead{$p \land (p \rightarrow q)$} & \tablehead{$[p \land (p \rightarrow q)] \rightarrow q$}\\
+										\hline
+										T & T & T & T & T\\
+										T & F & F & F & T\\
+										F & T & T & F & T\\
+										F & F & T & F & T\\
+										\hline
+									\end{tabular}
+								\end{center}
+							\item \question{$(p \lor q) \land (\lnot p \lor \lnot q)$}
+								\begin{center}
+									\begin{tabular}{|c c | c c | c | c | c |}
+										\hline
+										\tablehead{$p$} & \tablehead{$q$} & \tablehead{$\lnot p$} & \tablehead{$\lnot q$} & \tablehead{$p \lor q$} & \tablehead{$\lnot p \lor \lnot q$} & \tablehead{$(p \lor q) \land (\lnot p \lor \lnot q)$}\\
+										\hline
+										T & T & F & F & T & F & F\\
+										T & F & F & T & T & T & T\\
+										F & T & T & F & T & T & T\\
+										F & F & T & T & F & T & F\\
+										\hline
+									\end{tabular}
+								\end{center}
+							\pagebreak
+							\item \question{$\bigl(\lnot p \rightarrow [q \land r]\bigr) \lor r$}
+								\begin{center}
+									\begin{tabular}{|c c c | c | c | c | c|}
+										\hline
+										\tablehead{$p$} & \tablehead{$q$} & \tablehead{$r$} & \tablehead{$\lnot p$} & \tablehead{$q \land r$} & \tablehead{$\lnot p \rightarrow (q \land r)$} & \tablehead{$[\lnot p \rightarrow (q \land r)] \lor r$}\\
+										\hline
+										T & T & T & F & T & T & T\\
+										T & T & F & F & F & T & T\\
+										T & F & T & F & F & T & T\\
+										T & F & F & F & F & T & T\\
+										F & T & T & T & T & T & T\\
+										F & T & F & T & F & F & F\\
+										F & F & T & T & F & F & T\\
+										F & F & F & T & F & F & F\\
+										\hline
+									\end{tabular}
+								\end{center}
+							\item \question{$\bigl(p \rightarrow [q \land r]\bigr) \leftrightarrow \bigl([p \rightarrow q] \lor [p \rightarrow r]\bigr)$}
+								\begin{center}
+									\begin{tabular}{| c c c | c | c | c | c | c | c |}
+										\hline
+										\tablehead{$p$} & \tablehead{$q$} & \tablehead{$r$} & \tablehead{$q \land r$} & \tablehead{$p \rightarrow q$} & \tablehead{$p \rightarrow r$} & \tablehead{$p \rightarrow (q \land r)$} & \tablehead{$(p \rightarrow q) \lor (p \rightarrow r)$} & \tablehead{$S$}\\
+										\hline
+										T & T & T & T & T & T & T & T & T\\
+										T & T & F & F & T & F & F & T & F\\
+										T & F & T & F & F & T & F & T & F\\
+										T & F & F & F & F & F & F & F & T\\
+										F & T & T & T & T & T & T & T & T\\
+										F & T & F & F & T & T & T & T & T\\
+										F & F & T & F & T & T & T & T & T\\
+										F & F & F & F & T & T & T & T & T\\
+										\hline
+									\end{tabular}
+								\end{center}
+								$S$ is the statement.
+						\end{enumerate}
+				\end{enumerate}
+			\end{exercise}
+			\pagebreak
 		\section{Relationships Between Statements}
 			\subsection{Tautology}
 				\begin{definition}[width=0.7\textwidth]{Tautology}
@@ -268,5 +408,96 @@
 					\item $\lnot (p \rightarrow q) \equiv p \land \lnot q$ \hfill (negation of implication)
 				\end{enumerate}
 			\end{sidenote}
+			\pagebreak
+			\begin{exercise}{Self Assessment Exercise \thechapter.9}
+				\begin{enumerate}
+					\item \question{Rewrite $p \leftrightarrow q$ as a statement built up using only $\lnot$, $\lor$ and $\land$.}
+						\begin{align*}
+							p \leftrightarrow q &\equiv (p \rightarrow q) \land (q \rightarrow p)\\
+							&\equiv (\lnot p \lor q) \land (\lnot q \lor p)
+						\end{align*}
+					\item \question{Show that $\equiv$ is an equivalence relation on statements.}
+						\begin{proof}
+							For $\equiv$ to be an equivalence relation, $\equiv$ needs to be reflexive, symmetric and transitive.\\
+							Let $p$ and $q$ be two statements, where $p \equiv q$.
+							\begin{enumerate}[label=(\roman*)]
+								\item
+									\begin{subproof}[Reflexivity]
+										Is it the case that $p \equiv p$ for all statements? Yes.\\
+										If $p$ is a statement, then $p \leftrightarrow p$ is always true. So $p \leftrightarrow p$ is a tautology.\\
+										So $p \leftrightarrow p$ is logically equivalent.\\
+										So $p \equiv p$ is part of the relation for all statements $p$.\\
+										So $\equiv$ is a reflexive relation.
+									\end{subproof}
+								\item
+									\begin{subproof}[Symmetry]
+										Is it the case that, if $p \equiv q$, then $q \equiv p$ for all statements $p$ and $q$? Yes.\\
+										Suppose $p \equiv q$. Then that means that $p \leftrightarrow q$ is always true.\\
+										If $p \leftrightarrow q$ is always true, that means that $p \rightarrow q$ is always true, and $q \rightarrow p$ is always true.\\
+										If $q \rightarrow p$ is always true, and $p \rightarrow q$ is always true, then $q \leftrightarrow p$ is always true.\\
+										If $q \leftrightarrow p$ is always true, then $q \leftrightarrow p$ is a tautology.\\
+										So $q \equiv p$.\\
+										So $\equiv$ is a symmetric relation.
+									\end{subproof}
+								\item
+									\begin{subproof}[Transitivity]
+										Is it the case that, if $p \equiv q$ and $q \equiv r$, then $p \equiv r$ for all statements $p$, $q$ and $r$? Yes.\\
+										Suppose $p \equiv q$ and $q \equiv r$.\\
+										Then $p \leftrightarrow q$ is always true, and $q \leftrightarrow r$ is always true.\\
+										So $p \rightarrow q$ and $q \rightarrow r$ are both always true. So $p \rightarrow r$ is always true.\\
+										And $r \rightarrow q$ and $q \rightarrow p$ are both always true. So $r \rightarrow p$ is always true.\\
+										So $p \leftrightarrow r$ is always true.\\
+										So $p \equiv r$\\
+										So $\equiv$ is a transitive relation.
+									\end{subproof}
+							\end{enumerate}
+							As $\equiv$ is reflexive, symmetric, and transitive, $\equiv$ is an equivalence relation.
+						\end{proof}
+					\item \question{Suppose we want to define a new connective, the \emph{exclusive disjunction}, also called the \emph{``exclusive or''}, which will be written $+$. By $p + q$, we denote ``$p$ or $q$, but not both''. Construct a truth table for this connective.}
+						\begin{center}
+							\begin{tabular}{|c c | c|}
+								\hline
+								\tablehead{$p$} & \tablehead{$q$} & \tablehead{$p + q$}\\
+								\hline
+								T & T & F\\
+								T & F & T\\
+								F & T & T\\
+								F & F & F\\
+								\hline
+							\end{tabular}
+						\end{center}
+					\pagebreak
+					\item \question{Find a statement that is logically equivalent to $\lnot (p \lor \lnot q)$}
+						\begin{align*}
+							\lnot (p \lor \lnot q) &\equiv \lnot p \land \lnot (\lnot q) \tag*{De Morgan's law}\\
+							&\equiv \lnot p \land q \tag*{Double Negation}
+						\end{align*}
+					\item \question{Use the law of double negation and De Morgan's laws to rewrite the following statements so that the not symbol ($\lnot$) does not appear outside parentheses.}
+						\begin{enumerate}[label=(\alph*)]
+							\item \question{$\lnot \bigl[(p \lor q \lor \lnot q) \land (q \land \lnot p)\bigr]$}
+								\begin{align*}
+									\lnot \bigl[(p \lor q \lor \lnot q) \land (q \land \lnot p)\bigr] &\equiv \lnot(p \lor q \lor \lnot q) \lor \lnot(q \land \lnot p) \tag*{De Morgan's law}\\
+									& \equiv \bigl(\lnot p \land \lnot q \land \lnot (\lnot q)\bigr) \lor \bigl(\lnot q \lor \lnot (\lnot p)\bigr) \tag*{De Morgan's law}\\
+									& \equiv (\lnot p \land \lnot q \land q) \lor (\lnot q \lor p) \tag*{Double Negation}
+								\end{align*}
+							\item \question{$\lnot \Bigl[\bigl(p \lor (p \rightarrow q)\bigr) \lor (p \land q)\Bigr]$}
+								\begin{align*}
+									\lnot \Bigl[\bigl(p \lor (p \rightarrow q)\bigr) \lor (p \land q)\Bigr] &\equiv \lnot \Bigl[\bigl(p \lor (\lnot p \lor q)\bigr) \lor (p \land q)\Bigr] \tag*{Implication}\\
+									& \equiv \lnot \bigl(p \lor (\lnot p \lor q)\bigr) \land \lnot (p \land q) \tag*{De Morgan's law}\\
+									& \equiv \bigl(\lnot p \land \lnot (\lnot p \lor q)\bigr) \land (\lnot p \lor \lnot q) \tag*{De Morgan's law}\\
+									& \equiv \bigl(\lnot p \land (\lnot \lnot p \land \lnot q)\bigr) \land (\lnot p \lor \lnot q) \tag*{De Morgan's law}\\
+									& \equiv \bigl(\lnot p \land (p \land \lnot q)\bigr) \land (\lnot p \lor \lnot q) \tag*{Double Negation}
+								\end{align*}
+						\end{enumerate}
+					\item \question{Determine whether or not the following statements are equivalent:\\ $\lnot p \land (p \land \lnot q)$ and $\lnot \bigl(p \lor (p \rightarrow q)\bigr)$}
+						\begin{align*}
+							\lnot \bigl(p \lor (p \rightarrow q)\bigr) &\equiv \lnot \bigl(p \lor (\lnot p \lor q)\bigr) \tag*{Implication}\\
+							& \equiv \lnot p \land \lnot(\lnot p \lor q) \tag*{De Morgan's law}\\
+							& \equiv \lnot p \land (\lnot \lnot p \land \lnot q) \tag*{De Morgan's law}\\
+							& \equiv \lnot p \land (p \land \lnot q) \tag*{Double Negation}
+						\end{align*}
+						Therefore the two expressions are equivalent.
+				\end{enumerate}
+			\end{exercise}
 	\rulechapterend
 \end{document}
