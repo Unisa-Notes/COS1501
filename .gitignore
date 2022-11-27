@@ -6,6 +6,8 @@
 *.out
 *.pdf
 *.synctex(busy)
-/.vscode/
+/.vscode/*
+!/.vscode/settings.json.default
+!/.vscode/ltex*
 *.thm
 *.toc
