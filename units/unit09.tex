@@ -24,11 +24,11 @@
 			\end{sidenote}
 			A declarative statement can either be
 			\begin{itemize}[nosep]
-				\item \concept{atomic}, (or simple) meaning they convey a single fact.
+				\item \concept{atomic}, (or simple) meaning they convey a single fact, or
 				\item \concept{compound}, meaning they combine multiple atomic statements.
 			\end{itemize}
 		\section{Combining Statements}
-			Statements can be combined together using different \concept{logical connectives}. Below is a list of the possible connectives.
+			Statements can be combined using different \concept{logical connectives}. Below is a list of the possible connectives.
 			\begin{center}
 				\begin{tabular}{l c l}
 					and & $\land$ & conjunction\\
@@ -200,8 +200,8 @@
 				\begin{enumerate}
 					\item \question{Suppose that $p$ represents the statement ``It is sunny'', and $q$ represents the statement ``It is humid''. Write each of the following in abbreviated form.}
 						\begin{enumerate}[label=(\alph*)]
-							\item \question{It is sunny and it is not humid} $p \land \lnot q$
-							\item \question{It is humid or it is sunny} $p \lor q$
+							\item \question{It is sunny, and it is not humid} $p \land \lnot q$
+							\item \question{It is humid, or it is sunny} $p \lor q$
 							\item \question{It is false that it is humid} $\lnot q$
 							\item \question{It is false that it is sunny and humid} $\lnot (p \land q)$
 							\item \question{It is neither sunny nor humid} $\lnot p \land \lnot q$
@@ -489,7 +489,7 @@
 									& \equiv \bigl(\lnot p \land (p \land \lnot q)\bigr) \land (\lnot p \lor \lnot q) \tag*{Double Negation}
 								\end{align*}
 						\end{enumerate}
-					\item \question{Determine whether or not the following statements are equivalent:\\ $\lnot p \land (p \land \lnot q)$ and $\lnot \bigl(p \lor (p \rightarrow q)\bigr)$}
+					\item \question{Determine whether the following statements are equivalent:\\ $\lnot p \land (p \land \lnot q)$ and $\lnot \bigl(p \lor (p \rightarrow q)\bigr)$}
 						\begin{align*}
 							\lnot \bigl(p \lor (p \rightarrow q)\bigr) &\equiv \lnot \bigl(p \lor (\lnot p \lor q)\bigr) \tag*{Implication}\\
 							& \equiv \lnot p \land \lnot(\lnot p \lor q) \tag*{De Morgan's law}\\

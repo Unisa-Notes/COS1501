@@ -1,0 +1,10 @@
+iff
+venn
+Irreflexivity
+irreflexivity
+Surjectivity
+Injectivity
+Bijectivity
+injectivity
+surjectivity
+bijectivity

@@ -50,7 +50,7 @@
 								\item[Antisymmetry] Is it true for all $(x, y) \in A$, if $x \neq y$, and $(x, y) \in S$, then $(y, x) \notin S$?\\
 									Yes. If $(x, y) \in S$, then $x \in y$. If $x \in y$, then $y$ cannot be an element of $x$, so $(y, x) \notin S$.
 								\item[Transitivity] Is it true for all $x, y, z \in A$, if $(x, y) \in S$, and $(y, z) \in SS$, then $(x, z) \in S$?\\
-									Yes. Vacuously true, as there is no element that has the same first coordinate as another element's second doordinate.
+									Yes. Vacuously true, as there is no element that has the same first coordinate as another element's second coordinate.
 								\item[Weak Partial Order] As $S$ is not reflexive, $S$ is \emph{not} a weak partial order.
 							\end{description}
 						\item \question{$R \subseteq \mathbb{Z} \times \mathbb{Z}$ such that $x \, R \, y$ iff $x + y$ is even.}\\
@@ -83,7 +83,7 @@
 								\item[Antisymmetry] Is it true that for all $(a, b)$ and $(c, d) \in \mathbb{Z} \times \mathbb{Z}$, if $(a, b) \neq (c,d)$ and $\bigl\{(a, b), (c, d)\bigr\} \in R$, then $\bigl\{(c, d), (a, b)\bigr\} \notin R$?\\
 									Yes. If $(a, b) R (c, d)$, then $a < c$ or $(a = c$ and $b \leq d)$.
 									If the first case is matched, then $a < c$, which means that $c > a$. Which means that $c \neq a$, so the second condition is not met.\\
-									If the second case is matched, then $a = c$ and $b \leq d$. If $a = c$, then $c = a$, and if $b \leq d$, then $d \geq b$. However, if $b = d$, then $(a, b) = (c, d)$, which would mean it would be excluded. Therefore $d < b$, which means that $\bigl\{(c, d), (a, b)\bigr\} \notin R$.
+									If the second case is matched, then $a = c$ and $b \leq d$. If $a = c$, then $c = a$, and if $b \leq d$, then $d \geq b$. However, if $b = d$, then $(a, b) = (c, d)$, which would mean it would be excluded. Therefore, $d < b$, which means that $\bigl\{(c, d), (a, b)\bigr\} \notin R$.
 								\item[Transitivity] If $\bigl\{(a, b), (c, d)\bigr\} \in R$ and $\bigl\{(c, d), (e, f)\bigr\} \in R$, is $\bigl\{(a, b), (e, f)\bigr\} \in R$?\\
 									Yes.
 									\begin{indentparagraph}
@@ -145,7 +145,7 @@
 								\item[Antisymmetry] Is it true that for all $(a, b), (c, d) \in \mathbb{Z} \times \mathbb{Z}$, where $(a, b) \neq (c, d)$, \\ if $\left((a, b), (c, d)\right) \in R$, then $\left((c, d), (a, b)\right) \notin R$.\\
 									Yes. If $\left((a, b), (c, d)\right) \in R$, then $a < c$. As $a < c$, $\left((c, d), (a, b)\right) \notin R$.
 								\item[Transitivity] Is it true for all $(a, b), (c, d), (e, f) \in \mathbb{Z} \times \mathbb{Z}$, \\ if $\left((a, b), (c, d)\right) \in R$ and $\left((c, d), (e, f)\right) \in R$, then $\left((a, b), (e, f)\right) \in R$?\\
-									Yes. If $\left((a, b), (c, d)\right) \in R$, then $a < c$. If $\left((c, d), (e, f)\right) \in R$, then $c < e$. Therefore $a < e$, so $\left((a, b), (e, f)\right) \in R$.
+									Yes. If $\left((a, b), (c, d)\right) \in R$, then $a < c$. If $\left((c, d), (e, f)\right) \in R$, then $c < e$. Therefore, $a < e$, so $\left((a, b), (e, f)\right) \in R$.
 								\item[Strict Partial Order] As $R$ is irreflexive, antisymmetric, and transitive, $R$ \emph{is} a strict partial order.
 							\end{description}
 					\end{enumerate}
@@ -170,7 +170,7 @@
 					\end{description}
 				\end{example}
 				\begin{sidenote}{Proof Strategies}
-					You cannot use examples to prove a general statement, i.e, something of the from:
+					You cannot use examples to prove a general statement, i.e, something of the form:
 						\begin{indentparagraph}
 							For all $x$, or\\
 							For all pairs $(x, y)$
@@ -198,9 +198,9 @@
 									\end{center}
 								\item[More than three elements] There are no relations on $X$ that are strict partial orders And contain more than three elements.
 								\item[Linear] For a relation to be linear, it needs to satisfy \emph{trichotomy}. As there are three elements in $X$ the relation should contain three or more elements.\\
-									All of the strict partial relations with three elements satisfy trichotomy, and so are linear. 
+									All the strict partial relations with three elements satisfy trichotomy, and so are linear. 
 							\end{description}
-						\item \question{In each of the following cases, determine whether or not $R$ is some sort of order relation on the given set $X$. Justify your answer.}
+						\item \question{In each of the following cases, determine whether $R$ is some sort of order relation on the given set $X$. Justify your answer.}
 							\begin{enumerate}[label=(\alph*)]
 								\item \question{$X = \bigl\{\emptyset, \{0\}, \{2\}\bigr\}$ and $R = \Bigl\{\bigl(\emptyset, \{0\}\bigr), \bigl(\emptyset, \{2\}\bigr)\Bigr\}$}\\
 									$R$ is a \emph{strict partial order}.	
@@ -219,7 +219,7 @@
 												\begin{subproof}
 													$\bigl(\emptyset, \{0\}\bigr) \in R$ and $\bigl(\{0\}, \emptyset\bigr) \notin R$\\
 													$\bigl(\emptyset, \{2\}\bigr) \in R$ and $\bigl(\{2\}, \emptyset\bigr) \notin R$\\
-													For all elments $(x, y) \in R$, $(y, x) \notin R$.
+													For all elements $(x, y) \in R$, $(y, x) \notin R$.
 												\end{subproof}
 											\item[Transitivity] $R$ is transitive.
 												\begin{subproof}
@@ -249,7 +249,7 @@
 												\end{subproof}
 											\item[Antisymmetry] $R$ is antisymmetric.
 												\begin{subproof}
-													For all elments $(x, y) \in R$, $(y, x) \notin R$.
+													For all elements $(x, y) \in R$, $(y, x) \notin R$.
 												\end{subproof}
 											\item[Transitivity] $R$ is transitive.
 												\begin{subproof}
@@ -279,7 +279,7 @@
 									\item[Antisymmetry] $R$ is antisymmetric.
 										\begin{subproof}
 											If $(x, y) \in R$ and $x \neq y$, then $x < y$.\\
-											Therefore $y \not < x$, so $(y, x) \notin R$.
+											Therefore, $y \not < x$, so $(y, x) \notin R$.
 										\end{subproof}
 									\pagebreak
 									\item[Transitivity] $R$ is transitive.
@@ -319,7 +319,7 @@
 									\item[Transitivity] $R$ is transitive.
 										\begin{subproof}
 											If $(x, y) \in R$, then $x > y$. If $(y, z) \in R$, then $y > z$.\\
-											Therefore $x > y > z$, i.e. $x > z$, so $(x, z) \in R$.
+											Therefore, $x > y > z$, i.e. $x > z$, so $(x, z) \in R$.
 										\end{subproof}
 									\item[Trichotomy] $R$ satisfies trichotomy.
 										\begin{subproof}
@@ -329,7 +329,7 @@
 								As $R$ is irreflexive, antisymmetric and transitive, and satisfies trichotomy, $R$ is a strict total order.
 							\end{proof}
 						\pagebreak
-						\item \question{$X \in \mathbb{Z}^{+}$ and $x \, R \, y$ iff $x$ divides into $y$ with zero remainder. $y = kx$ for some $k \in \mathbb{Z}^{+}$. $x$ is a \emph{factor} of $y$ and $y$ is a \emph{muliple} of $x$.}\\
+						\item \question{$X \in \mathbb{Z}^{+}$ and $x \, R \, y$ iff $x$ divides into $y$ with zero remainder. $y = kx$ for some $k \in \mathbb{Z}^{+}$. $x$ is a \emph{factor} of $y$ and $y$ is a \emph{multiple} of $x$.}\\
 							Some example elements of $R$ are $(2, 8)$, $(7, 21)$, $(6, 36)$, $(1, 1)$.\\
 							$R$ is a \emph{weak partial order}.
 							\begin{proof}
@@ -513,7 +513,7 @@
 						\item \question{Let $R$ be the relation on $\mathbb{Z}$ such that $(x, y) \in R$ iff $x - y$ is a multiple of $4$.}\\
 							$R = (x, y) \in \mathbb{Z}$ such that $ x - y = 4k$, where $k \in \mathbb{Z}$.
 							\begin{enumerate}[label=(\alph*)]
-								\item \question{Do tests on $R$ for all of the following properties: reflexivity, irreflexivity, symmetry, antisymmetry, transitivity, and trichotomy.}
+								\item \question{Do tests on $R$ for all the following properties: reflexivity, irreflexivity, symmetry, antisymmetry, transitivity, and trichotomy.}
 									\begin{description}
 										\item[Reflexivity] For every $x \in \mathbb{Z}$, is $(x, x) \in R$? Yes.
 											\begin{proof}
@@ -525,7 +525,7 @@
 											\end{proof}
 										\item[Symmetry] For $x, y \in \mathbb{Z}$, if $(x, y) \in R$, is $(y, x) \in R$? Yes.
 											\begin{proof}
-												Suppose $(x, y) \in R$. Then $x - y = 4k$, where $k \in \mathbb{Z}$. But $y - x = -4k$. That is, $y - x = 4(-k)$. But $k$ can be any integer. Therefore $(y, x) \in R$.
+												Suppose $(x, y) \in R$. Then $x - y = 4k$, where $k \in \mathbb{Z}$. But $y - x = -4k$. That is, $y - x = 4(-k)$. But $k$ can be any integer. Therefore, $(y, x) \in R$.
 											\end{proof}
 										\item[Antisymmetry] For $x, y \in \mathbb{Z}$, if $x \neq y$ and $(x, y) \in R$, is $(y, x) \notin R$? No.
 											\begin{proof}[Counterexample]
@@ -678,10 +678,10 @@
 				\end{theorem}
 			\subsection{Partitions}
 				\begin{definition}{Partition}
-					For a nonempty set $A$, a \concept{partition} of $A$ is a set $S = \{S_{1}, S_{2}, S_{3}\}$. The members of $S$ are subsets of $A$ (called \emph{parts} of $A$) such that:
+					For a non-empty set $A$, a \concept{partition} of $A$ is a set $S = \{S_{1}, S_{2}, S_{3}\}$. The members of $S$ are subsets of $A$ (called \emph{parts} of $A$) such that:
 					\begin{enumerate}
-						\item for all $i$, $S_{i} \neq \emptyset$. That is, every part of the partition is not empty.
-						\item for all $i$ and $j$, if $S_{i} \neq S_{j}$, then $S_{i} \cap S_{j} = \emptyset$. That is, different parts of the partition don't have common elements.
+						\item For all $i$, $S_{i} \neq \emptyset$. That is, every part of the partition is not empty.
+						\item For all $i$ and $j$, if $S_{i} \neq S_{j}$, then $S_{i} \cap S_{j} = \emptyset$. That is, different parts of the partition don't have common elements.
 						\item $S_{1} \cup S_{2} \cup S_{3} \cup \ldots = A$. That is, every element of $A$ appears in one (and only one) part of the partition.
 					\end{enumerate}
 				\end{definition}
@@ -763,7 +763,7 @@
 								\begin{subproof}
 									Suppose $(x, y) \in f$ and $(x, z) \in f$. Is it the case that $y = z$?\\
 									As $(x, y) \in f$, $y = 5x^{2} + 3$. As $(x, z) \in f$, $z = 5x^{2} + 3$.\\
-									Therefore $y = 5x^{2} + 3 = z$.\\
+									Therefore, $y = 5x^{2} + 3 = z$.\\
 									So $f$ is functional. 
 								\end{subproof}
 							\item $\mathrm{dom}(f) = \mathbb{R}$
@@ -881,7 +881,7 @@
 											\end{proof}
 									\end{description}
 							\end{enumerate}
-						\item \question{For each of the following relations from $X$ to $Y$, determine whether or not the relation may be regarded as a function from $X$ to $Y$.}
+						\item \question{For each of the following relations from $X$ to $Y$, determine whether the relation may be regarded as a function from $X$ to $Y$.}
 							\begin{enumerate}[label=(\alph*)]
 								\item \question{$X = Y = \mathbb{Z}$ and $R = \bigl\{(x, y) \mid y = x\bigr\}$.}\\
 									$R$ is a function.
@@ -1001,7 +1001,7 @@
 											\item[Domain] The domain of $R$ is \emph{not} equal to the input set.
 												\begin{subproof}[Counterexample]
 													$2 \in X$, but there is no integer $y$ (i.e. no $y$ in $Y$) where $y^{2} = 2$, because $\sqrt{2}$ is irrational.\\
-													$-1 \in X$, but there is no ineger $y$ where $y^{2} = -1$.\\
+													$-1 \in X$, but there is no integer $y$ where $y^{2} = -1$.\\
 													$\therefore \mathrm{dom}(R) \neq X$ 
 												\end{subproof}
 										\end{description}
