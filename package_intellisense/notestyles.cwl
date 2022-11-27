@@ -1,4 +1,4 @@
-# kayzels
+# notestyles
 \addfile[input]{<filename>}
 \addfile{<filename>}
 \begin{definition}{title}

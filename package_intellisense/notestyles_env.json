@@ -3,66 +3,66 @@
     "name": "exercise",
     "detail": "exercise{title}",
     "snippet": "{${1:title}}",
-    "package": "kayzels"
+    "package": "notestyles"
   },
   "indentparagraph": {
     "name": "indentparagraph",
     "detail": "indentparagraph",
     "snippet": "",
-    "package": "kayzels"
+    "package": "notestyles"
   },
   "sidenote{}": {
     "name": "sidenote",
     "detail": "sidenote{title}",
     "snippet": "{${1:title}}",
-    "package": "kayzels"
+    "package": "notestyles"
   },
   "subproof": {
     "name": "subproof",
     "detail": "subproof",
     "snippet": "",
-    "package": "kayzels"
+    "package": "notestyles"
   },
   "subproof[]": {
     "name": "subproof",
     "detail": "subproof[name]",
     "snippet": "[${1:name}]",
-    "package": "kayzels"
+    "package": "notestyles"
   },
   "vennthree": {
     "name": "vennthree",
     "detail": "vennthree",
     "snippet": "",
-    "package": "kayzels"
+    "package": "notestyles"
   },
   "vennthree[]": {
     "name": "vennthree",
     "detail": "vennthree[options]",
     "snippet": "[${1:options}]",
-    "package": "kayzels"
+    "package": "notestyles"
   },
   "vennthree[][]": {
     "name": "vennthree",
     "detail": "vennthree[options][title]",
     "snippet": "[${1:options}][${2:title}]",
-    "package": "kayzels"
+    "package": "notestyles"
   },
   "venntwo": {
     "name": "venntwo",
     "detail": "venntwo",
     "snippet": "",
-    "package": "kayzels"
+    "package": "notestyles"
   },
   "venntwo[]": {
     "name": "venntwo",
     "detail": "venntwo[options]",
     "snippet": "[${1:options}]",
-    "package": "kayzels"
+    "package": "notestyles"
   },
   "venntwo[][]": {
     "name": "venntwo",
     "detail": "venntwo[options][title]",
     "snippet": "[${1:options}][${2:title}]",
-    "package": "kayzels"
+    "package": "notestyles"
   }
 }

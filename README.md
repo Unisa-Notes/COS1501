@@ -29,7 +29,7 @@ Please fork this repo, make your changes, and then open a pull request.
 ### The Structure
 - The file [notes.tex](notes.tex) contains the general structure and order of the files. Building this file should build all the other `.tex` files, and include them in one `.pdf` called `notes.pdf`
 - Each unit has a separate `tex` file where the notes are written. These are contained in the [units](./units) folder.
-- The styles, commands and packages used are in the package file [kayzels.sty](kayzels.sty)
+- The styles, commands and packages used are in the package file [notestyles.sty](notestyles.sty)
 
 ### Packages Used
 TeX packages that have been used are:

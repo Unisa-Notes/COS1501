@@ -1,42 +1,42 @@
 {
   "addfile[]{}": {
     "command": "addfile[input]{<filename>}",
-    "package": "kayzels",
+    "package": "notestyles",
     "snippet": "addfile[${2:input}]{${1:<filename>}}"
   },
   "addfile{}": {
     "command": "addfile{<filename>}",
-    "package": "kayzels",
+    "package": "notestyles",
     "snippet": "addfile{${1:<filename>}}"
   },
   "concept{}": {
     "command": "concept{text}",
-    "package": "kayzels",
+    "package": "notestyles",
     "snippet": "concept{${1:text}}"
   },
   "moveup": {
     "command": "moveup",
-    "package": "kayzels",
+    "package": "notestyles",
     "snippet": "moveup"
   },
   "question{}": {
     "command": "question{text}",
-    "package": "kayzels",
+    "package": "notestyles",
     "snippet": "question{${1:text}}"
   },
   "rulebookend": {
     "command": "rulebookend",
-    "package": "kayzels",
+    "package": "notestyles",
     "snippet": "rulebookend"
   },
   "rulechapterend": {
     "command": "rulechapterend",
-    "package": "kayzels",
+    "package": "notestyles",
     "snippet": "rulechapterend"
   },
   "tablehead{}": {
     "command": "tablehead{text}",
-    "package": "kayzels",
+    "package": "notestyles",
     "snippet": "tablehead{${1:text}}"
   }
 }
