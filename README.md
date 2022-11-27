@@ -1,6 +1,6 @@
 # UNISA COS1501 Notes
 
-This repo contains the LaTex files needed to compile a set of notes for the course **Theoretical Computer Science** at the University of South Africa.
+This repo contains the LaTeX files needed to compile a set of notes for the course **Theoretical Computer Science** at the University of South Africa.
 
 ## Contents
 - [Accessing the Notes](#accessing-the-notes)
@@ -15,7 +15,7 @@ This repo contains the LaTex files needed to compile a set of notes for the cour
 
 ## Accessing the Notes
 
-A PDF can be generated using [latexmk](https://ctan.org/pkg/latexmk). If you want to access pregenerated PDFs, please check the [Releases](https://github.com/Kayzels/notes.unisa.COS1501/releases) section on the sidebar.
+A PDF can be generated using [latexmk](https://ctan.org/pkg/latexmk). If you want to access pre-generated PDFs, please check the [Releases](https://github.com/Unisa-Notes/COS1501/releases) section on the sidebar.
 
 ## Note
 This is a work in progress, with chapters and examples to come.  
@@ -66,11 +66,11 @@ For intellisense, a list of the commands is added in the [package_intellisense](
 - `tablehead {text}`: Mark specific text as a heading in a table. Puts the text in bold.
 
 #### Environments
-- `definition {title}`: Colored box used for highlighting important concepts.
-- `example`: Colored box used to highlight examples.
-- `exercise {title}`: Colored box used to highlight exercises.
+- `definition {title}`: Coloured box used for highlighting important concepts.
+- `example`: Coloured box used to highlight examples.
+- `exercise {title}`: Coloured box used to highlight exercises.
 - `indentparagraph`: Indent selected text to the left.
-- `sidenote`: Colored box used to indicate extra information.
+- `sidenote`: Coloured box used to indicate extra information.
 - `subproof`: Environment for proofs inside proofs.
-- `theorem`: Colored box used to highlight theorems.
+- `theorem`: Coloured box used to highlight theorems.
 - `venntwo` and `vennthree [options] [title]`: Simplified Venn Diagram environments
