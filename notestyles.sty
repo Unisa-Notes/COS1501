@@ -169,6 +169,12 @@
 \UseTblrLibrary{varwidth}
 \SetTblrInner[tblr]{measure=vbox}
 
+% Questions and Answers
+\newlist{questions}{enumerate}{2}
+\setlist[questions, 1]{label=\arabic*., first=\bfseries}
+\setlist[questions, 2]{label=(\alph*), first=\normalfont}
+\newenvironment{answer}{\normalfont}{}
+
 % Questions, Concepts and Emphasis Styling
 \newcommand{\question}[1]{\textbf{#1}\questionspace}
 \newcommand{\concept}[1]{\textbf{#1}}
