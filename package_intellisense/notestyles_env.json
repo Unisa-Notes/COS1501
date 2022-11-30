@@ -1,4 +1,10 @@
 {
+  "answer": {
+    "name": "answer",
+    "detail": "answer",
+    "snippet": "",
+    "package": "notestyles"
+  },
   "exercise{}": {
     "name": "exercise",
     "detail": "exercise{title}",
@@ -8,6 +14,12 @@
   "indentparagraph": {
     "name": "indentparagraph",
     "detail": "indentparagraph",
+    "snippet": "",
+    "package": "notestyles"
+  },
+  "questions": {
+    "name": "questions",
+    "detail": "questions",
     "snippet": "",
     "package": "notestyles"
   },

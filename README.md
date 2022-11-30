@@ -65,11 +65,15 @@ For intellisense, a list of the commands is added in the [package_intellisense](
 - `rulechapterend`: Insert a decorative horizontal line at the end of each unit.
 
 #### Environments
+- `answer`: Used to indicate an answer to a question in an exercise. Unbolds the text.
 - `definition {title}`: Coloured box used for highlighting important concepts.
 - `example`: Coloured box used to highlight examples.
 - `exercise {title}`: Coloured box used to highlight exercises.
 - `indentparagraph`: Indent selected text to the left.
+- `questions`: An `enumerate` list, that is used to make each question bold.
 - `sidenote`: Coloured box used to indicate extra information.
 - `subproof`: Environment for proofs inside proofs.
 - `theorem`: Coloured box used to highlight theorems.
 - `venntwo` and `vennthree [options] [title]`: Simplified Venn Diagram environments
+
+---
