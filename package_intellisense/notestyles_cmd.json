@@ -33,10 +33,5 @@
     "command": "rulechapterend",
     "package": "notestyles",
     "snippet": "rulechapterend"
-  },
-  "tablehead{}": {
-    "command": "tablehead{text}",
-    "package": "notestyles",
-    "snippet": "tablehead{${1:text}}"
   }
 }
