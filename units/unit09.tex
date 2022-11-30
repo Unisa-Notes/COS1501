@@ -31,13 +31,13 @@
 		\section{Combining Statements}
 			Statements can be combined using different \concept{logical connectives}. Below is a list of the possible connectives.
 			\begin{center}
-				\begin{tabular}{l c l}
+				\begin{tblr}{colspec={l c l}, stretch=0}
 					and & $\land$ & conjunction\\
 					or & $\lor$ & disjunction\\
 					not & $\lnot $ & negation\\
 					if and only if & $\leftrightarrow$ & biconditional\\
 					if \ldots, then \ldots & $\rightarrow$ & conditional/implication
-				\end{tabular}
+				\end{tblr}
 			\end{center}
 			\subsection[Conjunction]{Conjunction (AND)}
 				\begin{definition}{Conjunction}
@@ -45,16 +45,16 @@
 				\end{definition}
 				\nopagebreak
 				\begin{center}
-					\begin{tabular}{|c c | c|}
-						\hline
-						$\mathbf{p}$ & $\mathbf{q}$ & $\mathbf{p \land q}$\\
-						\hline
+					\begin{tblr}{colspec={|c c | c|}, row{1}={font=\bfseries}, row{even}={definition color}}
+						\toprule
+						$p$ & $q$ & $p \land q$\\
+						\midrule
 						T & T & T\\
 						T & F & F\\
 						F & T & F\\
 						F & F & F\\
-						\hline
-					\end{tabular}	
+						\bottomrule
+					\end{tblr}	
 				\end{center}
 			\subsection[Disjunction]{Disjunction (OR)}
 				\begin{definition}{Disjunction}
@@ -62,16 +62,16 @@
 				\end{definition}
 				\nopagebreak
 				\begin{center}
-					\begin{tabular}{|c c | c|}
-						\hline
-						$\mathbf{p}$ & $\mathbf{q}$ & $\mathbf{p \lor q}$\\
-						\hline
+					\begin{tblr}{colspec={|c c | c|}, row{1}={font=\bfseries}, row{even}={definition color}}
+						\toprule
+						$p$ & $q$ & $p \lor q$\\
+						\midrule
 						T & T & T\\
 						T & F & T\\
 						F & T & T\\
 						F & F & F\\
-						\hline
-					\end{tabular}	
+						\bottomrule
+					\end{tblr}
 				\end{center}
 			\subsection{Negation}
 				\begin{definition}{Negation}
@@ -79,31 +79,32 @@
 				\end{definition}
 				\nopagebreak
 				\begin{center}
-					\begin{tabular}{| c | c |}
-						\hline
-						$\mathbf{p}$ & $\mathbf{\lnot p}$\\
-						\hline
+					\begin{tblr}{colspec={| c | c |}, row{1}={font=\bfseries}, row{even}={definition color}}
+						\toprule
+						$p$ & $\lnot p$\\
+						\midrule
 						T & F\\
 						F & T\\
-						\hline
-					\end{tabular}
+						\bottomrule
+					\end{tblr}
 				\end{center}
+			\pagebreak
 			\subsection{Biconditional}
 				\begin{definition}{Biconditional}
 					If $p$ and $q$ represent declarative statements, then $p \leftrightarrow q$ represents the statement $p$ if and only if $q$, which can also be written $p$ iff $q$. This is called the \concept{biconditional}.
 				\end{definition}
 				\nopagebreak
 				\begin{center}
-					\begin{tabular}{|c c | c|}
-						\hline
-						$\mathbf{p}$ & $\mathbf{q}$ & $\mathbf{p \leftrightarrow q}$\\
-						\hline
+					\begin{tblr}{colspec={|c c | c|}, row{1}={font=\bfseries}, row{even}={definition color}}
+						\toprule
+						$p$ & $q$ & $p \leftrightarrow q$\\
+						\midrule
 						T & T & T\\
 						T & F & F\\
 						F & T & F\\
 						F & F & T\\
-						\hline
-					\end{tabular}	
+						\bottomrule
+					\end{tblr}
 				\end{center}
 			\subsection[Conditional]{Conditional/Implication}
 				\begin{definition}{Implication}
@@ -111,16 +112,16 @@
 				\end{definition}
 				\nopagebreak
 				\begin{center}
-					\begin{tabular}{|c c | c|}
-						\hline
-						$\mathbf{p}$ & $\mathbf{q}$ & $\mathbf{p \rightarrow q}$\\
-						\hline
+					\begin{tblr}{colspec={|c c | c|}, row{1}={font=\bfseries}, row{even}={definition color}}
+						\toprule
+						$p$ & $q$ & $p \rightarrow q$\\
+						\midrule
 						T & T & T\\
 						T & F & F\\
 						F & T & T\\
 						F & F & T\\
-						\hline
-					\end{tabular}	
+						\bottomrule
+					\end{tblr}	
 				\end{center}
 				\nopagebreak
 				\begin{sidenote}{If the hypothesis is false, then the statement is true}
@@ -134,6 +135,7 @@
 						\end{indentparagraph}
 					\end{example} 
 				\end{sidenote}
+		\pagebreak
 		\section{Constructing Truth Tables}
 			\begin{enumerate}
 				\item List the statements at the top.
@@ -145,46 +147,45 @@
 			\begin{example}[width=0.6\textwidth]
 				Construct a truth table for $p \land (\lnot q)$.
 					\begin{center}
-						\begin{tabular}{| c c |}
-							\hline
-							$\mathbf{p}$ & $\mathbf{q}$\\
-							\hline
+						\begin{tblr}{colspec={| c c |}, row{1}={font=\bfseries}, row{odd[3]}={white}}
+							\toprule
+							$p$ & $q$\\
+							\midrule
 							T & T\\
 							T & F\\
 							F & T\\
 							F & F\\
-							\hline
-						\end{tabular} \hspace{0.25cm}
-						\begin{tabular}{| c c | c|}
-							\hline
-							$\mathbf{p}$ & $\mathbf{q}$ & $\mathbf{\lnot q}$\\
-							\hline
+							\bottomrule
+						\end{tblr} \hspace{0.25cm}
+						\begin{tblr}{colspec={| c c | c|}, row{1}={font=\bfseries}, row{odd[3]}={white}}
+							\toprule
+							$p$ & $q$ & $\lnot q$\\
+							\midrule
 							T & T & F\\
 							T & F & T\\
 							F & T & F\\
 							F & F & T\\
-							\hline
-						\end{tabular} \hspace{0.25cm}
-						\begin{tabular}{| c c | c | c|}
-							\hline
-							$\mathbf{p}$ & $\mathbf{q}$ & $\mathbf{\lnot q}$ & $\mathbf{p \land (\lnot q)}$\\
-							\hline
+							\bottomrule
+						\end{tblr} \hspace{0.25cm}
+						\begin{tblr}{colspec={| c c | c | c|}, row{1}={font=\bfseries}, row{odd[3]}={white}}
+							\toprule
+							$p$ & $q$ & $\lnot q$ & $p \land (\lnot q)$\\
+							\midrule
 							T & T & F & F\\
 							T & F & T & T\\
 							F & T & F & F\\
 							F & F & T & F\\
-							\hline
-						\end{tabular}
+							\bottomrule
+						\end{tblr}
 					\end{center}
 			\end{example}
-			\pagebreak
 			\begin{exercise}{Activity \thechapter.4}
 				\question{Construct a truth table for $\bigl[\lnot p \rightarrow (q \land r)\bigr] \lor r$}
 				\begin{center}
-					\begin{tabular}{| c c c | c | c | c | c |}
-						\hline
-						\tablehead{$p$} & \tablehead{$q$} & \tablehead{$r$} & \tablehead{$\lnot p$} & \tablehead{$q \land r$} & \tablehead{$\lnot p \rightarrow (q \land r)$} & \tablehead{$[\lnot p \rightarrow (q \land r)] \lor r$}\\
-						\hline
+					\begin{tblr}{colspec={| c c c | c | c | c | c |}, row{1}={font=\bfseries}, row{odd[3]}={white}}
+						\toprule
+						$p$ & $q$ & $r$ & $\lnot p$ & $q \land r$ & $\lnot p \rightarrow (q \land r)$ & $[\lnot p \rightarrow (q \land r)] \lor r$\\
+						\midrule
 						T & T & T & F & T & T & T\\
 						T & T & F & F & F & T & T\\
 						T & F & T & F & F & T & T\\
@@ -193,14 +194,15 @@
 						F & T & F & T & F & F & F\\
 						F & F & T & T & F & F & T\\
 						F & F & F & T & F & F & F\\
-						\hline
-					\end{tabular}
+						\bottomrule
+					\end{tblr}
 				\end{center}
 			\end{exercise}
+			\pagebreak
 			\begin{exercise}{Self Assessment Exercise \thechapter.5}
 				\begin{enumerate}
 					\item \question{Suppose that $p$ represents the statement ``It is sunny'', and $q$ represents the statement ``It is humid''. Write each of the following in abbreviated form.}
-						\begin{enumerate}[label=(\alph*)]
+						\begin{enumerate}[label=(\alph*), nosep]
 							\item \question{It is sunny, and it is not humid} $p \land \lnot q$
 							\item \question{It is humid, or it is sunny} $p \lor q$
 							\item \question{It is false that it is humid} $\lnot q$
@@ -212,79 +214,78 @@
 							\item \question{It is sunny if and only if it is humid} $p \leftrightarrow q$
 							\item \question{If it is false that it is either sunny or humid (but not both), then it is not sunny} $\lnot \bigl[(p \lor q) \land \lnot (p \land q)\bigr]\rightarrow \lnot p$
 						\end{enumerate}
-					\pagebreak
 					\item \question{Construct truth tables for the following compound statements:}
 						\begin{enumerate}
 							\item \question{$[(\lnot q) \rightarrow (\lnot p)] \rightarrow (p \rightarrow q)$}
 								\begin{center}
-									\begin{tabular}{| c c | c c | c | c | c |}
-										\hline
-										\tablehead{$p$} & \tablehead{$q$} & \tablehead{$\lnot p$} & \tablehead{$\lnot q$} & \tablehead{$(\lnot q) \rightarrow (\lnot p)$} & \tablehead{$p \rightarrow q$} & \tablehead{$\bigl[(\lnot q) \rightarrow (\lnot p)\bigr] \rightarrow (p \rightarrow q)$}\\
-										\hline
+									\begin{tblr}{colspec={| c c | c c | c | c | c |}, row{1}={font=\bfseries}, row{odd[3]}={white}}
+										\toprule
+										$p$ & $q$ & $\lnot p$ & $\lnot q$ & $(\lnot q) \rightarrow (\lnot p)$ & $p \rightarrow q$ & $\bigl[(\lnot q) \rightarrow (\lnot p)\bigr] \rightarrow (p \rightarrow q)$\\
+										\midrule
 										T & T & F & F & T & T & T\\
 										T & F & F & T & F & F & T\\
 										F & T & T & F & T & T & T\\
 										F & F & T & T & T & T & T\\
-										\hline
-									\end{tabular}
+										\bottomrule
+									\end{tblr}
 								\end{center}
 							\item \question{$\Bigl[\lnot p \rightarrow \bigl(q \land (\lnot q)\bigr)\Bigr] \rightarrow p$}
 								\begin{center}
-									\begin{tabular}{|c c | c  c | c | c | c |}
-										\hline
-										\tablehead{$p$} & \tablehead{$q$} & \tablehead{$\lnot p$} & \tablehead{$\lnot q$} & \tablehead{$q \land \lnot q$} & \tablehead{$ \lnot p \rightarrow (q \land \lnot q)$} & \tablehead{$[\lnot p \rightarrow (q \land \lnot q)] \rightarrow p$}\\
-										\hline
+									\begin{tblr}{colspec={|c c | c  c | c | c | c |}, row{1}={font=\bfseries}, row{odd[3]}={white}}
+										\toprule
+										$p$ & $q$ & $\lnot p$ & $\lnot q$ & $q \land \lnot q$ & $ \lnot p \rightarrow (q \land \lnot q)$ & $[\lnot p \rightarrow (q \land \lnot q)] \rightarrow p$\\
+										\midrule
 										T & T & F & F & F & T & T\\
 										T & F & F & T & F & T & T\\
 										F & T & T & F & F & F & T\\
 										F & F & T & T & F & F & T\\
-										\hline
-									\end{tabular}
+										\bottomrule
+									\end{tblr}
 								\end{center}
 							\item \question{$p \lor (\lnot p)$}
 								\begin{center}
-									\begin{tabular}{| c | c | c |}
-										\hline
-										\tablehead{$p$} & \tablehead{$\lnot p$} & \tablehead{$p \lor \lnot p$}\\
-										\hline
+									\begin{tblr}{colspec={| c | c | c |}, row{1}={font=\bfseries}, row{odd[3]}={white}}
+										\toprule
+										$p$ & $\lnot p$ & $p \lor \lnot p$\\
+										\midrule
 										T & F & T\\
 										F & T & T\\
-										\hline
-									\end{tabular}
+										\bottomrule
+									\end{tblr}
 								\end{center}
+							\pagebreak
 							\item \question{$\bigl[p \land (p \rightarrow q)\bigr] \rightarrow q$}
 								\begin{center}
-									\begin{tabular}{| c c | c | c | c |}
-										\hline
-										\tablehead{$p$} & \tablehead{$q$} & \tablehead{$p \rightarrow q$} & \tablehead{$p \land (p \rightarrow q)$} & \tablehead{$[p \land (p \rightarrow q)] \rightarrow q$}\\
-										\hline
+									\begin{tblr}{colspec={| c c | c | c | c |}, row{1}={font=\bfseries}, row{odd[3]}={white}}
+										\toprule
+										$p$ & $q$ & $p \rightarrow q$ & $p \land (p \rightarrow q)$ & $[p \land (p \rightarrow q)] \rightarrow q$\\
+										\midrule
 										T & T & T & T & T\\
 										T & F & F & F & T\\
 										F & T & T & F & T\\
 										F & F & T & F & T\\
-										\hline
-									\end{tabular}
+										\bottomrule
+									\end{tblr}
 								\end{center}
 							\item \question{$(p \lor q) \land (\lnot p \lor \lnot q)$}
 								\begin{center}
-									\begin{tabular}{|c c | c c | c | c | c |}
-										\hline
-										\tablehead{$p$} & \tablehead{$q$} & \tablehead{$\lnot p$} & \tablehead{$\lnot q$} & \tablehead{$p \lor q$} & \tablehead{$\lnot p \lor \lnot q$} & \tablehead{$(p \lor q) \land (\lnot p \lor \lnot q)$}\\
-										\hline
+									\begin{tblr}{colspec={|c c | c c | c | c | c |}, row{1}={font=\bfseries}, row{odd[3]}={white}}
+										\toprule
+										$p$ & $q$ & $\lnot p$ & $\lnot q$ & $p \lor q$ & $\lnot p \lor \lnot q$ & $(p \lor q) \land (\lnot p \lor \lnot q)$\\
+										\midrule
 										T & T & F & F & T & F & F\\
 										T & F & F & T & T & T & T\\
 										F & T & T & F & T & T & T\\
 										F & F & T & T & F & T & F\\
-										\hline
-									\end{tabular}
+										\bottomrule
+									\end{tblr}
 								\end{center}
-							\pagebreak
 							\item \question{$\bigl(\lnot p \rightarrow [q \land r]\bigr) \lor r$}
 								\begin{center}
-									\begin{tabular}{|c c c | c | c | c | c|}
-										\hline
-										\tablehead{$p$} & \tablehead{$q$} & \tablehead{$r$} & \tablehead{$\lnot p$} & \tablehead{$q \land r$} & \tablehead{$\lnot p \rightarrow (q \land r)$} & \tablehead{$[\lnot p \rightarrow (q \land r)] \lor r$}\\
-										\hline
+									\begin{tblr}{colspec={|c c c | c | c | c | c|}, row{1}={font=\bfseries}, row{odd[3]}={white}}
+										\toprule
+										$p$ & $q$ & $r$ & $\lnot p$ & $q \land r$ & $\lnot p \rightarrow (q \land r)$ & $[\lnot p \rightarrow (q \land r)] \lor r$\\
+										\midrule
 										T & T & T & F & T & T & T\\
 										T & T & F & F & F & T & T\\
 										T & F & T & F & F & T & T\\
@@ -293,15 +294,15 @@
 										F & T & F & T & F & F & F\\
 										F & F & T & T & F & F & T\\
 										F & F & F & T & F & F & F\\
-										\hline
-									\end{tabular}
+										\bottomrule
+									\end{tblr}
 								\end{center}
 							\item \question{$\bigl(p \rightarrow [q \land r]\bigr) \leftrightarrow \bigl([p \rightarrow q] \lor [p \rightarrow r]\bigr)$}
 								\begin{center}
-									\begin{tabular}{| c c c | c | c | c | c | c | c |}
-										\hline
-										\tablehead{$p$} & \tablehead{$q$} & \tablehead{$r$} & \tablehead{$q \land r$} & \tablehead{$p \rightarrow q$} & \tablehead{$p \rightarrow r$} & \tablehead{$p \rightarrow (q \land r)$} & \tablehead{$(p \rightarrow q) \lor (p \rightarrow r)$} & \tablehead{$S$}\\
-										\hline
+									\begin{tblr}{colspec={| c c c | c | c | c | c | c | c |}, row{1}={font=\bfseries}, row{odd[3]}={white}}
+										\toprule
+										$p$ & $q$ & $r$ & $q \land r$ & $p \rightarrow q$ & $p \rightarrow r$ & $p \rightarrow (q \land r)$ & $(p \rightarrow q) \lor (p \rightarrow r)$ & $S$\\
+										\midrule
 										T & T & T & T & T & T & T & T & T\\
 										T & T & F & F & T & F & F & T & F\\
 										T & F & T & F & F & T & F & T & F\\
@@ -310,8 +311,8 @@
 										F & T & F & F & T & T & T & T & T\\
 										F & F & T & F & T & T & T & T & T\\
 										F & F & F & F & T & T & T & T & T\\
-										\hline
-									\end{tabular}
+										\bottomrule
+									\end{tblr}
 								\end{center}
 								$S$ is the statement.
 						\end{enumerate}
@@ -326,14 +327,14 @@
 				\begin{example}[width=0.55\textwidth]
 					The statement $p \lor \lnot p$ is always true.
 					\begin{center}
-						\begin{tabular}{| c c | c |}
-							\hline
-							$\mathbf{p}$ & $\mathbf{\lnot p}$ & $\mathbf{p \lor \lnot p}$\\
-							\hline
+						\begin{tblr}{colspec={| c c | c |}, row{1}={font=\bfseries}, row{odd[3]}={white}}
+							\toprule
+							$p$ & $\lnot p$ & $p \lor \lnot p$\\
+							\midrule
 							T & F & T\\
 							F & T & T\\
-							\hline
-						\end{tabular}
+							\bottomrule
+						\end{tblr}
 					\end{center}
 				\end{example}
 			\subsection{Contradiction}
@@ -343,14 +344,14 @@
 				\begin{example}[width=0.55\textwidth]
 					The statement $p \land \lnot p$ is always false.
 					\begin{center}
-						\begin{tabular}{| c c | c |}
-							\hline
-							$\mathbf{p}$ & $\mathbf{\lnot p}$ & $\mathbf{p \land \lnot p}$\\
-							\hline
+						\begin{tblr}{colspec={| c c | c |}, row{1}={font=\bfseries}, row{odd[3]}={white}}
+							\toprule
+							$p$ & $\lnot p$ & $p \land \lnot p$\\
+							\midrule
 							T & F & F\\
 							F & T & F\\
-							\hline
-						\end{tabular}
+							\bottomrule
+						\end{tblr}
 					\end{center}
 				\end{example}
 			\subsection{Logical Equivalence}
@@ -360,16 +361,16 @@
 				\begin{example}[width=0.8\textwidth]
 					Take the declarative statement $(p \lor q) \leftrightarrow (q \lor p)$.
 					\begin{center}
-						\begin{tabular}{| c c | c | c | c |}
-							\hline
-							$\mathbf{p}$ & $\mathbf{q}$ & $\mathbf{p \lor q}$ & $\mathbf{q \lor p}$ & $\mathbf{(p \lor q) \leftrightarrow (q \lor p)}$\\
-							\hline
+						\begin{tblr}{colspec={| c c | c | c | c |}, row{1}={font=\bfseries}, row{odd[3]}={white}}
+							\toprule
+							$p$ & $q$ & $p \lor q$ & $q \lor p$ & $(p \lor q) \leftrightarrow (q \lor p)$\\
+							\midrule
 							T & T & T & T & T \\
 							T & F & T & T & T \\
 							F & T & T & T & T \\
 							F & F & F & F & T \\
-							\hline
-						\end{tabular}
+							\bottomrule
+						\end{tblr}
 					\end{center}
 					As $(p \lor q) \leftrightarrow (q \lor p)$ is a tautology, the statements are logically equivalent. That is:
 						\begin{align*}
@@ -456,16 +457,16 @@
 						\end{proof}
 					\item \question{Suppose we want to define a new connective, the \emph{exclusive disjunction}, also called the \emph{``exclusive or''}, which will be written $+$. By $p + q$, we denote ``$p$ or $q$, but not both''. Construct a truth table for this connective.}
 						\begin{center}
-							\begin{tabular}{|c c | c|}
-								\hline
-								\tablehead{$p$} & \tablehead{$q$} & \tablehead{$p + q$}\\
-								\hline
+							\begin{tblr}{colspec={|c c | c|}, row{1}={font=\bfseries}, row{odd[3]}={white}}
+								\toprule
+								$p$ & $q$ & $p + q$\\
+								\midrule
 								T & T & F\\
 								T & F & T\\
 								F & T & T\\
 								F & F & F\\
-								\hline
-							\end{tabular}
+								\bottomrule
+							\end{tblr}
 						\end{center}
 					\pagebreak
 					\item \question{Find a statement that is logically equivalent to $\lnot (p \lor \lnot q)$}

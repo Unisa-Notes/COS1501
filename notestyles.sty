@@ -63,6 +63,12 @@
 % Bold Math
 \let\oldtextbf\textbf
 \renewcommand{\textbf}[1]{\oldtextbf{\boldmath #1}}
+\makeatletter
+\g@addto@macro\bfseries{\boldmath}
+\makeatother
+\makeatletter
+\g@addto@macro\normalfont{\unboldmath}
+\makeatother
 
 % LaTex Tooling
 \RequirePackage{etoolbox}
@@ -157,10 +163,15 @@
 \newcommand{\moveup}{\rule{0pt}{\baselineskip} \vspace*{-2.2\abovedisplayskip}}
 \newcommand{\questionspace}{\vspace*{0.4em}}
 
+% Tables
+\RequirePackage{tabularray}
+\UseTblrLibrary{booktabs}
+\UseTblrLibrary{varwidth}
+\SetTblrInner[tblr]{measure=vbox}
+
 % Questions, Concepts and Emphasis Styling
 \newcommand{\question}[1]{\textbf{#1}\questionspace}
 \newcommand{\concept}[1]{\textbf{#1}}
-\newcommand{\tablehead}[1]{\textbf{#1}}
 
 % TOC Page Number Spacing
 \makeatletter

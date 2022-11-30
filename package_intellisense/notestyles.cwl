@@ -32,4 +32,3 @@
 \question{text}
 \rulebookend
 \rulechapterend
-\tablehead{text}

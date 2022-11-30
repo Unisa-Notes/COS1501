@@ -45,6 +45,8 @@ TeX packages that have been used are:
 - [hyperref](https://ctan.org/pkg/hyperref): Add PDF bookmarks
 - [parskip](https://ctan.org/pkg/parskip): Set proper default values for paragraph separation
 - [subfiles](https://ctan.org/pkg/subfiles): Allow `tex` files to be written separately, but built together
+- [tabularray](https://ctan.org/pkg/tabularray): Better table display and management.
+  * Also uses libraries to simulate [booktabs](https://ctan.org/pkg/booktabs) and [varwidth](https://ctan.org/pkg/varwidth)
 - [tcolorbox](https://ctan.org/pkg/tcolorbox), [adjustbox](https://ctan.org/pkg/adjustbox): Create colored boxes for different environments
 - [tikz](https://ctan.org/pkg/tikz): Used for images
 - [venndiagram](https://ctan.org/pkg/venndiagram): Easier support for Venn Diagram display than using pure tikz
@@ -63,7 +65,6 @@ For intellisense, a list of the commands is added in the [package_intellisense](
 - `question {text}`: Mark specific text as a question. Puts the text in bold, and adds extra spacing.
 - `rulebookend`: Insert a decorative horizontal line at the end of the text.
 - `rulechapterend`: Insert a decorative horizontal line at the end of each unit.
-- `tablehead {text}`: Mark specific text as a heading in a table. Puts the text in bold.
 
 #### Environments
 - `definition {title}`: Coloured box used for highlighting important concepts.
