@@ -37,34 +37,33 @@
 					Let $A = \{a, b, c, d\}$.\\
 					A binary operation called $+$ (NB: This is \emph{not} addition) could be written as follows:
 					\begin{center}
-						\begin{tabular}{|c|c c c c|}
-							\hline
-							\tablehead{$+$} & \tablehead{a} & \tablehead{b} & \tablehead{c} & \tablehead{d}\\
-							\hline
-							\tablehead{a} & a & b & c & d \\
-							\tablehead{b} & b & c & d & a \\
-							\tablehead{c} & c & d & a & b \\
-							\tablehead{d} & d & a & b & c \\
-							\hline
-						\end{tabular}
+						\begin{tblr}{colspec={|c|cccc|}, row{1}={font=\bfseries}, column{1}={font=\bfseries}}
+							\toprule
+							$+$ & a & b & c & d\\
+							\midrule
+							a & a & b & c & d \\
+							b & b & c & d & a \\
+							c & c & d & a & b \\
+							d & d & a & b & c \\
+							\bottomrule
+						\end{tblr}
 					\end{center}
 					This would be read (row, column). +(b, d) = a.
 					\begin{center}
-						\begin{tabular}{|c|c c c >{\columncolor{Lavender}}c|}
-							\hline
-							\tablehead{$+$} & \tablehead{a} & \tablehead{b} & \tablehead{c} & \tablehead{d}\\
-							\hline
-							\tablehead{a} & a & b & c & d \\
-							\rowcolor{Lavender}
-							\tablehead{b} & b & c & d & \cellcolor{Orchid}a \\
-							\tablehead{c} & c & d & a & b \\
-							\tablehead{d} & d & a & b & c \\
-							\hline
-						\end{tabular}
+						\begin{tblr}{colspec={|c|cccc|}, row{1}={font=\bfseries}, column{1}={font=\bfseries}, row{3}={Lavender}, column{5}={Lavender}, cell{3}{5}={Orchid}}
+							\toprule
+							$+$ & a & b & c & d\\
+							\midrule
+							a & a & b & c & d \\
+							b & b & c & d & a \\
+							c & c & d & a & b \\
+							d & d & a & b & c \\
+							\bottomrule
+						\end{tblr}
 					\end{center}
 					\begin{sidenote}{Extra Notes for this operation}
 						Applying concepts from later to the operation:
-						\begin{description}
+						\begin{description}[nosep]
 							\item[Identity] This operation has an identity element, which is a.
 							\item[Commutativity] This operation is commutative.
 							\item[Associativity] This operation is associative.
@@ -72,20 +71,20 @@
 					\end{sidenote}
 					Another binary operation, called $\bullet$ could be written as follows:
 					\begin{center}
-						\begin{tabular}{|c|c c c c|}
-							\hline
-							\tablehead{$\bullet$} & \tablehead{a} & \tablehead{b} & \tablehead{c} & \tablehead{d}\\
-							\hline
-							\tablehead{a} & a & b & c & d \\
-							\tablehead{b} & b & a & d & c \\
-							\tablehead{c} & c & d & a & b \\
-							\tablehead{d} & d & c & b & a \\
-							\hline
-						\end{tabular}
+						\begin{tblr}{colspec={|c|c c c c|}, row{1}={font=\bfseries}, column{1}={font=\bfseries}}
+							\toprule
+							$\bullet$ & a & b & c & d\\
+							\midrule
+							a & a & b & c & d \\
+							b & b & a & d & c \\
+							c & c & d & a & b \\
+							d & d & c & b & a \\
+							\bottomrule
+						\end{tblr}
 					\end{center}
 					\begin{sidenote}{Extra Notes for this operation}
 						Applying concepts from later to the operation:
-						\begin{description}
+						\begin{description}[nosep]
 							\item[Identity] This operation has an identity element, which is a.
 							\item[Commutativity] This operation is commutative.
 							\item[Associativity] This operation is associative.
@@ -102,14 +101,14 @@
 				\end{align*}
 				In table form this would be:
 				\begin{center}
-					\begin{tabular}{|c|c c|}
-						\hline
-						\tablehead{$*$} & \tablehead{$1$} & \tablehead{$2$}\\
-						\hline
-						\tablehead{$1$} & 1 & 2 \\
-						\tablehead{$2$} & 2 & 1 \\
-						\hline
-					\end{tabular}
+					\begin{tblr}{colspec={|c|c c|}, row{1}={font=\bfseries}, column{1}={font=\bfseries}}
+						\toprule
+						$*$ & $1$ & $2$\\
+						\midrule
+						$1$ & 1 & 2 \\
+						$2$ & 2 & 1 \\
+						\bottomrule
+					\end{tblr}
 				\end{center}
 			\end{indentparagraph}
 			\subsection{Commutative Binary Operation}
@@ -164,47 +163,47 @@
 										\triangle = \Bigl\{\bigl((2, 2), 2\bigr), \bigl((2, 7), 2\bigr), \bigl((7, 2), 2\bigr), \bigl((7, 7), 7\bigr)\Bigr\}
 									\end{align*}
 									\begin{center}
-										\begin{tabular}{|c | c c|}
-											\hline
-											\tablehead{$\triangle$} & \tablehead{$2$} & \tablehead{$7$}\\
-											\hline
-											\tablehead{$2$} & 2 & 2\\
-											\tablehead{$7$} & 2 & 7\\
-											\hline
-										\end{tabular}
+										\begin{tblr}{colspec={|c | c c|}, row{1}={font=\bfseries}, column{1}={font=\bfseries}}
+											\toprule
+											$\triangle$ & $2$ & $7$\\
+											\midrule
+											$2$ & 2 & 2\\
+											$7$ & 2 & 7\\
+											\bottomrule
+										\end{tblr}
 									\end{center}
 									\begin{align*}
 										\triangledown = \Bigl\{\bigl((2, 2), 2\bigr), \bigl((2, 7), 7\bigr), \bigl((7, 2), 7\bigr), \bigl((7, 7), 7\bigr)\Bigr\}
 									\end{align*}
 									\begin{center}
-										\begin{tabular}{|c | c c|}
-											\hline
-											\tablehead{$\triangledown$} & \tablehead{$2$} & \tablehead{$7$}\\
-											\hline
-											\tablehead{$2$} & 2 & 7\\
-											\tablehead{$7$} & 7 & 7\\
-											\hline
-										\end{tabular}
+										\begin{tblr}{colspec={|c | c c|}, row{1}={font=\bfseries}, column{1}={font=\bfseries}}
+											\toprule
+											$\triangledown$ & $2$ & $7$\\
+											\midrule
+											$2$ & 2 & 7\\
+											$7$ & 7 & 7\\
+											\bottomrule
+										\end{tblr}
 									\end{center}
 									\begin{align*}
 										\square = \Bigl\{\bigl((2, 2), 2\bigr), \bigl((2, 7), 2\bigr), \bigl((7, 2), 7\bigr), \bigl((7, 7), 7\bigr)\Bigr\}
 									\end{align*}
 									\begin{center}
-										\begin{tabular}{|c | c c|}
-											\hline
-											\tablehead{$\square$} & \tablehead{$2$} & \tablehead{$7$}\\
-											\hline
-											\tablehead{$2$} & 2 & 2\\
-											\tablehead{$7$} & 7 & 7\\
-											\hline
-										\end{tabular}
+										\begin{tblr}{colspec={|c | c c|}, row{1}={font=\bfseries}, column{1}={font=\bfseries}}
+											\toprule
+											$\square$ & $2$ & $7$\\
+											\midrule
+											$2$ & 2 & 2\\
+											$7$ & 7 & 7\\
+											\bottomrule
+										\end{tblr}
 									\end{center}
+								\pagebreak
 								\item \question{Check the three operations for commutativity and associativity.}
 									\begin{description}
 										\item[Commutativity] $\triangle$ is commutative, as it is symmetric about the diagonal.\\
 											$\triangledown$ is commutative, as it is symmetric about the diagonal.\\
 											$\square$ is \emph{not} commutative.
-										\tcbbreak
 										\item[Associativity] $\triangle$ is associative.
 											\begin{alignat*}{3}
 												x = 2, y = 2, z = 2 \qquad & (2 \triangle 2) \triangle 2 &= 2 \qquad & 2 \triangle (2 \triangle 2) &= 2\\
@@ -220,24 +219,24 @@
 									\end{description}
 								\item \question{Provide $2$ binary operations on $X = \{a, b, c\}$ and check them for commutativity and associativity.}
 									\begin{center}
-										\begin{tabular}[t]{| c | c c c |}
-											\hline
-											\tablehead{$\bigstar$} & \tablehead{a} & \tablehead{b} & \tablehead{c}\\
-											\hline
-											\tablehead{a} & a & a & a\\ 
-											\tablehead{b} & b & b & b\\ 
-											\tablehead{c} & c & c & c\\
-											\hline
-										\end{tabular}
-										\begin{tabular}[t]{| c | c c c |}
-											\hline
-											\tablehead{$\heartsuit$} & \tablehead{a} & \tablehead{b} & \tablehead{c}\\
-											\hline
-											\tablehead{a} & a & a & a\\ 
-											\tablehead{b} & a & a & a\\ 
-											\tablehead{c} & a & a & a\\
-											\hline
-										\end{tabular}
+										\begin{tblr}{colspec={| c | c c c |}, row{1}={font=\bfseries}, column{1}={font=\bfseries}}
+											\toprule
+											$\bigstar$ & a & b & c\\
+											\midrule
+											a & a & a & a\\ 
+											b & b & b & b\\ 
+											c & c & c & c\\
+											\bottomrule
+										\end{tblr}
+										\begin{tblr}{colspec={| c | c c c |}, row{1}={font=\bfseries}, column{1}={font=\bfseries}}
+											\toprule
+											$\heartsuit$ & a & b & c\\
+											\midrule
+											a & a & a & a\\ 
+											b & a & a & a\\ 
+											c & a & a & a\\
+											\bottomrule
+										\end{tblr}
 									\end{center}
 									\begin{description}
 										\item[Commutativity] $\bigstar$ is not commutative.\\
