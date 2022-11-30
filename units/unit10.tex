@@ -76,31 +76,31 @@
 				\begin{exercise}{Self Assessment Exercise \thechapter.4}
 					\question{Prove by means of truth tables that\\ $\lnot (p \land q) \equiv (\lnot p) \lor (\lnot q)$}
 					\begin{center}
-						\begin{tabular}{| c c | c c | c | c | c | c|}
-							\hline
-							\tablehead{$p$} & \tablehead{$q$} & \tablehead{$\lnot p$} & \tablehead{$\lnot q$} & \tablehead{$p \land q$} & \tablehead{$\lnot (p \land q)$} & \tablehead{$(\lnot p) \lor (\lnot q)$} & \tablehead{$\lnot (p \land q) \leftrightarrow (\lnot p) \lor (\lnot q)$}\\
-							\hline
+						\begin{tblr}{colspec={| c c | c c | c | c | c | c|}, row{1}={font=\bfseries}, row{odd[3]}={white}}
+							\toprule
+							$p$ & $q$ & $\lnot p$ & $\lnot q$ & $p \land q$ & $\lnot (p \land q)$ & $(\lnot p) \lor (\lnot q)$ & $\lnot (p \land q) \leftrightarrow (\lnot p) \lor (\lnot q)$\\
+							\midrule
 							T & T & F & F & T & F & F & T\\
 							T & F & F & T & F & T & T & T\\
 							F & T & T & F & F & T & T & T\\
 							F & F & T & T & F & T & T & T\\
-							\hline
-						\end{tabular}
+							\bottomrule
+						\end{tblr}
 					\end{center}
 				\end{exercise}
 				\begin{exercise}{Self Assessment Exercise \thechapter.5}
 					\question{Prove by means of truth tables that\\ $\lnot (p \lor q) \equiv (\lnot p) \land (\lnot q)$}
 					\begin{center}
-						\begin{tabular}{| c c | c c | c | c | c | c|}
-							\hline
-							\tablehead{$p$} & \tablehead{$q$} & \tablehead{$\lnot p$} & \tablehead{$\lnot q$} & \tablehead{$p \lor q$} & \tablehead{$\lnot (p \lor q)$} & \tablehead{$(\lnot p) \land (\lnot q)$} & \tablehead{$\lnot (p \lor q) \leftrightarrow (\lnot p) \land (\lnot q)$}\\
-							\hline
+						\begin{tblr}{colspec={| c c | c c | c | c | c | c|}, row{1}={font=\bfseries}, row{odd[3]}={white}}
+							\toprule
+							$p$ & $q$ & $\lnot p$ & $\lnot q$ & $p \lor q$ & $\lnot (p \lor q)$ & $(\lnot p) \land (\lnot q)$ & $\lnot (p \lor q) \leftrightarrow (\lnot p) \land (\lnot q)$\\
+							\midrule
 							T & T & F & F & T & F & F & T\\
 							T & F & F & T & T & F & F & T\\
 							F & T & T & F & T & F & F & T\\
 							F & F & T & T & F & T & T & T\\
-							\hline
-						\end{tabular}
+							\bottomrule
+						\end{tblr}
 					\end{center}
 				\end{exercise}
 			\subsection{Predicate}
