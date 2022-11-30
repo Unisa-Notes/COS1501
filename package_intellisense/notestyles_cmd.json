@@ -14,16 +14,6 @@
     "package": "notestyles",
     "snippet": "concept{${1:text}}"
   },
-  "moveup": {
-    "command": "moveup",
-    "package": "notestyles",
-    "snippet": "moveup"
-  },
-  "question{}": {
-    "command": "question{text}",
-    "package": "notestyles",
-    "snippet": "question{${1:text}}"
-  },
   "rulebookend": {
     "command": "rulebookend",
     "package": "notestyles",

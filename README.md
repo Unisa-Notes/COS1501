@@ -61,8 +61,6 @@ For intellisense, a list of the commands is added in the [package_intellisense](
 #### Commands
 - `addfile [input] {<filename>}`: Include or input the file into the document. By default, it includes the file, the option `input` can be given to input it instead.
 - `concept {text}`: Mark specific text as a concept to be learned. Puts the text in bold.
-- `moveup`: Move environments that add extra vertical space up.
-- `question {text}`: Mark specific text as a question. Puts the text in bold, and adds extra spacing.
 - `rulebookend`: Insert a decorative horizontal line at the end of the text.
 - `rulechapterend`: Insert a decorative horizontal line at the end of each unit.
 

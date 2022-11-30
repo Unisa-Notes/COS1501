@@ -28,7 +28,5 @@
 \end{vennthree}[options]
 \end{venntwo}
 \end{venntwo}[options]
-\moveup
-\question{text}
 \rulebookend
 \rulechapterend
