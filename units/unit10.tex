@@ -60,48 +60,58 @@
 					This statement is false.
 				\end{example}
 				\begin{exercise}{Self Assessment Exercise \thechapter.3}
-					\question{Write down the English equivalent of each of the following statements, and give an opinion on whether the statement is true.}
-					\begin{enumerate}[label=(\alph*)]
-						\item \question{$\exists y \in \mathbb{Q}, y = \sqrt{2}$}\\
-							There exists some rational number that is the square root of 2. This statement is false, as $\sqrt{2}$ is an irrational number.
-						\item \question{$\forall x \in \mathbb{R}, 2x < x^{2}$}\\
-							For all real numbers $x$, $2x$ is less than $x^{2}$. This statement is false, as $2(0) \not < 0^{2}$
-						\item \question{$\forall x \in \mathbb{Z}, x > 0$}\\
-							Every integer is greater than $0$. This statement is false, as $-1$ and $0$ are both integers.
-						\item \question{$\exists x \in \mathbb{Z}^{+}, x = 0$}\\
-							There exists a positive integer that is equal to $0$. This statement is false, as $0$ is not a positive integer.
-					\end{enumerate}
+					\begin{questions}
+						\item Write down the English equivalent of each of the following statements, and give an opinion on whether the statement is true.
+							\begin{questions}[label=(\alph*)]
+								\item $\exists y \in \mathbb{Q}, y = \sqrt{2}$\\
+									{\answer There exists some rational number that is the square root of 2. This statement is false, as $\sqrt{2}$ is an irrational number.}
+								\item $\forall x \in \mathbb{R}, 2x < x^{2}$\\
+									{\answer For all real numbers $x$, $2x$ is less than $x^{2}$. This statement is false, as $2(0) \not < 0^{2}$}
+								\item $\forall x \in \mathbb{Z}, x > 0$\\
+									{\answer Every integer is greater than $0$. This statement is false, as $-1$ and $0$ are both integers.}
+								\item $\exists x \in \mathbb{Z}^{+}, x = 0$\\
+									{\answer There exists a positive integer that is equal to $0$. This statement is false, as $0$ is not a positive integer.}
+							\end{questions}
+					\end{questions}
 				\end{exercise}
 				\pagebreak
 				\begin{exercise}{Self Assessment Exercise \thechapter.4}
-					\question{Prove by means of truth tables that\\ $\lnot (p \land q) \equiv (\lnot p) \lor (\lnot q)$}
-					\begin{center}
-						\begin{tblr}{colspec={| c c | c c | c | c | c | c|}, row{1}={font=\bfseries}, row{odd[3]}={white}}
-							\toprule
-							$p$ & $q$ & $\lnot p$ & $\lnot q$ & $p \land q$ & $\lnot (p \land q)$ & $(\lnot p) \lor (\lnot q)$ & $\lnot (p \land q) \leftrightarrow (\lnot p) \lor (\lnot q)$\\
-							\midrule
-							T & T & F & F & T & F & F & T\\
-							T & F & F & T & F & T & T & T\\
-							F & T & T & F & F & T & T & T\\
-							F & F & T & T & F & T & T & T\\
-							\bottomrule
-						\end{tblr}
-					\end{center}
+					\begin{questions}
+						\item Prove by means of truth tables that\\ $\lnot (p \land q) \equiv (\lnot p) \lor (\lnot q)$
+							\begin{answer}
+								\begin{center}
+									\begin{tblr}{colspec={| c c | c c | c | c | c | c|}, row{1}={font=\bfseries}, row{odd[3]}={white}}
+										\toprule
+										$p$ & $q$ & $\lnot p$ & $\lnot q$ & $p \land q$ & $\lnot (p \land q)$ & $(\lnot p) \lor (\lnot q)$ & $\lnot (p \land q) \leftrightarrow (\lnot p) \lor (\lnot q)$\\
+										\midrule
+										T & T & F & F & T & F & F & T\\
+										T & F & F & T & F & T & T & T\\
+										F & T & T & F & F & T & T & T\\
+										F & F & T & T & F & T & T & T\\
+										\bottomrule
+									\end{tblr}
+								\end{center}
+							\end{answer}
+					\end{questions}
 				\end{exercise}
 				\begin{exercise}{Self Assessment Exercise \thechapter.5}
-					\question{Prove by means of truth tables that\\ $\lnot (p \lor q) \equiv (\lnot p) \land (\lnot q)$}
-					\begin{center}
-						\begin{tblr}{colspec={| c c | c c | c | c | c | c|}, row{1}={font=\bfseries}, row{odd[3]}={white}}
-							\toprule
-							$p$ & $q$ & $\lnot p$ & $\lnot q$ & $p \lor q$ & $\lnot (p \lor q)$ & $(\lnot p) \land (\lnot q)$ & $\lnot (p \lor q) \leftrightarrow (\lnot p) \land (\lnot q)$\\
-							\midrule
-							T & T & F & F & T & F & F & T\\
-							T & F & F & T & T & F & F & T\\
-							F & T & T & F & T & F & F & T\\
-							F & F & T & T & F & T & T & T\\
-							\bottomrule
-						\end{tblr}
-					\end{center}
+					\begin{questions}
+						\item Prove by means of truth tables that\\ $\lnot (p \lor q) \equiv (\lnot p) \land (\lnot q)$
+							\begin{answer}
+								\begin{center}
+									\begin{tblr}{colspec={| c c | c c | c | c | c | c|}, row{1}={font=\bfseries}, row{odd[3]}={white}}
+										\toprule
+										$p$ & $q$ & $\lnot p$ & $\lnot q$ & $p \lor q$ & $\lnot (p \lor q)$ & $(\lnot p) \land (\lnot q)$ & $\lnot (p \lor q) \leftrightarrow (\lnot p) \land (\lnot q)$\\
+										\midrule
+										T & T & F & F & T & F & F & T\\
+										T & F & F & T & T & F & F & T\\
+										F & T & T & F & T & F & F & T\\
+										F & F & T & T & F & T & T & T\\
+										\bottomrule
+									\end{tblr}
+								\end{center}
+							\end{answer}
+					\end{questions}
 				\end{exercise}
 			\subsection{Predicate}
 				\begin{definition}{Predicate}
@@ -125,54 +135,71 @@
 			\end{example}
 			\pagebreak
 			\begin{exercise}{Self Assessment Exercise \thechapter.6}
-				\question{Determine the negations of the following quantified statements: (Show all steps.)}
-				\begin{enumerate}[label=(\alph*)]
-					\item \question{$\forall x \in \mathbb{Z}^{+}, x > 3$}
-						\begin{align*}
-							\lnot (\forall x \in \mathbb{Z}^{+}, x > 3) &\equiv \exists x \in \mathbb{Z}^{+}, \lnot (x > 3)\\
-							& \equiv \exists x \in \mathbb{Z}^{+}, x \leq 3
-						\end{align*}
-					\item \question{$\exists x \in \mathbb{R}, 2x = x^{2}$}
-						\begin{align*}
-							\lnot (\exists x \in \mathbb{R}, 2x = x^{2}) & \equiv \forall x \in \mathbb{R}, \lnot(2x = x^{2})\\
-							& \equiv \forall x \in \mathbb{R}, 2x \neq x^{2}
-						\end{align*}
-					\item \question{$\forall x \in \mathbb{Z}, (x > 0) \lor (x^{2} > 0)$}
-						\begin{align*}
-							\lnot \bigl(\forall x \in \mathbb{Z}, (x > 0) \lor (x^{2} > 0)\bigr) & \equiv \exists x \in \mathbb{Z}, \lnot \bigl((x > 0) \lor (x^{2} > 0)\bigr)\\
-							& \equiv \exists x \in \mathbb{Z}, \lnot (x > 0) \land \lnot (x^{2} > 0)\\
-							& \equiv \exists x \in \mathbb{Z}, (x \leq 0) \land (x^{2} \leq 0)
-						\end{align*}
-					\item \question{$\exists y \in \mathbb{Z}^{+}, (y \leq 10) \land (y \neq 0)$}
-						\begin{align*}
-							\lnot \bigl(\exists y \in \mathbb{Z}^{+}, (y \leq 10) \land (y \neq 0)\bigr) & \equiv \forall y \in \mathbb{Z}^{+}, \lnot \bigl((y \leq 10) \land (y \neq 0)\bigr)\\
-							& \equiv \forall y \in \mathbb{Z}^{+}, \lnot (y \leq 10) \lor \lnot (y \neq 0)\\
-							& \equiv \forall y \in \mathbb{Z}^{+}, (y > 10) \lor (y = 0)
-						\end{align*}
-					\item \question{$\exists x \in A, P(x) \land Q(x)$}
-						\begin{align*}
-							\lnot \bigl(\exists x \in A, P(x) \lor Q(x)\bigr) & \equiv \forall x \in A, \lnot \bigl(P(x) \lor Q(x)\bigr)\\
-							& \equiv \forall x \in A, \lnot P(x) \land \lnot Q(x)
-						\end{align*}
-					\item \question{$\forall x \in \mathbb{Z}^{+}, (x \leq 3) \rightarrow (x^{3} \geq 1)$}
-						\begin{align*}
-							\lnot \bigl(\forall x \in \mathbb{Z}^{+} (x \leq 3) \rightarrow (x^{3} \geq 1)\bigr) &\equiv \lnot \bigl(\forall x \in \mathbb{Z}^{+}, \lnot (x \leq 3) \lor (x^{3} \geq 1)\bigr)\\
-							& \equiv \exists x \in \mathbb{Z}^{+}, \lnot \bigl(\lnot (x \leq 3) \lor (x^{3} \geq 1)\bigr)\\
-							& \equiv \exists x \in \mathbb{Z}^{+}, \lnot \lnot (x \leq 3) \land \lnot (x^{3} \geq 1)\\
-							& \equiv \exists x \in \mathbb{Z}^{+}, (x \leq 3) \land \lnot (x^{3} \geq 1)\\
-							& \equiv \exists x \in \mathbb{Z}^{+}, (x \leq 3) \land (x^{3} < 1)
-						\end{align*}
-				\end{enumerate}
+				\begin{questions}
+					\item Determine the negations of the following quantified statements: (Show all steps.)
+						\begin{questions}
+							\item $\forall x \in \mathbb{Z}^{+}, x > 3$
+								\begin{answer}
+									\begin{align*}
+										\lnot (\forall x \in \mathbb{Z}^{+}, x > 3) &\equiv \exists x \in \mathbb{Z}^{+}, \lnot (x > 3)\\
+										& \equiv \exists x \in \mathbb{Z}^{+}, x \leq 3
+									\end{align*}
+								\end{answer}
+							\item $\exists x \in \mathbb{R}, 2x = x^{2}$
+								\begin{answer}
+									\begin{align*}
+										\lnot (\exists x \in \mathbb{R}, 2x = x^{2}) & \equiv \forall x \in \mathbb{R}, \lnot(2x = x^{2})\\
+										& \equiv \forall x \in \mathbb{R}, 2x \neq x^{2}
+									\end{align*}
+								\end{answer}
+							\item $\forall x \in \mathbb{Z}, (x > 0) \lor (x^{2} > 0)$
+								\begin{answer}
+									\begin{align*}
+										\lnot \bigl(\forall x \in \mathbb{Z}, (x > 0) \lor (x^{2} > 0)\bigr) & \equiv \exists x \in \mathbb{Z}, \lnot \bigl((x > 0) \lor (x^{2} > 0)\bigr)\\
+										& \equiv \exists x \in \mathbb{Z}, \lnot (x > 0) \land \lnot (x^{2} > 0)\\
+										& \equiv \exists x \in \mathbb{Z}, (x \leq 0) \land (x^{2} \leq 0)
+									\end{align*}
+								\end{answer}
+							\item $\exists y \in \mathbb{Z}^{+}, (y \leq 10) \land (y \neq 0)$
+								\begin{answer}
+									\begin{align*}
+										\lnot \bigl(\exists y \in \mathbb{Z}^{+}, (y \leq 10) \land (y \neq 0)\bigr) & \equiv \forall y \in \mathbb{Z}^{+}, \lnot \bigl((y \leq 10) \land (y \neq 0)\bigr)\\
+										& \equiv \forall y \in \mathbb{Z}^{+}, \lnot (y \leq 10) \lor \lnot (y \neq 0)\\
+										& \equiv \forall y \in \mathbb{Z}^{+}, (y > 10) \lor (y = 0)
+									\end{align*}
+								\end{answer}
+							\item $\exists x \in A, P(x) \land Q(x)$
+								\begin{answer}
+									\begin{align*}
+										\lnot \bigl(\exists x \in A, P(x) \lor Q(x)\bigr) & \equiv \forall x \in A, \lnot \bigl(P(x) \lor Q(x)\bigr)\\
+										& \equiv \forall x \in A, \lnot P(x) \land \lnot Q(x)
+									\end{align*}
+								\end{answer}
+							\item $\forall x \in \mathbb{Z}^{+}, (x \leq 3) \rightarrow (x^{3} \geq 1)$
+								\begin{answer}
+									\begin{align*}
+										\lnot \bigl(\forall x \in \mathbb{Z}^{+} (x \leq 3) \rightarrow (x^{3} \geq 1)\bigr) &\equiv \lnot \bigl(\forall x \in \mathbb{Z}^{+}, \lnot (x \leq 3) \lor (x^{3} \geq 1)\bigr)\\
+										& \equiv \exists x \in \mathbb{Z}^{+}, \lnot \bigl(\lnot (x \leq 3) \lor (x^{3} \geq 1)\bigr)\\
+										& \equiv \exists x \in \mathbb{Z}^{+}, \lnot \lnot (x \leq 3) \land \lnot (x^{3} \geq 1)\\
+										& \equiv \exists x \in \mathbb{Z}^{+}, (x \leq 3) \land \lnot (x^{3} \geq 1)\\
+										& \equiv \exists x \in \mathbb{Z}^{+}, (x \leq 3) \land (x^{3} < 1)
+									\end{align*}
+								\end{answer}
+						\end{questions}
+				\end{questions}
 			\end{exercise}
 			\pagebreak
 			\begin{exercise}{Self Assessment Exercise \thechapter.7}
-				\question{For each of (a) to (d) in the previous exercise, determine whether the original statement is true, whether the negation is true, or if neither of the two is true.}
-				\begin{enumerate}[label=(\alph*)]
-					\item The original statement is false, as $1$, $2$ and $3$ are positive integers. The negation is true.
-					\item The original statement is true, as when $x = 2$, $2(2) = (2)^{2}$. The negation is false, as there is an element.
-					\item The original statement is false, as $0 \not > 0$ and $0^{2} \not > 0$. The negation is true, if $x = 0$.
-					\item The original statement is true for any positive integer less than 10. The negation is false, as not all positive integers are greater than 10.
-				\end{enumerate}
+				
+				\begin{questions}
+					\item For each of (a) to (d) in the previous exercise, determine whether the original statement is true, whether the negation is true, or if neither of the two is true.
+					\begin{questions}[label=(\alph*)]
+						\item {\answer The original statement is false, as $1$, $2$ and $3$ are positive integers. The negation is true.}
+						\item {\answer The original statement is true, as when $x = 2$, $2(2) = (2)^{2}$. The negation is false, as there is an element.}
+						\item {\answer The original statement is false, as $0 \not > 0$ and $0^{2} \not > 0$. The negation is true, if $x = 0$.}
+						\item {\answer The original statement is true for any positive integer less than 10. The negation is false, as not all positive integers are greater than 10.}
+					\end{questions}
+				\end{questions}
 			\end{exercise}
 		\section{Proof Strategies}
 				Given some statement ``if $p$, then $q$'', there are different ways to prove it.
@@ -340,238 +367,248 @@
 					\end{proof}
 				\end{example}
 				\begin{exercise}{Self Assessment Exercise \thechapter.10}
-					\begin{enumerate}
-						\item \question{Prove each of the following statements by direct proof, contrapositive and contradiction respectively.}
-							\begin{enumerate}[label=(\alph*)]
-								\item \question{If $x^{2} - 3x + 2 < 0$, then $x > 0$.}
-									\begin{proof}[Direct Proof]
-										Assume that $x^{2} - 3x + 2 < 0$ is true. That is $(x - 1)(x - 2) < 0$, by factorisation.\\
-										So either
-										\begin{enumerate}[label=(\roman*)]
-											\item 
-												$ \begin{alignedat}[t]{3}
-													& & (x - 1) &< 0 \quad \text{ and } \quad (x - 2) \: &> 0\\
-													& \Rightarrow & x &< 1 \quad \text{ and } \quad x &> 2 
-												\end{alignedat} $
-												\begin{indentparagraph}
-													There is no $x$ that this can be true for.
-												\end{indentparagraph}
-											\item 
-												$ \begin{alignedat}[t]{3}
-													& & (x - 1) &> 0 \quad \text{ and } \quad (x - 2) \: &< 0\\
-													& \Rightarrow & x &> 1 \quad \text{ and } \quad x &< 2 
-												\end{alignedat} $
-												\begin{indentparagraph}
-													So $1 < x < 2$.
-												\end{indentparagraph}
-										\end{enumerate}
-										As $1 < x < 2$, $x > 0$.
-									\end{proof}
-									\begin{proof}[Contrapositive]
-										To show: If $x \leq 0$, then $x^{2} - 3x + 2 \geq 0$.\\
-										Suppose $x \leq 0$. Then $-3x \geq 0$. And $x^{2} + 2 > 0$.\\
-										So $x^{2} - 3x + 2 \geq 0$
-									\end{proof}
-									\begin{proof}[Contradiction]
-										Assume that $x^{2} - 3x + 2 < 0$. Suppose that $x \leq 0$.\\
-										If $x \leq 0$, then $-3x \geq 0$. And $x^{2} + 2 \geq 0$.\\
-										So $x^{2} - 3x + 2 \geq 0$.\\
-										But that contradicts the original assumption.\\
-										So it must be the case that $x > 0$
-									\end{proof}
-								\item \question{If $x^{2} - x - 6 > 0$, then $x \neq 1$}.
-									\begin{proof}[Direct Proof]
-										Assume that $x^{2} - x - 6 > 0$. That is, $(x - 3)(x + 2) > 0$.\\
-										So either
-										\begin{enumerate}[label=(\roman*)]
-											\item
-												$ \begin{alignedat}[t]{3}
-													& & (x - 3) &> 0 \quad \text{ and } \quad (x + 2) \: &> 0\\
-													& \Rightarrow & x &> 3 \quad \text{ and } \quad x &> -2 
-												\end{alignedat} $
-												\begin{indentparagraph}
-													So $x > 3$.
-												\end{indentparagraph}
-											\item
-												$ \begin{alignedat}[t]{3}
-													& & (x - 3) &< 0 \quad \text{ and } \quad (x + 2) \: &< 0\\
-													& \Rightarrow & x &< 3 \quad \text{ and } \quad x &< -2 
-												\end{alignedat} $
-												\begin{indentparagraph}
-													So $x < -2$.
-												\end{indentparagraph}
+					\begin{questions}
+						\item Prove each of the following statements by direct proof, contrapositive and contradiction respectively.
+							\begin{questions}
+								\item If $x^{2} - 3x + 2 < 0$, then $x > 0$.
+									\begin{answer}
+										\begin{proof}[Direct Proof]
+											Assume that $x^{2} - 3x + 2 < 0$ is true. That is $(x - 1)(x - 2) < 0$, by factorisation.\\
+											So either
+											\begin{enumerate}[label=(\roman*)]
+												\item 
+													$ \begin{alignedat}[t]{3}
+														& & (x - 1) &< 0 \quad \text{ and } \quad (x - 2) \: &> 0\\
+														& \Rightarrow & x &< 1 \quad \text{ and } \quad x &> 2 
+													\end{alignedat} $
+													\begin{indentparagraph}
+														There is no $x$ that this can be true for.
+													\end{indentparagraph}
+												\item 
+													$ \begin{alignedat}[t]{3}
+														& & (x - 1) &> 0 \quad \text{ and } \quad (x - 2) \: &< 0\\
+														& \Rightarrow & x &> 1 \quad \text{ and } \quad x &< 2 
+													\end{alignedat} $
+													\begin{indentparagraph}
+														So $1 < x < 2$.
+													\end{indentparagraph}
 											\end{enumerate}
-											So either $x > 3$ or $x < -2$.\\
-											So $x \neq 1$.
-									\end{proof}
-									\begin{proof}[Contrapositive]
-										To show: If $x = 1$, then $x^{2} - x - 6 \leq 0$.\\
-										Suppose $x = 1$. Then $ \begin{aligned}[t]
-											x^{2} - x - 6 &= (1)^{2} - 1 - 6\\
-											&= 1 - 1 - 6\\
-											&= -6
-										\end{aligned}$ \\
-										As $-6 < 0$, $x^{2} - x - 6 \leq 0$.
-									\end{proof}
-									\begin{proof}[Contradiction]
-										Assume that $x^{2} - x - 6 > 0$.\\
-										Suppose that $x = 1$. Then $ \begin{aligned}[t]
-											x^{2} - x - 6 &= (1)^{2} - 1 - 6\\
-											&= 1 - 1 - 6\\
-											&= -6
-										\end{aligned} $\\
-										So $x^{2} - x - 6 < 0$.\\
-										But that contradicts the original assumption.\\
-										So it must be the case that $x \neq 1$.
-									\end{proof}
+											As $1 < x < 2$, $x > 0$.
+										\end{proof}
+										\begin{proof}[Contrapositive]
+											To show: If $x \leq 0$, then $x^{2} - 3x + 2 \geq 0$.\\
+											Suppose $x \leq 0$. Then $-3x \geq 0$. And $x^{2} + 2 > 0$.\\
+											So $x^{2} - 3x + 2 \geq 0$
+										\end{proof}
+										\begin{proof}[Contradiction]
+											Assume that $x^{2} - 3x + 2 < 0$. Suppose that $x \leq 0$.\\
+											If $x \leq 0$, then $-3x \geq 0$. And $x^{2} + 2 \geq 0$.\\
+											So $x^{2} - 3x + 2 \geq 0$.\\
+											But that contradicts the original assumption.\\
+											So it must be the case that $x > 0$
+										\end{proof}
+									\item If $x^{2} - x - 6 > 0$, then $x \neq 1$.
+										\begin{proof}[Direct Proof]
+											Assume that $x^{2} - x - 6 > 0$. That is, $(x - 3)(x + 2) > 0$.\\
+											So either
+											\begin{enumerate}[label=(\roman*)]
+												\item
+													$ \begin{alignedat}[t]{3}
+														& & (x - 3) &> 0 \quad \text{ and } \quad (x + 2) \: &> 0\\
+														& \Rightarrow & x &> 3 \quad \text{ and } \quad x &> -2 
+													\end{alignedat} $
+													\begin{indentparagraph}
+														So $x > 3$.
+													\end{indentparagraph}
+												\item
+													$ \begin{alignedat}[t]{3}
+														& & (x - 3) &< 0 \quad \text{ and } \quad (x + 2) \: &< 0\\
+														& \Rightarrow & x &< 3 \quad \text{ and } \quad x &< -2 
+													\end{alignedat} $
+													\begin{indentparagraph}
+														So $x < -2$.
+													\end{indentparagraph}
+												\end{enumerate}
+												So either $x > 3$ or $x < -2$.\\
+												So $x \neq 1$.
+										\end{proof}
+										\begin{proof}[Contrapositive]
+											To show: If $x = 1$, then $x^{2} - x - 6 \leq 0$.\\
+											Suppose $x = 1$. Then $ \begin{aligned}[t]
+												x^{2} - x - 6 &= (1)^{2} - 1 - 6\\
+												&= 1 - 1 - 6\\
+												&= -6
+											\end{aligned}$ \\
+											As $-6 < 0$, $x^{2} - x - 6 \leq 0$.
+										\end{proof}
+										\begin{proof}[Contradiction]
+											Assume that $x^{2} - x - 6 > 0$.\\
+											Suppose that $x = 1$. Then $ \begin{aligned}[t]
+												x^{2} - x - 6 &= (1)^{2} - 1 - 6\\
+												&= 1 - 1 - 6\\
+												&= -6
+											\end{aligned} $\\
+											So $x^{2} - x - 6 < 0$.\\
+											But that contradicts the original assumption.\\
+											So it must be the case that $x \neq 1$.
+										\end{proof}
+									\end{answer}
 								\pagebreak
-								\item \question{For all $a, b \in \mathbb{Z}$, if $a + b$ is odd, then exactly one of $a$ or $b$ is odd.}
-									\begin{proof}[Direct Proof]
-										Assume that $a + b$ is odd (where $a, b \in \mathbb{Z}$).\\
-										Then $a + b = 2n + 1$ for some integer $n$.
-										Then either
-										\begin{enumerate}[label=(\roman*)]
-											\item $a$ is even.\\
-												Suppose $a$ is even. Then $a = 2k$ for some integer $k$. 
-												\begin{alignat*}{2}
-													& & a + b &= 2k + b\\
-													& & 2k + b &= 2n + 1\\
-													& \Rightarrow \quad &b &= 2n + 1 - 2k\\
-													& \Rightarrow \quad &b &= 2(n - k) + 1
-												\end{alignat*}
-												So $b$ is odd.
-											\item $a$ is odd.\\
-												Suppose $a$ is odd. Then $a = 2k + 1$ for some integer $k$. 
-												\begin{alignat*}{2}
-													& & a + b &= 2k + 1 + b\\
-													& & 2k + 1 + b &= 2n + 1\\
-													& \Rightarrow \quad &b &= 2n + 1 - 2k - 1\\
-													& \Rightarrow \quad &b &= 2(n - k)
-												\end{alignat*}
-												So $b$ is even.
-										\end{enumerate}
-										So if $a$ is even, then $b$ is odd. If $a$ is odd, then $b$ is even.\\
-										So exactly one of $a$ or $b$ is odd.
-									\end{proof}
-									\begin{proof}[Contrapositive]
-										To show: If both $a$ and $b$ are odd, or both $a$ and $b$ are even, then $a + b$ is not odd.\\
-										There are two cases:
-										\begin{enumerate}[label=(\roman*)]
-											\item Suppose $a$ and $b$ are both odd. Then $a = 2n + 1$ for some integer $n$, and $b = 2k + 1$ for some integer $k$.\\
-												So $ \begin{aligned}[t]
-													a + b &= (2n + 1) + (2k + 1)\\
-													&= 2n + 2k + 2\\
-													&= 2(n + k + 1)
-												\end{aligned}$\\
-												So $a + b$ is even, i.e. $a + b$ is not odd.
-											\item Suppose $a$ and $b$ are both even. Then $a = 2n$ for some integer $n$ and $b = 2k$ for some integer $k$.\\
-												So $ \begin{aligned}[t]
-													a + b &= 2n + 2k\\
-													&= 2(n + k)
-												\end{aligned}$\\
-												So $a + b$ is even, i.e. $a + b$ is not odd.
-										\end{enumerate}
-										So, if it is not the case that exactly one of $a$ or $b$ is odd, then $a + b$ is not odd.
-									\end{proof}
-									\pagebreak
-									\begin{proof}[Contradiction]
-										Assume that $a + b$ is odd (where $a, b \in \mathbb{Z}$).\\
-										Then either exactly one of $a$ and $b$ is odd, or that is not the case.\\
-										If it is not the case, then either $a$ and $b$ are both odd, or $a$ and $b$ are both even.
-										\begin{enumerate}[label=(\roman*)]
-											\item Suppose $a$ and $b$ are both odd. Then $a = 2n + 1$ for some integer $n$, and $b = 2k + 1$ for some integer $k$.\\
-												So $ \begin{aligned}[t]
-													a + b &= (2n + 1) + (2k + 1)\\
-													&= 2n + 2k + 2\\
-													&= 2(n + k + 1)
-												\end{aligned}$\\
-												So $a + b$ is even, which contradicts the original assumption.
-											\item Suppose $a$ and $b$ are both even. Then $a = 2n$ for some integer $n$ and $b = 2k$ for some integer $k$.\\
-												So $ \begin{aligned}[t]
-													a + b &= 2n + 2k\\
-													&= 2(n + k)
-												\end{aligned}$\\
-												So $a + b$ is even, which contradicts the original assumption.
-										\end{enumerate}
-										Therefore, it must be the case that exactly one of $a$ and $b$ is odd.
-									\end{proof}
-								\item \question{For all $x \in \mathbb{Z}$, if $x$ is even, then $x^{2} + 4x + 2$ is even.}
-									\begin{proof}[Direct Proof]
-										Assume that $x$ is even, where $x \in \mathbb{Z}$. If $x$ is even, then $x = 2k$ for some integer $k$.\\
-										So $\begin{aligned}[t]
-											x^{2} + 4x + 2 &= (2k)^{2} + 4(2k) + 2\\
-											&= 4k^{2} + 8k + 2\\
-											&= 2(2k^{2} + 4k + 1)
-										\end{aligned} $\\
-										So $x^{2} + 4x + 2$ is even.
-									\end{proof}
-									\begin{proof}[Contrapositive]
-										To show: If $x^{2} + 4x + 2$ is odd, then $x$ is odd.\\
-										Suppose $x^{2} + 4x + 2$ is odd. Then $x^{2} + 4x + 2 = 2k + 1$ for some integer $k$\\
-										So $\begin{alignedat}[t]{2}
-											& & x^{2} + 4x + 2 &= 2k + 1\\
-											& \Rightarrow \quad & x^{2} + 4x + 4 &= 2k + 1 + 2 \qquad \text{(Complete the square)}\\
-											& \Rightarrow \quad & (x + 2)(x + 2) &= 2k + 2 + 1\\
-											& \Rightarrow \quad & (x + 2)(x + 2) &= 2(k + 1) + 1
-										\end{alignedat}$\\
-										So, as $(x + 2)(x + 2)$ is odd, that means that $x + 2$ must be odd, as the product of the integers is odd iff both integers are odd.\\
-										So $x + 2 = 2n + 1$ for some integer $n$.\\
-										So $x = 2n + 1 - 2$, so $x = 2n - 1$.\\
-										So $x$ is odd.\\
-										So, if $x^{2} + 4x + 2$ is odd, then $x$ is odd.\\
-										So, if $x$ is even, then $x^{2} + 4x + 2$ is even.
-									\end{proof}
-									\pagebreak
-									\begin{proof}[Contradiction]
-										Assume $x$ is even. Then either $x^{2} + 4x + 2$ is even, or odd.\\
-										Suppose that $x^{2} + 4x + 2$ is odd. Then $x^{2} + 4x + 2 = 2k + 1$ for some integer $k$\\
-										So $\begin{alignedat}[t]{2}
-											& & x^{2} + 4x + 2 &= 2k + 1\\
-											& \Rightarrow \quad & x^{2} + 4x + 4 &= 2k + 1 + 2 \qquad \text{(Complete the square)}\\
-											& \Rightarrow \quad & (x + 2)(x + 2) &= 2k + 2 + 1\\
-											& \Rightarrow \quad & (x + 2)(x + 2) &= 2(k + 1) + 1
-										\end{alignedat}$\\
-										So, as $(x + 2)(x + 2)$ is odd, that means that $x + 2$ must be odd, as the product of the integers is odd iff both integers are odd.\\
-										So $x + 2 = 2n + 1$ for some integer $n$.\\
-										So $x = 2n + 1 - 2$, so $x = 2n - 1$.\\
-										So $x$ is odd.\\
-										But this contradicts the original assumption, so it must be the case that $x^{2} + 4x + 2$ is even.
-									\end{proof}
-								\item \question{If $n$ is a multiple of $3$, then $n^{3} + n^{2}$ is a multiple of $3$}
-									\begin{proof}[Direct Proof]
-										Assume that $n$ is a multiple of $3$. Then $n = 3k$ for some integer $k$.\\
-										So $\begin{aligned}[t]
-											n^{3} + n^{2} &= (3k)^{3} + (3k)^{2}\\
-											&= 27k^{3} + 9k^{2}\\
-											&= 3(9k^{3} + 3k^{2})
-										\end{aligned} $\\
-										Therefore $n^{3} + n^{2}$ is a multiple of $3$.
-									\end{proof}
-									\begin{proof}[Contrapositive]
-										To show: If $n^{3} + n^{2}$ is not a multiple of $3$, then $n$ is not a multiple of $3$.\\
-										Suppose that $n^{3} + n^{2}$ is not a multiple of $3$. Then $n^{3} + n^{2} = 3k + 1$ for some integer $k$.\\
-										If $n^{3} + n^{2} = 3k + 1$, then $n(n^{2} + n) = 3k + 1$.\\
-										So neither $n$, nor $n^{2} + n$ are multiples of $3$.\\
-										So $n$ is not a multiple of $3$.\\
-										Therefore, if $n$ is a multiple of $3$, then $n^{3} + n^{2}$ is a multiple of $3$.
-									\end{proof}
-									\begin{proof}
-										Suppose $n$ is a multiple of $3$. Then either $n^{3} + n^{2}$ is a multiple of $3$, or not.\\
-										If $n^{3} + n^{2}$ is not a multiple of $3$, then $n^{3} + n^{2} = 3k + 1$ for some integer $k$.\\
-										If $n^{3} + n^{2} = 3k + 1$, then $n(n^{2} + n) = 3k + 1$.\\
-										So neither $n$, nor $n^{2} + n$ are multiples of $3$.\\
-										So $n$ is not a multiple of $3$.\\
-										But this contradicts the original assumption.\\
-										So, if $n$ is a multiple of $3$, then $n^{3} + n^{2}$ is a multiple of $3$.
-									\end{proof}
-							\end{enumerate}
-						\item \question{Provide a counterexample to show that the statement \\ ``If $x > 0$, then $x^{2} - 3x + 1 < 0$'' is not true for all integers $x > 0$.}\\
-							Let $x = 4$. Then $ \begin{aligned}[t]
-								x^{2} - 3x + 1 &= (4)^{2} - 3(4) + 1\\
-								&= 16 - 12 + 1\\
-								&= 5 \not < 0
-							\end{aligned}$
-					\end{enumerate}
+								\item For all $a, b \in \mathbb{Z}$, if $a + b$ is odd, then exactly one of $a$ or $b$ is odd.
+									\begin{answer}
+										\begin{proof}[Direct Proof]
+											Assume that $a + b$ is odd (where $a, b \in \mathbb{Z}$).\\
+											Then $a + b = 2n + 1$ for some integer $n$.
+											Then either
+											\begin{enumerate}[label=(\roman*)]
+												\item $a$ is even.\\
+													Suppose $a$ is even. Then $a = 2k$ for some integer $k$. 
+													\begin{alignat*}{2}
+														& & a + b &= 2k + b\\
+														& & 2k + b &= 2n + 1\\
+														& \Rightarrow \quad &b &= 2n + 1 - 2k\\
+														& \Rightarrow \quad &b &= 2(n - k) + 1
+													\end{alignat*}
+													So $b$ is odd.
+												\item $a$ is odd.\\
+													Suppose $a$ is odd. Then $a = 2k + 1$ for some integer $k$. 
+													\begin{alignat*}{2}
+														& & a + b &= 2k + 1 + b\\
+														& & 2k + 1 + b &= 2n + 1\\
+														& \Rightarrow \quad &b &= 2n + 1 - 2k - 1\\
+														& \Rightarrow \quad &b &= 2(n - k)
+													\end{alignat*}
+													So $b$ is even.
+											\end{enumerate}
+											So if $a$ is even, then $b$ is odd. If $a$ is odd, then $b$ is even.\\
+											So exactly one of $a$ or $b$ is odd.
+										\end{proof}
+										\begin{proof}[Contrapositive]
+											To show: If both $a$ and $b$ are odd, or both $a$ and $b$ are even, then $a + b$ is not odd.\\
+											There are two cases:
+											\begin{enumerate}[label=(\roman*)]
+												\item Suppose $a$ and $b$ are both odd. Then $a = 2n + 1$ for some integer $n$, and $b = 2k + 1$ for some integer $k$.\\
+													So $ \begin{aligned}[t]
+														a + b &= (2n + 1) + (2k + 1)\\
+														&= 2n + 2k + 2\\
+														&= 2(n + k + 1)
+													\end{aligned}$\\
+													So $a + b$ is even, i.e. $a + b$ is not odd.
+												\item Suppose $a$ and $b$ are both even. Then $a = 2n$ for some integer $n$ and $b = 2k$ for some integer $k$.\\
+													So $ \begin{aligned}[t]
+														a + b &= 2n + 2k\\
+														&= 2(n + k)
+													\end{aligned}$\\
+													So $a + b$ is even, i.e. $a + b$ is not odd.
+											\end{enumerate}
+											So, if it is not the case that exactly one of $a$ or $b$ is odd, then $a + b$ is not odd.
+										\end{proof}
+										\pagebreak
+										\begin{proof}[Contradiction]
+											Assume that $a + b$ is odd (where $a, b \in \mathbb{Z}$).\\
+											Then either exactly one of $a$ and $b$ is odd, or that is not the case.\\
+											If it is not the case, then either $a$ and $b$ are both odd, or $a$ and $b$ are both even.
+											\begin{enumerate}[label=(\roman*)]
+												\item Suppose $a$ and $b$ are both odd. Then $a = 2n + 1$ for some integer $n$, and $b = 2k + 1$ for some integer $k$.\\
+													So $ \begin{aligned}[t]
+														a + b &= (2n + 1) + (2k + 1)\\
+														&= 2n + 2k + 2\\
+														&= 2(n + k + 1)
+													\end{aligned}$\\
+													So $a + b$ is even, which contradicts the original assumption.
+												\item Suppose $a$ and $b$ are both even. Then $a = 2n$ for some integer $n$ and $b = 2k$ for some integer $k$.\\
+													So $ \begin{aligned}[t]
+														a + b &= 2n + 2k\\
+														&= 2(n + k)
+													\end{aligned}$\\
+													So $a + b$ is even, which contradicts the original assumption.
+											\end{enumerate}
+											Therefore, it must be the case that exactly one of $a$ and $b$ is odd.
+										\end{proof}
+									\end{answer}
+								\item For all $x \in \mathbb{Z}$, if $x$ is even, then $x^{2} + 4x + 2$ is even.
+									\begin{answer}
+										\begin{proof}[Direct Proof]
+											Assume that $x$ is even, where $x \in \mathbb{Z}$. If $x$ is even, then $x = 2k$ for some integer $k$.\\
+											So $\begin{aligned}[t]
+												x^{2} + 4x + 2 &= (2k)^{2} + 4(2k) + 2\\
+												&= 4k^{2} + 8k + 2\\
+												&= 2(2k^{2} + 4k + 1)
+											\end{aligned} $\\
+											So $x^{2} + 4x + 2$ is even.
+										\end{proof}
+										\begin{proof}[Contrapositive]
+											To show: If $x^{2} + 4x + 2$ is odd, then $x$ is odd.\\
+											Suppose $x^{2} + 4x + 2$ is odd. Then $x^{2} + 4x + 2 = 2k + 1$ for some integer $k$\\
+											So $\begin{alignedat}[t]{2}
+												& & x^{2} + 4x + 2 &= 2k + 1\\
+												& \Rightarrow \quad & x^{2} + 4x + 4 &= 2k + 1 + 2 \qquad \text{(Complete the square)}\\
+												& \Rightarrow \quad & (x + 2)(x + 2) &= 2k + 2 + 1\\
+												& \Rightarrow \quad & (x + 2)(x + 2) &= 2(k + 1) + 1
+											\end{alignedat}$\\
+											So, as $(x + 2)(x + 2)$ is odd, that means that $x + 2$ must be odd, as the product of the integers is odd iff both integers are odd.\\
+											So $x + 2 = 2n + 1$ for some integer $n$.\\
+											So $x = 2n + 1 - 2$, so $x = 2n - 1$.\\
+											So $x$ is odd.\\
+											So, if $x^{2} + 4x + 2$ is odd, then $x$ is odd.\\
+											So, if $x$ is even, then $x^{2} + 4x + 2$ is even.
+										\end{proof}
+										\pagebreak
+										\begin{proof}[Contradiction]
+											Assume $x$ is even. Then either $x^{2} + 4x + 2$ is even, or odd.\\
+											Suppose that $x^{2} + 4x + 2$ is odd. Then $x^{2} + 4x + 2 = 2k + 1$ for some integer $k$\\
+											So $\begin{alignedat}[t]{2}
+												& & x^{2} + 4x + 2 &= 2k + 1\\
+												& \Rightarrow \quad & x^{2} + 4x + 4 &= 2k + 1 + 2 \qquad \text{(Complete the square)}\\
+												& \Rightarrow \quad & (x + 2)(x + 2) &= 2k + 2 + 1\\
+												& \Rightarrow \quad & (x + 2)(x + 2) &= 2(k + 1) + 1
+											\end{alignedat}$\\
+											So, as $(x + 2)(x + 2)$ is odd, that means that $x + 2$ must be odd, as the product of the integers is odd iff both integers are odd.\\
+											So $x + 2 = 2n + 1$ for some integer $n$.\\
+											So $x = 2n + 1 - 2$, so $x = 2n - 1$.\\
+											So $x$ is odd.\\
+											But this contradicts the original assumption, so it must be the case that $x^{2} + 4x + 2$ is even.
+										\end{proof}
+									\end{answer}
+								\item If $n$ is a multiple of $3$, then $n^{3} + n^{2}$ is a multiple of $3$
+									\begin{answer}
+										\begin{proof}[Direct Proof]
+											Assume that $n$ is a multiple of $3$. Then $n = 3k$ for some integer $k$.\\
+											So $\begin{aligned}[t]
+												n^{3} + n^{2} &= (3k)^{3} + (3k)^{2}\\
+												&= 27k^{3} + 9k^{2}\\
+												&= 3(9k^{3} + 3k^{2})
+											\end{aligned} $\\
+											Therefore $n^{3} + n^{2}$ is a multiple of $3$.
+										\end{proof}
+										\begin{proof}[Contrapositive]
+											To show: If $n^{3} + n^{2}$ is not a multiple of $3$, then $n$ is not a multiple of $3$.\\
+											Suppose that $n^{3} + n^{2}$ is not a multiple of $3$. Then $n^{3} + n^{2} = 3k + 1$ for some integer $k$.\\
+											If $n^{3} + n^{2} = 3k + 1$, then $n(n^{2} + n) = 3k + 1$.\\
+											So neither $n$, nor $n^{2} + n$ are multiples of $3$.\\
+											So $n$ is not a multiple of $3$.\\
+											Therefore, if $n$ is a multiple of $3$, then $n^{3} + n^{2}$ is a multiple of $3$.
+										\end{proof}
+										\begin{proof}
+											Suppose $n$ is a multiple of $3$. Then either $n^{3} + n^{2}$ is a multiple of $3$, or not.\\
+											If $n^{3} + n^{2}$ is not a multiple of $3$, then $n^{3} + n^{2} = 3k + 1$ for some integer $k$.\\
+											If $n^{3} + n^{2} = 3k + 1$, then $n(n^{2} + n) = 3k + 1$.\\
+											So neither $n$, nor $n^{2} + n$ are multiples of $3$.\\
+											So $n$ is not a multiple of $3$.\\
+											But this contradicts the original assumption.\\
+											So, if $n$ is a multiple of $3$, then $n^{3} + n^{2}$ is a multiple of $3$.
+										\end{proof}
+									\end{answer}
+							\end{questions}
+						\item Provide a counterexample to show that the statement \\ ``If $x > 0$, then $x^{2} - 3x + 1 < 0$'' is not true for all integers $x > 0$.\\
+							\begin{answer}
+								Let $x = 4$. Then $ \begin{aligned}[t]
+									x^{2} - 3x + 1 &= (4)^{2} - 3(4) + 1\\
+									&= 16 - 12 + 1\\
+									&= 5 \not < 0
+								\end{aligned}$
+							\end{answer}
+					\end{questions}
 				\end{exercise}
 				\vspace*{\parskip}
 				\ifSubfilesClassLoaded{%

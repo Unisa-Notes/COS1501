@@ -1,10 +1,12 @@
 # notestyles
 \addfile[input]{<filename>}
 \addfile{<filename>}
+\begin{answer}
 \begin{definition}{title}
 \begin{example}
 \begin{exercise}{title}
 \begin{indentparagraph}
+\begin{questions}
 \begin{sidenote}{title}
 \begin{subproof}
 \begin{subproof}[name]
@@ -17,10 +19,12 @@
 \begin{venntwo}[options]
 \begin{venntwo}[options][title]
 \concept{text}
+\end{answer}
 \end{definition}
 \end{example}
 \end{exercise}
 \end{indentparagraph}
+\end{questions}
 \end{sidenote}
 \end{subproof}
 \end{theorem}
@@ -28,7 +32,5 @@
 \end{vennthree}[options]
 \end{venntwo}
 \end{venntwo}[options]
-\moveup
-\question{text}
 \rulebookend
 \rulechapterend

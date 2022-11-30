@@ -51,22 +51,28 @@
 				\begin{alignat*}{3}
 					A &= \{1, 2, 3, 4\} \qquad & B &= \{2, 5\} \qquad & C &= \{3, 4, 7\}
 				\end{alignat*}
-				\question{List the following Cartesian products in list notation:}
-				\begin{enumerate}[label=(\alph*)]
-					\item $A \times B = \bigl\{(1, 2), (1, 5), (2, 2), (2, 5), (3, 2), (3, 5), (4, 2), (4, 5)\bigr\}$
-					\item $B \times A = \bigl\{(2, 1), (2, 2), (2, 3), (2, 4), (5, 1), (5, 2), (5, 3), (5, 4)\bigr\}$
-					\item $(A \cup B) \times C$
-						\begin{align*}
-							A \cup B &= \{1, 2, 3, 4, 5\}\\
-							(A \cup B) \times C &= \bigl\{(1, 3), (1, 4), (1, 7), (2, 3), (2, 4), (2, 7), (3, 3), (3, 4), (3, 7),\\
-							& \qquad (4, 3), (4, 4), (4, 7), (5, 3), (5, 4), (5, 7)\bigr\}
-						\end{align*}
-					\item $(A + B) \times B$
-						\begin{align*}
-							A + B &= \{1, 3, 4, 5\}\\
-							(A + B) \times B &= \bigl\{(1, 2), (1, 5), (3, 2), (3, 5), (4, 2), (4, 5), (5, 2), (5, 5)\bigr\}
-						\end{align*}
-				\end{enumerate}
+				\begin{questions}
+				\item List the following Cartesian products in list notation:
+					\begin{questions}
+						\item $A \times B$ {\answer $= \bigl\{(1, 2), (1, 5), (2, 2), (2, 5), (3, 2), (3, 5), (4, 2), (4, 5)\bigr\}$ }
+						\item $B \times A$ {\answer $= \bigl\{(2, 1), (2, 2), (2, 3), (2, 4), (5, 1), (5, 2), (5, 3), (5, 4)\bigr\}$ }
+						\item $(A \cup B) \times C$
+							\begin{answer}
+								\begin{align*}
+									A \cup B &= \{1, 2, 3, 4, 5\}\\
+									(A \cup B) \times C &= \bigl\{(1, 3), (1, 4), (1, 7), (2, 3), (2, 4), (2, 7), (3, 3), (3, 4), (3, 7),\\
+									& \qquad (4, 3), (4, 4), (4, 7), (5, 3), (5, 4), (5, 7)\bigr\}
+								\end{align*}
+							\end{answer}
+						\item $(A + B) \times B$
+							\begin{answer}
+								\begin{align*}
+									A + B &= \{1, 3, 4, 5\}\\
+									(A + B) \times B &= \bigl\{(1, 2), (1, 5), (3, 2), (3, 5), (4, 2), (4, 5), (5, 2), (5, 5)\bigr\}
+								\end{align*}
+							\end{answer}
+					\end{questions}
+				\end{questions}
 			\end{exercise}
 			\pagebreak
 			\subsection{Domain, Range and Codomain}
@@ -223,179 +229,215 @@
 				\end{example}
 				\pagebreak
 				\begin{exercise}{Self Assessment Activity \thechapter.8}
-					\begin{enumerate}
-						\item \question{Let $P$ and $R$ be relations on $A = \bigl\{1, 2, 3, \{1\}, \{2\}\bigr\}$, where\\
-						$P = \Bigl\{\bigl(1, \{1\}\bigr), \bigl(1, 2\bigr)\Bigr\}$ and $R = \Bigl\{\bigl(1, \{1\}\bigr), \bigl(1, 3\bigr), \bigl(2, \{1\}\bigr), \bigl(2, \{2\}\bigr), \bigl(\{1\}, 3\bigr), \bigl(\{2\}, \{1\}\bigr) \Bigr\}$}
-							\begin{enumerate}[label=(\alph*)]
-								\item \question{Is $R$ irreflexive?}\\
-									Yes. There are no elements that are related to themselves.
-								\item \question{Is $R$ reflexive?}\\
-									No. There are no elements that are related to themselves.
-								\item \question{Is $R$ symmetric?}\\
-									No. $\bigl(1, \{1\}\bigr) \in R$, but $\bigl(\{1\}, 1\bigr) \notin R$.
-								\item \question{Is $R$ antisymmetric?}\\
-									Yes.\\
-									$\bigl(1, \{1\}\bigr) \in R$, and $\bigl(\{1\}, 1\bigr) \notin R$.\\
-									$\bigl(1, 3\bigr) \in R$, and $\bigl(3, 1\bigr) \notin R$.\\
-									$\bigl(2, \{1\}\bigr) \in R$, and $\bigl(\{1\}, 2\bigr) \notin R$.\\
-									$\bigl(2, \{2\}\bigr) \in R$, and $\bigl(\{2\}, 2\bigr) \notin R$.\\
-									$\bigl(\{1\}, 3\bigr) \in R$, and $\bigl(3, \{1\}\bigr) \notin R$.\\
-									$\bigl(\{2\}, \{1\}\bigr) \in R$, and $\bigl(\{1\}, \{2\}\bigr) \notin R$.
-								\item \question{Is $R$ transitive?}\\
-									No. $\bigl(2, \{1\}\bigr) \in R$, and $\bigl(\{1\}, 3\bigr) \in R$, but $\bigl(2, 3\bigr) \notin R$
-								\item \question{Does $R$ satisfy the requirement for trichotomy?}\\
-									No. There is no pair where $1$ is related to $2$.
-								\item \question{Determine the relation $R \circ R$.}\\
-									$R \circ R = R; R$.
-									\begin{indentparagraph}
-										$\bigl(1, \{1\}\bigr) \rightarrow \bigl(\{1\}, 3\bigr) \rightarrow \bigl(1, 3\bigr)$\\
-										$\bigl(1, 3\bigr) \not \rightarrow$\\
-										$\bigl(2, \{1\}\bigr) \rightarrow \bigl(\{1\}, 3\bigr) \rightarrow \bigl(2, 3\bigr)$\\
-										$\bigl(2, \{2\}\bigr) \rightarrow \bigl(\{2\}, \{1\}\bigr) \rightarrow \bigl(2, \{1\}\bigr)$\\
-										$\bigl(\{1\}, 3\bigr) \not \rightarrow$\\
-										$\bigl(\{2\}, \{1\}\bigr) \rightarrow \bigl(\{1\}, 3\bigr) \rightarrow \bigl(\{2\}, 3\bigr)$
-									\end{indentparagraph}
-									$R \circ R = R; R = \Bigl\{\bigl(1, 3\bigr), \bigl(2, 3\bigr), \bigl(2, \{1\}\bigr), \bigl(\{2\}, 3\bigr)\Bigr\}$
-								\item \question{Determine the relation $R \circ P$.}
-									$R \circ P = P;R$.
-									\begin{indentparagraph}
-										$\bigl(1, \{1\}\bigr) \rightarrow \bigl(\{1\}, 3\bigr) \rightarrow \bigl(1, 3\bigr)$\\
-										$\bigl(1, 2\bigr) \rightarrow \bigl(2, \{1\}\bigr) \rightarrow \bigl(1, \{1\}\bigr)$\\
-										$\bigl(1, 2\bigr) \rightarrow \bigl(2, \{2\}\bigr) \rightarrow \bigl(1, \{2\}\bigr)$
-									\end{indentparagraph}
-									$R \circ P = R;R = \Bigl\{\bigl(1, 3\bigr), \bigl(1, \{1\}\bigr), \bigl(1, \{2\}\bigr)\Bigr\}$
-								\item \question{Give the subset $T$ of $R$ where $(a, B) \in T$ iff $a \in B$.}\\
-									$T = \Bigl\{\bigl(1, \{1\}\bigr), \bigl(2, \{2\}\bigr)\Bigr\}$
-							\end{enumerate}
-						\item \question{Let $A = \{a, b\}$. For each of the specifications given below, find suitable examples of relations on $\mathcal{P}(A)$}
-							\begin{align*}
-								\mathcal{P}(A) &= \bigl\{\emptyset, \{a\}, \{b\}, \{a, b\}\bigr\}\\
-								\mathcal{P}(A) \times \mathcal{P}(A) &= \Bigl\{
-									\bigl(\emptyset, \emptyset\bigr), \bigl(\emptyset, \{a\}\bigr), \bigl(\emptyset, \{b\}\bigr), \bigl(\emptyset, \{a, b\}\bigr)\\
-									& \quad \bigl(\{a\}, \emptyset\bigr), \bigl(\{a\}, \{a\}\bigr), \bigl(\{a\}, \{b\}\bigr), \bigl(\{a\}, \{a, b\}\bigr)\\
-									& \quad \bigl(\{b\}, \emptyset\bigr), \bigl(\{b\}, \{a\}\bigr), \bigl(\{b\}, \{b\}\bigr), \bigl(\{b\}, \{a, b\}\bigr)\\
-									& \quad \bigl(\{a, b\}, \emptyset\bigr), \bigl(\{a, b\}, \{a\}\bigr), \bigl(\{a, b\}, \{b\}\bigr), \bigl(\{a, b\}, \{a. b\}\bigr)
-								\Bigr\}
-							\end{align*}
-							\begin{enumerate}[label=(\alph*)]
-								\item \question{$R$ is reflexive, symmetric and transitive on $\mathcal{P}(A)$}
-									\begin{description}
-										\item[Reflexivity] To be reflexive, these pairs need to appear:
-											\begin{align*}
-												\bigl(\emptyset, \emptyset\bigr), \bigl(\{a\}, \{a\}\bigr), \bigl(\{b\}, \{b\}\bigr), \bigl(\{a, b\}, \{a, b\}\bigr)
-											\end{align*}
-										\item[Symmetry] Whichever pair is added, the pair that makes it symmetric needs to be added too.
-											\begin{indentparagraph}
-												If $\bigl(\emptyset, \{a\}\bigr)$ is added, then $\bigl(\{a\}, \emptyset\bigr)$ needs to be added.
-											\end{indentparagraph}
-										\item[Examples] Two relations that meet these requirements are:
-											\begin{align*}
-												R_{1} &= \Bigl\{\bigl(\emptyset, \emptyset\bigr), \bigl(\{a\}, \{a\}\bigr), \bigl(\{b\}, \{b\}\bigr), \bigl(\{a, b\}, \{a, b\}\bigr)\Bigr\}\\
-												R_{2} &= \Bigl\{\bigl(\emptyset, \emptyset\bigr), \bigl(\{a\}, \{a\}\bigr), \bigl(\{b\}, \{b\}\bigr), \bigl(\{a, b\}, \{a, b\}\bigr), \bigl(\emptyset, \{a\}\bigr), \bigl(\{a\}, \emptyset\bigr)\Bigr\}
-											\end{align*}
-									\end{description}
-								\item \question{$R$ is reflexive and symmetric, but not transitive on $\mathcal{P}(A)$}
-									\begin{description}
-										\item[Reflexivity] To be reflexive, these pairs need to appear:
-											\begin{align*}
-												\bigl(\emptyset, \emptyset\bigr), \bigl(\{a\}, \{a\}\bigr), \bigl(\{b\}, \{b\}\bigr), \bigl(\{a, b\}, \{a, b\}\bigr)
-											\end{align*}
-										\item[Symmetry] Whichever pair is added, the pair that makes it symmetric needs to be added too.
-											\begin{indentparagraph}
-												If $\bigl(\emptyset, \{a\}\bigr)$ is added, then $\bigl(\{a\}, \emptyset\bigr)$ needs to be added
-											\end{indentparagraph}
-										\item[Transitivity] In order for the relation to not be transitive, two elements need to be added (for symmetry) where the first element is the second element of another pair, and the second element is the first element of a different pair.
-											\begin{indentparagraph}
-												If $\bigl(\{a\}, \{a, b\}\bigr)$ and $\bigl(\{a, b\}, \{a\}\bigr)$ are added.\\
-												$\bigl(\emptyset, \{a\}\bigr) \rightarrow \bigl(\{a\}, \{a, b\}\bigr) \not \rightarrow \bigl(\emptyset, \{a, b\}\bigr)$
-											\end{indentparagraph}
-										\item[Example] $
-											\begin{aligned}[t]
-												R_{3} &= \Bigl\{\bigl(\emptyset, \emptyset\bigr), \bigl(\{a\}, \{a\}\bigr), \bigl(\{b\}, \{b\}\bigr), \bigl(\{a, b\}, \{a, b\}\bigr),\\
-												& \qquad \bigl(\emptyset, \{a\}\bigr), \bigl(\{a\}, \emptyset\bigr), \bigl(\{a\}, \{a, b\}\bigr), \bigl(\{a, b\}, \{a\}\bigr)\Bigr\}
-											\end{aligned} $
-									\end{description}
+					\begin{questions}
+						\item Let $P$ and $R$ be relations on $A = \bigl\{1, 2, 3, \{1\}, \{2\}\bigr\}$, where\\
+						$P = \Bigl\{\bigl(1, \{1\}\bigr), \bigl(1, 2\bigr)\Bigr\}$ and $R = \Bigl\{\bigl(1, \{1\}\bigr), \bigl(1, 3\bigr), \bigl(2, \{1\}\bigr), \bigl(2, \{2\}\bigr), \bigl(\{1\}, 3\bigr), \bigl(\{2\}, \{1\}\bigr) \Bigr\}$
+							\begin{questions}
+								\item Is $R$ irreflexive?\\
+									\begin{answer}
+										Yes. There are no elements that are related to themselves.
+									\end{answer}
+								\item Is $R$ reflexive?\\
+									\begin{answer}
+										No. There are no elements that are related to themselves.
+									\end{answer}
+								\item Is $R$ symmetric?\\
+									\begin{answer}
+										No. $\bigl(1, \{1\}\bigr) \in R$, but $\bigl(\{1\}, 1\bigr) \notin R$.
+									\end{answer}
+								\item Is $R$ antisymmetric?\\
+									\begin{answer}
+										Yes.\\
+										$\bigl(1, \{1\}\bigr) \in R$, and $\bigl(\{1\}, 1\bigr) \notin R$.\\
+										$\bigl(1, 3\bigr) \in R$, and $\bigl(3, 1\bigr) \notin R$.\\
+										$\bigl(2, \{1\}\bigr) \in R$, and $\bigl(\{1\}, 2\bigr) \notin R$.\\
+										$\bigl(2, \{2\}\bigr) \in R$, and $\bigl(\{2\}, 2\bigr) \notin R$.\\
+										$\bigl(\{1\}, 3\bigr) \in R$, and $\bigl(3, \{1\}\bigr) \notin R$.\\
+										$\bigl(\{2\}, \{1\}\bigr) \in R$, and $\bigl(\{1\}, \{2\}\bigr) \notin R$.
+									\end{answer}
+								\item Is $R$ transitive?\\
+									\begin{answer}
+										No. $\bigl(2, \{1\}\bigr) \in R$, and $\bigl(\{1\}, 3\bigr) \in R$, but $\bigl(2, 3\bigr) \notin R$
+									\end{answer}
+								\item Does $R$ satisfy the requirement for trichotomy?\\
+									\begin{answer}
+										No. There is no pair where $1$ is related to $2$.
+									\end{answer}
+								\item Determine the relation $R \circ R$.\\
+									\begin{answer}
+										$R \circ R = R; R$.
+										\begin{indentparagraph}
+											$\bigl(1, \{1\}\bigr) \rightarrow \bigl(\{1\}, 3\bigr) \rightarrow \bigl(1, 3\bigr)$\\
+											$\bigl(1, 3\bigr) \not \rightarrow$\\
+											$\bigl(2, \{1\}\bigr) \rightarrow \bigl(\{1\}, 3\bigr) \rightarrow \bigl(2, 3\bigr)$\\
+											$\bigl(2, \{2\}\bigr) \rightarrow \bigl(\{2\}, \{1\}\bigr) \rightarrow \bigl(2, \{1\}\bigr)$\\
+											$\bigl(\{1\}, 3\bigr) \not \rightarrow$\\
+											$\bigl(\{2\}, \{1\}\bigr) \rightarrow \bigl(\{1\}, 3\bigr) \rightarrow \bigl(\{2\}, 3\bigr)$
+										\end{indentparagraph}
+										$R \circ R = R; R = \Bigl\{\bigl(1, 3\bigr), \bigl(2, 3\bigr), \bigl(2, \{1\}\bigr), \bigl(\{2\}, 3\bigr)\Bigr\}$
+									\end{answer}
+								\item Determine the relation $R \circ P$.
+									\begin{answer}
+										$R \circ P = P;R$.
+										\begin{indentparagraph}
+											$\bigl(1, \{1\}\bigr) \rightarrow \bigl(\{1\}, 3\bigr) \rightarrow \bigl(1, 3\bigr)$\\
+											$\bigl(1, 2\bigr) \rightarrow \bigl(2, \{1\}\bigr) \rightarrow \bigl(1, \{1\}\bigr)$\\
+											$\bigl(1, 2\bigr) \rightarrow \bigl(2, \{2\}\bigr) \rightarrow \bigl(1, \{2\}\bigr)$
+										\end{indentparagraph}
+										$R \circ P = R;R = \Bigl\{\bigl(1, 3\bigr), \bigl(1, \{1\}\bigr), \bigl(1, \{2\}\bigr)\Bigr\}$
+									\end{answer}
+								\item Give the subset $T$ of $R$ where $(a, B) \in T$ iff $a \in B$.\\
+									\begin{answer}
+										$T = \Bigl\{\bigl(1, \{1\}\bigr), \bigl(2, \{2\}\bigr)\Bigr\}$
+									\end{answer}
+							\end{questions}
+						\item Let $A = \{a, b\}$. For each of the specifications given below, find suitable examples of relations on $\mathcal{P}(A)$
+							\begin{answer}
+								\begin{align*}
+									\mathcal{P}(A) &= \bigl\{\emptyset, \{a\}, \{b\}, \{a, b\}\bigr\}\\
+									\mathcal{P}(A) \times \mathcal{P}(A) &= \Bigl\{
+										\bigl(\emptyset, \emptyset\bigr), \bigl(\emptyset, \{a\}\bigr), \bigl(\emptyset, \{b\}\bigr), \bigl(\emptyset, \{a, b\}\bigr)\\
+										& \quad \bigl(\{a\}, \emptyset\bigr), \bigl(\{a\}, \{a\}\bigr), \bigl(\{a\}, \{b\}\bigr), \bigl(\{a\}, \{a, b\}\bigr)\\
+										& \quad \bigl(\{b\}, \emptyset\bigr), \bigl(\{b\}, \{a\}\bigr), \bigl(\{b\}, \{b\}\bigr), \bigl(\{b\}, \{a, b\}\bigr)\\
+										& \quad \bigl(\{a, b\}, \emptyset\bigr), \bigl(\{a, b\}, \{a\}\bigr), \bigl(\{a, b\}, \{b\}\bigr), \bigl(\{a, b\}, \{a. b\}\bigr)
+									\Bigr\}
+								\end{align*}
+							\end{answer}
+							\begin{enumerate}
+								\item $R$ is reflexive, symmetric and transitive on $\mathcal{P}(A)$
+									\begin{answer}
+										\begin{description}
+											\item[Reflexivity] To be reflexive, these pairs need to appear:
+												\begin{align*}
+													\bigl(\emptyset, \emptyset\bigr), \bigl(\{a\}, \{a\}\bigr), \bigl(\{b\}, \{b\}\bigr), \bigl(\{a, b\}, \{a, b\}\bigr)
+												\end{align*}
+											\item[Symmetry] Whichever pair is added, the pair that makes it symmetric needs to be added too.
+												\begin{indentparagraph}
+													If $\bigl(\emptyset, \{a\}\bigr)$ is added, then $\bigl(\{a\}, \emptyset\bigr)$ needs to be added.
+												\end{indentparagraph}
+											\item[Examples] Two relations that meet these requirements are:
+												\begin{align*}
+													R_{1} &= \Bigl\{\bigl(\emptyset, \emptyset\bigr), \bigl(\{a\}, \{a\}\bigr), \bigl(\{b\}, \{b\}\bigr), \bigl(\{a, b\}, \{a, b\}\bigr)\Bigr\}\\
+													R_{2} &= \Bigl\{\bigl(\emptyset, \emptyset\bigr), \bigl(\{a\}, \{a\}\bigr), \bigl(\{b\}, \{b\}\bigr), \bigl(\{a, b\}, \{a, b\}\bigr), \bigl(\emptyset, \{a\}\bigr), \bigl(\{a\}, \emptyset\bigr)\Bigr\}
+												\end{align*}
+										\end{description}
+									\end{answer}
+								\item $R$ is reflexive and symmetric, but not transitive on $\mathcal{P}(A)$
+									\begin{answer}
+										\begin{description}
+											\item[Reflexivity] To be reflexive, these pairs need to appear:
+												\begin{align*}
+													\bigl(\emptyset, \emptyset\bigr), \bigl(\{a\}, \{a\}\bigr), \bigl(\{b\}, \{b\}\bigr), \bigl(\{a, b\}, \{a, b\}\bigr)
+												\end{align*}
+											\item[Symmetry] Whichever pair is added, the pair that makes it symmetric needs to be added too.
+												\begin{indentparagraph}
+													If $\bigl(\emptyset, \{a\}\bigr)$ is added, then $\bigl(\{a\}, \emptyset\bigr)$ needs to be added
+												\end{indentparagraph}
+											\item[Transitivity] In order for the relation to not be transitive, two elements need to be added (for symmetry) where the first element is the second element of another pair, and the second element is the first element of a different pair.
+												\begin{indentparagraph}
+													If $\bigl(\{a\}, \{a, b\}\bigr)$ and $\bigl(\{a, b\}, \{a\}\bigr)$ are added.\\
+													$\bigl(\emptyset, \{a\}\bigr) \rightarrow \bigl(\{a\}, \{a, b\}\bigr) \not \rightarrow \bigl(\emptyset, \{a, b\}\bigr)$
+												\end{indentparagraph}
+											\item[Example] $
+												\begin{aligned}[t]
+													R_{3} &= \Bigl\{\bigl(\emptyset, \emptyset\bigr), \bigl(\{a\}, \{a\}\bigr), \bigl(\{b\}, \{b\}\bigr), \bigl(\{a, b\}, \{a, b\}\bigr),\\
+													& \qquad \bigl(\emptyset, \{a\}\bigr), \bigl(\{a\}, \emptyset\bigr), \bigl(\{a\}, \{a, b\}\bigr), \bigl(\{a, b\}, \{a\}\bigr)\Bigr\}
+												\end{aligned} $
+										\end{description}
+									\end{answer}
 								\pagebreak
-								\item \question{$R$ is reflexive and transitive, but not symmetric, and not antisymmetric on $\mathcal{P}(A)$}
-									\begin{description}
-										\item[Reflexivity] To be reflexive, these pairs need to appear:
-											\begin{align*}
-												\bigl(\emptyset, \emptyset\bigr), \bigl(\{a\}, \{a\}\bigr), \bigl(\{b\}, \{b\}\bigr), \bigl(\{a, b\}, \{a, b\}\bigr)
-											\end{align*}
-										\item[Symmetry] For the relation to not be symmetric, at least one pair cannot be flipped.
-											\begin{indentparagraph}
-												If $\bigl(\emptyset, \{a\}\bigr)$ is added, then $\bigl(\{a\}, \emptyset\bigr)$ is not added.\\
-												Adding this single element would still mean $R$ is transitive.
-											\end{indentparagraph}
-										\item[Antisymmetry] For the relation to not be antisymmetric, at least one pair can be flipped.
-											If $\bigl(\emptyset, \{b\}\bigr)$ is added, then $\bigl(\{b\}, \emptyset\bigr)$ is added.
-										\item[Example] $
-											\begin{aligned}[t]
-												R_{4} &= \Bigl\{
-													\bigl(\emptyset, \emptyset\bigr), \bigl(\{a\}, \{a\}\bigr), \bigl(\{b\}, \{b\}\bigr), \bigl(\{a, b\}, \{a, b\}\bigr),\\
-													& \qquad \bigl(\emptyset, \{a\}\bigr), \bigl(\emptyset, \{b\}\bigr), \bigl(\{b\}, \emptyset\bigr)
-												\Bigr\}
-											\end{aligned} $
-									\end{description}
-								\item \question{$R$ is simultaneously symmetric and antisymmetric on $\mathcal{P}(A)$}
-									\begin{description}
-										\item[Antisymmetry] If there are no elements that are not equal to each other, then $R$ is vacuously antisymmetric.
-										\item[Symmetry] If every element is equal to each other, then every element is symmetric with itself.
-										\item[Example] $
-											\begin{aligned}[t]
-												R_{5} &= \Bigl\{\bigl(\emptyset, \emptyset\bigr), \bigl(\{a\}, \{a\}\bigr), \bigl(\{b\}, \{b\}\bigr), \bigl(\{a, b\}, \{a, b\}\bigr)\Bigr\}
-											\end{aligned}  $
-									\end{description}
-								\item \question{$R$ is irreflexive, antisymmetric and transitive on $\mathcal{P}(A)$}
-									\begin{description}
-										\item[Irreflexivity] None of these pairs appear in $R$:
-											\begin{align*}
-												\bigl(\emptyset, \emptyset\bigr), \bigl(\{a\}, \{a\}\bigr), \bigl(\{b\}, \{b\}\bigr), \bigl(\{a, b\}, \{a, b\}\bigr)
-											\end{align*}
-										\item[Antisymmetry] No pairs $(x, y)$ and $(y, x)$ appear in $R$.
-										\item[Transitivity] Can go from one pair to the next.
-										\item[Example] $
-											\begin{aligned}[t]
-												R_{6} &= \Bigl\{\bigl(\emptyset, \{a\}\bigr), \bigl(\{a\}, \{a, b\}\bigr), \bigl(\emptyset, \{a, b\}\bigr)\Bigr\}
-											\end{aligned} $
-									\end{description}
+								\item $R$ is reflexive and transitive, but not symmetric, and not antisymmetric on $\mathcal{P}(A)$
+									\begin{answer}
+										\begin{description}
+											\item[Reflexivity] To be reflexive, these pairs need to appear:
+												\begin{align*}
+													\bigl(\emptyset, \emptyset\bigr), \bigl(\{a\}, \{a\}\bigr), \bigl(\{b\}, \{b\}\bigr), \bigl(\{a, b\}, \{a, b\}\bigr)
+												\end{align*}
+											\item[Symmetry] For the relation to not be symmetric, at least one pair cannot be flipped.
+												\begin{indentparagraph}
+													If $\bigl(\emptyset, \{a\}\bigr)$ is added, then $\bigl(\{a\}, \emptyset\bigr)$ is not added.\\
+													Adding this single element would still mean $R$ is transitive.
+												\end{indentparagraph}
+											\item[Antisymmetry] For the relation to not be antisymmetric, at least one pair can be flipped.
+												If $\bigl(\emptyset, \{b\}\bigr)$ is added, then $\bigl(\{b\}, \emptyset\bigr)$ is added.
+											\item[Example] $
+												\begin{aligned}[t]
+													R_{4} &= \Bigl\{
+														\bigl(\emptyset, \emptyset\bigr), \bigl(\{a\}, \{a\}\bigr), \bigl(\{b\}, \{b\}\bigr), \bigl(\{a, b\}, \{a, b\}\bigr),\\
+														& \qquad \bigl(\emptyset, \{a\}\bigr), \bigl(\emptyset, \{b\}\bigr), \bigl(\{b\}, \emptyset\bigr)
+													\Bigr\}
+												\end{aligned} $
+										\end{description}
+									\end{answer}
+								\item $R$ is simultaneously symmetric and antisymmetric on $\mathcal{P}(A)$
+									\begin{answer}
+										\begin{description}
+											\item[Antisymmetry] If there are no elements that are not equal to each other, then $R$ is vacuously antisymmetric.
+											\item[Symmetry] If every element is equal to each other, then every element is symmetric with itself.
+											\item[Example] $
+												\begin{aligned}[t]
+													R_{5} &= \Bigl\{\bigl(\emptyset, \emptyset\bigr), \bigl(\{a\}, \{a\}\bigr), \bigl(\{b\}, \{b\}\bigr), \bigl(\{a, b\}, \{a, b\}\bigr)\Bigr\}
+												\end{aligned}  $
+										\end{description}
+									\end{answer}
+								\item $R$ is irreflexive, antisymmetric and transitive on $\mathcal{P}(A)$
+									\begin{answer}
+										\begin{description}
+											\item[Irreflexivity] None of these pairs appear in $R$:
+												\begin{align*}
+													\bigl(\emptyset, \emptyset\bigr), \bigl(\{a\}, \{a\}\bigr), \bigl(\{b\}, \{b\}\bigr), \bigl(\{a, b\}, \{a, b\}\bigr)
+												\end{align*}
+											\item[Antisymmetry] No pairs $(x, y)$ and $(y, x)$ appear in $R$.
+											\item[Transitivity] Can go from one pair to the next.
+											\item[Example] $
+												\begin{aligned}[t]
+													R_{6} &= \Bigl\{\bigl(\emptyset, \{a\}\bigr), \bigl(\{a\}, \{a, b\}\bigr), \bigl(\emptyset, \{a, b\}\bigr)\Bigr\}
+												\end{aligned} $
+										\end{description}
+									\end{answer}
 							\end{enumerate}
-						\item \question{Prove that if $R$ is a relation on $X$, then $R$ is transitive iff $R \circ R \subseteq R$}.
-							\begin{proof}
-								$ $
-								\begin{enumerate}[label=(\roman*)]
-									\item \question{If $R$ is transitive, then $R \circ R \subseteq R$}
-										\begin{subproof}[Subproof]
-											$ $
-											\begin{tabbing}
-												Assume \qquad \= $R$ is transitive.\\
-												Suppose \> $(x, z) \in R \circ R$.\\
-												Then \> there is some $y \in X$ such that $(x, y) \in R$ and $(y, z) \in R$\\
-												\> (By definition of composition)\\
-												And \> $(x, z) \in R$\\
-												\> (Because $R$ is transitive)\\
-												$\therefore$ \> if $R$ is transitive, then $R \circ R \subseteq R$
-											\end{tabbing}
-										\end{subproof}
-									\pagebreak
-									\item \question{If $R \circ R \subseteq R$, then $R$ is transitive}
-										\begin{subproof}[Subproof]
-											$ $
-											\begin{tabbing}
-												Assume \qquad \= $R \circ R \subseteq R$.\\
-												Suppose \> $(x, y) \in R$ and $(y, z) \in R$.\\
-												Then \> $(x, z) \in R \circ R$.\\
-												\> (By definition of composition)\\
-												And \> $(x, z) \in R$\\
-												\> (Because $R \circ R \subseteq R$)\\
-												$\therefore$ \> if $(x, y) \in R$ and $(y, z) \in R$, then $(x, z) \in R$\\
-												$\therefore$ \> if $R \circ R \subseteq R$, then $R$ is transitive.
-											\end{tabbing}
-										\end{subproof}
-								\end{enumerate}
-								$\therefore R$ is transitive iff $R \circ R \subseteq R$.
-							\end{proof}
-					\end{enumerate}
+						\item Prove that if $R$ is a relation on $X$, then $R$ is transitive iff $R \circ R \subseteq R$.
+							\begin{answer}
+								\begin{proof}
+									$ $
+									\begin{questions}[label=(\roman*)]
+										\item If $R$ is transitive, then $R \circ R \subseteq R$
+											\begin{answer}
+												\begin{subproof}[Subproof]
+													$ $
+													\begin{tabbing}
+														Assume \qquad \= $R$ is transitive.\\
+														Suppose \> $(x, z) \in R \circ R$.\\
+														Then \> there is some $y \in X$ such that $(x, y) \in R$ and $(y, z) \in R$\\
+														\> (By definition of composition)\\
+														And \> $(x, z) \in R$\\
+														\> (Because $R$ is transitive)\\
+														$\therefore$ \> if $R$ is transitive, then $R \circ R \subseteq R$
+													\end{tabbing}
+												\end{subproof}
+											\end{answer}
+										\pagebreak
+										\item If $R \circ R \subseteq R$, then $R$ is transitive
+											\begin{answer}
+												\begin{subproof}[Subproof]
+													$ $
+													\begin{tabbing}
+														Assume \qquad \= $R \circ R \subseteq R$.\\
+														Suppose \> $(x, y) \in R$ and $(y, z) \in R$.\\
+														Then \> $(x, z) \in R \circ R$.\\
+														\> (By definition of composition)\\
+														And \> $(x, z) \in R$\\
+														\> (Because $R \circ R \subseteq R$)\\
+														$\therefore$ \> if $(x, y) \in R$ and $(y, z) \in R$, then $(x, z) \in R$\\
+														$\therefore$ \> if $R \circ R \subseteq R$, then $R$ is transitive.
+													\end{tabbing}
+												\end{subproof}
+											\end{answer}
+									\end{questions}
+									$\therefore R$ is transitive iff $R \circ R \subseteq R$.
+								\end{proof}
+							\end{answer}
+					\end{questions}
 				\end{exercise}
 	\rulechapterend
 \end{document}

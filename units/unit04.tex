@@ -38,9 +38,9 @@
 				\end{center}
 			\end{example}
 			\begin{exercise}{Self-Assessment Exercise \thechapter.4}
-				\begin{enumerate}
+				\begin{questions}
 					\item
-						\begin{enumerate}
+						\begin{questions}
 							\item $(X \cup Y)'$
 								\begin{center}
 									\begin{venntwo}[labelA=$X$, labelB=$Y$, tikzoptions={scale=0.8}][$X \cup Y$]
@@ -86,9 +86,9 @@
 										\fillNotB
 									\end{venntwo}
 								\end{center}
-						\end{enumerate}
+						\end{questions}
 					\item
-						\begin{enumerate}
+						\begin{questions}
 							\item $X - (Y \cup Z)$
 								\begin{center}
 									\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}][$X$]
@@ -167,8 +167,8 @@
 										\fillACapCNotB
 									\end{vennthree}
 								\end{center}
-						\end{enumerate}
-				\end{enumerate}
+						\end{questions}
+				\end{questions}
 			\end{exercise}
 		\pagebreak
 		\section{Proofs}
@@ -240,58 +240,66 @@
 			\pagebreak
 			\begin{exercise}{Self-Assessment Exercise \thechapter.6}
 				\begin{multicols}{2}
-					\begin{enumerate}[label=(\alph*), itemsep=0.5em]
+					\begin{questions}[label=(\alph*), itemsep=0.5em]
 						\item $(X')' = X$
-							\begin{proof}
-								Let $x \in (X')'$.
-								\begin{tabbing}
-									$\quad$ \= $x \in (X')'$\\
-									iff \> $x \notin X'$\\
-									iff \> $x \in X$\\
-									$\therefore$ \> $(X')' = X$
-								\end{tabbing}
-							\end{proof}
+							\begin{answer}
+								\begin{proof}
+									Let $x \in (X')'$.
+									\begin{tabbing}
+										$\quad$ \= $x \in (X')'$\\
+										iff \> $x \notin X'$\\
+										iff \> $x \in X$\\
+										$\therefore$ \> $(X')' = X$
+									\end{tabbing}
+								\end{proof}
+							\end{answer}
 						\item $X - (Y \cap W) = (X - Y) \cup (X - W)$
-							\begin{proof}
-								Let $x \in X - (Y \cap W)$.
-								\begin{tabbing}
-									$\quad$ \= $x \in X - (Y \cap W)$\\
-									iff \> $x \in X$ and $x \notin (Y \cap W)$\\
-									iff \> $x \in X$ and $x \in Y'$ or $x \in W'$\\
-									iff \> $\bigl(x \in X$ and $x \in Y'\bigr)$ or $\bigl(x \in X$ and $x \in W'\bigr)$\\
-									iff \> $\bigl(x \in (X - Y)\bigr)$ or $\bigl(x \in (X - W)\bigr)$\\
-									iff \> $x \in (X - Y) \cup (X - W)$\\
-									$\therefore$ \> $X - (Y \cap W) = (X - Y) \cup (X - W)$
-								\end{tabbing}
-							\end{proof}
+							\begin{answer}
+								\begin{proof}
+									Let $x \in X - (Y \cap W)$.
+									\begin{tabbing}
+										$\quad$ \= $x \in X - (Y \cap W)$\\
+										iff \> $x \in X$ and $x \notin (Y \cap W)$\\
+										iff \> $x \in X$ and $x \in Y'$ or $x \in W'$\\
+										iff \> $\bigl(x \in X$ and $x \in Y'\bigr)$ or $\bigl(x \in X$ and $x \in W'\bigr)$\\
+										iff \> $\bigl(x \in (X - Y)\bigr)$ or $\bigl(x \in (X - W)\bigr)$\\
+										iff \> $x \in (X - Y) \cup (X - W)$\\
+										$\therefore$ \> $X - (Y \cap W) = (X - Y) \cup (X - W)$
+									\end{tabbing}
+								\end{proof}
+							\end{answer}
 						\columnbreak
 						\item $X \cap (Y \cap W) = (X \cap Y) \cap W$
-							\begin{proof}
-								Let $x \in X \cap (Y \cap W)$.
-								\begin{tabbing}
-									$\quad$ \= $x \in X \cap (Y \cap W)$\\
-									iff \> $x \in X$ and $x \in (Y \cap W)$\\
-									iff \> $x \in X$ and $x \in Y$ and $x \in W$\\
-									iff \> $(x \in X$ and $x \in Y)$ and $x \in W$\\
-									iff \> $x \in (X \cap Y)$ and $x \in W$\\
-									iff \> $x \in (X \cap Y) \cap W$\\
-									$\therefore$ \> $X \cap (Y \cap W) = (X \cap Y) \cap W$
-								\end{tabbing}
-							\end{proof}
+							\begin{answer}
+								\begin{proof}
+									Let $x \in X \cap (Y \cap W)$.
+									\begin{tabbing}
+										$\quad$ \= $x \in X \cap (Y \cap W)$\\
+										iff \> $x \in X$ and $x \in (Y \cap W)$\\
+										iff \> $x \in X$ and $x \in Y$ and $x \in W$\\
+										iff \> $(x \in X$ and $x \in Y)$ and $x \in W$\\
+										iff \> $x \in (X \cap Y)$ and $x \in W$\\
+										iff \> $x \in (X \cap Y) \cap W$\\
+										$\therefore$ \> $X \cap (Y \cap W) = (X \cap Y) \cap W$
+									\end{tabbing}
+								\end{proof}
+							\end{answer}
 						\item $X \cap (Y \cup W) = (X \cap Y) \cup (X \cap W)$
-							\begin{proof}
-								Let $x \in X \cap (Y \cup W)$
-								\begin{tabbing}
-									$\quad$ \= $x \in X \cap (Y \cup W)$\\
-									iff \> $x \in X$ and $x \in (Y \cup W)$\\
-									iff \> $x \in X$ and ($x \in Y$ or $x \in W$)\\
-									iff \> ($x \in X$ and $x \in Y$) or ($x \in X$ and $x \in W$)\\
-									iff \> ($x \in (X \cap Y)$) or ($x \in (X \cap W)$)\\
-									iff \> $x \in (X \cap Y) \cup (X \cap W)$\\
-									$\therefore$ \> $X \cap (Y \cup W) = (X \cap Y) \cup (X \cap W)$
-								\end{tabbing}
-							\end{proof}
-					\end{enumerate}
+							\begin{answer}
+								\begin{proof}
+									Let $x \in X \cap (Y \cup W)$
+									\begin{tabbing}
+										$\quad$ \= $x \in X \cap (Y \cup W)$\\
+										iff \> $x \in X$ and $x \in (Y \cup W)$\\
+										iff \> $x \in X$ and ($x \in Y$ or $x \in W$)\\
+										iff \> ($x \in X$ and $x \in Y$) or ($x \in X$ and $x \in W$)\\
+										iff \> ($x \in (X \cap Y)$) or ($x \in (X \cap W)$)\\
+										iff \> $x \in (X \cap Y) \cup (X \cap W)$\\
+										$\therefore$ \> $X \cap (Y \cup W) = (X \cap Y) \cup (X \cap W)$
+									\end{tabbing}
+								\end{proof}
+							\end{answer}
+					\end{questions}
 				\end{multicols}
 			\end{exercise}
 			In order to prove that two sets are not equal, one needs to just provide a \concept{counterexample} - an element that is in one set that is not in the other.
@@ -300,131 +308,141 @@
 			\end{definition}
 		\pagebreak
 		\begin{exercise}{Self Assessment Exercise \thechapter.8}
-			\begin{enumerate}
-				\item \question{Is it the case for all $X$, $Y$, $Z \subseteq U$, $X + (Y \cap Z) = (X + Y) \cap (X + Z)$?}
-					\begin{center}
-						\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}][$X$]
-							\fillA
-						\end{vennthree}
-						\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}][$Y \cap Z$]
-							\fillBCapC
-						\end{vennthree}
-						\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}][$X + (Y \cap Z)$]
-							\fillOnlyA
-							\fillACapBNotC
-							\fillACapCNotB
-							\fillBCapCNotA
-						\end{vennthree}
-						\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}][$X + Y$]
-							\fillANotB
-							\fillBNotA
-						\end{vennthree}
-						\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}][$X + Z$]
-							\fillANotC
-							\fillCNotA
-						\end{vennthree}
-						\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}][$X + (Y \cap Z)$]
-							\fillOnlyA
-							\fillBCapCNotA
-						\end{vennthree}
-					\end{center}
-					As the venn diagrams are not the same, it is not the case.\\
-					Counterexample: Find an element that is in $X$ and in $Y$, but is not in $Z$.
-				\item \question{Find examples of sets $A$ and $B$ such that $\mathcal{P}(A \cup B)$ is not a subset of $\mathcal{P}(A) \cup \mathcal{P}(B)$}.\\
-					$A$ and $B$ just need to contain different elements. For example, let $A = \{1\}$ and $B = \{2\}$.
-					\begin{align*}
-						\mathcal{P}(A \cup B) &= \mathcal{P}\bigl(\{1\} \cup \{2\}\bigr)\\
-						&= \mathcal{P}\bigl(\{1, 2\}\bigr)\\
-						&= \bigl\{\emptyset, \{1\}, \{2\}, \{1, 2\}\bigr\}\\
-						\mathcal{P}(A) \cup \mathcal{P}(B) &= \mathcal{P}\bigl(\{1\}\bigr) \cup \mathcal{P}\bigl(\{2\}\bigr)\\
-						&= \bigl\{\emptyset, \{1\}\bigr\} \cup \bigl\{\emptyset, \{2\}\bigr\}\\
-						&= \bigl\{\emptyset, \{1\}, \{2\}\bigr\}
-					\end{align*}
-				\pagebreak
-				\item \question{Is it the case that, for all $X, Y \subseteq U,\mathcal{P}(X) \cap \mathcal{P}(Y) = \mathcal{P}(X \cap Y)$?}\\
-					Yes.
-					\begin{proof}
-						Let $S \in P(X) \cap P(Y)$.
-						\begin{tabbing}
-							$\qquad$ \= $S \in P(X) \cap P(Y)$\\
-							iff \> $S \in P(X)$ and $S \in P(Y)$\\
-							iff \> $S \subseteq X$ and $S \subseteq Y$\\
-							iff \> (The elements of $S$ are all in $X$) and (The elements of $S$ are all in $Y$)\\
-							iff \> The elements of $S$ are all in $X \cap Y$\\
-							iff \> $S \subseteq X \cap Y$\\
-							iff \> $S \in \mathcal{P}(X \cap Y)$
-						\end{tabbing}
-					\end{proof}
-				\item \question{Use Venn diagrams to investigate whether, for all sets $X, Y, Z \subseteq U$ \\
-				$X - (Y - Z) = (X - Y) - Z$. If it is true, provide a proof. Else, provide a counterexample.}
-					\begin{center}
-						\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}][$X$]
-							\fillA
-						\end{vennthree}
-						\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}][$Y - Z$]
-							\fillBNotC
-						\end{vennthree}
-						\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}][$X - (Y - Z)$]
-							\fillOnlyA
-							\fillACapC
-						\end{vennthree}
-						\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}][$X - Y$]
-							\fillANotB
-						\end{vennthree}
-						\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}][$Z$]
-							\fillC
-						\end{vennthree}
-						\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}][$(X - Y) - Z$]
-							\fillOnlyA
-						\end{vennthree}
-					\end{center}
-					\begin{proof}[Counterexample]
-						Let $X = \{1, 2\}$, $Y = \{4\}$, $Z = \{1, 3\}$.
-							\begin{align*}
-								X - (Y - Z) &= \{1, 2\}\\
-								(X - Y) - Z &= \{2\}\\
-								\{1, 2\} &\neq \{2\}\\
-								X - (Y - Z) &\neq (X - Y) - Z
-							\end{align*}
-					\end{proof}
-				\pagebreak
-				\item \question{Use Venn diagrams to investigate whether, for all sets $A, B, C \subseteq U$ \\
-				$(A \cap B) + (C \cap A) = (A \cap B') \cup (B - C)$. If it is true, provide a proof. Else, provide a counterexample.}
-					\begin{center}
-						\begin{vennthree}[tikzoptions={scale=0.8}][$A \cap B$]
-							\fillACapB
-						\end{vennthree}
-						\begin{vennthree}[tikzoptions={scale=0.8}][$C \cap A$]
-							\fillACapC
-						\end{vennthree}
-						\begin{vennthree}[tikzoptions={scale=0.8}][$(A \cap B) + (C \cap A)$]
-							\fillACapBNotC
-							\fillACapCNotB
-						\end{vennthree}
-						\begin{vennthree}[tikzoptions={scale=0.8}][$B'$]
-							\fillNotB
-						\end{vennthree}
-						\begin{vennthree}[tikzoptions={scale=0.8}][$A \cap B'$]
-							\fillANotB
-						\end{vennthree}
-						\begin{vennthree}[tikzoptions={scale=0.8}][$B - C$]
-							\fillBNotC
-						\end{vennthree}
-						\begin{vennthree}[tikzoptions={scale=0.8}][$(A \cap B') \cup (B - C)$]
-							\fillANotB
-							\fillBNotC
-						\end{vennthree}
-					\end{center}
-					\begin{proof}[Counterexample]
-						Let $A = \{1, 2\}$, $B = \{2, 3\}$, $C = \{4\}$
+			\begin{questions}
+				\item Is it the case for all $X$, $Y$, $Z \subseteq U$, $X + (Y \cap Z) = (X + Y) \cap (X + Z)$?
+					\begin{answer}
+						\begin{center}
+							\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}][$X$]
+								\fillA
+							\end{vennthree}
+							\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}][$Y \cap Z$]
+								\fillBCapC
+							\end{vennthree}
+							\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}][$X + (Y \cap Z)$]
+								\fillOnlyA
+								\fillACapBNotC
+								\fillACapCNotB
+								\fillBCapCNotA
+							\end{vennthree}
+							\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}][$X + Y$]
+								\fillANotB
+								\fillBNotA
+							\end{vennthree}
+							\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}][$X + Z$]
+								\fillANotC
+								\fillCNotA
+							\end{vennthree}
+							\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}][$X + (Y \cap Z)$]
+								\fillOnlyA
+								\fillBCapCNotA
+							\end{vennthree}
+						\end{center}
+						As the venn diagrams are not the same, it is not the case.\\
+						Counterexample: Find an element that is in $X$ and in $Y$, but is not in $Z$.
+					\end{answer}
+				\item Find examples of sets $A$ and $B$ such that $\mathcal{P}(A \cup B)$ is not a subset of $\mathcal{P}(A) \cup \mathcal{P}(B)$.\\
+					\begin{answer}
+						$A$ and $B$ just need to contain different elements. For example, let $A = \{1\}$ and $B = \{2\}$.
 						\begin{align*}
-							(A \cap B) + (C \cap A) &= \{2\}\\
-							(A \cap B') \cup (B - C) &= \{1, 2, 3\}\\
-							\{2\} &\neq \{1, 2, 3\}\\
-							(A \cap B) + (C \cap A) &\neq (A \cap B') \cup (B - C)
-						\end{align*} 
-					\end{proof}
-			\end{enumerate}
+							\mathcal{P}(A \cup B) &= \mathcal{P}\bigl(\{1\} \cup \{2\}\bigr)\\
+							&= \mathcal{P}\bigl(\{1, 2\}\bigr)\\
+							&= \bigl\{\emptyset, \{1\}, \{2\}, \{1, 2\}\bigr\}\\
+							\mathcal{P}(A) \cup \mathcal{P}(B) &= \mathcal{P}\bigl(\{1\}\bigr) \cup \mathcal{P}\bigl(\{2\}\bigr)\\
+							&= \bigl\{\emptyset, \{1\}\bigr\} \cup \bigl\{\emptyset, \{2\}\bigr\}\\
+							&= \bigl\{\emptyset, \{1\}, \{2\}\bigr\}
+						\end{align*}
+					\end{answer}
+				\pagebreak
+				\item Is it the case that, for all $X, Y \subseteq U,\mathcal{P}(X) \cap \mathcal{P}(Y) = \mathcal{P}(X \cap Y)$?\\
+					\begin{answer}
+						Yes.
+						\begin{proof}
+							Let $S \in P(X) \cap P(Y)$.
+							\begin{tabbing}
+								$\qquad$ \= $S \in P(X) \cap P(Y)$\\
+								iff \> $S \in P(X)$ and $S \in P(Y)$\\
+								iff \> $S \subseteq X$ and $S \subseteq Y$\\
+								iff \> (The elements of $S$ are all in $X$) and (The elements of $S$ are all in $Y$)\\
+								iff \> The elements of $S$ are all in $X \cap Y$\\
+								iff \> $S \subseteq X \cap Y$\\
+								iff \> $S \in \mathcal{P}(X \cap Y)$
+							\end{tabbing}
+						\end{proof}
+					\end{answer}
+				\item Use Venn diagrams to investigate whether, for all sets $X, Y, Z \subseteq U$ \\
+				$X - (Y - Z) = (X - Y) - Z$. If it is true, provide a proof. Else, provide a counterexample.
+					\begin{answer}
+						\begin{center}
+							\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}][$X$]
+								\fillA
+							\end{vennthree}
+							\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}][$Y - Z$]
+								\fillBNotC
+							\end{vennthree}
+							\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}][$X - (Y - Z)$]
+								\fillOnlyA
+								\fillACapC
+							\end{vennthree}
+							\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}][$X - Y$]
+								\fillANotB
+							\end{vennthree}
+							\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}][$Z$]
+								\fillC
+							\end{vennthree}
+							\begin{vennthree}[labelA=$X$, labelB=$Y$, labelC=$Z$, tikzoptions={scale=0.8}][$(X - Y) - Z$]
+								\fillOnlyA
+							\end{vennthree}
+						\end{center}
+						\begin{proof}[Counterexample]
+							Let $X = \{1, 2\}$, $Y = \{4\}$, $Z = \{1, 3\}$.
+								\begin{align*}
+									X - (Y - Z) &= \{1, 2\}\\
+									(X - Y) - Z &= \{2\}\\
+									\{1, 2\} &\neq \{2\}\\
+									X - (Y - Z) &\neq (X - Y) - Z
+								\end{align*}
+						\end{proof}
+					\end{answer}
+				\pagebreak
+				\item Use Venn diagrams to investigate whether, for all sets $A, B, C \subseteq U$ \\
+				$(A \cap B) + (C \cap A) = (A \cap B') \cup (B - C)$. If it is true, provide a proof. Else, provide a counterexample.
+					\begin{answer}
+						\begin{center}
+							\begin{vennthree}[tikzoptions={scale=0.8}][$A \cap B$]
+								\fillACapB
+							\end{vennthree}
+							\begin{vennthree}[tikzoptions={scale=0.8}][$C \cap A$]
+								\fillACapC
+							\end{vennthree}
+							\begin{vennthree}[tikzoptions={scale=0.8}][$(A \cap B) + (C \cap A)$]
+								\fillACapBNotC
+								\fillACapCNotB
+							\end{vennthree}
+							\begin{vennthree}[tikzoptions={scale=0.8}][$B'$]
+								\fillNotB
+							\end{vennthree}
+							\begin{vennthree}[tikzoptions={scale=0.8}][$A \cap B'$]
+								\fillANotB
+							\end{vennthree}
+							\begin{vennthree}[tikzoptions={scale=0.8}][$B - C$]
+								\fillBNotC
+							\end{vennthree}
+							\begin{vennthree}[tikzoptions={scale=0.8}][$(A \cap B') \cup (B - C)$]
+								\fillANotB
+								\fillBNotC
+							\end{vennthree}
+						\end{center}
+						\begin{proof}[Counterexample]
+							Let $A = \{1, 2\}$, $B = \{2, 3\}$, $C = \{4\}$
+							\begin{align*}
+								(A \cap B) + (C \cap A) &= \{2\}\\
+								(A \cap B') \cup (B - C) &= \{1, 2, 3\}\\
+								\{2\} &\neq \{1, 2, 3\}\\
+								(A \cap B) + (C \cap A) &\neq (A \cap B') \cup (B - C)
+							\end{align*} 
+						\end{proof}
+					\end{answer}
+			\end{questions}
 		\end{exercise}
 		\pagebreak
 		\section{The Inclusion Exclusion Principle}
@@ -440,11 +458,7 @@
 			\end{theorem}
 			\subsection{Applying the principle to Venn Diagrams}
 				\begin{example}
-					In a group of 50 learners, 25 play mastermind, 30 play basketball, and 10 play both.
-					\begin{enumerate}[label=(\alph*)]
-						\item How many learners play Mastermind or basketball, (or both)?
-						\item How many students do not play either Mastermind or basketball?
-					\end{enumerate}
+					In a group of 50 learners, 25 play mastermind, 30 play basketball, and 10 play both.\\
 					$U$ is all the learners, $M$ is those who play Mastermind, and $B$ is those who play basketball.
 					\begin{alignat*}{4}
 						\left\lvert U\right\rvert &= 50 \qquad & \left\lvert M\right\rvert &= 25 \qquad & \left\lvert B\right\rvert &= 30 \qquad & \left\lvert M \cap B \right\rvert = 10
@@ -457,24 +471,26 @@
 							}
 						\end{venntwo}
 					\end{center}
-					\pagebreak
-					\begin{enumerate}
-						\item $\left\lvert M \cup B\right\rvert = 15 + 10 + 20 = 45$.\\
-							Also, by Inclusion Exclusion,
-							\begin{align*}
-								\left\lvert M \cup B\right\rvert &= \left\lvert M\right\rvert + \left\lvert B\right\rvert - \left\lvert M \cap B\right\rvert\\
-								&= 25 + 30 - 10\\
-								&= 45
-							\end{align*}
-						\item $\left\lvert (M \cup B)'\right\rvert = 50 - 45 = 5$
-					\end{enumerate}
+					\begin{questions}
+						\item How many learners play Mastermind or basketball, (or both)?\\
+							\begin{answer}
+								$\left\lvert M \cup B\right\rvert = 15 + 10 + 20 = 45$.\\
+								Also, by Inclusion Exclusion,
+								\begin{align*}
+									\left\lvert M \cup B\right\rvert &= \left\lvert M\right\rvert + \left\lvert B\right\rvert - \left\lvert M \cap B\right\rvert\\
+									&= 25 + 30 - 10\\
+									&= 45
+								\end{align*}
+							\end{answer}
+						\item How many students do not play either Mastermind or basketball?\\
+							\begin{answer}
+								$\left\lvert (M \cup B)'\right\rvert = 50 - 45 = 5$
+							\end{answer}
+					\end{questions}
 				\end{example}
+				\pagebreak
 				\begin{example}
-					A questionnaire filled in by 100 subscribers to Blue Scalpel Medical Insurance who submitted no claims during 2009 reveals that 45 jog regularly, 30 do aerobics regularly, 20 cycle regularly, 6 jog and do aerobics, 1 jogs and cycles, 5 do aerobics and cycle, and 1 jogs, cycles and does aerobics.
-					\begin{enumerate}[label=(\alph*)]
-						\item How many of these healthy people do not participate regularly in any of the three activities?
-						\item How many only jog?
-					\end{enumerate}
+					A questionnaire filled in by 100 subscribers to Blue Scalpel Medical Insurance who submitted no claims during 2009 reveals that 45 jog regularly, 30 do aerobics regularly, 20 cycle regularly, 6 jog and do aerobics, 1 jogs and cycles, 5 do aerobics and cycle, and 1 jogs, cycles and does aerobics.\\
 					$U$ is the subscribers, $J$ is those who jog, $A$ is those who do aerobics, and $C$ is those who cycle.
 					\begin{alignat*}{4}
 						\left\lvert U\right\rvert &= 100 \qquad & \left\lvert J\right\rvert &= 45 \qquad & \left\lvert A\right\rvert &= 30 \qquad & \left\lvert C\right\rvert &= 20\\
@@ -488,111 +504,133 @@
 							}
 						\end{vennthree}
 					\end{center}
-					\begin{enumerate}[label=(\alph*)]
-						\item This would be the value of the people who don't appear in any of the circles, which is $16$.
-						\item This would be the value inside the circle $J$, which is $39$.
-					\end{enumerate}
+					\begin{questions}
+						\item How many of these healthy people do not participate regularly in any of the three activities?\\
+							\begin{answer}
+								This would be the value of the people who don't appear in any of the circles, which is $16$.
+							\end{answer}
+						\item How many only jog?\\
+							\begin{answer}
+								This would be the value inside the circle $J$, which is $39$.
+							\end{answer}
+					\end{questions}
 				\end{example}
 				\pagebreak
 				\begin{exercise}{Self Assessment Exercise \thechapter.10}
-					\begin{enumerate}
-						\item \question{Of $1000$ first year students, $700$ take Mathematics, $400$ take Computer Science, and $800$ take Mathematics or Computer Science.}\\
-							$U$ is the first year students, $M$ is those who take Mathematics, and $C$ is those who take Computer Science.
-							\begin{alignat*}{5}
-								\left\lvert U\right\rvert &= 1000 \qquad & \left\lvert M\right\rvert &= 700 \qquad & \left\lvert C\right\rvert &= 400 \qquad & \left\lvert M \cup C\right\rvert &= 800 \qquad & \left\lvert M \cap C\right\rvert &= x
-							\end{alignat*}
-							\begin{center}
-								\begin{venntwo}[showframe=true, radius=2.4cm, overlap=1.2cm, vgap=1cm, labelA={$M$}, labelB={$C$}, labelAB=$x$, labelOnlyA={$700 - x$}, labelOnlyB={$400 - x$}]
-									\setpostvennhook
-									{
-										\node[above] at (current bounding box.south) {$1000 - 800 = 200$};
-									}
-								\end{venntwo}
-							\end{center}
-							\begin{alignat*}{2}
-								&\qquad &800 &= (700 - x) + x + (400 - x)\\
-								& \Rightarrow &800 &= 700 + 400 - x\\
-								& \Rightarrow &- 300 &= -x\\
-								& \Rightarrow & x &= 300
-							\end{alignat*}
-							\begin{enumerate}
-								\item \question{How many students take Mathematics and Computer Science?}\\
-								This would be $x$, which is $300$.
-								\item \question{How many students take Mathematics, but not Computer Science?}
-									\begin{align*}
-										400 - x &= 400 - 300\\
-										&= 100
-									\end{align*}
-								\item \question{How many students do not take either of the two subjects?}\\
-								The number occurring outside the circles, so $200$.
-							\end{enumerate}
+					\begin{questions}
+						\item Of $1000$ first year students, $700$ take Mathematics, $400$ take Computer Science, and $800$ take Mathematics or Computer Science.\\
+							\begin{answer}
+								$U$ is the first year students, $M$ is those who take Mathematics, and $C$ is those who take Computer Science.
+								\begin{alignat*}{5}
+									\left\lvert U\right\rvert &= 1000 \qquad & \left\lvert M\right\rvert &= 700 \qquad & \left\lvert C\right\rvert &= 400 \qquad & \left\lvert M \cup C\right\rvert &= 800 \qquad & \left\lvert M \cap C\right\rvert &= x
+								\end{alignat*}
+								\begin{center}
+									\begin{venntwo}[showframe=true, radius=2.4cm, overlap=1.2cm, vgap=1cm, labelA={$M$}, labelB={$C$}, labelAB=$x$, labelOnlyA={$700 - x$}, labelOnlyB={$400 - x$}]
+										\setpostvennhook
+										{
+											\node[above] at (current bounding box.south) {$1000 - 800 = 200$};
+										}
+									\end{venntwo}
+								\end{center}
+								\begin{alignat*}{2}
+									&\qquad &800 &= (700 - x) + x + (400 - x)\\
+									& \Rightarrow &800 &= 700 + 400 - x\\
+									& \Rightarrow &- 300 &= -x\\
+									& \Rightarrow & x &= 300
+								\end{alignat*}
+							\end{answer}
+							\begin{questions}[first=\bfseries]
+								\item How many students take Mathematics and Computer Science?\\
+								\begin{answer}
+									This would be $x$, which is $300$.
+								\end{answer}
+								\item How many students take Mathematics, but not Computer Science?
+									\begin{answer}
+										\begin{align*}
+											400 - x &= 400 - 300\\
+											&= 100
+										\end{align*}
+									\end{answer}
+								\item How many students do not take either of the two subjects?\\
+								\begin{answer}
+									The number occurring outside the circles, so $200$.
+								\end{answer}
+							\end{questions}
 						\pagebreak
-						\item \question{A builder has a team of 64 construction workers. 45 can use at least one of the three equipment types. 22 can operate cranes, 26 can operate backhoes, 4 can operate cranes and bulldozers, 6 can operate backhoes and bulldozers, 8 can operate cranes and backhoes, and 1 can operate all three kinds of machinery. How many can operate bulldozers?}\\
-							$U$ is the workers, $C$ is the workers who can operate cranes, $B$ is the workers who can operate backhoes, and $D$ is the workers who can operate bulldozers. 
+						\item A builder has a team of 64 construction workers. 45 can use at least one of the three equipment types. 22 can operate cranes, 26 can operate backhoes, 4 can operate cranes and bulldozers, 6 can operate backhoes and bulldozers, 8 can operate cranes and backhoes, and 1 can operate all three kinds of machinery. How many can operate bulldozers?\\
+							\begin{answer}
+								$U$ is the workers, $C$ is the workers who can operate cranes, $B$ is the workers who can operate backhoes, and $D$ is the workers who can operate bulldozers. 
+								\begin{alignat*}{4}
+									\left\lvert U\right\rvert &= 64 \qquad & \left\lvert C\right\rvert &= 22 \qquad & \left\lvert B \right\rvert &= 26 \qquad & \left\lvert D\right\rvert &= x\\
+									\left\lvert C \cap D\right\rvert &= 4 \qquad & \left\lvert B \cap D \right\rvert &= 6 \qquad & \left\lvert C \cap B \right\rvert &= 8 \qquad & \left\lvert C \cap B \cap D \right\rvert &= 1\\
+									\left\lvert C \cup B \cup D\right\rvert &= 45 & & & & & &
+								\end{alignat*}
+								\begin{center}
+									\begin{vennthree}[showframe=true, radius=3.5cm, overlap=2.3cm, vgap=0.8cm, labelA={$C$}, labelB={$B$}, labelC={$D$}, labelABC={$1$}, labelOnlyAB={$8 - 1 = 7$}, labelOnlyC={$x - 3 - 1 - 5 = x - 9$}, labelOnlyAC={$4 - 1 = 3$}, labelOnlyBC={$6 - 1 = 5$}, labelOnlyA={$22 - 7 - 1 - 3 = 11$}, labelOnlyB={$26 - 7 - 1 - 5 = 13$}]
+										\setpostvennhook
+										{
+											\node[above] at (current bounding box.south) {$64 - 45 = 19$};
+										}
+									\end{vennthree}
+								\end{center}
+								\begin{alignat*}{2}
+									& &45 &= 11 + 13 + (x - 9) + 7 + 3 + 5 + 1\\
+									& \Rightarrow \quad & 45 &= 40 + x - 9\\
+									& \Rightarrow \quad & x &= 45 - 31\\
+									& \Rightarrow \quad & x &= 14
+								\end{alignat*}
+								The number of people who can only operate bulldozers is $x - 9 = 14 - 9 = 5$.\\
+								The number of people who can operate bulldozers is therefore $5 + 3 + 1 + 5 = 14$.
+							\end{answer}
+						\item A software company employs 22 software engineers. All of them can use at least one of the three methods. $17$ of them can use a formal method (FM), $9$ can use Unified Modelling Language (UML), and $9$ can use entity-relationship diagrams (ER). $5$ engineers can use both an FM and UML, $4$ both an FM and ER diagrams, and $7$ both UML and ER diagrams.
+						\begin{answer}
 							\begin{alignat*}{4}
-								\left\lvert U\right\rvert &= 64 \qquad & \left\lvert C\right\rvert &= 22 \qquad & \left\lvert B \right\rvert &= 26 \qquad & \left\lvert D\right\rvert &= x\\
-								\left\lvert C \cap D\right\rvert &= 4 \qquad & \left\lvert B \cap D \right\rvert &= 6 \qquad & \left\lvert C \cap B \right\rvert &= 8 \qquad & \left\lvert C \cap B \cap D \right\rvert &= 1\\
-								\left\lvert C \cup B \cup D\right\rvert &= 45 & & & & & &
+								\left\lvert U\right\rvert &= 22 \qquad & \left\lvert \mathrm{FM}\right\rvert&= 17 \qquad & \left\lvert \mathrm{UML}\right\rvert &= 9 \qquad & \left\lvert \mathrm{ER}\right\rvert &= 9 \\
+								\left\lvert \mathrm{FM} \cap \mathrm{UML}\right\rvert &= 5 \qquad & \left\lvert \mathrm{FM} \cap \mathrm{ER}\right\rvert &= 4 \qquad & \left\lvert \mathrm{UML} \cap \mathrm{ER}\right\rvert &= 7 \qquad & \left\lvert \mathrm{FM} \cap \mathrm{UML} \cap \mathrm{ER}\right\rvert &= x  
 							\end{alignat*}
 							\begin{center}
-								\begin{vennthree}[showframe=true, radius=3.5cm, overlap=2.3cm, vgap=0.8cm, labelA={$C$}, labelB={$B$}, labelC={$D$}, labelABC={$1$}, labelOnlyAB={$8 - 1 = 7$}, labelOnlyC={$x - 3 - 1 - 5 = x - 9$}, labelOnlyAC={$4 - 1 = 3$}, labelOnlyBC={$6 - 1 = 5$}, labelOnlyA={$22 - 7 - 1 - 3 = 11$}, labelOnlyB={$26 - 7 - 1 - 5 = 13$}]
-									\setpostvennhook
-									{
-										\node[above] at (current bounding box.south) {$64 - 45 = 19$};
-									}
+								\begin{vennthree}[showframe=true, radius=3.5cm, overlap=2.3cm, labelA={FM}, labelB={UML}, labelC={ER}, labelABC={$x$}, labelOnlyAB={$5 - x$}, labelOnlyAC={$4 - x$}, labelOnlyBC={$7 - x$}, labelOnlyA={$x + 8$}, labelOnlyB={$x - 3$}, labelOnlyC={$x - 2$}]
 								\end{vennthree}
 							\end{center}
+							\begin{description}
+								\item[For Only FM:] $
+									\begin{aligned}[t]
+										17 - (5 - x) - x - (4 - x) &= 17 - 5 + x - x - 4 + x\\
+										&= x + 8
+									\end{aligned} $
+								\item[For Only UML:] $
+									\begin{aligned}[t]
+										9 - (5 - x) - x - (7 - x) &= 9 - 5 + x - x - 7 + x\\
+										&= x - 3
+									\end{aligned} $
+								\item[For Only ER:] $
+									\begin{aligned}[t]
+										9 - (4 - x) - x - (7 - x) &= 9 - 4 + x - x - 7 + x\\
+										&= x - 2
+									\end{aligned} $
+							\end{description}
 							\begin{alignat*}{2}
-								& &45 &= 11 + 13 + (x - 9) + 7 + 3 + 5 + 1\\
-								& \Rightarrow \quad & 45 &= 40 + x - 9\\
-								& \Rightarrow \quad & x &= 45 - 31\\
-								& \Rightarrow \quad & x &= 14
+								& & 22 &= (x + 8) + (x - 3) + (x - 2) + (5 - x) + (4 - x) + (7 - x) + x\\
+								& \Rightarrow \quad & 22 &= (x + x + x - x - x - x + x) + (8 - 3 - 2 + 5 + 4 + 7)\\
+								& \Rightarrow \quad & 22 &= x + 19\\
+								& \Rightarrow \quad & x &= 22 - 19\\
+								& \Rightarrow \quad & x &= 3
 							\end{alignat*}
-							The number of people who can only operate bulldozers is $x - 9 = 14 - 9 = 5$.\\
-							The number of people who can operate bulldozers is therefore $5 + 3 + 1 + 5 = 14$.
-						\item \question{A software company employs 22 software engineers. All of them can use at least one of the three methods. $17$ of them can use a formal method (FM), $9$ can use Unified Modelling Language (UML), and $9$ can use entity-relationship diagrams (ER). $5$ engineers can use both an FM and UML, $4$ both an FM and ER diagrams, and $7$ both UML and ER diagrams.}
-						\begin{alignat*}{4}
-							\left\lvert U\right\rvert &= 22 \qquad & \left\lvert \mathrm{FM}\right\rvert&= 17 \qquad & \left\lvert \mathrm{UML}\right\rvert &= 9 \qquad & \left\lvert \mathrm{ER}\right\rvert &= 9 \\
-							\left\lvert \mathrm{FM} \cap \mathrm{UML}\right\rvert &= 5 \qquad & \left\lvert \mathrm{FM} \cap \mathrm{ER}\right\rvert &= 4 \qquad & \left\lvert \mathrm{UML} \cap \mathrm{ER}\right\rvert &= 7 \qquad & \left\lvert \mathrm{FM} \cap \mathrm{UML} \cap \mathrm{ER}\right\rvert &= x  
-						\end{alignat*}
-						\begin{center}
-							\begin{vennthree}[showframe=true, radius=3.5cm, overlap=2.3cm, labelA={FM}, labelB={UML}, labelC={ER}, labelABC={$x$}, labelOnlyAB={$5 - x$}, labelOnlyAC={$4 - x$}, labelOnlyBC={$7 - x$}, labelOnlyA={$x + 8$}, labelOnlyB={$x - 3$}, labelOnlyC={$x - 2$}]
-							\end{vennthree}
-						\end{center}
-						\begin{description}
-							\item[For Only FM:] $
-								\begin{aligned}[t]
-									17 - (5 - x) - x - (4 - x) &= 17 - 5 + x - x - 4 + x\\
-									&= x + 8
-								\end{aligned} $
-							\item[For Only UML:] $
-								\begin{aligned}[t]
-									9 - (5 - x) - x - (7 - x) &= 9 - 5 + x - x - 7 + x\\
-									&= x - 3
-								\end{aligned} $
-							\item[For Only ER:] $
-								\begin{aligned}[t]
-									9 - (4 - x) - x - (7 - x) &= 9 - 4 + x - x - 7 + x\\
-									&= x - 2
-								\end{aligned} $
-						\end{description}
-						\begin{alignat*}{2}
-							& & 22 &= (x + 8) + (x - 3) + (x - 2) + (5 - x) + (4 - x) + (7 - x) + x\\
-							& \Rightarrow \quad & 22 &= (x + x + x - x - x - x + x) + (8 - 3 - 2 + 5 + 4 + 7)\\
-							& \Rightarrow \quad & 22 &= x + 19\\
-							& \Rightarrow \quad & x &= 22 - 19\\
-							& \Rightarrow \quad & x &= 3
-						\end{alignat*}
-						\begin{enumerate}
-							\item \question{How many engineers can use all three diagrams?}\\
-								As shown above, $3$ engineers.
-							\item \question{How many engineers can use UML only?}
-								\begin{align*}
-									x - 3 &= 3 - 3\\
-									&= 0
-								\end{align*}
-						\end{enumerate}
-					\end{enumerate}
+						\end{answer}
+						\begin{questions}[first=\bfseries]
+							\item How many engineers can use all three diagrams?\\
+								\begin{answer}
+									As shown above, $3$ engineers.
+								\end{answer}
+							\item How many engineers can use UML only?
+								\begin{answer}
+									\begin{align*}
+										x - 3 &= 3 - 3\\
+										&= 0
+									\end{align*}
+								\end{answer}
+						\end{questions}
+					\end{questions}
 				\end{exercise}
 		\section{Proofs on Specific Sets}
 			To prove that two sets are equal, prove that each member of the left-hand side belongs to the right-hand side, and vice versa.
@@ -623,258 +661,290 @@
 			\end{sidenote}
 			\pagebreak
 			\begin{exercise}{Self Assessment Exercise \thechapter.11}
-				\question{Prove the following}
-				\begin{enumerate}
-					\item \question{$\{y \in \mathbb{Z}^{+} \mid y$ is an even prime number$\} = \{u \in \mathbb{Z}^{+} \mid u^{2} = 4\}$}
-						\begin{proof}
-							Let $x \in \{y \in \mathbb{Z}^{+} \mid y$ is an even prime number$\}$.
-							\begin{tabbing}
-								$\qquad$ \= $x \in \{y \in \mathbb{Z}^{+} \mid y$ is an even prime number$\}$\\
-								iff      \> $x \in \mathbb{Z}^{+}$ and $x$ is an even prime number\\
-								iff      \> $x \in \mathbb{Z}^{+}$ and $x = 2$\\
-								iff      \> $x \in \mathbb{Z}^{+}$ and $x^{2} = 4$\\
-								iff      \> $x \in \{x \in \mathbb{Z}^{+} \mid x^{2} = 4\}$\\
-								iff      \> $x \in \{u \in \mathbb{Z}^{+} \mid u^{2} = 4\}$
-							\end{tabbing}
-						\end{proof}
-					\item \question{$\mathcal{P}\bigl(\{0, 1\}\bigr) = \{\emptyset\} \cup \bigl\{\{0\}\bigr\} \cup \bigl\{\{1\}\bigr\} \cup \bigl\{\{0, 1\}\bigr\}$}
-						\begin{proof}
-							Let $X \in \mathcal{P}\bigl(\{0, 1\}\bigr)$.
-							\begin{tabbing}
-								$\qquad$ \= $X \in \mathcal{P}\bigl(\{0, 1\}\bigr)$\\
-								iff \> $X \in \bigl\{\emptyset, \{0\}, \{1\}, \{0, 1\}\bigr\}$\\
-								iff \> $X = \emptyset$ or $X = \{0\}$ or $x = \{1\}$ or $X = \{0, 1\}$\\
-								iff \> $X \in \{\emptyset\}$ or $X \in \bigl\{\{0\}\bigr\}$ or $X \in \bigl\{\{1\}\bigr\}$ or $X \in \bigl\{\{0, 1\}\bigr\}$\\
-								iff \> $X \in \{\emptyset\} \cup \bigl\{\{0\}\bigr\} \cup \bigl\{\{1\}\bigr\} \cup \bigl\{\{0, 1\}\bigr\}$
-							\end{tabbing}
-						\end{proof}
-					\item \question{$\{x \in \mathbb{R} \mid x^{2} + 6x + 5 < 0\} = \{x \in \mathbb{R} \mid -5 < x < -1\}$}
-						\begin{proof}
-							Let $y \in \{x \in \mathbb{R} \mid x^{2} + 6x + 5 < 0\}$
-							\begin{tabbing}
-								$\qquad$ \= $y \in \{x \in \mathbb{R} \mid x^{2} + 6x + 5 < 0\}$\\
-								iff \> $y \in \mathbb{R}$ and $y^{2} + 6y + 5< 0$\\
-								iff \> $y \in \mathbb{R}$ and $(y + 5)(y + 1) < 0$\\
-								iff \> $y \in \mathbb{R}$ and either \= $(y + 5) < 0$ and $(y + 1) > 0$ (minus times a plus is a minus) or\\
-								\> \> $(y + 5) > 0$ and $(y + 1) < 0$ (plus times a minus is a minus)\\
-								iff \> $y \in \mathbb{R}$ and either $(y < -5$ and $y > -1)$ or $(y > -5$ and $y < -1)$\\
-								\> \> (no real numbers meet the first statement)\\
-								iff \> $y \in \mathbb{R}$ and $(y > -5$ and $y < -1)$\\
-								iff \> $y \in \mathbb{R}$ and $-5 < y < -1$\\
-								iff \> $y \in \{x \in \mathbb{R} \mid -5 < x < -1\}$
-							\end{tabbing}
-						\end{proof}
-						\pagebreak
-					\item \question{$\{x \in \mathbb{Z} \mid x^{2} - 5x + 4 < 0\} = \{x \in \mathbb{Z}^{+} \mid x$ is a prime factor of $6\}$}
-						\begin{proof}
-							Let $w \in \{x \in \mathbb{Z} \mid x^{2} - 5x + 4 < 0\}$
-							\begin{tabbing}
-								$\qquad$ \= $w \in \{x \in \mathbb{Z} \mid x^{2} - 5x + 4 < 0\}$\\
-								iff \> $w \in \mathbb{Z}$ and $w^{2} - 5w + 4 < 0$\\
-								iff \> $w \in \mathbb{Z}$ and $(w - 4)(w - 1) < 0$\\
-								iff \> $w \in \mathbb{Z}$ and either \= $(w - 4) < 0$ and $(w - 1) > 0$ (minus times a plus is a minus) or\\
-								\> \> $(w - 4) > 0$ and $(w - 1) < 0$ (plus times a minus is a minus)\\
-								iff \> $w \in \mathbb{Z}$ and either $(w < 4$ and $w > 1)$ or $(w > 4$ and $w < 1)$\\
-								\> \> (no integers meet the second statement)\\
-								iff \> $w \in \mathbb{Z}$ and $(w < 4$ and $w > 1)$\\
-								iff \> $w \in \mathbb{Z}^{+}$ and \=$(1 < w < 4)$\\
-								\> \> ($\mathbb{Z}^{+}$ as all the numbers are positive)\\
-								iff \> $w \in \mathbb{Z}^{+}$ and $w \in \{2, 3\}$\\
-								iff \> $w \in \{x \in \mathbb{Z}^{+} \mid x \in \{2, 3\}\}$\\
-								iff \> $w \in \{x \in \mathbb{Z}^{+} \mid x$ is a prime factor of $6\}$
-							\end{tabbing}
-						\end{proof}
-					\item \question{$\{x \in \mathbb{R} \mid x^{2} + x - 2 > 0\} = \{x \in \mathbb{R} \mid x < -2$ or $x > 1\}$}
-						\begin{proof}
-							Let $z \in \{x \in \mathbb{R} \mid x^{2} + x - 2 > 0\}$
-							\begin{tabbing}
-								$\qquad$ \= $z \in \{x \in \mathbb{R} \mid x^{2} + x - 2 > 0\}$\\
-								iff \> $z \in \mathbb{R}$ and $z^{2} + z - 2 > 0$\\
-								iff \> $z \in \mathbb{R}$ and $(z + 2)(z - 1) > 0$\\
-								iff \> $z \in \mathbb{R}$ and either \=$(z + 2) < 0$ and $(z - 1) < 0$ (minus times a minus is a plus) or\\
-								\> \> $(z + 2)> 0$ and $(z - 1) > 0$ (plus times a plus is a plus)\\
-								iff \> $z \in \mathbb{R}$ and either $(z < -2$ and $z < 1)$ or $(z > -2$ and $z > 1)$\\
-								iff \> $z \in \mathbb{R}$ and either $(z < -2)$ or $(z > 1)$\\
-								iff \> $z \in \{x \in \mathbb{R} \mid x < -2$ or $x > 1\}$
-							\end{tabbing}
-						\end{proof}
-				\end{enumerate}
+				\begin{questions}
+					\item Prove the following:
+						\begin{questions}
+							\item $\{y \in \mathbb{Z}^{+} \mid y$ is an even prime number$\} = \{u \in \mathbb{Z}^{+} \mid u^{2} = 4\}$	
+								\begin{answer}
+									\begin{proof}
+										Let $x \in \{y \in \mathbb{Z}^{+} \mid y$ is an even prime number$\}$.
+										\begin{tabbing}
+											$\qquad$ \= $x \in \{y \in \mathbb{Z}^{+} \mid y$ is an even prime number$\}$\\
+											iff      \> $x \in \mathbb{Z}^{+}$ and $x$ is an even prime number\\
+											iff      \> $x \in \mathbb{Z}^{+}$ and $x = 2$\\
+											iff      \> $x \in \mathbb{Z}^{+}$ and $x^{2} = 4$\\
+											iff      \> $x \in \{x \in \mathbb{Z}^{+} \mid x^{2} = 4\}$\\
+											iff      \> $x \in \{u \in \mathbb{Z}^{+} \mid u^{2} = 4\}$
+										\end{tabbing}
+									\end{proof}
+								\end{answer}
+							\item $\mathcal{P}\bigl(\{0, 1\}\bigr) = \{\emptyset\} \cup \bigl\{\{0\}\bigr\} \cup \bigl\{\{1\}\bigr\} \cup \bigl\{\{0, 1\}\bigr\}$
+								\begin{answer}
+									\begin{proof}
+										Let $X \in \mathcal{P}\bigl(\{0, 1\}\bigr)$.
+										\begin{tabbing}
+											$\qquad$ \= $X \in \mathcal{P}\bigl(\{0, 1\}\bigr)$\\
+											iff \> $X \in \bigl\{\emptyset, \{0\}, \{1\}, \{0, 1\}\bigr\}$\\
+											iff \> $X = \emptyset$ or $X = \{0\}$ or $x = \{1\}$ or $X = \{0, 1\}$\\
+											iff \> $X \in \{\emptyset\}$ or $X \in \bigl\{\{0\}\bigr\}$ or $X \in \bigl\{\{1\}\bigr\}$ or $X \in \bigl\{\{0, 1\}\bigr\}$\\
+											iff \> $X \in \{\emptyset\} \cup \bigl\{\{0\}\bigr\} \cup \bigl\{\{1\}\bigr\} \cup \bigl\{\{0, 1\}\bigr\}$
+										\end{tabbing}
+									\end{proof}
+								\end{answer}
+							\item $\{x \in \mathbb{R} \mid x^{2} + 6x + 5 < 0\} = \{x \in \mathbb{R} \mid -5 < x < -1\}$
+								\begin{answer}
+									\begin{proof}
+										Let $y \in \{x \in \mathbb{R} \mid x^{2} + 6x + 5 < 0\}$
+										\begin{tabbing}
+											$\qquad$ \= $y \in \{x \in \mathbb{R} \mid x^{2} + 6x + 5 < 0\}$\\
+											iff \> $y \in \mathbb{R}$ and $y^{2} + 6y + 5< 0$\\
+											iff \> $y \in \mathbb{R}$ and $(y + 5)(y + 1) < 0$\\
+											iff \> $y \in \mathbb{R}$ and either \= $(y + 5) < 0$ and $(y + 1) > 0$ (minus times a plus is a minus) or\\
+											\> \> $(y + 5) > 0$ and $(y + 1) < 0$ (plus times a minus is a minus)\\
+											iff \> $y \in \mathbb{R}$ and either $(y < -5$ and $y > -1)$ or $(y > -5$ and $y < -1)$\\
+											\> \> (no real numbers meet the first statement)\\
+											iff \> $y \in \mathbb{R}$ and $(y > -5$ and $y < -1)$\\
+											iff \> $y \in \mathbb{R}$ and $-5 < y < -1$\\
+											iff \> $y \in \{x \in \mathbb{R} \mid -5 < x < -1\}$
+										\end{tabbing}
+									\end{proof}
+								\end{answer}
+								\pagebreak
+							\item $\{x \in \mathbb{Z} \mid x^{2} - 5x + 4 < 0\} = \{x \in \mathbb{Z}^{+} \mid x$ is a prime factor of $6\}$
+								\begin{answer}
+									\begin{proof}
+										Let $w \in \{x \in \mathbb{Z} \mid x^{2} - 5x + 4 < 0\}$
+										\begin{tabbing}
+											$\qquad$ \= $w \in \{x \in \mathbb{Z} \mid x^{2} - 5x + 4 < 0\}$\\
+											iff \> $w \in \mathbb{Z}$ and $w^{2} - 5w + 4 < 0$\\
+											iff \> $w \in \mathbb{Z}$ and $(w - 4)(w - 1) < 0$\\
+											iff \> $w \in \mathbb{Z}$ and either \= $(w - 4) < 0$ and $(w - 1) > 0$ (minus times a plus is a minus) or\\
+											\> \> $(w - 4) > 0$ and $(w - 1) < 0$ (plus times a minus is a minus)\\
+											iff \> $w \in \mathbb{Z}$ and either $(w < 4$ and $w > 1)$ or $(w > 4$ and $w < 1)$\\
+											\> \> (no integers meet the second statement)\\
+											iff \> $w \in \mathbb{Z}$ and $(w < 4$ and $w > 1)$\\
+											iff \> $w \in \mathbb{Z}^{+}$ and \=$(1 < w < 4)$\\
+											\> \> ($\mathbb{Z}^{+}$ as all the numbers are positive)\\
+											iff \> $w \in \mathbb{Z}^{+}$ and $w \in \{2, 3\}$\\
+											iff \> $w \in \{x \in \mathbb{Z}^{+} \mid x \in \{2, 3\}\}$\\
+											iff \> $w \in \{x \in \mathbb{Z}^{+} \mid x$ is a prime factor of $6\}$
+										\end{tabbing}
+									\end{proof}
+								\end{answer}
+							\item $\{x \in \mathbb{R} \mid x^{2} + x - 2 > 0\} = \{x \in \mathbb{R} \mid x < -2$ or $x > 1\}$
+								\begin{answer}
+									\begin{proof}
+										Let $z \in \{x \in \mathbb{R} \mid x^{2} + x - 2 > 0\}$
+										\begin{tabbing}
+											$\qquad$ \= $z \in \{x \in \mathbb{R} \mid x^{2} + x - 2 > 0\}$\\
+											iff \> $z \in \mathbb{R}$ and $z^{2} + z - 2 > 0$\\
+											iff \> $z \in \mathbb{R}$ and $(z + 2)(z - 1) > 0$\\
+											iff \> $z \in \mathbb{R}$ and either \=$(z + 2) < 0$ and $(z - 1) < 0$ (minus times a minus is a plus) or\\
+											\> \> $(z + 2)> 0$ and $(z - 1) > 0$ (plus times a plus is a plus)\\
+											iff \> $z \in \mathbb{R}$ and either $(z < -2$ and $z < 1)$ or $(z > -2$ and $z > 1)$\\
+											iff \> $z \in \mathbb{R}$ and either $(z < -2)$ or $(z > 1)$\\
+											iff \> $z \in \{x \in \mathbb{R} \mid x < -2$ or $x > 1\}$
+										\end{tabbing}
+									\end{proof}
+								\end{answer}
+						\end{questions}
+				\end{questions}
 			\end{exercise}
 			\pagebreak
 			\begin{exercise}{Self Assessment Exercise \thechapter.12}
-				\begin{enumerate}
-					\item \question{Determine whether, for $V$, $W$, $Z \subseteq U$, if $V \subseteq W$, then $V \cup Z \subseteq W \cup Z$ and $V \cap Z \subseteq W \cap Z$. Provide either a proof or a counterexample.}\\
-						Both statements are true.
-						\begin{indentparagraph}
-							\begin{proof}
-								Suppose $V \subseteq W$
-								\begin{tabbing}
-									Let $\quad$ \= $x \in V \cup Z$\\
-									Then \> $x \in V$ or $x \in Z$\\
-									\> $\qquad$ (If $x \in V$, $x \in W$, as $V \subseteq W$)\\
-									i.e. \> $x \in W$ or $x \in Z$\\
-									i.e. \> $x \in W \cup Z$\\
-									$\therefore$ \> $V \cup Z \subseteq W \cup Z$
-								\end{tabbing}
-							\end{proof}
-							\begin{proof}
-								Suppose $V \subseteq W$ 
-								\begin{tabbing}
-									Let $\quad$ \= $x \in V \cap Z$\\
-									Then \> $x \in V$ and $x \in Z$\\
-									\> $\qquad$ (If $x \in V$, $x \in W$, as $V \subseteq W$)\\
-									i.e. \> $x \in W$ and $x \in Z$\\
-									i.e. \> $x \in W \cap Z$\\
-									$\therefore$ \> $V \cap Z \subseteq W \cap Z$
-								\end{tabbing}
-							\end{proof}
-						\end{indentparagraph}
-					\item \question{Is it the case that, for all subsets $X$, $Y$, $W \subseteq U$, if $X = Y$ and $Y = W$, then $X = W$, and if $X \subset Y$ and $Y \subset W$, then $X \subset W$?}\\
-						Both statements are true.
-						\begin{indentparagraph}
-							\begin{proof}
-								Suppose $X = Y$ and $Y = W$.
-								\begin{tabbing}
-									Let $\quad$ \= $x \in X$\\
-									Then \> $x \in Y$, as $X = Y$\\
-									Then \> $x \in W$, as $Y = W$\\
-									$\therefore$ \> $X = W$
-								\end{tabbing}
-							\end{proof}
-							\begin{proof}
-								Suppose $X \subset Y$ and $Y \subset W$.
-								\begin{tabbing}
-									Let $\quad$ \= $x \in X$\\
-									Then \> $x \in Y$, as $X \subset Y$\\
-									Then \> $x \in W$, as $Y \subset W$\\
-									$\therefore$ \> $X \subseteq W$\\
-									\> $Y$ has at least one element not in $X$, as $X \subset Y$\\
-									\> $W$ has at least one element not in $Y$, as $Y \subset W$\\
-									So \> $W$ has at least two elements not in $X$\\
-									i.e. $X \neq W$\\
-									so $X \subset W$
-								\end{tabbing}
-							\end{proof}
-						\end{indentparagraph}
-					\pagebreak
-					\item \question{Is it the case that, for all subsets $X$ of $U$, $X \cup \emptyset = X$? Justify your answer.}\\
-						Yes.
-						\begin{proof}
-							$ $
-							\begin{tabbing}
-								Let \quad \=$x \in X$\\
-								Then \> $x \in X$ or $x \in \emptyset$\\
-								i.e. \> $x \in X \cup \emptyset$\\
-								$\therefore$ \> $X \subseteq X \cup \emptyset$
-							\end{tabbing}
-							\begin{tabbing}
-								Let \quad \=$x \in X \cup \emptyset$\\
-								Then \> $x \in X$ or $x \in \emptyset$\\
-								i.e. \> $x \in X$\\
-								\> ($x$ cannot be in the empty set)\\
-								$\therefore$ \> $X \cup \emptyset \subseteq X$
-							\end{tabbing}
-							As $(X \subseteq X \cup \emptyset)$ and $(X \cup \emptyset \subseteq X)$, $X \cup \emptyset = X$
-						\end{proof}
-					\item \question{Is it true that for all subsets $V$ and $W$ of $U$, $V \cap W = \emptyset$ iff $V = \emptyset$ or $W = \emptyset$?}\\
-						No.
-						\begin{proof}
-							$ $
-							\begin{enumerate}[label=(\roman*)]
-								\item \question{If $V \cap W = \emptyset$ then $V = \emptyset$ or $W = \emptyset$}\\
-									This claim is false.
-									\begin{subproof}[Counterexample]
-										Let $V = \{3, 4\}$ and $W = \{5, 6\}$.
-										\begin{align*}
-											V \cap W &= \{3, 4\} \cap \{5, 6\}\\
-											&= \emptyset
-										\end{align*}
-										$V \cap W = \emptyset$ but $V \neq \emptyset$ and $W \neq \emptyset$.
-									\end{subproof}
-								\item \question{If $V = \emptyset$ or $W = \emptyset$, then $V \cap W = \emptyset$}\\
-									This claim is true.
-									\begin{subproof}[Subproof]
-										Let $V = \emptyset$ and $W$ be some non-empty set.
-										\begin{align*}
-											V \cap W &= \emptyset \cap W\\
-											&= \emptyset
-										\end{align*}
-										$\therefore$ if $V = \emptyset$, $V \cap W = \emptyset$\\
-										Let $W = \emptyset$ and $V$ be some non-empty set.
-										\begin{align*}
-											V \cap W &= V \cap \emptyset\\
-											&= \emptyset
-										\end{align*}
-										$\therefore$ if $W = \emptyset$, $V \cap W = \emptyset$\\
-										$\therefore V \cap W = \emptyset$ if either $V = \emptyset$ or $W = \emptyset$
-									\end{subproof}
-							\end{enumerate}
-							As the first claim is false, it is not the case that $V \cap W = \emptyset$ iff $V = \emptyset$ or $W = \emptyset$.
-						\end{proof}
-					\pagebreak
-					\item \question{Is it the case that, for every subset $X$ of $U$ there exists a subset $Y$ of $U$ such that $X \cup Y = \emptyset$? Justify your answer.}\\
-						No.
-						\begin{proof}[Counterexample]
-							Let $X = \{1,\}$ and $U$ = \{1, 2\}.\\
-							The possible subsets of $U$ are $\emptyset$ or \{1\} or \{2\} or \{1, 2\}.
-							\begin{align*}
-								X \cup \emptyset &= \{1\} \cup \emptyset\\
-								&= \{1\}\\
-								X \cup \{1\} &= \{1\} \cup \{1\}\\
-								&= \{1\}\\
-								X \cup \{2\} &= \{1\} \cup \{2\}\\
-								&= \{1, 2\}\\
-								X \cup \{1, 2\} &= \{1\} \cup \{1, 2\}\\
-								&= \{1, 2\}
-							\end{align*}
-							From the above, there is no set $Y$ such that $X \cup Y = \emptyset$.
-						\end{proof}
-					\item \question{Is it the case that, for every subset $X$ of $U$, there is some subset $Y$ such that $X \cap Y = U$? Justify your answer.}\\
-						No.
-						\begin{proof}[Counterexample]
-							Let $X = \{1,\}$ and $U$ = \{1, 2\}.\\
-							The possible subsets of $U$ are $\emptyset$ or \{1\} or \{2\} or \{1, 2\}.
-							\begin{align*}
-								X \cap \emptyset &= \{1\} \cap \emptyset\\
-								&= \emptyset\\
-								X \cap \{1\} &= \{1\} \cap \{1\}\\
-								&= \{1\}\\
-								X \cap \{2\} &= \{1\} \cap \{2\}\\
-								&= \emptyset\\
-								X \cap \{1, 2\} &= \{1\} \cap \{1, 2\}\\
-								&= \{1\}
-							\end{align*}
-							From the above, there is no set $Y$ such that $X \cap Y = U$.
-						\end{proof}
-					\item \question{Using ``if and only if'' statements, prove the following:}
-						\begin{enumerate}[label=(\alph*)]
-							\item \question{$X + Y = Y + X$ for all $X$, $Y \subseteq U$.}
+				\begin{questions}
+					\item Determine whether, for $V$, $W$, $Z \subseteq U$, if $V \subseteq W$, then $V \cup Z \subseteq W \cup Z$ and $V \cap Z \subseteq W \cap Z$. Provide either a proof or a counterexample.\\
+						\begin{answer}
+							Both statements are true.
+							\begin{indentparagraph}
 								\begin{proof}
-									Let $x \in X + Y$.
+									Suppose $V \subseteq W$
 									\begin{tabbing}
-										\qquad \= $x \in X + Y$\\
-										iff \> ($x \in X$ or $x \in Y$) and $x \notin X \cap Y$\\
-										iff \> ($x \in Y$ or $x \in X$) and $x \notin X \cap Y$\\
-										iff \> $x \in Y + X$\\
-										$\therefore$ \> $X + Y = Y + X$
+										Let $\quad$ \= $x \in V \cup Z$\\
+										Then \> $x \in V$ or $x \in Z$\\
+										\> $\qquad$ (If $x \in V$, $x \in W$, as $V \subseteq W$)\\
+										i.e. \> $x \in W$ or $x \in Z$\\
+										i.e. \> $x \in W \cup Z$\\
+										$\therefore$ \> $V \cup Z \subseteq W \cup Z$
 									\end{tabbing}
 								\end{proof}
+								\begin{proof}
+									Suppose $V \subseteq W$ 
+									\begin{tabbing}
+										Let $\quad$ \= $x \in V \cap Z$\\
+										Then \> $x \in V$ and $x \in Z$\\
+										\> $\qquad$ (If $x \in V$, $x \in W$, as $V \subseteq W$)\\
+										i.e. \> $x \in W$ and $x \in Z$\\
+										i.e. \> $x \in W \cap Z$\\
+										$\therefore$ \> $V \cap Z \subseteq W \cap Z$
+									\end{tabbing}
+								\end{proof}
+							\end{indentparagraph}
+						\end{answer}
+					\item Is it the case that, for all subsets $X$, $Y$, $W \subseteq U$, if $X = Y$ and $Y = W$, then $X = W$, and if $X \subset Y$ and $Y \subset W$, then $X \subset W$?\\
+						\begin{answer}
+							Both statements are true.
+							\begin{indentparagraph}
+								\begin{proof}
+									Suppose $X = Y$ and $Y = W$.
+									\begin{tabbing}
+										Let $\quad$ \= $x \in X$\\
+										Then \> $x \in Y$, as $X = Y$\\
+										Then \> $x \in W$, as $Y = W$\\
+										$\therefore$ \> $X = W$
+									\end{tabbing}
+								\end{proof}
+								\begin{proof}
+									Suppose $X \subset Y$ and $Y \subset W$.
+									\begin{tabbing}
+										Let $\quad$ \= $x \in X$\\
+										Then \> $x \in Y$, as $X \subset Y$\\
+										Then \> $x \in W$, as $Y \subset W$\\
+										$\therefore$ \> $X \subseteq W$\\
+										\> $Y$ has at least one element not in $X$, as $X \subset Y$\\
+										\> $W$ has at least one element not in $Y$, as $Y \subset W$\\
+										So \> $W$ has at least two elements not in $X$\\
+										i.e. $X \neq W$\\
+										so $X \subset W$
+									\end{tabbing}
+								\end{proof}
+							\end{indentparagraph}
+						\end{answer}
+					\pagebreak
+					\item Is it the case that, for all subsets $X$ of $U$, $X \cup \emptyset = X$? Justify your answer.\\
+						\begin{answer}
+							Yes.
+							\begin{proof}
+								$ $
+								\begin{tabbing}
+									Let \quad \=$x \in X$\\
+									Then \> $x \in X$ or $x \in \emptyset$\\
+									i.e. \> $x \in X \cup \emptyset$\\
+									$\therefore$ \> $X \subseteq X \cup \emptyset$
+								\end{tabbing}
+								\begin{tabbing}
+									Let \quad \=$x \in X \cup \emptyset$\\
+									Then \> $x \in X$ or $x \in \emptyset$\\
+									i.e. \> $x \in X$\\
+									\> ($x$ cannot be in the empty set)\\
+									$\therefore$ \> $X \cup \emptyset \subseteq X$
+								\end{tabbing}
+								As $(X \subseteq X \cup \emptyset)$ and $(X \cup \emptyset \subseteq X)$, $X \cup \emptyset = X$
+							\end{proof}
+						\end{answer}
+					\item Is it true that for all subsets $V$ and $W$ of $U$, $V \cap W = \emptyset$ iff $V = \emptyset$ or $W = \emptyset$?\\
+						\begin{answer}
+							No.
+							\begin{proof}
+								$ $
+								\begin{questions}[label=(\roman*), first=\bfseries]
+									\item If $V \cap W = \emptyset$ then $V = \emptyset$ or $W = \emptyset$\\
+										\begin{answer}
+											This claim is false.
+											\begin{subproof}[Counterexample]
+												Let $V = \{3, 4\}$ and $W = \{5, 6\}$.
+												\begin{align*}
+													V \cap W &= \{3, 4\} \cap \{5, 6\}\\
+													&= \emptyset
+												\end{align*}
+												$V \cap W = \emptyset$ but $V \neq \emptyset$ and $W \neq \emptyset$.
+											\end{subproof}
+										\end{answer}
+									\item If $V = \emptyset$ or $W = \emptyset$, then $V \cap W = \emptyset$\\
+										\begin{answer}
+											This claim is true.
+											\begin{subproof}[Subproof]
+												Let $V = \emptyset$ and $W$ be some non-empty set.
+												\begin{align*}
+													V \cap W &= \emptyset \cap W\\
+													&= \emptyset
+												\end{align*}
+												$\therefore$ if $V = \emptyset$, $V \cap W = \emptyset$\\
+												Let $W = \emptyset$ and $V$ be some non-empty set.
+												\begin{align*}
+													V \cap W &= V \cap \emptyset\\
+													&= \emptyset
+												\end{align*}
+												$\therefore$ if $W = \emptyset$, $V \cap W = \emptyset$\\
+												$\therefore V \cap W = \emptyset$ if either $V = \emptyset$ or $W = \emptyset$
+											\end{subproof}
+										\end{answer}
+								\end{questions}
+								As the first claim is false, it is not the case that $V \cap W = \emptyset$ iff $V = \emptyset$ or $W = \emptyset$.
+							\end{proof}
+						\end{answer}
+					\pagebreak
+					\item Is it the case that, for every subset $X$ of $U$ there exists a subset $Y$ of $U$ such that $X \cup Y = \emptyset$? Justify your answer.\\
+						\begin{answer}
+							No.
+							\begin{proof}[Counterexample]
+								Let $X = \{1,\}$ and $U$ = \{1, 2\}.\\
+								The possible subsets of $U$ are $\emptyset$ or \{1\} or \{2\} or \{1, 2\}.
+								\begin{align*}
+									X \cup \emptyset &= \{1\} \cup \emptyset\\
+									&= \{1\}\\
+									X \cup \{1\} &= \{1\} \cup \{1\}\\
+									&= \{1\}\\
+									X \cup \{2\} &= \{1\} \cup \{2\}\\
+									&= \{1, 2\}\\
+									X \cup \{1, 2\} &= \{1\} \cup \{1, 2\}\\
+									&= \{1, 2\}
+								\end{align*}
+								From the above, there is no set $Y$ such that $X \cup Y = \emptyset$.
+							\end{proof}
+						\end{answer}
+					\item Is it the case that, for every subset $X$ of $U$, there is some subset $Y$ such that $X \cap Y = U$? Justify your answer.\\
+						\begin{answer}
+							No.
+							\begin{proof}[Counterexample]
+								Let $X = \{1,\}$ and $U$ = \{1, 2\}.\\
+								The possible subsets of $U$ are $\emptyset$ or \{1\} or \{2\} or \{1, 2\}.
+								\begin{align*}
+									X \cap \emptyset &= \{1\} \cap \emptyset\\
+									&= \emptyset\\
+									X \cap \{1\} &= \{1\} \cap \{1\}\\
+									&= \{1\}\\
+									X \cap \{2\} &= \{1\} \cap \{2\}\\
+									&= \emptyset\\
+									X \cap \{1, 2\} &= \{1\} \cap \{1, 2\}\\
+									&= \{1\}
+								\end{align*}
+								From the above, there is no set $Y$ such that $X \cap Y = U$.
+							\end{proof}
+						\end{answer}
+					\item Using ``if and only if'' statements, prove the following:
+						\begin{questions}[first=\bfseries]
+							\item $X + Y = Y + X$ for all $X$, $Y \subseteq U$.
+								\begin{answer}
+									\begin{proof}
+										Let $x \in X + Y$.
+										\begin{tabbing}
+											\qquad \= $x \in X + Y$\\
+											iff \> ($x \in X$ or $x \in Y$) and $x \notin X \cap Y$\\
+											iff \> ($x \in Y$ or $x \in X$) and $x \notin X \cap Y$\\
+											iff \> $x \in Y + X$\\
+											$\therefore$ \> $X + Y = Y + X$
+										\end{tabbing}
+									\end{proof}
+								\end{answer}
 							\pagebreak
-							\item \question{$X \cap (Y + Z) = (X \cap Y) + (X \cap Z)$ for all $X$, $Y$, $Z \subseteq U$.}
-								\begin{proof}
-									Let $x \in X \cap (Y + Z)$.
-									\begin{tabbing}
-										\qquad \= $x \in X \cap (Y + Z)$\\
-										iff \> $x \in X$ and $x \in (Y + Z)$\\
-										iff \> $x \in X$ and ($x \in Y$ or $x \in Z$ and $x \notin Y \cap Z$)\\
-										iff \> $(x \in X$ and $x \in Y$) or $(x \in X$ and $x \in Z)$ and $x \notin (Y \cap Z)$\\
-										iff \> $x \in (X \cap Y)$ or $x \in (X \cap Z)$ and $x \notin (Y \cap Z)$\\
-										iff \> $x \in (X \cap Y) + (Y \cap Z)$\\
-										$\therefore$ \> $X \cap (Y + Z) = (X \cap Y) + (Y \cap Z)$
-									\end{tabbing}
-								\end{proof}
-						\end{enumerate}
-				\end{enumerate}
+							\item $X \cap (Y + Z) = (X \cap Y) + (X \cap Z)$ for all $X$, $Y$, $Z \subseteq U$.
+								\begin{answer}
+									\begin{proof}
+										Let $x \in X \cap (Y + Z)$.
+										\begin{tabbing}
+											\qquad \= $x \in X \cap (Y + Z)$\\
+											iff \> $x \in X$ and $x \in (Y + Z)$\\
+											iff \> $x \in X$ and ($x \in Y$ or $x \in Z$ and $x \notin Y \cap Z$)\\
+											iff \> $(x \in X$ and $x \in Y$) or $(x \in X$ and $x \in Z)$ and $x \notin (Y \cap Z)$\\
+											iff \> $x \in (X \cap Y)$ or $x \in (X \cap Z)$ and $x \notin (Y \cap Z)$\\
+											iff \> $x \in (X \cap Y) + (Y \cap Z)$\\
+											$\therefore$ \> $X \cap (Y + Z) = (X \cap Y) + (Y \cap Z)$
+										\end{tabbing}
+									\end{proof}
+								\end{answer}
+						\end{questions}
+				\end{questions}
 			\end{exercise}
 	\rulechapterend
 \end{document}

@@ -61,17 +61,19 @@ For intellisense, a list of the commands is added in the [package_intellisense](
 #### Commands
 - `addfile [input] {<filename>}`: Include or input the file into the document. By default, it includes the file, the option `input` can be given to input it instead.
 - `concept {text}`: Mark specific text as a concept to be learned. Puts the text in bold.
-- `moveup`: Move environments that add extra vertical space up.
-- `question {text}`: Mark specific text as a question. Puts the text in bold, and adds extra spacing.
 - `rulebookend`: Insert a decorative horizontal line at the end of the text.
 - `rulechapterend`: Insert a decorative horizontal line at the end of each unit.
 
 #### Environments
+- `answer`: Used to indicate an answer to a question in an exercise. Unbolds the text.
 - `definition {title}`: Coloured box used for highlighting important concepts.
 - `example`: Coloured box used to highlight examples.
 - `exercise {title}`: Coloured box used to highlight exercises.
 - `indentparagraph`: Indent selected text to the left.
+- `questions`: An `enumerate` list, that is used to make each question bold.
 - `sidenote`: Coloured box used to indicate extra information.
 - `subproof`: Environment for proofs inside proofs.
 - `theorem`: Coloured box used to highlight theorems.
 - `venntwo` and `vennthree [options] [title]`: Simplified Venn Diagram environments
+
+---

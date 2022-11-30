@@ -70,53 +70,64 @@
 				\end{description}
 			\end{example}
 			\begin{exercise}{Self Assessment Exercise \thechapter.4}
-				\begin{enumerate}
-					\item \question{In each of the following cases, write down the possible surjective functions from $X$ to $Y$.}
-						\begin{enumerate}[label=(\alph*)]
-							\item \question{$X = \{a, b\}$ and $Y = \{c\}$.}\\
-								For a surjective function, make sure each element of $X$ appears as a first coordinate, and every element of $Y$ is used.
-								\begin{align*}
-									f_{1} &= \bigl\{(a, c), (b, c)\bigr\}
-								\end{align*}
-							\item \question{$X = \{a, b\}$ and $Y = \{c, d\}$.}
-								\begin{align*}
-									f_{1} &= \bigl\{(a, c), (b, d)\bigr\}\\
-									f_{2} &= \bigl\{(a, d), (b, c)\bigr\}
-								\end{align*}
-							\item \question{$X = \{a, b\}$ and $Y = \{c, d, e\}$.}\\
-								There are no possible surjective functions, as there are more $y$ elements than $x$ elements. Either an $x$ element appears twice, in which case it is not a function, or a $y$ element doesn't appear, in which case it is not surjective.
-						\end{enumerate}
-					\item \question{Let $f: \mathbb{Z} \rightarrow \mathbb{Z}$ be defined by $f(x) = x + 1$.}
-						\begin{enumerate}[label=(\alph*)]
-							\item \question{Determine $f[\mathbb{Z}]$ (or $\mathrm{ran}(f)$).}
-								\begin{align*}
-									f[\mathbb{Z}] &= \{f(x) \mid x \in \mathbb{Z}\}\\
-									&= \{x + 1 \mid x \in \mathbb{Z}\} \tag*{$(y = x + 1 \Rightarrow x = y - 1)$}\\
-									&= \{y \mid y - 1 \in \mathbb{Z}\}\\
-									&= \{y \mid y - 1 \text{ is an integer}\}\\
-									&= \mathbb{Z}
-								\end{align*}
-							\item \question{Is $f$ surjective? If $f$ is not surjective, provide a counterexample to show why it is not surjective.}\\
-								$f$ is surjective, as $f[\mathbb{Z}] = \mathbb{Z}$.
-						\end{enumerate}
-					\pagebreak
-					\item \question{Let $f: \mathbb{Z} \rightarrow \mathbb{Z}$ be defined by $f(x) = 4x + 8$.}
-						\begin{enumerate}[label=(\alph*)]
-							\item \question{Determine $f[\mathbb{Z}]$ (or $\mathrm{ran}(f)$).}
-								\begin{align*}
-									f[\mathbb{Z}] &= \{f(x) \mid x \in \mathbb{Z}\}\\
-									&= \{4x + 8 \mid x \in \mathbb{Z}\} \tag*{$(y = 4x + 8 \Rightarrow x = \frac{y}{4} - 2)$}\\
-									&= \{y \mid \frac{y}{4} - 2 \in \mathbb{Z}\}\\
-									&= \{y \mid \frac{y}{4} \text{ is an integer}\}\\
-									&= \{y \mid y \text{ is an integer divisible by 4}\}
-								\end{align*}
-								\item \question{Is $f$ surjective? If $f$ is not surjective, provide a counterexample to show why it is not surjective.}\\
-									$f$ is not surjective, as the range of $f$ is not equal to the codomain.
-									\begin{subproof}[Counterexample]
-										$3 \in \mathbb{Z}$, which is the codomain, but there is no $x \in \mathbb{Z}$ such that $4x + 8 = 3$.
-									\end{subproof}
-						\end{enumerate}
-				\end{enumerate}
+				\begin{questions}
+					\item In each of the following cases, write down the possible surjective functions from $X$ to $Y$.
+						\begin{questions}
+							\item $X = \{a, b\}$ and $Y = \{c\}$.\\
+								\begin{answer}
+									For a surjective function, make sure each element of $X$ appears as a first coordinate, and every element of $Y$ is used.
+									\begin{align*}
+										f_{1} &= \bigl\{(a, c), (b, c)\bigr\}
+									\end{align*}
+								\end{answer}
+							\item $X = \{a, b\}$ and $Y = \{c, d\}$.
+								\begin{answer}
+									\begin{align*}
+										f_{1} &= \bigl\{(a, c), (b, d)\bigr\}\\
+										f_{2} &= \bigl\{(a, d), (b, c)\bigr\}
+									\end{align*}
+								\end{answer}
+							\item $X = \{a, b\}$ and $Y = \{c, d, e\}$.\\
+								\begin{answer}
+									There are no possible surjective functions, as there are more $y$ elements than $x$ elements. Either an $x$ element appears twice, in which case it is not a function, or a $y$ element doesn't appear, in which case it is not surjective.
+								\end{answer}
+						\end{questions}
+					\item Let $f: \mathbb{Z} \rightarrow \mathbb{Z}$ be defined by $f(x) = x + 1$.
+						\begin{questions}
+							\item Determine $f[\mathbb{Z}]$ (or $\mathrm{ran}(f)$).
+								\begin{answer}
+									\begin{align*}
+										f[\mathbb{Z}] &= \{f(x) \mid x \in \mathbb{Z}\}\\
+										&= \{x + 1 \mid x \in \mathbb{Z}\} \tag*{$(y = x + 1 \Rightarrow x = y - 1)$}\\
+										&= \{y \mid y - 1 \in \mathbb{Z}\}\\
+										&= \{y \mid y - 1 \text{ is an integer}\}\\
+										&= \mathbb{Z}
+									\end{align*}
+								\end{answer}
+							\item Is $f$ surjective? If $f$ is not surjective, provide a counterexample to show why it is not surjective.\\
+								{\answer $f$ is surjective, as $f[\mathbb{Z}] = \mathbb{Z}$.}
+						\end{questions}
+					\item Let $f: \mathbb{Z} \rightarrow \mathbb{Z}$ be defined by $f(x) = 4x + 8$.
+						\begin{questions}
+							\item Determine $f[\mathbb{Z}]$ (or $\mathrm{ran}(f)$).
+								\begin{answer}
+									\begin{align*}
+										f[\mathbb{Z}] &= \{f(x) \mid x \in \mathbb{Z}\}\\
+										&= \{4x + 8 \mid x \in \mathbb{Z}\} \tag*{$(y = 4x + 8 \Rightarrow x = \frac{y}{4} - 2)$}\\
+										&= \{y \mid \frac{y}{4} - 2 \in \mathbb{Z}\}\\
+										&= \{y \mid \frac{y}{4} \text{ is an integer}\}\\
+										&= \{y \mid y \text{ is an integer divisible by 4}\}
+									\end{align*}
+								\end{answer}
+								\item Is $f$ surjective? If $f$ is not surjective, provide a counterexample to show why it is not surjective.\\
+									\begin{answer}
+										$f$ is not surjective, as the range of $f$ is not equal to the codomain.
+										\begin{proof}[Counterexample]
+											$3 \in \mathbb{Z}$, which is the codomain, but there is no $x \in \mathbb{Z}$ such that $4x + 8 = 3$.
+										\end{proof}
+									\end{answer}
+						\end{questions}
+				\end{questions}
 			\end{exercise}
 		\pagebreak
 		\section[Injectivity]{Injectivity (ONE TO ONE)}
@@ -168,38 +179,46 @@
 					\end{description}
 				\end{example}
 				\begin{exercise}{Self Assessment Exercise \thechapter.5}
-					\begin{enumerate}
-						\item \question{In each of the following cases, write down the injective functions from $X$ to $Y$.}
-							\begin{enumerate}
-								\item \question{$X = \{2, 4\}$ and $Y = \{1\}$}\\
-									There is no possible injective function, as $Y$ has only one member, but $X$ has two members. Either one of the members of $X$ is excluded, in which case it is not a function, or the two members point to the same member of $Y$, in which case it is not injective.
-								\item \question{$X = \{2, 4\}$ and $Y = \{1, 3\}$}
-									\begin{align*}
-										f_{1} &= \bigl\{(2, 1), (4, 3)\bigr\}\\
-										f_{2} &= \bigl\{(2, 3), (4, 1)\bigr\}
-									\end{align*}
-								\item \question{$X = \{2, 4\}$ and $Y = \{1, 3, 5\}$}
-									\begin{align*}
-										f_{1} &= \bigl\{(2, 1), (4, 3)\bigr\}\\
-										f_{2} &= \bigl\{(2, 3), (4, 1)\bigr\}\\
-										f_{3} &= \bigl\{(2, 1), (4, 5)\bigr\}\\
-										f_{4} &= \bigl\{(2, 3), (4, 5)\bigr\}\\
-										f_{5} &= \bigl\{(2, 5), (4, 1)\bigr\}\\
-										f_{6} &= \bigl\{(2, 5), (4, 3)\bigr\}
-									\end{align*}
-							\end{enumerate}
-						\item \question{Consider $h: \mathbb{Z} \rightarrow \mathbb{Z}$ defined by $h(x) = 2x - 5$. Determine whether $h$ is injective.}\\
-							$h$ is injective.
-							\begin{proof} $
-								\begin{alignedat}[t]{2}
-									& \text{Assume } \quad &h(u) &= h(v)\\
-									& \text{Then } &2u - 5 &= 2v - 5\\
-									& & 2u &= 2v\\
-									& & u &= v
-								\end{alignedat} $\\
-								$\therefore h$ is injective, because when $h(u) = h(v)$, $u = v$.
-							\end{proof}
-					\end{enumerate}
+					\begin{questions}
+						\item In each of the following cases, write down the injective functions from $X$ to $Y$.
+							\begin{questions}
+								\item $X = \{2, 4\}$ and $Y = \{1\}$\\
+									\begin{answer}
+										There is no possible injective function, as $Y$ has only one member, but $X$ has two members. Either one of the members of $X$ is excluded, in which case it is not a function, or the two members point to the same member of $Y$, in which case it is not injective.
+									\end{answer}
+								\item $X = \{2, 4\}$ and $Y = \{1, 3\}$
+									\begin{answer}
+										\begin{align*}
+											f_{1} &= \bigl\{(2, 1), (4, 3)\bigr\}\\
+											f_{2} &= \bigl\{(2, 3), (4, 1)\bigr\}
+										\end{align*}
+									\end{answer}
+								\item $X = \{2, 4\}$ and $Y = \{1, 3, 5\}$
+									\begin{answer}
+										\begin{align*}
+											f_{1} &= \bigl\{(2, 1), (4, 3)\bigr\}\\
+											f_{2} &= \bigl\{(2, 3), (4, 1)\bigr\}\\
+											f_{3} &= \bigl\{(2, 1), (4, 5)\bigr\}\\
+											f_{4} &= \bigl\{(2, 3), (4, 5)\bigr\}\\
+											f_{5} &= \bigl\{(2, 5), (4, 1)\bigr\}\\
+											f_{6} &= \bigl\{(2, 5), (4, 3)\bigr\}
+										\end{align*}
+									\end{answer}
+							\end{questions}
+						\item Consider $h: \mathbb{Z} \rightarrow \mathbb{Z}$ defined by $h(x) = 2x - 5$. Determine whether $h$ is injective.\\
+							\begin{answer}
+								$h$ is injective.
+								\begin{proof} $
+									\begin{alignedat}[t]{2}
+										& \text{Assume } \quad &h(u) &= h(v)\\
+										& \text{Then } &2u - 5 &= 2v - 5\\
+										& & 2u &= 2v\\
+										& & u &= v
+									\end{alignedat} $\\
+									$\therefore h$ is injective, because when $h(u) = h(v)$, $u = v$.
+								\end{proof}
+							\end{answer}
+					\end{questions}
 				\end{exercise}
 			\pagebreak
 		\section{Composition of Functions}
@@ -259,54 +278,62 @@
 					\end{proof}
 			\end{theorem}
 			\begin{exercise}{Self Assessment Exercise \thechapter.9}
-				\question{Determine $f \circ f$, $g \circ g$, $g \circ f$ and $f \circ g$ in each of the following cases.}
-				\begin{enumerate}[label=(\alph*)]
-					\item \question{$f: \mathbb{Z} \rightarrow \mathbb{Z}$ is defined by $f(x) = x + 1$ and $g: \mathbb{Z} \rightarrow \mathbb{Z}$ is defined by $g(x) = x - 1$.}\\
-						All these composite functions are defined on $\mathbb{Z} \rightarrow \mathbb{Z}$.
-						\begin{alignat*}{2}
-							(f \circ f)(x) &= f\bigl(f(x)\bigr) \qquad & (g \circ g)(x) &= g\bigl(g(x)\bigr)\\
-							&= f(x + 1) \qquad & &= g(x - 1)\\
-							&= (x + 1) + 1 \qquad & &= (x - 1) - 1\\
-							&= x + 2 \qquad & &= x - 2
-						\end{alignat*}
-						\begin{alignat*}{2}
-							(g \circ f)(x) &= g\bigl(f(x)\bigr) \qquad & (f \circ g)(x) &= f\bigl(g(x)\bigr)\\
-							&= g(x + 1) \qquad & &= f(x - 1)\\
-							&= (x + 1) - 1 \qquad & &= (x - 1) + 1\\
-							&= x \qquad & &= x
-						\end{alignat*}
-					\item \question{$f: \mathbb{R} \rightarrow \mathbb{R}$ is defined by $f(x) = 3x - 2$ and $g: \mathbb{R} \rightarrow \mathbb{R}$ is defined by $g(x) = x^{2} + x$.}\\
-						All these composite functions are defined on $\mathbb{R} \rightarrow \mathbb{R}$.
-						\begin{alignat*}{2}
-							(f \circ f)(x) &= f\bigl(f(x)\bigr) \qquad & (g \circ g)(x) &= g\bigl(g(x)\bigr)\\
-							&= f(3x - 2) \qquad & &= g\left(x^{2} + x\right)\\
-							&= 3(3x - 2) - 2 \qquad & &= \left(x^{2} + x\right)^{2} + \left(x^{2} + x\right)\\
-							&= 9x - 6 - 2 \qquad & &= x^{4} + 2x^{3} + x^{2} + x^{2} + x\\
-							&= 9x - 8 \qquad & &= x^{4} + 2x^{3} + 2x^{2} + x
-						\end{alignat*}
-						\begin{alignat*}{2}
-							(g \circ f)(x) &= g\bigl(f(x)\bigr) \qquad & (f \circ g)(x) &= f\bigl(g(x)\bigr)\\
-							&= g(3x - 2) \qquad & &= f\left(x^{2} + x\right)\\
-							&= (3x - 2)^{2} + (3x - 2) \qquad & &= 3\left(x^{2} + x\right) - 2\\
-							&= 9x^{2} - 12x + 4 + 3x - 2 \qquad & &= 3x^{2} + 3x - 2\\
-							&= 9x^{2} - 9x + 2
-						\end{alignat*}
-					\pagebreak
-					\item \question{$f: \mathbb{Z}^{\geq} \rightarrow \mathbb{Z}^{\geq}$ is defined by $f(x) = 113$ and $g: \mathbb{Z}^{\geq} \rightarrow \mathbb{Z}^{\geq}$ is defined by $g(x) = x + 1$.}\\
-						All these composite functions are defined on $\mathbb{Z}^{\geq} \rightarrow \mathbb{Z}^{\geq}$.
-						\begin{alignat*}{2}
-							(f \circ f)(x) &= f\bigl(f(x)\bigr) \qquad & (g \circ g)(x) &= g\bigl(g(x)\bigr)\\
-							&= f(113) \qquad & &= g(x + 1)\\
-							&= 113 \qquad & &= (x + 1) + 1\\
-							& \qquad & &= x + 2
-						\end{alignat*}
-						\begin{alignat*}{2}
-							(g \circ f)(x) &= g\bigl(f(x)\bigr) \qquad & (f \circ g)(x) &= f\bigl(g(x)\bigr)\\
-							&= g(113) \qquad & &= f(x + 1)\\
-							&= 113 + 1 \qquad & &= 113\\
-							&= 114
-						\end{alignat*}
-				\end{enumerate}
+				\begin{questions}
+					\item Determine $f \circ f$, $g \circ g$, $g \circ f$ and $f \circ g$ in each of the following cases.
+						\begin{questions}
+							\item $f: \mathbb{Z} \rightarrow \mathbb{Z}$ is defined by $f(x) = x + 1$ and $g: \mathbb{Z} \rightarrow \mathbb{Z}$ is defined by $g(x) = x - 1$.\\
+								\begin{answer}
+									All these composite functions are defined on $\mathbb{Z} \rightarrow \mathbb{Z}$.
+									\begin{alignat*}{2}
+										(f \circ f)(x) &= f\bigl(f(x)\bigr) \qquad & (g \circ g)(x) &= g\bigl(g(x)\bigr)\\
+										&= f(x + 1) \qquad & &= g(x - 1)\\
+										&= (x + 1) + 1 \qquad & &= (x - 1) - 1\\
+										&= x + 2 \qquad & &= x - 2
+									\end{alignat*}
+									\begin{alignat*}{2}
+										(g \circ f)(x) &= g\bigl(f(x)\bigr) \qquad & (f \circ g)(x) &= f\bigl(g(x)\bigr)\\
+										&= g(x + 1) \qquad & &= f(x - 1)\\
+										&= (x + 1) - 1 \qquad & &= (x - 1) + 1\\
+										&= x \qquad & &= x
+									\end{alignat*}
+								\end{answer}
+							\item $f: \mathbb{R} \rightarrow \mathbb{R}$ is defined by $f(x) = 3x - 2$ and $g: \mathbb{R} \rightarrow \mathbb{R}$ is defined by $g(x) = x^{2} + x$.\\
+								\begin{answer}
+									All these composite functions are defined on $\mathbb{R} \rightarrow \mathbb{R}$.
+									\begin{alignat*}{2}
+										(f \circ f)(x) &= f\bigl(f(x)\bigr) \qquad & (g \circ g)(x) &= g\bigl(g(x)\bigr)\\
+										&= f(3x - 2) \qquad & &= g\left(x^{2} + x\right)\\
+										&= 3(3x - 2) - 2 \qquad & &= \left(x^{2} + x\right)^{2} + \left(x^{2} + x\right)\\
+										&= 9x - 6 - 2 \qquad & &= x^{4} + 2x^{3} + x^{2} + x^{2} + x\\
+										&= 9x - 8 \qquad & &= x^{4} + 2x^{3} + 2x^{2} + x
+									\end{alignat*}
+									\begin{alignat*}{2}
+										(g \circ f)(x) &= g\bigl(f(x)\bigr) \qquad & (f \circ g)(x) &= f\bigl(g(x)\bigr)\\
+										&= g(3x - 2) \qquad & &= f\left(x^{2} + x\right)\\
+										&= (3x - 2)^{2} + (3x - 2) \qquad & &= 3\left(x^{2} + x\right) - 2\\
+										&= 9x^{2} - 12x + 4 + 3x - 2 \qquad & &= 3x^{2} + 3x - 2\\
+										&= 9x^{2} - 9x + 2
+									\end{alignat*}
+								\end{answer}
+							\pagebreak
+							\item $f: \mathbb{Z}^{\geq} \rightarrow \mathbb{Z}^{\geq}$ is defined by $f(x) = 113$ and $g: \mathbb{Z}^{\geq} \rightarrow \mathbb{Z}^{\geq}$ is defined by $g(x) = x + 1$.\\
+								\begin{answer}
+									All these composite functions are defined on $\mathbb{Z}^{\geq} \rightarrow \mathbb{Z}^{\geq}$.
+									\begin{alignat*}{2}
+										(f \circ f)(x) &= f\bigl(f(x)\bigr) \qquad & (g \circ g)(x) &= g\bigl(g(x)\bigr)\\
+										&= f(113) \qquad & &= g(x + 1)\\
+										&= 113 \qquad & &= (x + 1) + 1\\
+										& \qquad & &= x + 2
+									\end{alignat*}
+									\begin{alignat*}{2}
+										(g \circ f)(x) &= g\bigl(f(x)\bigr) \qquad & (f \circ g)(x) &= f\bigl(g(x)\bigr)\\
+										&= g(113) \qquad & &= f(x + 1)\\
+										&= 113 + 1 \qquad & &= 113\\
+										&= 114
+									\end{alignat*}
+								\end{answer}
+						\end{questions}
+				\end{questions}
 			\end{exercise}
 		\section{Bijective and Invertible Functions}
 			\subsection{Bijective Function}
@@ -396,212 +423,230 @@
 					\end{align*}
 			\end{example}
 			\begin{exercise}{Self Assessment Exercise \thechapter.11}
-				\begin{enumerate}
-					\item \question{In each of the following cases, write down the bijective functions from $X$ to $Y$ (if possible).}
-						\begin{enumerate}[label=(\alph*)]
-							\item \question{$X = \bigl\{\emptyset, \{113\}\bigr\}$ and $Y = \bigl\{\{1\}\bigr\}$.}\\
-								There are no possible bijective functions, as there are more elements in $X$ than in $Y$. That means that there cannot be an injective function, so there cannot be a bijective function.
-							\item \question{$X = \bigl\{\emptyset, \{113\}\bigr\}$ and $Y = \bigl\{\{1\}, \{2\}\bigr\}$.}
-								\begin{align*}
-									f_{1} &= \Bigl\{\bigl(\emptyset, \{1\}\bigr), \bigl(\{113\}, \{2\}\bigr)\Bigr\}\\
-									f_{2} &= \Bigl\{\bigl(\emptyset, \{2\}\bigr), \bigl(\{113\}, \{1\}\bigr)\Bigr\}
-								\end{align*}
-							\item \question{$X = \bigl\{\emptyset, \{113\}\bigr\}$ and $Y = \bigl\{\{1\}, \{2\}, \{7\}\bigr\}$.}\\
-								There are no possible bijective functions, as there are more elements in $Y$ than in $X$. That means that there cannot be a surjective function, so there cannot be a bijective function.
-						\end{enumerate}
-					\item \question{Check the following functions for injectivity, surjectivity and bijectivity, and give the inverse relation of each:}
-						\begin{enumerate}[label=(\alph*)]
-							\item \question{$f: \mathbb{Z} \rightarrow \mathbb{Z}$ is defined by $f(x) = x + 1$.}
-								\begin{description}
-									\item[Injectivity] This function is injective.
-										\begin{proof}
-											$ 
-											\begin{alignedat}[t]{2}
-												& \text{Assume} \quad &f(u) &= f(v)\\
-												& \text{Then} & u + 1 &= v + 1\\
-												& \text{i.e.} & u &= v
-											\end{alignedat}
-											$\\
-											Therefore $f$ is injective.
-										\end{proof}
-									\pagebreak
-									\item[Surjectivity] This function is surjective.
-										\begin{proof}
-											$
-											\begin{aligned}[t]
-												f[\mathbb{Z}] &= \{f(x) \mid x \in \mathbb{Z}\}\\
-												&= \{x + 1 \mid x \in \mathbb{Z}\}\\
-												&= \{y \mid y - 1 \in \mathbb{Z}\}\\
-												&= \{y \mid y \in \mathbb{Z}\}\\
-												&= \mathbb{Z}
-											\end{aligned} $\\
-											Therefore $f$ is surjective.
-										\end{proof}
-									\item[Bijectivity] As $f$ is injective and surjective, $f$ is bijective.
-									\item[Inverse Function] $
+				\begin{questions}
+					\item In each of the following cases, write down the bijective functions from $X$ to $Y$ (if possible).
+						\begin{questions}
+							\item $X = \bigl\{\emptyset, \{113\}\bigr\}$ and $Y = \bigl\{\{1\}\bigr\}$.\\
+								\begin{answer}
+									There are no possible bijective functions, as there are more elements in $X$ than in $Y$. That means that there cannot be an injective function, so there cannot be a bijective function.
+								\end{answer}
+							\item $X = \bigl\{\emptyset, \{113\}\bigr\}$ and $Y = \bigl\{\{1\}, \{2\}\bigr\}$.
+								\begin{answer}
+									\begin{align*}
+										f_{1} &= \Bigl\{\bigl(\emptyset, \{1\}\bigr), \bigl(\{113\}, \{2\}\bigr)\Bigr\}\\
+										f_{2} &= \Bigl\{\bigl(\emptyset, \{2\}\bigr), \bigl(\{113\}, \{1\}\bigr)\Bigr\}
+									\end{align*}
+								\end{answer}
+							\item $X = \bigl\{\emptyset, \{113\}\bigr\}$ and $Y = \bigl\{\{1\}, \{2\}, \{7\}\bigr\}$.\\
+								\begin{answer}
+									There are no possible bijective functions, as there are more elements in $Y$ than in $X$. That means that there cannot be a surjective function, so there cannot be a bijective function.
+								\end{answer}
+						\end{questions}
+					\item Check the following functions for injectivity, surjectivity and bijectivity, and give the inverse relation of each:
+						\begin{questions}
+							\item $f: \mathbb{Z} \rightarrow \mathbb{Z}$ is defined by $f(x) = x + 1$.
+								\begin{answer}
+									\begin{description}
+										\item[Injectivity] This function is injective.
+											\begin{proof}
+												$ 
+												\begin{alignedat}[t]{2}
+													& \text{Assume} \quad &f(u) &= f(v)\\
+													& \text{Then} & u + 1 &= v + 1\\
+													& \text{i.e.} & u &= v
+												\end{alignedat}
+												$\\
+												Therefore $f$ is injective.
+											\end{proof}
+										\pagebreak
+										\item[Surjectivity] This function is surjective.
+											\begin{proof}
+												$
+												\begin{aligned}[t]
+													f[\mathbb{Z}] &= \{f(x) \mid x \in \mathbb{Z}\}\\
+													&= \{x + 1 \mid x \in \mathbb{Z}\}\\
+													&= \{y \mid y - 1 \in \mathbb{Z}\}\\
+													&= \{y \mid y \in \mathbb{Z}\}\\
+													&= \mathbb{Z}
+												\end{aligned} $\\
+												Therefore $f$ is surjective.
+											\end{proof}
+										\item[Bijectivity] As $f$ is injective and surjective, $f$ is bijective.
+										\item[Inverse Function] $
+												\begin{aligned}[t]
+													(y, x) \in f^{-1} &\text{ iff } (x, y) \in f\\
+													&\text{ iff } y = x + 1\\
+													(x, y) \in f^{-1} &\text{ iff } x = y + 1\\
+													&\text{ iff } x - 1 = y\\
+													&\text{ iff } y = x - 1\\
+													(y, x) \in f^{-1} &\text{ iff } x = y - 1
+												\end{aligned} $\\
+											$f^{-1}(y) = y - 1$
+									\end{description}
+								\end{answer}
+							\item $f: \mathbb{Z} \rightarrow \mathbb{Z}$ is defined by $f(x) = x^{2}$.
+								\begin{answer}
+									\begin{description}
+										\item[Injectivity] This function is \emph{not} injective.
+											\begin{proof}
+												$ 
+													\begin{aligned}[t]
+														& \text{Assume} \quad &f(u) &= f(v)\\
+														& \text{Then} & u^{2} &= v^{2}\\
+														& \text{i.e.} & \pm u &= \pm v
+													\end{aligned}
+												$\\
+												Therefore, $f$ is not injective.
+											\end{proof}
+										\item[Surjectivity] This function is \emph{not} surjective.
+											\begin{proof}
+												$ 
+													\begin{aligned}[t]
+														f[\mathbb{Z}] &= \{f(x) \mid x \in \mathbb{Z}\}\\
+														&= \{x^{2} \mid x \in \mathbb{Z}\}\\
+														&= \{y \mid \pm \sqrt{y} \in \mathbb{Z}\}\\
+														& \neq \mathbb{Z}
+													\end{aligned}
+												$
+												\begin{subproof}[Counterexample]
+													Suppose $y = -1$, as $-1 \in \mathbb{Z}$. There is no $x \in \mathbb{Z}$ such that $x^{2} = -1$, so the range of $f$ is not equal to the codomain.
+												\end{subproof}
+												Therefore, $f$ is not surjective.
+											\end{proof}
+										\item[Bijectivity] As $f$ is neither injective nor surjective, $f$ is not bijective.
+										\item[Inverse Function] As $f$ is not bijective, $f^{-1}$ is not defined. 
+									\end{description}
+								\end{answer}
+							\pagebreak
+							\item $f: \mathbb{Z} \rightarrow \mathbb{Z}$ is defined by $f(x) = 3 - x$.
+								\begin{answer}
+									\begin{description}
+										\item[Injectivity] This function is injective.
+											\begin{proof}
+												$ 
+													\begin{aligned}[t]
+														& \text{Assume} \quad &f(u) &= f(v)\\
+														& \text{Then} &3 - u &= 3 - v\\
+														& \text{i.e.} & u &= v
+													\end{aligned}
+												$ \\
+												Therefore $f$ is injective.
+											\end{proof}
+										\item[Surjectivity] This function is surjective.
+											\begin{proof}
+												$ 
+													\begin{aligned}[t]
+														f[\mathbb{Z}] &= \{f(x) \mid x \in \mathbb{Z}\}\\
+														&= \{3 - x \mid x \in \mathbb{Z}\}\\
+														&= \{y \mid 3 - y \in \mathbb{Z}\}\\
+														&= \mathbb{Z}
+													\end{aligned}
+												$ \\
+												Therefore $f$ is surjective.
+											\end{proof}
+										\item[Bijectivity] As this function is injective and surjective, this function is bijective.
+										\item[Inverse Function] $ 
 											\begin{aligned}[t]
 												(y, x) \in f^{-1} &\text{ iff } (x, y) \in f\\
-												&\text{ iff } y = x + 1\\
-												(x, y) \in f^{-1} &\text{ iff } x = y + 1\\
-												&\text{ iff } x - 1 = y\\
-												&\text{ iff } y = x - 1\\
-												(y, x) \in f^{-1} &\text{ iff } x = y - 1
-											\end{aligned} $\\
-										$f^{-1}(y) = y - 1$
-								\end{description}
-							\item \question{$f: \mathbb{Z} \rightarrow \mathbb{Z}$ is defined by $f(x) = x^{2}$.}
-								\begin{description}
-									\item[Injectivity] This function is \emph{not} injective.
-										\begin{proof}
-											$ 
-												\begin{aligned}[t]
-													& \text{Assume} \quad &f(u) &= f(v)\\
-													& \text{Then} & u^{2} &= v^{2}\\
-													& \text{i.e.} & \pm u &= \pm v
-												\end{aligned}
-											$\\
-											Therefore, $f$ is not injective.
-										\end{proof}
-									\item[Surjectivity] This function is \emph{not} surjective.
-										\begin{proof}
-											$ 
-												\begin{aligned}[t]
-													f[\mathbb{Z}] &= \{f(x) \mid x \in \mathbb{Z}\}\\
-													&= \{x^{2} \mid x \in \mathbb{Z}\}\\
-													&= \{y \mid \pm \sqrt{y} \in \mathbb{Z}\}\\
-													& \neq \mathbb{Z}
-												\end{aligned}
-											$
-											\begin{subproof}[Counterexample]
-												Suppose $y = -1$, as $-1 \in \mathbb{Z}$. There is no $x \in \mathbb{Z}$ such that $x^{2} = -1$, so the range of $f$ is not equal to the codomain.
-											\end{subproof}
-											Therefore, $f$ is not surjective.
-										\end{proof}
-									\item[Bijectivity] As $f$ is neither injective nor surjective, $f$ is not bijective.
-									\item[Inverse Function] As $f$ is not bijective, $f^{-1}$ is not defined. 
-								\end{description}
-							\pagebreak
-							\item \question{$f: \mathbb{Z} \rightarrow \mathbb{Z}$ is defined by $f(x) = 3 - x$.}
-								\begin{description}
-									\item[Injectivity] This function is injective.
-										\begin{proof}
-											$ 
-												\begin{aligned}[t]
-													& \text{Assume} \quad &f(u) &= f(v)\\
-													& \text{Then} &3 - u &= 3 - v\\
-													& \text{i.e.} & u &= v
-												\end{aligned}
-											$ \\
-											Therefore $f$ is injective.
-										\end{proof}
-									\item[Surjectivity] This function is surjective.
-										\begin{proof}
-											$ 
-												\begin{aligned}[t]
-													f[\mathbb{Z}] &= \{f(x) \mid x \in \mathbb{Z}\}\\
-													&= \{3 - x \mid x \in \mathbb{Z}\}\\
-													&= \{y \mid 3 - y \in \mathbb{Z}\}\\
-													&= \mathbb{Z}
-												\end{aligned}
-											$ \\
-											Therefore $f$ is surjective.
-										\end{proof}
-									\item[Bijectivity] As this function is injective and surjective, this function is bijective.
-									\item[Inverse Function] $ 
-										\begin{aligned}[t]
-											(y, x) \in f^{-1} &\text{ iff } (x, y) \in f\\
-											& \text{ iff } y = 3 - x\\
-											(x, y) \in f^{-1} & \text{ iff } x = 3 - y\\
-											& \text{ iff } x + y = 3\\
-											& \text{ iff } y = 3 - x\\
-											(y, x) \in f^{-1} & \text{ iff } x = 3 - y
-										\end{aligned}
-									$ \\
-									$f^{-1}(y) = 3 - y$
-								\end{description}
-							\item \question{$f: \mathbb{Z} \rightarrow \mathbb{Z}$ is defined by $f(x) = 4x + 5$.}
-								\begin{description}
-									\item[Injectivity] This function is injective.
-										\begin{proof}
-											$ 
-												\begin{aligned}[t]
-													& \text{Assume} \quad &f(u) &= f(v)\\
-													& \text{Then} &4u + 5 &= 4v + 5\\
-													& & 4u &= 4v\\
-													& \text{i.e.} & u &= v
-												\end{aligned}
-											$ \\
-											Therefore $f$ is injective.
-										\end{proof}
-									\item[Surjectivity] This function is \emph{not} surjective.
-										\begin{proof}
-											$ 
-												\begin{aligned}[t]
-													f[\mathbb{Z}] &= \{f(x) \mid x \in \mathbb{Z}\}\\
-													&= \{4x + 5 \mid x \in \mathbb{Z}\}\\
-													&= \{y \mid \frac{y - 5}{4} \in \mathbb{Z}\}\\
-													& \neq \mathbb{Z}
-												\end{aligned}
-											$ \\
-											Therefore $f$ is not surjective.
-										\end{proof}
-									\item[Bijectivity] As $f$ is not surjective, $f$ is not bijective.
-									\item[Inverse Function] As $f$ is not bijective, $f^{-1}$ is not defined. 
-								\end{description}
-						\end{enumerate}
+												& \text{ iff } y = 3 - x\\
+												(x, y) \in f^{-1} & \text{ iff } x = 3 - y\\
+												& \text{ iff } x + y = 3\\
+												& \text{ iff } y = 3 - x\\
+												(y, x) \in f^{-1} & \text{ iff } x = 3 - y
+											\end{aligned}
+										$ \\
+										$f^{-1}(y) = 3 - y$
+									\end{description}
+								\end{answer}
+							\item $f: \mathbb{Z} \rightarrow \mathbb{Z}$ is defined by $f(x) = 4x + 5$.
+								\begin{answer}
+									\begin{description}
+										\item[Injectivity] This function is injective.
+											\begin{proof}
+												$ 
+													\begin{aligned}[t]
+														& \text{Assume} \quad &f(u) &= f(v)\\
+														& \text{Then} &4u + 5 &= 4v + 5\\
+														& & 4u &= 4v\\
+														& \text{i.e.} & u &= v
+													\end{aligned}
+												$ \\
+												Therefore $f$ is injective.
+											\end{proof}
+										\item[Surjectivity] This function is \emph{not} surjective.
+											\begin{proof}
+												$ 
+													\begin{aligned}[t]
+														f[\mathbb{Z}] &= \{f(x) \mid x \in \mathbb{Z}\}\\
+														&= \{4x + 5 \mid x \in \mathbb{Z}\}\\
+														&= \{y \mid \frac{y - 5}{4} \in \mathbb{Z}\}\\
+														& \neq \mathbb{Z}
+													\end{aligned}
+												$ \\
+												Therefore $f$ is not surjective.
+											\end{proof}
+										\item[Bijectivity] As $f$ is not surjective, $f$ is not bijective.
+										\item[Inverse Function] As $f$ is not bijective, $f^{-1}$ is not defined. 
+									\end{description}
+								\end{answer}
+						\end{questions}
 					\pagebreak
-					\item \question{Consider an identity function $i_{C}: C \rightarrow C$.}
-						\begin{enumerate}
-							\item \question{Prove that $i_{C}: C \rightarrow C$ is bijective.}
-								\begin{proof}
-									$ $
-									\begin{subproof}[Injectivity]
-										$ 
-											\begin{aligned}[t]
-												& \text{Assume} \quad &i_{C}(u) &= i_{C}(v)\\
-												& \text{Then} & u &= v
-											\end{aligned}
-										$ \\
-										Therefore $i_{C}$ is injective.
-									\end{subproof}
-									\begin{subproof}[Surjectivity]
-										$ 
-											\begin{aligned}[t]
-												i_{C}[C] &= \{i_{c} \mid c \in C\}\\
-												&= \{c \mid c \in C\}\\
-												&= C
-											\end{aligned}
-										$ \\
-										Therefore $i_{C}$ is surjective.
-									\end{subproof}
-									As $i_{C}$ is both injective and surjective, $i_{C}$ is bijective.
-								\end{proof}
-							\item \question{Prove that $i_{C}$ is an equivalence relation on $C$.}
-								\begin{proof}
-									\begin{subproof}[Reflexivity]
-										For every $c \in C$, is $(c, c) \in i_{C}$? Yes.\\
-										For any $c \in C$, $c = c$.\\
-										So $(c, c) \in i_{C}$.\\
-										Therefore, $i_{C}$ is reflexive.
-									\end{subproof}
-									\begin{subproof}[Symmetry]
-										For every $c, d \in C$, if $(c, d) \in i_{C}$, is $(d, c) \in i_{C}$? Yes.\\
-										Suppose $(c, d) \in C$. Then $c = d$. So $d = c$.\\
-										Therefore, $(d, c) \in i_{C}$.\\
-										Therefore, $i_{C}$ is symmetric.
-									\end{subproof}
-									\begin{subproof}[Transitivity]
-										If $(c, d) \in i_{C}$ and $(d, e) \in i_{C}$, is $(c, e) \in i_{C}$? Yes.\\
-										Assume $(c, d) \in i_{C}$ and $(d, e) \in i_{C}$.\\
-										Then $c = d$ and $d = e$.\\
-										So $c = d = e$.\\
-										So $c = e$.\\
-										Therefore, $(c, e) \in i_{C}$.
-									\end{subproof}
-									As $i_{C}$ is reflexive, symmetric and transitive, $i_{C}$ is an equivalence relation.
-								\end{proof}
-						\end{enumerate}
-				\end{enumerate}
+					\item Consider an identity function $i_{C}: C \rightarrow C$.
+						\begin{questions}
+							\item Prove that $i_{C}: C \rightarrow C$ is bijective.
+								\begin{answer}
+									\begin{proof}
+										$ $
+										\begin{subproof}[Injectivity]
+											$ 
+												\begin{aligned}[t]
+													& \text{Assume} \quad &i_{C}(u) &= i_{C}(v)\\
+													& \text{Then} & u &= v
+												\end{aligned}
+											$ \\
+											Therefore $i_{C}$ is injective.
+										\end{subproof}
+										\begin{subproof}[Surjectivity]
+											$ 
+												\begin{aligned}[t]
+													i_{C}[C] &= \{i_{c} \mid c \in C\}\\
+													&= \{c \mid c \in C\}\\
+													&= C
+												\end{aligned}
+											$ \\
+											Therefore $i_{C}$ is surjective.
+										\end{subproof}
+										As $i_{C}$ is both injective and surjective, $i_{C}$ is bijective.
+									\end{proof}
+								\end{answer}
+							\item Prove that $i_{C}$ is an equivalence relation on $C$.
+								\begin{answer}
+									\begin{proof}
+										\begin{subproof}[Reflexivity]
+											For every $c \in C$, is $(c, c) \in i_{C}$? Yes.\\
+											For any $c \in C$, $c = c$.\\
+											So $(c, c) \in i_{C}$.\\
+											Therefore, $i_{C}$ is reflexive.
+										\end{subproof}
+										\begin{subproof}[Symmetry]
+											For every $c, d \in C$, if $(c, d) \in i_{C}$, is $(d, c) \in i_{C}$? Yes.\\
+											Suppose $(c, d) \in C$. Then $c = d$. So $d = c$.\\
+											Therefore, $(d, c) \in i_{C}$.\\
+											Therefore, $i_{C}$ is symmetric.
+										\end{subproof}
+										\begin{subproof}[Transitivity]
+											If $(c, d) \in i_{C}$ and $(d, e) \in i_{C}$, is $(c, e) \in i_{C}$? Yes.\\
+											Assume $(c, d) \in i_{C}$ and $(d, e) \in i_{C}$.\\
+											Then $c = d$ and $d = e$.\\
+											So $c = d = e$.\\
+											So $c = e$.\\
+											Therefore, $(c, e) \in i_{C}$.
+										\end{subproof}
+										As $i_{C}$ is reflexive, symmetric and transitive, $i_{C}$ is an equivalence relation.
+									\end{proof}
+								\end{answer}
+						\end{questions}
+				\end{questions}
 			\end{exercise}
 	\rulechapterend
 \end{document}

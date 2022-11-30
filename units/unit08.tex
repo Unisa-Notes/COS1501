@@ -155,104 +155,110 @@
 					\end{aligned} $
 				\end{example}
 				\begin{exercise}{Self Assessment Exercise \thechapter.3}
-					\begin{enumerate}
-						\item \question{Let $X$ be $\{2, 7\}$.}
-							\begin{enumerate}[label=(\alph*)]
-								\item \question{Provide 3 binary operations on $X$, both in list notation and in tabular form.}
-									\begin{align*}
-										\triangle = \Bigl\{\bigl((2, 2), 2\bigr), \bigl((2, 7), 2\bigr), \bigl((7, 2), 2\bigr), \bigl((7, 7), 7\bigr)\Bigr\}
-									\end{align*}
-									\begin{center}
-										\begin{tblr}{colspec={|c | c c|}, row{1}={font=\bfseries}, column{1}={font=\bfseries}}
-											\toprule
-											$\triangle$ & $2$ & $7$\\
-											\midrule
-											$2$ & 2 & 2\\
-											$7$ & 2 & 7\\
-											\bottomrule
-										\end{tblr}
-									\end{center}
-									\begin{align*}
-										\triangledown = \Bigl\{\bigl((2, 2), 2\bigr), \bigl((2, 7), 7\bigr), \bigl((7, 2), 7\bigr), \bigl((7, 7), 7\bigr)\Bigr\}
-									\end{align*}
-									\begin{center}
-										\begin{tblr}{colspec={|c | c c|}, row{1}={font=\bfseries}, column{1}={font=\bfseries}}
-											\toprule
-											$\triangledown$ & $2$ & $7$\\
-											\midrule
-											$2$ & 2 & 7\\
-											$7$ & 7 & 7\\
-											\bottomrule
-										\end{tblr}
-									\end{center}
-									\begin{align*}
-										\square = \Bigl\{\bigl((2, 2), 2\bigr), \bigl((2, 7), 2\bigr), \bigl((7, 2), 7\bigr), \bigl((7, 7), 7\bigr)\Bigr\}
-									\end{align*}
-									\begin{center}
-										\begin{tblr}{colspec={|c | c c|}, row{1}={font=\bfseries}, column{1}={font=\bfseries}}
-											\toprule
-											$\square$ & $2$ & $7$\\
-											\midrule
-											$2$ & 2 & 2\\
-											$7$ & 7 & 7\\
-											\bottomrule
-										\end{tblr}
-									\end{center}
+					\begin{questions}
+						\item Let $X$ be $\{2, 7\}$.
+							\begin{questions}
+								\item Provide 3 binary operations on $X$, both in list notation and in tabular form.
+									\begin{answer}
+										\begin{align*}
+											\triangle = \Bigl\{\bigl((2, 2), 2\bigr), \bigl((2, 7), 2\bigr), \bigl((7, 2), 2\bigr), \bigl((7, 7), 7\bigr)\Bigr\}
+										\end{align*}
+										\begin{center}
+											\begin{tblr}{colspec={|c | c c|}, row{1}={font=\bfseries}, column{1}={font=\bfseries}}
+												\toprule
+												$\triangle$ & $2$ & $7$\\
+												\midrule
+												$2$ & 2 & 2\\
+												$7$ & 2 & 7\\
+												\bottomrule
+											\end{tblr}
+										\end{center}
+										\begin{align*}
+											\triangledown = \Bigl\{\bigl((2, 2), 2\bigr), \bigl((2, 7), 7\bigr), \bigl((7, 2), 7\bigr), \bigl((7, 7), 7\bigr)\Bigr\}
+										\end{align*}
+										\begin{center}
+											\begin{tblr}{colspec={|c | c c|}, row{1}={font=\bfseries}, column{1}={font=\bfseries}}
+												\toprule
+												$\triangledown$ & $2$ & $7$\\
+												\midrule
+												$2$ & 2 & 7\\
+												$7$ & 7 & 7\\
+												\bottomrule
+											\end{tblr}
+										\end{center}
+										\begin{align*}
+											\square = \Bigl\{\bigl((2, 2), 2\bigr), \bigl((2, 7), 2\bigr), \bigl((7, 2), 7\bigr), \bigl((7, 7), 7\bigr)\Bigr\}
+										\end{align*}
+										\begin{center}
+											\begin{tblr}{colspec={|c | c c|}, row{1}={font=\bfseries}, column{1}={font=\bfseries}}
+												\toprule
+												$\square$ & $2$ & $7$\\
+												\midrule
+												$2$ & 2 & 2\\
+												$7$ & 7 & 7\\
+												\bottomrule
+											\end{tblr}
+										\end{center}
+									\end{answer}
 								\pagebreak
-								\item \question{Check the three operations for commutativity and associativity.}
-									\begin{description}
-										\item[Commutativity] $\triangle$ is commutative, as it is symmetric about the diagonal.\\
-											$\triangledown$ is commutative, as it is symmetric about the diagonal.\\
-											$\square$ is \emph{not} commutative.
-										\item[Associativity] $\triangle$ is associative.
-											\begin{alignat*}{3}
-												x = 2, y = 2, z = 2 \qquad & (2 \triangle 2) \triangle 2 &= 2 \qquad & 2 \triangle (2 \triangle 2) &= 2\\
-												x = 2, y = 2, z = 7 \qquad & (2 \triangle 2) \triangle 7 &= 2 \qquad & 2 \triangle (2 \triangle 7) &= 2\\
-												x = 2, y = 7, z = 2 \qquad & (2 \triangle 7) \triangle 2 &= 2 \qquad & 2 \triangle (7 \triangle 2) &= 2\\
-												x = 2, y = 7, z = 7 \qquad & (2 \triangle 7) \triangle 7 &= 2 \qquad & 2 \triangle (7 \triangle 7) &= 2\\
-												x = 7, y = 2, z = 2 \qquad & (7 \triangle 2) \triangle 2 &= 2 \qquad & 7 \triangle (2 \triangle 2) &= 2\\
-												x = 7, y = 2, z = 7 \qquad & (7 \triangle 2) \triangle 7 &= 2 \qquad & 7 \triangle (2 \triangle 7) &= 2\\
-												x = 7, y = 7, z = 2 \qquad & (7 \triangle 7) \triangle 2 &= 2 \qquad & 7 \triangle (7 \triangle 2) &= 2\\
-												x = 7, y = 7, z = 7 \qquad & (7 \triangle 7) \triangle 7 &= 7 \qquad & 7 \triangle (7 \triangle 7) &= 7
-											\end{alignat*}
-											Doing the same for $\triangledown$ and $\square$. Both are associative as well.
-									\end{description}
-								\item \question{Provide $2$ binary operations on $X = \{a, b, c\}$ and check them for commutativity and associativity.}
-									\begin{center}
-										\begin{tblr}{colspec={| c | c c c |}, row{1}={font=\bfseries}, column{1}={font=\bfseries}}
-											\toprule
-											$\bigstar$ & a & b & c\\
-											\midrule
-											a & a & a & a\\ 
-											b & b & b & b\\ 
-											c & c & c & c\\
-											\bottomrule
-										\end{tblr}
-										\begin{tblr}{colspec={| c | c c c |}, row{1}={font=\bfseries}, column{1}={font=\bfseries}}
-											\toprule
-											$\heartsuit$ & a & b & c\\
-											\midrule
-											a & a & a & a\\ 
-											b & a & a & a\\ 
-											c & a & a & a\\
-											\bottomrule
-										\end{tblr}
-									\end{center}
-									\begin{description}
-										\item[Commutativity] $\bigstar$ is not commutative.\\
-											$\heartsuit$ is not commutative.
-										\item[Associativity] $\bigstar$ is associative.\\
-											$\heartsuit$ is associative.
-									\end{description}
-							\end{enumerate}
-						\item \question{Consider the $\bullet$ operation defined in the example above on $A = \{a, b, c, d\}$}
-							\begin{enumerate}
-								\item \question{Examine $y \bullet x$ and $x \bullet y$ for each $x, y \in A$. Is $\bullet$ commutative?}\\
-									Yes, as it is symmetric about the diagonal.
-								\item \question{Does $A$ have an identity element for $\bullet$?}\\
-									Yes, as the row and column for $a$ matches the headers. So $a$ is an identity element.
-							\end{enumerate}
-					\end{enumerate}
+								\item Check the three operations for commutativity and associativity.
+									\begin{answer}
+										\begin{description}
+											\item[Commutativity] $\triangle$ is commutative, as it is symmetric about the diagonal.\\
+												$\triangledown$ is commutative, as it is symmetric about the diagonal.\\
+												$\square$ is \emph{not} commutative.
+											\item[Associativity] $\triangle$ is associative.
+												\begin{alignat*}{3}
+													x = 2, y = 2, z = 2 \qquad & (2 \triangle 2) \triangle 2 &= 2 \qquad & 2 \triangle (2 \triangle 2) &= 2\\
+													x = 2, y = 2, z = 7 \qquad & (2 \triangle 2) \triangle 7 &= 2 \qquad & 2 \triangle (2 \triangle 7) &= 2\\
+													x = 2, y = 7, z = 2 \qquad & (2 \triangle 7) \triangle 2 &= 2 \qquad & 2 \triangle (7 \triangle 2) &= 2\\
+													x = 2, y = 7, z = 7 \qquad & (2 \triangle 7) \triangle 7 &= 2 \qquad & 2 \triangle (7 \triangle 7) &= 2\\
+													x = 7, y = 2, z = 2 \qquad & (7 \triangle 2) \triangle 2 &= 2 \qquad & 7 \triangle (2 \triangle 2) &= 2\\
+													x = 7, y = 2, z = 7 \qquad & (7 \triangle 2) \triangle 7 &= 2 \qquad & 7 \triangle (2 \triangle 7) &= 2\\
+													x = 7, y = 7, z = 2 \qquad & (7 \triangle 7) \triangle 2 &= 2 \qquad & 7 \triangle (7 \triangle 2) &= 2\\
+													x = 7, y = 7, z = 7 \qquad & (7 \triangle 7) \triangle 7 &= 7 \qquad & 7 \triangle (7 \triangle 7) &= 7
+												\end{alignat*}
+												Doing the same for $\triangledown$ and $\square$. Both are associative as well.
+										\end{description}
+									\end{answer}
+								\item Provide $2$ binary operations on $X = \{a, b, c\}$ and check them for commutativity and associativity.
+									\begin{answer}
+										\begin{center}
+											\begin{tblr}{colspec={| c | c c c |}, row{1}={font=\bfseries}, column{1}={font=\bfseries}}
+												\toprule
+												$\bigstar$ & a & b & c\\
+												\midrule
+												a & a & a & a\\ 
+												b & b & b & b\\ 
+												c & c & c & c\\
+												\bottomrule
+											\end{tblr}
+											\begin{tblr}{colspec={| c | c c c |}, row{1}={font=\bfseries}, column{1}={font=\bfseries}}
+												\toprule
+												$\heartsuit$ & a & b & c\\
+												\midrule
+												a & a & a & a\\ 
+												b & a & a & a\\ 
+												c & a & a & a\\
+												\bottomrule
+											\end{tblr}
+										\end{center}
+										\begin{description}
+											\item[Commutativity] $\bigstar$ is not commutative.\\
+												$\heartsuit$ is not commutative.
+											\item[Associativity] $\bigstar$ is associative.\\
+												$\heartsuit$ is associative.
+										\end{description}
+									\end{answer}
+							\end{questions}
+						\item Consider the $\bullet$ operation defined in the example above on $A = \{a, b, c, d\}$
+							\begin{questions}
+								\item Examine $y \bullet x$ and $x \bullet y$ for each $x, y \in A$. Is $\bullet$ commutative?\\
+									{\answer Yes, as it is symmetric about the diagonal.}
+								\item Does $A$ have an identity element for $\bullet$?\\
+									{\answer Yes, as the row and column for $a$ matches the headers. So $a$ is an identity element.}
+							\end{questions}
+					\end{questions}
 				\end{exercise}
 		\pagebreak
 		\section{Operations on Vectors}
@@ -302,27 +308,35 @@
 					\end{align*}
 				\end{example}
 				\begin{exercise}{Self Assessment Exercise \thechapter.6}
-					\question{If $u = (3, 1)$, $v = (-4, -4)$ and $w = (0, -1)$, determine}
-					\begin{enumerate}[label=(\alph*)]
-						\item \question{$2u + v$} \hfill
-							$ \begin{aligned}[t]
-								2u + v &= 2(3, 1) + (-4, -4)\\
-								&= (6, 2) + (-4, -4)\\
-								&= (2, -2)
-							\end{aligned} $ \hfill \phantom{}
-						\item \question{$u - 3v$} \hfill
-							$ \begin{aligned}[t]
-								u - 3v &= (3, 1) - 3(-4, -4)\\
-								&= (3, 1) + (12, 12)\\
-								&= (15, 13)
-							\end{aligned} $ \hfill \phantom{}
-						\item \question{$-3(v + w)$} \hfill
-							$ \begin{aligned}[t]
-								-3(v + w) &= -3\bigl((-4, -4) + (0, -1)\bigr)\\
-								&= -3(-4, -5)\\
-								&= (12, 15)
-							\end{aligned} $ \hfill \phantom{}
-					\end{enumerate}
+					\begin{questions}
+						\item If $u = (3, 1)$, $v = (-4, -4)$ and $w = (0, -1)$, determine:
+							\begin{questions}
+								\item $2u + v$ \hfill
+									\begin{answer}
+										$ \begin{aligned}[t]
+											2u + v &= 2(3, 1) + (-4, -4)\\
+											&= (6, 2) + (-4, -4)\\
+											&= (2, -2)
+										\end{aligned} $ \hfill \phantom{}
+									\end{answer}
+								\item $u - 3v$ \hfill
+									\begin{answer}
+										$ \begin{aligned}[t]
+											u - 3v &= (3, 1) - 3(-4, -4)\\
+											&= (3, 1) + (12, 12)\\
+											&= (15, 13)
+										\end{aligned} $ \hfill \phantom{}
+									\end{answer}
+								\item $-3(v + w)$ \hfill
+									\begin{answer}
+										$ \begin{aligned}[t]
+											-3(v + w) &= -3\bigl((-4, -4) + (0, -1)\bigr)\\
+											&= -3(-4, -5)\\
+											&= (12, 15)
+										\end{aligned} $ \hfill \phantom{}
+									\end{answer}
+							\end{questions}
+					\end{questions}
 				\end{exercise}
 			\pagebreak
 			\subsection{Dot Product}
@@ -348,24 +362,30 @@
 					As with addition, if two vectors have a different number of coordinates, you cannot calculate the dot product.
 				\end{sidenote}
 			\begin{exercise}{Self Assessment Exercise \thechapter.7}
-				\question{If $u = (1, 2, 5)$ and $v = (2, 3, 5)$, determine}
-				\begin{enumerate}[label=(\alph*)]
-					\item \question{$u \cdot v$} \hfill
-						$ \begin{aligned}[t]
-							u \cdot v &= (1, 2, 5) \cdot (2, 3, 5)\\
-							&= (1 \cdot 2) + (2 \cdot 3) + (5 \cdot 5)\\
-							&= 2 + 6 + 25\\
-							&= 33
-						\end{aligned} $\hfill \phantom{}
-					\item \question{$v(2u)$} \hfill $
-						\begin{aligned}[t]
-							v(2u) &= (2, 3, 5)\bigl(2(1, 2, 5)\bigr)\\
-							&= (2, 3, 5) \cdot (2, 4, 10)\\
-							&= (2 \cdot 2) + (3 \cdot 4) + (5 \cdot 10)\\
-							&= 4 + 12 + 50\\
-							&= 66
-						\end{aligned} $ \hfill \phantom{}
-				\end{enumerate}
+				\begin{questions}
+					\item If $u = (1, 2, 5)$ and $v = (2, 3, 5)$, determine:
+						\begin{questions}
+							\item $u \cdot v$ \hfill
+								\begin{answer}
+									$ \begin{aligned}[t]
+										u \cdot v &= (1, 2, 5) \cdot (2, 3, 5)\\
+										&= (1 \cdot 2) + (2 \cdot 3) + (5 \cdot 5)\\
+										&= 2 + 6 + 25\\
+										&= 33
+									\end{aligned} $\hfill \phantom{}
+								\end{answer}
+							\item $v(2u)$ \hfill
+								\begin{answer}
+									$ \begin{aligned}[t]
+										v(2u) &= (2, 3, 5)\bigl(2(1, 2, 5)\bigr)\\
+										&= (2, 3, 5) \cdot (2, 4, 10)\\
+										&= (2 \cdot 2) + (3 \cdot 4) + (5 \cdot 10)\\
+										&= 4 + 12 + 50\\
+										&= 66
+									\end{aligned} $ \hfill \phantom{}
+								\end{answer}
+						\end{questions}
+				\end{questions}
 			\end{exercise}
 		\pagebreak
 		\section{Operations on Matrices}
@@ -445,37 +465,43 @@
 					\end{align*}
 				\end{example}
 				\begin{exercise}{Self Assessment Exercise \thechapter.8}
-					\question{For each pair $A$ and $B$ determine $A + B$ (if possible):}
-					\begin{multicols}{2}
-						\begin{enumerate}[label=(\alph*)]
-							\item \question{$A = \begin{bmatrix}-1 & 0\\ 0 & 1\end{bmatrix}$ and $B = \begin{bmatrix}5 & 5 \\ 4 & -1\end{bmatrix}$}\\
-								$ \begin{aligned}[t]
-									A + B &= \begin{bmatrix}
-										-1 & 0 \\ 0 & 1
-									\end{bmatrix} + \begin{bmatrix}
-										5 & 5 \\ 4 & -1
-									\end{bmatrix}\\
-									&= \begin{bmatrix}
-										4 & 5\\ 4 & 0
-									\end{bmatrix}
-								\end{aligned} $
-							\item \question{$A = \begin{bmatrix}-1 & 0\\ 0 & 1\end{bmatrix}$ and $B = \begin{bmatrix}3 & 2 & 0 \\ 1 & 0 & 0\end{bmatrix}$}\\
-								This operation is not defined, as the matrices are different sizes.
-							\item \question{$A = \begin{bmatrix}2 & 0 & 3\\ 0 & 7 & 1\end{bmatrix}$ and $B = \begin{bmatrix}1 & 1 & -2 \\ 2 & 0 & 6\end{bmatrix}$}\\
-								$ \begin{aligned}[t]
-									A + B &= \begin{bmatrix}
-										2 & 0 & 3 \\ 0 & 7 & 1
-									\end{bmatrix} + \begin{bmatrix}
-										1 & 1 & -2 \\ 2 & 0 & 6
-									\end{bmatrix}\\
-									&= \begin{bmatrix}
-										3 & 1 & 1 \\ 2 & 7 & 7
-									\end{bmatrix}
-								\end{aligned} $
-							\item \question{$A = \begin{bmatrix}3 & 1\\ -2 & -5\end{bmatrix}$ and $B = \begin{bmatrix}1 & 2 & 0 \\ 2 & 5 & 1\end{bmatrix}$}\\
-								This operation is not defined, as the matrices are different sizes.
-						\end{enumerate}
-					\end{multicols}
+					\begin{questions}
+						\item For each pair $A$ and $B$ determine $A + B$ (if possible):
+						\begin{multicols}{2}
+							\begin{questions}
+								\item $A = \begin{bmatrix}-1 & 0\\ 0 & 1\end{bmatrix}$ and $B = \begin{bmatrix}5 & 5 \\ 4 & -1\end{bmatrix}$\\
+									\begin{answer}
+										$ \begin{aligned}[t]
+											A + B &= \begin{bmatrix}
+												-1 & 0 \\ 0 & 1
+											\end{bmatrix} + \begin{bmatrix}
+												5 & 5 \\ 4 & -1
+											\end{bmatrix}\\
+											&= \begin{bmatrix}
+												4 & 5\\ 4 & 0
+											\end{bmatrix}
+										\end{aligned} $
+									\end{answer}
+								\item $A = \begin{bmatrix}-1 & 0\\ 0 & 1\end{bmatrix}$ and $B = \begin{bmatrix}3 & 2 & 0 \\ 1 & 0 & 0\end{bmatrix}$\\
+									{\answer This operation is not defined, as the matrices are different sizes.}
+								\item $A = \begin{bmatrix}2 & 0 & 3\\ 0 & 7 & 1\end{bmatrix}$ and $B = \begin{bmatrix}1 & 1 & -2 \\ 2 & 0 & 6\end{bmatrix}$\\
+									\begin{answer}
+										$ \begin{aligned}[t]
+											A + B &= \begin{bmatrix}
+												2 & 0 & 3 \\ 0 & 7 & 1
+											\end{bmatrix} + \begin{bmatrix}
+												1 & 1 & -2 \\ 2 & 0 & 6
+											\end{bmatrix}\\
+											&= \begin{bmatrix}
+												3 & 1 & 1 \\ 2 & 7 & 7
+											\end{bmatrix}
+										\end{aligned} $
+									\end{answer}
+								\item $A = \begin{bmatrix}3 & 1\\ -2 & -5\end{bmatrix}$ and $B = \begin{bmatrix}1 & 2 & 0 \\ 2 & 5 & 1\end{bmatrix}$\\
+									{\answer This operation is not defined, as the matrices are different sizes.}
+							\end{questions}
+						\end{multicols}
+					\end{questions}
 				\end{exercise}
 			\subsection{Scalar-Matrix Multiplication}
 				\begin{definition}[width=0.7\textwidth]{Scalar-Matrix Multiplication}
@@ -513,24 +539,35 @@
 					\end{align*}
 				\end{example}
 				\begin{exercise}{Self Assessment Exercise \thechapter.9}
-					\question{Perform the indicated operation:}
-					\begin{align*}
-						2\begin{bmatrix}
-							-1 \\ 2 \\ 3
-						\end{bmatrix} - 3 \begin{bmatrix}
-							2 \\ 1 \\ 0
-						\end{bmatrix} + 4 \begin{bmatrix}
-							2 \\ 1 \\ 5
-						\end{bmatrix} &= \begin{bmatrix}
-							-2 \\ 4 \\ 6
-						\end{bmatrix} + \begin{bmatrix}
-							-6 \\ -3 \\ 0
-						\end{bmatrix} + \begin{bmatrix}
-							8 \\ 4 \\ 20
-						\end{bmatrix} = \begin{bmatrix}
-							0 \\ 5 \\ 26
-						\end{bmatrix}
-					\end{align*}
+					\begin{questions}
+						\item Perform the indicated operation:
+							$ 2\begin{bmatrix}
+								-1 \\ 2 \\ 3
+							\end{bmatrix} - 3 \begin{bmatrix}
+								2 \\ 1 \\ 0
+							\end{bmatrix} + 4 \begin{bmatrix}
+								2 \\ 1 \\ 5
+							\end{bmatrix} $
+							\begin{answer}
+								\begin{align*}
+									2\begin{bmatrix}
+										-1 \\ 2 \\ 3
+									\end{bmatrix} - 3 \begin{bmatrix}
+										2 \\ 1 \\ 0
+									\end{bmatrix} + 4 \begin{bmatrix}
+										2 \\ 1 \\ 5
+									\end{bmatrix} &= \begin{bmatrix}
+										-2 \\ 4 \\ 6
+									\end{bmatrix} + \begin{bmatrix}
+										-6 \\ -3 \\ 0
+									\end{bmatrix} + \begin{bmatrix}
+										8 \\ 4 \\ 20
+									\end{bmatrix} = \begin{bmatrix}
+										0 \\ 5 \\ 26
+									\end{bmatrix}
+								\end{align*}
+							\end{answer}
+					\end{questions}
 				\end{exercise}
 			\pagebreak
 			\subsection{Matrix Multiplication}
@@ -597,18 +634,22 @@
 				\end{example}
 				\pagebreak
 				\begin{exercise}{Self Assessment Exercise \thechapter.10}
-					\begin{enumerate}
-						\item \question{Perform the indicated matrix operations (if possible)}
-							\begin{enumerate}[label=(\alph*)]
+					\begin{questions}
+						\item Perform the indicated matrix operations (if possible)
+							\begin{questions}
 								\item 
 									$ \begin{aligned}[t]
-										\bm{{\begin{bmatrix}
+										{\begin{bmatrix}
 											31 & -3 & 2\\
 											2 & 5 & 1\\
 											3 & 0 & 0
 										\end{bmatrix} \begin{bmatrix}
 											0 \\ 1 \\ 5
-										\end{bmatrix}}} &= \begin{bmatrix}
+										\end{bmatrix}}
+									\end{aligned}$
+									\begin{answer}
+									$ = \begin{aligned}[t]
+									\begin{bmatrix}
 											(31 \cdot 0) + (-3 \cdot 1) + (2 \cdot 5)\\
 											(2 \cdot 0) + (5 \cdot 1) + (1 \cdot 5)\\
 											(3 \cdot 0) + (0 \cdot 1) + (0 \cdot 5)
@@ -624,143 +665,153 @@
 											0
 										\end{bmatrix}
 									\end{aligned} $
-								\item \question{$\begin{bmatrix}9 & 3\\ 1 & 5\\ 3 & 0\end{bmatrix}\begin{bmatrix}1 & 0\\ 2 & 4\\ 5 & 1\end{bmatrix}$}\\
-									This operation is not defined.
-								\item 
+								\end{answer}
+								\item $\begin{bmatrix}9 & 3\\ 1 & 5\\ 3 & 0\end{bmatrix}\begin{bmatrix}1 & 0\\ 2 & 4\\ 5 & 1\end{bmatrix}$\\
+									{\answer This operation is not defined.}
+								\item $\begin{bmatrix}
+									1 & -3 & 2\\
+									0 & 6 & 4\\
+									3 & 0 & 3
+								\end{bmatrix} \begin{bmatrix}
+									0 & -1 & 3\\
+									1 & \frac{1}{3} & 1\\
+									\frac{1}{2} & 5 & 0
+								\end{bmatrix}$ \\
+								\begin{answer}
+									$ \begin{aligned}[t]
+										= \, &\begin{bmatrix}
+														(1 \cdot 0) + (-3 \cdot 1) + \left(2 \cdot \frac{1}{2}\right) & (1 \cdot - 1) + \left(-3 \cdot \frac{1}{3}\right) + (2 \cdot 5) & (1 \cdot 3) + (-3 \cdot 1) + (2 \cdot 0)\\
+														(0 \cdot 0) + (6 \cdot 1) + \left(4 \cdot \frac{1}{2}\right) & (0 \cdot -1) + \left(6 \cdot \frac{1}{3}\right) + (4 \cdot 5) & (0 \cdot 3) + (6 \cdot 1) + (4 \cdot 0)\\
+														(3 \cdot 0) + (0 \cdot 1) + \left(3 \cdot \frac{1}{2}\right) & (3 \cdot -1) + \left(0 \cdot \frac{1}{3}\right) + (3 \cdot 5) & (3 \cdot 3) + (0 \cdot 1) + (3 \cdot 0)
+													\end{bmatrix}\\
+										= \, &\begin{bmatrix}
+														(0 - 3 + 1) & (- 1 - 1 + 10) & (3 - 3 + 0)\\
+														(0 + 6 + 2) & (0 + 2 + 20) & (0 + 6 + 0)\\
+														\left(0 + 0 + \frac{3}{2}\right) & (-3 + 0 + 15) & (9 + 0 + 0)
+													\end{bmatrix}\\
+										= \, &\begin{bmatrix}
+														-2 & 8 & 0\\
+														8 & 22 & 6\\
+														\frac{3}{2} & 12 & 9
+													\end{bmatrix}
+									\end{aligned}$
+								\end{answer}
+							\end{questions}
+						\item Provide examples of matrices $X$ and $Y$ such that $XY$ is a $3 \times 3$ matrix, but $YX$ is a $2 \times 2$~matrix.\\
+							\begin{answer}
+								Any matrices $X$ and $Y$ such that $X$ is a $2 \times 3$ matrix, and $Y$ is a $3 \times 2$ matrix.\\
+								Two examples: \quad
 								$ \begin{aligned}[t]
-									&\bm{{\begin{bmatrix}
-										1 & -3 & 2\\
-										0 & 6 & 4\\
-										3 & 0 & 3
-									\end{bmatrix}\begin{bmatrix}
-										0 & -1 & 3\\
-										1 & \frac{1}{3} & 1\\
-										\frac{1}{2} & 5 & 0
-									\end{bmatrix}}}\\ 
-									= \, &\begin{bmatrix}
-										(1 \cdot 0) + (-3 \cdot 1) + \left(2 \cdot \frac{1}{2}\right) & (1 \cdot - 1) + \left(-3 \cdot \frac{1}{3}\right) + (2 \cdot 5) & (1 \cdot 3) + (-3 \cdot 1) + (2 \cdot 0)\\
-										(0 \cdot 0) + (6 \cdot 1) + \left(4 \cdot \frac{1}{2}\right) & (0 \cdot -1) + \left(6 \cdot \frac{1}{3}\right) + (4 \cdot 5) & (0 \cdot 3) + (6 \cdot 1) + (4 \cdot 0)\\
-										(3 \cdot 0) + (0 \cdot 1) + \left(3 \cdot \frac{1}{2}\right) & (3 \cdot -1) + \left(0 \cdot \frac{1}{3}\right) + (3 \cdot 5) & (3 \cdot 3) + (0 \cdot 1) + (3 \cdot 0)
+									A_{1} = \begin{bmatrix}
+										1 & 2 & 3\\
+										4 & 5 & 6
+									\end{bmatrix} \text{ and }
+									B_{1} = \begin{bmatrix}
+										1 & 2\\
+										3 & 4\\
+										5 & 6
 									\end{bmatrix}\\
-									= \, &\begin{bmatrix}
-										(0 - 3 + 1) & (- 1 - 1 + 10) & (3 - 3 + 0)\\
-										(0 + 6 + 2) & (0 + 2 + 20) & (0 + 6 + 0)\\
-										\left(0 + 0 + \frac{3}{2}\right) & (-3 + 0 + 15) & (9 + 0 + 0)
-									\end{bmatrix}\\
-									= \, &\begin{bmatrix}
-										-2 & 8 & 0\\
-										8 & 22 & 6\\
-										\frac{3}{2} & 12 & 9
+									A_{2} = \begin{bmatrix}
+										2 & 4 & 6\\
+										8 & 6 & 4
+									\end{bmatrix} \text{ and }
+									B_{2} = \begin{bmatrix}
+										3 & 6\\
+										9 & 6\\
+										3 & 0
 									\end{bmatrix}
 								\end{aligned} $
-							\end{enumerate}
-						\item \question{Provide examples of matrices $X$ and $Y$ such that $XY$ is a $3 \times 3$ matrix, but $YX$ is a $2 \times 2$~matrix.}\\
-							Any matrices $X$ and $Y$ such that $X$ is a $2 \times 3$ matrix, and $Y$ is a $3 \times 2$ matrix.\\
-							Two examples: \quad
-							$ \begin{aligned}[t]
-								A_{1} = \begin{bmatrix}
-									1 & 2 & 3\\
-									4 & 5 & 6
-								\end{bmatrix} \text{ and }
-								B_{1} = \begin{bmatrix}
-									1 & 2\\
-									3 & 4\\
-									5 & 6
-								\end{bmatrix}\\
-								A_{2} = \begin{bmatrix}
-									2 & 4 & 6\\
-									8 & 6 & 4
-								\end{bmatrix} \text{ and }
-								B_{2} = \begin{bmatrix}
-									3 & 6\\
-									9 & 6\\
-									3 & 0
-								\end{bmatrix}
-							\end{aligned} $
-						\item \question{Provide examples of matrices $X$ and $Y$ such that both $X$ and $Y$ have at least some non-zero entries, but $XY$ is the $2 \times 2$~zero~matrix.}\\
-							Any matrix $A$ that has a zero column, where matrix $B$ has a zero row that are at different indexes.\\
-							Example: \quad $
-							\begin{aligned}[t]
-								A = \begin{bmatrix}
-									0 & 4\\
-									0 & 5
-								\end{bmatrix} \text{ and }
-								B = \begin{bmatrix}
-									6 & 8\\
-									0 & 0
-								\end{bmatrix}
-							\end{aligned}$
+							\end{answer}
+						\item Provide examples of matrices $X$ and $Y$ such that both $X$ and $Y$ have at least some non-zero entries, but $XY$ is the $2 \times 2$~zero~matrix.\\
+							\begin{answer}
+								Any matrix $A$ that has a zero column, where matrix $B$ has a zero row that are at different indexes.\\
+								Example: \quad $
+								\begin{aligned}[t]
+									A = \begin{bmatrix}
+										0 & 4\\
+										0 & 5
+									\end{bmatrix} \text{ and }
+									B = \begin{bmatrix}
+										6 & 8\\
+										0 & 0
+									\end{bmatrix}
+								\end{aligned}$
+							\end{answer}
 						\pagebreak
-						\item \question{Prove that addition is a commutative operation on the set of $2 \times 2$~matrices, and that there is a $2 \times 2$~matrix that acts as an identity element in respect of addition.}
-							\begin{proof}
-								Let $A$ and $B$ be two $2 \times 2$~matrices, where $A = \begin{bmatrix}a & b\\ c & d\end{bmatrix}$ and $B = \begin{bmatrix}e & f\\g & h\end{bmatrix}$.
-								\begin{subproof}[Commutativity]
-									Then: $ \begin{aligned}[t]
-										A + B &= \begin{bmatrix}a & b\\ c & d\end{bmatrix} + \begin{bmatrix}e & f\\g & h\end{bmatrix}\\
-										&= \begin{bmatrix}
-											a + e & b + f\\
-											c + g & d + h
-										\end{bmatrix}\\
-										B + A &= \begin{bmatrix}e & f\\g & h\end{bmatrix} + \begin{bmatrix}a & b\\ c & d\end{bmatrix}\\
-										&= \begin{bmatrix}
-											e + a & f + b\\
-											g + c & h + d
-										\end{bmatrix} = \begin{bmatrix}
-											a + e & b + f\\
-											c + g & d + h
-										\end{bmatrix}
-									\end{aligned}$\\
-									As $A + B = B + A$, matrix addition is commutative.
-								\end{subproof}
-								\begin{subproof}[Identity]
-									The identity element for matrix addition on $2 \times 2$~matrices is $\begin{bmatrix}0 & 0 \\ 0 & 0\end{bmatrix}$
-								\end{subproof}
-								So, matrix addition is commutative, and an identity element exists for matrix addition.
-							\end{proof}
-						\item \question{Prove that multiplication is \emph{not} a commutative operation on the set of $2 \times 2$ matrices, and that there is a $2 \times 2$~matrix that acts as an identity element in respect of multiplication.}
-							\begin{proof}
-								$ $
-								\begin{subproof}[Commutativity Counterexample] Let 
-									$A = \begin{bmatrix}1 & 2\\ 3 & 4
-								\end{bmatrix}$ and $B = \begin{bmatrix}4 & 3 \\ 2 & 1\end{bmatrix}$
-									\begin{align*}
-										AB &= \begin{bmatrix}
-											1 & 2 \\ 3 & 4
-										\end{bmatrix}\begin{bmatrix}
-											4 & 3 \\ 2 & 1
-										\end{bmatrix} = \begin{bmatrix}
-											(1 \cdot 4) + (2 \cdot 2) & (1 \cdot 3) + (2 \cdot 1)\\
-											(3 \cdot 4) + (4 \cdot 2) & (3 \cdot 3) + (4 \cdot 1)
-										\end{bmatrix} = \begin{bmatrix}
-											4 + 4 & 3 + 2\\
-											12 + 8 & 9 + 4
-										\end{bmatrix} = \begin{bmatrix}
-											8 & 5\\
-											20 & 13
-										\end{bmatrix}\\
-										BA &= \begin{bmatrix}
-											4 & 3 \\ 2 & 1
-										\end{bmatrix} \begin{bmatrix}
-											1 & 2 \\ 3 & 4
-										\end{bmatrix} = \begin{bmatrix}
-											(4 \cdot 1) + (3 \cdot 3) & (4 \cdot 2) + (3 \cdot 4)\\
-											(2 \cdot 1) + (1 \cdot 3) & (2 \cdot 2) + (1 \cdot 4)
-										\end{bmatrix} = \begin{bmatrix}
-											4 + 9 & 8 + 12\\
-											2 + 3 & 4 + 4
-										\end{bmatrix} = \begin{bmatrix}
-											13 & 20\\
-											5 & 8
-										\end{bmatrix}
-									\end{align*}
-									As $AB \neq BA$, matrix multiplication is not commutative.
-								\end{subproof}
-								\begin{subproof}[Identity]
-									The identity element for matrix multiplication is the identity matrix. For a $2 \times 2$ matrix, that is $\begin{bmatrix}1 & 0 \\ 0 & 1\end{bmatrix}$
-								\end{subproof}
-								So, matrix multiplication is not commutative, and an identity element exists for matrix multiplication.
-							\end{proof}
-					\end{enumerate}
+						\item Prove that addition is a commutative operation on the set of $2 \times 2$~matrices, and that there is a $2 \times 2$~matrix that acts as an identity element in respect of addition.
+							\begin{answer}
+								\begin{proof}
+									Let $A$ and $B$ be two $2 \times 2$~matrices, where $A = \begin{bmatrix}a & b\\ c & d\end{bmatrix}$ and $B = \begin{bmatrix}e & f\\g & h\end{bmatrix}$.
+									\begin{subproof}[Commutativity]
+										Then: $ \begin{aligned}[t]
+											A + B &= \begin{bmatrix}a & b\\ c & d\end{bmatrix} + \begin{bmatrix}e & f\\g & h\end{bmatrix}\\
+											&= \begin{bmatrix}
+												a + e & b + f\\
+												c + g & d + h
+											\end{bmatrix}\\
+											B + A &= \begin{bmatrix}e & f\\g & h\end{bmatrix} + \begin{bmatrix}a & b\\ c & d\end{bmatrix}\\
+											&= \begin{bmatrix}
+												e + a & f + b\\
+												g + c & h + d
+											\end{bmatrix} = \begin{bmatrix}
+												a + e & b + f\\
+												c + g & d + h
+											\end{bmatrix}
+										\end{aligned}$\\
+										As $A + B = B + A$, matrix addition is commutative.
+									\end{subproof}
+									\begin{subproof}[Identity]
+										The identity element for matrix addition on $2 \times 2$~matrices is $\begin{bmatrix}0 & 0 \\ 0 & 0\end{bmatrix}$
+									\end{subproof}
+									So, matrix addition is commutative, and an identity element exists for matrix addition.
+								\end{proof}
+							\end{answer}
+						\item Prove that multiplication is \emph{not} a commutative operation on the set of $2 \times 2$ matrices, and that there is a $2 \times 2$~matrix that acts as an identity element in respect of multiplication.
+							\begin{answer}
+								\begin{proof}
+									$ $
+									\begin{subproof}[Commutativity Counterexample] Let 
+										$A = \begin{bmatrix}1 & 2\\ 3 & 4
+									\end{bmatrix}$ and $B = \begin{bmatrix}4 & 3 \\ 2 & 1\end{bmatrix}$
+										\begin{align*}
+											AB &= \begin{bmatrix}
+												1 & 2 \\ 3 & 4
+											\end{bmatrix}\begin{bmatrix}
+												4 & 3 \\ 2 & 1
+											\end{bmatrix} = \begin{bmatrix}
+												(1 \cdot 4) + (2 \cdot 2) & (1 \cdot 3) + (2 \cdot 1)\\
+												(3 \cdot 4) + (4 \cdot 2) & (3 \cdot 3) + (4 \cdot 1)
+											\end{bmatrix} = \begin{bmatrix}
+												4 + 4 & 3 + 2\\
+												12 + 8 & 9 + 4
+											\end{bmatrix} = \begin{bmatrix}
+												8 & 5\\
+												20 & 13
+											\end{bmatrix}\\
+											BA &= \begin{bmatrix}
+												4 & 3 \\ 2 & 1
+											\end{bmatrix} \begin{bmatrix}
+												1 & 2 \\ 3 & 4
+											\end{bmatrix} = \begin{bmatrix}
+												(4 \cdot 1) + (3 \cdot 3) & (4 \cdot 2) + (3 \cdot 4)\\
+												(2 \cdot 1) + (1 \cdot 3) & (2 \cdot 2) + (1 \cdot 4)
+											\end{bmatrix} = \begin{bmatrix}
+												4 + 9 & 8 + 12\\
+												2 + 3 & 4 + 4
+											\end{bmatrix} = \begin{bmatrix}
+												13 & 20\\
+												5 & 8
+											\end{bmatrix}
+										\end{align*}
+										As $AB \neq BA$, matrix multiplication is not commutative.
+									\end{subproof}
+									\begin{subproof}[Identity]
+										The identity element for matrix multiplication is the identity matrix. For a $2 \times 2$ matrix, that is $\begin{bmatrix}1 & 0 \\ 0 & 1\end{bmatrix}$
+									\end{subproof}
+									So, matrix multiplication is not commutative, and an identity element exists for matrix multiplication.
+								\end{proof}
+							\end{answer}
+					\end{questions}
 				\end{exercise}
 	\rulechapterend
 \end{document}

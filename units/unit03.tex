@@ -167,13 +167,13 @@
 				\end{example}
 			\pagebreak
 			\begin{exercise}{Self Assessment Exercise \thechapter.6}
-				\begin{enumerate}
+				\begin{questions}
 					\item \hfill $
 						\begin{alignedat}[t]{3}
 							U &= \{1, 2, 3, 4, 5\} \qquad & A &= \{1, 2, 3\} \qquad & B &= \{3, 4, 5\}
 						\end{alignedat} $ \hfill \phantom{1 \quad}
 						\begin{multicols}{2}
-							\begin{enumerate}[label=(\alph*), labelsep=1em]
+							\begin{questions}[labelsep=1em, first=\answer]
 								\item $
 									\begin{aligned}[t]
 										A \cup B &= \{1, 2, 3\} \cup \{3, 4, 5\}\\
@@ -202,18 +202,18 @@
 										B + A &= \{3, 4, 5\} + \{1, 2, 3\}\\
 										&= \{1, 2, 4, 5\}
 									\end{aligned} $
-							\end{enumerate}
+							\end{questions}
 						\end{multicols}
 					\item \hfill $
 						\begin{alignedat}[t]{3}
 							U &= \{a, e, i, o, u\} \qquad & A &= \{i, o, u\} \qquad & B &= \{a, e, o, u\}
 						\end{alignedat} $ \hfill \phantom{2 \quad}
 						\begin{multicols}{2}
-							\begin{enumerate}[label=(\alph*), labelsep=1em]
+							\begin{questions}[labelsep=1em, first=\answer]
 								\item $
 									\begin{aligned}[t]
 										A' &= \{i, o, u\}'\\
-										&= \{a, e, i, o, u\} - \{i, o, u\}\\
+										&= {\{a, e, i, o, u\} - \{i, o, u\}}\\
 										&= \{a, e\}\\
 										\left(A'\right)' &= \{a, e, i, o, u\} - \{a, e\}\\
 										&= \{i, o, u\}\\
@@ -273,24 +273,26 @@
 										B + A &= \{a, e, o, u\} + \{i, o, u\}\\
 										&= \{a, e, i\}
 									\end{aligned} $
-							\end{enumerate}
+							\end{questions}
 						\end{multicols}
 					\item \hfill $
 						\begin{alignedat}[t]{3}
 							U &= \{1, 2, 3, 4, 5\} \qquad & A &= \{3\} \qquad & B &= \bigl\{\{3\}, 4, 5\bigr\}
 						\end{alignedat} $ \hfill \phantom{3 \quad}
-						\begin{align*}
-							\mathcal{P}(A) &= \mathcal{P}\bigl(\{3\}\bigr)\\
-							&= \bigl\{\emptyset, \{3\}\bigr\}\\
-							\mathcal{P}(B) &= \mathcal{P}\Bigl(\bigl\{\{3\}, 4, 5\bigr\}\Bigr)\\
-							&= \Bigl\{\emptyset, \bigl\{\{3\}\bigr\}, \bigl\{4\bigr\}, \bigl\{5\bigr\}, \bigl\{\{3\}, 4\bigr\}, \bigl\{\{3\}, 5\bigr\}, \bigl\{4, 5\bigr\}, \bigl\{\{3\}, 4, 5\bigr\}\Bigr\}
-						\end{align*}
+						\begin{answer}
+							\begin{align*}
+								\mathcal{P}(A) &= \mathcal{P}\bigl(\{3\}\bigr)\\
+								&= \bigl\{\emptyset, \{3\}\bigr\}\\
+								\mathcal{P}(B) &= \mathcal{P}\Bigl(\bigl\{\{3\}, 4, 5\bigr\}\Bigr)\\
+								&= \Bigl\{\emptyset, \bigl\{\{3\}\bigr\}, \bigl\{4\bigr\}, \bigl\{5\bigr\}, \bigl\{\{3\}, 4\bigr\}, \bigl\{\{3\}, 5\bigr\}, \bigl\{4, 5\bigr\}, \bigl\{\{3\}, 4, 5\bigr\}\Bigr\}
+							\end{align*}
+						\end{answer}
 					\pagebreak
 					\item \hfill $
 						\begin{alignedat}[t]{3}
 							U &= \{a, e, i, o, u\} \qquad & A &= \{i, o, u\} \qquad & B &= \{a, e, o, u\}
 						\end{alignedat} $ \hfill \phantom{4 \quad}
-						\begin{enumerate}[label=(\alph*), labelsep=1em]
+						\begin{questions}[labelsep=1em, first=\answer]
 							\item $
 								\begin{aligned}[t]
 									\mathcal{P}(A) &= \bigl\{\emptyset, \{i\}, \{o\}, \{u\}, \{i, o\}, \{i, u\}, \{o, u\}, \{i, o, u\}\bigr\}\\
@@ -339,8 +341,8 @@
 									& \qquad \{e, i, o\}, \{e, i, u\} \{e, o, u\}, \{i, o, u\},\\
 									& \qquad \{a, e, i, o\}, \{a, e, i, u\}, \{a, e, o, u\} \{a, i, o, u\}, \{e, i, o, u\}, \{a, e, i, o, u\}\bigr\}
 								\end{aligned} $
-						\end{enumerate}
-				\end{enumerate}
+						\end{questions}
+				\end{questions}
 			\end{exercise}
 	\rulechapterend
 \end{document}

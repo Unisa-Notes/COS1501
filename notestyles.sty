@@ -159,18 +159,19 @@
 		}%
 	{\end{venndiagram3sets}}
 
-% Environment Spacing and Placement
-\newcommand{\moveup}{\rule{0pt}{\baselineskip} \vspace*{-2.2\abovedisplayskip}}
-\newcommand{\questionspace}{\vspace*{0.4em}}
-
 % Tables
 \RequirePackage{tabularray}
 \UseTblrLibrary{booktabs}
 \UseTblrLibrary{varwidth}
 \SetTblrInner[tblr]{measure=vbox}
 
+% Questions and Answers
+\newlist{questions}{enumerate}{2}
+\setlist[questions, 1]{label=\arabic*., first=\bfseries}
+\setlist[questions, 2]{label=(\alph*), first=\bfseries}
+\newenvironment{answer}{\normalfont}{}
+
 % Questions, Concepts and Emphasis Styling
-\newcommand{\question}[1]{\textbf{#1}\questionspace}
 \newcommand{\concept}[1]{\textbf{#1}}
 
 % TOC Page Number Spacing
