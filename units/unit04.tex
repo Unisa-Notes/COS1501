@@ -238,6 +238,147 @@
 				\end{minipage}
 			\end{example}
 			\pagebreak
+			\subsection{If and Only If Proofs}
+			The purpose of an iff proof is to shorten a proof where you need to show that it works both forwards and backwards. Remember the symbol for iff is $\leftrightarrow$.
+
+			To do this, you convert the statement into words.
+
+			\begin{example}
+				\begin{questions}[before=\raggedright]
+					\item Prove that $A \cup (B \cup C) = (A \cup B) \cup C$ for all sets $A$, $B$, $C \subseteq U$.\\
+						\begin{answer}
+							\begin{minipage}{0.6\textwidth}
+								To start off, assume that $x$ is an element of the statement on the left:
+								\begin{indentparagraph}
+									Let $x \in A \cup (B \cup C)$.
+								\end{indentparagraph}
+								Then start the proof. Convert all the $\cup$ and $\cap$ symbols to words.
+								\begin{indentparagraph}
+									\begin{tabbing}
+										$\qquad$ \= $x \in A \cup (B \cup C)$\\
+										iff \> $x \in A$ or $x \in (B \cup C)$\\
+										iff \> $x \in A$ or $x \in B$ or $x \in C$\\
+										iff \> ($x \in A$ or $x \in B$) or $x \in C$\\
+										iff \> ($x \in (A \cup B)$) or $x \in C$\\
+										iff \> $x \in (A \cup B) \cup C$\\
+										$\therefore$ \> $A \cup (B \cup C) = (A \cup B) \cup C$
+									\end{tabbing}
+								\end{indentparagraph}
+							\end{minipage}
+							\begin{minipage}{0.33\textwidth}
+								\begin{center}
+									\begin{vennthree}[][]
+										\fillA
+										\fillB
+										\fillC
+									\end{vennthree}
+								\end{center}
+							\end{minipage}
+						\end{answer}
+						\item Prove that $A \cap (B \cap C) = (A \cap B) \cap C$ for all sets $A$, $B$, $C \subseteq U$.\\
+							\begin{answer}
+								\begin{minipage}{0.6\textwidth}
+									Let $x \in A \cap (B \cap C)$
+									\begin{tabbing}
+										$\qquad$ \= $x \in A \cap (B \cap C)$\\
+										iff \> $x \in A$ and $x \in (B \cap C)$\\
+										iff \> $x \in A$ and $x \in B$ and $x \in C$\\
+										iff \> ($x \in A$ and $x \in B$) and $x \in C$\\
+										iff \> ($x \in (A \cap B)$) and $x \in C$\\
+										iff \> $x \in (A \cap B) \cap C$\\
+										$\therefore$ \> $A \cap (B \cap C) = (A \cap B) \cap C$
+									\end{tabbing}
+								\end{minipage}
+								\begin{minipage}{0.33\textwidth}
+									\begin{center}
+										\begin{vennthree}[][]
+											\fillACapBCapC
+										\end{vennthree}
+									\end{center}
+								\end{minipage}
+							\end{answer}
+				\end{questions}
+			\end{example}
+		\pagebreak
+		\subsubsection{Using Nots}
+			A basic application of the not symbol swaps $\in$ to $\notin$. If the statement has a $-$ in, this is the equivalent of and $\notin$. For example,
+			\begin{align*}
+				x \in A - B &= x \in A \text{ and } x \notin B 
+			\end{align*}
+			\begin{example}
+				\begin{questions}[before=\raggedright]
+					\item Prove that $(A')' = A$ for all sets $A \subseteq U$.
+						\begin{answer}
+							\begin{minipage}{0.6\textwidth}
+								Let $x \in (A')'$
+								\begin{tabbing}
+									$\qquad$ \= $x \in (A')'$\\
+									iff \> $x \notin A'$\\
+									iff \> $x$ is not $\notin A$\\
+									iff \> $x \in A$\\
+									$\therefore$ \> $(A')' = A$
+								\end{tabbing}
+							\end{minipage}
+							\begin{minipage}{0.33\textwidth}
+								\begin{center}
+									\begin{venntwo}[][]
+										\fillA
+									\end{venntwo}
+								\end{center}
+							\end{minipage}
+						\end{answer}
+				\end{questions}
+			\end{example}
+			\begin{sidenote}{The words swap!}
+				When you apply a $\notin$ sign in words, then $\cup$ means \emph{and} instead of or, and $\cap$ means \emph{or} instead of and.
+			\end{sidenote}
+			\begin{example}
+				\begin{questions}[before=\raggedright]
+					\item Prove that $(A \cup B)' = A' \cap B'$.\\
+						\begin{answer}
+							\begin{minipage}{0.6\textwidth}
+								Let $x \in (A \cup B)'$.
+								\begin{tabbing}
+									$\qquad$ \= $x \in (A \cup B)'$\\
+									iff \> $x \notin (A \cup B)$\\
+									iff \> $x \notin A$ \emph{and} $x \notin B$ $\quad$ (and instead of or for $\cup$)\\
+									iff \> $x \in A'$ and $x \in B'$\\
+									iff \> $x \in A' \cap B'$\\
+									$\therefore$ \> $(A \cup B)' = A' \cap B'$
+								\end{tabbing}
+							\end{minipage}
+							\begin{minipage}{0.33\textwidth}
+								\begin{center}
+									\begin{venntwo}[][]
+										\fillNotAorB
+									\end{venntwo}
+								\end{center}
+							\end{minipage}
+						\end{answer}
+					\item Prove that $(A \cap B)' = A' \cup B'$.\\
+						\begin{answer}
+							\begin{minipage}{0.6\textwidth}
+								Let $x \in (A \cap B)'$.
+								\begin{tabbing}
+									$\qquad$ \= $x \in (A \cap B)'$\\
+									iff \> $x \notin (A \cap B)$\\
+									iff \> $x \notin A$ \emph{or} $x \notin B$ $\quad$ (or instead of and for $\cap$)\\
+									iff \> $x \in A'$ or $x \in B'$\\
+									iff \> $x \in A' \cup B'$\\
+									$\therefore$ \> $(A \cap B)' = A' \cup B'$
+								\end{tabbing}
+							\end{minipage}
+							\begin{minipage}{0.33\textwidth}
+								\begin{center}
+									\begin{venntwo}[][]
+										\fillNotA
+										\fillNotB
+									\end{venntwo}
+								\end{center}
+							\end{minipage}
+						\end{answer}
+				\end{questions}
+			\end{example}
 			\begin{exercise}{Self-Assessment Exercise \thechapter.6}
 				\begin{multicols}{2}
 					\begin{questions}[label=(\alph*), itemsep=0.5em]
